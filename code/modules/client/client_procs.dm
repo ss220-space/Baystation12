@@ -254,6 +254,9 @@
 		prefs?.apply_post_login_preferences()
 //[/INF]
 
+	//I don't know why but it doesn't work as a define, so let put it here
+	tick_lag = 0.33
+
 	//////////////
 	//DISCONNECT//
 	//////////////
