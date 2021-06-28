@@ -26,6 +26,7 @@ var/list/gamemode_cache = list()
 	var/log_hrefs = 0					// logs all links clicked in-game. Could be used for debugging and tracking down exploits
 	var/log_runtime = 0					// logs world.log to a file
 	var/log_world_output = 0			// log world.log to game log
+	var/log_timers_on_bucket_reset = 0  // logs all timers in buckets on automatic bucket reset (Useful for timer debugging)
 	var/allow_admin_ooccolor = 0		// Allows admins with relevant permissions to have their own ooc colour
 	var/allow_vote_restart = 0 			// allow votes to restart
 	var/ert_admin_call_only = 0
@@ -79,6 +80,7 @@ var/list/gamemode_cache = list()
 	var/disable_player_mice = 0
 	var/uneducated_mice = 1 //Set to 1 to prevent newly-spawned mice from understanding human speech
 
+	var/usewhitelist_database = FALSE
 	var/usealienwhitelist = 0
 	var/usealienwhitelistSQL = 0;
 	var/allow_extra_antags = 0
@@ -92,6 +94,7 @@ var/list/gamemode_cache = list()
 	var/forumurl
 	var/githuburl
 	var/issuereporturl
+	var/overflow_server_url
 
 	var/list/chat_markup
 
@@ -347,6 +350,9 @@ var/list/gamemode_cache = list()
 				if ("log_world_output")
 					config.log_world_output = 1
 
+				if("log_timers_on_bucket_reset")
+					config.log_timers_on_bucket_reset = 1
+
 				if ("log_hrefs")
 					config.log_hrefs = 1
 
@@ -460,6 +466,9 @@ var/list/gamemode_cache = list()
 				if ("issuereporturl")
 					config.issuereporturl = value
 
+				if ("overflow_server_url")
+					config.overflow_server_url = value
+
 				if ("ghosts_can_possess_animals")
 					config.ghosts_can_possess_animals = value
 
@@ -556,6 +565,9 @@ var/list/gamemode_cache = list()
 
 				if("secret_hide_possibilities")
 					secret_hide_possibilities = TRUE
+
+				if("usewhitelist_database")
+					usewhitelist_database = TRUE
 
 				if("usealienwhitelist")
 					usealienwhitelist = 1
@@ -722,7 +734,7 @@ var/list/gamemode_cache = list()
 
 				if("ntnet_speed_limiter")
 					ntnet_speed_limiter = text2num(value)
-	
+
 				if("admin_midis_allowed")
 					admin_midis_allowed = TRUE
 
