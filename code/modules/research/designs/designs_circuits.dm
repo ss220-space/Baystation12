@@ -26,7 +26,7 @@
 	req_tech = list(TECH_DATA = 1)
 	build_path = /obj/item/stock_parts/circuitboard/arcade/battle
 	sort_string = "MAAAA"
-	category_items = "Computer Boards"
+	category_items = "Misc. Machinery"
 
 /datum/design/circuit/oriontrail
 	name = "orion trail arcade machine"
