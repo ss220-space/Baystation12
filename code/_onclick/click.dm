@@ -65,6 +65,9 @@
 	if(modifiers["middle"])
 		MiddleClickOn(A)
 		return 1
+	if(modifiers["middle"] && modifiers["alt"])
+		AltMiddleClickOn(A)
+		return 1
 	if(modifiers["shift"])
 		ShiftClickOn(A)
 		return 0
@@ -220,6 +223,9 @@
 */
 /mob/proc/MiddleClickOn(var/atom/A)
 	pointed(A)
+	return
+
+/mob/proc/AltMiddleClickOn(var/atom/A)
 	return
 
 // In case of use break glass
