@@ -52,6 +52,7 @@
 		move_intent = move_intents[1]
 	if(ispath(move_intent))
 		move_intent = decls_repository.get_decl(move_intent)
+	set_focus(src)
 	START_PROCESSING(SSmobs, src)
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
@@ -226,6 +227,7 @@
 	return log(2, mob_size / MOB_MEDIUM)
 
 /mob/proc/Life()
+	set waitfor = FALSE
 //	if(organStructure)
 //		organStructure.ProcessOrgans()
 	return
@@ -291,8 +293,6 @@
 
 /mob/proc/reset_view(atom/A)
 	if (client)
-		client.pixel_x = initial(client.pixel_x)
-		client.pixel_y = initial(client.pixel_y)
 		A = A ? A : eyeobj
 		if (istype(A, /atom/movable))
 			client.perspective = EYE_PERSPECTIVE
