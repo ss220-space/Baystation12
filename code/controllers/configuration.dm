@@ -8,6 +8,9 @@ var/list/gamemode_cache = list()
 	var/ooc_during_round = 0
 	var/emojis = 1
 
+	var/twitch_censor = FALSE
+	var/list/twich_censor_list = list()
+
 	var/log_ooc = 0						// log OOC channel
 	var/log_access = 0					// log login/logout
 	var/log_say = 0						// log client say
@@ -819,6 +822,9 @@ var/list/gamemode_cache = list()
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
+
+		else if(type == "twitch_censor")
+			twich_censor_list[name] = value
 
 		else if(type == "game_options")
 			if(!value)
