@@ -75,8 +75,8 @@
 	add_field(/datum/report_field/date, "Дата утверждения")
 	add_field(/datum/report_field/time, "Время утверждения")
 	add_field(/datum/report_field/pencode_text, "Описание патрулей", required = 1)
-	add_field(/datum/report_field/text_label/instruction, "Сменные позывные. Для синего кода и выше.")
-	add_field(/datum/report_field/pencode_text, "Описание сменных позывных", required = 1)
+	add_field(/datum/report_field/text_label/instruction, "Экстренные группы. Для синего кода и выше.")
+	add_field(/datum/report_field/pencode_text, "Описание экстренных групп", required = 1)
 	add_field(/datum/report_field/text_label/instruction, "Для патрулирующего. Проведите полный осмотр назначенной палубы, включая тех. туннели.\
 	Отвечайте на вызовы с других палуб только при приказе. Вы ответственны за безопасность на закрепленной за вами палубе.")
 	add_field(/datum/report_field/signature, "Подпись", required = 1)
@@ -149,3 +149,24 @@
 	temp_field = add_field(/datum/report_field/signature, "Подпись ревизора")
 	temp_field.set_access(access_edit = access_security)
 	temp_field.required = TRUE
+
+/datum/computer_file/report/recipient/sec/penalty
+	form_name = "NT-SEC-20"
+	title = "Служба Безопасности: Квитанция о взымании штрафа"
+	available_on_ntnet = 1
+
+/datum/computer_file/report/recipient/sec/penalty/generate_fields()
+	..()
+	add_field(/datum/report_field/text_label/header, "ИКН Сьерра - Охранный департамент")
+	add_field(/datum/report_field/text_label/header, "Квитанция о взымании штрафа")
+	add_field(/datum/report_field/text_label/instruction, "Заполняется старшим сотрудником Охранного департамента.")
+	add_field(/datum/report_field/people/from_manifest, "Полное имя, фамилия и должность обвиняемого", required = 1)
+	add_field(/datum/report_field/simple_text, "Номер статьи, по которой выплачивается штраф", required = 1)
+	add_field(/datum/report_field/simple_text, "Размер штрафа", required = 1)
+	add_field(/datum/report_field/text_label, "Выплата возможна действующему старшему сотруднику отдела Службы защиты активов ИКН Сьерра.")
+	add_field(/datum/report_field/signature, "Подпись обвиняемого", required = 1)
+	add_field(/datum/report_field/people/from_manifest, "Сотрудник, назначивший выплату штрафа", required = 1)
+	add_field(/datum/report_field/signature, "Подпись сотрудника, назначившего выплату штрафа", required = 1)
+	add_field(/datum/report_field/date, "Дата")
+	add_field(/datum/report_field/time, "Время")
+	set_access(access_edit = access_security)
