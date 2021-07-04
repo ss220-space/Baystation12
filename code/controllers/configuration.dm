@@ -11,6 +11,8 @@ var/list/gamemode_cache = list()
 	var/twitch_censor = FALSE
 	var/list/twich_censor_list = list()
 
+	var/clientfps = 65					// Default fps for clients with "0" in prefs. -1 for synced with server.
+
 	var/log_ooc = 0						// log OOC channel
 	var/log_access = 0					// log login/logout
 	var/log_say = 0						// log client say
@@ -557,6 +559,9 @@ var/list/gamemode_cache = list()
 
 				if("fps")
 					fps = text2num(value)
+
+				if("clientfps")
+					clientfps = text2num(value)
 
 				if("tick_limit_mc_init")
 					tick_limit_mc_init = text2num(value)
