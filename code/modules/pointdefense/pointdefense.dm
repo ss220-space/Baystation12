@@ -110,7 +110,7 @@
 	base_type = /obj/machinery/pointdefense
 	stock_part_presets = list(/decl/stock_part_preset/terminal_setup)
 	uncreated_component_parts = null
-	appearance_flags = PIXEL_SCALE
+	appearance_flags = PIXEL_SCALE | LONG_GLIDE
 	machine_name = "point defense battery"
 	machine_desc = "A mounted turret that locks onto and destroys incoming meteors. Aim away from vessel."
 	var/active = TRUE
