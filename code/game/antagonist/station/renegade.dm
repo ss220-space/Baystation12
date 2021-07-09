@@ -58,7 +58,7 @@ GLOBAL_DATUM_INIT(renegades, /datum/antagonist/renegade, new)
 
 	var/datum/objective/survive/survive = new
 	survive.owner = player
-	player.objectives |= выжить
+	player.objectives |= survive
 
 /datum/antagonist/renegade/equip(var/mob/living/carbon/human/player)
 
