@@ -47,7 +47,7 @@ GLOBAL_DATUM_INIT(actor, /datum/antagonist/actor, new)
 		return
 
 	if(jobban_isbanned(usr, MODE_ACTOR))
-		to_chat(usr, "Кажется, Вам бан на работу Актера. Что ж, плохие новости.")
+		to_chat(usr, "Кажется, у вас джоб-бан на работу Актера. Что ж, плохие новости.")
 		return
 
 	var/choice = alert("Вы уверены, что хотите стать актером?", "Confirmation","Yes", "No")
