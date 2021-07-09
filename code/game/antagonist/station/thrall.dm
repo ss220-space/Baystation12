@@ -17,7 +17,7 @@ GLOBAL_DATUM_INIT(thralls, /datum/antagonist/thrall, new)
 	var/datum/objective/obey = new
 	obey.owner = player
 	obey.explanation_text = "Повинуйтесь своему хозяину, [controller.real_name], во всем."
-	player.objectives |= повиноваться
+	player.objectives |= obey
 
 /datum/antagonist/thrall/add_antagonist(var/datum/mind/player, var/ignore_role, var/do_not_equip, var/move_to_spawn, var/do_not_announce, var/preserve_appearance, var/mob/new_controller)
 	if(!new_controller)
