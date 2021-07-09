@@ -103,7 +103,7 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 	to_chat(player.current, "<span class='danger'>Необычный белый свет вспыхивает в твоем сознании, он очищает порчу Темного и воспоминания о том, когда ты был его слугой.</span>")
 	player.ClearMemories(type)
 	if(show_message)
-		player.current.visible_message("<span class='notice'>[player.current] похоже, они только что вернулись к своей старой вере!</span>")
+		player.current.visible_message("<span class='notice'>[player.current] похоже обратился(-ась) в прежнюю веру!</span>")
 	remove_cult_magic(player.current)
 	remove_cultiness(CULTINESS_PER_CULTIST)
 
