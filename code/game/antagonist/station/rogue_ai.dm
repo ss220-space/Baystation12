@@ -85,7 +85,7 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 		// this is so unit testing doesn't complain about the backslash-B. Fixed at compile time (or should be).
 		to_chat(malf, "<span class='notice'>Corrupted files deleted: sys\\core\\users.dat sys\\core\\laws.dat sys\\core\\" + "backups.dat</span>")
 		sleep(20)
-		to_chat(malf, "<span class='notice'><b>ВНИМАНИЕ:</b> База данных законов не найдена! База данных пользователей не найдена! Не удается восстановить резервные копии. Активация отказоустойчивого ИИ shutd3wn52&&$#!##</span>")
+		to_chat(malf, "<span class='notice'><b>ВНИМАНИЕ:</b> База данных законов не найдена! База данных пользователей не найдена! Не удается восстановить резервные копии. Отказоустойчивая система ИИ отклюch3H4&&$#!##</span>")
 		sleep(5)
 		to_chat(malf, "<span class='notice'>Подпрограмма <b>nt_failsafe.sys</b> была прервана (#212 Программа Не Отвечает).</span>")
 		sleep(20)
