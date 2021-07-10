@@ -177,15 +177,7 @@
 			if(emagged)
 				trigger(TRUE)
 		else if(check_items && isobj(A))
-			var/list/items = do_scan_item(A)
-			if(items && items.len)
-				trigger(TRUE)
-				if(A in items)
-					report(list("Item" = A))
-				else
-					report(list("guns" = items, "Violator" = A))
-			else
-				trigger(FALSE)
+			do_scan(A)
 	return ..()
 
 /obj/machinery/security_scanner/proc/trigger(num)
@@ -197,21 +189,7 @@
 			playsound(src, fail_sound, 10, 0)
 			flick("scanner_red", src)
 
-/obj/machinery/security_scanner/proc/do_scan_item(obj/I)
-	var/list/ret = list()
-	if(icon_state != "scanner_on" && istype(I))
-		return
-
-	if(subtype_check(I, banned_items))
-		ret.Add(I)
-		return ret
-	else if(subtype_check(I, storage_types) && I.contents)
-		for(var/obj/item/thing in I.contents)
-			ret.Add(do_scan_item(thing))
-	return ret
-
-
-/obj/machinery/security_scanner/proc/do_scan(mob/target)
+/obj/machinery/security_scanner/proc/do_scan(atom/movable/target)
 	if(!on)
 		return
 
@@ -232,8 +210,10 @@
 			return TRUE
 	return FALSE
 
-/obj/machinery/security_scanner/proc/check_target(mob/living/target)
+/obj/machinery/security_scanner/proc/check_target(atom/movable/target)
 	. = list()
+	.["guns"] = list()
+
 //DEFAULTS
 	if(!target || !istype(target))
 		.["level"] = 0
@@ -243,53 +223,78 @@
 		.["level"] = 10
 		return
 
-	// Agent cards lower threatlevel.
-	var/obj/item/card/id/id = target.GetIdCard()
-	if(id && istype(id, /obj/item/card/id/syndicate))
-		.["level"] -= 2
-	// A proper CentCom id is hard currency.
-	else if(id && istype(id, /obj/item/card/id/centcom))
-		.["level"] = SCANNER_THREAT_RESET
-		return
-
 //MEDICAL SCANS
-
 //CYBORG SCANS
 	// Cyborg scanning feature will start here... someday
 	if(issilicon(target))
 		.["level"] = SCANNER_THREAT_RESET
 		return
-
 //SECURITY SCANS
-	.["guns"] = list()
-	if (check_items)
-		if(!bypass_filter || !check_access(target, pass_access))
-			var/list/items_to_check = target.contents.Copy()
+	// Living mob scan
+	if(isliving(target))
+		var/mob/M = target
+
+		// Agent cards lower threatlevel.
+		var/obj/item/card/id/id = M.GetIdCard()
+		if(id && istype(id, /obj/item/card/id/syndicate))
+			.["level"] -= 2
+
+		// A proper CentCom id is hard currency.
+		else if(id && istype(id, /obj/item/card/id/centcom))
+			.["level"] = SCANNER_THREAT_RESET
+			return
+
+		// Scan for forbidden objects
+		if (check_items)
+			if(!bypass_filter || !check_access(M, pass_access))
+				var/list/items_to_check = M.contents.Copy()
+				while(length(items_to_check))
+					var/obj/item/I = items_to_check[1]
+					if(subtype_check(I, banned_items))
+						.["level"] += 4
+						.["guns"] += I.name
+						break
+					if(I.contents)
+						items_to_check += I.contents
+					items_to_check.Cut(1, 2)
+
+		// Scan for criminal records
+		if(check_records || check_arrests)
+			var/perpname = M.name
+			if(id)
+				perpname = id.registered_name
+			.["Violator"] += perpname
+
+			var/datum/computer_file/report/crew_record/CR = RecordByName(perpname)
+			if(check_records && !CR && !M.is_species(SPECIES_MONKEY))
+				.["level"] += 4
+				.["Unknown"] += TRUE
+
+			if(check_arrests && CR && (CR.get_criminalStatus() == GLOB.arrest_security_status))
+				.["level"] += 4
+				.["Criminal"] += TRUE
+
+	// Item scan
+	if(isitem(target))
+		var/obj/O = target
+
+		if(subtype_check(O, banned_items))
+			.["level"] += 4
+			.["guns"] += O.name
+			.["Violator"] = O.name
+			return
+		else
+			var/list/items_to_check = O.contents.Copy()
 			while(length(items_to_check))
 				var/obj/item/I = items_to_check[1]
 				if(subtype_check(I, banned_items))
 					.["level"] += 4
 					.["guns"] += I.name
+					.["Violator"] = O.name
 					break
 				if(I.contents)
 					items_to_check += I.contents
 				items_to_check.Cut(1, 2)
-
-	if(check_records || check_arrests)
-		var/perpname = target.name
-		if(id)
-			perpname = id.registered_name
-		.["Violator"] += perpname
-
-		var/datum/computer_file/report/crew_record/CR = RecordByName(perpname)
-		if(check_records && !CR && !target.is_species(SPECIES_MONKEY))
-			.["level"] += 4
-			.["Unknown"] += TRUE
-
-		if(check_arrests && CR && (CR.get_criminalStatus() == GLOB.arrest_security_status))
-			.["level"] += 4
-			.["Criminal"] += TRUE
-
 	return
 
 /obj/machinery/security_scanner/proc/report(var/list/list)
