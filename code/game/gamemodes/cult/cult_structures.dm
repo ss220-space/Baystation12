@@ -10,7 +10,7 @@
 
 
 /obj/structure/cult/forge
-	name = "Демоническая кузьня"
+	name = "Демоническая кузня"
 	desc = "Кузница, используемая для изготовления нечестивого оружия, используемого армиями Нар-Си."
 	icon_state = "forge"
 
@@ -41,8 +41,8 @@
 	user.do_attack_animation(src)
 	if (W.force < 4)
 		user.visible_message(
-			SPAN_DANGER("[user] ударяет [src], но без повреждений!"),
-			SPAN_DANGER("Вы ударили [src], но без повреждений!"),
+			SPAN_DANGER("[user] ударяет [src]не нанеся никаких видимых повреждений!"),
+			SPAN_DANGER("Вы ударили [src] не нанеся никаких видимых повреждений!"),
 			SPAN_WARNING("Вы слышите, как чем то бьют по толстому стеклу.")
 		)
 		playsound(get_turf(src), 'sound/effects/Glasshit.ogg', 50, TRUE)
@@ -52,14 +52,14 @@
 		user.visible_message(
 			SPAN_DANGER("[user] разбивает [src]!"),
 			SPAN_DANGER("Вы разбиваете [src] на кусочки!"),
-			SPAN_WARNING("Вы слышите, как бьется стекло, и звон осколков.")
+			SPAN_WARNING("Вы слышите как разбивается стекло и разлетаются осколки.")
 		)
 		playsound(get_turf(src), 'sound/effects/Glassbr3.ogg', 75, TRUE)
 		qdel(src)
 	else
 		user.visible_message(
-			SPAN_DANGER("[user] ударяет [src]!"),
-			SPAN_DANGER("Вы ударяете [src]!"),
+			SPAN_DANGER("[user] бьет [src]!"),
+			SPAN_DANGER("Вы бьете [src]!"),
 			SPAN_WARNING("Вы слышите, как чем то бьют по толстому стеклу.")
 		)
 		playsound(get_turf(src), 'sound/effects/Glasshit.ogg', 75, TRUE)
