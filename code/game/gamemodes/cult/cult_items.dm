@@ -1,6 +1,6 @@
 /obj/item/melee/cultblade
 	name = "клинок культа"
-	desc = "Мистическое оружие, которым владеют последователи Нарс Си."
+	desc = "Мистическое оружие, которым владеют последователи Нарс-Си."
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "cultblade"
 	item_state = "cultblade"
@@ -26,7 +26,7 @@
 	if(affecting)
 		to_chat(user, "<span class='danger'>Необъяснимая сила проникает в Вашу [affecting.name], вырывая коинок из Вашей хватки!</span>")
 	else
-		to_chat(user, "<span class='danger'>Необъяснимая сила проникает в Вас, вырывая коинок из Вашей хватки!</span>")
+		to_chat(user, "<span class='danger'>Необъяснимая сила проникает в Вас, вырывая клинок из Вашей хватки!</span>")
 
 	//random amount of damage between half of the blade's force and the full force of the blade.
 	user.apply_damage(rand(force/2, force), BRUTE, zone, (DAM_SHARP|DAM_EDGE), armor_pen = 100)
@@ -115,7 +115,7 @@
 
 /obj/item/clothing/head/helmet/space/cult
 	name = "гермошлем культа"
-	desc = "Шлем, который последователи Нар Си носят в космосе."
+	desc = "Шлем, который последователи Нар-Си носят в космосе."
 	icon_state = "cult_helmet"
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
