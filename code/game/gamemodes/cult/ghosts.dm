@@ -22,7 +22,7 @@
 		to_chat(src, "<span class='notice'>Вы не можете использовать свои способности на освященной земле.</span>")
 		return 0
 	if(ghost_magic_cd > world.time)
-		to_chat(src, "<span class='notice'>Вам необходимо подождать еще [round((ghost_magic_cd - world.time) / 10)] перед тем как использовать свои способности.</span>")
+		to_chat(src, "<span class='notice'>Вам необходимо подождать еще [round((ghost_magic_cd - world.time) / 10)] перед тем, как использовать свои способности.</span>")
 		return 0
 	return 1
 
@@ -84,7 +84,7 @@
 
 	var/max_length = 50
 
-	var/message = sanitize(input("Напишите сообщение. Оно не должно быть больше, чем [max_length] символов.", "Сообщение пишется", ""))
+	var/message = sanitize(input("Напишите сообщение. Оно не должно быть длиннее [max_length] символов.", "Сообщение пишется", ""))
 
 	if(!ghost_ability_check())
 		return
@@ -159,7 +159,7 @@
 		return
 
 	if(step_to(choice, T))
-		choice.visible_message("<span class='warning'>\[choice] внезапно двинулся!</span>")
+		choice.visible_message("<span class='warning'>\[choice] внезапно сдвинулся!</span>")
 
 	ghost_magic_cd = world.time + 60 SECONDS
 
@@ -217,7 +217,7 @@
 	if(!ghost_ability_check())
 		return
 
-	var/method = pick("укусить", "поцарапать")
+	var/method = pick("кусает", "царапает")
 	to_chat(choice, "<span class='danger'>Что то невидимое [method] Вас!</span>")
 	choice.apply_effect(5, PAIN, 0)
 	to_chat(src, "<span class='notice'>Вы [method]  [choice].</span>")
@@ -248,7 +248,7 @@
 	to_chat(choice, "<span class='danger'>Вы чувствуете, как будто что то холодное прошло сквозь вас!</span>")
 	if(choice.bodytemperature >= choice.species.cold_level_1 + 1)
 		choice.bodytemperature = max(choice.species.cold_level_1 + 1, choice.bodytemperature - 30)
-	to_chat(src, "<span class='notice'>Вы прошли сквозь [choice], заставив почувствовать внезапную дрожь.</span>")
+	to_chat(src, "<span class='notice'>Вы прошли сквозь [choice], заставив их почувствовать внезапную дрожь.</span>")
 
 	log_and_message_admins("used ghost magic to chill \the [choice] - [x]-[y]-[z]")
 
