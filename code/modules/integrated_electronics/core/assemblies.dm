@@ -649,7 +649,7 @@
 	desc = "It's a case, for building large electronics with. This one resembles some kind of industrial machinery."
 
 /obj/item/device/electronic_assembly/large/exo_frame
-	name = "type-a exo frame"
+	name = "type-a exosuit electronic assembly"
 	icon_state = "setup_medium_radio"
 	desc = "It's a case, for building large electronics with. This one resembles a box, or some type of rack for weapon."
 	circuit_flags = IC_FLAG_CAN_FIRE
