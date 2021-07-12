@@ -220,7 +220,7 @@
 	var/method = pick("кусает", "царапает")
 	to_chat(choice, "<span class='danger'>Что то невидимое [method] Вас!</span>")
 	choice.apply_effect(5, PAIN, 0)
-	var/method2 = (method == "укусить") ? "кусаете" : "царапаете"
+	var/method2 = (method == "кусает") ? "кусаете" : "царапаете"
 	to_chat(src, "<span class='notice'>Вы [method2] [choice].</span>")
 
 	log_and_message_admins("использовал призрачную магию, чтобы укусить [choice] - [x]-[y]-[z]")
