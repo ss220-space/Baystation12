@@ -34,7 +34,7 @@
 		else
 			user.visible_message(
 				SPAN_NOTICE("[user] заделывает некоторые трещины на [src]."),
-				SPAN_NOTICE("Вы убрали обработали повреждения [src].")
+				SPAN_NOTICE("Вы исправляете часть повреждений [src].")
 			)
 			health = min(maxhealth, health + 5)
 		return
