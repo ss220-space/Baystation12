@@ -788,7 +788,7 @@
 			holding = null
 			playsound(loc, 'sound/items/Crowbar.ogg', 50, 1)
 		else to_chat(user, SPAN_WARNING("The frame is empty!"))
-	else if(istype(W, /obj/item/device/electronic_assembly/large/exo_frame))
+	else if(istype(W, /obj/item/device/electronic_assembly/exo/exo_frame))
 		if(holding)
 			to_chat(user, SPAN_WARNING("There's already an assembly in there."))
 		else if(user.unEquip(W, src))
