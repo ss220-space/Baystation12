@@ -4,19 +4,19 @@
 	icon = 'icons/obj/cult.dmi'
 
 /obj/structure/cult/talisman
-	name = "Altar"
-	desc = "A bloodstained altar dedicated to Nar-Sie."
+	name = "Алтарь"
+	desc = "Окровавленный алтарь, посвященный Нар-Си."
 	icon_state = "talismanaltar"
 
 
 /obj/structure/cult/forge
-	name = "Daemon forge"
-	desc = "A forge used in crafting the unholy weapons used by the armies of Nar-Sie."
+	name = "Демоническая кузня"
+	desc = "Кузница, используемая для изготовления нечестивого оружия, используемого армиями Нар-Си."
 	icon_state = "forge"
 
 /obj/structure/cult/pylon
-	name = "pylon"
-	desc = "A floating crystal that hums with an unearthly energy."
+	name = "Стела"
+	desc = "Парящий кристалл, гудящий от неземной энергии."
 	icon = 'icons/obj/pylon.dmi'
 	icon_state = "pylon"
 	light_max_bright = 0.5
@@ -30,43 +30,43 @@
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if (istype(W, /obj/item/natural_weapon/cult_builder))
 		if (health >= maxhealth)
-			to_chat(user, SPAN_WARNING("\The [src] is fully repaired."))
+			to_chat(user, SPAN_WARNING("[src] полностью восстановлена."))
 		else
 			user.visible_message(
-				SPAN_NOTICE("\The [user] mends some of the cracks on \the [src]."),
-				SPAN_NOTICE("You repair some of \the [src]'s damage.")
+				SPAN_NOTICE("[user] заделывает некоторые трещины на [src]."),
+				SPAN_NOTICE("Вы исправляете часть повреждений [src].")
 			)
 			health = min(maxhealth, health + 5)
 		return
 	user.do_attack_animation(src)
 	if (W.force < 4)
 		user.visible_message(
-			SPAN_DANGER("\The [user] hits \the [src], but they bounce off!"),
-			SPAN_DANGER("You hit \the [src], but bounce off!"),
-			SPAN_WARNING("You hear thick glass being struck with something.")
+			SPAN_DANGER("[user] ударяет [src]не нанеся никаких видимых повреждений!"),
+			SPAN_DANGER("Вы ударили [src] не нанеся никаких видимых повреждений!"),
+			SPAN_WARNING("Вы слышите, как чем то бьют по толстому стеклу.")
 		)
 		playsound(get_turf(src), 'sound/effects/Glasshit.ogg', 50, TRUE)
 		return
 	health = max(0, health - W.force)
 	if(!health)
 		user.visible_message(
-			SPAN_DANGER("\The [user] smashes \the [src]!"),
-			SPAN_DANGER("You smash \the [src] into pieces!"),
-			SPAN_WARNING("You hear glass shattering, and a tinkle of shards.")
+			SPAN_DANGER("[user] разбивает [src]!"),
+			SPAN_DANGER("Вы разбиваете [src] на кусочки!"),
+			SPAN_WARNING("Вы слышите как разбивается стекло и разлетаются осколки.")
 		)
 		playsound(get_turf(src), 'sound/effects/Glassbr3.ogg', 75, TRUE)
 		qdel(src)
 	else
 		user.visible_message(
-			SPAN_DANGER("\The [user] hits \the [src]!"),
-			SPAN_DANGER("You hit \the [src]!"),
-			SPAN_WARNING("You hear thick glass being struck with something.")
+			SPAN_DANGER("[user] бьет [src]!"),
+			SPAN_DANGER("Вы бьете [src]!"),
+			SPAN_WARNING("Вы слышите, как чем то бьют по толстому стеклу.")
 		)
 		playsound(get_turf(src), 'sound/effects/Glasshit.ogg', 75, TRUE)
 
 /obj/structure/cult/tome
-	name = "Desk"
-	desc = "A desk covered in arcane manuscripts and tomes in unknown languages. Looking at the text makes your skin crawl."
+	name = "Аналой"
+	desc = "Аналой, заваленный таинственными рукописями и фолиантами на неизвестных языках. От одного взгляда на текст у Вас бегут мурашки по коже."
 	icon_state = "tomealtar"
 	light_color = "#ed9200"
 	light_outer_range = 3
@@ -83,8 +83,8 @@
 */
 
 /obj/effect/gateway
-	name = "gateway"
-	desc = "You're pretty sure that abyss is staring back."
+	name = "Портал"
+	desc = "Вы почти уверены, что бездна смотрит в ответ."
 	icon = 'icons/obj/cult.dmi'
 	icon_state = "hole"
 	density = TRUE
@@ -159,5 +159,4 @@
 		else
 			new_mob.key = M.key
 
-		to_chat(new_mob, "<B>Your form morphs into that of a corgi.</B>")//Because we don't have cluwnes
-
+		to_chat(new_mob, "<B>Вы превращаетесь в корги.</B>")//Потому что у нас нет клувунов

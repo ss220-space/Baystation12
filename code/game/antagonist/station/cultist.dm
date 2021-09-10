@@ -29,11 +29,11 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/chaplain, /datum/job/psychiatrist, /datum/job/submap)
 	feedback_tag = "cult_objective"
 	antag_indicator = "hudcultist"
-	welcome_text = "У вас в распоряжении есть книга, которая поможет вам основать культ. Используйте его предусмотрительно и помните - есть и другие."
+	welcome_text = "У вас в распоряжении есть фолиант, которая поможет вам основать культ. Используйте его предусмотрительно и помните - есть и другие."
 	victory_text = "Культ победил! Он преуспел в служении своим темным хозяевам!"
 	loss_text = "Персоналу удалось остановить культ!"
-	victory_feedback_tag = "win - cult win"
-	loss_feedback_tag = "loss - staff stopped the cult"
+	victory_feedback_tag = "Победа - культ победил"
+	loss_feedback_tag = "Поражение - персонал остановил культ"
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	hard_cap = 5
 	hard_cap_round = 6
@@ -51,7 +51,7 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 	var/cult_rating = 0
 	var/list/cult_rating_bounds = list(CULT_RUNES_1, CULT_RUNES_2, CULT_RUNES_3, CULT_GHOSTS_1, CULT_GHOSTS_2, CULT_GHOSTS_3)
 	var/max_cult_rating = 0
-	var/conversion_blurb = "Вы мельком видите мир Нар-Си, обитель крови. Теперь вы видите насколько хрупок мир, вы понимаете, что он должен быть открыт познанию того, Который Ожидаетт. Помогайте своим новым товарищам в их темных делах. Их цели - ваши, а ваши - их. Прежде всего Вы служете Темному. Возродите Его."
+	var/conversion_blurb = "Вы мельком видите мир Нар-Си, кровавую обитель. Теперь вы видите насколько хрупок мир, вы понимаете, что он должен быть открыт познанию того, Который Ожидаетт. Помогайте своим новым товарищам в их темных делах. Их цели - ваши, а ваши - их. Прежде всего Вы служете Темному. Возродите Его."
 
 	faction = "cult"
 	ambitious = 0 //INF
@@ -100,7 +100,7 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 /datum/antagonist/cultist/remove_antagonist(var/datum/mind/player, var/show_message, var/implanted)
 	if(!..())
 		return 0
-	to_chat(player.current, "<span class='danger'>Необычный белый свет вспыхивает в твоем сознании, он очищает порчу Темного и воспоминания о том, когда ты был его слугой.</span>")
+	to_chat(player.current, "<span class='danger'>Необычный белый свет вспыхивает в твоем сознании, он очищает порчу Темного и воспоминания о том, когда Вы были его слугой.</span>")
 	player.ClearMemories(type)
 	if(show_message)
 		player.current.visible_message("<span class='notice'>[player.current] похоже обратился(-ась) в прежнюю веру!</span>")
