@@ -3,7 +3,7 @@
 	desc = "A curt, sharp language developed by the insectoid Ascent for use over comms."
 	speech_verb = "щёлкает"
 	ask_verb = "щебечет"
-	exclaim_verb = "скрежечет"
+	exclaim_verb = "скрежещет"
 	colour = "alien"
 	syllables = list("-","=","+","_","|","/")
 	space_chance = 0
