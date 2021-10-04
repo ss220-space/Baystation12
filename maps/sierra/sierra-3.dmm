@@ -33627,12 +33627,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/thruster/d1port)
-"bdu" = (
-/obj/machinery/constructable_frame/computerframe{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/shuttle/escape_pod/escape_pod5/station)
 "bdv" = (
 /obj/structure/bed/chair/shuttle/blue{
 	dir = 8
@@ -52618,7 +52612,7 @@ aXL
 aXL
 bbi
 bbi
-bdu
+bfs
 beo
 bfs
 bbi
