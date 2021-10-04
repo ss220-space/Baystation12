@@ -89,7 +89,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/ascent
 	minimal_player_age = 21
 	blacklisted_species = null
-	whitelisted_species = null // нужно указать вл чтобы не мог зайти кто угодно
+	whitelisted_species = list("kharmaan gyne") // не уверен что он правильный, у меня нет бд с ксенолистом для првоерки
 	loadout_allowed = FALSE
 	is_semi_antagonist = TRUE
 	var/requires_supervisor = FALSE
