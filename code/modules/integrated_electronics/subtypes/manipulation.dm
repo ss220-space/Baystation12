@@ -111,7 +111,7 @@
 	if(!istype(T) || !istype(U))
 		return
 	update_icon()
-	var/obj/item/projectile/A = installed_gun.consume_next_projectile()
+	var/obj/item/projectile/A = new installed_gun.projectile_type(installed_gun)
 	if(!A)
 		return
 	//Shooting Code:
@@ -767,3 +767,4 @@
 		set_pin_data(IC_OUTPUT, 1, lock_enabled)
 		push_data()
 		activate_pin(2)
+
