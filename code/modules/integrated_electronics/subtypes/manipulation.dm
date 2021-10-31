@@ -26,7 +26,7 @@
 	var/obj/item/gun/energy/installed_gun = null
 	spawn_flags = IC_SPAWN_RESEARCH
 	action_flags = IC_ACTION_COMBAT
-	power_draw_per_use = 30
+	power_draw_per_use = 350000
 	ext_cooldown = 1
 
 
@@ -111,7 +111,7 @@
 	if(!istype(T) || !istype(U))
 		return
 	update_icon()
-	var/obj/item/projectile/A = installed_gun.consume_next_projectile()
+	var/obj/item/projectile/A = new installed_gun.projectile_type(installed_gun)
 	if(!A)
 		return
 	//Shooting Code:
