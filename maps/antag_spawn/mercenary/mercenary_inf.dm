@@ -19,7 +19,6 @@
 	has_distress_beacon = "SOS - multiple breaches, possible hostiles"
 
 /obj/effect/overmap/visitable/ship/landable/merc
-	name = ""
 	desc = "A military gunship of ICCG design. Scanner detects heavy modification to the framework of the vessel and no designation."
 	shuttle = "Desperado"
 	fore_dir = NORTH
@@ -27,7 +26,7 @@
 	vessel_mass = 14000
 
 /obj/effect/overmap/visitable/ship/landable/merc/New()
-	name = "[pick("Desperado","SEV Torch","SEV Icarus","Yacht","Lar Maria","SRV Verne","SRV Catfish","IEV Vagrant","Cometa","Guppy","Charon","Liberia","Mule","Knight","Los Zetas","Trinitario","Mayhem","Emperor","Blasphemy","Malign","Nifelheim","Gorgoroth","Ndrangheta","Penose","Zevallos","Eagle","Artistas","Red-Wa","SFV Cavalry","SFV Helios","SFV Terror")]\a [name]"
+	name = "[pick("Desperado","SEV Torch","SEV Icarus","Yacht","Lar Maria","SRV Verne","SRV Catfish","IEV Vagrant","Cometa","Guppy","Charon","Liberia","Mule","Knight","Los Zetas","Trinitario","Mayhem","Emperor","Blasphemy","Malign","Nifelheim","Gorgoroth","Ndrangheta","Penose","Zevallos","Eagle","Artistas","Red-Wa","SFV Cavalry","SFV Helios","SFV Terror")]"
 	for(var/area/map_template/merc_shuttle/A)
 		A.name = "\improper [name] - [A.name]"
 		GLOB.using_map.area_purity_test_exempt_areas += A.type
