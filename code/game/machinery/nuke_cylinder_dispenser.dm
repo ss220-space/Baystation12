@@ -3,13 +3,14 @@
 	desc = "It's a secure, armored storage unit embeded into the floor for storing the nuclear cylinders."
 	icon = 'icons/obj/machines/self_destruct.dmi'
 	icon_state = "base"
-	anchored = TRUE	
+	anchored = TRUE
 	density = FALSE
 	req_access = list(access_heads_vault)
 
 	var/locked = TRUE
 	var/open = FALSE
 	var/list/cylinders = list() //Should only hold 6
+	var/nuke_emagged = FALSE
 
 /obj/machinery/nuke_cylinder_dispenser/Initialize()
 	. = ..()
@@ -18,11 +19,19 @@
 	update_icon()
 
 /obj/machinery/nuke_cylinder_dispenser/emag_act(remaining_charges, mob/user, emag_source)
-	to_chat(user, SPAN_NOTICE("The card fails to do anything. It seems this device has an advanced encryption system."))
-	return NO_EMAG_ACT
+	if(is_powered() && !nuke_emagged)
+		open = TRUE
+		locked = TRUE
+		nuke_emagged = TRUE
+		user.visible_message("[user] unlocks \the [src].", "You emagged \the [src].")
+		to_chat(user, SPAN_NOTICE("The encryption system was hacked."))
+		update_icon()
+		add_fingerprint(user)
+		return TRUE
+	//to_chat(user, SPAN_NOTICE("The card fails to do anything. It seems this device has an advanced encryption system."))
 
 /obj/machinery/nuke_cylinder_dispenser/physical_attack_hand(mob/user)
-	if(is_powered() && locked && check_access(user))
+	if(is_powered() && locked && check_access(user) && !nuke_emagged)
 		locked = FALSE
 		user.visible_message("[user] unlocks \the [src].", "You unlock \the [src].")
 		update_icon()
