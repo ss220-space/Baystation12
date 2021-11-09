@@ -24,11 +24,15 @@
 		locked = TRUE
 		nuke_emagged = TRUE
 		user.visible_message("[user] unlocks \the [src].", "You emagged \the [src].")
-		to_chat(user, SPAN_NOTICE("The encryption system was hacked."))
+		visible_message("<span class = 'warning'>\The [src.name] breaks!</span>")
+		to_chat(user, SPAN_NOTICE("Security protocol disabled.The encryption system was hacked."))
+		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+		s.set_up(5, 1, src)
+		s.start()
+		desc += " It appears to be broken."
 		update_icon()
 		add_fingerprint(user)
 		return TRUE
-	//to_chat(user, SPAN_NOTICE("The card fails to do anything. It seems this device has an advanced encryption system."))
 
 /obj/machinery/nuke_cylinder_dispenser/physical_attack_hand(mob/user)
 	if(is_powered() && locked && check_access(user) && !nuke_emagged)
