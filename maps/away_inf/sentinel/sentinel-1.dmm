@@ -7867,7 +7867,6 @@
 /obj/structure/closet/crate/radiation,
 /obj/item/stack/material/deuterium/fifty,
 /obj/item/stack/material/deuterium/fifty,
-/obj/item/stack/material/uranium/ten,
 /obj/item/stack/material/deuterium/fifty,
 /obj/item/stack/material/tritium/fifty,
 /obj/item/stack/material/tritium/fifty,
@@ -8286,11 +8285,12 @@
 	icon_state = "warning"
 	},
 /obj/machinery/light,
-/obj/machinery/power/port_gen/pacman/super,
 /obj/structure/cable/yellow{
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/machinery/power/port_gen/pacman/mrs,
+/obj/item/stack/material/tritium/ten,
 /turf/simulated/floor/plating,
 /area/ship/patrol/engineering/fussion/control)
 "pA" = (
