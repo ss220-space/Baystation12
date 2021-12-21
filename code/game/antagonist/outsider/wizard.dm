@@ -40,6 +40,7 @@ GLOBAL_DATUM_INIT(wizards, /datum/antagonist/wizard, new)
 			objective.find_target(wizard.objectives)
 
 		else if (!objective.find_target())
+			qdel(objective)
 			objective = new /datum/objective/steal()
 			objective.owner = wizard
 			objective.find_target(wizard.objectives)
