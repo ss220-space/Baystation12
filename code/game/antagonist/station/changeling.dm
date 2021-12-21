@@ -63,7 +63,8 @@ GLOBAL_DATUM_INIT(changelings, /datum/antagonist/changeling, new)
 	if(objective.find_target())
 		changeling.objectives += objective
 	else
-		to_chat(changeling.current, SPAN_LING("Мы не чувствуем жертв с полезными геномами. Стоит заняться чем-то ещё \
+		qdel(objective)
+		o_chat(changeling.current, SPAN_LING("Мы не чувствуем жертв с полезными геномами. Стоит заняться чем-то ещё \
 		- например, создать условия, чтобы было проще охотиться."))
 
 	return
