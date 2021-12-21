@@ -156,7 +156,7 @@ var/global/list/additional_antag_types = list()
 /datum/game_mode/proc/startRequirements()
 	var/playerC = 0
 	for(var/mob/new_player/player in GLOB.player_list)
-		if((player.ready))  //(player.client)&&
+		if(player.client && player.ready)
 			playerC++
 
 	if(playerC < required_players)
