@@ -52,16 +52,15 @@ GLOBAL_DATUM_INIT(loyalists, /datum/antagonist/loyalists, new)
 		global_objectives += loyal_obj
 
 	for (var/count in 1 to objectives_count)
+		var/datum/objective/anti_revolution/additional_objective = null
 		switch (rand(1,100))
 			if (1 to 45)
-				var/datum/objective/anti_revolution/demote/additional_objective = new
-				if (additional_objective.find_target(global_objectives))
-					global_objectives += additional_objective
+				additional_objective = new /datum/objective/anti_revolution/demote
 			if (46 to 89)
-				var/datum/objective/anti_revolution/brig/additional_objective = new
-				if (additional_objective.find_target(global_objectives))
-					global_objectives += additional_objective
+				additional_objective = new /datum/objective/anti_revolution/brig
 			if (90 to 100)
-				var/datum/objective/anti_revolution/execute/additional_objective = new
-				if (additional_objective.find_target(global_objectives))
-					global_objectives += additional_objective
+				additional_objective = new /datum/objective/anti_revolution/execute
+		if (!additional_objective.find_target(global_objectives))
+			qdel(additional_objective)
+			continue
+		global_objectives += additional_objective
