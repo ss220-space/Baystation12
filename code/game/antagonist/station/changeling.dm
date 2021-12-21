@@ -52,6 +52,7 @@ GLOBAL_DATUM_INIT(changelings, /datum/antagonist/changeling, new)
 		if(istype(objective, /datum/objective/steal))
 			objective.find_target(changeling.objectives)
 		else if (!objective.find_target())
+			qdel(objective)
 			objective = new /datum/objective/steal()
 			objective.owner = changeling
 			objective.find_target(changeling.objectives)
