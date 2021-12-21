@@ -59,6 +59,7 @@ GLOBAL_DATUM_INIT(traitors, /datum/antagonist/traitor, new)
             objective.find_target(traitor.objectives)
 
         else if (!objective.find_target())
+            qdel(objective)
             objective = new /datum/objective/steal()
             objective.owner = traitor
             objective.find_target(traitor.objectives)
