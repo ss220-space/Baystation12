@@ -570,5 +570,5 @@ datum/projectile_data
 
 	for(var/client/C as anything in GLOB.clients)
 		if(isliving(C.mob))
-			playerC++
+			counter++
 	return playerC
