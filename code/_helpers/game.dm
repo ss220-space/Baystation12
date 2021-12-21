@@ -568,7 +568,7 @@ datum/projectile_data
 /proc/count_living()
 	var/playerC = 0
 
-	for(var/client/C in GLOB.clients)
+	for(var/client/C as anything in GLOB.clients)
 		if(isliving(C.mob))
 			playerC++
 	return playerC
