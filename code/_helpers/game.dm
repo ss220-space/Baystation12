@@ -566,7 +566,7 @@ datum/projectile_data
 	return list(viewX, viewY)
 
 /proc/count_living()
-	var/playerC = 0
+	var/counter = 0
 
 	for(var/client/C as anything in GLOB.clients)
 		if(isliving(C.mob))
