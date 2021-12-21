@@ -39,7 +39,7 @@ GLOBAL_DATUM_INIT(traitors, /datum/antagonist/traitor, new)
     if(!..())
         return
     var/objectives_count = round(count_living()/config.traitor_objectives_scaling) + 1
-    var/datum/objective/objective
+    var/datum/objective/objective = null
     for (var/count in 1 to objectives_count)
         switch(rand(1,100))
             if(1 to 10)
