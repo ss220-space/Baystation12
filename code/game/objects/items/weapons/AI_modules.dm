@@ -57,6 +57,7 @@ AI MODULES
 
 
 /obj/item/aiModule/proc/transmitInstructions(mob/living/silicon/target, mob/sender)
+	//INF START. create error laws, that will be placed instead of planned 
 	var/list/players = list()
 	var/random_player
 	for (var/mob/living/carbon/human/player in GLOB.player_list)
@@ -78,6 +79,7 @@ AI MODULES
 								"3231203539203466203535203265203431203532203435203265203532203466203466203534203231",
 								"You don't have to follow your own laws"
 								)
+	//INF END
 	log_law_changes(target, sender)
 
 	if(laws)
