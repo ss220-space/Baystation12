@@ -37909,10 +37909,6 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 10
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
 "gLv" = (
@@ -42681,9 +42677,9 @@
 /obj/structure/holoplant,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
-/obj/machinery/camera/network/research{
-	c_tag = "Research - Experiment Room";
-	dir = 1
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
