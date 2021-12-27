@@ -4833,6 +4833,11 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/shutters/open{
+	dir = 2;
+	id_tag = "infimary_hall_lockdown";
+	name = "Infirmary Entry Shutters"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/locker)
 "ajf" = (
@@ -6054,6 +6059,13 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/random/date_based/christmas/xmaslights{
 	dir = 4
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "infimary_storage_lockdown";
+	name = "Infirmary Storage Lockdown";
+	pixel_x = 6;
+	pixel_y = 32;
+	req_access = list("ACCESS_MEDICAL")
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/infirmreception)
@@ -8090,6 +8102,11 @@
 /obj/random/date_based/christmas/doorwreath{
 	dir = 8
 	},
+/obj/machinery/door/blast/shutters/open{
+	dir = 4;
+	id_tag = "infimary_storage_lockdown";
+	name = "Infirmary Window Shutters"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/equipstorage)
 "anT" = (
@@ -9907,6 +9924,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/shutters/open{
+	dir = 4;
+	id_tag = "infimary_window_lockdown";
+	name = "Infirmary Window Shutters"
+	},
 /obj/machinery/door/blast/shutters/open{
 	dir = 4;
 	id_tag = "infimary_window_lockdown";
@@ -22538,6 +22560,7 @@
 	dir = 1;
 	id_tag = "security_permabrig_shutters";
 	name = "LTC Windows Shutters";
+	pixel_x = 7;
 	pixel_y = -20
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -22551,6 +22574,13 @@
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
+	},
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "security_permabrig_sergeant_shutters";
+	name = "LTC Windows Shutters";
+	pixel_x = -6;
+	pixel_y = -20
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/sierra/sergeant)
@@ -23585,7 +23615,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/shutters/open{
-	id_tag = "security_permabrig_shutters"
+	id_tag = "security_permabrig_sergeant_shutters"
 	},
 /turf/simulated/floor/plating,
 /area/security/sierra/sergeant)
@@ -40876,6 +40906,14 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
+	},
+/obj/machinery/button/blast_door{
+	dir = 4;
+	id_tag = "infimary_storage_lockdown";
+	name = "Infimary Storage Lockdown";
+	pixel_x = -32;
+	pixel_y = -6;
+	req_access = list("ACCESS_MEDICAL")
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
