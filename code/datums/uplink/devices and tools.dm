@@ -170,6 +170,11 @@
 	item_cost = 30
 	path = /obj/item/device/radio/intercept
 	desc = "A radio that can intercept secure radio channels. Doesn't fit in pockets."
+/datum/uplink_item/item/tools/nukecode
+	name = "Self-destructing system authorization code"
+	item_cost = 90
+	path = /obj/item/paper/nukecodes
+	desc = "A truly suicidal mission"
 
 /datum/uplink_item/item/tools/ttv
 	name = "Binary Gas Bomb"

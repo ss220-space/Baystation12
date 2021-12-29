@@ -504,7 +504,7 @@ var/bomb_set
 	var/announced = 0
 	var/time_to_explosion = 0
 	var/self_destruct_cutoff = 60 //Seconds
-	timeleft = 300 
+	timeleft = 300
 	minTime = 300
 	maxTime = 900
 
@@ -605,3 +605,12 @@ var/bomb_set
 				continue
 			T.icon_state = target_icon_state
 		last_turf_state = target_icon_state
+
+
+/obj/item/paper/nukecodes
+	name = "paper"
+
+/obj/item/paper/nukecodes/Initialize()
+	. = ..()
+	var/obj/machinery/nuclearbomb/nuke = locate(/obj/machinery/nuclearbomb/station) in SSmachines.machinery
+	info = "<tt><center><large><b>[nuke.r_code]<large><br><i>Good luck, Agent</b>"
