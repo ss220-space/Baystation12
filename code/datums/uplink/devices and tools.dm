@@ -175,6 +175,7 @@
 	item_cost = 90
 	path = /obj/item/paper/nukecodes
 	desc = "A truly suicidal mission"
+	antag_roles = list(MODE_TRAITOR)
 
 /datum/uplink_item/item/tools/ttv
 	name = "Binary Gas Bomb"
