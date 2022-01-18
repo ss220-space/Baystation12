@@ -47,6 +47,21 @@
 		to_chat(src, "<span class='warning'>The forum URL is not set in the server configuration.</span>")
 	return
 
+/client/verb/discord()
+	set name = "Discord"
+	set desc = "Join our Discord server."
+	set hidden = 1
+	log_admin("[key_name(src)] has pressed the \'DISCORD\' button!")
+
+	if( !config.discordurl )
+		to_chat(src, "<span class='warning'>The Discord URL is not set in the server configuration.</span>")
+		return
+
+	if(alert("This will invite you to our Discord server. Are you sure?", null, "Yes", "No") == "No")
+		return
+
+	send_link(src, config.discordurl)
+
 #define RULES_FILE "config/rules.html"
 /client/verb/rules()
 	set name = "Rules"
@@ -83,8 +98,10 @@ Hotkey-Mode: (Режим хоткеев включен)
 \ts = вниз
 \td = вправо
 \tw = вверх
-\t, = передвинуться на уровень выше (в данный момент работает только на английской раскладке)
-\t. = передвинуться на уровень ниже (в данный момент работает только на английской раскладке)
+\t, = передвинуться на уровень выше (работает только на английской раскладке)
+\t+ = передвинуться на уровень выше (работает на любой раскладке)
+\t. = передвинуться на уровень ниже (работает только на английской раскладке)
+\t- = передвинуться на уровень ниже (работает на любой раскладке)
 \tq = выбросить
 \te = надеть
 \tr = метнуть
@@ -184,16 +201,11 @@ Any-Mode: (Режим хоткеев отключен)
 \tAlt + Click = показать объекты на клетке
 \tCtrl + Alt + Click = наэлектризовать шлюз
 </font>"}
-	var/alarm = {"<font color='red'>
-Внимание! Перед использованием горячих клавиш в первый раз надо переключить раскладку на английский, так как если начать использовать клавиши на русской раскладке, то клавиши не будут работать и после первого нажатия переключение раскладки не поможет, только перезабуск DreamMaker (закрыть и открыть окно игры через лаунчер). После первого нажатия горячих клавиш раскладку можно переключить на русскую.
-</font>"}
 	if(isrobot(src.mob))
 		to_chat(src, robot_hotkey_mode)
 		to_chat(src, robot_other)
-		to_chat(src, alarm)
 	else
 		to_chat(src, hotkey_mode)
 		to_chat(src, other)
-		to_chat(src, alarm)
 	if(holder)
 		to_chat(src, admin)

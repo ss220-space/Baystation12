@@ -4,7 +4,6 @@ GLOBAL_DATUM_INIT(traitors, /datum/antagonist/traitor, new)
 /datum/antagonist/traitor
 	id = MODE_TRAITOR
 	antaghud_indicator = "hud_traitor"
-	blacklisted_jobs = list(/datum/job/submap)
 	welcome_text = "<hr><u>Ваша роль подразумевает скрытную или (полу-скрытную) игру.</u> В первую очередь, \
 	вам требуется определить, кто вы. Возможны, Вы шпион, наемный убийца \
 	(не рекомендуется), амбициозный вор, поставщик оружия, террорист или даже кто-то иной - главное, \
@@ -20,6 +19,7 @@ GLOBAL_DATUM_INIT(traitors, /datum/antagonist/traitor, new)
 	что это - лишь примеры того, как Вы можете отыгрывать. Не делайте того, что было бы скучно и даже непритятно \
 	Вам самим по отношению к экипажу. \
 	<b>Придумайте что-нибудь интересно для себя и других - проявите фантазию!</b>"
+	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/submap)
 	protected_jobs = list(/datum/job/officer, /datum/job/warden, /datum/job/detective, /datum/job/captain, /datum/job/lawyer, /datum/job/hos)
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	skill_setter = /datum/antag_skill_setter/station
@@ -33,12 +33,57 @@ GLOBAL_DATUM_INIT(traitors, /datum/antagonist/traitor, new)
 	if(href_list["spawn_uplink"])
 		spawn_uplink(locate(href_list["spawn_uplink"]))
 		return 1
+
+/datum/antagonist/traitor/create_objectives(var/datum/mind/traitor)
+    if(!..())
+        return
+    var/objectives_count = round(count_living()/config.traitor_objectives_scaling) + 1
+    var/datum/objective/objective = null
+    for (var/count in 1 to objectives_count)
+        switch(rand(1,100))
+            if(1 to 10)
+                objective = new /datum/objective/assassinate()
+            if(11 to 20)
+                objective = new /datum/objective/debrain()
+            if(21 to 40)
+                objective = new /datum/objective/brig()
+            if(41 to 80)
+                objective = new /datum/objective/harm()
+            else
+                objective = new /datum/objective/steal()
+
+        objective.owner = traitor
+
+        if(istype(objective, /datum/objective/steal))
+            objective.find_target(traitor.objectives)
+
+        else if (!objective.find_target())
+            qdel(objective)
+            objective = new /datum/objective/steal()
+            objective.owner = traitor
+            objective.find_target(traitor.objectives)
+
+        traitor.objectives += objective
+
+    switch(rand(1,10))
+        if(1 to 4)
+            if (!(locate(/datum/objective/escape) in traitor.objectives))
+                var/datum/objective/escape/escape_objective = new
+                escape_objective.owner = traitor
+                traitor.objectives += escape_objective
+        else
+            if (!(locate(/datum/objective/survive) in traitor.objectives))
+                var/datum/objective/survive/survive_objective = new
+                survive_objective.owner = traitor
+                traitor.objectives += survive_objective
+    return
+
 /* original
 /datum/antagonist/traitor/create_objectives(var/datum/mind/traitor)
 	if(!..())
 		return
 
-	if(istype(traitor.current, /mob/living/silicon))
+	if(istype(traitor.current, /mob/living/carbon))
 		var/datum/objective/assassinate/kill_objective = new
 		kill_objective.owner = traitor
 		kill_objective.find_target()

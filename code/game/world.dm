@@ -191,7 +191,20 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		s["players"] = 0
 		s["stationtime"] = stationtime2text()
 		s["roundduration"] = roundduration2text()
+		s["roundtime"] = roundduration2text()
 		s["map"] = replacetext(GLOB.using_map.full_name, "\improper", "") //Done to remove the non-UTF-8 text macros
+
+		switch(GAME_STATE)
+			if(RUNLEVEL_INIT)
+				s["ticker_state"] = 0
+			if(RUNLEVEL_LOBBY)
+				s["ticker_state"] = 1
+			if(RUNLEVEL_SETUP)
+				s["ticker_state"] = 2
+			if(RUNLEVEL_GAME)
+				s["ticker_state"] = 3
+			if(RUNLEVEL_POSTGAME)
+				s["ticker_state"] = 4
 
 		var/active = 0
 		var/list/players = list()
@@ -215,6 +228,8 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 			s["adminlist"] = list2params(admins)
 			s["active_players"] = active
 
+		if(input["format"] == "json")
+			return json_encode(s)
 		return list2params(s)
 
 	else if(T == "manifest")
@@ -576,7 +591,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 	s += "Discord"
 	s += "</a>"
 	s += ")"
-	s += " MedRP, modified Bay12 code, whitelisted, redirect to main server if access denied"
+	s += " MedRP, modified Bay12 code, русский язык"
 //	s += "<br><b>Map:</b> [station_name()]"
 	var/n = 0
 	for (var/mob/M in GLOB.player_list)
