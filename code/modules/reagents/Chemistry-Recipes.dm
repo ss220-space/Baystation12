@@ -1041,14 +1041,14 @@
 				for(var/j = 1, j <= rand(1, 3), j++)
 					step(B, pick(NORTH, SOUTH, EAST, WEST))
 
-/datum/chemical_reaction/slime/silv
+/datum/chemical_reaction/slime/silver
 	name = "Slime Silver"
 	result = null
 	required_reagents = list(/datum/reagent/blood = 1)
 	result_amount = 1
 	required = /obj/item/slime_extract/silver
 
-/datum/chemical_reaction/slime/silv/on_reaction(var/datum/reagents/holder)
+/datum/chemical_reaction/slime/silver/on_reaction(var/datum/reagents/holder)
 	..()
 	var/obj/item/stack/material/silver/S = new (get_turf(holder.my_atom))
 	S.amount = 5
