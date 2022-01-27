@@ -36,7 +36,7 @@
 	var/carp_color = "carp" //holder for icon set
 	var/list/icon_sets = list("carp", "blue", "yellow", "grape", "rust", "teal")
 
-
+	var/mob/carp = /mob/living/simple_animal/hostile/carp
 /datum/ai_holder/simple_animal/melee/carp
 	speak_chance = 0
 
