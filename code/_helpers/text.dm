@@ -92,18 +92,18 @@
 	var/output = ""
 
 	for(var/i=1, i<=length_char(input), i++)
-		var/ascii_char = text2ascii(input,i)
+		var/ascii_char = text2ascii_char(input,i)
 		switch(ascii_char)
-			// A  .. Z
-			if(65 to 90)			//Uppercase Letters
+			// A  .. Z, А .. Я, Ё
+			if(65 to 90, 1040 to 1071, 1025)			//Uppercase Letters
 				output += ascii2text(ascii_char)
 				number_of_alphanumeric++
 				last_char_group = 4
 
-			// a  .. z
-			if(97 to 122)			//Lowercase Letters
+			// a  .. z, а .. я, ё
+			if(97 to 122, 1072 to 1103, 1105)			//Lowercase Letters
 				if(last_char_group<2 && force_first_letter_uppercase)
-					output += ascii2text(ascii_char-32)	//Force uppercase first character
+					output += uppertext(ascii2text(ascii_char))	//Force uppercase first character
 				else
 					output += ascii2text(ascii_char)
 				number_of_alphanumeric++
@@ -117,14 +117,14 @@
 				number_of_alphanumeric++
 				last_char_group = 3
 
-			// '  -  .
-			if(39,45,46)			//Common name punctuation
+			// '  -  .  ,
+			if(39, 45, 46, 44)			//Common name punctuation
 				if(!last_char_group) continue
 				output += ascii2text(ascii_char)
 				last_char_group = 2
 
-			// ~   |   @  :  #  $  %  &  *  +
-			if(126,124,64,58,35,36,37,38,42,43)			//Other symbols that we'll allow (mainly for AI)
+			// ~   |   @  :  #  $  %  &  *  +  !
+			if(126, 124, 64, 58, 35, 36, 37, 38, 42, 43, 33)			//Other symbols that we'll allow (mainly for AI)
 				if(!last_char_group)		continue	//suppress at start of string
 				if(!allow_numbers)			continue
 				output += ascii2text(ascii_char)
