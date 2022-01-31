@@ -33711,9 +33711,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
 "bdK" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
@@ -36423,9 +36420,6 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/dungeon_master_lounge)
 "bkX" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -36438,6 +36432,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai)
 "blj" = (
@@ -39113,9 +39108,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "kyK" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -39124,6 +39116,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai)
 "kBs" = (
@@ -42592,6 +42585,9 @@
 /obj/random/date_based/christmas/xmaslights,
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/lounge/upper)
