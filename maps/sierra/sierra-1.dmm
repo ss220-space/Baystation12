@@ -689,6 +689,11 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/escape_pod/escape_pod1/station)
+"bE" = (
+/obj/effect/paint/nt_white,
+/obj/effect/paint_stripe/nt_red,
+/turf/simulated/wall/titanium,
+/area/shuttle/petrov/security)
 "bF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -5308,6 +5313,11 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_x = 6;
+	pixel_y = 18
+	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/security)
 "ja" = (
@@ -6145,9 +6155,6 @@
 "ki" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
@@ -6710,7 +6717,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
-/area/shuttle/petrov/airlock)
+/area/shuttle/petrov/security)
 "kY" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
@@ -8681,9 +8688,6 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/machinery/power/apc/hyper{
 	dir = 4;
 	name = "east bump";
@@ -9243,7 +9247,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/petrov/airlock)
+/area/shuttle/petrov/security)
 "on" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -9639,6 +9643,9 @@
 "oW" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/ship)
@@ -60210,11 +60217,11 @@ DC
 gp
 hF
 hJ
-TU
+bE
 om
 kX
-TU
-TU
+bE
+bE
 lw
 dJ
 nE
