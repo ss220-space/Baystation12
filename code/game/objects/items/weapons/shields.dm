@@ -92,6 +92,7 @@
 
 /obj/item/shield/riot/metal
 	name = "plasteel combat shield"
+	desc = "A combat shield adept at blocking bullets with lasers from connecting with the torso of the shield wielder."
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "metal"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
@@ -102,6 +103,7 @@
 	w_class = ITEM_SIZE_HUGE
 	matter = list(MATERIAL_PLASTEEL = 8500)
 	max_block = 50
+	base_block_chance = 70
 	can_block_lasers = TRUE
 	slowdown_general = 1.5
 
