@@ -559,6 +559,7 @@
 	outputs = list()
 	activators = list("open rift" = IC_PINTYPE_PULSE_IN)
 	action_flags = IC_ACTION_LONG_RANGE
+    spawn_flags = IC_SPAWN_RESEARCH
 
 	origin_tech = list(TECH_MAGNET = 1, TECH_BLUESPACE = 3)
 	matter = list(MATERIAL_STEEL = 10000, MATERIAL_SILVER = 2000, MATERIAL_GOLD = 200)
