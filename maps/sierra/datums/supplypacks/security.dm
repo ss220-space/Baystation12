@@ -120,6 +120,14 @@
 	containername = "\improper combat shields crate"
 	access = access_security
 
+/decl/hierarchy/supply_pack/security/riot_shields
+	name = "Riot Shields"
+	contains = list(/obj/item/shield/riot = 3)
+	cost = 80
+	containertype = /obj/structure/closet/crate/secure
+	containername = "\improper riot shields crate"
+	access = access_security
+
 /*
  * OVERRIDES
  * =========
