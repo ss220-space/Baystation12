@@ -112,6 +112,14 @@
 	access = access_heads
 	security_level = SUPPLY_SECURITY_ELEVATED
 
+/decl/hierarchy/supply_pack/security/ballistic_shields
+	name = "Combat Shields"
+	contains = list(/obj/item/shield/riot/metal = 4)
+	cost = 80
+	containertype = /obj/structure/closet/crate/secure
+	containername = "\improper combat shields crate"
+	access = access_security
+
 /*
  * OVERRIDES
  * =========
