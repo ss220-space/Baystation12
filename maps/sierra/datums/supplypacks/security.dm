@@ -114,7 +114,7 @@
 
 /decl/hierarchy/supply_pack/security/ballistic_shields
 	name = "Combat Shields"
-	contains = list(/obj/item/shield/riot/metal = 4)
+	contains = list(/obj/item/shield/riot/metal = 3)
 	cost = 80
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper combat shields crate"
