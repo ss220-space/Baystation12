@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Setup Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: $HOME/spaceman_dmm/$SPACEMAN_DMM_VERSION
           key: ${{ runner.os }}-spacemandmm-${{ env.SPACEMAN_DMM_VERSION }}
@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Setup Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: $HOME/BYOND-${BYOND_MAJOR}.${BYOND_MINOR}
           key: ${{ runner.os }}-byond-${{ env.BYOND_MAJOR }}-${{ env.BYOND_MINOR }}
@@ -74,7 +74,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Setup Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: $HOME/BYOND-${BYOND_MAJOR}.${BYOND_MINOR}
           key: ${{ runner.os }}-byond-${{ env.BYOND_MAJOR }}-${{ env.BYOND_MINOR }}
