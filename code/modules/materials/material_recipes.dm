@@ -60,14 +60,13 @@
 	. = ..()
 	if(reinforce_material)	//recipies below don't support composite materials
 		return
-	. += new/datum/stack_recipe_list("office chairs",list(
-		new/datum/stack_recipe/furniture/chair/office/dark(src),
-		new/datum/stack_recipe/furniture/chair/office/light(src)
-		))
-	. += new/datum/stack_recipe_list("comfy office chairs", create_recipe_list(/datum/stack_recipe/furniture/chair/office/comfy))
-	. += new/datum/stack_recipe_list("comfy chairs", create_recipe_list(/datum/stack_recipe/furniture/chair/comfy))
-	. += new/datum/stack_recipe_list("armchairs", create_recipe_list(/datum/stack_recipe/furniture/chair/arm))
-	. += new/datum/stack_recipe_list("padded [display_name] chairs", create_recipe_list(/datum/stack_recipe/furniture/chair/padded))
+	. += new/datum/stack_recipe/furniture/sofa/l(src)
+	. += new/datum/stack_recipe/furniture/chair/office(src)
+	. += new/datum/stack_recipe/furniture/chair/office/comfy(src)
+	. += new/datum/stack_recipe/furniture/chair/comfy(src)
+	. += new/datum/stack_recipe/furniture/chair/rounded(src)
+	. += new/datum/stack_recipe/furniture/chair/arm(src)
+	. += new/datum/stack_recipe/furniture/chair/padded(src)
 	. += new/datum/stack_recipe/key(src)
 	. += new/datum/stack_recipe/furniture/table_frame(src)
 	. += new/datum/stack_recipe/furniture/rack(src)
@@ -126,6 +125,9 @@
 	. += new/datum/stack_recipe/sandals(src)
 	. += new/datum/stack_recipe/tile/wood(src)
 	. += create_recipe_list(/datum/stack_recipe/furniture/chair/wood)
+	. += new/datum/stack_recipe/furniture/sofa/m(src)
+	. += new/datum/stack_recipe/furniture/sofa/r(src)
+	. += new/datum/stack_recipe/furniture/sofa/l(src)
 	. += new/datum/stack_recipe/crossbowframe(src)
 	. += new/datum/stack_recipe/furniture/coffin/wooden(src)
 	. += new/datum/stack_recipe/beehive_assembly(src)
