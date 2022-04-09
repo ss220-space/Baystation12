@@ -246,6 +246,13 @@
 	req_amount = 5
 	time = 15
 
+/datum/stack_recipe/furniture/coatrack
+	title = "coat rack"
+	result_type = /obj/structure/coatrack
+	req_amount = 3
+	time = 15
+
+
 /datum/stack_recipe/furniture/planting_bed
 	title = "planting bed"
 	result_type = /obj/machinery/portable_atmospherics/hydroponics/soil
