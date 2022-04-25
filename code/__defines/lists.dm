@@ -29,6 +29,8 @@
 #define LAZYCLEARLIST(L) if(L) { L.Cut(); L = null; }
 // Reads L or an empty list if L is not a list.  Note: Does NOT assign, L may be an expression.
 #define SANITIZE_LIST(L) ( islist(L) ? L : list() )
+// Add value V into list L if V not exists in L
+#define ADDUNIQUE_LIST(V, L) if(!(V in L)) L += V
 
 // binary search sorted insert
 // IN: Object to be inserted
