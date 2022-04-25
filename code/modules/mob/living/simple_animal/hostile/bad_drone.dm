@@ -6,6 +6,27 @@
 	health = 50
 	maxHealth = 50
 	natural_weapon = /obj/item/natural_weapon/drone_slicer
+	possible_natural_weapon = list(/obj/item/natural_weapon/drone_slicer,
+									/obj/item/weldingtool,
+									/obj/item/screwdriver,
+									/obj/item/wrench,
+									/obj/item/crowbar,
+									/obj/item/wirecutters,
+									/obj/item/device/multitool,
+									/obj/item/device/lightreplacer,
+									/obj/item/extinguisher/mini,
+									/obj/item/device/plunger/robot,
+									/obj/item/reagent_containers/spray/cleaner/drone,
+									/obj/item/stack/material/cyborg/steel,
+									/obj/item/stack/material/rods/cyborg,
+									/obj/item/stack/tile/floor/cyborg,
+									/obj/item/stack/material/cyborg/glass,
+									/obj/item/stack/material/cyborg/glass/reinforced,
+									/obj/item/stack/tile/wood/cyborg,
+									/obj/item/stack/material/cyborg/wood,
+									/obj/item/stack/cable_coil/cyborg,
+									/obj/item/stack/material/cyborg/plastic
+									)
 	speak_emote = list("blares","buzzes","beeps")
 	faction = "silicon"
 	min_gas = null
@@ -17,6 +38,10 @@
 
 	ai_holder_type = /datum/ai_holder/simple_animal/rogue_drone
 	say_list_type = /datum/say_list/rogue_drone
+
+/mob/living/simple_animal/hostile/rogue_drone/get_natural_weapon()
+	natural_weapon = pick(possible_natural_weapon)
+	return ..()
 
 /mob/living/simple_animal/hostile/rogue_drone/Initialize()
 	. = ..()
