@@ -43,7 +43,7 @@
 	..()
 	
 /mob/living/simple_animal/hostile/commanded/rex/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/reagent_containers/food/snacks/meat))
+	if(istype(O, /obj/item/reagent_containers/food/snacks/meat) && stat != DEAD)
 		if(user != master)
 			visible_message(SPAN_WARNING("\The [src] started to growl"))
 		else
