@@ -214,7 +214,12 @@
 	if(pulling)
 		if(istype(pulling, /obj))
 			var/obj/O = pulling
+			if(O.cargoweight)
+				. += between(0, O.cargoweight, ITEM_SIZE_GARGANTUAN) / 5
 			. += between(0, O.w_class, ITEM_SIZE_GARGANTUAN) / 5
+			if(O.haswheels)
+				. = 0.1
+
 		else if(istype(pulling, /mob))
 			var/mob/M = pulling
 			. += max(0, M.mob_size) / MOB_MEDIUM
