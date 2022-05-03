@@ -39,7 +39,15 @@
 	ai_holder_type = /datum/ai_holder/simple_animal/rogue_drone
 	say_list_type = /datum/say_list/rogue_drone
 
+/mob/living/simple_animal/hostile/rogue_drone/death()
+	explosion(src.loc, 0, 0, 1, 3, 0)
+	. = ..()
+
+/mob/living/simple_animal/hostile/rogue_drone/canUnEquip(obj/item/I)
+	return FALSE
+
 /mob/living/simple_animal/hostile/rogue_drone/get_natural_weapon()
+	QDEL_NULL(natural_weapon)
 	natural_weapon = pick(possible_natural_weapon)
 	return ..()
 
