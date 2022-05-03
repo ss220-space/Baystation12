@@ -3,8 +3,6 @@
 	animate_movement = 2
 
 	var/obj_flags
-	var/haswheels = FALSE
-	var/cargoweight
 	var/list/matter //Used to store information about the contents of the object.
 	var/w_class // Size of the object.
 	var/unacidable = FALSE //universal "unacidabliness" var, here so you can use it in any obj.

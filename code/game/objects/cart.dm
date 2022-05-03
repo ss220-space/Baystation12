@@ -4,7 +4,8 @@
 	icon = 'icons/obj/cart.dmi'
 	icon_state = "cart"
 	w_class = ITEM_SIZE_LARGE
-	haswheels = TRUE
+	var/haswheels = FALSE
+	var/cargoweight
 	var/atom/movable/load
 
 /obj/cart/Move()
