@@ -180,4 +180,4 @@
 	return TRUE
 
 /obj/cart/get_additional_speed_decrease()
-	return haswheels ? 0.1 : between(0, cargoweight, ITEM_SIZE_GARGANTUAN) / 5
+	return haswheels ? 0.1 : between(0, cargoweight + w_class, ITEM_SIZE_GARGANTUAN) / 5

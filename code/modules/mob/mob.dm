@@ -214,7 +214,7 @@
 	if(pulling)
 		if(istype(pulling, /obj))
 			var/obj/O = pulling
-			. =+ O.get_additional_speed_decrease()
+			. += O.get_additional_speed_decrease()
 
 		else if(istype(pulling, /mob))
 			var/mob/M = pulling
