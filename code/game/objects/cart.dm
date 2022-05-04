@@ -6,7 +6,7 @@
 	w_class = ITEM_SIZE_LARGE
 	var/haswheels = FALSE
 	var/cargoweight = 0
-	var/atom/movable/load = FALSE
+	var/atom/movable/load = null
 
 /obj/cart/Move()
 	. = ..()
