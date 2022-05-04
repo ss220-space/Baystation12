@@ -40,7 +40,7 @@
 		to_chat(user, SPAN_WARNING("You cant place somethink on cart before you has folded the wheels!"))
 		return
 
-	if(do_after(usr, 5 SECONDS, src))
+	if(do_after(usr, 5 SECONDS, src, DO_DEFAULT | DO_TARGET_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
 		if(!load(cargo))
 			to_chat(user, "<span class='warning'>You were unable to load [cargo] on [src].</span>")
 			return
@@ -54,7 +54,7 @@
 			to_chat(user, SPAN_WARNING("You take off cart somethink before you has folded the wheels!"))
 			return
 
-		if(do_after(usr, 5 SECONDS, src))
+		if(do_after(usr, 5 SECONDS, src, DO_DEFAULT | DO_TARGET_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
 			unload(user)
 	else
 		return FALSE
@@ -179,5 +179,5 @@
 
 	return TRUE
 
-/obj/cart/get_additional_speed_decrease(var/encum = 0)
+/obj/cart/get_additional_speed_decrease(encum)
 	return haswheels ? 0.1 : encum + between(0, cargoweight, ITEM_SIZE_GARGANTUAN) / 5
