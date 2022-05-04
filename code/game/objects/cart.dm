@@ -179,5 +179,5 @@
 
 	return TRUE
 
-/obj/cart/get_additional_speed_decrease(encum)
-	return haswheels ? 0.1 : encum + between(0, cargoweight, ITEM_SIZE_GARGANTUAN) / 5
+/obj/cart/get_additional_speed_decrease()
+	return haswheels ? 0.1 : between(0, cargoweight, ITEM_SIZE_GARGANTUAN) / 5

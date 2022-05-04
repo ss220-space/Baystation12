@@ -214,8 +214,7 @@
 	if(pulling)
 		if(istype(pulling, /obj))
 			var/obj/O = pulling
-			. += between(0, O.w_class, ITEM_SIZE_GARGANTUAN) / 5
-			. = O.get_additional_speed_decrease(.)
+			. =+ O.get_additional_speed_decrease()
 
 		else if(istype(pulling, /mob))
 			var/mob/M = pulling
