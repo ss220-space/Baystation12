@@ -214,13 +214,8 @@
 	if(pulling)
 		if(istype(pulling, /obj))
 			var/obj/O = pulling
-			if(istype(O, /obj/cart))
-				if(O.cargoweight)
-					. += between(0, O.cargoweight, ITEM_SIZE_GARGANTUAN) / 5
-				if(O.haswheels)
-					. = 0.1
-			else
-				. += between(0, O.w_class, ITEM_SIZE_GARGANTUAN) / 5
+			. += between(0, O.w_class, ITEM_SIZE_GARGANTUAN) / 5
+			. = O.get_additional_speed_decrease(.)
 
 		else if(istype(pulling, /mob))
 			var/mob/M = pulling

@@ -194,3 +194,6 @@
  */
 /obj/proc/is_safe_to_step(mob/living/L)
 	return TRUE
+
+/obj/proc/get_additional_speed_decrease()
+	return 0

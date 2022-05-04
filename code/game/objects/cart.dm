@@ -1,12 +1,12 @@
 /obj/cart
 	name = "Cargo cart."
-	desc = "Simple cart for heavy things.\n<font size=1px>(Ctrl+Alt+RMB to change wheels state)</font>"
+	desc = "Simple cart for heavy things.\n<font size=1px>(Ctrl+Alt+LMB to change wheels state)</font>"
 	icon = 'icons/obj/cart.dmi'
 	icon_state = "cart"
 	w_class = ITEM_SIZE_LARGE
 	var/haswheels = FALSE
-	var/cargoweight
-	var/atom/movable/load
+	var/cargoweight = 0
+	var/atom/movable/load = FALSE
 
 /obj/cart/Move()
 	. = ..()
@@ -47,12 +47,13 @@
 
 /obj/cart/attack_hand(mob/user as mob)
 	if(user.stat || user.restrained() || !Adjacent(user))
-		return 0
+		return FALSE
 
 	if(load)
 		unload(user)
 	else
-		return 0
+		return FALSE
+	return ..()
 
 /obj/cart/verb/turn_wheels()
 	set src in view(1)
@@ -67,24 +68,25 @@
 
 /obj/cart/proc/load(var/atom/movable/C)
 	if(ismob(C))
-		return 0
-	if(!istype(C,/obj/machinery) && !istype(C,/obj/structure/closet) && !istype(C,/obj/structure/largecrate) && !istype(C,/obj/structure/reagent_dispensers) && !istype(C,/obj/structure/ore_box))
-		return 0
+		return FALSE
+	if(!(istype(C,/obj/machinery) || istype(C,/obj/structure/closet) || istype(C,/obj/structure/largecrate) || istype(C,/obj/structure/reagent_dispensers) || istype(C,/obj/structure/ore_box)))
+		return FALSE
 
 	//if there are any items you don't want to be able to interact with, add them to this check
 	// ~no more shielded, emitter armed death trains
+	if(!isturf(C.loc)) //To prevent loading things from someone's inventory, which wouldn't get handled properly.
+		return FALSE
+	if(load || C.anchored)
+		return FALSE
+
+
 	if(istype(C, /obj/machinery))
 		load_object(C)
 	else
-		if(!isturf(C.loc)) //To prevent loading things from someone's inventory, which wouldn't get handled properly.
-			return 0
-		if(load || C.anchored)
-			return 0
-
 		// if a create/closet, close before loading
 		var/obj/structure/closet/crate = C
 		if(istype(crate) && crate.opened && !crate.close())
-			return 0
+			return FALSE
 
 		C.forceMove(loc)
 		C.set_dir(dir)
@@ -100,14 +102,10 @@
 	if(load)
 		var/obj/O = load
 		cargoweight = between(0, O.w_class, ITEM_SIZE_GARGANTUAN)
-		return 1
+		return TRUE
+	return FALSE
 
 /obj/cart/proc/load_object(var/atom/movable/C)
-	if(!isturf(C.loc)) //To prevent loading things from someone's inventory, which wouldn't get handled properly.
-		return 0
-	if(load || C.anchored)
-		return 0
-
 	var/datum/vehicle_dummy_load/dummy_load = new()
 	load = dummy_load
 
@@ -150,18 +148,19 @@
 
 	//if these all result in the same turf as the vehicle or nullspace, pick a new turf with open space
 	if(!dest || dest == get_turf(src))
-		var/list/options = new()
+		var/list/options = list()
 		for(var/test_dir in GLOB.alldirs)
-			var/new_dir = get_step_to(src, get_step(src, test_dir))
-			if(new_dir && load.Adjacent(new_dir))
-				options += new_dir
+			var/possible_turf = get_step_to(src, get_step(src, test_dir))
+			if(!possible_turf)
+				continue
+			options += possible_turf
 		if(options.len)
 			dest = pick(options)
 		else
 			dest = get_turf(src)	//otherwise just dump it on the same turf as the vehicle
 
 	if(!isturf(dest))	//if there still is nowhere to unload, cancel out since the vehicle is probably in nullspace
-		return 0
+		return FALSE
 
 	load.forceMove(dest)
 	load.set_dir(get_dir(loc, dest))
@@ -169,8 +168,11 @@
 	load.pixel_y = initial(load.pixel_y)
 	load.reset_plane_and_layer()
 
-	cargoweight = null
+	cargoweight = 0
 	load = null
 	update_icon()
 
-	return 1
+	return TRUE
+
+/obj/cart/get_additional_speed_decrease(var/encum = 0)
+	return haswheels ? 0.1 : encum + between(0, cargoweight, ITEM_SIZE_GARGANTUAN) / 5
