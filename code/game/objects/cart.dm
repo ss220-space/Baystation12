@@ -32,8 +32,8 @@
 	playsound(src, sound, 50, 1, 10)
 
 
-/obj/cart/MouseDrop_T(var/atom/movable/C, mob/user as mob)
-	if(!CanPhysicallyInteract(user) || !user.Adjacent(C) || !istype(C) || (user == C))
+/obj/cart/MouseDrop_T(var/atom/movable/Cargo, mob/user as mob)
+	if(!CanPhysicallyInteract(user) || !user.Adjacent(Cargo) || !istype(Cargo) || (user == Cargo))
 		return
 
 	if(haswheels)
@@ -41,8 +41,8 @@
 		return
 
 	if(do_after(usr, 5 SECONDS, src))
-		if(!load(C))
-			to_chat(user, "<span class='warning'>You were unable to load [C] on [src].</span>")
+		if(!load(Cargo))
+			to_chat(user, "<span class='warning'>You were unable to load [Cargo] on [src].</span>")
 			return
 
 /obj/cart/attack_hand(mob/user as mob)
@@ -66,38 +66,38 @@
 	. = ..()
 	turn_wheels()
 
-/obj/cart/proc/load(var/atom/movable/C)
-	if(ismob(C))
+/obj/cart/proc/load(var/atom/movable/Cargo)
+	if(ismob(Cargo))
 		return FALSE
-	if(!(istype(C,/obj/machinery) || istype(C,/obj/structure/closet) || istype(C,/obj/structure/largecrate) || istype(C,/obj/structure/reagent_dispensers) || istype(C,/obj/structure/ore_box)))
+	if(!(istype(Cargo,/obj/machinery) || istype(Cargo,/obj/structure/closet) || istype(Cargo,/obj/structure/largecrate) || istype(Cargo,/obj/structure/reagent_dispensers) || istype(Cargo,/obj/structure/ore_box)))
 		return FALSE
 
 	//if there are any items you don't want to be able to interact with, add them to this check
 	// ~no more shielded, emitter armed death trains
-	if(!isturf(C.loc)) //To prevent loading things from someone's inventory, which wouldn't get handled properly.
+	if(!isturf(Cargo.loc)) //To prevent loading things from someone's inventory, which wouldn't get handled properly.
 		return FALSE
-	if(load || C.anchored)
+	if(load || Cargo.anchored)
 		return FALSE
 
 
-	if(istype(C, /obj/machinery))
-		load_object(C)
+	if(istype(Cargo, /obj/machinery))
+		load_object(Cargo)
 	else
 		// if a create/closet, close before loading
-		var/obj/structure/closet/crate = C
+		var/obj/structure/closet/crate = Cargo
 		if(istype(crate) && crate.opened && !crate.close())
 			return FALSE
 
-		C.forceMove(loc)
-		C.set_dir(dir)
-		C.anchored = TRUE
+		Cargo.forceMove(loc)
+		Cargo.set_dir(dir)
+		Cargo.anchored = TRUE
 
-		load = C
+		load = Cargo
 
-		C.plane = plane
-		C.layer = VEHICLE_LOAD_LAYER		//so it sits above the vehicle
+		Cargo.plane = plane
+		Cargo.layer = VEHICLE_LOAD_LAYER		//so it sits above the vehicle
 
-		C.pixel_y += 2
+		Cargo.pixel_y += 2
 
 	if(load)
 		var/obj/O = load
@@ -105,24 +105,24 @@
 		return TRUE
 	return FALSE
 
-/obj/cart/proc/load_object(var/atom/movable/C)
+/obj/cart/proc/load_object(var/atom/movable/Cargo)
 	var/datum/vehicle_dummy_load/dummy_load = new()
 	load = dummy_load
 
 	if(!load)
 		return
-	dummy_load.actual_load = C
-	C.forceMove(src)
+	dummy_load.actual_load = Cargo
+	Cargo.forceMove(src)
 
-	C.pixel_y += 2
-	C.plane = plane
-	C.layer = VEHICLE_LOAD_LAYER
+	Cargo.pixel_y += 2
+	Cargo.plane = plane
+	Cargo.layer = VEHICLE_LOAD_LAYER
 
-	overlays += C
+	overlays += Cargo
 
 	//we can set these back now since we have already cloned the icon into the overlay
-	C.pixel_y = initial(C.pixel_y)
-	C.reset_plane_and_layer()
+	Cargo.pixel_y = initial(Cargo.pixel_y)
+	Cargo.reset_plane_and_layer()
 
 /obj/cart/proc/unload(var/mob/user, var/direction)
 	if(istype(load, /datum/vehicle_dummy_load))
