@@ -13,7 +13,10 @@
 	if(load && !istype(load, /datum/vehicle_dummy_load))
 		load.set_glide_size(src.glide_size)
 		load.forceMove(src.loc)
-		load.set_dir(src.dir)
+		var/todir = src.dir
+		if(istype(load, /obj/structure/closet/crate))
+			todir = turn(src.dir, 90)
+		load.set_dir(todir)
 
 	var/sound
 	if(haswheels)
@@ -74,7 +77,7 @@
 /obj/cart/proc/load(var/atom/movable/cargo)
 	if(ismob(cargo))
 		return FALSE
-	if(!(istype(cargo,/obj/machinery) || istype(cargo,/obj/structure/closet) || istype(cargo,/obj/structure/largecrate) || istype(cargo,/obj/structure/reagent_dispensers) || istype(cargo,/obj/structure/ore_box)))
+	if(!(istype(cargo,/obj/machinery) || istype(cargo,/obj/structure/closet) || istype(cargo,/obj/structure/largecrate) || istype(cargo,/obj/structure/ore_box)))
 		return FALSE
 
 	//if there are any items you don't want to be able to interact with, add them to this check
@@ -83,7 +86,6 @@
 		return FALSE
 	if(load || cargo.anchored)
 		return FALSE
-
 
 	if(istype(cargo, /obj/machinery))
 		load_object(cargo)
@@ -94,7 +96,6 @@
 			return FALSE
 
 		cargo.forceMove(loc)
-		cargo.set_dir(dir)
 		cargo.anchored = TRUE
 
 		load = cargo
@@ -102,7 +103,11 @@
 		cargo.plane = plane
 		cargo.layer = VEHICLE_LOAD_LAYER		//so it sits above the vehicle
 
-		cargo.pixel_y += 2
+		if(!istype(cargo, /obj/structure/closet/crate))
+			cargo.pixel_y += 6
+			cargo.set_dir(dir)
+		else
+			cargo.set_dir(turn(dir, 90))
 
 	if(load)
 		var/obj/O = load
@@ -119,7 +124,7 @@
 	dummy_load.actual_load = cargo
 	cargo.forceMove(src)
 
-	cargo.pixel_y += 2
+	cargo.pixel_y += 6
 	cargo.plane = plane
 	cargo.layer = VEHICLE_LOAD_LAYER
 
