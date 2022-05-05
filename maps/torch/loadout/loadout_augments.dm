@@ -1,12 +1,9 @@
 /datum/gear/augment/glare_dampeners
 	allowed_roles = TECHNICAL_ROLES
 
-/datum/gear/augment/integrated_health_hud
-	allowed_roles = list(\
-	/datum/job/cmo, /datum/job/senior_doctor, /datum/job/doctor,\
-	/datum/job/doctor_trainee, /datum/job/explorer_medic,\
-	/datum/job/psychiatrist, /datum/job/chemist, /datum/job/roboticist, /datum/job/explorer_medic)
-
+/datum/gear/augment/integrated_health_hud/New()
+  allowed_roles = MEDICAL_ROLES + /datum/job/explorer_medic
+  ..()
 /datum/gear/augment/integrated_security_hud
 	allowed_roles = SECURITY_ROLES
 
