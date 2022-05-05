@@ -57,7 +57,7 @@
 			to_chat(user, SPAN_WARNING("You take off cart somethink before you has folded the wheels!"))
 			return
 
-		if(do_after(usr, 5 SECONDS, src, DO_DEFAULT | DO_TARGET_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
+		if(do_after(user, 5 SECONDS, src, DO_DEFAULT | DO_TARGET_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
 			unload(user)
 	else
 		return FALSE
