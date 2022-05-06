@@ -13,7 +13,6 @@ inf*/
 	. = TRUE
 	for(var/g in gas_needed)
 		var/percentage = round(gas.gas[g]/gas.total_moles * 100, 0.01)
-		to_chat(world, "[g] gas [gas.gas[g]]/[gas.total_moles] = [gas.gas[g]/gas.total_moles * 100] ->> [round(gas.gas[g]/gas.total_moles * 100, 0.01)]< [gas_needed[g]]")
 		if(percentage < gas_needed[g])
 			return FALSE
 
