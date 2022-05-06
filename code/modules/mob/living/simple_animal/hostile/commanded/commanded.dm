@@ -53,13 +53,13 @@
 	if(((weakref(speaker) in friends) && !master) || speaker == master)
 		command_buffer.Add(speaker)
 		command_buffer.Add(lowertext(html_decode(message)))
-	return 0
+	return FALSE
 
 /mob/living/simple_animal/hostile/commanded/hear_radio(var/message, var/verb="says", var/datum/language/language=null, var/part_a, var/part_b, var/part_c, var/mob/speaker = null, var/hard_to_hear = 0)
 	if(((weakref(speaker) in friends) && !master) || speaker == master)
 		command_buffer.Add(speaker)
 		command_buffer.Add(lowertext(html_decode(message)))
-	return 0
+	return FALSE
 
 /mob/living/simple_animal/hostile/commanded/Life()
 	. = ..()
@@ -134,7 +134,7 @@
 				else
 					misc_command(speaker,text) //for specific commands
 
-	return 1
+	return TRUE
 
 //returns a list of everybody we wanna do stuff with.
 /mob/living/simple_animal/hostile/commanded/proc/get_targets_by_name(var/text, var/filter_friendlies = 0)
@@ -173,12 +173,12 @@
 	stance = STANCE_ATTACK
 	if(text == " attack." || findtext(text,"everyone") || findtext(text,"anybody") || findtext(text, "somebody") || findtext(text, "someone")) //if its just 'attack' then just attack anybody, same for if they say 'everyone', somebody, anybody. Assuming non-pickiness.
 		allowed_targets = list("everyone")//everyone? EVERYONE
-		return 1
+		return TRUE
 
 	var/list/targets = get_targets_by_name(text)
 	allowed_targets -= "everyone"
 	for(var/target in targets):
-		ADDUNIQUE_LIST(target, allowed_targets)
+		allowed_targets |= target
 
 	return targets.len != 0
 
@@ -187,7 +187,7 @@
 	stance = COMMANDED_STOP
 	set_AI_busy(TRUE)
 	walk_to(src,0)
-	return 1
+	return TRUE
 
 /mob/living/simple_animal/hostile/commanded/proc/stop_command(var/mob/speaker,var/text)
 	clear_protected_mobs()
@@ -197,7 +197,7 @@
 	target_mob = null //gotta stop SOMETHIN
 	stance = STANCE_IDLE
 	set_AI_busy(FALSE)
-	return 1
+	return TRUE
 
 /mob/living/simple_animal/hostile/commanded/proc/follow_command(var/mob/speaker,var/text)
 	//we can assume 'stop following' is handled by stop_command
@@ -205,51 +205,51 @@
 	if(findtext(text,"me"))
 		stance = COMMANDED_FOLLOW
 		target_mob = speaker //this wont bite me in the ass later.
-		ADDUNIQUE_LIST(weakref(target_mob), friends)
-		return 1
+		friends |= weakref(target_mob)
+		return TRUE
 
 	var/list/targets = get_targets_by_name(text)
 	if(targets.len > 1 || !targets.len) //CONFUSED. WHO DO I FOLLOW?
-		return 0
+		return FALSE
 
 	stance = COMMANDED_FOLLOW //GOT SOMEBODY. BETTER FOLLOW EM.
 	target_mob = targets[1] //YEAH GOOD IDEA
-	ADDUNIQUE_LIST(weakref(target_mob), friends)
+	friends |= weakref(target_mob)
 
-	return 1
+	return TRUE
 
 /mob/living/simple_animal/hostile/commanded/proc/guard_command(var/mob/living/carbon/speaker,var/text)
 	if(findtext(text,"me"))
 		stance = COMMANDED_FOLLOW
 		target_mob = speaker
 		clear_protected_mobs()
-		ADDUNIQUE_LIST(src, speaker.guards)
-		ADDUNIQUE_LIST(weakref(target_mob), friends)
-		return 1
+		speaker.guards |= src
+		friends |= weakref(target_mob)
+		return TRUE
 
 	var/list/targets = get_targets_by_name(text)
 	if(!targets.len) 
-		return 0
+		return FALSE
 		
 	for(var/mob/living/carbon/guarded_mob in targets) // only carbon lives need protection
 		if(!(src in guarded_mob.guards))
 			guarded_mob.guards += src
 			protected_mobs += guarded_mob
-		ADDUNIQUE_LIST(weakref(guarded_mob), friends)
+		friends |= weakref(guarded_mob)
 
 	stance = COMMANDED_FOLLOW
 	target_mob = pick(targets)
-	return 1
+	return TRUE
 
 /mob/living/simple_animal/hostile/commanded/proc/forget_target_command(var/mob/speaker,var/text)
 	allowed_targets = list()
 	ai_holder.target  = null
 	target_mob = null //gotta stop SOMETHIN
-	return 1
+	return TRUE
 
 /mob/living/simple_animal/hostile/commanded/proc/forget_master_command(var/mob/speaker,var/text)
 	if(speaker != master)
-		return 0
+		return FALSE
 	friends -= weakref(master)
 	
 	master = null // I`m alone, again, maybe my name is Hachiko?
@@ -258,31 +258,31 @@
 	target_mob = null //gotta stop SOMETHIN
 	stance = STANCE_IDLE
 	set_AI_busy(FALSE)
-	return 1
+	return TRUE
 
 /mob/living/simple_animal/hostile/commanded/proc/obey_command(var/mob/speaker,var/text)
 	if(speaker != master)
-		return 0
+		return FALSE
 
 	var/list/targets =  list()
 	for(var/mob/living/carbon/human/H in get_targets_by_name(text)) //I want to obey humans
 		targets += H
 	if(targets.len > 1 || !targets.len) //CONFUSED. WHO DO I OBEY?
-		return 0
+		return FALSE
 	master = targets[1]
-	ADDUNIQUE_LIST(weakref(master), friends)	
+	friends |= weakref(master)	
 	ai_holder.leader = master
-	return 1	
+	return TRUE	
 
 /mob/living/simple_animal/hostile/commanded/proc/misc_command(var/mob/speaker,var/text)
-	return 0
+	return FALSE
 
 /mob/living/simple_animal/hostile/commanded/hit_with_weapon(obj/item/O, mob/living/user, var/effective_force, var/hit_zone)
 	//if they attack us, we want to kill them. None of that "you weren't given a command so free kill" bullshit.
 	. = ..()
 	if(. && retribution)
 		target_mob = user
-		ADDUNIQUE_LIST(target_mob, allowed_targets) //fuck this guy in particular.
+		allowed_targets |= target_mob //fuck this guy in particular.
 		stance = STANCE_ATTACK
 		friends -= weakref(user)
 		set_AI_busy(FALSE)
@@ -293,7 +293,7 @@
 	..()
 	if(M.a_intent == I_HURT && retribution) //assume he wants to hurt us.
 		target_mob = M
-		ADDUNIQUE_LIST(M, allowed_targets) //fuck this guy in particular.
+		allowed_targets |= M //fuck this guy in particular.
 		stance = STANCE_ATTACK
 		friends -= weakref(M)
 		set_AI_busy(FALSE)
@@ -305,6 +305,6 @@
 		friends -= weakref(M)
 		set_AI_busy(FALSE)
 		stance = STANCE_ATTACK
-		ADDUNIQUE_LIST(M, allowed_targets)
+		allowed_targets |= M
 
 

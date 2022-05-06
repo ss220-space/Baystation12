@@ -38,7 +38,7 @@
 		if ("ACCESS_HEAD_OF_SECURITY" in S.GetAccess())
 			master = S
 			ai_holder.leader = S
-			ADDUNIQUE_LIST(weakref(S), friends)
+			friends |= weakref(S)
 			allowed_targets -= S
 			S.guards += src
 	..()
@@ -80,9 +80,9 @@
 			return
 
 		target_mob = M
-		ADDUNIQUE_LIST(M, allowed_targets)
+		allowed_targets |= M
 		stance = STANCE_ATTACK
-		ADDUNIQUE_LIST(weakref(M), friends)
+		friends |= weakref(M)
 		set_AI_busy(FALSE)
 		ai_holder.react_to_attack(M)
 		return
