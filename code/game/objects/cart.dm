@@ -40,12 +40,12 @@
 		return
 
 	if(haswheels)
-		to_chat(user, SPAN_WARNING("You cant place somethink on cart before you has folded the wheels!"))
+		to_chat(user, SPAN_WARNING("You can't load the cart unless wheels are folded!"))
 		return
 
 	if(do_after(user, 2 SECONDS, src, DO_DEFAULT | DO_TARGET_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
 		if(!load(cargo))
-			to_chat(user, "<span class='warning'>You were unable to load [cargo] on [src].</span>")
+			to_chat(user, SPAN_WARNING("You are unable to load [cargo] on [src]"))
 			return
 
 /obj/cart/attack_hand(mob/user as mob)
@@ -56,7 +56,7 @@
 		return FALSE
 
 	if(haswheels)
-		to_chat(user, SPAN_WARNING("You take off cart somethink before you has folded the wheels!"))
+		to_chat(user, SPAN_WARNING("You must fold the wheels to unload the cart!"))
 		return
 
 	if(do_after(user, 2 SECONDS, src, DO_DEFAULT | DO_TARGET_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
@@ -68,7 +68,10 @@
 	set src in view(1)
 	set name = "Release wheels"
 	set category = "Object"
-	usr.visible_message(SPAN_NOTICE("[usr] [haswheels ? "folded" : "released"] wheels on [src]"), SPAN_NOTICE("You have [haswheels ? "folded" : "released"] wheels."))
+	var/wheelstat = haswheels ? "folded" : "released"
+	usr.visible_message(SPAN_NOTICE("[usr] [wheelstat] wheels on [src]"), SPAN_NOTICE("You have [wheelstat] wheels."))
+	desc = initial(desc)
+	desc += "\nNow the wheels are [wheelstat]."
 	haswheels = !haswheels
 
 /obj/cart/CtrlAltClick(mob/user)
@@ -187,3 +190,7 @@
 
 /obj/cart/get_additional_speed_decrease()
 	return haswheels ? 0.1 : between(0, cargoweight + w_class, ITEM_SIZE_GARGANTUAN) / 5
+
+/datum/codex_entry/cargo_cart
+	associated_paths = list(/obj/cart)
+	mechanics_text = "To change wheel state you need to press Alt+Ctrl+LMB."
