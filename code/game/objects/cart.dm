@@ -47,8 +47,9 @@
 	if(do_after(user, 2 SECONDS, src, DO_DEFAULT | DO_TARGET_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
 		if(!load(cargo))
 			to_chat(user, SPAN_WARNING("You are unable to load [cargo] on [src]"))
-			density = TRUE // Ваще не ебу почему оно не хочет делать мне денсити в проке load, так что будет тут
 			return
+		density = TRUE
+
 
 /obj/structure/cart/attack_hand(mob/user as mob)
 	if(user.stat || user.restrained() || !Adjacent(user))
@@ -122,8 +123,11 @@
 			cargo.set_dir(turn(dir, 90))
 
 	if(load)
-		var/obj/O = load
-		cargoweight = between(0, O.w_class, ITEM_SIZE_GARGANTUAN)
+		var/obj/object_on_cart = load
+		if(istype(load, /datum/vehicle_dummy_load))
+			var/datum/vehicle_dummy_load/dummy = load
+			object_on_cart = dummy.actual_load
+		cargoweight = between(0, object_on_cart.w_class, ITEM_SIZE_GARGANTUAN)
 		return TRUE
 	return FALSE
 
