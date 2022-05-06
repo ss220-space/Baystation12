@@ -1,6 +1,6 @@
 /obj/cart
-	name = "Cargo cart."
-	desc = "Simple cart for heavy things.\n<font size=1px>(Ctrl+Alt+LMB to change wheels state)</font>"
+	name = "Cargo cart"
+	desc = "Brand-new cart for heavy things. you can see little logo of NT on the back side."
 	icon = 'icons/obj/cart.dmi'
 	icon_state = "cart"
 	w_class = ITEM_SIZE_LARGE
@@ -68,7 +68,7 @@
 	set src in view(1)
 	set name = "Release wheels"
 	set category = "Object"
-	usr.visible_message(SPAN_NOTICE("You have [haswheels ? "folded" : "released"] wheels."), SPAN_NOTICE("[usr] [haswheels ? "folded" : "released"] wheels on [src]"))
+	usr.visible_message(SPAN_NOTICE("[usr] [haswheels ? "folded" : "released"] wheels on [src]"), SPAN_NOTICE("You have [haswheels ? "folded" : "released"] wheels."))
 	haswheels = !haswheels
 
 /obj/cart/CtrlAltClick(mob/user)
