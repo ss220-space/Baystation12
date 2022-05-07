@@ -61,7 +61,7 @@
 		..()
 
 /mob/living/simple_animal/hostile/commanded/rex/attack_hand(mob/living/carbon/human/M as mob)		
-	if(!(M.a_intent == I_HELP) && retribution) //assume he wants to hurt us.
+	if(M.a_intent != I_HELP && retribution) //assume he wants to hurt us.
 		var/dealt_damage = harm_intent_damage
 		var/harm_verb = response_harm
 		if(ishuman(M) && M.species)
