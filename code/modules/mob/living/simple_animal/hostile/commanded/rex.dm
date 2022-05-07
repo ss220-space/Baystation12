@@ -54,7 +54,7 @@
 				set_AI_busy(FALSE)
 				heal_overall_damage(10, 10)
 				qdel(O)
-				visible_message("<span class='notice'>The [src] ate [O]")
+				visible_message(SPAN_NOTICE("\The [src] ate [O]"))
 				set_AI_busy(prev_AI_busy)
 				
 	else
