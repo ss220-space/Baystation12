@@ -27,7 +27,8 @@
 	ai_holder_type = /datum/ai_holder/simple_animal/melee/commanded
 
 /mob/living/simple_animal/hostile/commanded/rex/get_natural_weapon()
-	QDELL_NULL(natural_weapon)
+	if(natural_weapon)
+		qdel(natural_weapon)
 	natural_weapon = pick(possible_natural_weapon)
 	return ..()
 
