@@ -60,36 +60,36 @@
 	else
 		..()
 
-/mob/living/simple_animal/hostile/commanded/rex/attack_hand(mob/living/carbon/human/M as mob)		
-	if(M.a_intent != I_HELP && retribution) //assume he wants to hurt us.
+/mob/living/simple_animal/hostile/commanded/rex/attack_hand(mob/living/carbon/human/target)		
+	if(target.a_intent != I_HELP && retribution) //assume he wants to hurt us.
 		var/dealt_damage = harm_intent_damage
 		var/harm_verb = response_harm
-		if(ishuman(M) && M.species)
-			var/datum/unarmed_attack/attack = M.get_unarmed_attack(src)
+		if(ishuman(target) && target.species)
+			var/datum/unarmed_attack/attack = target.get_unarmed_attack(src)
 			dealt_damage = max(dealt_damage, attack.damage)
 			harm_verb = pick(attack.attack_verb)
 			if(attack.sharp || attack.edge)
 				adjustBleedTicks(dealt_damage)
 
 		adjustBruteLoss(dealt_damage)
-		M.visible_message(SPAN_WARNING("[M] [harm_verb] \the [src]!"))
-		M.do_attack_animation(src)
+		target.visible_message(SPAN_WARNING("[target] [harm_verb] \the [src]!"))
+		target.do_attack_animation(src)
 
-		if((M == master) && prob(80))
+		if((target == master) && prob(80))
 			visible_message(SPAN_WARNING("The [src]  whines"))
 			return TRUE
 
-		target_mob = M
-		allowed_targets |= M
+		target_mob = target
+		allowed_targets |= target
 		stance = STANCE_ATTACK
-		friends |= weakref(M)
+		friends |= weakref(target)
 		set_AI_busy(FALSE)
-		ai_holder.react_to_attack(M)
+		ai_holder.react_to_attack(target)
 		return TRUE
 		
 
-	else if(M.a_intent == I_HELP)
-		if((M == master) || (weakref(M) in friends))
+	else if(target.a_intent == I_HELP)
+		if((target == master) || (weakref(target) in friends))
 			visible_message("<span class='notice'>The [src] wags its tail")
 			if(prob(20))
 				say("Wuff!")
@@ -97,6 +97,6 @@
 
 		visible_message(SPAN_WARNING("\The [src] started to growl"))
 		if(prob(10))
-			attack_target(M)
+			attack_target(target)
 	
 	. = ..()
