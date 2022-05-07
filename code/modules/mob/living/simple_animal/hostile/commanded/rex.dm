@@ -48,7 +48,7 @@
 		if(user != master)
 			visible_message(SPAN_WARNING("\The [src] started to growl"))
 		else
-			visible_message("<span class='notice'>The [user] start feeding the [src] [O]")
+			visible_message(SPAN_NOTICE("\The [user] start feeding the [src] [O]"))
 			if(do_after(user, 30, src))
 				var/prev_AI_busy = ai_holder.busy
 				set_AI_busy(FALSE)
