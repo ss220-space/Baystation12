@@ -85,7 +85,7 @@
 		friends |= weakref(M)
 		set_AI_busy(FALSE)
 		ai_holder.react_to_attack(M)
-		return
+		return TRUE
 		
 
 	else if(M.a_intent == I_HELP)
