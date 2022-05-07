@@ -99,4 +99,4 @@
 		if(prob(10))
 			attack_target(M)
 	
-	..()
+	. = ..()
