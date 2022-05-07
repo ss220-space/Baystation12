@@ -93,7 +93,7 @@
 			visible_message("<span class='notice'>The [src] wags its tail")
 			if(prob(20))
 				say("Wuff!")
-			return
+			return TRUE
 
 		visible_message(SPAN_WARNING("\The [src] started to growl"))
 		if(prob(10))
