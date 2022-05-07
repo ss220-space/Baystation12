@@ -66,7 +66,7 @@
 		var/harm_verb = response_harm
 		if(ishuman(M) && M.species)
 			var/datum/unarmed_attack/attack = M.get_unarmed_attack(src)
-			dealt_damage = attack.damage <= dealt_damage ? dealt_damage : attack.damage
+			dealt_damage = max(dealt_damage, attack.damage)
 			harm_verb = pick(attack.attack_verb)
 			if(attack.sharp || attack.edge)
 				adjustBleedTicks(dealt_damage)
