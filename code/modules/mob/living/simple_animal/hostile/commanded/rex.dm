@@ -77,7 +77,7 @@
 
 		if((M == master) && prob(80))
 			visible_message(SPAN_WARNING("The [src]  whines"))
-			return
+			return TRUE
 
 		target_mob = M
 		allowed_targets |= M
