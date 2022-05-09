@@ -15633,14 +15633,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "aBu" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	dir = 8;
-	target_pressure = 15000
-	},
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/materials_storage)
 "aBv" = (
