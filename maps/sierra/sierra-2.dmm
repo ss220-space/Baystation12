@@ -5797,7 +5797,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engineering_monitoring)
 "akK" = (
-/obj/random/obstruction,
+/obj/machinery/shieldgen,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/starboard)
 "akM" = (
@@ -14501,8 +14501,8 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/machinery/shieldgen,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/cart,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/materials_storage)
 "azw" = (
@@ -17547,6 +17547,7 @@
 "aEL" = (
 /obj/effect/floor_decal/techfloor/corner,
 /obj/random/trash,
+/obj/structure/cart,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftport)
 "aEM" = (
@@ -19323,11 +19324,11 @@
 /area/maintenance/seconddeck/foreport)
 "aIj" = (
 /obj/machinery/light/small,
-/obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/materials_storage)
 "aIk" = (
@@ -30187,6 +30188,7 @@
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
+/obj/structure/cart,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftstarboard)
 "bcp" = (

@@ -4286,6 +4286,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cart,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/backstorage)
 "aic" = (
