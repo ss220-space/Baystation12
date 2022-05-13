@@ -185,11 +185,8 @@ SUBSYSTEM_DEF(statistics)
 
 	var/start_time = start_watch()
 
-	// Divider for deciseconds to minutes convertion
-	var/divider = 600
-
 	// Calculate minutes based on the SS wait time (How often this proc fires)
-	var/minutes_to_add = wait / divider
+	var/minutes_to_add = wait / (1 MINUTE)
 
 	// Get a list of clients to process
 	// This is copied so that clients joining in the middle of this dont break things
