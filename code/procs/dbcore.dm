@@ -64,7 +64,7 @@ DBConnection/may_edit_var(var/user, var/var_to_edit)
 		return FALSE
 	if(var_to_edit == NAMEOF(src, port))
 		return FALSE
-	..()
+	. = ..()
 
 DBConnection/VV_hidden()
 	return ..() + list(NAMEOF(src, _db_con), NAMEOF(src, dbi), NAMEOF(src, user),

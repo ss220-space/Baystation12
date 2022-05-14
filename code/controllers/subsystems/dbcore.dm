@@ -48,7 +48,7 @@ SUBSYSTEM_DEF(dbcore)
 		return FALSE
 	if(var_to_edit == NAMEOF(src, active_queries))
 		return FALSE
-	..()
+	. = ..()
 
 /datum/controller/subsystem/dbcore/VV_hidden()
 	return ..() + list(NAMEOF(src, connection), NAMEOF(src, active_queries))
