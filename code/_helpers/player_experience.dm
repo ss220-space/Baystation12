@@ -17,7 +17,7 @@
 		to_chat(user, SPAN_DANGER("Database is not connected. Can't get player experience."))
 		return
 
-	// We don't need to return a page, ifthe ckey was not specified
+	// We don't need to return a page, if the ckey was not specified
 	if(!ckey)
 		to_chat(user, SPAN_NOTICE("No ckey were specified"))
 		return
@@ -35,6 +35,8 @@
 	if(select_player_exp.NextRow())
 		player_exp = params2list(select_player_exp.item[1])
 		player_species_exp = params2list(select_player_exp.item[2])
+
+	QDEL_NULL(select_player_exp)
 
 	if(!player_exp && !player_species_exp)
 		to_chat(user, SPAN_NOTICE("[ckey] has no tracked experience!"))
