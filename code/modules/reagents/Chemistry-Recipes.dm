@@ -960,6 +960,18 @@
 	for(var/i = 1, i <= 3, i++)
 		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
 
+/datum/chemical_reaction/slime/adrenaline
+	name = "Slime Adrenaline"
+	result = /datum/reagent/adrenaline
+	required_reagents = list(/datum/reagent/water = 1)
+	result_amount = 2
+	required = /obj/item/slime_extract/grey
+
+/datum/chemical_reaction/slime/monkey/on_reaction(var/datum/reagents/holder)
+	..()
+	for(var/i = 1, i <= 3, i++)
+		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
+
 //Green
 /datum/chemical_reaction/slime/mutate
 	name = "Mutation Toxin"
@@ -994,6 +1006,8 @@
 	..()
 	var/obj/item/stack/material/glass/G = new (get_turf(holder.my_atom))
 	G.amount = 15
+	var/obj/item/stack/material/glass/reinforced/RG = new (get_turf(holder.my_atom))
+	RG.amount = 5
 
 //Gold
 /datum/chemical_reaction/slime/crit
@@ -1009,10 +1023,34 @@
 							/mob/living/simple_animal/friendly/corgi/puppy,
 							/mob/living/simple_animal/friendly/cow,
 							/mob/living/simple_animal/friendly/chick,
-							/mob/living/simple_animal/friendly/chicken
+							/mob/living/simple_animal/friendly/chicken,
+							/mob/living/simple_animal/friendly/koala
 							)
 
 /datum/chemical_reaction/slime/crit/on_reaction(var/datum/reagents/holder)
+	..()
+	var/type = pick(possible_mobs)
+	new type(get_turf(holder.my_atom))
+
+/datum/chemical_reaction/slime/crit_hostile
+	name = "Slime Crit Hostile"
+	result = null
+	required_reagents = list(/datum/reagent/blood = 1)
+	result_amount = 1
+	required = /obj/item/slime_extract/gold
+	var/list/possible_mobs = list(
+							/mob/living/simple_animal/hostile/carp,
+							/mob/living/simple_animal/hostile/carp/shark,
+							/mob/living/simple_animal/hostile/carp/pike,
+							/mob/living/simple_animal/hostile/bear,
+							/mob/living/simple_animal/hostile/drake,
+							/mob/living/simple_animal/hostile/giant_spider,
+							/mob/living/simple_animal/hostile/antlion,
+							/mob/living/simple_animal/hostile/creature,
+							/mob/living/simple_animal/hostile/leech,
+							/mob/living/simple_animal/hostile/vagrant
+							)
+/datum/chemical_reaction/slime/crit_hostile/on_reaction(var/datum/reagents/holder)
 	..()
 	var/type = pick(possible_mobs)
 	new type(get_turf(holder.my_atom))
@@ -1040,6 +1078,31 @@
 			if(prob(50))
 				for(var/j = 1, j <= rand(1, 3), j++)
 					step(B, pick(NORTH, SOUTH, EAST, WEST))
+
+/datum/chemical_reaction/slime/bork_drink
+	name = "Slime Bork Drink"
+	result = null
+	required_reagents = list(/datum/reagent/water = 1)
+	result_amount = 1
+	required = /obj/item/slime_extract/silver
+
+
+/datum/chemical_reaction/slime/bork_drink/on_reaction(var/datum/reagents/holder)
+	..()
+	var/list/borks_drinks = typesof(/obj/item/reagent_containers/food/drinks) - /obj/item/reagent_containers/food/drinks
+	playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
+	for(var/mob/living/carbon/human/M in viewers(get_turf(holder.my_atom), null))
+		if(M.eyecheck() < FLASH_PROTECTION_MODERATE)
+			M.flash_eyes()
+
+	for(var/i = 1, i <= 4 + rand(1,2), i++)
+		var/chosen = pick(borks_drinks)
+		var/obj/B = new chosen(get_turf(holder.my_atom))
+		if(B)
+			if(prob(50))
+				for(var/j = 1, j <= rand(1, 3), j++)
+					step(B, pick(NORTH, SOUTH, EAST, WEST))
+
 
 /datum/chemical_reaction/slime/silver
 	name = "Slime Silver"
@@ -1105,6 +1168,25 @@
 	var/turf/location = get_turf(holder.my_atom)
 	location.assume_gas(GAS_PHORON, 250, 1400)
 	location.hotspot_expose(700, 400)
+
+/datum/chemical_reaction/slime/smoke
+	name = "Slime Smoke"
+	result = null
+	required_reagents = list(/datum/reagent/water = 1)
+	result_amount = 1
+	required = /obj/item/slime_extract/orange
+	mix_message = "The slime extract begins to vibrate violently!"
+
+/datum/chemical_reaction/slime/smoke/on_reaction(var/datum/reagents/holder)
+	..()
+	var/location = get_turf(holder.my_atom)
+	var/datum/effect/effect/system/smoke_spread/chem/S = new /datum/effect/effect/system/smoke_spread/chem
+	S.attach(location)
+	S.set_up(holder, 8, 0, location)
+	playsound(location, 'sound/effects/smoke.ogg', 50, 1, -3)
+	spawn(0)
+		S.start()
+	holder.clear_reagents()
 
 //Yellow
 /datum/chemical_reaction/slime/overload
@@ -1296,6 +1378,18 @@
 		a.forceMove(pick(turfs))
 	..()
 
+/datum/chemical_reaction/slime/bluespace_crystal
+	name = "Slime Bluespace Crystal"
+	result = null
+	required_reagents = list(/datum/reagent/blood = 1)
+	result_amount = 5
+	required = /obj/item/slime_extract/bluespace
+
+/datum/chemical_reaction/slime/bluespace_crystal/on_reaction(var/datum/reagents/holder)
+	for(var/i in 1 to result_amount)
+		new /obj/item/bluespace_crystal(get_turf(holder.my_atom))
+	..()
+
 //pyrite
 /datum/chemical_reaction/slime/paint
 	name = "Slime Paint"
@@ -1305,6 +1399,17 @@
 
 /datum/chemical_reaction/slime/paint/on_reaction(var/datum/reagents/holder)
 	new /obj/item/reagent_containers/glass/paint/random(get_turf(holder.my_atom))
+	..()
+
+/datum/chemical_reaction/slime/crayons
+	name = "Slime Crayons"
+	result = null
+	required_reagents = list(/datum/reagent/water = 1)
+	result_amount = 1
+	required = /obj/item/slime_extract/pyrite
+
+/datum/chemical_reaction/slime/crayons/on_reaction(var/datum/reagents/holder)
+	new /obj/item/storage/fancy/crayons(get_turf(holder.my_atom))
 	..()
 
 //cerulean
