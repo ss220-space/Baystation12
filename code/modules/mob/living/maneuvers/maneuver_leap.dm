@@ -1,6 +1,8 @@
 /decl/maneuver/leap
 	name = "leap"
 	stamina_cost = 10
+	cooldown = 2 SECONDS
+	delay = 0.5 SECONDS
 	reflexive_modifier = 1.5
 
 /decl/maneuver/leap/perform(var/mob/living/user, var/atom/target, var/strength, var/reflexively = FALSE)
