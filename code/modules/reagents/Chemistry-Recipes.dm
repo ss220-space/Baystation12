@@ -1175,12 +1175,11 @@
 /datum/chemical_reaction/slime/smoke/on_reaction(var/datum/reagents/holder)
 	..()
 	var/location = get_turf(holder.my_atom)
-	var/datum/effect/effect/system/smoke_spread/chem/S = new /datum/effect/effect/system/smoke_spread/chem
-	S.attach(location)
-	S.set_up(holder, 8, 0, location)
+	var/datum/effect/effect/system/smoke_spread/chem/smoke_effect = new
+	smoke_effect.attach(location)
+	smoke_effect.set_up(holder, 8, 0, location)
 	playsound(location, 'sound/effects/smoke.ogg', 50, 1, -3)
-	spawn(0)
-		S.start()
+	INVOKE_ASYNC(smoke_effect, /datum/effect/effect/system.proc/start)
 	holder.clear_reagents()
 
 //Yellow
