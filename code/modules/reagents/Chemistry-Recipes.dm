@@ -957,7 +957,7 @@
 
 /datum/chemical_reaction/slime/monkey/on_reaction(var/datum/reagents/holder)
 	..()
-	for(var/i = 1, i <= 3, i++)
+	for(var/i in 1 to 3)
 		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
 
 /datum/chemical_reaction/slime/adrenaline
@@ -966,11 +966,6 @@
 	required_reagents = list(/datum/reagent/water = 1)
 	result_amount = 2
 	required = /obj/item/slime_extract/grey
-
-/datum/chemical_reaction/slime/monkey/on_reaction(var/datum/reagents/holder)
-	..()
-	for(var/i in 1 to 3)
-		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
 
 //Green
 /datum/chemical_reaction/slime/mutate
