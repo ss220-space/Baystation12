@@ -1086,9 +1086,9 @@
 	..()
 	var/list/borks_drinks = typesof(/obj/item/reagent_containers/food/drinks) - /obj/item/reagent_containers/food/drinks
 	playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
-	for(var/mob/living/carbon/human/M in viewers(get_turf(holder.my_atom), null))
-		if(M.eyecheck() < FLASH_PROTECTION_MODERATE)
-			M.flash_eyes()
+	for(var/mob/living/carbon/human/viewer in viewers(1, holder.my_atom))
+		if(viewer.eyecheck() < FLASH_PROTECTION_MODERATE)
+			viewer.flash_eyes()
 
 	for(var/i = 1, i <= 4 + rand(1,2), i++)
 		var/chosen = pick(borks_drinks)
