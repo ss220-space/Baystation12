@@ -1090,7 +1090,7 @@
 		if(viewer.eyecheck() < FLASH_PROTECTION_MODERATE)
 			viewer.flash_eyes()
 
-	for(var/i = 1, i <= 4 + rand(1,2), i++)
+	for(var/i in 1 to (4 + rand(1,2)))
 		var/chosen = pick(borks_drinks)
 		var/obj/bork_drink = new chosen(get_turf(holder.my_atom))
 		if(!bork_drink)
