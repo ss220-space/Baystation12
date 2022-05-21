@@ -1092,12 +1092,13 @@
 
 	for(var/i = 1, i <= 4 + rand(1,2), i++)
 		var/chosen = pick(borks_drinks)
-		var/obj/B = new chosen(get_turf(holder.my_atom))
-		if(B)
-			if(prob(50))
-				for(var/j = 1, j <= rand(1, 3), j++)
-					step(B, pick(NORTH, SOUTH, EAST, WEST))
-
+		var/obj/bork_drink = new chosen(get_turf(holder.my_atom))
+		if(!bork_drink)
+			continue
+			
+		if(prob(50))
+			for(var/j in 1 to rand(1,3))
+				step(bork_drink, pick(NORTH, SOUTH, EAST, WEST))
 
 /datum/chemical_reaction/slime/silver
 	name = "Slime Silver"
