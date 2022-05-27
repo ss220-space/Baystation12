@@ -248,7 +248,7 @@
 	. = ..()
 	if(lit)
 		STOP_PROCESSING(SSobj, src)
-	for(var/obj/item/tube/T in tubes_archive)
+	for(var/obj/item/tube/T as anything in tubes_archive)
 		qdel(T)
 
 /obj/item/hookah/water_act(var/depth)
