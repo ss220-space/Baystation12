@@ -219,7 +219,7 @@
 		if(!coals)
 			return
 		smoketime += 500*coals
-		for(var/i, i<coals, i++)
+		for(var/i in 1 to coals)
 			qdel(box.contents[1])
 
 		src.visible_message(SPAN_INFO("[user] puts [coals] coal in hookah"), SPAN_INFO("You put [coals] coal in hookah"))
