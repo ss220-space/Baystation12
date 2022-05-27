@@ -56,7 +56,7 @@
 	if(QDELETED(src))
 		return
 
-	if(reagents.reagent_list.len > 0)
+	if(length(reagents.reagent_list) > 0)
 		reagents.splash(hit_atom, reagents.total_volume)
 	visible_message(
 		SPAN_DANGER("\The [src] shatters from the impact!"),
