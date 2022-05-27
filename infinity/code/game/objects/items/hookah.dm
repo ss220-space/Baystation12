@@ -218,11 +218,11 @@
 		var/coals = round((maxsmoketime-smoketime)/500)
 		if(coals==0)
 			return
-		smoketime += 500*k
+		smoketime += 500*coals
 		for(var/i, i<coals, i++)
 			qdel(box.contents[1])
 
-		src.visible_message(SPAN_INFO("[user] puts [k] coal in hookah"), SPAN_INFO("You put [k] coal in hookah"))
+		src.visible_message(SPAN_INFO("[user] puts [coals] coal in hookah"), SPAN_INFO("You put [coals] coal in hookah"))
 
 	..()
 
