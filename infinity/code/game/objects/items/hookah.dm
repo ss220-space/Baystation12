@@ -288,7 +288,7 @@
 
 				to_chat(over, SPAN_INFO("You pick up the [src]."))
 				usr.put_in_hands(src)
-				for(var/obj/item/tube/T in tubes_archive)
+				for(var/obj/item/tube/T as anything in tubes_archive)
 					T.check_exited()
 	return
 
