@@ -216,7 +216,7 @@
 	else if(istype(W, /obj/item/storage/box/large/coal))
 		var/obj/item/storage/box/large/coal/box = W
 		var/coals = round((maxsmoketime-smoketime)/500)
-		if(coals==0)
+		if(!coals)
 			return
 		smoketime += 500*coals
 		for(var/i, i<coals, i++)
