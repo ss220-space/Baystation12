@@ -382,7 +382,7 @@
 
 /obj/item/tube/proc/smoke(amount)
 	parent.smoketime -= amount
-	if(parent.reagents && parent.reagents.total_volume) // check if it has any reagents at all
+	if(parent.reagents?.total_volume) // check if it has any reagents at all
 		if(ishuman(loc))
 			var/mob/living/carbon/human/C = loc
 			parent.reagents.trans_to_mob(C, REM, CHEM_INGEST, 0.2)
