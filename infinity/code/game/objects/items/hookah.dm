@@ -27,7 +27,7 @@
 	var/gas_consumption = 0.04
 	var/list/coal_status_examine_msg = list("There is very little coal inside", "Here is a quarter of the full tobacco", "Half full of coal", "Almost full of coal", "Full of coal")
 
-/obj/item/hookah/New()
+/obj/item/hookah/Initialize()
 	. = ..()
 	atom_flags |= ATOM_FLAG_NO_REACT // so it doesn't react until you light it
 	create_reagents(chem_volume) // making the cigarrete a chemical holder with a maximum volume of 100
@@ -326,7 +326,7 @@
 	ready = TRUE
 	return
 
-/obj/item/tube/proc/check_exited(var/mob/mover)
+/obj/item/tube/proc/check_exited()
 	var/turf/hookah_pos = get_turf(parent)
 	var/turf/mover_pos = get_turf(src)
 	if(hookah_pos != mover_pos && get_dist(mover_pos, hookah_pos) > 1)
