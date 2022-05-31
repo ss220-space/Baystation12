@@ -48,7 +48,8 @@
 	if(length(contentflovers) >= 4) filled = TRUE
 
 /obj/item/bouquet/throw_impact(atom/hit_atom)
-	if(QDELETED(src)) return
+	if(QDELETED(src))
+	    return
 
 	visible_message(
 		SPAN_DANGER("\The [src] shatters from the impact!"),
