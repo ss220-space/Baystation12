@@ -23,7 +23,8 @@
 	. = ..()
 
 /obj/item/bouquet/attackby(obj/item/W, mob/user)
-	if(!istype(W, /obj/item/reagent_containers/food/snacks/grown) || filled) return ..()
+	if(!istype(W, /obj/item/reagent_containers/food/snacks/grown) || filled)
+	    return ..()
 
 	var/pass = FALSE
 	var/obj/item/reagent_containers/food/snacks/grown/flower = W
