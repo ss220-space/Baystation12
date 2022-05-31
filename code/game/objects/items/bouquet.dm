@@ -73,5 +73,6 @@
 	if(flower.plantname != "grass") return
 	qdel(flower)
 	qdel(src)
-	new /obj/item/bouquet(usr.loc)
+	var/obj/item/bouquet/B = new(loc)
+	user.put_in_any_hand_if_possible(B)
 	to_chat(user, SPAN_INFO("You placed grass into the pitcher."))
