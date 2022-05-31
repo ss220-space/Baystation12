@@ -65,7 +65,8 @@
 	filled = TRUE
 
 /obj/item/reagent_containers/food/drinks/glass2/carafe/attackby(obj/item/I, mob/user)
-	if(!istype(I, /obj/item/reagent_containers/food/snacks/grown)) return ..()
+	if(!istype(I, /obj/item/reagent_containers/food/snacks/grown))
+	    return ..()
 
 	if(reagents.total_volume)
 		to_chat(user, SPAN_WARNING("The pitcher must be empty!"))
