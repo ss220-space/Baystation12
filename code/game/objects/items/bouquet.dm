@@ -24,7 +24,7 @@
 
 /obj/item/bouquet/attackby(obj/item/W, mob/user)
 	if(!istype(W, /obj/item/reagent_containers/food/snacks/grown) || filled)
-	    return ..()
+		return ..()
 
 	var/pass = FALSE
 	var/obj/item/reagent_containers/food/snacks/grown/flower = W
@@ -49,7 +49,7 @@
 
 /obj/item/bouquet/throw_impact(atom/hit_atom)
 	if(QDELETED(src))
-	    return
+		return
 
 	visible_message(
 		SPAN_DANGER("\The [src] shatters from the impact!"),
@@ -66,7 +66,7 @@
 
 /obj/item/reagent_containers/food/drinks/glass2/carafe/attackby(obj/item/I, mob/user)
 	if(!istype(I, /obj/item/reagent_containers/food/snacks/grown))
-	    return ..()
+		return ..()
 
 	if(reagents.total_volume)
 		to_chat(user, SPAN_WARNING("The pitcher must be empty!"))
@@ -74,7 +74,7 @@
 
 	var/obj/item/reagent_containers/food/snacks/grown/flower = I
 	if(flower.plantname != "grass")
-	    return
+		return
 	qdel(flower)
 	qdel(src)
 	var/obj/item/bouquet/B = new(loc)
