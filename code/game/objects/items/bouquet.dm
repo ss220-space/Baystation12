@@ -72,7 +72,8 @@
 		return
 
 	var/obj/item/reagent_containers/food/snacks/grown/flower = I
-	if(flower.plantname != "grass") return
+	if(flower.plantname != "grass")
+	    return
 	qdel(flower)
 	qdel(src)
 	var/obj/item/bouquet/B = new(loc)
