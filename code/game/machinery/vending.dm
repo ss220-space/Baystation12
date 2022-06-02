@@ -1469,8 +1469,6 @@
 					/obj/item/device/scanner/gas = 3,
 					/obj/item/device/t_scanner = 3,
 					/obj/item/device/cable_painter = 2,
-					/*/obj/item/device/floor_painter = 2,
-					/obj/item/device/pipe_painter = 2,*/
 					/obj/item/rpd = 2,
 					/obj/item/clamp = 4,
 					/obj/item/tape_roll = 6
