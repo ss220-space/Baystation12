@@ -1551,3 +1551,17 @@
 	product_slogans = ";STARFIGHTER TESTED!, STARFIGHTER RECOMMENDED!, STARFIGHTER APPROVED!;YOU ARE NOT ALLOWED A JELLY DOUGHNUT!;YOU DONT WANT TO DIE HUNGRY SOLDIER!"
 	product_ads = "Everything the body needs!;Now transfat free;Vegan options are available.;Rated for all known species!"
 	base_type = /obj/machinery/vending/mredispenser
+
+/obj/machinery/vending/crates
+	name = "\improper Crate-o-Mat"
+	desc = "Vending machine that dispense crates for all your powerplay needs."
+	vend_delay = 3 SECONDS
+	req_access = list(access_cargo)
+	base_type = /obj/machinery/vending/crates
+	icon_state = "crates"
+	icon_deny = "crates-deny"
+	icon_vend = "crates-vend"
+
+	products = list(
+					/obj/structure/closet/crate/plastic = 10
+					)
