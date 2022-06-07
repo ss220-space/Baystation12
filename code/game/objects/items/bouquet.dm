@@ -13,7 +13,7 @@
 	var/list/contentflovers = list()
 	var/filled = FALSE
 
-/obj/item/bouquet/update_icon()
+/obj/item/bouquet/on_update_icon()
 	for(var/obj/item/reagent_containers/food/snacks/grown/flower as anything in contentflovers)
 		switch (flower.plantname)
 			if ("harebells")	overlays += image(icon, "flower_1")
