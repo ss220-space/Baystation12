@@ -14,8 +14,8 @@
 	var/filled = FALSE
 
 /obj/item/bouquet/on_update_icon()
-	for(var/obj/item/reagent_containers/food/snacks/grown/flower as anything in contentflovers)
-		switch (flower.plantname)
+	for(var/flower as anything in contentflovers)
+		switch (flower)
 			if ("harebells")	overlays += image(icon, "flower_1")
 			if ("poppies")		overlays += image(icon, "flower_2")
 			if ("lavender")		overlays += image(icon, "flower_3")
