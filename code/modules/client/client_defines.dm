@@ -14,6 +14,7 @@
 		/////////
 	var/datum/preferences/prefs = null
 	var/adminobs		= null
+	var/list/autofire_aiming_at[2]
 
 	var/adminhelped = 0
 

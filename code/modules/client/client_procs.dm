@@ -448,6 +448,11 @@ client/verb/character_setup()
 
 /client/MouseDrag(src_object, over_object, src_location, over_location, src_control, over_control, params)
 	. = ..()
+
+	if(over_object)
+		if(autofire_aiming_at[1])
+			autofire_aiming_at[1] = over_object
+			autofire_aiming_at[2] = params
 	var/mob/living/M = mob
 	if(istype(M))
 		M.OnMouseDrag(src_object, over_object, src_location, over_location, src_control, over_control, params)
@@ -456,6 +461,34 @@ client/verb/character_setup()
 	if (istype(B))
 		if(B.current_build_mode && src_control == "mapwindow.map" && src_control == over_control)
 			build_drag(src,B.current_build_mode,src_object,over_object,src_location,over_location,src_control,over_control,params)
+
+
+/client/MouseDown(object, location, control, params)
+	var/obj/item/I = mob.get_active_hand()
+	var/obj/O = object
+	if(istype(I, /obj/item/gun) && !mob.in_throw_mode)
+		var/obj/item/gun/G = I
+		if(G.can_autofire(O, location, params) && O.is_auto_clickable() && !(G.safety()) && !(G == O))
+			autofire_aiming_at[1] = 0
+			autofire_aiming_at[2] = params
+			while(autofire_aiming_at[1])
+				G.Fire(autofire_aiming_at[1], mob, autofire_aiming_at[2], (get_dist(mob, location) <= 1), FALSE)
+				mob.set_dir(get_dir(mob, autofire_aiming_at[1]))
+				sleep(G.fire_delay)
+			CHECK_TICK
+
+/client/MouseUp(object, location, control, params)
+	autofire_aiming_at[1] = null
+
+/atom/proc/is_auto_clickable()
+	return TRUE
+
+/obj/screen/is_auto_clickable()
+	return FALSE
+
+/obj/screen/click_catcher/is_auto_clickable()
+	return TRUE
+
 
 /client/verb/toggle_fullscreen()
 	set name = "Toggle Fullscreen"

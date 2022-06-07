@@ -84,6 +84,7 @@
 	var/one_hand_penalty
 	var/wielded_item_state
 	var/combustion	//whether it creates hotspot when fired
+	var/one_hand_fa_penalty = 0
 
 	var/next_fire_time = 0
 
@@ -255,12 +256,12 @@ var/global/serials = list()
 			return
 
 	if(world.time < next_fire_time)
-		if (world.time % 3) //to prevent spam
+		if (world.time % 3 && !can_autofire) //to prevent spam
 			to_chat(user, "<span class='warning'>[src] is not ready to fire again!</span>")
 		return
 
 	last_safety_check = world.time
-	var/shoot_time = (burst - 1)* burst_delay
+	var/shoot_time = max((burst - 1) * burst_delay, burst_delay)
 	user.setClickCooldown(shoot_time) //no clicking on things while shooting
 	user.SetMoveCooldown(shoot_time) //no moving while shooting either
 	next_fire_time = world.time + shoot_time
@@ -728,8 +729,9 @@ var/global/serials = list()
 		afterattack(shoot_to,target)
 		return 1
 
-/obj/item/gun/proc/can_autofire()
+/obj/item/gun/proc/can_autofire(object, location, params)
 	return (can_autofire && world.time >= next_fire_time)
+
 
 /obj/item/gun/proc/check_accidents(mob/living/user, message = "[user] fumbles with the [src] and it goes off!",skill_path = SKILL_WEAPONS, fail_chance = 20, no_more_fail = SKILL_ADEPT, factor = 2) //INF: was no_more_fail = SKILL_EXPERT
 	if(istype(user))
