@@ -1,4 +1,3 @@
-// /datum/reagent/ethanol/beer
 /obj/item/hookah
 	name = "Hookah"
 	icon = 'infinity/icons/obj/item/hookah.dmi'
