@@ -304,14 +304,14 @@
 	liquid_type = /datum/reagent/ethanol/beer
 	slot_flags = SLOT_BELT
 
-/obj/effect/effect/hookah_smoke
+/obj/effect/hookah_smoke
 	icon = 'infinity/icons/effects/smoke_hookah.dmi'
 	icon_state = "smoke"
 	pixel_x = 0
 	pixel_y = 0
 	opacity = FALSE
 
-/obj/effect/effect/hookah_smoke/proc/qdel_after()
+/obj/effect/hookah_smoke/proc/qdel_after()
 	sleep(30)
 	qdel(src)
 /obj/item/tube
@@ -424,10 +424,10 @@
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		var/obj/effect/effect/hookah_smoke/smoke = new(H.loc)
+		var/obj/effect/hookah_smoke/smoke = new(H.loc)
 		if(prob(60))
 			step(smoke, H.dir)
-		addtimer(CALLBACK(smoke, /obj/effect/effect/hookah_smoke/proc/qdel_after), 0, TIMER_NO_HASH_WAIT)
+		addtimer(CALLBACK(smoke, /obj/effect/hookah_smoke/proc/qdel_after), 0, TIMER_NO_HASH_WAIT)
 
 /obj/item/coal
 	name = "Coal"
