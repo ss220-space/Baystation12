@@ -264,7 +264,7 @@
 			var/o_is = (O.gender == PLURAL) ? "are" : "is"
 			var/o_a =  (O.gender == PLURAL) ? "" : "a "
 			var/list/visible_implants = target.get_visible_implants()
-			for(var/obj/item/organ/implant in visible_implants)
+			for(var/obj/item/organ/implant as anything in visible_implants)
 				if(implant.organ_tag == O.organ_tag)
 					to_chat(user, SPAN_WARNING("\The [target] already has [o_a][O.name]."))
 					return
