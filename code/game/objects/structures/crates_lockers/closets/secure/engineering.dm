@@ -49,7 +49,7 @@
 	return list(
 		/obj/item/clothing/head/welding = 3,
 		/obj/item/weldingtool/largetank = 3,
-		/obj/item/weldpack = 3,
+		/obj/item/storage/backpack/weldpack = 3,
 		/obj/item/clothing/glasses/welding = 3,
 		/obj/item/welder_tank = 6
 	)

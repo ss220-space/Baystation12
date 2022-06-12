@@ -117,6 +117,7 @@
 		else
 			cover_open = 1
 			to_chat(user, "You unscrew the panel.")
+		playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
 		update_icon()
 		return
 

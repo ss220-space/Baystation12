@@ -1665,7 +1665,7 @@
 /obj/item/handcuffs/cable/yellow,
 /obj/item/device/flash/synthetic,
 /obj/item/device/flash/synthetic,
-/obj/item/weldpack,
+/obj/item/storage/backpack/weldpack,
 /obj/random/technology_scanner,
 /turf/simulated/floor/plating,
 /area/ship/scrap/other/robotics)
