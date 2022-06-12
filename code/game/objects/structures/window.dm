@@ -798,7 +798,7 @@
 		icon_state = "light[active]"
 		overlay.icon_state = "light[active]-overlay"
 		overlays += overlay
-		set_light(0.1, 0.1, 1, 2, active ? "#82ff4c" : "#f86060")
+		set_light(0.3, 0.1, 1, 2, active ? "#82ff4c" : "#f86060")
 
 //Centcomm windows
 /obj/structure/window/reinforced/crescent/attack_hand()

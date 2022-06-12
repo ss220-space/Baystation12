@@ -256,15 +256,15 @@
 		icon_state = "blastctrl-p"
 		overlay.icon_state = "blastctrl-p-overlay"
 		overlays += overlay
-		set_light(0.1, 0.1, 1, 2,"#C50022")
+		set_light(0.3, 0.1, 1, 2,"#C50022")
 	else
 		icon_state = "blastctrl[operating]"
 		overlay.icon_state = "blastctrl[operating]-overlay"
 		overlays += overlay
 		switch(operating)
-			if(0) set_light(0.1, 0.1, 1, 2, "#F2FF00")
-			if(1) set_light(0.1, 0.1, 1, 2, "#a1FF00")
-			else set_light(0.1, 0.1, 1, 2,"#f86060")
+			if(0) set_light(0.3, 0.1, 1, 2, "#F2FF00")
+			if(1) set_light(0.3, 0.1, 1, 2, "#a1FF00")
+			else set_light(0.3, 0.1, 1, 2,"#f86060")
 
 // SUBTYPE: Regular
 // Your classical blast door, found almost everywhere.

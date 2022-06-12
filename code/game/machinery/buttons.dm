@@ -106,7 +106,7 @@
 		icon_state = "light[operating]"
 		overlay.icon_state = "light[operating]-overlay"
 		overlays += overlay
-		set_light(0.1, 0.1, 1, 2, operating ? "#82ff4c" : "#f86060")
+		set_light(0.3, 0.1, 1, 2, operating ? "#82ff4c" : "#f86060")
 
 //alternate button with the same functionality, except has a door control sprite instead
 /obj/machinery/button/alternate
@@ -128,9 +128,9 @@
 		overlay.icon_state = "doorctrl[operating]-overlay"
 		overlays += overlay
 		switch(operating)
-			if(0) set_light(0.1, 0.1, 1, 2, "#F2FF00")
-			if(1) set_light(0.1, 0.1, 1, 2, "#a1FF00")
-			else set_light(0.1, 0.1, 1, 2,"#f86060")
+			if(0) set_light(0.3, 0.1, 1, 2, "#F2FF00")
+			if(1) set_light(0.3, 0.1, 1, 2, "#a1FF00")
+			else set_light(0.3, 0.1, 1, 2,"#f86060")
 
 //Toggle button determines icon state from active, not operating
 /obj/machinery/button/toggle/on_update_icon()
@@ -158,7 +158,7 @@
 		icon_state = "light[active]"
 		overlay.icon_state = "light[active]-overlay"
 		overlays += overlay
-		set_light(0.1, 0.1, 1, 2, active ? "#82ff4c" : "#f86060")
+		set_light(0.3, 0.1, 1, 2, active ? "#82ff4c" : "#f86060")
 
 
 
@@ -181,12 +181,12 @@
 		icon_state = "blastctrl-active"
 		overlay.icon_state = "big-switch-green-ol"
 		overlays += overlay
-		set_light(0.1, 0.1, 1, 2,"#a1FF00")
+		set_light(0.3, 0.1, 1, 2,"#a1FF00")
 	else
 		icon_state = "blastctrl-nonactive"
 		overlay.icon_state = "big-switch-red-ol"
 		overlays += overlay
-		set_light(0.1, 0.1, 1, 2,"#C50022")
+		set_light(0.3, 0.1, 1, 2,"#C50022")
 
 
 //-------------------------------
@@ -220,9 +220,9 @@
 		overlay.icon_state = "doorctrl[operating]-overlay"
 		overlays += overlay
 		switch(operating)
-			if(0) set_light(0.1, 0.1, 1, 2, "#F2FF00")
-			if(1) set_light(0.1, 0.1, 1, 2, "#a1FF00")
-			else set_light(0.1, 0.1, 1, 2,"#f86060")
+			if(0) set_light(0.3, 0.1, 1, 2, "#F2FF00")
+			if(1) set_light(0.3, 0.1, 1, 2, "#a1FF00")
+			else set_light(0.3, 0.1, 1, 2,"#f86060")
 
 /decl/stock_part_preset/radio/basic_transmitter/button/door
 	frequency = AIRLOCK_FREQ
