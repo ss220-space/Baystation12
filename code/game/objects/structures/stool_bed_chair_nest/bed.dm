@@ -201,11 +201,6 @@
 	var/iv_attached = 0
 	var/iv_stand = TRUE
 
-/obj/structure/bed/roller/Move()
-	. = ..()
-	if(buckled_mob)
-		buckled_mob.set_glide_size(src.glide_size)
-
 /obj/structure/bed/roller/on_update_icon()
 	overlays.Cut()
 	if(density)
