@@ -57,7 +57,7 @@
 	if(autoupdate)
 		src.update()
 
-	return exp ? exp[branch] : null
+	return exp ? exp[branch] : 0
 
 /datum/player_experience/proc/dep2arg(var/branch)
 	switch(branch)
