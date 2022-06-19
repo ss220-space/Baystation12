@@ -4973,6 +4973,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/verne/xenosci)
+"II" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/structure/heavy_vehicle_frame,
+/turf/simulated/floor/tiled/techfloor,
+/area/verne/engineering/workshop)
 "IK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -14370,7 +14375,7 @@ Fd
 xU
 qj
 JJ
-hH
+II
 Sd
 Sd
 Sd
