@@ -52,3 +52,37 @@
 	..()
 	pixel_x += rand(-10, 10)
 	pixel_y += rand(-10, 10)
+
+/obj/effect/overlay/closet_door
+	anchored = TRUE
+	plane = FLOAT_PLANE
+	layer = FLOAT_LAYER
+	vis_flags = VIS_INHERIT_ID
+	appearance_flags = KEEP_TOGETHER | LONG_GLIDE | PIXEL_SCALE
+
+/atom/proc/compile_overlays()
+	var/list/oo = our_overlays
+	var/list/po = priority_overlays
+	if(LAZYLEN(po) && LAZYLEN(oo))
+		overlays = oo + po
+	else if(LAZYLEN(oo))
+		overlays = oo
+	else if(LAZYLEN(po))
+		overlays = po
+	else
+		overlays.Cut()
+
+	overlay_queued = FALSE
+
+/atom/movable/compile_overlays()
+	..()
+	UPDATE_OO_IF_PRESENT
+
+/turf/compile_overlays()
+	..()
+	if (istype(above))
+		update_above()
+/atom
+	var/tmp/list/our_overlays	//our local copy of (non-priority) overlays without byond magic. Use procs in SSoverlays to manipulate
+	var/tmp/list/priority_overlays	//overlays that should remain on top and not normally removed when using cut_overlay functions, like c4.
+	var/tmp/overlay_queued

@@ -2,7 +2,7 @@
 	name = "secure locker"
 	desc = "It's a card-locked storage unit."
 
-	closet_appearance = /decl/closet_appearance/secure_closet
+	icon_state = "secure"
 	setup = CLOSET_HAS_LOCK | CLOSET_CAN_BE_WELDED
 	locked = TRUE
 	health = 200

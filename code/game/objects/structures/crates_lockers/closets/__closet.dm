@@ -1,10 +1,14 @@
 /obj/structure/closet
 	name = "closet"
 	desc = "It's a basic storage unit."
-	icon = 'icons/obj/closets/bases/closet.dmi'
-	icon_state = "base"
+	icon = 'icons/obj/closettest.dmi'
+	icon_state = "generic"
 	density = TRUE
 	w_class = ITEM_SIZE_NO_CONTAINER
+
+	var/icon_door = null
+	var/icon_door_override = FALSE //override to have open overlay use icon different to its base's
+	var/icon_door_overlay = "" //handles secure locker overlays like the locking lights
 
 	var/welded = 0
 	var/large = 1
@@ -29,6 +33,17 @@
 	var/code2[8]
 	var/validate = 0
 	var/codelen
+	var/obj/effect/overlay/closet_door/door_obj
+	var/obj/effect/overlay/closet_door/door_obj_alt
+	var/secure = FALSE //secure locker or not. typically it shouldn't need lights if it's insecure
+	var/secure_lights = FALSE // whether to display secure lights when open.
+	var/is_animating_door = FALSE
+	var/door_underlay = FALSE //used if you want to have an overlay below the door. used for guncabinets.
+	var/door_anim_squish = 0.12 // Multiplier on proc/get_door_transform. basically, how far you want this to swing out. value of 1 means the length of the door is unchanged (and will swing out of the tile), 0 means it will just slide back and forth.
+	var/door_anim_angle = 147
+	var/door_hinge = -6.5 // for closets, x away from the centre of the closet. typically good to add a 0.5 so it's centered on the edge of the closet.
+	var/door_hinge_alt = 6.5 // for closets with two doors. why a seperate var? because some closets may be weirdly shaped or something.
+	var/door_anim_time = 2.5 // set to 0 to m
 
 /obj/structure/closet/Initialize()
 	..()
@@ -126,6 +141,7 @@
 		return 0
 
 	src.dump_contents()
+	animate_door(FALSE)
 
 	src.opened = 1
 	playsound(src.loc, open_sound, 50, 1, -3)
@@ -145,7 +161,7 @@
 	playsound(src.loc, close_sound, 50, 0, -3)
 	if(!wall_mounted)
 		density = TRUE
-
+	animate_door(TRUE)
 	update_icon()
 
 	return 1
@@ -409,19 +425,29 @@
 	else
 		to_chat(usr, "<span class='warning'>This mob type can't use this verb.</span>")
 
-/obj/structure/closet/on_update_icon()
-	if(opened)
-		icon_state = "open"
+
+/obj/structure/closet/update_icon()
+	if(!door_underlay)
 		overlays.Cut()
-	else
-		if(broken)
-			icon_state = "closed_emagged[welded ? "_welded" : ""]"
-		else
-			if(locked)
-				icon_state = "closed_locked[welded ? "_welded" : ""]"
-			else
-				icon_state = "closed_unlocked[welded ? "_welded" : ""]"
-			overlays.Cut()
+
+	if(!opened)
+		layer = OBJ_LAYER
+		if(welded)
+			add_overlay("[icon_door_overlay]welded")
+
+		if(!is_animating_door)
+			if(icon_door)
+				add_overlay("[icon_door]_door")
+
+			if(!icon_door)
+				add_overlay("[icon_state]_door")
+			if(secure)
+				update_secure_overlays()
+
+	else if(opened)
+		layer = BELOW_OBJ_LAYER
+		if(!is_animating_door)
+			add_overlay("[icon_door_override ? icon_door : icon_state]_open")
 
 /obj/structure/closet/take_damage(damage)
 	health -= damage
@@ -597,7 +623,7 @@
 	for(var/i = 1 to codelen)
 		dat += "<td><a href='?src=\ref[src];dec=[i]'>-</a>"
 	dat += "</table><hr><a href='?src=\ref[src];check=1'>Сопоставить код</a>"
-		
+
 	user.set_machine(src)
 	var/datum/browser/popup = new(user, "closet", "[name]", 90 + codelen * 30, 200)
 	popup.set_content(dat)
@@ -655,4 +681,52 @@
 		if(code2[inc] < 0)
 			code2[inc] = 9
 		interact(user)
-//[/INF]
+
+
+/obj/structure/closet/proc/update_secure_overlays()
+	if(broken)
+		add_overlay("[icon_door_overlay]emag")
+	else
+		if(locked)
+			add_overlay("[icon_door_overlay]locked")
+		else
+			add_overlay("[icon_door_overlay]unlocked")
+
+
+/obj/structure/closet/proc/animate_door(var/closing = FALSE)
+	if(!door_anim_time)
+		return
+	if(!door_obj) door_obj = new
+	vis_contents |= door_obj
+	door_obj.icon = icon
+	door_obj.icon_state = "[icon_door || icon_state]_door"
+	is_animating_door = TRUE
+	var/num_steps = door_anim_time / world.tick_lag
+	for(var/I in 0 to num_steps)
+		var/angle = door_anim_angle * (closing ? 1 - (I/num_steps) : (I/num_steps))
+		var/matrix/M = get_door_transform(angle)
+		var/door_state = angle >= 90 ? "[icon_door_override ? icon_door : icon_state]_back" : "[icon_door || icon_state]_door"
+		var/door_layer = angle >= 90 ? FLOAT_LAYER : ABOVE_HUMAN_LAYER
+
+		if(I == 0)
+			door_obj.transform = M
+			door_obj.icon_state = door_state
+			door_obj.layer = door_layer
+		else if(I == 1)
+			animate(door_obj, transform = M, icon_state = door_state, layer = door_layer, time = world.tick_lag, flags = ANIMATION_END_NOW)
+		else
+			animate(transform = M, icon_state = door_state, layer = door_layer, time = world.tick_lag)
+	addtimer(CALLBACK(src,.proc/end_door_animation),door_anim_time,TIMER_UNIQUE|TIMER_OVERRIDE)
+
+/obj/structure/closet/proc/end_door_animation()
+	is_animating_door = FALSE
+	vis_contents -= door_obj
+	update_icon()
+
+/obj/structure/closet/proc/get_door_transform(angle, var/inverse_hinge = FALSE)
+	var/matrix/M = matrix()
+	var/matrix_door_hinge = inverse_hinge ? door_hinge_alt : door_hinge
+	M.Translate(-matrix_door_hinge, 0)
+	M.Multiply(matrix(cos(angle), 0, 0, ((matrix_door_hinge >= 0) ? sin(angle) : -sin(angle)) * door_anim_squish, 1, 0)) // this matrix door hinge >= 0 check is for door hinges on the right, so they swing out instead of upwards
+	M.Translate(matrix_door_hinge, 0)
+	return M

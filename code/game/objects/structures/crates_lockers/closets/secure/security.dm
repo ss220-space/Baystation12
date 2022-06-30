@@ -1,7 +1,7 @@
 /obj/structure/closet/secure_closet/captains
 	name = "captain's locker"
 	req_access = list(access_captain)
-	closet_appearance = /decl/closet_appearance/secure_closet/command
+	icon_state = "cap"
 
 /obj/structure/closet/secure_closet/captains/WillContain()
 	return list(
@@ -26,7 +26,7 @@
 
 /obj/structure/closet/secure_closet/hop
 	name = "head of personnel's locker"
-	closet_appearance = /decl/closet_appearance/secure_closet/command/hop
+	icon_state = "hop"
 	req_access = list(access_hop)
 
 /obj/structure/closet/secure_closet/hop/WillContain()
@@ -42,7 +42,7 @@
 /obj/structure/closet/secure_closet/hop2
 	name = "head of personnel's attire"
 	req_access = list(access_hop)
-	closet_appearance = /decl/closet_appearance/secure_closet/command/hop
+	icon_state = "hop"
 
 /obj/structure/closet/secure_closet/hop2/WillContain()
 	return list(
@@ -64,7 +64,7 @@
 /obj/structure/closet/secure_closet/hos
 	name = "head of security's locker"
 	req_access = list(access_hos)
-	closet_appearance = /decl/closet_appearance/secure_closet/security/hos
+	icon_state = "hos"
 
 /obj/structure/closet/secure_closet/hos/WillContain()
 	return list(
@@ -96,7 +96,7 @@
 /obj/structure/closet/secure_closet/warden
 	name = "warden's locker"
 	req_access = list(access_armory)
-	closet_appearance = /decl/closet_appearance/secure_closet/security/warden
+	icon_state = "warden"
 
 /obj/structure/closet/secure_closet/warden/WillContain()
 	return list(
@@ -126,7 +126,7 @@
 /obj/structure/closet/secure_closet/security
 	name = "security officer's locker"
 	req_access = list(access_brig)
-	closet_appearance = /decl/closet_appearance/secure_closet/security
+	icon_state = "sec"
 
 /obj/structure/closet/secure_closet/security/WillContain()
 	return list(
@@ -174,7 +174,7 @@
 /obj/structure/closet/secure_closet/detective
 	name = "detective's cabinet"
 	req_access = list(access_forensics_lockers)
-	closet_appearance = /decl/closet_appearance/cabinet/secure
+	icon_state = "sec"
 
 /obj/structure/closet/secure_closet/detective/WillContain()
 	return list(

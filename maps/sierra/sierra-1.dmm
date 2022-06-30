@@ -10067,6 +10067,7 @@
 "pB" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/beige/border,
+/obj/structure/closet/cabinet,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "pC" = (
@@ -12633,6 +12634,7 @@
 /obj/effect/floor_decal/corner/beige/border,
 /obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/beige/bordercorner2,
+/obj/structure/closet/cabinet,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "tt" = (
@@ -19767,6 +19769,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/deckofficer)
+"Fu" = (
+/obj/structure/closet/emcloset{
+	anchored = 1;
+	name = "anchored emergency closet"
+	},
+/obj/effect/floor_decal/corner/lightgrey/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj,
+/obj,
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/thirddeck/fore)
 "Fv" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -25427,6 +25440,7 @@
 /obj/effect/floor_decal/corner/beige/bordercorner2{
 	dir = 9
 	},
+/obj/structure/closet/cabinet,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "OF" = (
@@ -44515,7 +44529,7 @@ Is
 Is
 Is
 fB
-kp
+Fu
 KJ
 Lu
 uM

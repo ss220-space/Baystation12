@@ -47,11 +47,10 @@
 		overlays += icon(src.icon, "door")
 
 		if(welded)
-			overlays += icon(src.icon,"welded")
+			add_overlay(src.icon,"welded")
 
 		if(!broken)
 			if(locked)
 				overlays += icon(src.icon,"locked")
 			else
 				overlays += icon(src.icon,"open")
-

@@ -1,6 +1,6 @@
 /obj/structure/closet/secure_closet/engineering_chief
 	name = "chief engineer's locker"
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/ce
+	icon_state = "ce"
 	req_access = list(access_ce)
 
 /obj/structure/closet/secure_closet/engineering_chief/WillContain()
@@ -28,7 +28,8 @@
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies"
 	req_access = list(access_engine_equip)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/electrical
+	icon_state = "eng"
+	icon_door = "eng_elec"
 
 /obj/structure/closet/secure_closet/engineering_electrical/WillContain()
 	return list(
@@ -43,7 +44,8 @@
 /obj/structure/closet/secure_closet/engineering_welding
 	name = "welding supplies"
 	req_access = list(access_construction)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/welding
+	icon_state = "eng"
+	icon_door = "eng_weld"
 
 /obj/structure/closet/secure_closet/engineering_welding/WillContain()
 	return list(
@@ -57,7 +59,7 @@
 /obj/structure/closet/secure_closet/engineering_personal
 	name = "engineer's locker"
 	req_access = list(access_engine_equip)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering
+	icon_state = "eng_secure"
 
 /obj/structure/closet/secure_closet/engineering_personal/WillContain()
 	return list(
@@ -76,7 +78,7 @@
 /obj/structure/closet/secure_closet/atmos_personal
 	name = "technician's locker"
 	req_access = list(access_atmospherics)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/atmos
+	icon_state = "atmos"
 
 /obj/structure/closet/secure_closet/atmos_personal/WillContain()
 	return list(
