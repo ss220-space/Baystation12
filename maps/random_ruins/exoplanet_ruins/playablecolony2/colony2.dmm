@@ -1637,7 +1637,7 @@
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/corner/paleblue/mono,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/colony2/storage)
 "Fn" = (

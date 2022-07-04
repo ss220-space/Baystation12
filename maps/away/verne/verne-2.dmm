@@ -22,7 +22,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/storage)
 "af" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/techfloor/orange{
@@ -257,7 +257,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
@@ -434,7 +434,7 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated/dark,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
@@ -935,7 +935,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1392,7 +1392,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 22
 	},
@@ -3767,7 +3767,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /obj/structure/cable{
@@ -5277,7 +5277,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 22
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
@@ -5644,7 +5644,7 @@
 /area/verne/engineering/smresearch/control)
 "OP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/plating,
@@ -6851,7 +6851,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/external)
 "ZV" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{

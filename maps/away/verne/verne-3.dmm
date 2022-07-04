@@ -523,7 +523,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/mono,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white/monotile,
@@ -4138,7 +4138,7 @@
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
 "Fl" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/corner/b_green/mono,
 /obj/machinery/firealarm{
 	dir = 4;
@@ -4233,7 +4233,7 @@
 /turf/simulated/floor/tiled,
 /area/verne/common/hallway)
 "FX" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/corner/b_green/mono,
 /obj/item/device/radio/intercom/map_preset/verne{
 	dir = 8;

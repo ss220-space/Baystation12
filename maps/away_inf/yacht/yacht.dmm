@@ -1515,7 +1515,7 @@
 	icon_state = "alarm0";
 	pixel_x = 25
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1;
 	icon_state = "map_scrubber_on"

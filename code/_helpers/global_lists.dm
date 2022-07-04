@@ -192,3 +192,7 @@ var/global/list/paramslist_cache = list()
 	for(var/i in 1 to L.len)
 		L[i] = text2num(L[i])
 	return L
+
+var/list/cardinal    = list(NORTH, SOUTH, EAST, WEST)
+var/list/cornerdirs  = list(NORTHWEST, SOUTHEAST, NORTHEAST, SOUTHWEST)
+var/list/alldirs     = list(NORTH, SOUTH, EAST, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST)

@@ -606,7 +606,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/unishi/classroom)
 "bG" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled/dark,
 /area/unishi/common)
 "bH" = (

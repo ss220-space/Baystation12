@@ -3,8 +3,8 @@
 	name = "stasis bag"
 	desc = "A folded, reusable bag designed to prevent additional damage to an occupant, especially useful if short on time or in \
 	a hostile enviroment."
-	icon = 'icons/obj/closets/cryobag.dmi'
-	icon_state = "bodybag_folded"
+	icon = 'icons/obj/closets/bodybag.dmi'
+	icon_state = "stasis_folded"
 	origin_tech = list(TECH_BIO = 4)
 	var/stasis_power
 
@@ -20,7 +20,8 @@
 	name = "stasis bag"
 	desc = "A reusable plastic bag designed to prevent additional damage to an occupant, especially useful if short on time or in \
 	a hostile enviroment."
-	icon = 'icons/obj/closets/cryobag.dmi'
+	icon = 'icons/obj/closets/bodybag.dmi'
+	icon_state = "stasis"
 	item_path = /obj/item/bodybag/cryobag
 
 	storage_types = CLOSET_STORAGE_MOBS
@@ -52,10 +53,11 @@
 		STOP_PROCESSING(SSobj, src)
 	. = ..()
 
-/obj/structure/closet/body_bag/cryobag/on_update_icon()
+/obj/structure/closet/body_bag/cryobag/update_icon()
 	..()
+	icon_state = "[initial(icon_state)][opened ? "_open" : "[contains_body ? "_occupied" : ""]"]"
 	overlays.Cut()
-	var/image/I = image(icon, "indicator[opened]")
+	var/image/I = image(icon, "indicator")
 	I.appearance_flags = RESET_COLOR
 	var/maxstasis = initial(stasis_power)
 	if(stasis_power > 0.5 * maxstasis)
@@ -65,6 +67,10 @@
 	else
 		I.color = COLOR_RED
 	overlays += I
+
+/obj/structure/closet/body_bag/animate_door()
+	flick("[initial(icon_state)]_anim_[opened ? "open" : "close"]", src)
+
 
 /obj/structure/closet/body_bag/cryobag/proc/get_saturation()
 	return -155 * (1 - stasis_power/initial(stasis_power))
@@ -107,8 +113,8 @@
 /obj/item/usedcryobag
 	name = "used stasis bag"
 	desc = "Pretty useless now.."
-	icon_state = "bodybag_used"
-	icon = 'icons/obj/closets/cryobag.dmi'
+	icon_state = "cryobag_used"
+	icon = 'icons/obj/closets/bodybag.dmi'
 
 /obj/structure/closet/body_bag/cryobag/blank
 	stasis_power = 60

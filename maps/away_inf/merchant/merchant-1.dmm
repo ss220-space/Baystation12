@@ -1275,7 +1275,7 @@
 /turf/simulated/wall/r_wall,
 /area/space)
 "dd" = (
-/obj/structure/closet/medical_wall/filled/small_shuttle{
+/obj/structure/closet/walllocker/medical/filled/small_shuttle{
 	pixel_y = 2
 	},
 /turf/simulated/wall/r_wall,

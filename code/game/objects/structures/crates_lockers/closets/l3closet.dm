@@ -1,7 +1,7 @@
 /obj/structure/closet/l3closet
 	name = "level-3 biohazard suit closet"
 	desc = "It's a storage unit for level-3 biohazard gear."
-	closet_appearance = /decl/closet_appearance/bio
+	icon_state = "bio"
 
 /obj/structure/closet/l3closet/general/WillContain()
 	return list(
@@ -21,7 +21,7 @@
 
 
 /obj/structure/closet/l3closet/virology
-	closet_appearance = /decl/closet_appearance/bio/virology
+	icon_state = "bio_viro"
 
 /obj/structure/closet/l3closet/virology/WillContain()
 	return list(
@@ -32,7 +32,7 @@
 	)
 
 /obj/structure/closet/l3closet/security
-	closet_appearance = /decl/closet_appearance/bio/security
+	icon_state = "bio_sec"
 
 /obj/structure/closet/l3closet/security/WillContain()
 	return list(
@@ -43,7 +43,7 @@
 	)
 
 /obj/structure/closet/l3closet/janitor
-	closet_appearance = /decl/closet_appearance/bio/janitor
+	icon_state = "bio_jan"
 
 /obj/structure/closet/l3closet/janitor/WillContain()
 	return list(
@@ -54,7 +54,7 @@
 	)
 
 /obj/structure/closet/l3closet/scientist
-	closet_appearance = /decl/closet_appearance/bio/science
+	icon_state = "bio_scientist"
 
 
 /obj/structure/closet/l3closet/scientist/WillContain()
@@ -74,7 +74,7 @@
 	))
 
 /obj/structure/closet/l3closet/command
-	closet_appearance = /decl/closet_appearance/bio/command
+	icon_state = "bio_sec"
 
 
 /obj/structure/closet/l3closet/command/WillContain()

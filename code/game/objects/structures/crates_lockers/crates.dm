@@ -1,70 +1,93 @@
+#define ABOVE_TABLE 1
+#define UNDER_TABLE -1
 /obj/structure/closet/crate
 	name = "crate"
 	desc = "A rectangular steel crate."
-	closet_appearance = /decl/closet_appearance/crate
+	icon = 'icons/obj/closets/crate.dmi'
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
 	setup = 0
 	storage_types = CLOSET_STORAGE_ITEMS
 	var/points_per_crate = 5
 	var/rigged = 0
+	store_structures = TRUE
+	dense_when_open = TRUE
+	door_anim_squish = 0.30
+	door_anim_time = 3
+	door_anim_angle = 140
+	door_hinge = 3.5
+	var/tablestatus = 0
 
-/obj/structure/closet/crate/open()
-	if((atom_flags & ATOM_FLAG_OPEN_CONTAINER) && !opened && can_open())
-		object_shaken()
+	var/azimuth_angle_2 = 180 //in this context the azimuth angle for over 90 degree
+	var/radius_2 = 1.35
+	var/static/list/animation_math //assoc list with pre calculated values
+
+
+/obj/structure/closet/crate/can_open()
+	if(tablestatus == BELOW_TABLE_LAYER)//Can't be opened while under a table
+		return 0
 	. = ..()
-	if(.)
-		if(rigged)
-			visible_message("<span class='danger'>There are wires attached to the lid of [src]...</span>")
-			for(var/obj/item/device/assembly_holder/H in src)
-				H.process_activation(usr)
-			for(var/obj/item/device/assembly/A in src)
-				A.activate()
 
-/obj/structure/closet/crate/examine(mob/user)
-	. = ..()
-	if(rigged && opened)
-		var/list/devices = list()
-		for(var/obj/item/device/assembly_holder/H in src)
-			devices += H
-		for(var/obj/item/device/assembly/A in src)
-			devices += A
-		to_chat(user,"There are some wires attached to the lid, connected to [english_list(devices)].")
+/obj/structure/closet/crate/can_close()
+	return 1
 
-/obj/structure/closet/crate/attackby(obj/item/W as obj, mob/user as mob)
-	if(opened)
-		return ..()
-	else if(istype(W, /obj/item/stack/package_wrap))
+
+/obj/structure/closet/crate/animate_door(var/closing = FALSE)
+	if(!door_anim_time)
 		return
-	else if(istype(W, /obj/item/stack/cable_coil))
-		var/obj/item/stack/cable_coil/C = W
-		if(rigged)
-			to_chat(user, "<span class='notice'>[src] is already rigged!</span>")
-			return
-		if (C.use(1))
-			to_chat(user, "<span class='notice'>You rig [src].</span>")
-			rigged = 1
-			return
-	else if(istype(W, /obj/item/device/assembly_holder) || istype(W, /obj/item/device/assembly))
-		if(rigged)
-			if(!user.unEquip(W, src))
-				return
-			to_chat(user, "<span class='notice'>You attach [W] to [src].</span>")
-			return
-	else if(isWirecutter(W))
-		if(rigged)
-			to_chat(user, "<span class='notice'>You cut away the wiring.</span>")
-			playsound(loc, 'sound/items/Wirecutter.ogg', 100, 1)
-			rigged = 0
-			return
-	else
-		return ..()
+	if(!door_obj) door_obj = new
+	if(animation_math == null) //checks if there is already a list for animation_math if not creates one to avoid runtimes
+		animation_math = new/list()
+	if(!door_anim_time == 0 && !animation_math["[door_anim_time]-[door_anim_angle]-[azimuth_angle_2]-[radius_2]-[door_hinge]"])
+		animation_list()
+	vis_contents |= door_obj
+	door_obj.icon = icon
+	door_obj.icon_state = "[icon_door || icon_state]_door"
+	is_animating_door = TRUE
+	var/num_steps = door_anim_time / world.tick_lag
+	var/list/animation_math_list = animation_math["[door_anim_time]-[door_anim_angle]-[azimuth_angle_2]-[radius_2]-[door_hinge]"]
+	for(var/I in 0 to num_steps)
+		var/door_state = I == (closing ? num_steps : 0) ? "[icon_door || icon_state]_door" : animation_math_list[closing ? 2 * num_steps - I : num_steps + I] <= 0 ? "[icon_door_override ? icon_door : icon_state]_back" : "[icon_door || icon_state]_door"
+		var/door_layer = I == (closing ? num_steps : 0) ? ABOVE_HUMAN_LAYER : animation_math_list[closing ? 2 * num_steps - I : num_steps + I] <= 0 ? FLOAT_LAYER : ABOVE_HUMAN_LAYER
+		var/matrix/M = get_door_transform(I == (closing ? num_steps : 0) ? 0 : animation_math_list[closing ? num_steps - I : I], I == (closing ? num_steps : 0) ? 1 : animation_math_list[closing ?  2 * num_steps - I : num_steps + I])
+		if(I == 0)
+			door_obj.transform = M
+			door_obj.icon_state = door_state
+			door_obj.layer = door_layer
+		else if(I == 1)
+			animate(door_obj, transform = M, icon_state = door_state, layer = door_layer, time = world.tick_lag, flags = ANIMATION_END_NOW)
+		else
+			animate(transform = M, icon_state = door_state, layer = door_layer, time = world.tick_lag)
+	addtimer(CALLBACK(src,.proc/end_door_animation),door_anim_time,TIMER_UNIQUE|TIMER_OVERRIDE)
+
+/obj/structure/closet/crate/get_door_transform(crateanim_1, crateanim_2)
+	var/matrix/M = matrix()
+	M.Translate(0, -door_hinge)
+	M.Multiply(matrix(1, crateanim_1, 0, 0, crateanim_2, 0))
+	M.Translate(0, door_hinge)
+	return M
+
+/obj/structure/closet/crate/proc/animation_list() //pre calculates a list of values for the crate animation cause byond not like math
+	var/num_steps_1 = door_anim_time / world.tick_lag
+	var/list/new_animation_math_sublist[num_steps_1 * 2]
+	for(var/I in 1 to num_steps_1) //loop to save the animation values into the lists
+		var/angle_1 = door_anim_angle * (I / num_steps_1)
+		var/polar_angle = abs(arcsin(cos(angle_1)))
+		var/azimuth_angle = angle_1 >= 90 ? azimuth_angle_2 : 0
+		var/radius_cr = angle_1 >= 90 ? radius_2 : 1
+		new_animation_math_sublist[I] = -sin(polar_angle) * sin(azimuth_angle) * radius_cr
+		new_animation_math_sublist[num_steps_1 + I] = cos(azimuth_angle) * sin(polar_angle) * radius_cr
+	animation_math["[door_anim_time]-[door_anim_angle]-[azimuth_angle_2]-[radius_2]-[door_hinge]"] = new_animation_math_sublist
+
 
 /obj/structure/closet/crate/secure
 	desc = "A secure crate."
 	name = "Secure crate"
-	closet_appearance = /decl/closet_appearance/crate/secure
+	icon_state = "secure_crate"
 	setup = CLOSET_HAS_LOCK
 	locked = TRUE
+	secure = TRUE
+	broken = FALSE
+	secure_lights = TRUE
 
 /obj/structure/closet/crate/secure/Initialize()
 	. = ..()
@@ -74,11 +97,29 @@
 	name = "plastic crate"
 	desc = "A rectangular plastic crate."
 	points_per_crate = 1
-	closet_appearance = /decl/closet_appearance/crate/plastic
+	icon_state = "plastic_crate"
+
+/obj/structure/closet/crate/coffin/Initialize()
+	. = ..()
+	store_mobs(0)
+
+/obj/structure/closet/crate/coffin
+	name = "coffin"
+	desc = "It's a burial receptacle for the dearly departed."
+	icon_state = "coffin"
+	open_sound = 'sound/machines/wooden_closet_open.ogg'
+	close_sound = 'sound/machines/wooden_closet_close.ogg'
+	storage_types = CLOSET_STORAGE_MOBS|CLOSET_STORAGE_ITEMS
+	density = FALSE
+	door_anim_angle = 140
+	azimuth_angle_2 = 180
+	door_anim_time = 5
+	door_hinge = 5
 
 /obj/structure/closet/crate/internals
 	name = "internals crate"
 	desc = "A internals crate."
+	icon_state = "o2_crate"
 
 /obj/structure/closet/crate/internals/fuel
 	name = "\improper Fuel tank crate"
@@ -90,7 +131,8 @@
 /obj/structure/closet/crate/trashcart
 	name = "trash cart"
 	desc = "A heavy, metal trashcart with wheels."
-	closet_appearance = /decl/closet_appearance/cart/trash
+	icon_state = "trashcart"
+	door_hinge = 2.5
 
 /obj/structure/closet/crate/medical
 	name = "medical crate"
@@ -100,6 +142,9 @@
 /obj/structure/closet/crate/rcd
 	name = "\improper RCD crate"
 	desc = "A crate with rapid construction device."
+	icon_state = "eng_tool"
+	icon_door_override = TRUE
+	icon_door = "eng"
 
 /obj/structure/closet/crate/rcd/WillContain()
 	return list(
@@ -109,6 +154,9 @@
 
 /obj/structure/closet/crate/solar
 	name = "solar pack crate"
+	icon_state = "eng_elec"
+	icon_door_override = TRUE
+	icon_door = "eng"
 
 /obj/structure/closet/crate/solar/WillContain()
 	return list(
@@ -120,6 +168,9 @@
 
 /obj/structure/closet/crate/solar_assembly
 	name = "solar assembly crate"
+	icon_state = "eng_elec"
+	icon_door_override = TRUE
+	icon_door = "eng"
 
 /obj/structure/closet/crate/solar_assembly/WillContain()
 	return list(/obj/item/solar_assembly = 16)
@@ -128,8 +179,8 @@
 	name = "freezer"
 	desc = "A freezer."
 	temperature = -16 CELSIUS
-	closet_appearance = /decl/closet_appearance/crate/freezer
-
+	icon_state = "freezer"
+	door_hinge = 4.5
 	var/target_temp = T0C - 40
 	var/cooling_power = 40
 
@@ -170,16 +221,21 @@
 /obj/structure/closet/crate/bin
 	name = "large bin"
 	desc = "A large bin."
+	icon_state = "largebin"
 
 /obj/structure/closet/crate/radiation
 	name = "radioactive crate"
 	desc = "A leadlined crate with a radiation sign on it."
-	closet_appearance = /decl/closet_appearance/crate/radiation
+	icon_state = "eng_rad"
+	icon_door_override = TRUE
+	icon_door = "eng"
 
 /obj/structure/closet/crate/radiation_gear
 	name = "radioactive gear crate"
 	desc = "A crate with a radiation sign on it."
-	closet_appearance = /decl/closet_appearance/crate/radiation
+	icon_state = "eng_rad"
+	icon_door_override = TRUE
+	icon_door = "eng"
 
 /obj/structure/closet/crate/radiation_gear/WillContain()
 	return list(/obj/item/clothing/suit/radiation = 8)
@@ -187,35 +243,37 @@
 /obj/structure/closet/crate/secure/weapon
 	name = "weapons crate"
 	desc = "A secure weapons crate."
-	closet_appearance = /decl/closet_appearance/crate/secure/weapon
+	icon_state = "syndi_crate"
 
 /obj/structure/closet/crate/secure/phoron
 	name = "phoron crate"
 	desc = "A secure phoron crate."
-	closet_appearance = /decl/closet_appearance/crate/secure/hazard
+	icon_state = "phoron_crate"
 
 /obj/structure/closet/crate/secure/shuttle
 	name = "storage compartment"
 	desc = "A secure storage compartment bolted to the floor, to secure loose objects on Zero-G flights."
 	anchored = TRUE
-	closet_appearance = /decl/closet_appearance/crate/secure/shuttle
+	icon_state = "drop_crate-grey"
+	door_hinge = 0.5
 
 /obj/structure/closet/crate/secure/gear
 	name = "gear crate"
 	desc = "A secure gear crate."
-	closet_appearance = /decl/closet_appearance/crate/secure/weapon
+	icon_state = "secgear_crate"
 
 /obj/structure/closet/crate/secure/hydrosec
 	name = "secure hydroponics crate"
 	desc = "A crate with a lock on it, painted in the scheme of botany and botanists."
-	closet_appearance = /decl/closet_appearance/crate/secure/hydroponics
+	icon_state = "hydro_secure_crate"
 
 /obj/structure/closet/crate/large
 	name = "large crate"
 	desc = "A hefty metal crate."
 	storage_capacity = 2 * MOB_LARGE
 	storage_types = CLOSET_STORAGE_ITEMS|CLOSET_STORAGE_STRUCTURES
-	closet_appearance = /decl/closet_appearance/large_crate
+	icon_state = "largemetal"
+	door_anim_time = 0
 
 /obj/structure/closet/crate/large/hydroponics
 	closet_appearance = /decl/closet_appearance/large_crate/hydroponics
@@ -223,13 +281,16 @@
 /obj/structure/closet/crate/secure/large
 	name = "large crate"
 	desc = "A hefty metal crate with an electronic locking system."
-	closet_appearance = /decl/closet_appearance/large_crate/secure
+	icon_state = "largemetal"
+	icon_door_overlay = "largemetal"
+	door_anim_time = 0
+	secure_lights = FALSE
 
 	storage_capacity = 2 * MOB_LARGE
 	storage_types = CLOSET_STORAGE_ITEMS|CLOSET_STORAGE_STRUCTURES
 
 /obj/structure/closet/crate/secure/large/phoron
-	closet_appearance = /decl/closet_appearance/large_crate/secure/hazard
+	icon_state = "largemetal"
 
 //fluff variant
 /obj/structure/closet/crate/secure/large/reinforced
@@ -238,7 +299,7 @@
 /obj/structure/closet/crate/hydroponics
 	name = "hydroponics crate"
 	desc = "All you need to destroy those pesky weeds and pests."
-	closet_appearance = /decl/closet_appearance/crate/hydroponics
+	icon_state = "hydro_crate"
 
 /obj/structure/closet/crate/hydroponics/prespawned/WillContain()
 	return list(
@@ -251,12 +312,13 @@
 	)
 
 /obj/structure/closet/crate/secure/biohazard
-	name = "biohazard cart"
-	desc = "A heavy cart with extensive sealing. You shouldn't eat things you find in it."
+	name = "biohazard crate"
+	desc = "A heavy crate with extensive sealing. You shouldn't eat things you find in it."
 	open_sound = 'sound/items/Deconstruct.ogg'
 	close_sound = 'sound/items/Deconstruct.ogg'
 	req_access = list(access_xenobiology)
-	closet_appearance = /decl/closet_appearance/cart/biohazard
+	icon_state = "heph_crate"
+	door_hinge = 0.5
 	storage_capacity = 2 * MOB_LARGE
 	storage_types = CLOSET_STORAGE_ITEMS|CLOSET_STORAGE_MOBS|CLOSET_STORAGE_STRUCTURES
 
@@ -270,8 +332,8 @@
 	return 1
 
 /obj/structure/closet/crate/secure/biohazard/alt
-	name = "biowaste disposal cart"
-	desc = "A heavy cart used for organ disposal with markings indicating the things inside are probably gross."
+	name = "biowaste disposal crate"
+	desc = "A heavy crate used for organ disposal with markings indicating the things inside are probably gross."
 	req_access = list(access_surgery)
 	closet_appearance = /decl/closet_appearance/cart/biohazard/alt
 
@@ -285,7 +347,9 @@
 /obj/structure/closet/crate/uranium
 	name = "fissibles crate"
 	desc = "A crate with a radiation sign on it."
-	closet_appearance = /decl/closet_appearance/crate/radiation
+	icon_state = "eng_rad"
+	icon_door_override = TRUE
+	icon_door = "eng"
 
 /obj/structure/closet/crate/uranium/WillContain()
 	return list(/obj/item/stack/material/uranium/ten = 5)

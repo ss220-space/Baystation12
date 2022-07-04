@@ -764,7 +764,7 @@
 /turf/simulated/wall/r_wall,
 /area/miningstation/prep2)
 "bQ" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2987,7 +2987,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/miningstation/operationshall)
 "gx" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -3112,7 +3112,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/miningstation/operationshall2)
 "gP" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/hatch,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/miningstation/operationshall2)
@@ -4819,7 +4819,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/miningstation/dormhall)
 "kA" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,

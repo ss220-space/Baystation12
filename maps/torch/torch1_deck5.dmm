@@ -2116,7 +2116,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/airlock)
 "dZ" = (
@@ -4193,7 +4193,7 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "ju" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/hangar)
@@ -4451,7 +4451,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/quartermaster/shuttlefuel)
 "jT" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/machinery/alarm{
 	dir = 4;
 	icon_state = "alarm0";
@@ -7702,7 +7702,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/aft)
 "qE" = (
@@ -7754,7 +7754,7 @@
 	icon_state = "bordercolorhalf"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/fore)
 "qK" = (
@@ -8667,7 +8667,7 @@
 /area/hallway/primary/fifthdeck/fore)
 "so" = (
 /obj/effect/floor_decal/corner/brown/mono,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -10650,7 +10650,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -12716,7 +12716,7 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/cockpit)
 "FZ" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -13644,7 +13644,7 @@
 /area/shuttle/petrov/cell1)
 "Jn" = (
 /obj/effect/catwalk_plated,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
@@ -17042,7 +17042,7 @@
 /turf/simulated/floor/lino,
 /area/shuttle/petrov/rd)
 "VN" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/monotile,

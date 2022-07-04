@@ -143,7 +143,7 @@
 
 /obj/structure/closet/secure_closet/counselor
 	name = "counselor's locker"
-	closet_appearance = /decl/closet_appearance/secure_closet/medical
+	icon_state = "med"
 	req_access = list(access_psychiatrist)
 
 /obj/structure/closet/secure_closet/counselor/WillContain()

@@ -465,7 +465,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/colony)
 "bj" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/techfloor{
 	dir = 1;
 	icon_state = "techfloor_edges"
@@ -701,7 +701,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/item/device/flashlight/lamp/floodlamp,
 /obj/random/firstaid,
 /obj/random/firstaid,
@@ -3739,7 +3739,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/item/device/flashlight/lamp/floodlamp,
 /obj/random/firstaid,
 /obj/random/firstaid,
@@ -4937,7 +4937,7 @@
 	dir = 1;
 	icon_state = "corner_techfloor_grid"
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/item/device/flashlight/lamp/floodlamp,
 /obj/random/firstaid,
 /obj/random/firstaid,
@@ -5666,7 +5666,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 6
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/item/device/flashlight/lamp/floodlamp,
 /obj/random/firstaid,
 /obj/random/firstaid,
@@ -5988,7 +5988,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/item/device/flashlight/lamp/floodlamp,
 /obj/random/firstaid,
 /obj/random/firstaid,
@@ -6236,7 +6236,7 @@
 /turf/simulated/floor/exoplanet/concrete,
 /area/map_template/colony/mineralprocessing)
 "kO" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/techfloor{
 	dir = 5;
 	icon_state = "techfloor_edges"
@@ -6576,7 +6576,7 @@
 	dir = 1;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/item/device/flashlight/lamp/floodlamp,
 /obj/random/firstaid,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -7215,7 +7215,7 @@
 	dir = 10;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/item/device/flashlight/lamp/floodlamp,
 /obj/random/firstaid,
 /turf/simulated/floor/tiled/techfloor,

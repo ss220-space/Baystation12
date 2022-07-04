@@ -193,7 +193,7 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -25;
-	
+
 	},
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
@@ -1017,7 +1017,7 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -25;
-	
+
 	},
 /turf/simulated/floor/tiled,
 /area/ship/gunboat/hallway)
@@ -1025,7 +1025,7 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -25;
-	
+
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	icon_state = "intact-supply";
@@ -1345,7 +1345,7 @@
 /turf/space,
 /area/space)
 "fr" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = -28
 	},
 /turf/simulated/floor/tiled,

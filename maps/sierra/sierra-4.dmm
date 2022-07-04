@@ -2160,7 +2160,7 @@
 /area/centcom)
 "anZ" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/structure/closet/medical_wall/filled/shuttle{
+/obj/structure/closet/walllocker/medical/filled/shuttle{
 	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/white,
@@ -4335,7 +4335,7 @@
 /area/tdome/tdomeobserve)
 "aye" = (
 /obj/item/modular_computer/pda,
-/obj/structure/closet/secure_closet/bar,
+/obj/structure/closet/secure_closet/cabinet/bar,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -13181,7 +13181,7 @@
 "lvg" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -30
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,

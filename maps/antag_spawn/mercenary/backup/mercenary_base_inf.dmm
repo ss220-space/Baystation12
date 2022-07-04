@@ -1642,7 +1642,7 @@
 	icon_state = "techfloor_edges";
 	dir = 4
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = 24;
 	pixel_y = 0
 	},

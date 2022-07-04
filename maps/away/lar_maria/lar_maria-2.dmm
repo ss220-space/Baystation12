@@ -890,7 +890,7 @@
 	dir = 9;
 	icon_state = "intact"
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/plating,
 /area/lar_maria/atmos)
 "bV" = (
@@ -3458,7 +3458,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled,
 /area/lar_maria/hallway)
 "mb" = (

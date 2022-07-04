@@ -5032,7 +5032,7 @@
 	dir = 5;
 	icon_state = "corner_white"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -6083,7 +6083,7 @@
 	dir = 4;
 	icon_state = "corner_white"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = 28;
 	pixel_y = 0;
 	pixel_z = 0

@@ -463,7 +463,7 @@
 /turf/simulated/floor/tiled,
 /area/bluespaceriver/ship)
 "bx" = (
-/obj/structure/closet/hydrant,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/wall/titanium,
 /area/bluespaceriver/ship)
 "by" = (

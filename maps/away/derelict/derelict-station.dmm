@@ -2193,7 +2193,7 @@
 /turf/space,
 /area/space)
 "hd" = (
-/obj/structure/closet/firecloset{
+/obj/structure/closet/walllocker/firecloset{
 	icon_state = "fireclosetopen";
 	opened = 1
 	},
@@ -2401,7 +2401,7 @@
 /turf/simulated/floor/airless,
 /area/constructionsite/hallway/aft)
 "hU" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/airless,
 /area/constructionsite/atmospherics)
 "hV" = (
@@ -2530,7 +2530,7 @@
 /turf/space,
 /area/constructionsite/medical)
 "ix" = (
-/obj/structure/closet/firecloset{
+/obj/structure/closet/walllocker/firecloset{
 	icon_state = "fireclosetopen";
 	opened = 1
 	},

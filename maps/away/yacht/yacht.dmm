@@ -1449,7 +1449,7 @@
 /turf/simulated/floor/plating,
 /area/yacht/engine)
 "tb" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9

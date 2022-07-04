@@ -9457,7 +9457,7 @@
 /area/shuttle/merchant/home)
 "aSl" = (
 /obj/structure/table/reinforced,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,

@@ -86,7 +86,7 @@
 	dir = 4;
 	icon_state = "railing0-1"
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/random/drinkbottle,
 /turf/simulated/floor/airless,
 /area/scavver/gantry/up2)
@@ -3536,7 +3536,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,

@@ -26,7 +26,7 @@
 
 /obj/structure/closet/secure_closet/freezer/fridge
 	name = "refrigerator"
-	icon = 'icons/obj/closettest.dmi'
+	icon = 'icons/obj/closets/closet.dmi'
 	closet_appearance = null
 	icon_state = "freezer"
 	door_anim_squish = 0.22
@@ -42,7 +42,7 @@
 
 /obj/structure/closet/secure_closet/freezer/money
 	name = "secure locker"
-	icon = 'icons/obj/closettest.dmi'
+	icon = 'icons/obj/closets/closet.dmi'
 	closet_appearance = null
 	icon_state = "freezer"
 	door_anim_squish = 0.22

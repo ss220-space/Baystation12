@@ -475,7 +475,7 @@
 /turf/simulated/wall/ocp_wall,
 /area/unishi/engineroom)
 "bp" = (
-/obj/structure/closet/hydrant,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/wall/ocp_wall,
 /area/unishi/engineroom)
 "bq" = (
@@ -753,7 +753,7 @@
 /turf/simulated/floor,
 /area/unishi/engineroom)
 "bX" = (
-/obj/structure/closet/hydrant,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/wall/r_wall,
 /area/unishi/engineroom)
 "bY" = (

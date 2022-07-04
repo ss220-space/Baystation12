@@ -10,7 +10,7 @@
 	)
 	var/list/extra_decals
 	var/icon/icon
-	var/base_icon =  'icons/obj/closets/bases/closet.dmi'
+	var/base_icon =  'icons/obj/closets/closet.dmi'
 	var/decal_icon = 'icons/obj/closets/decals/closet.dmi'
 	var/can_lock = FALSE
 

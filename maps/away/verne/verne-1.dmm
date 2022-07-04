@@ -2780,7 +2780,7 @@
 /obj/effect/floor_decal/corner/b_green{
 	dir = 5
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2844,7 +2844,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/external)
 "yP" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/binary/pump/on{
@@ -5346,7 +5346,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /obj/machinery/light{

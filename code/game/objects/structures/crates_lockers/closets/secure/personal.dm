@@ -16,6 +16,8 @@
 
 /obj/structure/closet/secure_closet/personal/patient
 	name = "patient's closet"
+	icon_state = "secure"
+
 /obj/structure/closet/secure_closet/personal/patient/WillContain()
 	return list(/obj/item/clothing/suit/hospital/blue, /obj/item/clothing/suit/hospital/green, /obj/item/clothing/suit/hospital/pink)
 

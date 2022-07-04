@@ -3057,7 +3057,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/salvage/storage)
 "fb" = (
-/obj/structure/closet/medical_wall/filled/engineering{
+/obj/structure/closet/walllocker/medical/filled/engineering{
 	pixel_y = -27
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{

@@ -411,7 +411,7 @@
 	dir = 8;
 	icon_state = "map"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -27
 	},
 /obj/item/screwdriver,
@@ -892,7 +892,7 @@
 /area/map_template/crashed_pod)
 "gC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -27
 	},
 /turf/simulated/floor/tiled/techfloor,

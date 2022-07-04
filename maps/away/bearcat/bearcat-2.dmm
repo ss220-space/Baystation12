@@ -3458,7 +3458,7 @@
 /turf/simulated/wall,
 /area/ship/scrap/hidden)
 "gm" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
@@ -4218,7 +4218,7 @@
 	dir = 5;
 	icon_state = "corner_white"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /obj/item/storage/firstaid/regular,

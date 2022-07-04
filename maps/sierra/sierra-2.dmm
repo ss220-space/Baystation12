@@ -3103,7 +3103,7 @@
 /turf/simulated/open,
 /area/maintenance/seconddeck/aftstarboard)
 "agc" = (
-/obj/structure/closet/medical_wall/filled/regular{
+/obj/structure/closet/walllocker/medical/filled{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -8129,7 +8129,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/window/reinforced,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/hall/level_one)
@@ -9915,7 +9915,7 @@
 	dir = 8;
 	pixel_x = 32
 	},
-/obj/structure/closet/medical_wall/filled/engineering{
+/obj/structure/closet/walllocker/medical/filled/engineering{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -13357,7 +13357,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/fore)
 "axO" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -20510,7 +20510,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/structure/closet/medical_wall/filled/regular{
+/obj/structure/closet/walllocker/medical/filled{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/techfloor{
@@ -33537,7 +33537,7 @@
 /area/bridge/lobby)
 "bkI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = 25
 	},
 /obj/effect/catwalk_plated,

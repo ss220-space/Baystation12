@@ -3796,7 +3796,7 @@
 	pixel_x = -7;
 	pixel_y = 32
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -6913,7 +6913,7 @@
 /area/liberia/engineeringstorage)
 "oS" = (
 /obj/effect/floor_decal/techfloor,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/liberia/cryo)
 "pa" = (
@@ -8356,7 +8356,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/liberia/engineeringengines)
 "Lk" = (

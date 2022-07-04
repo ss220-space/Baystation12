@@ -2,7 +2,7 @@
  * Sierra Misc
  */
 
-/decl/closet_appearance/secure_closet/sierra/crew
+/* /decl/closet_appearance/secure_closet/sierra/crew
 	color = COLOR_GUNMETAL
 	extra_decals = list(
 		"stripe_vertical_mid_full" =  COLOR_OFF_WHITE
@@ -29,11 +29,12 @@
 		"crate_stripe_left" = COLOR_GREEN_GRAY,
 		"crate_stripe_right" = COLOR_GREEN_GRAY
 	)
+ */
 
 /obj/structure/closet/secure_closet/iaa
 	name = "\improper Internal Affairs Agent's locker"
 	req_access = list(access_iaa)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/corporate/iaa
+	icon_state = "iaa"
 
 /obj/structure/closet/secure_closet/iaa/WillContain()
 	return list(
@@ -62,7 +63,7 @@
 
 /obj/structure/closet/secure_closet/crew
 	name = "crew equipment locker"
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/crew
+	icon_state = "secure"
 
 /obj/structure/closet/secure_closet/crew/WillContain()
 	return list(
@@ -74,21 +75,21 @@
 
 /obj/structure/closet/secure_closet/crew/research
 	name = "research equipment locker"
-	closet_appearance = /decl/closet_appearance/white
+	icon_state = "science"
 
 /obj/structure/closet/white_sierra
-	closet_appearance = /decl/closet_appearance/white
+	icon_door = "white"
 
 /obj/structure/closet/secure_closet/white_sierra
-	closet_appearance = /decl/closet_appearance/secure_closet/white
+	icon_state = "secure"
 
 /obj/structure/closet/secure_closet/personal/patient
-	closet_appearance = /decl/closet_appearance/secure_closet/patients
+	icon_state = "secure"
 
 /obj/structure/closet/secure_closet/medical2
-	closet_appearance = /decl/closet_appearance/secure_closet/white
+	icon_state = "med"
 
 /obj/structure/closet/crate/present
 	name = "present crate"
 	desc = "Wow, a present!"
-	closet_appearance = /decl/closet_appearance/crate/present
+	icon_state = "generic"

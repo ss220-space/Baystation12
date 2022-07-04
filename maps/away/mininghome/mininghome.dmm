@@ -1359,7 +1359,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_solars)
 "kN" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/steel_dirty,
 /area/map_template/mininghome_hangar)

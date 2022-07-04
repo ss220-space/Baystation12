@@ -49,12 +49,12 @@
 /obj/random/sierracloset //Random closets taking into account sierra-specific ones
 	name = "random closet"
 	desc = "This is a random closet."
-	icon = 'icons/obj/closets/bases/closet.dmi'
-	icon_state = "base"
+	icon = 'icons/obj/closets/closet.dmi'
+	icon_state = "generic"
 
 /obj/random/sierracloset/spawn_choices()
 	return list(/obj/structure/closet,
-				/obj/structure/closet/firecloset,
+				/obj/structure/closet/walllocker/firecloset,
 				/obj/structure/closet/emcloset,
 				/obj/structure/closet/jcloset/sierra,
 				/obj/structure/closet/athletic_mixed,

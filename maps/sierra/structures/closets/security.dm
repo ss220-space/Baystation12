@@ -1,6 +1,6 @@
 /*
  * Sierra Security
- */
+
 
 /decl/closet_appearance/secure_closet/sierra/security
 	color = COLOR_GUNMETAL
@@ -23,7 +23,7 @@
 		"stripe_vertical_right_full" = COLOR_NT_RED,
 		"security" = COLOR_NT_RED
 	)
-/* unused
+
 /decl/closet_appearance/secure_closet/sierra/security/hos
 	color = COLOR_WALL_GUNMETAL
 	extra_decals = list(
@@ -32,11 +32,15 @@
 		"stripe_vertical_right_full" = COLOR_NT_RED,
 		"security" = COLOR_GOLD
 	)
-*/
+ */
+
+
+
 /obj/structure/closet/secure_closet/hos/sierra
 	name = "head of security's cabinet"
 	req_access = list(access_hos)
-	closet_appearance = /decl/closet_appearance/cabinet/secure
+	icon_state = "hos"
+
 
 /obj/structure/closet/secure_closet/hos/sierra/WillContain()
 	return list(
@@ -73,7 +77,7 @@
 /obj/structure/closet/secure_closet/warden/sierra
 	name = "warden's locker"
 	req_access = list(access_warden)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/security/warden
+	icon_state = "warden"
 
 /obj/structure/closet/secure_closet/warden/sierra/WillContain()
 	return list(
@@ -108,10 +112,10 @@
 		/obj/item/storage/firstaid/individual/military
 	)
 
-/obj/structure/closet/secure_closet/forensics
+/obj/structure/closet/secure_closet/cabinet
 	name = "forensics technician's locker"
 	req_access = list(access_forensics_lockers)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/security/forensics
+	icon_state = "cabinet"
 
 /obj/structure/closet/secure_closet/forensics/WillContain()
 	return list(
@@ -144,7 +148,7 @@
 /obj/structure/closet/secure_closet/security/sierra
 	name = "security guard's locker"
 	req_access = list(access_guard)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/security
+	icon_state = "sec"
 
 /obj/structure/closet/secure_closet/security/sierra/WillContain()
 	return list(
@@ -175,6 +179,8 @@
 /obj/structure/closet/secure_closet/security/sierra/cadet
 	name = "cadet's locker"
 	req_access = list(access_security)
+	icon_state = "sec"
+	icon_door = "seccadet"
 
 /obj/structure/closet/secure_closet/security/sierra/cadet/WillContain()
 	return list(

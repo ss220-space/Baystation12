@@ -2,7 +2,7 @@
  * Sierra Exploration
  */
 
-/decl/closet_appearance/secure_closet/sierra/exploration
+/* /decl/closet_appearance/secure_closet/sierra/exploration
 	extra_decals = list(
 		"stripe_vertical_mid_full" = COLOR_PURPLE,
 		"exped" = COLOR_PURPLE
@@ -22,11 +22,13 @@
 		"stripe_vertical_right_full" = COLOR_PURPLE,
 		"exped" = COLOR_GOLD
 	)
+ */
 
 /obj/structure/closet/secure_closet/el
 	name = "exploration leader's locker"
 	req_access = list(access_el)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/exploration/leader
+	icon_state = "exp"
+	icon_door = "el"
 
 /obj/structure/closet/secure_closet/el/WillContain()
 	return list(
@@ -60,7 +62,7 @@
 /obj/structure/closet/secure_closet/explorer
 	name = "explorer's locker"
 	req_access = list(access_explorer)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/exploration
+	icon_state = "exp"
 
 /obj/structure/closet/secure_closet/explorer/WillContain()
 	return list(
@@ -83,7 +85,8 @@
 /obj/structure/closet/secure_closet/explorer/pilot
 	name = "expeditionary pilot's locker"
 	req_access = list(access_explorer, list(access_el, access_expedition_shuttle_helm))
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/exploration/pilot
+	icon_state = "exp"
+	icon_door = "pilot"
 
 /obj/structure/closet/secure_closet/explorer/pilot/WillContain()
 	return list(

@@ -866,7 +866,7 @@
 "bl" = (
 /obj/item/defibrillator/loaded,
 /obj/structure/table/reinforced,
-/obj/structure/closet/medical_wall/filled/shuttle{
+/obj/structure/closet/walllocker/medical/filled/shuttle{
 	pixel_x = 24;
 	pixel_y = 4
 	},
@@ -1156,7 +1156,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/bluespaceriver/ship/airlock)
 "bH" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/bluespaceriver/ship/storage)

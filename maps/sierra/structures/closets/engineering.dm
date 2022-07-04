@@ -5,7 +5,7 @@
 /obj/structure/closet/secure_closet/engineering_chief_sierra
 	name = "chief engineer's locker"
 	req_access = list(access_ce)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/ce
+	icon_state = "ce"
 
 /obj/structure/closet/secure_closet/engineering_chief_sierra/WillContain()
 	return list(
@@ -40,7 +40,7 @@
 /obj/structure/closet/secure_closet/engineering_senior
 	name = "senior engineer's locker"
 	req_access = list(access_seneng)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering
+	icon_state = "eng_secure"
 
 /obj/structure/closet/secure_closet/engineering_senior/WillContain()
 	return list(
@@ -67,7 +67,7 @@
 /obj/structure/closet/secure_closet/engineering_sierra
 	name = "engineer's locker"
 	req_access = list(access_engine_equip)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering
+	icon_state = "eng_secure"
 
 /obj/structure/closet/secure_closet/engineering_sierra/WillContain()
 	return list(
@@ -91,7 +91,7 @@
 /obj/structure/closet/secure_closet/engineering_sierra/junior
 	name = " junior engineer's locker"
 	req_access = list(access_engine)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering
+	icon_state = "eng_secure"
 
 /obj/structure/closet/secure_closet/engineering_sierra/junior/WillContain()
 	return list(
@@ -112,7 +112,7 @@
 /obj/structure/closet/secure_closet/atmos_sierra
 	name = "atmospherics equipment locker"
 	req_access = list(access_atmospherics)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/atmos
+	icon_state = "atmos"
 
 /obj/structure/closet/secure_closet/atmos_sierra/WillContain()
 	return list(

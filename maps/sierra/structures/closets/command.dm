@@ -1,7 +1,8 @@
 /*
  * Sierra Command
  */
-
+//*
+/*
 /decl/closet_appearance/secure_closet/sierra/command
 	color = COLOR_GUNMETAL
 	extra_decals = list(
@@ -21,7 +22,7 @@
 		"stripe_vertical_right_full" = COLOR_GOLD,
 		"command" = COLOR_GOLD
 	)
-/* unused
+ unused
 /decl/closet_appearance/secure_closet/sierra/command/captain
 	extra_decals = list(
 		"stripe_vertical_left_full" = COLOR_GOLD,
@@ -33,7 +34,7 @@
 /obj/structure/closet/secure_closet/captains/sierra
 	name = "captain's cabinet"
 	req_access = list(access_captain)
-	closet_appearance = /decl/closet_appearance/cabinet/secure
+	icon_state = "cap"
 
 /obj/structure/closet/secure_closet/captains/sierra/WillContain()
 	return list(
@@ -71,10 +72,10 @@
 /obj/structure/closet/secure_closet/hop/sierra
 	name = "head of personnel's locker"
 	req_access = list(access_hop)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/command/hop
+	icon_state = "hop"
 
 /obj/structure/closet/secure_closet/hop2
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/command/hop
+	icon_state = "hop"
 
 /obj/structure/closet/secure_closet/hop/sierra/WillContain()
 	return list(
@@ -101,7 +102,7 @@
 /obj/structure/closet/secure_closet/adjutant
 	name = "adjutant's locker"
 	req_access = list(access_bridge)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/command/adjutant
+	icon_state = "secure"
 
 /obj/structure/closet/secure_closet/adjutant/WillContain()
 	return list(

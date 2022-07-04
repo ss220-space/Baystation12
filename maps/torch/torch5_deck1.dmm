@@ -21,7 +21,7 @@
 /turf/space,
 /area/space)
 "aae" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/centralstarboard)
@@ -1289,7 +1289,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/command/armoury/access)
 "acC" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/sign/warning/compressed_gas{
 	pixel_y = 32
@@ -9738,7 +9738,7 @@
 /area/maintenance/firstdeck/centralport)
 "aFo" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/centralport)
 "aFL" = (
@@ -10798,7 +10798,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -16418,7 +16418,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/safe_room/medical)
 "dib" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/storage/briefcase/inflatable,
 /obj/machinery/light,
@@ -16837,7 +16837,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -21588,7 +21588,7 @@
 	pixel_x = -23;
 	pixel_y = 0
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/fireclosetker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white/monotile,
@@ -22038,7 +22038,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8;
@@ -24682,7 +24682,7 @@
 	dir = 9;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -27095,7 +27095,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/opscheck)
 "rsV" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/corner/yellow{
@@ -29905,7 +29905,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/item/storage/briefcase/inflatable,
 /obj/item/wrench,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -30345,7 +30345,7 @@
 	c_tag = "Infirmary - Equipment Storage";
 	dir = 4
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -32;
 	pixel_y = 0
 	},

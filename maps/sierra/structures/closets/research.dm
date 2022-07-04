@@ -21,7 +21,7 @@
 /obj/structure/closet/secure_closet/RD_sierra
 	name = "research director's locker"
 	req_access = list(access_rd)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/science/rd
+	icon_state = "rd"
 
 /obj/structure/closet/secure_closet/RD_sierra/WillContain()
 	return list(
@@ -54,7 +54,7 @@
 /obj/structure/closet/secure_closet/xenoarchaeologist_sierra
 	name = "xenoarchaeologist's locker"
 	req_access = list(access_xenoarch)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/science
+	icon_state = "xenobot"
 
 /obj/structure/closet/secure_closet/xenoarchaeologist_sierra/WillContain()
 	return list(
@@ -81,7 +81,7 @@
 /obj/structure/closet/secure_closet/scientist_sierra
 	name = "researcher's locker"
 	req_access = list(access_research)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/science
+	icon_state = "science"
 
 /obj/structure/closet/secure_closet/scientist_sierra/WillContain()
 	return list(

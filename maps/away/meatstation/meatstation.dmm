@@ -315,7 +315,7 @@
 /turf/simulated/wall/r_wall,
 /area/meatstation/storage)
 "aQ" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/space,
 /area/space)
 "aR" = (
@@ -7929,7 +7929,7 @@
 /turf/simulated/floor/airless,
 /area/meatstation/dorm)
 "sP" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/corner/black/border{
 	dir = 10;
 	icon_state = "bordercolor"
@@ -8585,7 +8585,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled,
 /area/meatstation/centerhallway)
 "ul" = (
@@ -10230,7 +10230,7 @@
 /turf/simulated/floor/tiled,
 /area/meatstation/centerhallway)
 "ya" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/corner/black/border{
 	dir = 1;
 	icon_state = "bordercolor"
@@ -10523,7 +10523,7 @@
 /turf/simulated/floor/tiled,
 /area/meatstation/centerhallway)
 "yP" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/corner/black/border{
 	dir = 6;
 	icon_state = "bordercolor"

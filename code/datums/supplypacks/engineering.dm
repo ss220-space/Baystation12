@@ -237,7 +237,7 @@
 			/obj/item/scrubpack/standard,
 			/obj/item/tank/scrubber)
 	cost = 20
-	containertype = /obj/structure/closet/firecloset
+	containertype = /obj/structure/closet/walllocker/firecloset
 	containername = "fire-safety closet"
 
 /decl/hierarchy/supply_pack/engineering/voidsuit_engineering

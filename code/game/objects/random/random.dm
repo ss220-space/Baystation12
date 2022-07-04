@@ -431,8 +431,8 @@
 obj/random/closet //A couple of random closets to spice up maint
 	name = "random closet"
 	desc = "This is a random closet."
-	icon = 'icons/obj/closets/bases/closet.dmi'
-	icon_state = "base"
+	icon = 'icons/obj/closets/closet.dmi'
+	icon_state = "generic"
 	var/vermin_chance = 5
 	var/list/locker_vermin = list(
 		/mob/living/simple_animal/friendly/mouse,
@@ -442,7 +442,7 @@ obj/random/closet //A couple of random closets to spice up maint
 
 /obj/random/closet/spawn_choices()
 	return list(/obj/structure/closet,
-				/obj/structure/closet/firecloset,
+				/obj/structure/closet/walllocker/firecloset,
 				/obj/structure/closet/emcloset,
 				/obj/structure/closet/jcloset,
 				/obj/structure/closet/athletic_mixed,

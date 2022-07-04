@@ -3554,7 +3554,7 @@
 /area/ship/marksman/crew/hallway/lower/aft)
 "gM" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled,
 /area/ship/marksman/crew/hallway/lower/aft)
 "gN" = (
@@ -4888,7 +4888,7 @@
 /turf/simulated/floor,
 /area/ship/marksman/command/hangar)
 "jP" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = 28
 	},
 /turf/simulated/floor,

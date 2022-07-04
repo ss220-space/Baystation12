@@ -2,17 +2,11 @@
  * Sierra Service
  */
 
-/decl/closet_appearance/secure_closet/sierra/hydroponics
-	extra_decals = list(
-		"stripe_vertical_right_partial" = COLOR_GREEN_GRAY,
-		"stripe_vertical_mid_partial" =   COLOR_GREEN_GRAY,
-		"hydro" = COLOR_GREEN_GRAY
-	)
 
 /obj/structure/closet/chefcloset_sierra
 	name = "chef's closet"
 	desc = "It's a storage unit for foodservice equipment."
-	closet_appearance = /decl/closet_appearance/wardrobe/black
+	icon_state = "black"
 
 /obj/structure/closet/chefcloset_sierra/WillContain()
 	return list(
@@ -31,7 +25,7 @@
 /obj/structure/closet/secure_closet/hydroponics_sierra //done so that it has no access reqs
 	name = "hydroponics locker"
 	req_access = list()
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/hydroponics
+	icon_state = "hydro"
 
 /obj/structure/closet/secure_closet/hydroponics_sierra/WillContain()
 	return list(
@@ -51,7 +45,7 @@
 /obj/structure/closet/jcloset/sierra
 	name = "custodial closet"
 	desc = "It's a storage unit for janitorial equipment."
-	closet_appearance = /decl/closet_appearance/wardrobe/mixed
+	icon_door = "mixed"
 
 /obj/structure/closet/jcloset/sierra/WillContain()
 	return list(
@@ -84,7 +78,13 @@
 	name = "bar locker"
 	desc = "It's a storage unit for bar equipment."
 	req_access = list(access_bar)
-	closet_appearance = /decl/closet_appearance/cabinet/secure
+	icon_state = "cabinet"
+	open_sound = 'sound/machines/wooden_closet_open.ogg'
+	close_sound = 'sound/machines/wooden_closet_close.ogg'
+	door_anim_angle = 160
+	door_anim_squish = 0.22
+	door_hinge_alt = 7.5
+	double_doors = TRUE
 
 /obj/structure/closet/secure_closet/bar_sierra/WillContain()
 	return list(

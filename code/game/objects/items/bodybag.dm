@@ -49,7 +49,7 @@
 	name = "body bag"
 	desc = "A plastic bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/closets/bodybag.dmi'
-	closet_appearance = null
+	icon_state = "bodybag"
 	open_sound = 'sound/items/zip.ogg'
 	close_sound = 'sound/items/zip.ogg'
 	var/item_path = /obj/item/bodybag
@@ -72,7 +72,7 @@
 			has_label = TRUE
 		else
 			src.SetName("body bag")
-		src.update_icon()
+
 		return
 	else if(isWirecutter(W))
 		src.SetName("body bag")
@@ -81,15 +81,16 @@
 		src.update_icon()
 		return
 
-/obj/structure/closet/body_bag/on_update_icon()
-	if(opened)
-		icon_state = "open"
-	else
-		icon_state = "closed_unlocked"
+/obj/structure/closet/body_bag/update_icon()
+	icon_state = "[initial(icon_state)][opened ? "_open" : "[contains_body ? "_occupied" : ""]"]"
+	//src.overlays.Cut()
 
-	src.overlays.Cut()
 	if(has_label)
 		src.overlays += image(src.icon, "bodybag_label")
+
+/obj/structure/closet/body_bag/animate_door()
+
+	flick("[initial(icon_state)]_anim_[opened ? "open" : "close"]", src)
 
 /obj/structure/closet/body_bag/store_mobs(var/stored_units)
 	contains_body = ..()

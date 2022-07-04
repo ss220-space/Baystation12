@@ -3299,7 +3299,7 @@
 /turf/simulated/wall/r_wall,
 /area/casino/casino_crew_atmos)
 "jf" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/plating,
 /area/casino/casino_crew_atmos)
 "jg" = (

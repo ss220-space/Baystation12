@@ -45,7 +45,7 @@
 
 /obj/random/torchcloset/spawn_choices()
 	return list(/obj/structure/closet,
-				/obj/structure/closet/firecloset,
+				/obj/structure/closet/walllocker/firecloset,
 				/obj/structure/closet/emcloset,
 				/obj/structure/closet/jcloset_torch,
 				/obj/structure/closet/athletic_mixed,

@@ -1,23 +1,30 @@
 /obj/structure/closet/cabinet
 	name = "cabinet"
 	desc = "Old will forever be in fashion."
-	closet_appearance = /decl/closet_appearance/cabinet
+	icon_state = "cabinet"
+	open_sound = 'sound/machines/wooden_closet_open.ogg'
+	close_sound = 'sound/machines/wooden_closet_close.ogg'
+	door_anim_angle = 160
+	door_anim_squish = 0.22
+	door_hinge_alt = 7.5
+	double_doors = TRUE
+
 
 /obj/structure/closet/acloset
 	name = "strange closet"
 	desc = "It looks alien!"
-	closet_appearance = /decl/closet_appearance/alien
+	icon_state = "decursed"
 
 /obj/structure/closet/gimmick
 	name = "administrative supply closet"
 	desc = "It's a storage unit for things that have no right being here."
-	closet_appearance = /decl/closet_appearance/tactical
+	icon_state = "syndicate1"
 	anchored = FALSE
 
 /obj/structure/closet/gimmick/russian
 	name = "russian surplus closet"
 	desc = "It's a storage unit for Russian standard-issue surplus."
-	closet_appearance = /decl/closet_appearance/tactical
+
 
 /obj/structure/closet/gimmick/russian/WillContain()
 	return list(
@@ -44,8 +51,7 @@
 /obj/structure/closet/thunderdome
 	name = "\improper Thunderdome closet"
 	desc = "Everything you need!"
-	closet_appearance = /decl/closet_appearance/tactical/alt
-
+	icon_state = "syndicate"
 	anchored = TRUE
 
 /obj/structure/closet/thunderdome/tdred
@@ -63,7 +69,7 @@
 
 /obj/structure/closet/thunderdome/tdgreen
 	name = "green-team Thunderdome closet"
-	closet_appearance = /decl/closet_appearance/tactical
+	icon_state = "syndicate1"
 
 /obj/structure/closet/thunderdome/tdgreen/WillContain()
 	return list(

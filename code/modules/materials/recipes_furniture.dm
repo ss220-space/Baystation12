@@ -223,15 +223,9 @@
 	req_amount = 30
 	time = 50
 
-/datum/stack_recipe/furniture/coffin
-	title = "coffin"
-	result_type = /obj/structure/closet/coffin
-	req_amount = 5
-	time = 15
-
 /datum/stack_recipe/furniture/coffin/wooden
 	title = "coffin"
-	result_type = /obj/structure/closet/coffin/wooden
+	result_type = /obj/structure/closet/crate/coffin
 	req_amount = 5
 
 /datum/stack_recipe/furniture/wooden_altar

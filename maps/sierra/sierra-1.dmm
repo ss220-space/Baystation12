@@ -6096,7 +6096,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/airlock)
 "kf" = (
-/obj/structure/closet/medical_wall/filled/small_shuttle{
+/obj/structure/closet/walllocker/medical/filled/small_shuttle{
 	pixel_x = 28
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -16763,7 +16763,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
-/obj/structure/closet/medical_wall/filled/shuttle{
+/obj/structure/closet/walllocker/medical/filled/shuttle{
 	pixel_x = 24
 	},
 /obj/structure/table/reinforced,
@@ -20381,7 +20381,7 @@
 /turf/simulated/floor/plating,
 /area/exploration_shuttle/cargo_r)
 "Gw" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/binary/pump/high_power/on{
 	dir = 4;
@@ -26471,7 +26471,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/closet/medical_wall/filled/regular{
+/obj/structure/closet/walllocker/medical/filled{
 	pixel_y = -24
 	},
 /obj/random/drinkbottle,
@@ -26935,7 +26935,7 @@
 /obj/machinery/sleeper/survival_pod{
 	dir = 8
 	},
-/obj/structure/closet/medical_wall/filled/small_shuttle{
+/obj/structure/closet/walllocker/medical/filled/small_shuttle{
 	pixel_y = 32
 	},
 /obj/machinery/camera/network/pod{
@@ -30000,7 +30000,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/corner/lime/border{

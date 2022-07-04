@@ -233,23 +233,20 @@
 		/obj/item/storage/briefcase,
 	)
 
-/obj/structure/closet/secure_closet/wall
+
+/obj/structure/closet/walllocker/medical/secure
+	desc = "It's a secure wall-mounted storage unit for first aid supplies."
+	icon_door = "medical_wall_secure"
+	icon_door_override = TRUE
+	locked = TRUE
+	secure = TRUE
+	req_access = list(access_medical_equip)
+
+/obj/structure/closet/secure_closet/walllocker/secure
 	name = "wall locker"
 	req_access = list(access_security)
-	closet_appearance = /decl/closet_appearance/wall
-
+	icon = 'icons/obj/closets/walllocker.dmi'
+	icon_state = "walllocker"
+	icon_door = "walllocker_secure"
 	//too small to put a man in
 	large = 0
-
-/obj/structure/closet/secure_closet/lawyer
-	name = "internal affairs secure closet"
-	req_access = list(access_lawyer)
-
-/obj/structure/closet/secure_closet/lawyer/WillContain()
-	return list(
-		/obj/item/device/flash = 2,
-		/obj/item/device/camera = 2,
-		/obj/item/device/camera_film = 2,
-		/obj/item/device/taperecorder = 2,
-		/obj/item/storage/secure/briefcase = 2,
-	)

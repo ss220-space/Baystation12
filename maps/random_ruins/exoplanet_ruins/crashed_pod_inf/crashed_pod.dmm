@@ -119,7 +119,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/crashed_pod)
 "aq" = (
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -27
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -414,7 +414,7 @@
 	dir = 1
 	},
 /obj/structure/bed/chair,
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -27
 	},
 /turf/simulated/floor/tiled/techfloor/grid,

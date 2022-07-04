@@ -773,7 +773,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/ninja_dojo/start)
 "cx" = (
-/obj/structure/closet/medical_wall/filled/regular{
+//obj/structure/closet/walllocker/medical/filled{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techfloor,

@@ -203,7 +203,7 @@
 /turf/simulated/floor/plating,
 /area/errant_pisces/bow_port)
 "aD" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
@@ -362,7 +362,7 @@
 /turf/simulated/floor/plating,
 /area/errant_pisces/bow_port)
 "aT" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -1146,7 +1146,7 @@
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/plating,
 /area/errant_pisces/atmos)
 "df" = (
@@ -1739,7 +1739,7 @@
 /turf/simulated/floor/plating,
 /area/errant_pisces/solar_starboard)
 "ei" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/plating,
 /area/errant_pisces/bow_maint)
 "ej" = (
@@ -4612,7 +4612,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled,
 /area/errant_pisces/science_wing)
 "lq" = (
@@ -6168,7 +6168,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled,
 /area/errant_pisces/bridge)
 "oN" = (
@@ -6753,7 +6753,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/errant_pisces/bridge)
 "qy" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled,
 /area/errant_pisces/fishing_wing)
 "qz" = (

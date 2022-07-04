@@ -2,15 +2,20 @@
 //not sure if there's an immediate place for secure wall lockers, but i'm sure the players will think of something
 
 /obj/structure/closet/walllocker
-	desc = "A wall mounted storage locker."
 	name = "Wall Locker"
-	closet_appearance = /decl/closet_appearance/wall
+	desc = "A wall mounted storage locker."
+	icon = 'icons/obj/closets/walllocker.dmi'
+	icon_state = "walllocker" //..how OLD is this $#!?
+	door_anim_angle = 132
+	door_anim_squish = 0.38
+	door_hinge = -7
+	door_anim_time = 2.7
 	density = FALSE
 	anchored = TRUE
 	wall_mounted = TRUE
 	storage_types = CLOSET_STORAGE_ITEMS
-	setup = 0
-	wall_mounted = 1
+	setup = FALSE
+	wall_mounted = TRUE
 
 //spawns endless (3 sets) amounts of breathmask, emergency oxy tank and crowbar
 
@@ -19,7 +24,8 @@
 	desc = "A wall mounted locker with emergency supplies."
 	var/list/spawnitems = list(/obj/item/tank/emergency/oxygen,/obj/item/clothing/mask/breath)
 	var/amount = 2 // spawns each items X times.
-	closet_appearance = /decl/closet_appearance/wall/emergency
+	icon_state = "emerg"
+	door_anim_time = 0
 
 /obj/structure/closet/walllocker/emerglocker/toggle(mob/user as mob)
 	src.attack_hand(user)
@@ -56,3 +62,45 @@
 /obj/structure/closet/walllocker/emerglocker/east
 	pixel_x = 32
 	dir = EAST
+
+/obj/structure/closet/walllocker/firecloset //wall mounted fire closet
+	name = "fire-safety closet"
+	desc = "It's a storage unit for fire-fighting supplies."
+	icon_state = "hydrant"
+
+/obj/structure/closet/walllocker/firecloset/WillContain()
+	return list(
+		/obj/item/inflatable/door = 2,
+		/obj/item/storage/med_pouch/burn = 2,
+		/obj/item/clothing/mask/gas/half,
+		/obj/item/storage/backpack/dufflebag/firefighter
+		)
+
+/obj/structure/closet/walllocker/firecloset/medical/WillContain()
+	return list(
+		/obj/random/firstaid,
+		/obj/random/medical/lite = 12)
+
+
+/obj/structure/closet/walllocker/medical //wall mounted medical closet
+	name = "first-aid closet"
+	desc = "It's wall-mounted storage unit for first aid supplies."
+	icon_state = "medical_wall"
+
+/obj/structure/closet/walllocker/medical/filled/WillContain()
+	return list(
+		/obj/random/firstaid,
+		/obj/random/medical/lite = 12)
+
+/obj/structure/closet/secure_closet/lawyer
+	name = "internal affairs secure closet"
+	req_access = list(access_lawyer)
+
+/obj/structure/closet/secure_closet/walllocker/secure/lawyer/WillContain()
+	return list(
+		/obj/item/device/flash = 2,
+		/obj/item/device/camera = 2,
+		/obj/item/device/camera_film = 2,
+		/obj/item/device/taperecorder = 2,
+		/obj/item/storage/secure/briefcase = 2,
+	)

@@ -525,7 +525,7 @@
 /turf/simulated/floor/tiled,
 /area/bunker/hallway)
 "bq" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/corner/grey_alt{
 	icon_state = "corner_white";
 	dir = 1
@@ -1114,7 +1114,7 @@
 /turf/simulated/floor,
 /area/bunker/eva)
 "cP" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/bunker/hallway/south)

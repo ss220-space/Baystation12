@@ -11210,7 +11210,7 @@
 /obj/machinery/photocopier/faxmachine{
 	department = "IAA Office"
 	},
-/obj/structure/closet/secure_closet/wall{
+/obj/structure/closet/secure_closet/walllocker/secure{
 	name = "High-Risk Papers";
 	pixel_y = 36;
 	req_access = list("ACCESS_IAA")
@@ -12352,7 +12352,7 @@
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -15861,7 +15861,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -21272,7 +21272,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
-/obj/structure/closet/medical_wall/filled/security{
+/obj/structure/closet/walllocker/medical/filled/security{
 	pixel_x = 24;
 	pixel_y = 4
 	},
@@ -21376,7 +21376,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/structure/closet/hydrant{
+/obj/structure/closet/walllocker/firecloset{
 	pixel_x = -23;
 	pixel_y = 9
 	},
@@ -22344,7 +22344,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hall/level_two)
 "aKB" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -23607,7 +23607,7 @@
 "aMn" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/central_stairwell)
 "aMo" = (
@@ -23780,7 +23780,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
 	},
@@ -27598,8 +27598,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/closet/medical_wall/filled/regular{
-	pixel_y = -30
+/obj/structure/closet/walllocker/medical/filled{
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -28495,8 +28494,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/closet/medical_wall/filled/security{
-	pixel_y = 32
+/obj/structure/closet/walllocker/medical/filled/security{
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -30411,7 +30409,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/storage)
 "aVR" = (
@@ -37383,7 +37381,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "eXk" = (
-/obj/structure/closet/firecloset,
+/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hall/level_two)
