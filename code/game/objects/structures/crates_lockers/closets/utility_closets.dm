@@ -163,7 +163,7 @@
 /obj/structure/closet/hydrant //wall mounted fire closet
 	name = "fire-safety closet"
 	desc = "It's a storage unit for fire-fighting supplies."
-	closet_appearance = /decl/closet_appearance/wall/hydrant
+	icon_state = "fire"
 	anchored = TRUE
 	density = FALSE
 	wall_mounted = TRUE

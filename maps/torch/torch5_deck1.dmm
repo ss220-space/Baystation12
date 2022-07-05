@@ -5844,7 +5844,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/security/detectives_office)
 "alV" = (
-/obj/structure/closet/secure_closet/forensics,
+/obj/structure/closet/secure_closet/cabinet/forensics,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/security/detectives_office)

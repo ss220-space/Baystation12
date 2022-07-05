@@ -3,8 +3,8 @@
 	name = "rescue bag"
 	desc = "A folded, reusable bag designed to prevent additional damage to an occupant, especially useful if short on time or in \
 	a hostile enviroment."
-	icon = 'icons/obj/closets/rescuebag.dmi'
-	icon_state = "folded"
+	icon = 'icons/obj/closets/bodybag.dmi'
+	icon_state = "resc_folded"
 	origin_tech = list(TECH_BIO = 2)
 	var/obj/item/tank/airtank
 
@@ -58,7 +58,8 @@
 	name = "rescue bag"
 	desc = "A reusable plastic bag designed to prevent additional damage to an occupant, especially useful if short on time or in \
 	a hostile enviroment."
-	icon = 'icons/obj/closets/rescuebag.dmi'
+	icon = 'icons/obj/closets/bodybag.dmi'
+	icon_state = "resc"
 	item_path = /obj/item/bodybag/rescue
 	storage_types = CLOSET_STORAGE_MOBS
 	var/obj/item/tank/airtank
@@ -80,11 +81,16 @@
 		airtank.forceMove(null)
 	update_icon()
 
-/obj/structure/closet/body_bag/rescue/on_update_icon()
-	..()
-	overlays.Cut()
-	if(airtank)
-		overlays += image(icon, "tank")
+/obj/structure/closet/body_bag/rescue/update_icon()
+	icon_state = "[initial(icon_state)][opened ? "_open" : "[contains_body ? "_occupied" : ""]"]"
+	//src.overlays.Cut()
+
+	if(has_label)
+		src.overlays += image(src.icon, "bodybag_label")
+
+/obj/structure/closet/body_bag/rescue/animate_door()
+
+	flick("[initial(icon_state)]_anim_[opened ? "open" : "close"]", src)
 
 /obj/structure/closet/body_bag/rescue/attackby(obj/item/W, mob/user, var/click_params)
 	if(istype(W,/obj/item/tank/))

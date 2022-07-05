@@ -112,12 +112,13 @@
 		/obj/item/storage/firstaid/individual/military
 	)
 
-/obj/structure/closet/secure_closet/cabinet
+/obj/structure/closet/secure_closet/cabinet/forensics
 	name = "forensics technician's locker"
 	req_access = list(access_forensics_lockers)
 	icon_state = "cabinet"
 
-/obj/structure/closet/secure_closet/forensics/WillContain()
+
+/obj/structure/closet/secure_closet/cabinet/forensics/WillContain()
 	return list(
 		/obj/item/clothing/gloves/forensic,
 		/obj/item/clothing/head/helmet/nt,

@@ -131,12 +131,12 @@
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/sec, /obj/item/storage/backpack/messenger/sec))
 	)
 
-/obj/structure/closet/secure_closet/forensics
+/obj/structure/closet/secure_closet/cabinet/forensics
 	name = "forensics technician's locker"
 	req_access = list(access_forensics_lockers)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/security/forensics
 
-/obj/structure/closet/secure_closet/forensics/WillContain()
+/obj/structure/closet/secure_closet/cabinet/forensics/WillContain()
 	return list(
 		/obj/item/clothing/gloves/forensic,
 		/obj/item/device/radio/headset/headset_sec,

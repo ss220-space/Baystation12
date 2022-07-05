@@ -8131,8 +8131,8 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/window/reinforced,
-/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/hall/level_one)
 "aoV" = (

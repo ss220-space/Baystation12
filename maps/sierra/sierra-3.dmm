@@ -7561,7 +7561,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/security/sierra/evidence)
 "ang" = (
-/obj/structure/closet/secure_closet/forensics{
+/obj/structure/closet/secure_closet/cabinet/forensics{
 	icon_state = "cabinet"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -12321,13 +12321,13 @@
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
-/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore_stairwell)
 "avM" = (
@@ -15701,7 +15701,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "aBE" = (
-/obj/structure/closet/secure_closet/forensics{
+/obj/structure/closet/secure_closet/cabinet/forensics{
 	icon_state = "cabinet"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -15716,7 +15716,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 5
 	},
-/obj/structure/closet/secure_closet/forensics{
+/obj/structure/closet/secure_closet/cabinet/forensics{
 	icon_state = "cabinet"
 	},
 /turf/simulated/floor/tiled/white,
@@ -21351,8 +21351,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/closet/walllocker/firecloset{
-	pixel_x = -23;
-	pixel_y = 9
+	pixel_x = -25
 	},
 /obj/machinery/camera/network/security{
 	c_tag = "Security - Hallway - Port";
@@ -22318,13 +22317,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hall/level_two)
 "aKB" = (
-/obj/structure/closet/walllocker/firecloset,
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
 /obj/effect/floor_decal/borderfloorblack/corner2,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hall/level_two)
 "aKC" = (
@@ -23581,7 +23580,7 @@
 "aMn" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
-/obj/structure/closet/walllocker/firecloset,
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/central_stairwell)
 "aMo" = (
@@ -23754,7 +23753,6 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
 	},
@@ -23770,6 +23768,7 @@
 /obj/random/date_based/christmas/xmaslights{
 	dir = 8
 	},
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled/white,
 /area/rnd/entry)
 "aME" = (
@@ -30383,7 +30382,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/structure/closet/walllocker/firecloset,
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/storage)
 "aVR" = (
@@ -37355,8 +37354,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "eXk" = (
-/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hall/level_two)
 "eZv" = (
