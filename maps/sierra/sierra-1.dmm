@@ -833,6 +833,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/closet/emcloset{
+	anchored = 1;
+	name = "anchored emergency closet"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/thirddeck/fore)
 "bR" = (
@@ -7722,7 +7726,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
 "mm" = (
-/obj/structure/closet/secure_closet/explo_gun{
+/obj/structure/closet/walllocker/secure_closet/explo_gun{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -10067,7 +10071,6 @@
 "pB" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/beige/border,
-/obj/structure/closet/cabinet,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "pC" = (
@@ -12634,7 +12637,6 @@
 /obj/effect/floor_decal/corner/beige/border,
 /obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/beige/bordercorner2,
-/obj/structure/closet/cabinet,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "tt" = (
@@ -18980,7 +18982,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/fore)
 "Eb" = (
-/obj/structure/closet/crate/internals/fuel,
+/obj/structure/closet/crate/internals/fuel{
+	icon_state = "crate"
+	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/quartermaster/storage)
@@ -25440,7 +25444,6 @@
 /obj/effect/floor_decal/corner/beige/bordercorner2{
 	dir = 9
 	},
-/obj/structure/closet/cabinet,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/center)
 "OF" = (

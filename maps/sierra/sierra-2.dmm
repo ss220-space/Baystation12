@@ -6513,7 +6513,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/actor)
 "amg" = (
-/obj/structure/closet/crate/internals/fuel,
+/obj/structure/closet/crate/internals/fuel{
+	icon_state = "crate"
+	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable{
 	d1 = 1;

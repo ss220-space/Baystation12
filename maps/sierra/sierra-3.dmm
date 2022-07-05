@@ -2382,20 +2382,6 @@
 "aeL" = (
 /turf/simulated/wall/prepainted,
 /area/medical/morgue)
-"aeM" = (
-/obj/structure/morgue{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/closet/walllocker{
-	pixel_x = 24;
-	pixel_y = 4
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/effect/floor_decal/corner/black/mono,
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/medical/morgue)
 "aeN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3616,14 +3602,6 @@
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery/second)
-"agW" = (
-/obj/structure/closet/walllocker{
-	pixel_x = -24;
-	pixel_y = 4
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/dark,
-/area/medical/morgue)
 "agX" = (
 /obj/structure/railing/mapped{
 	dir = 1
@@ -4329,17 +4307,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/staging)
-"aig" = (
-/obj/structure/morgue{
-	dir = 1
-	},
-/obj/structure/closet/walllocker{
-	pixel_x = -24;
-	pixel_y = 4
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/medical/morgue)
 "aih" = (
 /obj/machinery/door/window/westleft{
 	dir = 1
@@ -7594,7 +7561,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/security/sierra/evidence)
 "ang" = (
-/obj/structure/closet/secure_closet/forensics,
+/obj/structure/closet/secure_closet/forensics{
+	icon_state = "cabinet"
+	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -15732,7 +15701,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "aBE" = (
-/obj/structure/closet/secure_closet/forensics,
+/obj/structure/closet/secure_closet/forensics{
+	icon_state = "cabinet"
+	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
 	},
@@ -15744,6 +15715,9 @@
 	},
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 5
+	},
+/obj/structure/closet/secure_closet/forensics{
+	icon_state = "cabinet"
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/sierra/forensic/lab)
@@ -27599,6 +27573,7 @@
 	dir = 4
 	},
 /obj/structure/closet/walllocker/medical/filled{
+	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -28494,8 +28469,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/closet/walllocker/medical/filled/security{
-	},
+/obj/structure/closet/walllocker/medical/filled/security,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -43329,10 +43303,6 @@
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai)
 "ybT" = (
-/obj/structure/closet/walllocker{
-	pixel_x = 24;
-	pixel_y = 4
-	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
@@ -66714,8 +66684,8 @@ adh
 kxM
 wWx
 ajw
-agW
-aig
+ybT
+aeJ
 amo
 aku
 pQb
@@ -67927,7 +67897,7 @@ kxM
 wWx
 ahP
 ybT
-aeM
+aik
 xJJ
 uJk
 cKN

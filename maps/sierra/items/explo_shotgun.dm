@@ -97,17 +97,18 @@
 					  /obj/item/ammo_magazine/shotholder/net = 1,
 					  /obj/item/ammo_magazine/shotholder/flash = 1)
 
-/obj/structure/closet/secure_closet/explo_gun
+/obj/structure/closet/walllocker/secure_closet/explo_gun
 	name = "gun locker"
 	desc = "Wall locker holding the boomstick."
 	req_access = list(access_expedition_shuttle_helm)
-	closet_appearance = /decl/closet_appearance/wall/explo_gun
+	icon_state = "walllocker"
+	icon_door = "walllocker_secure"
 	density = FALSE
 	anchored = TRUE
 	wall_mounted = 1
 	storage_types = CLOSET_STORAGE_ITEMS
 
-/obj/structure/closet/secure_closet/explo_gun/WillContain()
+/obj/structure/closet/walllocker/secure_closet/explo_gun/WillContain()
 	return list(
 		/obj/item/storage/box/ammo/explo_shells = 3,
 		/obj/item/gun/projectile/shotgun/pump/exploration

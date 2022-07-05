@@ -741,7 +741,7 @@
 	icon_state = "corner_white"
 	},
 /obj/structure/bed/chair/shuttle/blue,
-/obj/structure/closet/secure_closet/explo_gun{
+/obj/structure/closet/walllocker/secure_closet/explo_gun{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
