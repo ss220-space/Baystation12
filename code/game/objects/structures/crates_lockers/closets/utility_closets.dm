@@ -221,7 +221,7 @@
 		/obj/item/device/spaceflare
 	)
 
-/obj/structure/closet/shipping_wall
+/obj/structure/closet/walllocker/shipping_wall
 	name = "shipping supplies closet"
 	desc = "It's a wall-mounted storage unit containing supplies for preparing shipments."
 	closet_appearance = /decl/closet_appearance/wall/shipping
@@ -231,7 +231,7 @@
 	storage_types = CLOSET_STORAGE_ITEMS
 	setup = 0
 
-/obj/structure/closet/shipping_wall/filled/WillContain()
+/obj/structure/closet/walllocker/shipping_wall/filled/WillContain()
 	return list(
 		/obj/item/stack/material/cardboard/ten,
 		/obj/item/device/destTagger,
