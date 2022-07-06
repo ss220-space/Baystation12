@@ -1576,7 +1576,7 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/hallway/aft/upper)
 "dB" = (
-/obj/structure/closet/shipping_wall{
+/obj/structure/closet/walllocker/shipping_wall{
 	pixel_x = -28
 	},
 /obj/random/technology_scanner,

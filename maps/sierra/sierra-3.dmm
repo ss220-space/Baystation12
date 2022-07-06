@@ -23921,7 +23921,7 @@
 /area/hallway/primary/firstdeck/central_stairwell)
 "aMP" = (
 /obj/structure/table/standard,
-/obj/structure/closet/shipping_wall/filled{
+/obj/structure/closet/walllocker/shipping_wall/filled{
 	pixel_x = -25;
 	pixel_y = 4
 	},

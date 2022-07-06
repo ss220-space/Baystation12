@@ -1525,7 +1525,7 @@
 /area/map_template/hydrobase/station/processing)
 "dL" = (
 /obj/structure/catwalk,
-/obj/structure/closet/shipping_wall/filled{
+/obj/structure/closet/walllocker/shipping_wall/filled{
 	pixel_x = 0;
 	pixel_y = 32
 	},

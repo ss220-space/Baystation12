@@ -24865,7 +24865,7 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/structure/closet/shipping_wall/filled{
+/obj/structure/closet/walllocker/shipping_wall/filled{
 	pixel_x = 26;
 	pixel_y = 0
 	},
@@ -28749,7 +28749,7 @@
 	},
 /obj/structure/bed/chair/wheelchair,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/shipping_wall/filled{
+/obj/structure/closet/walllocker/shipping_wall/filled{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,

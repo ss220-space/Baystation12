@@ -856,7 +856,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
-/obj/structure/closet/shipping_wall/filled{
+/obj/structure/closet/walllocker/shipping_wall/filled{
 	pixel_x = -32;
 	pixel_y = 32
 	},
@@ -1016,7 +1016,7 @@
 "acc" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/portable_atmospherics/canister/phoron,
-/obj/structure/closet/shipping_wall/filled{
+/obj/structure/closet/walllocker/shipping_wall/filled{
 	pixel_x = -25;
 	pixel_y = 4
 	},
@@ -2474,7 +2474,7 @@
 /area/hydroponics)
 "aeX" = (
 /obj/machinery/vending/dinnerware,
-/obj/structure/closet/shipping_wall/filled{
+/obj/structure/closet/walllocker/shipping_wall/filled{
 	pixel_x = 25
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -3547,7 +3547,7 @@
 /turf/simulated/floor/bluegrid,
 /area/engineering/bluespace/chamber)
 "agE" = (
-/obj/structure/closet/shipping_wall,
+/obj/structure/closet/walllocker/shipping_wall,
 /turf/simulated/wall/prepainted,
 /area/crew_quarters/sleep/bunk)
 "agF" = (
