@@ -4,6 +4,7 @@
 	name = "crate"
 	desc = "A rectangular steel crate."
 	icon = 'icons/obj/closets/crate.dmi'
+	icon_state = "crate"
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
 	setup = 0
 	storage_types = CLOSET_STORAGE_ITEMS
@@ -137,7 +138,7 @@
 /obj/structure/closet/crate/medical
 	name = "medical crate"
 	desc = "A medical crate."
-	closet_appearance = /decl/closet_appearance/crate/medical
+	icon_state = "medical_crate"
 
 /obj/structure/closet/crate/rcd
 	name = "\improper RCD crate"
