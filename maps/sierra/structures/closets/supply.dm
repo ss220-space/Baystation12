@@ -55,7 +55,7 @@
 /obj/structure/closet/secure_closet/quartermaster_sierra
 	name = "quartermaster's locker"
 	req_access = list(access_qm)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/cargo/quartmaster
+	icon_state = "qm"
 
 /obj/structure/closet/secure_closet/quartermaster_sierra/WillContain()
 	return list(
@@ -82,7 +82,7 @@
 /obj/structure/closet/secure_closet/prospector
 	name = "prospector's locker"
 	req_access = list(access_mining)
-	closet_appearance = /decl/closet_appearance/secure_closet/sierra/prospector
+	icon_state = "mining"
 
 /obj/structure/closet/secure_closet/prospector/WillContain()
 	return list(

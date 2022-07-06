@@ -80,7 +80,7 @@
 /obj/structure/closet/secure_closet/prospector
 	name = "prospector's locker"
 	req_access = list(access_mining)
-	closet_appearance = /decl/closet_appearance/secure_closet/torch/cargo
+	icon_state = "mining"
 
 /obj/structure/closet/secure_closet/prospector/WillContain()
 	return list(
