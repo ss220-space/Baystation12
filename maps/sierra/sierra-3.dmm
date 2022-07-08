@@ -7562,7 +7562,8 @@
 /area/security/sierra/evidence)
 "ang" = (
 /obj/structure/closet/secure_closet/cabinet/forensics{
-	icon_state = "cabinet"
+	icon_state = "cabinet";
+	name = "forensics technician's cabinet"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -15702,7 +15703,8 @@
 /area/hallway/primary/firstdeck/aft)
 "aBE" = (
 /obj/structure/closet/secure_closet/cabinet/forensics{
-	icon_state = "cabinet"
+	icon_state = "cabinet";
+	name = "forensics technician's cabinet"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
@@ -15715,9 +15717,6 @@
 	},
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 5
-	},
-/obj/structure/closet/secure_closet/cabinet/forensics{
-	icon_state = "cabinet"
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/sierra/forensic/lab)
