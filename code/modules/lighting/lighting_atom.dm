@@ -10,7 +10,7 @@
 
 // Nonsensical value for l_color default, so we can detect if it gets set to null.
 #define NONSENSICAL_VALUE -99999
-/atom/proc/set_light(l_range, l_power, l_color = NONSENSICAL_VALUE)
+/atom/proc/set_light(l_range, l_power, l_color = NONSENSICAL_VALUE, var/angle = NONSENSICAL_VALUE, var/no_update = FALSE)
 	. = 0 //make it less costly if nothing's changed
 
 	if(l_power != null && l_power != light_power)
@@ -22,6 +22,10 @@
 	if(l_color != NONSENSICAL_VALUE && l_color != light_color)
 		light_color = l_color
 		. = 1
+
+	if (angle != NONSENSICAL_VALUE)
+		light_wedge = angle
+
 
 	if(.) update_light()
 

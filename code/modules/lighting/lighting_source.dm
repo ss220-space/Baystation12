@@ -285,8 +285,7 @@
 	limit_b_x = POLAR_TO_CART_X(light_range + 10, limit_b_t)
 	limit_b_y = POLAR_TO_CART_Y(light_range + 10, limit_b_t)
 	// This won't change unless the origin or dir changes, might as well do it here.
-	cached_ab = PSEUDO_WEDGE(limit_a_x, limit_a_y, limit_b_x, limit_b_y)
-	targ_sign = cached_ab > 0
+	targ_sign = PSEUDO_WEDGE(limit_a_x, limit_a_y, limit_b_x, limit_b_y) > 0
 
 // I know this is 2D, calling it a cone anyways. Fuck the system.
 // Returns true if the test point is NOT inside the cone.
@@ -308,7 +307,7 @@
 #undef POLAR_TO_CART_Y
 #undef PSEUDO_WEDGE
 
-#define LUM_FALLOFF(C, T)(1 - CLAMP01(((C.x - T.x) ** 2 +(C.y - T.y) ** 2 + LIGHTING_HEIGHT) ** 0.6 / max(1, light_range)))
+#define LUM_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2 + LIGHTING_HEIGHT) / max(1, light_range)))
 #define LUM_FALLOFF_XY(Cx,Cy,Tx,Ty) (1 - CLAMP01(sqrt(((Cx) - (Tx)) ** 2 + ((Cy) - (Ty)) ** 2 + LIGHTING_HEIGHT) / max(1, light_range)))
 
 /datum/light_source/proc/apply_lum()
@@ -317,8 +316,6 @@
 
 	var/Tx
 	var/Ty
-	var/Sx = source_turf.x
-	var/Sy = source_turf.y
 
 	// Keep track of the last applied lum values so that the lighting can be reversed
 	applied_lum_r = lum_r
@@ -333,9 +330,6 @@
 		Tx = T.x
 		Ty = T.y
 		if (light_angle && check_light_cone(Tx, Ty))
-			continue
-
-		if (!light_self && Tx == cached_origin_x && Ty == cached_origin_y)	// Shouldn't need to check Z.
 			continue
 
 		check_t:
