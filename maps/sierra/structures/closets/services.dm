@@ -6,7 +6,8 @@
 /obj/structure/closet/chefcloset_sierra
 	name = "chef's closet"
 	desc = "It's a storage unit for foodservice equipment."
-	icon_state = "black"
+	icon_state = "generic"
+	icon_door = "black"
 
 /obj/structure/closet/chefcloset_sierra/WillContain()
 	return list(

@@ -46,15 +46,15 @@
 	is_animating_door = TRUE
 	var/num_steps = door_anim_time / world.tick_lag
 	var/list/animation_math_list = animation_math["[door_anim_time]-[door_anim_angle]-[azimuth_angle_2]-[radius_2]-[door_hinge]"]
-	for(var/I in 0 to num_steps)
-		var/door_state = I == (closing ? num_steps : 0) ? "[icon_door || icon_state]_door" : animation_math_list[closing ? 2 * num_steps - I : num_steps + I] <= 0 ? "[icon_door_override ? icon_door : icon_state]_back" : "[icon_door || icon_state]_door"
-		var/door_layer = I == (closing ? num_steps : 0) ? ABOVE_HUMAN_LAYER : animation_math_list[closing ? 2 * num_steps - I : num_steps + I] <= 0 ? FLOAT_LAYER : ABOVE_HUMAN_LAYER
-		var/matrix/M = get_door_transform(I == (closing ? num_steps : 0) ? 0 : animation_math_list[closing ? num_steps - I : I], I == (closing ? num_steps : 0) ? 1 : animation_math_list[closing ?  2 * num_steps - I : num_steps + I])
-		if(I == 0)
+	for(var/step in 0 to num_steps)
+		var/door_state = step == (closing ? num_steps : 0) ? "[icon_door || icon_state]_door" : animation_math_list[closing ? 2 * num_steps - step : num_steps + step] <= 0 ? "[icon_door_override ? icon_door : icon_state]_back" : "[icon_door || icon_state]_door"
+		var/door_layer = step == (closing ? num_steps : 0) ? ABOVE_HUMAN_LAYER : animation_math_list[closing ? 2 * num_steps - step : num_steps + step] <= 0 ? FLOAT_LAYER : ABOVE_HUMAN_LAYER
+		var/matrix/M = get_door_transform(step == (closing ? num_steps : 0) ? 0 : animation_math_list[closing ? num_steps - step : step], step == (closing ? num_steps : 0) ? 1 : animation_math_list[closing ?  2 * num_steps - step : num_steps + step])
+		if(step == 0)
 			door_obj.transform = M
 			door_obj.icon_state = door_state
 			door_obj.layer = door_layer
-		else if(I == 1)
+		else if(step == 1)
 			animate(door_obj, transform = M, icon_state = door_state, layer = door_layer, time = world.tick_lag, flags = ANIMATION_END_NOW)
 		else
 			animate(transform = M, icon_state = door_state, layer = door_layer, time = world.tick_lag)
@@ -70,13 +70,13 @@
 /obj/structure/closet/crate/proc/animation_list() //pre calculates a list of values for the crate animation cause byond not like math
 	var/num_steps_1 = door_anim_time / world.tick_lag
 	var/list/new_animation_math_sublist[num_steps_1 * 2]
-	for(var/I in 1 to num_steps_1) //loop to save the animation values into the lists
-		var/angle_1 = door_anim_angle * (I / num_steps_1)
+	for(var/step in 1 to num_steps_1) //loop to save the animation values into the lists
+		var/angle_1 = door_anim_angle * (step / num_steps_1)
 		var/polar_angle = abs(arcsin(cos(angle_1)))
 		var/azimuth_angle = angle_1 >= 90 ? azimuth_angle_2 : 0
 		var/radius_cr = angle_1 >= 90 ? radius_2 : 1
-		new_animation_math_sublist[I] = -sin(polar_angle) * sin(azimuth_angle) * radius_cr
-		new_animation_math_sublist[num_steps_1 + I] = cos(azimuth_angle) * sin(polar_angle) * radius_cr
+		new_animation_math_sublist[step] = -sin(polar_angle) * sin(azimuth_angle) * radius_cr
+		new_animation_math_sublist[num_steps_1 + step] = cos(azimuth_angle) * sin(polar_angle) * radius_cr
 	animation_math["[door_anim_time]-[door_anim_angle]-[azimuth_angle_2]-[radius_2]-[door_hinge]"] = new_animation_math_sublist
 
 
