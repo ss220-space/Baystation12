@@ -113,7 +113,7 @@
 /obj/machinery/power/port_gen/pacman
 	name = "\improper P.A.C.M.A.N.-type Portable Generator"
 	desc = "A power generator that runs on solid phoron sheets. Rated for 80 kW max safe output."
-	
+
 	machine_name = "\improper PACMAN-type generator"
 	machine_desc = "A portable generator often used for backup power or running small spacecraft. Runs on solid phoron sheets; rated for 80 kW max safe output."
 
@@ -446,7 +446,7 @@
 		I.blend_mode = BLEND_ADD
 		I.alpha = round(255*power_output/max_power_output)
 		overlays += I
-		set_light(0.7, 0.1, rad_power + power_output - max_safe_output, 2, "#3b97ca")
+		set_light(rad_power + power_output - max_safe_output,1,"#3b97ca")
 	else
 		set_light(0)
 

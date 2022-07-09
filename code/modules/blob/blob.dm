@@ -3,7 +3,7 @@
 	desc = "A pulsating mass of interwoven tendrils."
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blob"
-	light_outer_range = 2
+	light_range = 2
 	light_color = BLOB_COLOR_PULS
 	density = TRUE
 	opacity = TRUE

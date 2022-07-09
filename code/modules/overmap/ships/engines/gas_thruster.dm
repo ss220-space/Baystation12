@@ -69,7 +69,7 @@
 	use_power = POWER_USE_OFF
 	power_channel = EQUIP
 	idle_power_usage = 21600 //6 Wh per tick for default 2 capacitor. Gives them a reason to turn it off, really to nerf backup battery
-	
+
 	machine_name = "gas thruster"
 	machine_desc = "A heavy-duty spaceship thruster that throws gas out of its nozzle to allow propulsion."
 
@@ -206,7 +206,7 @@
 /obj/effect/engine_exhaust/New(turf/nloc, ndir)
 	..(nloc)
 	nloc.hotspot_expose(1000,125)
-	set_light(0.5, 1, 4)
+	set_light(5, 2)
 	set_dir(ndir)
 	spawn(20)
 		qdel(src)

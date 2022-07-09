@@ -7,6 +7,7 @@
 	var/tmp/list/datum/light_source/affecting_lights       // List of light sources affecting this turf.
 	var/tmp/atom/movable/lighting_overlay/lighting_overlay // Our lighting overlay.
 	var/tmp/list/datum/lighting_corner/corners
+	var/tmp/has_opaque_atom = FALSE
 	var/opaque_counter
 
 /turf/set_opacity(new_opacity)

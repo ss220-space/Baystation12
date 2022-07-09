@@ -4,6 +4,7 @@
 	for(type in view(range, GLOB.dview_mob))
 
 #define END_FOR_DVIEW GLOB.dview_mob.loc = null
+#define LIGHTING_HEIGHT         1 // height off the ground of light sources on the pseudo-z-axis, you should probably leave this alone
 
 #define LIGHTING_ICON 'icons/effects/lighting_overlay.dmi' // icon used for lighting shading effects
 #define LIGHTING_ICON_STATE_DARK "dark" // Change between "soft_dark" and "dark" to swap soft darkvision
@@ -13,6 +14,12 @@
 #define LIGHTING_SOFT_THRESHOLD 0 // If the max of the lighting lumcounts of each spectrum drops below this, disable luminosity on the lighting overlays.  This also should be the transparancy of the "soft_dark" icon state.
 
 #define LIGHTING_MULT_FACTOR 0.9
+
+// Some angle presets for directional lighting.
+#define LIGHT_OMNI null
+#define LIGHT_SEMI 180
+#define LIGHT_WIDE 90
+#define LIGHT_NARROW 45
 
 // If I were you I'd leave this alone.
 #define LIGHTING_BASE_MATRIX \

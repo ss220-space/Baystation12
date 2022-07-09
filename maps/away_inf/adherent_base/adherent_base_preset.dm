@@ -56,6 +56,5 @@ obj/structure/adh_base/broken_cryo/attack_hand(mob/user)
 	item_state = null
 	on = 1
 
-	flashlight_max_bright = 0.95 //sunlight
-	flashlight_inner_range = 30
-	flashlight_outer_range = 30
+	brightness_on = 20
+	flashlight_power = 20

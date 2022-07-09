@@ -126,9 +126,7 @@
 		return
 	// More sanity checks
 
-	var/new_max = variable == "light_max_bright" ? var_value : A.light_max_bright
-	var/new_inner = variable == "light_inner_range" ? var_value : A.light_inner_range
-	var/new_outer = variable == "light_outer_range" ? var_value : A.light_outer_range
-	var/new_falloff = variable == "light_falloff_curve" ? var_value : A.light_falloff_curve
+	var/new_power = variable == "light_power" ? var_value : A.light_power
+	var/new_range = variable == "light_range" ? var_value : A.light_range
 
-	A.set_light(new_max, new_inner, new_outer, new_falloff)
+	A.set_light(new_power, new_range)

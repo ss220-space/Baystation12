@@ -142,8 +142,8 @@
 	anchored = TRUE
 	dir = WEST
 
-	light_max_bright = 0.25
-	light_outer_range = 2
+	light_power = 1
+	light_range = 2
 	light_color="#00bf00"
 
 	var/base_icon_state = "body_scanner_0"
@@ -527,7 +527,7 @@
 
 	icon_state = base_icon_state
 
-	light_outer_range = 1
+	light_range = 1
 
 	//Eject any items that aren't meant to be in the pod.
 	var/list/items = contents - component_parts

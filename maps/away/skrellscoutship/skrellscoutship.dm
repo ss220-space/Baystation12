@@ -256,14 +256,14 @@
 /obj/item/light/tube/skrell
 	name = "skrellian light filament"
 	color = COLOR_LIGHT_CYAN
-	b_colour = COLOR_LIGHT_CYAN
+	brightness_color = COLOR_LIGHT_CYAN
 	desc = "Some kind of strange alien lightbulb technology."
 	random_tone = FALSE
 
 /obj/item/light/tube/large/skrell
 	name = "skrellian light filament"
 	color = COLOR_LIGHT_CYAN
-	b_colour = COLOR_LIGHT_CYAN
+	brightness_color = COLOR_LIGHT_CYAN
 	desc = "Some kind of strange alien lightbulb technology."
 
 

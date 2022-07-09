@@ -29,7 +29,7 @@
 			set_light(0)
 
 	update_icon()
-	active_power_usage = ((light_outer_range * light_max_bright) * 15)
+	active_power_usage = ((light_range * light_power) * 10)
 
 /obj/machinery/xmaslights/power_change()
 	. = ..()
@@ -86,7 +86,7 @@
 			set_light(0)
 
 	update_icon()
-	active_power_usage = ((light_outer_range * light_max_bright) * 15)
+	active_power_usage = ((light_range * light_power) * 10)
 
 /obj/machinery/xmas_plant/on_update_icon()
 	if(on && powered())

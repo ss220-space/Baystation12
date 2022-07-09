@@ -231,6 +231,7 @@ steam.start() -- spawns the effect
 	set_light(power, 0.1, range, 2, color)
 	time_to_live=lifetime
 	..()
+	set_light(range, power, color)
 
 /////////////////////////////////////////////
 // Bad smoke

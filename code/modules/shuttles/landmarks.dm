@@ -157,4 +157,4 @@
 /obj/item/device/spaceflare/on_update_icon()
 	if(active)
 		icon_state = "bluflare_on"
-		set_light(0.3, 0.1, 6, 2, "85d1ff")
+		set_light(l_range = 6, l_power = 3)

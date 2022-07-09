@@ -46,7 +46,7 @@
 	var/const/STATUS_DISPLAY_TIME = 4
 	var/const/STATUS_DISPLAY_IMAGE = 5
 	var/const/STATUS_DISPLAY_CUSTOM = 99
-	
+
 	var/status_display_show_alert_border = FALSE
 
 /obj/machinery/status_display/Destroy()
@@ -78,7 +78,7 @@
 /obj/machinery/status_display/proc/update()
 	remove_display()
 	if(friendc && !ignore_friendc)
-		set_picture("ai_friend")		
+		set_picture("ai_friend")
 		if(status_display_show_alert_border)
 			add_alert_border_to_display()
 		return 1
@@ -177,13 +177,13 @@
 
 /obj/machinery/status_display/proc/add_alert_border_to_display()
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
-	var/decl/security_level/sl = security_state.current_security_level	
+	var/decl/security_level/sl = security_state.current_security_level
 
 	var/border = image(sl.icon,sl.alert_border)
 
 	overlays |= border
 
-/obj/machinery/status_display/proc/display_alert()	
+/obj/machinery/status_display/proc/display_alert()
 	remove_display()
 
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
@@ -191,7 +191,7 @@
 
 	var/image/alert = image(sl.icon, sl.overlay_status_display)
 
-	set_light(sl.light_max_bright, sl.light_inner_range, sl.light_outer_range, 2, sl.light_color_alarm)
+	set_light(l_range = sl.light_range, l_power = sl.light_power, l_color = sl.light_color_status_display)
 	overlays |= alert
 
 /obj/machinery/status_display/proc/set_picture(state)
@@ -200,13 +200,13 @@
 		picture_state = state
 		picture = image('icons/obj/status_display.dmi', icon_state=picture_state)
 	overlays |= picture
-	set_light(0.5, 0.1, 1, 2, COLOR_WHITE)
+	set_light(1.5, 1, COLOR_WHITE)
 
 /obj/machinery/status_display/proc/update_display(line1, line2)
 	var/new_text = {"<div style="font-size:[FONT_SIZE];color:[FONT_COLOR];font:'[FONT_STYLE]';text-align:center;" valign="top">[line1]<br>[line2]</div>"}
 	if(maptext != new_text)
 		maptext = new_text
-	set_light(0.5, 0.1, 1, 2, COLOR_WHITE)
+	set_light(1.5, 1, COLOR_WHITE)
 
 /obj/machinery/status_display/proc/get_shuttle_timer()
 	var/timeleft = evacuation_controller.get_eta()
