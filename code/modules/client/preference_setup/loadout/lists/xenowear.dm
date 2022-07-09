@@ -39,7 +39,7 @@
 
 /datum/gear/suit/unathi/desert_shoes
 	display_name = "(Unathi) desert shoes"
-	path = /obj/item/clothing/shoes/security
+	path = /obj/item/clothing/shoes/desert
 	cost = 1
 
 /datum/gear/suit/unathi/security_shoes
