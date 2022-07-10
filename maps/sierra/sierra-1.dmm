@@ -1009,7 +1009,7 @@
 	dir = 8;
 	name = "west bump";
 	pixel_x = -25;
-	req_access = list(list("ACCESS_EXPLORER", "ACCESS_ENGINEERING"))
+	req_access = list(list("ACCESS_EXPLORER","ACCESS_ENGINEERING"))
 	},
 /obj/structure/cable/cyan{
 	d2 = 2;
@@ -5852,7 +5852,7 @@
 	dir = 4;
 	name = "west bump";
 	pixel_x = 24;
-	req_access = list(list("ACCESS_EXPLORER", "ACCESS_ENGINEERING"))
+	req_access = list(list("ACCESS_EXPLORER","ACCESS_ENGINEERING"))
 	},
 /obj/structure/cable/cyan{
 	d2 = 2;
@@ -20741,12 +20741,12 @@
 "GZ" = (
 /obj/structure/bed/chair/shuttle/green{
 	dir = 1;
-	req_access = list(list("ACCESS_EXPEDITION_SHUTTLE", "ACCESS_EXPEDITION_SHUTTLE_HELM","ACCESS_ENGINEERING"))
+	req_access = list(list("ACCESS_EXPEDITION_SHUTTLE","ACCESS_EXPEDITION_SHUTTLE_HELM","ACCESS_ENGINEERING"))
 	},
 /obj/machinery/power/apc/charon{
 	name = "south bump";
 	pixel_y = -24;
-	req_access = list(list("ACCESS_EXPLORER", "ACCESS_ENGINEERING"))
+	req_access = list(list("ACCESS_EXPLORER","ACCESS_ENGINEERING"))
 	},
 /obj/machinery/camera/network/exploration_shuttle{
 	c_tag = "Charon - Seats Place Compartment";
@@ -21637,7 +21637,7 @@
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24;
-	req_access = list(list("ACCESS_EXPLORER", "ACCESS_ENGINEERING"))
+	req_access = list(list("ACCESS_EXPLORER","ACCESS_ENGINEERING"))
 	},
 /obj/structure/cable/cyan{
 	d2 = 8;
@@ -22416,7 +22416,7 @@
 	},
 /obj/item/gun/energy/laser{
 	desc = "A Hephaestus Industries G40E carbine, designed to kill with concentrated energy blasts. He seems to lack some details.";
-	origin_tech = list("combat" = 2, "magnets" = 1);
+	origin_tech = list("combat"=2,"magnets"=1);
 	projectile_type = /obj/item/projectile/beam/practice
 	},
 /turf/simulated/floor/plating,
@@ -22553,7 +22553,7 @@
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24;
-	req_access = list(list("ACCESS_EXPLORER", "ACCESS_ENGINEERING"))
+	req_access = list(list("ACCESS_EXPLORER","ACCESS_ENGINEERING"))
 	},
 /turf/simulated/floor/plating,
 /area/exploration_shuttle/power)
@@ -29016,7 +29016,7 @@
 	dir = 8;
 	name = "west bump";
 	pixel_x = -25;
-	req_access = list(list("ACCESS_EXPLORER", "ACCESS_ENGINEERING"))
+	req_access = list(list("ACCESS_EXPLORER","ACCESS_ENGINEERING"))
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cockpit)
@@ -29959,7 +29959,7 @@
 /obj/machinery/power/apc/charon{
 	name = "south bump";
 	pixel_y = -24;
-	req_access = list(list("ACCESS_EXPLORER", "ACCESS_ENGINEERING"))
+	req_access = list(list("ACCESS_EXPLORER","ACCESS_ENGINEERING"))
 	},
 /obj/effect/floor_decal/borderfloor{
 	color = null;
@@ -30461,6 +30461,10 @@
 	},
 /turf/simulated/wall/prepainted,
 /area/maintenance/thirddeck/aft)
+"Yb" = (
+/obj/structure/sign/warning/hot_exhaust,
+/turf/simulated/wall/r_wall/hull,
+/area/vacant/cargo)
 "Yd" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/structure/sign/nanotrasen,
@@ -59692,7 +59696,7 @@ zp
 Ap
 Aw
 Ax
-Or
+Yb
 Is
 Is
 Is

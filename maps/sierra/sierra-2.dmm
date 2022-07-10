@@ -20448,7 +20448,7 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
-	name = "Air to Supply"
+	name = "Air to Portables"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
@@ -39438,6 +39438,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/effect/floor_decal/industrial/traffic,
 /turf/simulated/floor/reinforced/airless,
 /area/bridge/nano)
 "rSZ" = (
