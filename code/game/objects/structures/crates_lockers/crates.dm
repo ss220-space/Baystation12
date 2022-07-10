@@ -112,6 +112,7 @@
 	close_sound = 'sound/machines/wooden_closet_close.ogg'
 	storage_types = CLOSET_STORAGE_MOBS|CLOSET_STORAGE_ITEMS
 	density = FALSE
+	dense_when_open = FALSE
 	door_anim_angle = 140
 	azimuth_angle_2 = 180
 	door_anim_time = 5
