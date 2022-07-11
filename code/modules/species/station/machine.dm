@@ -144,6 +144,6 @@
 /datum/species/machine/skills_from_age(age)	//Converts an age into a skill point allocation modifier. Can be used to give skill point bonuses/penalities not depending on job.
 	switch(age)
 		if(0 to 10)    . = 0
-		if(10 to 20)   . =  4
-		if(20 to 40)   . =  8
+		if(11 to 20)   . =  4
+		if(21 to 40)   . =  8
 		else           . =  6
