@@ -11826,13 +11826,6 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/bluespace)
-"auZ" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe_windows"
-	},
-/turf/simulated/floor/plating,
-/area/crew_quarters/cafe)
 "ava" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/navbeacon/sierra/SD_forehallway2,
@@ -35927,7 +35920,8 @@
 	id = "cafe_windows";
 	pixel_x = -23;
 	range = 9;
-	pixel_y = -10
+	pixel_y = -10;
+	id_tag = cafe_tint
 	},
 /turf/simulated/floor/wood/ebony,
 /area/crew_quarters/bar)
@@ -36396,11 +36390,12 @@
 /turf/simulated/floor/grass,
 /area/bridge/lobby)
 "jnf" = (
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe_windows"
-	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
+	id = "cafe_windows";
+	id_tag = cafe_tint
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
 "jny" = (
@@ -37697,10 +37692,11 @@
 /turf/space,
 /area/space)
 "mXt" = (
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe_windows"
-	},
 /obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
+	id = "cafe_windows";
+	id_tag = cafe_tint
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
 "mXL" = (
@@ -41419,10 +41415,11 @@
 /area/crew_quarters/lounge_big)
 "xiq" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe_windows"
-	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
+	id = "cafe_windows";
+	id_tag = cafe_tint
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
 "xiV" = (
@@ -57806,7 +57803,7 @@ gpb
 arg
 mlC
 aHT
-auZ
+mXt
 aHs
 mjR
 aJQ
@@ -58413,7 +58410,7 @@ oWa
 hdV
 aId
 kmC
-auZ
+mXt
 kub
 aRr
 avG
@@ -58615,7 +58612,7 @@ ark
 deW
 auh
 axY
-auZ
+mXt
 kub
 arG
 aFq
