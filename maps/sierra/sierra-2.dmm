@@ -35921,7 +35921,7 @@
 	pixel_x = -23;
 	range = 9;
 	pixel_y = -10;
-	id_tag = cafe_tint
+	id_tag = "cafe_tint"
 	},
 /turf/simulated/floor/wood/ebony,
 /area/crew_quarters/bar)
@@ -36394,7 +36394,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
 	id = "cafe_windows";
-	id_tag = cafe_tint
+	id_tag = "cafe_tint"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
@@ -37695,7 +37695,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
 	id = "cafe_windows";
-	id_tag = cafe_tint
+	id_tag = "cafe_tint"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
@@ -41418,7 +41418,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
 	id = "cafe_windows";
-	id_tag = cafe_tint
+	id_tag = "cafe_tint"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
