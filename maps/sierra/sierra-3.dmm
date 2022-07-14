@@ -41367,12 +41367,6 @@
 /obj/structure/railing/mapped,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
-"pSE" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall/prepainted,
-/area/medical/equipstorage)
 "pUQ" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/atmospherics/pipe/manifold/hidden/red,
@@ -69606,7 +69600,7 @@ ajy
 akE
 aly
 acy
-pSE
+qtR
 qtR
 anS
 qtR
