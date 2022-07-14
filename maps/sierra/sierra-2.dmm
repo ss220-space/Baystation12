@@ -35915,14 +35915,6 @@
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 10
 	},
-/obj/machinery/button/windowtint{
-	dir = 4;
-	id = "cafe_windows";
-	pixel_x = -23;
-	range = 9;
-	pixel_y = -10;
-	id_tag = "cafe_tint"
-	},
 /turf/simulated/floor/wood/ebony,
 /area/crew_quarters/bar)
 "hSe" = (
@@ -36392,10 +36384,7 @@
 "jnf" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe_windows";
-	id_tag = "cafe_tint"
-	},
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
 "jny" = (
@@ -37693,10 +37682,7 @@
 /area/space)
 "mXt" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe_windows";
-	id_tag = "cafe_tint"
-	},
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
 "mXL" = (
@@ -41416,10 +41402,7 @@
 "xiq" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe_windows";
-	id_tag = "cafe_tint"
-	},
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
 "xiV" = (
@@ -41611,6 +41594,18 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engine_eva)
+"xKh" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/machinery/button/windowtint{
+	dir = 2;
+	id = "sierra_surgery2";
+	pixel_x = -5;
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood/walnut,
+/area/crew_quarters/cafe)
 "xMX" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -59211,7 +59206,7 @@ bIE
 ajr
 pbO
 wQu
-pnB
+xKh
 vzV
 dFH
 plM
