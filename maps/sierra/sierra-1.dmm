@@ -17696,6 +17696,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/guppy_hangar/start)
 "BY" = (
@@ -18778,6 +18779,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/guppy_hangar/start)
 "DI" = (
@@ -26416,6 +26418,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/handrail,
 /turf/simulated/floor/tiled,
 /area/guppy_hangar/start)
 "Ql" = (
