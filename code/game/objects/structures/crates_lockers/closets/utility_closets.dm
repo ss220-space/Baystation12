@@ -166,7 +166,6 @@
 	icon_state = "fire"
 	anchored = TRUE
 	density = FALSE
-	wall_mounted = TRUE
 	storage_types = CLOSET_STORAGE_ITEMS
 	setup = 0
 

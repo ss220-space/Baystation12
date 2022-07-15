@@ -16765,12 +16765,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
-/obj/structure/closet/walllocker/medical/filled/shuttle{
-	pixel_x = 24
-	},
-/obj/structure/table/reinforced,
-/obj/random/blood_packs,
-/obj/random/blood_packs,
+/obj/machinery/optable,
 /turf/simulated/floor/tiled/white,
 /area/exploration_shuttle/medical)
 "Aj" = (
@@ -22009,7 +22004,6 @@
 /turf/simulated/floor/tiled/white,
 /area/exploration_shuttle/medical)
 "IQ" = (
-/obj/machinery/optable,
 /obj/structure/hygiene/sink{
 	dir = 4;
 	pixel_x = 22
@@ -22021,6 +22015,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/machinery/vitals_monitor,
 /turf/simulated/floor/tiled/white,
 /area/exploration_shuttle/medical)
 "IR" = (
@@ -22155,7 +22150,6 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "Ja" = (
-/obj/machinery/vitals_monitor,
 /obj/structure/cable/cyan{
 	d1 = 4;
 	d2 = 8;
@@ -22167,6 +22161,10 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
+	},
+/obj/machinery/vending/medical/sierra{
+	dir = 8;
+	req_access = list("ACCESS_EXPEDITION_SHUTTLE")
 	},
 /turf/simulated/floor/tiled/white,
 /area/exploration_shuttle/medical)
@@ -30318,9 +30316,11 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 4
 	},
-/obj/machinery/vending/medical/sierra{
-	dir = 8;
-	req_access = list("ACCESS_EXPEDITION_SHUTTLE")
+/obj/structure/table/reinforced,
+/obj/random/blood_packs,
+/obj/random/blood_packs,
+/obj/structure/closet/walllocker/medical/filled/shuttle{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/exploration_shuttle/medical)

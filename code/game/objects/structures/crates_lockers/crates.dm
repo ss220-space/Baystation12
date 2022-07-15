@@ -181,7 +181,7 @@
 	name = "freezer"
 	desc = "A freezer."
 	temperature = -16 CELSIUS
-	icon_state = "freezer"
+	icon_state = "freezeralt"
 	door_hinge = 4.5
 	var/target_temp = T0C - 40
 	var/cooling_power = 40
@@ -250,7 +250,7 @@
 /obj/structure/closet/crate/secure/phoron
 	name = "phoron crate"
 	desc = "A secure phoron crate."
-	icon_state = "phoron_crate"
+	icon_state = "necro_crate"
 
 /obj/structure/closet/crate/secure/shuttle
 	name = "storage compartment"

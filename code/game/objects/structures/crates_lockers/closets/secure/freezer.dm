@@ -16,7 +16,9 @@
 /obj/structure/closet/secure_closet/freezer/meat
 	name = "meat fridge"
 	icon = 'icons/obj/closets/fridge.dmi'
-	closet_appearance = null
+	icon_state = "freezer"
+	door_anim_time = 0
+
 
 /obj/structure/closet/secure_closet/freezer/meat/WillContain()
 	return list(
@@ -26,12 +28,11 @@
 
 /obj/structure/closet/secure_closet/freezer/fridge
 	name = "refrigerator"
-	icon = 'icons/obj/closets/closet.dmi'
-	closet_appearance = null
+	icon = 'icons/obj/closets/fridge.dmi'
 	icon_state = "freezer"
 	door_anim_squish = 0.22
 	door_anim_angle = 123
-	door_anim_time = 4
+	door_anim_time = 0
 
 /obj/structure/closet/secure_closet/freezer/fridge/WillContain()
 	return list(

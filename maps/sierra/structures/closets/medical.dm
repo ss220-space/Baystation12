@@ -35,6 +35,7 @@
 	name = "surgeon's locker"
 	req_access = list(access_senmed)
 	icon_state = "med"
+	icon_door = "surgeon"
 
 /obj/structure/closet/secure_closet/medical_sierrasenior/WillContain()
 	return list(

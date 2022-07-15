@@ -1128,7 +1128,7 @@
 /area/outpost/mining/medical)
 "cy" = (
 /obj/structure/table/standard,
-//obj/structure/closet/walllocker/medical/filled{
+/obj/structure/closet/walllocker/medical/filled{
 	pixel_y = 30
 	},
 /obj/effect/floor_decal/corner/paleblue/three_quarters{

@@ -1016,10 +1016,6 @@
 "acc" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/portable_atmospherics/canister/phoron,
-/obj/structure/closet/walllocker/shipping_wall/filled{
-	pixel_x = -25;
-	pixel_y = 4
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/hardstorage)
 "acd" = (
@@ -2845,6 +2841,9 @@
 "afz" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/papershredder,
+/obj/structure/closet/walllocker/shipping_wall/filled{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/hardstorage)
 "afA" = (
@@ -13996,6 +13995,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/closet/walllocker/firecloset{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/fore)
@@ -33532,9 +33534,6 @@
 /area/bridge/lobby)
 "bkI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/closet/walllocker/firecloset{
-	pixel_x = 25
-	},
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
