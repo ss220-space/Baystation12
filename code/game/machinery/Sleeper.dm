@@ -78,6 +78,30 @@
 		if (occupant.stat == UNCONSCIOUS && prob(2))
 			to_chat(occupant, SPAN_NOTICE(SPAN_BOLD("... [pick("comfy", "feels slow", "warm")] ...")))
 
+/obj/machinery/sleeper/verb/eject_sleeper()
+	set src in oview(1)
+	set category = "Object"
+	set name = "Eject Body Sleeper "
+
+	if (usr.incapacitated())
+		return
+	usr.visible_message(
+		SPAN_NOTICE("\The [usr] opens \the [src]."),
+		SPAN_NOTICE("You eject \the [initial(name)]'s occupant."),
+		SPAN_ITALIC("You hear a pressurized hiss, then a sound like glass creaking.")
+	)
+	go_out()
+	add_fingerprint(usr)
+
+/obj/machinery/sleeper/attackby(obj/item/grab/normal/G, mob/user)
+	if(istype(G))
+		var/mob/M = G.affecting
+		if(!user_can_move_target_inside(M, user))
+			return
+		move_target_inside(M,user)
+		qdel(G)
+		return TRUE
+	return ..()
 /obj/machinery/sleeper/on_update_icon()
 //[INF]
 	var/list/bas_icon = splittext(icon_state, "_")
@@ -348,3 +372,36 @@
 	else
 		available_chemicals -= antag_chemicals
 	return 1
+
+/obj/machinery/sleeper/proc/user_can_move_target_inside(mob/target, mob/user)
+	if(!istype(user) || !istype(target))
+		return FALSE
+	if(user.incapacitated())
+		return FALSE
+	if(!target.simulated)
+		return FALSE
+	if(occupant)
+		to_chat(user, SPAN_WARNING("\The [src] is already occupied!"))
+		return FALSE
+	if(target.abiotic())
+		to_chat(user, SPAN_WARNING("[user == target ? "You" : "[target]"] can't enter \the [src] while wearing abiotic items."))
+		return FALSE
+	if(target.buckled)
+		to_chat(user, SPAN_WARNING("Unbuckle [user == target ? "yourself" : "\the [target]"] before attempting to [user == target ? "enter \the [src]" : "move them"]."))
+		return FALSE
+	return TRUE
+
+
+/obj/machinery/sleeper/proc/move_target_inside(mob/target, mob/user)
+	target.forceMove(src)
+	occupant = target
+
+	update_use_power(POWER_USE_ACTIVE)
+	update_icon()
+	drop_contents()
+	SetName("[name] ([occupant])")
+
+	add_fingerprint(user)
+/obj/machinery/sleeper/proc/drop_contents()
+	for(var/obj/O in (contents - component_parts))
+		O.dropInto(loc)
