@@ -121,11 +121,11 @@
 	sort_category = "Xenowear"
 
 // IPC clothing
-/datum/gear/mask/ipc_monitor
-	display_name = "(IPC) display monitor"
-	path = /obj/item/clothing/mask/monitor
-	sort_category = "Xenowear"
-	whitelisted = list(SPECIES_IPC)
+///datum/gear/mask/ipc_monitor
+//	display_name = "(IPC) display monitor"
+//	path = /obj/item/clothing/mask/monitor
+//	sort_category = "Xenowear"
+//	whitelisted = list(SPECIES_IPC)
 
 /datum/gear/suit/lab_xyn_machine
 	display_name = "Xynergy labcoat" //INF, WAS "(IPC) Xynergy labcoat"

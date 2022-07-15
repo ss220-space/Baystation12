@@ -26,3 +26,4 @@
 	var/list/subspecies_allowed                    // Restrict some styles to specific species names
 	var/do_coloration = TRUE                       // Whether or not the accessory can be affected by colouration
 	var/blend = ICON_ADD
+	var/list/models_allowed = list() //Specifies which, if any, hairstyles or markings can be accessed by which prosthetics. Should equal the manufacturing company name in robolimbs.dm.

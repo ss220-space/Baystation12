@@ -29,6 +29,8 @@ var/datum/robolimb/basic_robolimb
 	var/list/applies_to_part = list() //TODO.
 	var/list/allowed_bodytypes = list(SPECIES_HUMAN, SPECIES_IPC, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARA)
 	var/list/allowed_ckeys = list()	// Infinity. Custom prosthesis.
+	var/is_monitor     // Monitor cheack
+	var/display_text
 
 /datum/robolimb/bishop
 	company = "Bishop"
@@ -51,6 +53,7 @@ var/datum/robolimb/basic_robolimb
 	company = "Bishop Monitor."
 	icon = 'icons/mob/human_races/cyberlimbs/bishop/bishop_monitor.dmi'
 	allowed_bodytypes = list(SPECIES_IPC)
+	is_monitor = 1
 
 /datum/robolimb/hephaestus
 	company = "Hephaestus Industries"
@@ -79,6 +82,7 @@ var/datum/robolimb/basic_robolimb
 	company = "Hephaestus Monitor."
 	icon = 'icons/mob/human_races/cyberlimbs/hephaestus/hephaestus_monitor.dmi'
 	allowed_bodytypes = list(SPECIES_IPC)
+	is_monitor = 1
 
 /datum/robolimb/zenghu
 	company = "Zeng-Hu"
@@ -114,6 +118,7 @@ var/datum/robolimb/basic_robolimb
 	company = "Xion Monitor."
 	icon = 'icons/mob/human_races/cyberlimbs/xion/xion_monitor.dmi'
 	allowed_bodytypes = list(SPECIES_IPC)
+	is_monitor = 1
 
 /datum/robolimb/nanotrasen
 	company = "NanoTrasen"
@@ -142,6 +147,7 @@ var/datum/robolimb/basic_robolimb
 	company = "Ward-Takahashi Monitor."
 	icon = 'icons/mob/human_races/cyberlimbs/wardtakahashi/wardtakahashi_monitor.dmi'
 	allowed_bodytypes = list(SPECIES_IPC)
+	is_monitor = 1
 
 /datum/robolimb/morpheus
 	company = "Morpheus"
@@ -187,6 +193,7 @@ var/datum/robolimb/basic_robolimb
 	applies_to_part = list(BP_HEAD)
 	has_eyes = FALSE
 	allowed_bodytypes = list(SPECIES_IPC)
+	is_monitor = 1
 
 /datum/robolimb/veymed
 	company = "Vey-Med"
@@ -211,6 +218,7 @@ var/datum/robolimb/basic_robolimb
 	icon = 'icons/mob/human_races/cyberlimbs/shellguard/shellguard_monitor.dmi'
 	applies_to_part = list(BP_HEAD)
 	allowed_bodytypes = list(SPECIES_IPC)
+	is_monitor = 1
 
 /datum/robolimb/vox
 	company = "Arkmade"
