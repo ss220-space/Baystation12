@@ -128,8 +128,8 @@
 	name = "freezer"
 	desc = "A freezer."
 	temperature = -16 CELSIUS
-	closet_appearance = /decl/closet_appearance/crate/freezer
-
+	icon_state = "freezeralt"
+	door_hinge = 4.5
 	var/target_temp = T0C - 40
 	var/cooling_power = 40
 

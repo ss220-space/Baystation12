@@ -16,7 +16,9 @@
 /obj/structure/closet/secure_closet/freezer/meat
 	name = "meat fridge"
 	icon = 'icons/obj/closets/fridge.dmi'
-	closet_appearance = null
+	icon_state = "freezer"
+	door_anim_time = 0
+
 
 /obj/structure/closet/secure_closet/freezer/meat/WillContain()
 	return list(
