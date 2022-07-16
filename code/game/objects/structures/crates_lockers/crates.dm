@@ -11,11 +11,11 @@
 	var/points_per_crate = 5
 	var/rigged = 0
 	store_structures = TRUE
-	dense_when_open = TRUE
+	dense_when_open = FALSE
 	door_anim_squish = 0.30
 	door_anim_time = 3
 	door_anim_angle = 140
-	door_hinge = 3.5
+	door_hinge = 0.5
 	var/tablestatus = 0
 
 	var/azimuth_angle_2 = 180 //in this context the azimuth angle for over 90 degree
@@ -84,6 +84,7 @@
 	desc = "A secure crate."
 	name = "Secure crate"
 	icon_state = "secure_crate"
+	door_hinge = 0.5
 	setup = CLOSET_HAS_LOCK
 	locked = TRUE
 	secure = TRUE
@@ -98,7 +99,7 @@
 	name = "plastic crate"
 	desc = "A rectangular plastic crate."
 	points_per_crate = 1
-	icon_state = "plastic_crate"
+	icon_state = "crateold"
 
 /obj/structure/closet/crate/coffin/Initialize()
 	. = ..()
@@ -122,6 +123,7 @@
 	name = "internals crate"
 	desc = "A internals crate."
 	icon_state = "o2_crate"
+	door_hinge = 3.6
 
 /obj/structure/closet/crate/internals/fuel
 	name = "\improper Fuel tank crate"
@@ -144,9 +146,6 @@
 /obj/structure/closet/crate/rcd
 	name = "\improper RCD crate"
 	desc = "A crate with rapid construction device."
-	icon_state = "eng_tool"
-	icon_door_override = TRUE
-	icon_door = "eng"
 
 /obj/structure/closet/crate/rcd/WillContain()
 	return list(
@@ -156,9 +155,6 @@
 
 /obj/structure/closet/crate/solar
 	name = "solar pack crate"
-	icon_state = "eng_elec"
-	icon_door_override = TRUE
-	icon_door = "eng"
 
 /obj/structure/closet/crate/solar/WillContain()
 	return list(
@@ -170,9 +166,6 @@
 
 /obj/structure/closet/crate/solar_assembly
 	name = "solar assembly crate"
-	icon_state = "eng_elec"
-	icon_door_override = TRUE
-	icon_door = "eng"
 
 /obj/structure/closet/crate/solar_assembly/WillContain()
 	return list(/obj/item/solar_assembly = 16)
@@ -182,7 +175,7 @@
 	desc = "A freezer."
 	temperature = -16 CELSIUS
 	icon_state = "freezeralt"
-	door_hinge = 4.5
+	door_hinge = 0.5
 	var/target_temp = T0C - 40
 	var/cooling_power = 40
 
@@ -228,16 +221,15 @@
 /obj/structure/closet/crate/radiation
 	name = "radioactive crate"
 	desc = "A leadlined crate with a radiation sign on it."
-	icon_state = "eng_rad"
-	icon_door_override = TRUE
-	icon_door = "eng"
+	icon_state = "oldrad"
+	door_hinge = 0.5
 
 /obj/structure/closet/crate/radiation_gear
 	name = "radioactive gear crate"
 	desc = "A crate with a radiation sign on it."
-	icon_state = "eng_rad"
-	icon_door_override = TRUE
-	icon_door = "eng"
+	icon_state = "oldrad"
+	door_hinge = 0.5
+
 
 /obj/structure/closet/crate/radiation_gear/WillContain()
 	return list(/obj/item/clothing/suit/radiation = 8)
@@ -245,12 +237,14 @@
 /obj/structure/closet/crate/secure/weapon
 	name = "weapons crate"
 	desc = "A secure weapons crate."
-	icon_state = "syndi_crate"
+	icon_state = "seccrate"
+	door_hinge = 0.5
 
 /obj/structure/closet/crate/secure/phoron
 	name = "phoron crate"
 	desc = "A secure phoron crate."
-	icon_state = "necro_crate"
+	icon_state = "phoronold"
+	door_hinge = 0.5
 
 /obj/structure/closet/crate/secure/shuttle
 	name = "storage compartment"
@@ -262,12 +256,16 @@
 /obj/structure/closet/crate/secure/gear
 	name = "gear crate"
 	desc = "A secure gear crate."
-	icon_state = "secgear_crate"
+	icon_state = "seccrate"
+	door_hinge = 0.5
 
 /obj/structure/closet/crate/secure/hydrosec
 	name = "secure hydroponics crate"
 	desc = "A crate with a lock on it, painted in the scheme of botany and botanists."
-	icon_state = "hydro_secure_crate"
+	icon_state = "botold_secure"
+	icon_door_override = TRUE
+	icon_door = "botold"
+	door_hinge = 0.5
 
 /obj/structure/closet/crate/large
 	name = "large crate"
@@ -301,7 +299,8 @@
 /obj/structure/closet/crate/hydroponics
 	name = "hydroponics crate"
 	desc = "All you need to destroy those pesky weeds and pests."
-	icon_state = "hydro_crate"
+	icon_state = "botold"
+	door_hinge = 0.5
 
 /obj/structure/closet/crate/hydroponics/prespawned/WillContain()
 	return list(
@@ -349,9 +348,9 @@
 /obj/structure/closet/crate/uranium
 	name = "fissibles crate"
 	desc = "A crate with a radiation sign on it."
-	icon_state = "eng_rad"
-	icon_door_override = TRUE
-	icon_door = "eng"
+	icon_state = "oldrad"
+	door_hinge = 0.5
+
 
 /obj/structure/closet/crate/uranium/WillContain()
 	return list(/obj/item/stack/material/uranium/ten = 5)
