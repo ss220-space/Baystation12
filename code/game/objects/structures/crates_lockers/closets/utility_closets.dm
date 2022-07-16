@@ -160,13 +160,13 @@
 /*
  * Hydrant
  */
-/obj/structure/closet/hydrant //wall mounted fire closet
+/obj/structure/closet/hydrant
 	name = "fire-safety closet"
 	desc = "It's a storage unit for fire-fighting supplies."
 	icon_state = "fire"
 	anchored = TRUE
-	density = FALSE
-	storage_types = CLOSET_STORAGE_ITEMS
+	density = TRUE
+	storage_types = CLOSET_STORAGE_ITEMS | CLOSET_STORAGE_MOBS
 	setup = 0
 
 /obj/structure/closet/hydrant/WillContain()

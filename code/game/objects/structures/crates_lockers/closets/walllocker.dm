@@ -68,6 +68,11 @@
 	desc = "It's a storage unit for fire-fighting supplies."
 	icon_state = "hydrant"
 
+/obj/structure/closet/walllocker/morgue
+	name = "Wall Locker"
+	desc = "A wall mounted morgue storage locker."
+	icon_state = "morgue_wall"
+
 /obj/structure/closet/walllocker/firecloset/WillContain()
 	return list(
 		/obj/item/inflatable/door = 2,

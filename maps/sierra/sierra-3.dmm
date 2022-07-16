@@ -582,9 +582,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/medical_wall{
-	pixel_y = 32
-	},
 /obj/item/storage/firstaid/stab,
 /obj/item/storage/firstaid/regular,
 /obj/random/medical/lite,
@@ -597,6 +594,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/closet/walllocker/medical{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/heads/captain/secret_room/level_two)
@@ -2945,16 +2945,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
-"afN" = (
-/obj/structure/morgue{
-	dir = 2
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/structure/closet/walllocker{
-	pixel_y = 30
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/medical/morgue)
 "afO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
@@ -2995,10 +2985,10 @@
 /obj/structure/morgue{
 	dir = 2
 	},
-/obj/structure/closet/walllocker{
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/closet/walllocker/morgue{
 	pixel_y = 30
 	},
-/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
 "afR" = (
@@ -4098,13 +4088,13 @@
 /obj/structure/morgue{
 	dir = 2
 	},
-/obj/structure/closet/walllocker{
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/camera/network/medbay{
 	c_tag = "Infirmary - Morgue - Body Freezers";
 	dir = 8
+	},
+/obj/structure/closet/walllocker/morgue{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
@@ -5058,13 +5048,13 @@
 /obj/structure/morgue{
 	dir = 2
 	},
-/obj/structure/closet/walllocker{
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -24
+	},
+/obj/structure/closet/walllocker/morgue{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
@@ -25333,10 +25323,6 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aOC" = (
-/obj/machinery/vending/wallmed1{
-	pixel_x = 25;
-	dir = 8
-	},
 /obj/machinery/computer/operating{
 	dir = 8
 	},
@@ -67572,7 +67558,7 @@ acv
 adl
 adV
 wWx
-afN
+afQ
 bPQ
 aih
 akA
