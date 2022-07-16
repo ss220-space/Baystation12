@@ -136,7 +136,7 @@
 		return
 	var/S
 	if(robohead.is_monitor)
-		S = input("Write something to display on your screen (emoticons supported):", "Display Text") as text|null
+		S = input("Write something to display on your screen:", "Display Text") as text|null
 	else
 		to_chat(usr, "<span class='warning'>Your head has no screen!</span>")
 
