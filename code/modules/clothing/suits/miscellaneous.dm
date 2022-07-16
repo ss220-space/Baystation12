@@ -55,16 +55,13 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/suit/storage/security
-	name = "security jacket"
-	desc = "security jacket."
+	name = "Big Security Jacket"
+	desc = "A pretty big jacket with deep pockets, favored by unathi mercenaries. It's too big to fit anyone, but unathi."
 	icon = 'icons/obj/clothing/obj_suit.dmi'
 	icon_state = "unathi_secjacket"
 	item_state = "unsecjacket"
 
 	species_restricted = list(SPECIES_UNATHI)
-	//sprite_sheets = list(
-    //    SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi'
-    //    )
 	w_class = ITEM_SIZE_NORMAL
 	allowed = list(
     	/obj/item/gun,

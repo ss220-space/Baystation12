@@ -202,7 +202,6 @@
         icon_state = initial(icon_state)
         item_state = initial(icon_state)
         to_chat(user, "You lower the ear flaps on the Suncap.")
-    //update_icon()
 
 /*
  * Pumpkin head
