@@ -582,9 +582,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/medical_wall{
-	pixel_y = 32
-	},
 /obj/item/storage/firstaid/stab,
 /obj/item/storage/firstaid/regular,
 /obj/random/medical/lite,
@@ -597,6 +594,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/closet/walllocker/medical{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/heads/captain/secret_room/level_two)
@@ -2945,16 +2945,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/locker)
-"afN" = (
-/obj/structure/morgue{
-	dir = 2
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/structure/closet/walllocker{
-	pixel_y = 36
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/medical/morgue)
 "afO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
@@ -2995,10 +2985,10 @@
 /obj/structure/morgue{
 	dir = 2
 	},
-/obj/structure/closet/walllocker{
-	pixel_y = 36
-	},
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/closet/walllocker/morgue{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
 "afR" = (
@@ -4098,13 +4088,13 @@
 /obj/structure/morgue{
 	dir = 2
 	},
-/obj/structure/closet/walllocker{
-	pixel_y = 36
-	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/camera/network/medbay{
 	c_tag = "Infirmary - Morgue - Body Freezers";
 	dir = 8
+	},
+/obj/structure/closet/walllocker/morgue{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
@@ -5058,13 +5048,13 @@
 /obj/structure/morgue{
 	dir = 2
 	},
-/obj/structure/closet/walllocker{
-	pixel_y = 36
-	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -24
+	},
+/obj/structure/closet/walllocker/morgue{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
@@ -11231,7 +11221,7 @@
 	},
 /obj/structure/closet/secure_closet/walllocker/secure{
 	name = "High-Risk Papers";
-	pixel_y = 36;
+	pixel_y = 30;
 	req_access = list("ACCESS_IAA")
 	},
 /obj/item/documents/nanotrasen/sierra,
@@ -20670,6 +20660,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
+/obj/structure/closet/walllocker/shipping_wall/filled{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/development)
 "aIq" = (
@@ -21387,9 +21380,6 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
-	},
-/obj/structure/closet/walllocker/firecloset{
-	pixel_x = -25
 	},
 /obj/machinery/camera/network/security{
 	c_tag = "Security - Hallway - Port";
@@ -23959,10 +23949,6 @@
 /area/hallway/primary/firstdeck/central_stairwell)
 "aMP" = (
 /obj/structure/table/standard,
-/obj/structure/closet/walllocker/shipping_wall/filled{
-	pixel_x = -25;
-	pixel_y = 4
-	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -25337,15 +25323,11 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aOC" = (
-/obj/machinery/vending/wallmed1{
-	pixel_y = 32
-	},
 /obj/machinery/computer/operating{
 	dir = 8
 	},
 /obj/structure/closet/walllocker{
-	pixel_x = 24;
-	pixel_y = 4
+	pixel_y = 30
 	},
 /obj/item/clothing/mask/surgical,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -27905,6 +27887,10 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
 	},
+/obj/machinery/vending/wallmed1{
+	pixel_x = 25;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aRW" = (
@@ -28331,6 +28317,9 @@
 /obj/machinery/camera/network/security{
 	c_tag = "Brig - Aft"
 	},
+/obj/structure/closet/walllocker/firecloset{
+	pixel_y = 30
+	},
 /turf/simulated/floor/plating,
 /area/security/brig)
 "aSw" = (
@@ -28506,7 +28495,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/closet/walllocker/medical/filled/security,
+/obj/structure/closet/walllocker/medical/filled/security{
+	pixel_y = 30
+	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -40634,7 +40625,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "nOq" = (
-/obj/structure/closet/secure_closet/counselor,
+/obj/structure/closet/secure_closet/counselor{
+	icon_state = "med"
+	},
 /obj/item/book/manual/psionics,
 /obj/item/stack/wax{
 	amount = 50
@@ -67565,7 +67558,7 @@ acv
 adl
 adV
 wWx
-afN
+afQ
 bPQ
 aih
 akA

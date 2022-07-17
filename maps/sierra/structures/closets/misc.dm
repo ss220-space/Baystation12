@@ -92,4 +92,4 @@
 /obj/structure/closet/crate/present
 	name = "present crate"
 	desc = "Wow, a present!"
-	icon_state = "generic"
+	icon_state = "crate"

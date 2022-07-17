@@ -331,7 +331,7 @@
 	flags_inv = BLOCKHEADHAIR //Shows beards!
 
 /obj/item/clothing/head/cap/sec
-	name = "Big Security Cap"
+	name = "big security cap"
 	desc = "A security cap. This one pretty big."
 	icon_state = "unathi_seccap"
 	item_state = "unathi_seccap"

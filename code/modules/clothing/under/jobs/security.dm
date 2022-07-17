@@ -37,14 +37,10 @@
 	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/security/officer
-    name = "officer's uniform"
-    desc = "A black uniform usually worn by NanoTrasen Security Officers."
-    //icon = 'infinity/icons/mob/species/unathi/onmob_under_unathi.dmi'
+    name = "large security uniform"
+    desc = "An aftermarket modification of a regular desert jumpsuit, favored by unathi mercenaries. This one provides a bit more physical protection as if unathi ever needed that. It's too big to fit anyone, but unathi."
     item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
     species_restricted  = list(SPECIES_UNATHI)
-    //sprite_sheets = list(
-    //        SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi'
-    //)
     icon_state = "unsecuniform"
     item_state = "unsecuniform"
     worn_state = "unsecuniform"
@@ -52,7 +48,7 @@
 
 
 /obj/item/clothing/under/security/desert
-    name = "desert Jumpsuit"
+    name = "desert jumpsuit"
     desc = "A bulky and light jumpsuit designed for use in the desert. Unathi use it to withstand scorhing heat rays when \"Burning Mother\" at it's zenith, something that their scales cannot handle. It's too big to fit anyone, but unathi."
     //icon = 'infinity/icons/mob/species/unathi/onmob_under_unathi.dmi'
     species_restricted  = list(SPECIES_UNATHI)
