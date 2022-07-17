@@ -39146,12 +39146,11 @@
 /turf/simulated/floor/carpet/blue2,
 /area/medical/mentalhealth/therapyroom)
 "jMH" = (
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 9;
-	pixel_x = -16
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/lime/bordercorner{
-	pixel_x = -22
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/dungeon_master_lounge)
@@ -40048,9 +40047,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore_stairwell)
 "miF" = (
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 10;
-	pixel_y = 16
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/lime/bordercorner{
 	dir = 1
