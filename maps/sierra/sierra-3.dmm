@@ -13933,6 +13933,7 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 9
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/dungeon_master_lounge)
 "azj" = (
