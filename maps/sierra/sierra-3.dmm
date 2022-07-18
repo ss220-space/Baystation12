@@ -36750,7 +36750,6 @@
 	dir = 8
 	},
 /obj/machinery/disposal,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -36763,6 +36762,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/medical/mentalhealth)
 "ceA" = (
