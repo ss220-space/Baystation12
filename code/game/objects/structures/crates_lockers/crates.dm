@@ -122,12 +122,13 @@
 /obj/structure/closet/crate/internals
 	name = "internals crate"
 	desc = "A internals crate."
-	icon_state = "o2_crate"
-	door_hinge = 3.6
+	icon_state = "o2"
+	door_hinge = 0.5
 
 /obj/structure/closet/crate/internals/fuel
 	name = "\improper Fuel tank crate"
 	desc = "A fuel tank crate."
+	icon_state = "crate"
 
 /obj/structure/closet/crate/internals/fuel/WillContain()
 	return list(/obj/item/tank/hydrogen = 4)

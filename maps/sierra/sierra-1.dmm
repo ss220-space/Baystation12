@@ -24720,6 +24720,19 @@
 	},
 /obj/structure/curtain/open/shower,
 /obj/structure/hygiene/shower,
+/obj/structure/closet/walllocker{
+	pixel_x = 23;
+	pixel_y = 3
+	},
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/random/medical/lite,
+/obj/random/medical/lite,
+/obj/item/towel/random,
+/obj/item/flame/lighter/zippo/random,
+/obj/item/haircomb/random,
+/obj/item/lipstick/random,
+/obj/random/soap,
 /turf/simulated/floor/tiled/freezer,
 /area/vacant/cargo)
 "Nr" = (
@@ -27200,21 +27213,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/closet/walllocker{
-	pixel_x = 23;
-	pixel_y = 3
-	},
-/obj/random/soap,
-/obj/item/lipstick/random,
-/obj/item/lipstick/random,
-/obj/random/contraband,
-/obj/item/haircomb/random,
-/obj/item/flame/lighter/zippo/random,
-/obj/item/towel/random,
-/obj/random/medical,
-/obj/random/medical/lite,
-/obj/random/medical/lite,
-/obj/random/soap,
 /turf/simulated/floor/tiled/freezer,
 /area/vacant/cargo)
 "Ry" = (
@@ -27489,20 +27487,6 @@
 /turf/simulated/wall/prepainted,
 /area/vacant/infirmary)
 "RW" = (
-/obj/structure/closet/walllocker{
-	pixel_x = -25;
-	pixel_y = 3
-	},
-/obj/random/junk,
-/obj/random/junk,
-/obj/random/junk,
-/obj/random/junk,
-/obj/random/ore_smug,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/item/device/flashlight/flare/glowstick/random,
-/obj/item/device/flashlight/flare/glowstick/random,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -27556,20 +27540,6 @@
 /obj/structure/closet/walllocker{
 	pixel_y = 32
 	},
-/obj/item/form_printer,
-/obj/item/folder,
-/obj/item/pen,
-/obj/random/cash,
-/obj/random/cash,
-/obj/random/cash,
-/obj/random/coin,
-/obj/item/sticky_pad/random,
-/obj/item/device/radio,
-/obj/item/device/scanner/gas,
-/obj/item/device/taperecorder,
-/obj/item/device/tape/random,
-/obj/item/device/tape/random,
-/obj/item/deck/cards,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -27869,19 +27839,12 @@
 "SF" = (
 /obj/structure/table/standard,
 /obj/machinery/light/small,
-/obj/structure/closet/walllocker{
-	pixel_x = 23;
-	pixel_y = 3
+/obj/item/music_tape/custom{
+	randpixel = 0
 	},
-/obj/item/reagent_containers/food/drinks/glass2/pint,
-/obj/item/reagent_containers/food/drinks/glass2/shot,
-/obj/item/reagent_containers/food/drinks/glass2/mug,
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/rainbow,
-/obj/item/reagent_containers/food/drinks/flask/vacuumflask,
-/obj/item/reagent_containers/glass/beaker,
-/obj/item/material/kitchen/utensil/fork,
-/obj/item/material/kitchen/utensil/spoon,
-/obj/item/material/knife/kitchen,
+/obj/item/paper/travelvisa{
+	desc = "A flimsy piece of laminated cardboard issued by the Sol Central Government. It's look's damaged"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/vacant/cargo)
 "SG" = (
