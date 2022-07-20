@@ -158,6 +158,7 @@
 	boxes.screen_loc = "[tx]:,[ty] to [mx],[my]"
 	for(var/obj/O in storage.contents)
 		O.screen_loc = "[cx],[cy]"
+		O.mouse_opacity = 2
 		O.hud_layerise()
 		cx++
 		if (cx > mx)
@@ -183,6 +184,7 @@
 
 	for(var/obj/O in storage.contents)
 		O.screen_loc = "[cx]:16,[cy]:16"
+		O.mouse_opacity = 2
 		O.maptext = ""
 		O.hud_layerise()
 		cx++
@@ -232,6 +234,7 @@
 
 		O.screen_loc = "4:[round((startpoint+endpoint)/2)+2],2:16"
 		O.maptext = ""
+		O.mouse_opacity = 2
 		O.hud_layerise()
 
 	closer.screen_loc = "4:[storage_width+19],2:16"
