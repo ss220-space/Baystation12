@@ -166,7 +166,6 @@
 	icon_state = "unathi_footwraps"
 	item_state = "unathi_footwraps"
 	force = 0
-	item_flags = ITEM_FLAG_SILENT
 	w_class = ITEM_SIZE_SMALL
 	species_restricted = list(SPECIES_UNATHI)
 
@@ -306,3 +305,22 @@ obj/item/clothing/shoes/heels/red
 	name = "red high heels"
 	desc = "A pair of red high heels."
 	color = COLOR_RED
+/obj/item/clothing/under/medic/paramedic
+    name = "first responder uniform"
+    desc = "Light and bulky paramedic jumpsuit with bright markings. It's too big to fit anyone, but unathi."
+    species_restricted  = list(SPECIES_UNATHI)
+    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
+    icon_state = "unathi_paramedic"
+    item_state = "unathi_paramedic"
+    worn_state = "unathi_paramedic"
+    //rolled_sleeves = 0
+
+/obj/item/clothing/under/unathi_work
+    name = "sturdy uniform"
+    desc = "A large uniform made of sturdy canvas with leather harness for industrial environment. It's too big to fit anyone, but unathi."
+    species_restricted  = list(SPECIES_UNATHI)
+    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
+    icon_state = "unathi_work"
+    item_state = "unathi_work"
+    worn_state = "unathi_work"
+    //rolled_sleeves = 0
