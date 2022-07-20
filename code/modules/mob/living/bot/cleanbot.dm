@@ -25,7 +25,7 @@
 /mob/living/bot/cleanbot/handleIdle()
 	if(!screwloose && !oddbutton && prob(5))
 		visible_message("\The [src] makes an excited beeping booping sound!")
-		playsound(src, 'sound/machines/boop1.ogg', 30)
+		playsound(src, 'sound/machines/twobeep.ogg', 30)
 
 	if(screwloose && prob(5)) // Make a mess
 		if(istype(loc, /turf/simulated))
