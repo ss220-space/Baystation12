@@ -77,6 +77,7 @@
 		user.s_active.show_to(user)
 
 /datum/storage_ui/default/on_pre_remove(var/mob/user, var/obj/item/W)
+	W.mouse_opacity = 1
 	for(var/mob/M in range(1, storage.loc))
 		if (M.s_active == storage)
 			if (M.client)
