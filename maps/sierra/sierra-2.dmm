@@ -955,14 +955,28 @@
 /turf/simulated/floor/tiled/monotile,
 /area/bridge/hall/level_one)
 "abQ" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 1
 	},
 /obj/effect/floor_decal/snow,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/machinery/light/spot{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galley/backroom)
 "abR" = (
@@ -979,11 +993,21 @@
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Mess Hall - Kitchen - Freezer"
 	},
-/obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 1
 	},
 /obj/effect/floor_decal/snow,
+/obj/structure/closet,
+/obj/item/storage/candle_box/scented,
+/obj/item/storage/candle_box/scented,
+/obj/item/storage/candle_box,
+/obj/item/storage/candle_box,
+/obj/item/storage/box/large/coal,
+/obj/item/storage/box/large/coal,
+/obj/item/storage/box/large/coal,
+/obj/item/storage/box/large/coal,
+/obj/item/hookah,
+/obj/item/hookah,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galley/backroom)
 "abW" = (
@@ -1376,11 +1400,23 @@
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "acU" = (
-/obj/structure/closet/secure_closet/freezer/meat,
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 1
 	},
 /obj/effect/floor_decal/snow,
+/obj/structure/closet/secure_closet/freezer/meat,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/fish,
+/obj/item/reagent_containers/food/snacks/fish,
+/obj/item/reagent_containers/food/snacks/fish,
+/obj/item/reagent_containers/food/snacks/fish,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galley/backroom)
 "acV" = (
@@ -3679,20 +3715,12 @@
 	},
 /obj/item/storage/box/lights/led_neon,
 /obj/item/storage/box/lights/led_neon,
-/obj/item/hookah,
-/obj/item/hookah,
-/obj/item/storage/box/large/coal,
-/obj/item/storage/box/large/coal,
-/obj/item/storage/box/large/coal,
-/obj/item/storage/box/large/coal,
 /obj/item/flame/lighter/zippo/brass,
-/obj/item/storage/candle_box,
-/obj/item/storage/candle_box,
-/obj/item/storage/candle_box/scented,
-/obj/item/storage/candle_box/scented,
 /obj/machinery/firealarm{
 	pixel_y = 22
 	},
+/obj/item/storage/candle_box,
+/obj/item/storage/candle_box,
 /turf/simulated/floor/wood/ebony,
 /area/crew_quarters/bar)
 "agT" = (
@@ -9059,12 +9087,12 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "aqx" = (
-/obj/structure/closet/secure_closet/freezer/meat,
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/snow,
+/obj/machinery/icecream_vat,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galley/backroom)
 "aqy" = (
