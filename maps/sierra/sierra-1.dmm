@@ -971,8 +971,12 @@
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/hydroponics,
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/green/bordercorner,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hydroponics/storage)
 "cc" = (
@@ -3739,11 +3743,11 @@
 /turf/simulated/floor/tiled/white,
 /area/vacant/infirmary)
 "gy" = (
-/obj/structure/reagent_dispensers/fueltank,
 /obj/structure/railing/mapped{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/starboard)
 "gz" = (
@@ -11606,12 +11610,11 @@
 /area/hallway/primary/thirddeck/center)
 "rP" = (
 /obj/effect/floor_decal/borderfloor{
-	dir = 6
+	dir = 5
 	},
 /obj/effect/floor_decal/corner/green/border{
-	dir = 6
+	dir = 5
 	},
-/obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled,
 /area/hydroponics/storage)
 "rQ" = (
@@ -12156,6 +12159,16 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/thirddeck)
+"sC" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled,
+/area/hydroponics/storage)
 "sD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -12437,6 +12450,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
+"td" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/green/bordercorner,
+/turf/simulated/floor/tiled,
+/area/hydroponics/storage)
 "te" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external/escapepod{
@@ -13352,7 +13374,6 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
-/obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled,
 /area/hydroponics/storage)
 "uH" = (
@@ -13902,19 +13923,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/thruster/d3starboard)
-"vy" = (
-/obj/structure/railing/mapped{
-	dir = 4
-	},
-/obj/machinery/portable_atmospherics/hydroponics,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hydroponics/storage)
 "vz" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
@@ -19975,7 +19983,7 @@
 /turf/simulated/floor/reinforced,
 /area/thruster/d3port)
 "FG" = (
-/obj/machinery/computer/atmos_alert{
+/obj/machinery/computer/modular/preset{
 	dir = 4
 	},
 /obj/effect/floor_decal/techfloor{
@@ -28914,15 +28922,6 @@
 /obj/item/storage/belt/utility,
 /turf/simulated/floor/tiled,
 /area/quartermaster/suplocker_room)
-"UB" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 5
-	},
-/turf/simulated/floor/tiled,
-/area/hydroponics/storage)
 "UC" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -50097,9 +50096,9 @@ Is
 ZH
 ZH
 wE
+td
 cb
-vy
-rP
+sC
 LO
 bF
 hb
@@ -50298,7 +50297,7 @@ Is
 Is
 ux
 ZH
-UB
+rP
 hX
 WZ
 LO

@@ -823,8 +823,6 @@
 	pixel_x = -22
 	},
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/material/minihoe,
-/obj/item/material/hatchet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -832,6 +830,7 @@
 	dir = 9
 	},
 /obj/item/reagent_containers/glass/bucket,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "aby" = (
@@ -1342,7 +1341,6 @@
 	},
 /obj/item/material/minihoe,
 /obj/item/material/hatchet,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/random/date_based/christmas/xmaslights,
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Hydroponics - Fore";
@@ -1397,6 +1395,7 @@
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "acU" = (
@@ -2312,19 +2311,18 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/table/standard,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/light/spot,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/reagent_containers/dropper,
 /obj/machinery/vending/wallmed1{
 	dir = 1;
 	name = "Emergency NanoMed";
 	pixel_y = -29
 	},
+/obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "aeL" = (
@@ -20526,7 +20524,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/structure/holoplant,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "aKD" = (
@@ -39684,8 +39681,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/holoplant,
-/obj/machinery/light/small{
+/obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
@@ -41736,7 +41732,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
-/obj/machinery/light/spot,
+/obj/machinery/light,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "xon" = (
