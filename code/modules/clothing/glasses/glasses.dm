@@ -200,6 +200,13 @@
 	vision_flags = SEE_OBJS
 	electric = TRUE
 
+
+/obj/item/clothing/glasses/hybrid/proc/update_state(mob/user)
+	update_icon()
+	sound_to(user, activation_sound)
+	user.update_inv_glasses()
+	user.update_action_buttons()
+
 /obj/item/clothing/glasses/threedglasses
 	name = "3D glasses"
 	desc = "A long time ago, people used these glasses to makes images from screens threedimensional."

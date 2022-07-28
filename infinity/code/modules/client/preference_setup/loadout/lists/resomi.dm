@@ -65,11 +65,11 @@
 
 /datum/gear/eyes/resomi/lenses_sec
 	display_name = "(Resomi) sun sechud lenses"
-	path = /obj/item/clothing/glasses/sunglasses/sechud/lenses
+	path = /obj/item/clothing/glasses/hybrid/lenses/sechud
 
 /datum/gear/eyes/resomi/lenses_med
 	display_name = "(Resomi) sun medhud lenses"
-	path = /obj/item/clothing/glasses/hud/health/lenses
+	path = /obj/item/clothing/glasses/hybrid/lenses/health
 
 /datum/gear/accessory/resomi_mantle
 	display_name = "(Resomi) small mantle"
