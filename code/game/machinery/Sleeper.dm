@@ -391,7 +391,6 @@
 		return FALSE
 	return TRUE
 
-
 /obj/machinery/sleeper/proc/move_target_inside(mob/target, mob/user)
 	target.forceMove(src)
 	occupant = target
