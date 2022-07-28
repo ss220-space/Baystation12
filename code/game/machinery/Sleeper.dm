@@ -401,6 +401,7 @@
 	SetName("[name] ([occupant])")
 
 	add_fingerprint(user)
+
 /obj/machinery/sleeper/proc/drop_contents()
 	for(var/obj/O in (contents - component_parts))
 		O.dropInto(loc)
