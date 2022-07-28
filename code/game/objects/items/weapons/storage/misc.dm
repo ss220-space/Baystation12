@@ -180,7 +180,7 @@
 		/obj/item/reagent_containers/food/snacks/grown/apple = 2,
 		/obj/item/reagent_containers/food/snacks/grown/orange = 2,
 		/obj/item/reagent_containers/food/snacks/grown/lime = 2,
-		/obj/item/reagent_containers/food/snacks/grown/lemone = 2
+		/obj/item/reagent_containers/food/snacks/grown/lemon = 2
 	)
 
 /obj/item/storage/bar_fruit_jar/on_update_icon()

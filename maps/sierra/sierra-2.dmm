@@ -25279,7 +25279,8 @@
 "aTu" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/shotgun_rack{
-	pixel_y = 29
+	pixel_y = 29;
+	req_access = list("ACCESS_BAR")
 	},
 /obj/machinery/light/led/small{
 	dir = 1
@@ -40371,7 +40372,7 @@
 /turf/simulated/floor/greengrid,
 /area/engineering/gravitaional_generator)
 "tML" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -41878,7 +41879,6 @@
 /turf/simulated/floor/wood/mahogany,
 /area/crew_quarters/game_room)
 "xNh" = (
-/obj/structure/reagent_dispensers/fueltank,
 /obj/structure/cable/green,
 /obj/machinery/power/apc{
 	dir = 4;
@@ -41886,6 +41886,7 @@
 	pixel_x = 24
 	},
 /obj/structure/catwalk,
+/obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/emergency)
 "xOG" = (

@@ -4101,7 +4101,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "ahP" = (
@@ -4753,7 +4753,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "aiY" = (
@@ -41586,6 +41586,10 @@
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/storage/bridge)
+"qKT" = (
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/turf/simulated/wall/r_wall/hull,
+/area/maintenance/firstdeck/centralstarboard)
 "qUG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -61354,7 +61358,7 @@ aaa
 aaa
 abx
 aaB
-aaB
+qKT
 aaB
 aaB
 aaB

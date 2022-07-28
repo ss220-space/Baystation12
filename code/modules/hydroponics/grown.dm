@@ -306,8 +306,8 @@
 /obj/item/reagent_containers/food/snacks/grown/lime
 	plantname = "lime"
 
-/obj/item/reagent_containers/food/snacks/grown/lemone
-	plantname = "lemone"
+/obj/item/reagent_containers/food/snacks/grown/lemon
+	plantname = "lemon"
 
 /obj/item/reagent_containers/food/snacks/fruit_slice
 	name = "fruit slice"
