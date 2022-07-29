@@ -172,7 +172,7 @@
 	taste_description = "sludge"
 	reagent_state = LIQUID
 	color = "#8080ff"
-	metabolism = REM * 0.5
+	metabolism = REM * 0.1
 	scannable = 1
 	flags = IGNORE_MOB_SIZE
 	value = 3.9
@@ -180,15 +180,16 @@
 /datum/reagent/cryoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_CRYO, 1)
 	if(M.bodytemperature < 170)
-		M.adjustCloneLoss(-100 * removed)
-		M.add_chemical_effect(CE_OXYGENATED, 1)
-		M.heal_organ_damage(30 * removed, 30 * removed)
-		M.add_chemical_effect(CE_PULSE, -2)
-		if(ishuman(M))
-			var/mob/living/carbon/human/H = M
-			for(var/obj/item/organ/internal/I in H.internal_organs)
-				if(!BP_IS_ROBOTIC(I))
-					I.heal_damage(20*removed)
+		for(!(/datum/reagent/clonexadone in M.reagents.reagent_list))
+			M.adjustCloneLoss(-100 * removed)
+			M.add_chemical_effect(CE_OXYGENATED, 1)
+			M.heal_organ_damage(30 * removed, 30 * removed)
+			M.add_chemical_effect(CE_PULSE, -2)
+			if(ishuman(M))
+				var/mob/living/carbon/human/H = M
+				for(var/obj/item/organ/internal/I in H.internal_organs)
+					if(!BP_IS_ROBOTIC(I))
+						I.heal_damage(20*removed)
 
 
 /datum/reagent/clonexadone
@@ -197,7 +198,7 @@
 	taste_description = "slime"
 	reagent_state = LIQUID
 	color = "#80bfff"
-	metabolism = REM * 0.5
+	metabolism = REM * 0.1
 	scannable = 1
 	flags = IGNORE_MOB_SIZE
 	heating_products = list(/datum/reagent/cryoxadone, /datum/reagent/sodium)
@@ -224,6 +225,7 @@
 	taste_description = "metallic sludge"
 	reagent_state = LIQUID
 	color = "#c2c2d6"
+	metabolism = REM * 0.2
 	scannable = 1
 	flags = IGNORE_MOB_SIZE
 
