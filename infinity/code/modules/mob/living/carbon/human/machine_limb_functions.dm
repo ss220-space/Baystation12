@@ -1,5 +1,5 @@
 /datum/species/machine
-	inherent_verbs = list(/mob/living/carbon/human/proc/detach_limb, /mob/living/carbon/human/proc/attach_limb)
+	inherent_verbs = list(/mob/living/carbon/human/proc/detach_limb, /mob/living/carbon/human/proc/attach_limb, /mob/living/carbon/human/proc/IPC_change_screen, /mob/living/carbon/human/proc/IPC_display_text, /mob/living/carbon/human/proc/IPC_toggle_off_screen)
 
 /mob/living/carbon/human/proc/detach_limb()
 	set category = "Abilities"
@@ -91,3 +91,84 @@
 
 	visible_message("<span class='notice'>\The [src] attaches \the [O] to \his body!</span>",
 			"<span class='notice'>You attach \the [O] to your body!</span>")
+
+
+/mob/living/carbon/human/proc/IPC_change_screen()
+	set category = "Abilities"
+	set name = "Change IPC Screen"
+	set desc = "Allow change monitor type"
+	var/obj/item/organ/external/head/R = src.get_organ(BP_HEAD)
+	var/datum/robolimb/robohead = all_robolimbs[R.model]
+	if(stat)
+		return
+
+	if(R.is_stump() || R.is_broken() || !R)
+		return
+	if(robohead.is_monitor)
+		var/list/all_fhairs = typesof(/datum/sprite_accessory/facial_hair/ipc) - /datum/sprite_accessory/facial_hair/ipc
+		var/list/fhairs = list()
+
+		for(var/x in all_fhairs)
+			var/datum/sprite_accessory/facial_hair/H = new x
+			fhairs.Add(H.name)
+			qdel(H)
+
+		var/new_style = input("Please select screen", "Screen Menu",f_style)  as null|anything in fhairs
+
+		if(new_style)
+			f_style = new_style
+		update_hair()
+		R.set_light(0.2, 1, 2, 2)
+	else
+		to_chat(src,"<span class='warning'>You should have a compatible head monitor to change screen.</span>")
+
+
+/mob/living/carbon/human/proc/IPC_display_text()
+	set category = "Abilities"
+	set name = "Display Text On Screen"
+	set desc = "Display text on your monitor"
+	var/obj/item/organ/external/head/R = src.get_organ(BP_HEAD)
+	var/datum/robolimb/robohead = all_robolimbs[R.model]
+	if(stat)
+		return
+
+	if(R.is_stump() || R.is_broken() || !R)
+		return
+	var/S
+	if(robohead.is_monitor)
+		S = input("Write something to display on your screen:", "Display Text") as text|null
+	else
+		to_chat(usr, "<span class='warning'>Your head has no screen!</span>")
+
+	if(!length(S))
+		return
+
+	robohead.display_text = S
+	f_style = "Text"
+	R.set_light(0.2, 1, 2, 2)
+	update_hair()
+
+	var/skipface = FALSE
+	if(head)
+		skipface = head.flags_inv & HIDEFACE
+	if(wear_mask)
+		skipface |= wear_mask.flags_inv & HIDEFACE
+
+	if(robohead.is_monitor && !skipface) // we still text even tho the screen may be broken or hidden
+		custom_emote(VISIBLE_MESSAGE, "отображает на экране, [S]")
+
+/mob/living/carbon/human/proc/IPC_toggle_off_screen()
+	set category = "Abilities"
+	set name = "Toggle IPC Screen Off"
+	set desc = "Allow toggle off monitor"
+	var/obj/item/organ/external/head/R = src.get_organ(BP_HEAD)
+	var/datum/robolimb/robohead = all_robolimbs[R.model]
+	if(stat)
+		return
+
+	if(R.is_stump() || R.is_broken() || !R)
+		return
+	if(robohead.is_monitor)
+		f_style = "Off"
+		R.set_light(0, 0)
+		update_hair()
