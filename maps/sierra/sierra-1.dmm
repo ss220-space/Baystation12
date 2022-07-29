@@ -13053,6 +13053,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
+/obj/machinery/honey_extractor,
 /turf/simulated/floor/tiled,
 /area/hydroponics/storage)
 "ud" = (
@@ -13374,6 +13375,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
+/obj/machinery/seed_storage/garden,
 /turf/simulated/floor/tiled,
 /area/hydroponics/storage)
 "uH" = (
@@ -19733,9 +19735,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vacant/monitoring)
 "Fg" = (
@@ -23221,7 +23220,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/obj/machinery/smartfridge/drying_rack,
+/obj/structure/closet/secure_closet/hydroponics_sierra,
 /turf/simulated/floor/tiled,
 /area/hydroponics/storage)
 "KC" = (
@@ -29834,7 +29833,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
 	},
-/obj/structure/closet/secure_closet/hydroponics_sierra,
+/obj/machinery/smartfridge/drying_rack,
 /turf/simulated/floor/tiled,
 /area/hydroponics/storage)
 "WB" = (
@@ -31397,7 +31396,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
-/obj/machinery/honey_extractor,
+/obj/machinery/vending/hydronutrients,
 /turf/simulated/floor/tiled,
 /area/hydroponics/storage)
 "ZV" = (
