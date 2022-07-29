@@ -5,7 +5,7 @@
 	id = WEBHOOK_SUBMAP_LOADED_ASCENT_INF
 
 /decl/submap_archetype/ascent_seedship_inf
-	descriptor = "Ascent's Colony Ship"
+	descriptor = "Ascent Colony Ship"
 	map = DAMAGED_ASCENT_COLONY_SHIP_NAME
 	blacklisted_species = null
 	whitelisted_species = null
