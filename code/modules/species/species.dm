@@ -738,11 +738,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 			if(gender == FEMALE && S.gender == MALE)
 				continue
 			if(S.species_allowed && !(get_bodytype() in S.species_allowed))
-				var/datum/species/species
-				if(species.species_flags && SPECIES_ALL_ROBOPARTS)
-					break
-				else
-					continue
+				continue
 			if(S.subspecies_allowed && !(name in S.subspecies_allowed))
 				continue
 			ADD_SORTED(facial_hair_style_by_gender, facialhairstyle, /proc/cmp_text_asc)
