@@ -30,8 +30,8 @@
 			if(acell && acell.cell)
 				adherent_cell = acell.cell
 
-			if(adherent_cell && adherent_cell.charge <= 1500)
-				to_chat(src, SPAN_WARNING("Your cell charge is too low for this action"))
+			if(adherent_cell && adherent_cell.charge <= 2000)
+				to_chat(src, SPAN_WARNING("Your cell charge is too low for this action."))
 				return
 
 			if(ishuman(target_human))
@@ -46,18 +46,18 @@
 			playsound(loc, 'sound/effects/snap.ogg', 50, 1)
 
 			if(target_cell)
-				if(target_cell.maxcharge > (target_cell.charge + 1500))
-					target_cell.charge += 1500
+				if(target_cell.maxcharge > (target_cell.charge + 2000))
+					target_cell.charge += 2000
 				else
 					target_cell.charge = target_cell.maxcharge
 				to_chat(target, SPAN_NOTICE("<b>Your [target_cell] has been charged.</b>"))
-			adherent_cell.charge -= 1500
+			adherent_cell.charge -= 2000
 			if(istype(target_human) && target_human.species.name == SPECIES_ADHERENT)
 				next_click = world.time + 2 SECONDS
 				return
 			if(isrobot(target))
 				target.apply_damage(100, BURN, def_zone = src.zone_sel.selecting)
-				visible_message(SPAN_DANGER("[adherent] touches [target] with bright electrical arc connecting them"))
+				visible_message(SPAN_DANGER("[adherent] touches [target] with bright electrical arc connecting them."))
 				to_chat(target, SPAN_DANGER("<b>You detect damage to your components!</b>"))
 			else if(ishuman(target))
 				target.electrocute_act(100, src, def_zone = src.zone_sel.selecting)
