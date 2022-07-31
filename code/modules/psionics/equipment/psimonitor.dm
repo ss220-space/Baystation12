@@ -115,3 +115,24 @@
 
 /obj/machinery/psi_monitor/proc/report_violation(var/obj/item/implant/psi_control/implant, var/stress)
 	psi_violations += "Sigma [round(stress/10)] event - [implant.imp_in.name]."
+	
+/obj/item/storage/briefcase/psi_monitor
+	name = "\improper Foundation briefcase"
+	desc = "A handsome black leather briefcase embossed with a stylized radio telescope."
+	icon_state = "fbriefcase"
+	item_state = "fbriefcase"
+	startswith = list(
+		/obj/item/implantcase/explosive = 2,
+		/obj/item/implantcase/tracking = 2,
+		/obj/item/implant/psi_control,
+		/obj/item/implanter/psi,
+		/obj/item/implanter,
+		/obj/item/implantpad,
+		)
+
+/obj/item/paper/psi_monitor
+	name = "Psi-monitor usage"
+	info = "<center><ntlogo></center><br><center><b>Руководство по использованию импланта пси-контроля</b><center><br><small>Настоящее руководство содержит сведения о должном использовании системы контроля псионических спобоностей, для старших сотрудников службы Защиты Активов объектов НаноТрейзен</small><br><br><b>Часть первая - имплант пси-контроля</b><br><br>Псионический имплант-подавитель класса L2 - последняя разработка Фонда Кучулейн для обеспечения контроля над особо опасными псиониками уровня мастера и выше.<br>Данный имплпант оборудован несколькими режимами работы:<br><br>Автоматический режим - осуществляет переключение между режимами, в зависимости от уровня тревоги на объекте.<br>Режим подавления - осуществляет активное подавление псионияеских способностей путём нарушения работы участков мозга, отвечающих за накопление псионической энергии. Также имеет дополнительную настройку: шоковый режим, посылающий крайне болезненный электрический импульс в мозг носителя при попытке применения пси-способностей.<br>Режим записи - отключение всех фукций импланта, за исключением записи попыток нарушения его работы через ЭМИ или хирургичекое вмешательство.<br><br><b>Часть вторая - монитор псионических имплантов</b><br><br>Согласно протоколу безопасности для объектов НаноТрейзен каждый объект должен быть оборудован монитором псионических имплантов, совместимым с имплантами класса L2. Данный монитор должен быть установлен в кабинете Главы Службы Безопасности Объекта, для управления установленными имплантами без необходимости хирургического удаления."
+	icon = 'maps/sierra/icons/obj/uniques.dmi'
+	icon_state = "paper_words"
+	stamps = "<HR><i>This paper has been stamped by the Central Command.</i>"
