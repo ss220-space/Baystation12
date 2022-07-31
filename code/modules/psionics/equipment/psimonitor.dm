@@ -118,7 +118,7 @@
 	
 /obj/item/storage/briefcase/psi_monitor
 	name = "\improper Foundation briefcase"
-	desc = "A handsome black leather briefcase embossed with a stylized radio telescope."
+	desc = "A handsome black leather briefcase. On its front side embossed the symbol of the Cuchulain Foundation - a green radio telescope."
 	icon_state = "fbriefcase"
 	item_state = "fbriefcase"
 	startswith = list(
