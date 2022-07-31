@@ -124,7 +124,7 @@
 	startswith = list(
 		/obj/item/implantcase/explosive = 2,
 		/obj/item/implantcase/tracking = 2,
-		/obj/item/implant/psi_control,
+		/obj/item/implant/psi_control = 2,
 		/obj/item/implanter/psi,
 		/obj/item/implanter,
 		/obj/item/implantpad,
