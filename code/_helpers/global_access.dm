@@ -115,6 +115,8 @@
 			return global.SSnano;
 		if("SSobj")
 			return global.SSobj;
+		if("SSorbit")
+			return global.SSorbit;
 		if("SSpersistence")
 			return global.SSpersistence;
 		if("SSplants")
@@ -897,7 +899,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-		
+
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ANTAG_FREQS")
@@ -1014,6 +1016,8 @@
 			global.SSnano=newval;
 		if("SSobj")
 			global.SSobj=newval;
+		if("SSorbit")
+			global.SSorbit=newval;
 		if("SSpersistence")
 			global.SSpersistence=newval;
 		if("SSplants")
@@ -1796,7 +1800,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-		
+
 /var/list/_all_globals=list(
 	"ANTAG_FREQS",
 	"AWAY_FREQS_ASSIGNED",
@@ -1855,6 +1859,7 @@
 	"SSmobs",
 	"SSnano",
 	"SSobj",
+	"SSorbit",
 	"SSpersistence",
 	"SSplants",
 	"SSprocessing",

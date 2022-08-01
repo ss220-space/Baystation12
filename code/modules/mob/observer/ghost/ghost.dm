@@ -70,6 +70,8 @@ var/global/list/image/ghost_sightless_images = list() //this is a list of images
 
 	ghost_multitool = new(src)
 
+	update_floating()
+
 	GLOB.ghost_mob_list += src
 
 	..()
@@ -315,14 +317,31 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	stop_following()
 	forceMove(target_turf)
 
+/mob/observer/ghost/update_floating()
+	if(orbiting)
+		// Starting orbit already resets animation, we only need to update variables.
+		is_floating = 0
+		floatiness = 0
+	else
+		make_floating(1)
+	return
+
+
 /mob/observer/ghost/start_following(var/atom/a)
 	..()
 	to_chat(src, "<span class='notice'>Now following \the [following].</span>")
+	var/icon/I = icon(a.icon, a.icon_state, a.dir)
+	var/orbit_size = (I.Width() + I.Height()) * 0.5
+	orbit_size -= (orbit_size / WORLD_ICON_SIZE) * (WORLD_ICON_SIZE * 0.25)
+	orbit(a, orbit_size, TRUE, 20)
+	update_floating()
 	verbs += /mob/observer/ghost/verb/scan_target
 
 /mob/observer/ghost/stop_following()
 	if(following)
 		to_chat(src, "<span class='notice'>No longer following \the [following]</span>")
+		stop_orbit()
+		update_floating()
 		verbs -= /mob/observer/ghost/verb/scan_target
 	..()
 
@@ -332,6 +351,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, "<span class='warning'>You cannot follow something standing on holy grounds!</span>")
 		return
 	..()
+
+/mob/observer/ghost/stop_orbit()
+	. = ..()
+	pixel_y = default_pixel_y
+	pixel_x = default_pixel_x
+	transform = null
 
 /mob/observer/ghost/StoreMemory()
 	set hidden = 1

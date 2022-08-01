@@ -81,11 +81,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 /mob/proc/update_floating()
 
-	if(anchored || buckled || check_solid_ground())
-		make_floating(0)
-		return
-
-	if(Check_Shoegrip() && Check_Dense_Object())
+	if(anchored || buckled || check_solid_ground() || Check_Shoegrip())
 		make_floating(0)
 		return
 
@@ -271,6 +267,8 @@ note dizziness decrements automatically in the mob's Life() proc.
 	anim(src,'icons/mob/mob.dmi',,"phaseout",,dir)
 
 /mob/living/proc/on_structure_offset(var/offset = 0)
+	if(is_floating) // Do not reset my floaty animation
+		return
 	if(offset)
 		var/check = default_pixel_z + offset
 		if(pixel_z != check)
