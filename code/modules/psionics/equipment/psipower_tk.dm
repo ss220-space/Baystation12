@@ -90,6 +90,9 @@
 			sparkle()
 		owner.drop_from_inventory(src)
 
+	if(!user.psi.spend_power(2)) // So you can't spam-click kill everything that moves
+		return FALSE
+
 /obj/item/psychic_power/telekinesis/proc/sparkle()
 	set waitfor = 0
 	if(focus)
