@@ -25,7 +25,7 @@
 	flags_inv = 0
 	body_parts_covered = 0
 
-	max_boosted_faculties = 1
+	max_boosted_faculties = 2
 	boosted_rank = PSI_RANK_MASTER
 	unboosted_rank = PSI_RANK_OPERANT
 	boosted_psipower = 50
