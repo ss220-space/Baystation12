@@ -7,6 +7,7 @@ SUBSYSTEM_DEF(supply)
 
 	//supply points
 	var/points = 50
+	var/pack_price_modifier = 1 //The modifier multiplied to the value of cargo pack prices.
 	var/points_per_process = 1
 	var/points_per_slip = 2
 	var/point_sources = list()

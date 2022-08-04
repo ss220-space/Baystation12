@@ -94,7 +94,7 @@
 		startswith = list(/obj/item/clothing/mask/breath/scba = 1,
 						/obj/item/tank/emergency/oxygen = 1,
 						/obj/item/reagent_containers/hypospray/autoinjector/pouch_auto/inaprovaline = 1,
-						/obj/item/reagent_containers/hypospray/autoinjector/pain = 1,
+						/obj/item/reagent_containers/hypospray/autoinjector/pouch_auto/deletrathol = 1,
 						/obj/item/stack/medical/advanced/bruise_pack = 1,
 						/obj/item/device/flashlight/flare/glowstick = 1,
 						/obj/item/reagent_containers/food/snacks/proteinbar = 1,

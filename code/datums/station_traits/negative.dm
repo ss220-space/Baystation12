@@ -30,3 +30,15 @@
 
 /datum/station_trait/cargo_penalty/on_round_start()
 	SSsupply.points *= 0.5 // Normally you have 50.
+
+
+/datum/station_trait/cargo_highcost
+	name = "Cargo Highcost"
+	trait_type = STATION_TRAIT_NEGATIVE
+	weight = 3
+	show_in_report = TRUE
+	report_message = "В связи с изменением цен на товары, стоимость заказов пересмотрена - свертесь с прайсом"
+
+/datum/station_trait/cargo_highcost/on_round_start()
+	var/costamp = pick(1.3,1.4,1.5,1.6,1.8,1.9,2,2.1)
+	SSsupply.pack_price_modifier *= costamp

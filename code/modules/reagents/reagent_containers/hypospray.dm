@@ -222,7 +222,7 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/inaprovaline
 	name = "autoinjector (inaprovaline)"
-	band_color = COLOR_CYAN 
+	band_color = COLOR_CYAN
 	starts_with = list(/datum/reagent/inaprovaline = 5)
 
 /obj/item/reagent_containers/hypospray/autoinjector/combatpain
