@@ -3,7 +3,7 @@
 	trait_type = STATION_TRAIT_NEGATIVE
 	weight = 2
 	show_in_report = TRUE
-	report_message = "Из-за расстояния до станции снабжения, шаттл снабжения будет иметь большую длительность доставки до вашего местоположения."
+	report_message = "Из-за отдаленности до станции снабжения, доставка грузов на шаттле замедленна."
 	blacklist = list(/datum/station_trait/quick_shuttle)
 
 /datum/station_trait/slow_shuttle/on_round_start()
