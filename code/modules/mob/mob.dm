@@ -677,7 +677,7 @@
 		if(client.holder || isghost(client.mob))
 			stat("Location:", "([x], [y], [z]) [loc]")
 
-	if(client.holder)
+	if(client.holder && client.holder.rights != R_MENTOR) //Mentors don't deserve the MC panel
 		if(statpanel("MC"))
 			stat("CPU:","[world.cpu]")
 			stat("Instances:","[world.contents.len]")

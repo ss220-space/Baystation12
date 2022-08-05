@@ -46,6 +46,9 @@ LOG_SAY
 ## log admin actions
 LOG_ADMIN
 
+## log mentor actions
+LOG_MENTOR
+
 ## log client access (logon/logoff)
 LOG_ACCESS
 
@@ -75,6 +78,9 @@ LOG_ATTACK
 
 ## log admin warning messages
 ##LOG_ADMINWARN  ## Also duplicates a bunch of other messages.
+
+## Enable memos for admins and mentors
+ENABLE_MEMOS
 
 ## Log all timers on timer auto reset
 # LOG_TIMERS_ON_BUCKET_RESET

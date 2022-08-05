@@ -60,6 +60,12 @@ GLOBAL_VAR_INIT(log_end, (ascii2text(13))) // CRLF for all logs
 		rustg_log_write(GLOB.world_game_log, "ADMIN: [text][GLOB.log_end]")
 //		send2adminirc(text, 1)//inf
 
+// i think need call Egorka zu arbeit
+/proc/log_mentor(text)
+	GLOB.mentor_log.Add(text)
+	if (config.log_mentor)
+		game_log("MENTOR", text)
+
 /proc/log_debug(text)
 	if (config.log_debug)
 		rustg_log_write(GLOB.world_game_log, "DEBUG: [text][GLOB.log_end]")

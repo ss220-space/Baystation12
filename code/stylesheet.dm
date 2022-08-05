@@ -36,6 +36,8 @@ em						{font-style: normal;font-weight: bold;}
 /* Admin: Channels */
 .mod_channel			{color: #735638;	font-weight: bold;}
 .mod_channel .admin		{color: #b82e00;	font-weight: bold;}
+.mentor_channel			{color: #735638;	font-weight: bold;}
+.mentor_channel .admin	{color: #b82e00;	font-weight: bold;}
 .admin_channel			{color: #ff5097;	font-weight: bold;}
 
 .staff_channel			{color: #a66300;	font-weight: bold;}
@@ -97,6 +99,7 @@ h1.alert, h2.alert		{color: #000080;}
 .rose					{color: #ff5050;}
 .info					{color: #0000cc;}
 .debug					{color: #ff00ff;}
+.mentor                 {color: #e236d8;}
 .notice					{color: #000099;}
 .subtle					{color: #000099; font-size: 75%; font-style: italic;}
 .alium					{color: #00ff00;}

@@ -205,6 +205,8 @@
 			return global.admin_verbs_fun;
 		if("admin_verbs_hideable")
 			return global.admin_verbs_hideable;
+		if("admin_verbs_mentors")
+			return global.admin_verbs_mentors;
 		if("admin_verbs_judge")
 			return global.admin_verbs_judge;
 		if("admin_verbs_mod")
@@ -1096,6 +1098,8 @@
 			global.admin_verbs_fun=newval;
 		if("admin_verbs_hideable")
 			global.admin_verbs_hideable=newval;
+		if("admin_verbs_mentors")
+			global.admin_verbs_mentors=newval;
 		if("admin_verbs_judge")
 			global.admin_verbs_judge=newval;
 		if("admin_verbs_mod")
@@ -1884,6 +1888,7 @@
 	"admin_verbs_default",
 	"admin_verbs_fun",
 	"admin_verbs_hideable",
+	"admin_verbs_mentors",
 	"admin_verbs_judge",
 	"admin_verbs_mod",
 	"admin_verbs_paranoid_debug",

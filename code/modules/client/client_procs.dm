@@ -60,6 +60,10 @@
 		cmd_admin_pm(C, null, ticket)
 		return
 
+	//Mentor PM
+	if(href_list["mentorreply"])
+		mentorpm(href_list["mentorreply"])
+
 	if(href_list["irc_msg"])
 		if(!holder && received_irc_pm < world.time - 6000) //Worse they can do is spam IRC for 10 minutes
 			to_chat(usr, "<span class='warning'>You are no longer able to use this, it's been more then 10 minutes since an admin on IRC has responded to you</span>")

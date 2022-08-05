@@ -50,6 +50,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/manage_silicon_laws,	// Allows viewing and editing silicon laws. ,
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,			//admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
+	/client/proc/mentor_memo,			//Ditto but for mentors,
 	/client/proc/dsay,					//talk in deadchat using our ckey,
 	/datum/admins/proc/toggleooc,		//toggles ooc on/off for everyone,
 	/datum/admins/proc/toggleaooc,		//toggles aooc on/off for everyone,
@@ -61,6 +62,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_say,			//admin-only ooc chat,
 	/datum/admins/proc/togglehubvisibility, //toggles visibility on the BYOND Hub,
 	/datum/admins/proc/PlayerNotes,
+	/client/proc/cmd_mentor_say,
 //inf	/datum/admins/proc/show_player_info,
 	/client/proc/free_slot_submap,
 	/client/proc/free_slot_crew,			//frees slot for chosen job,
@@ -330,6 +332,7 @@ var/list/admin_verbs_mod = list(
 //INF	/client/proc/player_panel_new,
 	/client/proc/admin_ghost,			// allows us to ghost/reenter body at will,
 //INF	/client/proc/cmd_mod_say,
+	/client/proc/cmd_mentor_say,
 	/datum/admins/proc/show_player_info,
 	/client/proc/dsay,
 	/datum/admins/proc/show_skills,	// Right-click skill menu,
@@ -352,9 +355,17 @@ var/list/admin_verbs_xeno = list(
 	/datum/admins/proc/xeno_whitelist_panel
 )
 //[/INF]
+var/list/admin_verbs_mentors = list(
+	/client/proc/cmd_mentor_say,
+	/client/verb/mentorpm_mob,
+	/client/verb/mentorpm_panel,
+	/client/proc/mentor_memo,
+)
+
 /client/proc/add_admin_verbs()
 	if(holder)
-		verbs += admin_verbs_default
+		if(holder.rights != R_MENTOR) //If we ONLY have mentor rights then we don't deserve the default perms
+			verbs += admin_verbs_default
 		if(holder.rights & R_BUILDMODE)		verbs += /client/proc/togglebuildmodeself
 		if(holder.rights & R_ADMIN)			verbs += admin_verbs_admin
 		if(holder.rights & R_BAN)			verbs += admin_verbs_ban
@@ -371,6 +382,7 @@ var/list/admin_verbs_xeno = list(
 		if(holder.rights & R_SOUNDS)		verbs += admin_verbs_sounds
 		if(holder.rights & R_SPAWN)			verbs += admin_verbs_spawn
 		if(holder.rights & R_MOD)			verbs += admin_verbs_mod
+		if(holder.rights & R_MENTOR)        verbs += admin_verbs_mentors
 		if(holder.rights & R_XENO)			verbs += admin_verbs_xeno		//INF
 
 /client/proc/remove_admin_verbs()

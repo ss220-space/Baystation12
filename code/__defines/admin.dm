@@ -1,11 +1,12 @@
 // A set of constants used to determine which type of mute an admin wishes to apply.
-#define MUTE_IC        0x1
-#define MUTE_OOC       0x2
-#define MUTE_PRAY      0x4
-#define MUTE_ADMINHELP 0x8
-#define MUTE_DEADCHAT  0x10
-#define MUTE_AOOC      0x20
-#define MUTE_ALL       0xFFFF
+#define MUTE_IC         0x1
+#define MUTE_OOC        0x2
+#define MUTE_PRAY       0x4
+#define MUTE_ADMINHELP  0x8
+#define MUTE_DEADCHAT   0x10
+#define MUTE_AOOC       0x20
+#define MUTE_MENTOR     0x40
+#define MUTE_ALL        0xFFFF
 
 // Some constants for DB_Ban
 #define BANTYPE_PERMA       1
@@ -31,6 +32,7 @@
 #define R_SOUNDS        0x800
 #define R_SPAWN         0x1000
 #define R_MOD           0x2000
+#define R_MENTOR        0x5000
 #define R_XENO	        0x4000	//INF
 #define R_HOST          0x8000 //higher than this will overflow
 #define R_INVESTIGATE   (R_ADMIN|R_MOD)
