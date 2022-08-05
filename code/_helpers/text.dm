@@ -381,6 +381,22 @@ proc/TextPreview(var/string,var/len=40)
 		return tagdesc
 	return icon2html(icon('./icons/chattags.dmi', tagname), world, realsize=TRUE, class="text_tag")
 
+/proc/text_badge(client/C = null)
+	if(!C)
+		return null
+	var/badge_name
+	if(C.holder)
+		//No badges when deadminned
+		if(C.is_stealthed())
+			return null
+		//Admin badge otherwise
+		if(C.holder.rank)
+			badge_name = C.holder.rank
+	if(badge_name)
+		return icon2html(icon('./icons/chatbadges.dmi', badge_name), world, realsize=TRUE, class="text_tag")
+	return null
+
+
 /proc/contains_az09(var/input)
 	for(var/i=1, i<=length(input), i++)
 		var/ascii_char = text2ascii(input,i)
