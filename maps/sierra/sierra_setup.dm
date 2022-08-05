@@ -50,7 +50,7 @@
 		welcome_text += "<br>Сигналов бедствия не обнаружено.<br />"
 
 		if(SSstation.station_traits.len)
-			welcome_text += "<hr><b>Выявленные нештатные ситуации в смене:</b><BR>"
+			welcome_text += "<hr><b>Выявленные нештатные ситуации на смене:</b><BR>"
 			for(var/i in SSstation.station_traits)
 				var/datum/station_trait/station_trait_iterator = i
 				if(!station_trait_iterator.show_in_report)
