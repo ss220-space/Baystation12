@@ -3,4 +3,4 @@
 	trait_type = STATION_TRAIT_NEUTRAL
 	weight = 3
 	show_in_report = TRUE
-	report_message = "Планеты в вашей системе могут иметь более необычные атмосферные характеристики."
+	report_message = "Планеты вашей системы обладают необычными атмосферными характеристиками."
