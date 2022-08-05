@@ -31,7 +31,7 @@
 	trait_type = STATION_TRAIT_POSITIVE
 	weight = 3
 	show_in_report = TRUE
-	report_message = "В связи с изменением цен на товары, стоимость заказов пересмотрена - свертесь с прайсом"
+	report_message = "В связи с изменением цен на товары, стоимость заказов пересмотрена - сверьтесь с прайсом"
 
 /datum/station_trait/cargo_lowcost/on_round_start()
 	var/costamp = pick(0.9,0.8)
