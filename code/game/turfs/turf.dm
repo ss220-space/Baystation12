@@ -189,12 +189,9 @@ var/const/enterloopsanity = 100
 		var/mob/M = A
 		if(!M.check_solid_ground())
 			inertial_drift(M)
-			//we'll end up checking solid ground again but we still need to check the other things.
-			//Ususally most people aren't in space anyways so hopefully this is acceptable.
-			M.update_floating()
 		else
 			M.inertia_dir = 0
-			M.make_floating(0) //we know we're not on solid ground so skip the checks to save a bit of processing
+		M.update_floating()
 
 	var/objects = 0
 	if(A && (A.movable_flags & MOVABLE_FLAG_PROXMOVE))
