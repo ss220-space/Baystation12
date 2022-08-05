@@ -360,6 +360,7 @@ var/list/admin_verbs_mentors = list(
 	/client/verb/mentorpm_mob,
 	/client/verb/mentorpm_panel,
 	/client/proc/mentor_memo,
+	/client/proc/deadmin_self,
 )
 
 /client/proc/add_admin_verbs()

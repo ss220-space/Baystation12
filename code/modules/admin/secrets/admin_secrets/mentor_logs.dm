@@ -10,4 +10,6 @@
 		dat += "<li>[l]</li>"
 	if(!GLOB.mentor_log.len)
 		dat += "No mentors have done anything this round!"
-	show_browser(user, dat, "window=mentor_log")
+	var/datum/browser/popup = new(user, "mentor_log", "Mentor Log")
+	popup.set_content(dat)
+	popup.open()

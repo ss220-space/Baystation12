@@ -27,7 +27,9 @@
 		return
 
 	msg = sanitize(msg)
-	log_admin("MENTOR: [key_name(src)] : [msg]")
+	msg = emoji_parse_by_user(msg, src)
+	log_staff_say("[key_name(src)] : [msg]")
+
 
 	if (!msg)
 		return
@@ -36,8 +38,8 @@
 	if(check_rights(R_ADMIN, 0))
 		sender_name = "<span class='admin'>[sender_name]</span>"
 	for(var/client/C in GLOB.admins)
-		to_chat(C, "<span class='mentor_channel'>" + create_text_tag("msay", "MSAY:", C) + " <span class='name'>[sender_name]</span>([admin_jump_link(mob, C.holder)]): <span class='message linkify'>[msg]</span></span>")
-	SSstatistics.add_field_details("admin_verb","MS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+		to_chat(C, "<span class='staff_channel'>" + create_text_tag("staff", "STAFF:", C) + " <span class='name'>[sender_name]</span>([admin_jump_link(mob, C.holder)]): <span class='message linkify'>[msg]</span></span>")
+	SSstatistics.add_field_details("admin_verb","MSS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
 /client/proc/cmd_staff_say(msg as text)
