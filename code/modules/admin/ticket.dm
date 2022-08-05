@@ -293,7 +293,7 @@ proc/get_open_ticket_by_client(var/datum/client_lite/owner)
 
 /client/verb/view_tickets()
 	set name = "View Tickets"
-	set category = "Admin"
+	set category = "Staffhelp"
 
 	var/datum/ticket_panel/ticket_panel = new()
 	ticket_panels[src] = ticket_panel

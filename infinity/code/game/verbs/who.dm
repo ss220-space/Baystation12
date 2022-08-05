@@ -113,7 +113,7 @@
 	default_value = GLOB.PREF_NO
 
 /client/verb/staffwho()
-	set category = "Admin"
+	set category = "Staffhelp"
 	set name = "Staffwho"
 
 	var/list/msg = list()
