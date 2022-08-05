@@ -32,8 +32,8 @@
 #define R_SOUNDS        0x800
 #define R_SPAWN         0x1000
 #define R_MOD           0x2000
-#define R_MENTOR        0x5000
 #define R_XENO	        0x4000	//INF
+#define R_MENTOR        0x5000
 #define R_HOST          0x8000 //higher than this will overflow
 #define R_INVESTIGATE   (R_ADMIN|R_MOD)
 
