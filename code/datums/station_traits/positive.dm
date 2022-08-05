@@ -24,7 +24,7 @@
 	trait_type = STATION_TRAIT_POSITIVE
 	weight = 2
 	show_in_report = TRUE
-	report_message = "Crew survival boxes оснащены дополнительным оборудованием."
+	report_message = "Crew survival boxes оснащенные дополнительным оборудованием."
 
 /datum/station_trait/cargo_lowcost
 	name = "Cargo Lowcost"
