@@ -31,22 +31,23 @@
 	var/is_stealthed = C.is_stealthed()
 
 	var/ooc_style = "everyone"
-	if(holder && !is_stealthed)
+	if(holder && !is_stealthed) // You have an admin datum AND not stealth-admined.
 		ooc_style = "elevated"
-		if(holder.rights & R_MOD)
-			ooc_style = "moderator"
-		if(holder.rights & R_DEBUG)
-			ooc_style = "developer"
-		if(holder.rights & R_ADMIN)
+		if(holder.rights & R_ADMIN) // You are an admin first of all.
 			ooc_style = "admin"
+		else if(holder.rights & R_DEBUG) // Not an admin, but have debug? Developer color then.
+			ooc_style = "developer"
+		else if(holder.rights & R_MOD) // None of it applies? Become moderator-colored.
+			ooc_style = "moderator"
 	var/holder_rank = ""
 	if(holder && !is_stealthed)
 		holder_rank = "\[[holder.rank]\] "
 
+
 	for(var/client/target in GLOB.clients)
 		if(target.is_key_ignored(C.key)) // If we're ignored by this person, then do nothing.
 			continue
-		var/sent_message = "[create_text_tag("ooc", "OOC:", target)] <EM>" + "[holder_rank]" + "[C.key]:</EM> <span class='message linkify'>[message]</span>"
+		var/sent_message = "[create_text_tag("ooc", "OOC:", target)] [text_badge(C)]  <EM>" + "[holder_rank]" + "[C.key]:</EM> <span class='message linkify'>[message]</span>"
 		sent_message = emoji_parse_by_user(sent_message, C)//inf
 		if(!is_stealthed && C.prefs.ooccolor != initial(C.prefs.ooccolor))
 			receive_communication(C, target, "<font color='[C.prefs.ooccolor]'><span class='ooc'>[sent_message]</font></span>")

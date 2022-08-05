@@ -741,6 +741,22 @@ proc/dd_sortedTextList(list/incoming)
 						L[T] = TRUE
 		return L
 
+/**
+ * Returns a list of strings from a file. Ignores #
+ */
+/proc/file_to_list(path)
+	if(fexists(path))
+		var/list/lines = file2list(path)
+		var/list/output = list()
+		for(var/line in lines)
+			if(!length(line))
+				continue
+			if(copytext(line, 1, 2) == "#")
+				continue
+			output += line
+		return output
+
+
 //[INF]
 //Checks for specific types in specifically structured (Assoc "type" = TRUE) lists ('typecaches')
 /proc/is_type_in_typecache(atom/A, list/L)
