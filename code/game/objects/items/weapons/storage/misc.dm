@@ -193,7 +193,6 @@
 /obj/item/storage/music_tape_holder
 	name = "Tape holder"
 	desc = "It can hold a few tapes and screwdriwer."
-	icon = 'icons/obj/device.dmi'
 	icon_state = "tape_holder"
 	w_class = ITEM_SIZE_SMALL
 	max_w_class = ITEM_SIZE_SMALL //Don't worry, see can_hold[]

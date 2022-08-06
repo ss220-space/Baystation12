@@ -1030,12 +1030,6 @@
 "abY" = (
 /turf/simulated/floor/tiled,
 /area/hydroponics)
-"abZ" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
-/turf/simulated/floor/wood/walnut,
-/area/crew_quarters/cafe)
 "acc" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -3756,6 +3750,12 @@
 "agV" = (
 /obj/random/date_based/christmas/xmaslights,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/button/blast_door{
+	id_tag = "cafe";
+	name = "Cafe Shutters";
+	pixel_x = 26;
+	req_access = list("ACCESS_KITCHEN")
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/galley)
 "agX" = (
@@ -5520,13 +5520,6 @@
 "aks" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/machinery/button/blast_door{
-	id_tag = "cafe";
-	name = "Cafe Shutters";
-	pixel_x = 2;
-	pixel_y = -26;
-	req_access = list("ACCESS_KITCHEN")
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -7342,9 +7335,6 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -9291,14 +9281,12 @@
 /obj/machinery/light/spot{
 	dir = 8
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 10
-	},
+/obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/vending/cigarette{
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9
+	dir = 1
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -9320,9 +9308,6 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -9514,9 +9499,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -10930,9 +10912,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "atH" = (
@@ -11160,9 +11139,6 @@
 "auh" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/random/date_based/christmas/xmaslights,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "aui" = (
@@ -15049,12 +15025,6 @@
 "aAq" = (
 /turf/simulated/floor/tiled/dark/monotile,
 /area/hallway/primary/seconddeck/center)
-"aAr" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
-/turf/simulated/floor/wood/walnut,
-/area/crew_quarters/cafe)
 "aAs" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/no_grille,
@@ -16764,7 +16734,6 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/gym)
 "aDp" = (
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
@@ -19144,9 +19113,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 1
-	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "aHT" = (
@@ -19155,9 +19121,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "aHV" = (
@@ -20509,7 +20472,7 @@
 /obj/random/date_based/christmas/xmaslights,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 6
+	dir = 4
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -33664,9 +33627,6 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "bss" = (
@@ -34641,10 +34601,6 @@
 	},
 /turf/simulated/floor/wood/mahogany,
 /area/crew_quarters/cafe)
-"eaV" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/wood/walnut,
-/area/crew_quarters/cafe)
 "egu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -35007,11 +34963,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cafe)
-"eZe" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/wood/walnut,
-/area/crew_quarters/cafe)
 "eZw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -35219,6 +35170,9 @@
 "fIW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/machinery/media/music_writer{
+	pixel_x = 60
 	},
 /turf/simulated/floor/wood/ebony,
 /area/crew_quarters/bar)
@@ -35463,7 +35417,6 @@
 "gwu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "gww" = (
@@ -36606,9 +36559,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 5
-	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/cafe)
 "jVF" = (
@@ -37608,10 +37558,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/galley)
-"mJO" = (
-/obj/effect/floor_decal/spline/fancy/wood/corner,
-/turf/simulated/floor/wood/walnut,
-/area/crew_quarters/cafe)
 "mLP" = (
 /obj/machinery/light/navigation/delay2,
 /obj/structure/lattice,
@@ -38950,13 +38896,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
 /area/janitor)
-"qqp" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 8
-	},
-/turf/simulated/floor/wood/walnut,
-/area/crew_quarters/cafe)
 "qqt" = (
 /obj/machinery/alarm{
 	pixel_y = 24
@@ -40386,13 +40325,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/center)
-"tPP" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
-/turf/simulated/floor/wood/walnut,
-/area/crew_quarters/cafe)
 "tPU" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 6
@@ -41605,9 +41537,6 @@
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 4
 	},
-/obj/machinery/media/music_writer{
-	pixel_x = 28
-	},
 /obj/structure/table/steel_reinforced,
 /obj/item/storage/bar_fruit_jar{
 	pixel_y = 16;
@@ -41702,9 +41631,6 @@
 /area/crew_quarters/cafe)
 "xnj" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 4
-	},
 /obj/machinery/light,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -41752,19 +41678,16 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood/cee{
+	dir = 4
+	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "xwq" = (
@@ -57842,8 +57765,8 @@ aPc
 agV
 api
 lQj
-mJO
-abZ
+auo
+auo
 anF
 aqW
 atG
@@ -58044,7 +57967,7 @@ qNk
 aSw
 aSw
 xmy
-eZe
+aVY
 sQd
 mez
 arg
@@ -58246,7 +58169,7 @@ alp
 hOm
 avt
 aln
-eZe
+aVY
 oFT
 axQ
 anC
@@ -58448,7 +58371,7 @@ anR
 ajw
 alv
 jFQ
-eaV
+auo
 eTP
 gpb
 fDc
@@ -58852,11 +58775,11 @@ svT
 ajs
 avt
 jsV
-qqp
-tPP
-tPP
+aVY
+aVY
+aVY
 ark
-aAr
+auo
 xnj
 amq
 amq
