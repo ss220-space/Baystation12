@@ -11,7 +11,7 @@
 				if(MALE)
 					scream_sound = pick('infinity/sound/voice/pain_male_1.ogg','infinity/sound/voice/pain_male_2.ogg','infinity/sound/voice/pain_male_3.ogg')
 				if(FEMALE)
-					scream_sound = pick('infinity/sound/voice/agony_female_1.ogg','infinity/sound/voice/agony_female_1.ogg','infinity/sound/voice/agony_female_1.ogg')
+					scream_sound = pick('infinity/sound/voice/agony_female_1.ogg','infinity/sound/voice/agony_female_2.ogg','infinity/sound/voice/agony_female_3.ogg')
 			message = "кричит от боли!"
 		else
 			message = "издает громкое мычание!"
