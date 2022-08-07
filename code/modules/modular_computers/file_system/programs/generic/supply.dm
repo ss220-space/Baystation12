@@ -218,12 +218,12 @@
 		var/id = text2num(href_list["approve_order"])
 		var/datum/supply_order/SO = find_order_by_id(id, SSsupply.requestlist)
 		if(SO)
-			if(SO.object.cost >= SSsupply.points)
+			if(SO.object.get_cost() >= SSsupply.points)
 				to_chat(usr, "<span class='warning'>Not enough points to purchase \the [SO.object.name]!</span>")
 			else
 				SSsupply.requestlist -= SO
 				SSsupply.shoppinglist += SO
-				SSsupply.points -= SO.object.cost
+				SSsupply.points -= SO.object.get_cost()
 
 		else
 			to_chat(user, "<span class='warning'>Could not find order number [id] to approve.</span>")
@@ -245,7 +245,7 @@
 		var/datum/supply_order/SO = find_order_by_id(id, SSsupply.shoppinglist)
 		if(SO)
 			SSsupply.shoppinglist -= SO
-			SSsupply.points += SO.object.cost
+			SSsupply.points += SO.object.get_cost()
 		else
 			to_chat(user, "<span class='warning'>Could not find order number [id] to cancel.</span>")
 
@@ -306,7 +306,7 @@
 				continue
 			category.Add(list(list(
 				"name" = spc.name,
-				"cost" = spc.cost,
+				"cost" = spc.get_cost(),
 				"ref" = "\ref[spc]"
 			)))
 		category_contents[sp.name] = category
@@ -360,7 +360,7 @@
 		"id" = SO.ordernum,
 		"object" = SO.object.name,
 		"orderer" = SO.orderedby,
-		"cost" = SO.object.cost,
+		"cost" = SO.object.get_cost(),
 		"reason" = SO.reason,
 		"list_id" = list_id
 		))
