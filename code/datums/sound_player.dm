@@ -226,8 +226,7 @@ datum/sound_token/proc/PrivAddListener(var/atom/listener)
 /datum/sound_token/proc/PrivUpdateListenerLoc(var/atom/listener, var/update_sound = TRUE)
 	var/turf/source_turf = get_turf(source)
 	var/turf/listener_turf = get_turf(listener)
-
-	if (!source_turf || !listener_turf)
+	if(!istype(source_turf) || !istype(listener_turf))
 		return
 
 	var/distance = get_dist(source_turf, listener_turf)

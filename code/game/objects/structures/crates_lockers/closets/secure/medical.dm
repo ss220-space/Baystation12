@@ -14,7 +14,7 @@
 /obj/structure/closet/secure_closet/medical1
 	name = "medical equipment closet"
 	desc = "Filled with medical junk."
-	closet_appearance = /decl/closet_appearance/secure_closet/medical
+	icon_state = "med"
 	req_access = list(access_medical_equip)
 
 /obj/structure/closet/secure_closet/medical1/WillContain()
@@ -34,7 +34,7 @@
 	name = "anesthetics closet"
 	desc = "Used to knock people out."
 	req_access = list(access_surgery)
-	closet_appearance = /decl/closet_appearance/secure_closet/medical
+	icon_state = "med"
 
 /obj/structure/closet/secure_closet/medical2/WillContain()
 	return list(
@@ -45,7 +45,7 @@
 /obj/structure/closet/secure_closet/medical3
 	name = "medical doctor's locker"
 	req_access = list(access_medical_equip)
-	closet_appearance = /decl/closet_appearance/secure_closet/medical/alt
+	icon_state = "med"
 
 /obj/structure/closet/secure_closet/medical3/WillContain()
 	return list(
@@ -69,7 +69,7 @@
 /obj/structure/closet/secure_closet/paramedic
 	name = "paramedic locker"
 	desc = "Supplies for a first responder."
-	closet_appearance = /decl/closet_appearance/secure_closet/medical
+	icon_state = "med"
 	req_access = list(access_medical_equip)
 
 /obj/structure/closet/secure_closet/paramedic/WillContain()
@@ -98,7 +98,7 @@
 /obj/structure/closet/secure_closet/CMO
 	name = "chief medical officer's locker"
 	req_access = list(access_cmo)
-	closet_appearance = /decl/closet_appearance/secure_closet/cmo
+	icon_state = "cmo"
 
 /obj/structure/closet/secure_closet/CMO/WillContain()
 	return list(
@@ -122,7 +122,7 @@
 	name = "chemical closet"
 	desc = "Store dangerous chemicals in here."
 	icon_state = "med"
-	icon_door = "chemical_door"
+	icon_door = "chemical"
 	req_access = list(access_chemistry)
 
 /obj/structure/closet/secure_closet/chemical/WillContain()
@@ -144,7 +144,7 @@
 
 /obj/structure/closet/secure_closet/counselor
 	name = "counselor's locker"
-	closet_appearance = /decl/closet_appearance/secure_closet/medical
+	icon_state = "med"
 	req_access = list(access_psychiatrist)
 
 /obj/structure/closet/secure_closet/counselor/WillContain()

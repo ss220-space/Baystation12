@@ -76,9 +76,9 @@
 
 /area/proc/atmosalert(danger_level, var/alarm_source)
 	if (danger_level == 0)
-		GLOB.atmosphere_alarm.clearAlarm(src, alarm_source)
+		atmosphere_alarm.clearAlarm(src, alarm_source)
 	else
-		GLOB.atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level)
+		atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level)
 
 	//Check all the alarms before lowering atmosalm. Raising is perfectly fine.
 	for (var/obj/machinery/alarm/AA in src)
