@@ -14,6 +14,7 @@
 	var/list/climbers
 	var/climb_speed_mult = 1
 	var/init_flags = EMPTY_BITFIELD
+	var/list/orbiters = null
 
 	var/trade_blacklisted //[INF] Using in traders goods list to restrict buying custom items
 

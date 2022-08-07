@@ -88,11 +88,6 @@
 	frequency = ENT_FREQ
 	canhear_range = 4
 
-/obj/item/device/radio/intercom/Initialize()
-	. = ..()
-	START_PROCESSING(SSobj, src)
-	update_icon()
-
 /obj/item/device/radio/intercom/department/medbay/Initialize()
 	. = ..()
 	internal_channels = GLOB.default_medbay_channels.Copy()
@@ -134,9 +129,6 @@
 	. = ..()
 	internal_channels[num2text(RAID_FREQ)] = list(access_syndicate)
 
-/obj/item/device/radio/intercom/Destroy()
-	STOP_PROCESSING(SSobj, src)
-	return ..()
 
 /obj/item/device/radio/intercom/attack_ai(mob/user)
 	add_fingerprint(user)
@@ -161,22 +153,16 @@
 
 	return canhear_range
 
-/obj/item/device/radio/intercom/Process()
-	if(((world.timeofday - last_tick) > 30) || ((world.timeofday - last_tick) < 0))
-		last_tick = world.timeofday
-		var/old_on = on
-
-		if(!src.loc)
+/obj/item/device/radio/intercom/proc/power_change()
+	if(!src.loc)
+		on = 0
+	else
+		var/area/A = get_area(src)
+		if(!A)
 			on = 0
 		else
-			var/area/A = get_area(src)
-			if(!A)
-				on = 0
-			else
-				on = A.powered(EQUIP) // set "on" to the power status
-
-		if (on != old_on)
-			update_icon()
+			on = A.powered(EQUIP) // set "on" to the power status
+	update_icon()
 
 /obj/item/device/radio/intercom/on_update_icon()
 	if(!on)
