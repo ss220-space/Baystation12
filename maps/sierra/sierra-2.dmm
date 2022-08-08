@@ -1390,6 +1390,10 @@
 	pixel_x = 5
 	},
 /obj/item/reagent_containers/dropper,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "acU" = (
@@ -1810,8 +1814,7 @@
 /obj/effect/floor_decal/corner/green/border,
 /obj/random/date_based/christmas/xmaslights,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	dir = 4
 	},
 /obj/machinery/reagentgrinder/juicer,
 /turf/simulated/floor/tiled,
