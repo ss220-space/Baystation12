@@ -4,6 +4,7 @@
 	icon = 'icons/obj/guns/taser.dmi'
 	icon_state = "taser"
 	item_state = null	//so the human update icon uses the icon_state instead.
+	charge_cost = 15
 	max_shots = 5
 	projectile_type = /obj/item/projectile/beam/stun
 	combustion = 0
@@ -28,6 +29,7 @@
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	force = 8
 	max_shots = 12
+	charge_cost = 12.5
 	accuracy = 1
 	projectile_type = /obj/item/projectile/beam/stun/heavy
 	wielded_item_state = "tasercarbine-wielded"
@@ -61,6 +63,7 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
 	projectile_type = /obj/item/projectile/energy/electrode
 	max_shots = 6
+	charge_cost = 25
 	combustion = 0
 
 	bulk = GUN_BULK_REVOLVER
@@ -79,6 +82,7 @@
 	one_hand_penalty = 6
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	force = 10
+	charge_cost = 20
 	max_shots = 10
 	accuracy = 1
 	projectile_type = /obj/item/projectile/energy/electrode/stunshot
@@ -136,6 +140,7 @@
 	item_state = "plasma_stun"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_POWER = 3)
 	fire_delay = 20
+	charge_cost = 50
 	max_shots = 4
 	projectile_type = /obj/item/projectile/energy/plasmastun
 	combustion = 0
@@ -151,6 +156,7 @@
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_POWER = 2)
 	w_class = ITEM_SIZE_SMALL
 	max_shots = 4
+	charge_cost = 25
 	projectile_type = /obj/item/projectile/beam/confuseray
 	combustion = 0
 

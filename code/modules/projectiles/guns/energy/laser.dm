@@ -94,7 +94,7 @@ obj/item/gun/energy/retro
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	slot_flags = SLOT_BELT|SLOT_BACK
 	projectile_type = /obj/item/projectile/beam/heavylaser
-	charge_cost = 40
+	charge_cost = 25
 	max_shots = 6
 	fire_delay = 20
 	wielded_item_state = "gun_wielded"
@@ -159,7 +159,7 @@ obj/item/gun/energy/retro
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 5, TECH_POWER = 4)
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
-	charge_cost = 40
+	charge_cost = 50
 	max_shots = 4
 	fire_delay = 35
 	force = 10

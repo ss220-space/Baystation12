@@ -8,7 +8,7 @@
 	force = 10
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BACK
-	charge_cost = 30
+	charge_cost = 25
 	max_shots = 8
 	fire_delay = 30
 	projectile_type = /obj/item/projectile/ion

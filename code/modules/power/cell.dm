@@ -146,14 +146,40 @@
 
 /obj/item/cell/device/standard
 	name = "standard device power cell"
-	maxcharge = 100 //inf, was: maxcharge = 25
+	maxcharge = 100
 
 /obj/item/cell/device/high
 	name = "advanced device power cell"
 	desc = "A small power cell designed to power more energy-demanding devices."
 	icon_state = "hdevice"
-	maxcharge = 200 //inf, was: maxcharge = 100
+	maxcharge = 150
 	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
+
+
+/obj/item/cell/device/gcell
+	name = "premium device power cell"
+	desc = "A small power cell designed to power the most energy-demanding guns."
+	icon_state = "gcell"
+	maxcharge = 200
+	matter = list(MATERIAL_STEEL = 120, MATERIAL_GLASS = 12)
+
+
+/obj/item/cell/device/gcell/on_update_icon()
+
+	var/new_overlay_state = null
+	switch(percent())
+		if(95 to 100)
+			new_overlay_state = "gcell-o2"
+		if(25 to 95)
+			new_overlay_state = "gcell-o1"
+		if(0.05 to 25)
+			new_overlay_state = "gcell-o0"
+
+	if(new_overlay_state != overlay_state)
+		overlay_state = new_overlay_state
+		overlays.Cut()
+		if(overlay_state)
+			overlays += image('icons/obj/power.dmi', overlay_state)
 
 /obj/item/cell/crap
 	name = "old power cell"
