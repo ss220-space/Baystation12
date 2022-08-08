@@ -346,9 +346,9 @@ obj/item/gun/Destroy()
 			pointblank = 0
 
 	//update timing
-	var/delay = max(burst_delay+1, fire_delay)
-	user.setClickCooldown(min(delay, DEFAULT_QUICK_COOLDOWN))
-	user.SetMoveCooldown(move_delay)
+	var/delay = min(max(burst_delay+1, fire_delay), DEFAULT_QUICK_COOLDOWN)
+	if(delay)
+		user.setClickCooldown(delay)
 	next_fire_time = world.time + delay
 
 //obtains the next projectile to fire
@@ -417,10 +417,8 @@ obj/item/gun/Destroy()
 					if(8 to INFINITY)
 						to_chat(user, "<span class='warning'>You struggle to hold \the [src] steady!</span>")
 
-		// If your skill in weapons is higher than/equal to (screen_shake + 4) - it won't shake at all.
-		if(screen_shake && !user.skill_check(SKILL_WEAPONS,screen_shake+4))
-			spawn()
-				shake_camera(user, screen_shake+1, screen_shake)
+		if(screen_shake)
+			shake_camera(user, (burst > 1? burst_delay : fire_delay), screen_shake)
 
 	if(combustion)
 		var/turf/curloc = get_turf(src)

@@ -11,11 +11,10 @@
 	multi_aim = 1
 //	burst_delay = 3
 //	burst = 3
-	move_delay = 2
 	wielded_item_state = "gun_wielded"
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1,    fire_delay=0,    move_delay=null, one_hand_penalty=6, burst_accuracy=null, dispersion=null),
-//		list(mode_name="3-pulse bursts", burst=3,    fire_delay=null, move_delay=4,    one_hand_penalty=12, burst_accuracy=list(0,-1.5,-3), dispersion=list(0.0, 1, 2)),
+		list(mode_name="semiauto",       burst=1,    fire_delay=0,    , one_hand_penalty=6, burst_accuracy=null, dispersion=null),
+//		list(mode_name="3-pulse bursts", burst=3,    fire_delay=null,  ,    one_hand_penalty=12, burst_accuracy=list(0,-1.5,-3), dispersion=list(0.0, 1, 2)),
 		)
 
 	accuracy = -1
@@ -34,10 +33,8 @@
 	max_shots = 25
 //	burst = 1
 //	burst_delay = 2
-	move_delay = 2
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1,    fire_delay=0,    move_delay=null, one_hand_penalty=3, burst_accuracy=null, dispersion=null),
-//		list(mode_name="3-pulse bursts", burst=3,    fire_delay=null, move_delay=3,    one_hand_penalty=9, burst_accuracy=list(0,-1,-1.5), dispersion=list(0.0, 0.5, 1.0)),
+		list(mode_name="semiauto",       burst=1,    fire_delay=0,    one_hand_penalty=3, burst_accuracy=null, dispersion=null),
 		)
 
 	bulk = GUN_BULK_SMG //inf. Not carabine, because top tier gun is already RIFLE .-.
@@ -87,7 +84,6 @@
 	desc = "The Vuu'Xqu*ix T-3, known as 'VT-3' by SolGov. Rarely seen out in the wild by anyone outside of a Skrellian SDTF."
 	cell_type = /obj/item/cell/high
 	self_recharge = 1
-	move_delay = 2
 	projectile_type=/obj/item/projectile/beam/pulse/skrell/single
 	charge_cost=120
 	one_hand_penalty = 3
@@ -95,7 +91,7 @@
 	burst_delay=null
 	wielded_item_state = "skrell_carbine-wielded"
 	accuracy = 1
-	
+
 	firemodes = list(
 		list(mode_name="single", projectile_type=/obj/item/projectile/beam/pulse/skrell/single, charge_cost=120, burst=1, burst_delay=null),
 		list(mode_name="heavy", projectile_type=/obj/item/projectile/beam/pulse/skrell/heavy, charge_cost=55, burst=2, burst_delay=3),

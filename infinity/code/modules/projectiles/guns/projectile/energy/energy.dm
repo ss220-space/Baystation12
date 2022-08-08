@@ -23,10 +23,10 @@
 	one_hand_penalty = 12
 
 	firemodes = list(
-		list(mode_name="semiauto",      can_autofire=0, burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=1,  burst_accuracy = null, dispersion=null),
-		list(mode_name="short bursts",  can_autofire=0, burst=4, fire_delay=null, move_delay=2,    one_hand_penalty=12, burst_accuracy = list(0, -1, -1.5, -2), dispersion=list(0.0, 0.8, 1, 1.2)),
-		list(mode_name="long bursts",   can_autofire=0, burst=6, fire_delay=null, move_delay=4,    one_hand_penalty=12, burst_accuracy = list(0, -1, -1.5, -2, -2.5, -3, -3.5), dispersion=list(0.0, 0.8, 1, 1.2, 1.4, 1.8)),
-		list(mode_name="full auto",		can_autofire=1, burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=12, burst_accuracy = list(0, -1, -2, -2, -3, -3, -4, -4), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="semiauto",      can_autofire=0, burst=1, fire_delay=0,     ty=1,  burst_accuracy = null, dispersion=null),
+		list(mode_name="short bursts",  can_autofire=0, burst=4, fire_delay=null,      one_hand_penalty=12, burst_accuracy = list(0, -1, -1.5, -2), dispersion=list(0.0, 0.8, 1, 1.2)),
+		list(mode_name="long bursts",   can_autofire=0, burst=6, fire_delay=null,      one_hand_penalty=12, burst_accuracy = list(0, -1, -1.5, -2, -2.5, -3, -3.5), dispersion=list(0.0, 0.8, 1, 1.2, 1.4, 1.8)),
+		list(mode_name="full auto",		can_autofire=1, burst=1, fire_delay=0,      one_hand_penalty=12, burst_accuracy = list(0, -1, -2, -2, -3, -3, -4, -4), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
 		)
 
 /obj/item/gun/projectile/energy/mg/on_update_icon()
@@ -45,11 +45,11 @@
 	magazine_type = /obj/item/ammo_magazine/e/rifle
 	allowed_magazines = /obj/item/ammo_magazine/e/rifle
 	scope_zoom = 1.3
-	one_hand_penalty =6 
+	one_hand_penalty =6
 
 	firemodes = list(
-		list(mode_name="semiauto",      burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=3, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-short bursts",  burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=6, burst_accuracy=list(0, - 0.5),       dispersion=list(0.0, 0.5)),
+		list(mode_name="semiauto",      burst=1, fire_delay=0,      one_hand_penalty=3, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-short bursts",  burst=2, fire_delay=null,      one_hand_penalty=6, burst_accuracy=list(0, - 0.5),       dispersion=list(0.0, 0.5)),
 		)
 
 /obj/item/gun/projectile/energy/rifle/on_update_icon()
@@ -70,8 +70,8 @@
 	one_hand_penalty = 5
 
 	firemodes = list(
-		list(mode_name="semiauto",      burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-short bursts",  burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=6, burst_accuracy=list(0, -0.5 , -1),       dispersion=list(0.0, 0.4, 0.8)),
+		list(mode_name="semiauto",      burst=1, fire_delay=0,      one_hand_penalty=2, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-short bursts",  burst=3, fire_delay=null,      one_hand_penalty=6, burst_accuracy=list(0, -0.5 , -1),       dispersion=list(0.0, 0.4, 0.8)),
 		)
 
 /obj/item/gun/projectile/energy/carabine/on_update_icon()
@@ -91,11 +91,10 @@
 	one_hand_penalty = 2
 
 	firemodes = list(
-		list(mode_name="semiauto",      burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=1, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-short bursts",  burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=4, burst_accuracy=list(0, -1 , -2),       dispersion=list(0.0, 1, 1)),
+		list(mode_name="semiauto",      burst=1, fire_delay=0,      one_hand_penalty=1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-short bursts",  burst=3, fire_delay=null,      one_hand_penalty=4, burst_accuracy=list(0, -1 , -2),       dispersion=list(0.0, 1, 1)),
 		)
 
 /obj/item/gun/projectile/energy/pistol/on_update_icon()
 	..()
 	icon_state = (ammo_magazine)? "energy_pistol" : "energy_pistol-e"
-
