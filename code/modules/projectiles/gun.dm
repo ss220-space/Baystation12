@@ -417,8 +417,8 @@ obj/item/gun/Destroy()
 					if(8 to INFINITY)
 						to_chat(user, "<span class='warning'>You struggle to hold \the [src] steady!</span>")
 
-		// If your skill in weapons is higher than/equal to (screen_shake + 2) - it won't shake at all.
-		if(screen_shake && !user.skill_check(SKILL_WEAPONS,screen_shake+3))
+		// If your skill in weapons is higher than/equal to (screen_shake + 4) - it won't shake at all.
+		if(screen_shake && !user.skill_check(SKILL_WEAPONS,screen_shake+4))
 			spawn()
 				shake_camera(user, screen_shake+1, screen_shake)
 
