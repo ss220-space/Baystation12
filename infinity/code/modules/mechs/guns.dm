@@ -22,7 +22,7 @@
 	multi_aim = 1
 	move_delay = 0
 	fire_delay=0
-	can_autofire=1
+	autofire_enabled=1
 	burst=5
 	accuracy = -1
 	bulk = GUN_BULK_RIFLE
