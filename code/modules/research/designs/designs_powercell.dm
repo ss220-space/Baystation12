@@ -65,3 +65,12 @@
 	materials = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
 	build_path = /obj/item/cell/device/high
 	sort_string = "DAAAF"
+
+/datum/design/item/powercell/device/gcell
+	name = "premium-capacity"
+	build_type = PROTOLATHE | MECHFAB
+	id = "device_cell_premium"
+	req_tech = list(TECH_POWER = 3)
+	materials = list(MATERIAL_STEEL = 120, MATERIAL_GLASS = 12)
+	build_path = /obj/item/cell/device/gcell
+	sort_string = "DAAAH"
