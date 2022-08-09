@@ -77,7 +77,8 @@ obj/item/clothing/mask/chewable/Destroy()
 		if(ismob(loc))
 			var/mob/living/M = loc
 			if (!no_message)
-				to_chat(M, "<span class='notice'>You spit out the [name].</span>")
+				to_chat(M, "<span class='notice'>You spit out the [name].</span>") // if the mob has free hands, put the gum in them
+			M.put_in_any_hand_if_possible(butt)
 		qdel(src)
 
 /obj/item/clothing/mask/chewable/tobacco/lenni
