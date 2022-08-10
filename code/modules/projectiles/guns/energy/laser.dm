@@ -10,6 +10,7 @@
 	matter = list(MATERIAL_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/midlaser
 	wielded_item_state = "laser-wielded"
+	no_reloadoble = 1
 
 	bulk = GUN_BULK_CARABINE
 	w_class = ITEM_SIZE_LARGE
@@ -165,6 +166,7 @@ obj/item/gun/energy/retro
 	force = 10
 	wielded_item_state = "gun_wielded"
 	scope_zoom = 2
+	no_reloadoble = 1
 
 	accuracy = -2 //shooting at the hip
 	scoped_accuracy = 9

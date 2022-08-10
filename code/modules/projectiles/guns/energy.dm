@@ -21,6 +21,7 @@
 	var/use_external_power = 0 //if set, the weapon will look for an external power source to draw from, otherwise it recharges magically
 	var/recharge_time = 4
 	var/charge_tick = 0
+	var/no_reloadoble = 0
 
 	var/hatch_open = 0 //determines if you can insert a cell in/detach a cell
 
@@ -149,6 +150,9 @@
 
 //to trigger loading cell
 /obj/item/gun/energy/attackby(var/obj/item/A as obj, mob/user as mob)
+	if(no_reloadoble)
+		to_chat(user, "<span class='warning'>[src] has a non-removable cell .</span>")
+		return
 	if(isScrewdriver(A) && (!self_recharge))
 		if(!hatch_open)
 			hatch_open = 1
