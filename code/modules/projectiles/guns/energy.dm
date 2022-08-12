@@ -130,6 +130,8 @@
 /obj/item/gun/energy/proc/unload_ammo(mob/user)
 	if(self_recharge)
 		return
+	if(no_reloadable)
+		return
 	if(hatch_open)
 		if(power_supply)
 			user.put_in_hands(power_supply)
@@ -150,9 +152,9 @@
 
 //to trigger loading cell
 /obj/item/gun/energy/attackby(var/obj/item/A as obj, mob/user as mob)
-	if(no_reloadable)
+	if(isScrewdriver(A) && (no_reloadable))
 		to_chat(user, "<span class='warning'>[src] has a non-removable cell .</span>")
-		return
+		return ..()
 	if(isScrewdriver(A) && (!self_recharge))
 		if(!hatch_open)
 			hatch_open = 1
