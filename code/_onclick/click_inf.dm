@@ -16,12 +16,13 @@
 			return
 	..()
 
-/mob/living/carbon/human/adherent/AltClickOn(var/atom/A)
+/mob/living/carbon/human/AltClickOn(var/atom/A)
 	if(get_dist(src, A) > 1)
 		return
 	if(!stat && mind && ismob(A) && (A != src) && (src.species.name == SPECIES_ADHERENT))
-		var/mob/living/carbon/human/adherent/adherent = src
-		if(adherent.ready_to_charge)
+		var/mob/living/carbon/human/adherent = src
+		var/obj/item/organ/internal/cell/adherent/adherent_core = adherent.internal_organs_by_name[BP_CELL]
+		if(adherent_core.ready_to_charge)
 			var/mob/living/carbon/human/target_human = A
 			var/mob/living/target = A
 			var/obj/item/cell/target_cell
