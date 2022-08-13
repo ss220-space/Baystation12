@@ -170,6 +170,10 @@
 	gender = NEUTER
 	do_coloration = FALSE
 
+/datum/sprite_accessory/hair/ipc/ipc_bald
+	name = "Bald"
+	icon_state = "bald"
+
 /datum/sprite_accessory/hair/ipc/ipc_antennae
 	name = "Antennae"
 	icon_state = "antennae"

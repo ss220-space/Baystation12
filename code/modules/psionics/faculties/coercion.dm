@@ -19,7 +19,7 @@
 /decl/psionic_power/coercion/blindstrike
 	name =           "Blindstrike"
 	cost =           8
-	cooldown =       120
+	cooldown =       60
 	use_ranged =     TRUE
 	use_melee =      TRUE
 	min_rank =       PSI_RANK_GRANDMASTER
@@ -53,7 +53,7 @@
 /decl/psionic_power/coercion/mindread
 	name =            "Read Mind"
 	cost =            6
-	cooldown =        80
+	cooldown =        20
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
 	use_description = "Target the head on disarm intent at melee range to attempt to read a victim's surface thoughts."
@@ -89,7 +89,7 @@
 /decl/psionic_power/coercion/agony
 	name =          "Agony"
 	cost =          8
-	cooldown =      50
+	cooldown =      30
 	use_melee =     TRUE
 	min_rank =      PSI_RANK_MASTER
 	use_description = "Target the chest or groin on disarm intent to use a melee attack equivalent to a strike from a stun baton."
@@ -109,7 +109,7 @@
 /decl/psionic_power/coercion/spasm
 	name =           "Spasm"
 	cost =           15
-	cooldown =       100
+	cooldown =       50
 	use_melee =      TRUE
 	use_ranged =     TRUE
 	min_rank =       PSI_RANK_MASTER
@@ -138,7 +138,7 @@
 /decl/psionic_power/coercion/mindslave
 	name =          "Mindslave"
 	cost =          28
-	cooldown =      200
+	cooldown =      300
 	use_grab =      TRUE
 	min_rank =      PSI_RANK_PARAMOUNT
 	use_description = "Grab a victim, target the eyes, then use the grab on them while on disarm intent, in order to convert them into a loyal mind-slave. The process takes some time, and failure is punished harshly."
@@ -171,7 +171,7 @@
 /decl/psionic_power/coercion/assay
 	name =            "Assay"
 	cost =            15
-	cooldown =        100
+	cooldown =        50
 	use_grab =        TRUE
 	min_rank =        PSI_RANK_OPERANT
 	use_description = "Grab a patient, target the head, then use the grab on them while on disarm intent, in order to perform a deep coercive-redactive probe of their psionic potential."
@@ -195,7 +195,7 @@
 /decl/psionic_power/coercion/focus
 	name =          "Focus"
 	cost =          10
-	cooldown =      80
+	cooldown =      40
 	use_grab =     TRUE
 	min_rank =      PSI_RANK_OPERANT
 	use_description = "Grab a patient, target the mouth, then use the grab on them while on disarm intent, in order to cure ailments of the mind."

@@ -5,6 +5,7 @@
 	icon_state = "shotgun_rack"
 	anchored = TRUE
 	density = FALSE
+	var/locked = 0
 
 	var/obj/item/gun/projectile/shotgun/rack_shotgun
 
@@ -12,30 +13,47 @@
 	if(isrobot(user))
 		return
 
+	if(istype(O, /obj/item/card/id))
+		if(allowed(usr))
+			locked = !locked
+			to_chat(user, "[src]'s lock was [locked ? "enabled" : "disabled"].")
+		else
+			to_chat(user, "[src]'s card reader denied you.")
+		return
+
 	if(istype(O, /obj/item/gun/projectile/shotgun) && O.w_class != 3) //w_class check is to stop people from placing a sawn off shotgun here
-		if(!rack_shotgun)
-			user.unEquip(O)
-			O.forceMove(src)
-			rack_shotgun = O
-			to_chat(user, "<span class='notice'>You place \the [O] in \the [src].</span>")
-			icon_state = "shotgun_rack_[O.icon_state]"
+		if(!locked)
+			if(!rack_shotgun)
+				user.unEquip(O)
+				O.forceMove(src)
+				rack_shotgun = O
+				to_chat(user, "<span class='notice'>You place \the [O] in \the [src].</span>")
+				icon_state = "shotgun_rack_[O.icon_state]"
 
 /obj/structure/shotgun_rack/attack_hand(mob/user)
+	add_fingerprint(user)
 	if(isrobot(user))
 		return
 
-	if(rack_shotgun)
-		user.put_in_hands(rack_shotgun)
-		to_chat(user, "<span class='notice'>You take \the [rack_shotgun] from \the [src].</span>")
-		rack_shotgun = null
-		icon_state = "shotgun_rack"
+	if(!locked)
+		if(rack_shotgun)
+			user.put_in_hands(rack_shotgun)
+			to_chat(user, "<span class='notice'>You take \the [rack_shotgun] from \the [src].</span>")
+			rack_shotgun = null
+			icon_state = "shotgun_rack"
+	else
+		to_chat(user, "[rack_shotgun] is locked.")
+
 
 /obj/structure/shotgun_rack/do_simple_ranged_interaction(mob/user)
-	if(rack_shotgun)
-		rack_shotgun.forceMove(loc)
-		to_chat(user, "<span class='notice'>You telekinetically remove \the [rack_shotgun] from \the [src].</span>")
-		rack_shotgun = null
-		icon_state = "shotgun_rack"
+	if(!locked)
+		if(rack_shotgun)
+			rack_shotgun.forceMove(loc)
+			to_chat(user, "<span class='notice'>You telekinetically remove \the [rack_shotgun] from \the [src].</span>")
+			rack_shotgun = null
+			icon_state = "shotgun_rack"
+	else
+		to_chat(user, "[rack_shotgun] is locked.")
 
 // premade types
 /obj/structure/shotgun_rack/double

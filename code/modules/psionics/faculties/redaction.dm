@@ -23,7 +23,7 @@
 /decl/psionic_power/redaction/skinsight
 	name =            "Skinsight"
 	cost =            3
-	cooldown =        30
+	cooldown =        25
 	use_grab =        TRUE
 	min_rank =        PSI_RANK_OPERANT
 	use_description = "Grab a patient, target the chest, then switch to help intent and use the grab on them to perform a check for wounds and damage."
@@ -40,7 +40,7 @@
 /decl/psionic_power/redaction/mend
 	name =            "Mend"
 	cost =            7
-	cooldown =        50
+	cooldown =        35
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
 	use_description = "Target a patient while on help intent at melee range to mend a variety of maladies, such as bleeding or broken bones. Higher ranks in this faculty allow you to mend a wider range of problems."
@@ -122,7 +122,7 @@
 /decl/psionic_power/redaction/cleanse
 	name =            "Cleanse"
 	cost =            9
-	cooldown =        60
+	cooldown =        50
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_GRANDMASTER
 	use_description = "Target a patient while on help intent at melee range to cleanse radiation and genetic damage from a patient."
@@ -154,7 +154,7 @@
 /decl/psionic_power/revive
 	name =            "Revive"
 	cost =            25
-	cooldown =        80
+	cooldown =        120
 	use_grab =        TRUE
 	min_rank =        PSI_RANK_PARAMOUNT
 	faculty =         PSI_REDACTION
