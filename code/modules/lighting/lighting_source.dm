@@ -7,11 +7,12 @@
 	var/atom/source_atom     // The atom that we belong to.
 
 	var/turf/source_turf     // The turf under the above.
-	var/light_max_bright = 1  // intensity of the light within the full brightness range. Value between 0 and 1
-	var/light_inner_range = 0 // range, in tiles, the light is at full brightness
-	var/light_outer_range = 0 // range, in tiles, where the light becomes darkness
-	var/light_falloff_curve   // adjusts curve for falloff gradient
+	var/light_power    // Intensity of the emitter light.
+	var/light_range      // The range of the emitted light.
 	var/light_color    // The colour of the light, string, decomposed by parse_light_color()
+	var/light_angle		// The light's emission angle, in degrees.
+	var/light_self = TRUE	// If FALSE, the light won't emit onto its own tile. Good with light_angle.
+
 
 	// Variables for keeping track of the colour.
 	var/lum_r
@@ -23,6 +24,21 @@
 	var/tmp/applied_lum_g
 	var/tmp/applied_lum_b
 
+	// Variables used to keep track of the atom's angle.
+	var/tmp/limit_a_x		// The first test point's X coord for the cone.
+	var/tmp/limit_a_y		// The first test point's Y coord for the cone.
+	var/tmp/limit_a_t		// The first test point's angle.
+	var/tmp/limit_b_x		// The second test point's X coord for the cone.
+	var/tmp/limit_b_y		// The second test point's Y coord for the cone.
+	var/tmp/limit_b_t		// The second test point's angle.
+	var/tmp/cached_origin_x	// The last known X coord of the origin.
+	var/tmp/cached_origin_y	// The last known Y coord of the origin.
+	var/tmp/old_direction	// The last known direction of the origin.
+	var/tmp/cached_ab		// We don't actually need to save this, just nice for debugging.
+	var/tmp/targ_sign
+	var/tmp/test_x_offset
+	var/tmp/test_y_offset
+
 	var/list/datum/lighting_corner/effect_str     // List used to store how much we're affecting corners.
 	var/list/turf/affecting_turfs
 
@@ -32,6 +48,7 @@
 	var/needs_update    // Whether we are queued for an update.
 	var/destroyed       // Whether we are destroyed and need to stop emitting light.
 	var/force_update
+
 
 /datum/light_source/New(var/atom/owner, var/atom/top)
 	total_lighting_sources++
@@ -48,11 +65,11 @@
 		top_atom.light_sources += src
 
 	source_turf = top_atom
-	light_max_bright = source_atom.light_max_bright
-	light_inner_range = source_atom.light_inner_range
-	light_outer_range = source_atom.light_outer_range
-	light_falloff_curve = source_atom.light_falloff_curve
+	light_power = source_atom.light_power
+	light_range = source_atom.light_range
 	light_color = source_atom.light_color
+	light_angle = source_atom.light_wedge
+	light_self  = source_atom.light_self
 
 	parse_light_color()
 
@@ -127,7 +144,7 @@
 
 // Will check if we actually need to update, and update any variables that may need to be updated.
 /datum/light_source/proc/check()
-	if(!source_atom || !light_outer_range || !light_max_bright)
+	if(!source_atom || !light_range || !light_power)
 		destroy()
 		return 1
 
@@ -143,29 +160,33 @@
 		source_turf = top_atom.loc
 		. = 1
 
-	if(source_atom.light_max_bright != light_max_bright)
-		light_max_bright = source_atom.light_max_bright
+	if(source_atom.light_power != light_power)
+		light_power = source_atom.light_power
 		. = 1
 
-	if(source_atom.light_inner_range != light_inner_range)
-		light_inner_range = source_atom.light_inner_range
+	if(source_atom.light_range != light_range)
+		light_range = source_atom.light_range
 		. = 1
 
-	if(source_atom.light_outer_range != light_outer_range)
-		light_outer_range = source_atom.light_outer_range
-		. = 1
-
-	if(source_atom.light_falloff_curve != light_falloff_curve)
-		light_falloff_curve = source_atom.light_falloff_curve
-		. = 1
-
-	if(light_max_bright && light_outer_range && !applied)
+	if(light_range && light_power && !applied)
 		. = 1
 
 	if(source_atom.light_color != light_color)
 		light_color = source_atom.light_color
 		parse_light_color()
 		. = 1
+
+	if (top_atom.dir != old_direction && light_angle)
+		. = 1
+
+	if (source_atom.light_wedge != light_angle)
+		light_angle = source_atom.light_wedge
+		. = 1
+
+	if (source_atom.light_self != light_self)
+		light_self = source_atom.light_self
+		. = 1
+
 
 // Decompile the hexadecimal colour into lumcounts of each perspective.
 /datum/light_source/proc/parse_light_color()
@@ -184,10 +205,9 @@
 // As such this all gets counted as a single line.
 // The braces and semicolons are there to be able to do this on a single line.
 
-#define APPLY_CORNER(C)              \
-	. = LUM_FALLOFF(C, source_turf); \
-	. *= (light_max_bright ** 2);    \
-	. *= light_max_bright < 0 ? -1:1;\
+#define APPLY_CORNER_XY(C,now,Tx,Ty) \
+	. = LUM_FALLOFF_XY(C.x, C.y, Tx, Ty); \
+	. *= light_power/2;              \
 	effect_str[C] = .;               \
 	C.update_lumcount                \
 	(                                \
@@ -195,6 +215,8 @@
 		. * applied_lum_g,           \
 		. * applied_lum_b            \
 	);
+
+#define APPLY_CORNER(C,now) APPLY_CORNER_XY(C,now,source_turf.x,source_turf.y)
 
 // I don't need to explain what this does, do I?
 #define REMOVE_CORNER(C)             \
@@ -210,19 +232,117 @@
 // Assuming a brightness of 1 at range 1, formula should be (brightness = 1 / distance^2)
 // However, due to the weird range factor, brightness = (-(distance - full_dark_start) / (full_dark_start - full_light_end)) ^ light_max_bright
 
-#define LUM_FALLOFF(C, T)(CLAMP01(-((((C.x - T.x) ** 2 +(C.y - T.y) ** 2) ** 0.5 - light_outer_range) / max(light_outer_range - light_inner_range, 1))) ** light_falloff_curve)
+#define POLAR_TO_CART_X(R,T) ((R) * cos(T))
+#define POLAR_TO_CART_Y(R,T) ((R) * sin(T))
+#define PSEUDO_WEDGE(A_X,A_Y,B_X,B_Y) ((A_X)*(B_Y) - (A_Y)*(B_X))
+#define MINMAX(NUM) ((NUM) < 0 ? -round(-(NUM)) : round(NUM))
 
+/datum/light_source/proc/update_angle()
+	var/turf/T = get_turf(top_atom)
+	// Don't do anything if nothing is different, trig ain't free.
+	if (T.x == cached_origin_x && T.y == cached_origin_y && old_direction == top_atom.dir)
+		return
+
+	var/do_offset = TRUE
+	var/turf/front = get_step(T, top_atom.dir)
+	if (front.has_opaque_atom)
+		do_offset = FALSE
+
+	cached_origin_x = T.x
+	test_x_offset = cached_origin_x
+	cached_origin_y = T.y
+	test_y_offset = cached_origin_y
+
+	if (istype(top_atom, /mob) && top_atom:facing_dir)
+		old_direction = top_atom:facing_dir
+	else
+		old_direction = top_atom.dir
+
+
+	var/angle = light_angle / 2
+	switch (old_direction)
+		if (NORTH)
+			limit_a_t = angle + 90
+			limit_b_t = -(angle) + 90
+			if (do_offset)
+				test_y_offset += 1
+
+		if (SOUTH)
+			limit_a_t = (angle) - 90
+			limit_b_t = -(angle) - 90
+			if (do_offset)
+				test_y_offset -= 1
+
+		if (EAST)
+			limit_a_t = angle
+			limit_b_t = -(angle)
+			if (do_offset)
+				test_x_offset += 1
+
+		if (WEST)
+			limit_a_t = angle + 180
+			limit_b_t = -(angle) - 180
+			if (do_offset)
+				test_x_offset -= 1
+
+	// Convert our angle + range into a vector.
+	limit_a_x = POLAR_TO_CART_X(light_range + 10, limit_a_t)
+	limit_a_x = MINMAX(limit_a_x)
+	limit_a_y = POLAR_TO_CART_Y(light_range + 10, limit_a_t)	// 10 is an arbitrary number, yes.
+	limit_a_y = MINMAX(limit_a_y)
+	limit_b_x = POLAR_TO_CART_X(light_range + 10, limit_b_t)
+	limit_b_x = MINMAX(limit_b_x)
+	limit_b_y = POLAR_TO_CART_Y(light_range + 10, limit_b_t)
+	limit_b_y = MINMAX(limit_b_y)
+	// This won't change unless the origin or dir changes, might as well do it here.
+	targ_sign = PSEUDO_WEDGE(limit_a_x, limit_a_y, limit_b_x, limit_b_y) > 0
+
+// I know this is 2D, calling it a cone anyways. Fuck the system.
+// Returns true if the test point is NOT inside the cone.
+// Make sure update_angle() is called first if the light's loc or dir have changed.
+/datum/light_source/proc/check_light_cone(var/test_x, var/test_y)
+	test_x -= test_x_offset
+	test_y -= test_y_offset
+	var/at = PSEUDO_WEDGE(limit_a_x, limit_a_y, test_x, test_y)
+	var/tb = PSEUDO_WEDGE(test_x, test_y, limit_b_x, limit_b_y)
+
+	// if the signs of both at and tb are NOT the same, the point is NOT within the cone.
+	return (((at > 0) != targ_sign) || ((tb > 0) != targ_sign))
+
+#undef POLAR_TO_CART_X
+#undef POLAR_TO_CART_Y
+#undef PSEUDO_WEDGE
+#undef MINMAX
+
+#define LUM_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2 + LIGHTING_HEIGHT) / max(1, light_range)))
+#define LUM_FALLOFF_XY(Cx,Cy,Tx,Ty) (1 - CLAMP01(sqrt(((Cx) - (Tx)) ** 2 + ((Cy) - (Ty)) ** 2 + LIGHTING_HEIGHT) / max(1, light_range)))
 
 /datum/light_source/proc/apply_lum()
 	var/static/update_gen = 1
 	applied = 1
+
+	if (!source_turf)
+		return
+
+
+	var/Tx
+	var/Ty
 
 	// Keep track of the last applied lum values so that the lighting can be reversed
 	applied_lum_r = lum_r
 	applied_lum_g = lum_g
 	applied_lum_b = lum_b
 
-	FOR_DVIEW(var/turf/T, light_outer_range, source_turf, INVISIBILITY_LIGHTING)
+	if (light_angle)
+		update_angle()
+
+	FOR_DVIEW(var/turf/T, light_range, source_turf, INVISIBILITY_LIGHTING)
+
+		Tx = T.x
+		Ty = T.y
+		if (light_angle && check_light_cone(Tx, Ty))
+			continue
+
 		check_t:
 		if (!T)
 			continue
@@ -236,11 +356,11 @@
 			C.update_gen = update_gen
 			C.affecting += src
 
-			if(!C.active)
+			if (!C.active || check_light_cone(C.x, C.y))
 				effect_str[C] = 0
 				continue
 
-			APPLY_CORNER(C)
+			APPLY_CORNER_XY(C, now, source_turf.x, source_turf.y)
 
 		LAZYADD(T.affecting_lights, src)
 		affecting_turfs += T
@@ -272,16 +392,19 @@
 	if(list_find(effect_str, C)) // Already have one.
 		REMOVE_CORNER(C)
 
-	APPLY_CORNER(C)
+	APPLY_CORNER_XY(C, now, source_turf.x, source_turf.y)
 
 /datum/light_source/proc/smart_vis_update()
 	var/list/datum/lighting_corner/corners = list()
 	var/list/turf/turfs                    = list()
-	FOR_DVIEW(var/turf/T, light_outer_range, source_turf, 0)
+	FOR_DVIEW(var/turf/T, light_range, source_turf, 0)
 		if (!T)
 			continue
 		if(!T.lighting_corners_initialised)
 			T.generate_missing_corners()
+		if (light_angle && check_light_cone(T.x, T.y))
+			continue
+
 		corners |= T.get_corners()
 		turfs   += T
 
@@ -307,7 +430,7 @@
 			effect_str[C] = 0
 			continue
 
-		APPLY_CORNER(C)
+		APPLY_CORNER_XY(C, now, source_turf.x, source_turf.y)
 
 	for(var/datum/lighting_corner/C in effect_str - corners) // Old, now gone, corners.
 		REMOVE_CORNER(C)

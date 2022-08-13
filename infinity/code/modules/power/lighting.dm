@@ -11,7 +11,7 @@
 
 
 /obj/item/light/proc/set_bulb_color(value)
-	b_colour = value
+	brightness_color = value
 	if(istype(loc, /atom/movable))
 		loc.update_icon()
 	update_icon()
@@ -65,10 +65,9 @@ UPDATE_ENVIROMENT_SOUND_MACRO_INHERITER(/obj/machinery/light/remove_bulb())
 	item_state = "c_tube"
 	matter = list(MATERIAL_GLASS = 100, MATERIAL_ALUMINIUM = 20)
 	color = LIGHT_COLOR_XENON
-	b_colour = LIGHT_COLOR_XENON
-	b_max_bright = 0.95
-	b_inner_range = 3
-	b_outer_range = 8
+	brightness_color = LIGHT_COLOR_XENON
+	light_power = 5
+	light_range = 8
 	power_usage_multiplier = 3
 
 	enviroment_sound_range = 4
@@ -89,23 +88,21 @@ UPDATE_ENVIROMENT_SOUND_MACRO_INHERITER(/obj/machinery/light/remove_bulb())
 	base_state = "big_tape"
 	item_state = null
 
-	b_inner_range = 1
-	b_outer_range = 2
-	b_colour = LIGHT_DEFAULT_LED_NEON
+	light_range = 3
+	brightness_color = LIGHT_DEFAULT_LED_NEON
 
 /obj/item/light/led_neon/attackby(obj/item/I, mob/user)
 	. = ..()
 	if(user)
 		if(isMultitool(I))
-			var/c = input("You are changing diode frequency.", "Input", b_colour) as color|null
+			var/c = input("You are changing diode frequency.", "Input", brightness_color) as color|null
 			if(c)
 				set_bulb_color(c)
 
 /obj/item/light/led_neon/large
 	base_state = "big_tape"
 	icon_state = "big_tape_preset"
-	b_inner_range = 2
-	b_outer_range = 4
+	light_range = 6
 
 /obj/item/light/led_neon/small
 	base_state = "small_tape"

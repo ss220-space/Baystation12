@@ -29,7 +29,7 @@
 	lit = 1
 	update_icon()
 	light_effects(user)
-	set_light(0.6, 0.5, 2, l_color = COLOR_PALE_ORANGE)
+	set_light(2, 0.25, "#e38f46")
 	START_PROCESSING(SSobj, src)
 
 /obj/item/flame/lighter/proc/light_effects(mob/living/carbon/user)
@@ -95,7 +95,8 @@
 		if(ismob(loc) && prob(10) && reagents.get_reagent_amount(/datum/reagent/fuel) < 1)
 			to_chat(loc, "<span class='warning'>\The [src]'s flame flickers.</span>")
 			set_light(0)
-			addtimer(CALLBACK(src, .atom/proc/set_light, 0.6, 0.5, 2), 4)
+			spawn(4)
+				set_light(2)
 		reagents.remove_reagent(/datum/reagent/fuel, 0.05)
 	else
 		extinguish()

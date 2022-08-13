@@ -11,14 +11,9 @@
 	var/wax
 	var/last_lit
 	var/icon_set = "candle"
-	var/candle_max_bright = 0.3
-	var/candle_inner_range = 0.1
-	var/candle_outer_range = 4
-	var/candle_falloff = 2
 
 /obj/item/flame/candle/Initialize()
-//INF	wax = rand(27 MINUTES, 33 MINUTES) / SSobj.wait // Enough for 27-33 minutes. 30 minutes on average, adjusted for subsystem tickrate.
-	wax = 60 MINUTES / SSobj.wait //INF. For new year
+	wax = rand(27 MINUTES, 33 MINUTES) / SSobj.wait //i hate //INF
 	if(available_colours)
 		color = pick(available_colours)
 	. = ..()
@@ -53,8 +48,7 @@
 	if(!lit)
 		lit = 1
 		visible_message("<span class='notice'>\The [user] lights the [name].</span>")
-		set_light(candle_max_bright, candle_inner_range, candle_outer_range, candle_falloff,\
-																								l_color = LIGHT_COLOR_FIRE)//inf
+		set_light(CANDLE_LUM)
 		START_PROCESSING(SSobj, src)
 
 /obj/item/flame/candle/Process()

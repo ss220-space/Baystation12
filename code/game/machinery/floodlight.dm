@@ -8,18 +8,17 @@
 	obj_flags = OBJ_FLAG_ROTATABLE
 	construct_state = /decl/machine_construction/default/panel_closed
 	uncreated_component_parts = null
+	light_color = LIGHT_COLOR_TUNGSTEN
+	light_wedge = LIGHT_WIDE
 
 	active_power_usage = 200
 	power_channel = LIGHT
 	use_power = POWER_USE_OFF
-	
+
 	machine_name = "emergency floodlight"
 	machine_desc = "A portable, battery-powered LED flood lamp used to illuminate large areas."
 
-	//better laser, increased brightness & power consumption
-	var/l_max_bright = 0.8 //brightness of light when on, can be negative
-	var/l_inner_range = 0 //inner range of light when on, can be negative
-	var/l_outer_range = 4.5 //outer range of light when on, can be negative
+	var/brightness_on = 8
 
 /*/obj/machinery/floodlight/New()
 	battery = new/obj/item/cell/crap(src)
@@ -41,17 +40,17 @@
 
 	// If the cell is almost empty rarely "flicker" the light. Aesthetic only.
 	if(prob(30))
-		set_light(l_max_bright / 2, l_inner_range, l_outer_range)
+		set_light(brightness_on/2, brightness_on/4)
 		spawn(20)
 			if(use_power)
-				set_light(l_max_bright, l_inner_range, l_outer_range)
+				set_light(brightness_on, brightness_on/2)
 
 // Returns 0 on failure and 1 on success
 /obj/machinery/floodlight/proc/turn_on(var/loud = 0)
 	if(stat & NOPOWER)
 		return 0
 
-	set_light(l_max_bright, l_inner_range, l_outer_range)
+	set_light(brightness_on, brightness_on / 2)
 	update_use_power(POWER_USE_ACTIVE)
 	use_power_oneoff(active_power_usage)//so we drain cell if they keep trying to use it
 	update_icon()
@@ -84,9 +83,8 @@
 /obj/machinery/floodlight/RefreshParts()//if they're insane enough to modify a floodlight, let them
 	..()
 	var/light_mod = Clamp(total_component_rating_of_type(/obj/item/stock_parts/capacitor), 0, 10)
-	l_max_bright = light_mod? light_mod*0.01 + initial(l_max_bright) : initial(l_max_bright)/2 //gives us between 0.8-0.9 with capacitor, or 0.4 without one
-	l_inner_range = light_mod     + initial(l_inner_range)
-	l_outer_range = light_mod*1.5 + initial(l_outer_range)
+	light_power  = light_mod? light_mod*0.01 + initial(light_power) : initial(light_power)/2 //gives us between 0.8-0.9 with capacitor, or 0.4 without one
+	light_range  = light_mod     + initial(light_range)
 	change_power_consumption(initial(active_power_usage) * light_mod , POWER_USE_ACTIVE)
 	if(use_power)
-		set_light(l_max_bright, l_inner_range, l_outer_range)
+		set_light(light_power, light_range)

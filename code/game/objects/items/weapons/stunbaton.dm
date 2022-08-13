@@ -73,7 +73,7 @@
 		item_state = "[initial(item_state)]"//inf
 
 	if(icon_state == "[initial(item_state)]_active")//inf //was: if(icon_state == "[initial(name)]_active")
-		set_light(0.4, 0.1, 1, 2, "#ff6a00")
+		set_light(1.5, 2, "#ff6a00")
 	else
 		set_light(0)
 	loc.update_icon()//inf
@@ -251,7 +251,7 @@
 /obj/item/melee/baton/robot/electrified_arm/on_update_icon()
 	if(status)
 		icon_state = "electrified_arm_active"
-		set_light(0.4, 0.1, 1, 2, "#006aff")
+		set_light(1.5, 2, "#006aff")
 	else
 		icon_state = "electrified_arm"
 		set_light(0)

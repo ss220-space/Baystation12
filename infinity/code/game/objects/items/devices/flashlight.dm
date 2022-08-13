@@ -34,7 +34,7 @@
 	return cell
 
 /obj/item/device/flashlight/proc/get_power_cost()
-	return power_cost * flashlight_max_bright / 2
+	return power_cost * flashlight_power / 2
 
 /obj/item/device/flashlight/Process()
 	if(on && suitable_cell)
@@ -50,8 +50,8 @@
 	var/obj/item/cell/C = get_cell()
 	if(!C)
 		return
-	if(flashlight_max_bright > 0)
-		set_light(clamp(flashlight_max_bright / 2 * max(log(rand(4,6), C.percent()), flashlight_max_bright / 8), 0, 1), flashlight_inner_range, flashlight_outer_range, 2, light_color)
+	if(flashlight_power > 0)
+		set_light(clamp(flashlight_power / 2 * max(log(rand(4,6), C.percent()), brightness_on / 8), 0, 1), brightness_on, 2, light_color)
 
 /obj/item/device/flashlight/proc/turn_off()
 	on = FALSE

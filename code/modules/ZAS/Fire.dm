@@ -196,13 +196,13 @@ turf/proc/hotspot_expose(exposed_temperature, exposed_volume, soh = 0)
 
 	if(new_firelevel <= 2.5 && old_firelevel > 2.5)
 		icon_state = "1"
-		set_light(0.5, 1, 3, l_color = color)
+		set_light(3, 1, l_color = color)
 	else if(new_firelevel <= 6 && old_firelevel > 6)
 		icon_state = "2"
-		set_light(0.7, 2, 5, l_color = color)
+		set_light(5, 2, l_color = color)
 	else if(new_firelevel > 6 && old_firelevel <= 6)
 		icon_state = "3"
-		set_light(1, 2, 7, l_color = color)
+		set_light(7, 3, l_color = color)
 
 	firelevel = new_firelevel
 

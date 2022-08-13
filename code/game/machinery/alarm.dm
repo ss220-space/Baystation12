@@ -380,7 +380,7 @@
 		else if(dir == EAST)
 			pixel_x = -21
 
-	set_light(0.25, 0.1, 1, 2, new_color)
+	set_light(l_range = 2, l_power = 0.6, l_color = new_color)
 
 /obj/machinery/alarm/receive_signal(datum/signal/signal)
 	if(!signal || signal.encryption)
@@ -982,12 +982,12 @@ FIRE ALARM
 	else
 		if(!detecting)
 			overlays += get_cached_overlay("fire1")
-			set_light(0.25, 0.1, 1, 2, COLOR_RED)
+			set_light(l_range = 4, l_power = 2, l_color = COLOR_RED)
 		else if(z in GLOB.using_map.contact_levels)
 			var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 			var/decl/security_level/sl = security_state.current_security_level
 
-			set_light(sl.light_max_bright, sl.light_inner_range, sl.light_outer_range, 2, sl.light_color_alarm)
+			set_light(sl.light_range, sl.light_power, sl.light_color_alarm)
 			overlays += image(sl.icon, sl.overlay_alarm)
 		else
 			overlays += get_cached_overlay("fire0")

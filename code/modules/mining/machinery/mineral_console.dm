@@ -4,6 +4,7 @@
 	icon_state = "console"
 	machine_name = "mineral processing console"
 	machine_desc = "Used to configure and operate a linked ore processor, and capable of processing minerals in a variety of fashions."
+	light_range = 3
 	var/obj/machinery/mineral/connected
 
 /obj/machinery/computer/mining/interface_interact(var/mob/user)
@@ -19,7 +20,7 @@
 	if(!connected)
 		to_chat(user, "<span class='warning'>\The [src] is not connected to a processing machine. <a href='?src=\ref[src];scan_for_machine=1'>Scan</a></span>")
 		return STATUS_CLOSE
-	. = ..()	
+	. = ..()
 
 /obj/machinery/computer/mining/Topic(href, href_list)
 	if((. = ..()))

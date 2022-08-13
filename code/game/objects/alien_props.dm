@@ -26,7 +26,7 @@
 	update_state = 0 //Don't pixelshift us on wall
 	cell_type = /obj/item/cell/alien
 	autoname = 0
-	
+
 /obj/machinery/power/apc/alien/on_update_icon()
 	check_updates()
 	if(update_state & APC_UPDATE_ALLGOOD)
@@ -61,7 +61,7 @@
 	. = ..()
 	if(!random_light_color)
 		random_light_color = get_random_colour(FALSE, 100, 255)
-	b_colour = random_light_color
+	brightness_color = random_light_color
 	color = random_light_color
 
 //Airlock

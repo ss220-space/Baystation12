@@ -35,7 +35,7 @@ var/list/mob_hat_cache = list()
 	lawupdate = FALSE
 	density = FALSE
 	req_access = list(access_engine, access_robotics)
-	integrated_light_max_bright = 0.5
+	integrated_light_power = 3
 	local_transmit = 1
 	possession_candidate = 1
 	speed = 0
@@ -90,7 +90,7 @@ var/list/mob_hat_cache = list()
 		C.max_damage = 10
 
 	verbs += /mob/living/proc/ventcrawl // probably its should be here, not sure..
-	
+
 	verbs -= /mob/living/silicon/robot/verb/Namepick
 	update_icon()
 

@@ -19,9 +19,8 @@
 	desc = "A floating crystal that hums with an unearthly energy."
 	icon = 'icons/obj/pylon.dmi'
 	icon_state = "pylon"
-	light_max_bright = 0.5
-	light_inner_range = 1
-	light_outer_range = 13
+	light_power = 2
+	light_range = 13
 	light_color = "#3e0000"
 	var/health = 20
 	var/maxhealth = 20
@@ -69,7 +68,7 @@
 	desc = "A desk covered in arcane manuscripts and tomes in unknown languages. Looking at the text makes your skin crawl."
 	icon_state = "tomealtar"
 	light_color = "#ed9200"
-	light_outer_range = 3
+	light_range = 3
 	light_color= "ed9200"
 
 //sprites for this no longer exist	-Pete
@@ -93,7 +92,7 @@
 	var/spawnable = null
 
 /obj/effect/gateway/active
-	light_outer_range=5
+	light_range=5
 	light_color="#ff0000"
 	spawnable=list(
 		/mob/living/simple_animal/hostile/scarybat,
@@ -102,9 +101,7 @@
 	)
 
 /obj/effect/gateway/active/cult
-	light_max_bright	= 0.5
-	light_inner_range	= 2
-	light_outer_range	= 5
+	light_range=5
 	light_color			= "#ff0000"
 	spawnable=list(
 		/mob/living/simple_animal/hostile/scarybat/cult,
@@ -160,4 +157,3 @@
 			new_mob.key = M.key
 
 		to_chat(new_mob, "<B>Your form morphs into that of a corgi.</B>")//Because we don't have cluwnes
-

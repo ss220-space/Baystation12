@@ -10,15 +10,15 @@
 	w_class = ITEM_SIZE_SMALL
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
+	light_wedge = LIGHT_WIDE
 
 	matter = list(MATERIAL_PLASTIC = 50, MATERIAL_GLASS = 20)
 
 	action_button_name = "Toggle Flashlight"
 	var/on = FALSE
 	var/activation_sound = 'sound/effects/flashlight.ogg'
-	var/flashlight_max_bright = 0.5 //brightness of light when on, must be no greater than 1.
-	var/flashlight_inner_range = 1 //inner range of light when on, can be negative
-	var/flashlight_outer_range = 3 //outer range of light when on, can be negative
+	var/brightness_on = 4 //range of light when on
+	var/flashlight_power //luminosity of light when on, can be negative
 	var/flashlight_flags = 0 // FLASHLIGHT_ bitflags
 
 	var/tmp/toogle_cooldown //inf
@@ -73,7 +73,10 @@
 
 /obj/item/device/flashlight/proc/set_flashlight()
 	if (on)
-		set_light(flashlight_max_bright, flashlight_inner_range, flashlight_outer_range, 2, light_color)
+		if(flashlight_power)
+			set_light(l_range = brightness_on, l_power = flashlight_power)
+		else
+			set_light(brightness_on)
 		START_PROCESSING(SSobj, src)//inf
 	else
 		turn_off()//inf, was:		set_light(0)
@@ -151,8 +154,8 @@
 	desc = "An energy efficient flashlight."
 	icon_state = "biglight"
 	item_state = "biglight"
-	flashlight_max_bright = 0.75
-	flashlight_outer_range = 4
+	brightness_on = 6
+	flashlight_power = 3
 
 /obj/item/device/flashlight/flashdark
 	name = "flashdark"
@@ -160,9 +163,8 @@
 	icon_state = "flashdark"
 	item_state = "flashdark"
 	w_class = ITEM_SIZE_NORMAL
-	flashlight_max_bright = -1
-	flashlight_outer_range = 4
-	flashlight_inner_range = 1
+	brightness_on = 8
+	flashlight_power = -6
 
 /obj/item/device/flashlight/pen
 	name = "penlight"
@@ -172,10 +174,9 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_EARS
 	w_class = ITEM_SIZE_TINY
-	flashlight_max_bright = 0.25
-	flashlight_inner_range = 0.1
-	flashlight_outer_range = 2
+	brightness_on = 2
 	var/holo_cooldown = 0
+	light_wedge = LIGHT_OMNI
 
 /obj/item/device/flashlight/pen/afterattack(atom/target, mob/user, proximity_flag)
 	if(!proximity_flag)
@@ -200,8 +201,8 @@
 	attack_verb = list ("smacked", "thwacked", "thunked")
 	matter = list(MATERIAL_ALUMINIUM = 200, MATERIAL_GLASS = 50)
 	hitsound = "swing_hit"
-	flashlight_max_bright = 0.5
-	flashlight_outer_range = 5
+	brightness_on = 5
+	light_wedge = LIGHT_NARROW
 
 /******************************Lantern*******************************/
 /obj/item/device/flashlight/lantern
@@ -216,7 +217,8 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
 	matter = list(MATERIAL_STEEL = 200,MATERIAL_GLASS = 100)
-	flashlight_outer_range = 5
+	brightness_on = 7
+	light_wedge = LIGHT_OMNI
 
 /obj/item/device/flashlight/lantern/on_update_icon()
 	..()
@@ -234,9 +236,7 @@
 	item_state = ""
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	w_class = ITEM_SIZE_TINY
-	flashlight_max_bright = 0.25
-	flashlight_inner_range = 0.1
-	flashlight_outer_range = 2
+	brightness_on = 3
 
 
 // the desk lamps are a bit special
@@ -247,11 +247,9 @@
 	item_state = "lamp"
 	w_class = ITEM_SIZE_LARGE
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
-	flashlight_max_bright = 0.3
-	flashlight_inner_range = 1.5 //INF, WAS 2
-	flashlight_outer_range = 3.5 //INF, WAS 5
+	brightness_on = 5 //mbc
 
-	on = 0//inf, was on = 1
+	on = 1
 
 // green-shaded desk lamp
 /obj/item/device/flashlight/lamp/green
@@ -259,6 +257,7 @@
 	icon_state = "lampgreen"
 	item_state = "lampgreen"
 	light_color = "#ffc58f"
+	brightness_on = 5
 
 /obj/item/device/flashlight/lamp/verb/toggle_light()
 	set name = "Toggle light"
@@ -284,9 +283,8 @@
 	activation_sound = 'sound/effects/flare.ogg'
 	flashlight_flags = FLASHLIGHT_SINGLE_USE
 
-	flashlight_max_bright = 0.8
-	flashlight_inner_range = 0.1
-	flashlight_outer_range = 5
+	brightness_on = 8 // Pretty bright. mbc
+	light_power = 3
 
 /obj/item/device/flashlight/flare/Initialize()
 	. = ..()
@@ -359,9 +357,7 @@
 	produce_heat = 0
 	activation_sound = 'sound/effects/glowstick.ogg'
 
-	flashlight_max_bright = 0.6
-	flashlight_inner_range = 0.1
-	flashlight_outer_range = 3
+	brightness_on = 5
 
 /obj/item/device/flashlight/flare/glowstick/Initialize()
 	. = ..()
@@ -428,9 +424,7 @@
 	on = TRUE //Bio-luminesence has one setting, on.
 	flashlight_flags = FLASHLIGHT_ALWAYS_ON
 
-	flashlight_max_bright = 1
-	flashlight_inner_range = 0.1
-	flashlight_outer_range = 5
+	brightness_on = 4.5
 
 /obj/item/device/flashlight/slime/New()
 	..()
@@ -447,9 +441,7 @@
 	w_class = ITEM_SIZE_LARGE
 	obj_flags = OBJ_FLAG_CONDUCTIBLE | OBJ_FLAG_ROTATABLE
 
-	flashlight_max_bright = 0.8
-	flashlight_inner_range = 1
-	flashlight_outer_range = 5
+	brightness_on = 7
 
 /obj/item/device/flashlight/lamp/floodlamp/green
 	icon_state = "greenfloodlamp"
@@ -462,7 +454,7 @@
 	icon_state = "lavalamp"
 	on = 0
 	action_button_name = "Toggle lamp"
-	flashlight_outer_range = 3 //range of light when on
+	brightness_on = 3 //range of light when on
 	matter = list(MATERIAL_ALUMINIUM = 250, MATERIAL_GLASS = 200)
 
 /obj/item/device/flashlight/lamp/lava/on_update_icon()

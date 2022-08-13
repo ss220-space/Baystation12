@@ -27,9 +27,8 @@
 /decl/security_level/default/sierradept/code_green
 	name = "код зелёный"
 
-	light_max_bright = 0.25
-	light_inner_range = 0.1
-	light_outer_range = 1
+	light_range = 2
+	light_power = 1
 	light_color_alarm = COLOR_GREEN
 	light_color_status_display = COLOR_GREEN
 
@@ -50,9 +49,8 @@
 /decl/security_level/default/sierradept/code_violet
 	name = "код фиолетовый"
 
-	light_max_bright = 0.25
-	light_inner_range = 1
-	light_outer_range = 2
+	light_range = 3
+	light_power = 2
 	light_color_alarm = COLOR_VIOLET
 	light_color_status_display = COLOR_VIOLET
 
@@ -81,9 +79,8 @@
 /decl/security_level/default/sierradept/code_orange
 	name = "код оранжевый"
 
-	light_max_bright = 0.25
-	light_inner_range = 1
-	light_outer_range = 2
+	light_range = 3
+	light_power = 2
 	light_color_alarm = COLOR_ORANGE
 	light_color_status_display = COLOR_ORANGE
 	overlay_alarm = "alarm_orange"
@@ -114,9 +111,8 @@
 /decl/security_level/default/sierradept/code_blue
 	name = "код синий"
 
-	light_max_bright = 0.5
-	light_inner_range = 1
-	light_outer_range = 2
+	light_range = 3
+	light_power = 2
 	light_color_alarm = COLOR_BLUE
 	light_color_status_display = COLOR_BLUE
 	overlay_alarm = "alarm_blue"
@@ -141,9 +137,8 @@
 /decl/security_level/default/sierradept/code_red
 	name = "код красный"
 
-	light_max_bright = 0.5
-	light_inner_range = 1
-	light_outer_range = 2
+	light_range = 4
+	light_power = 2
 	light_color_alarm = COLOR_RED
 	light_color_status_display = COLOR_RED
 	overlay_alarm = "alarm_red"
@@ -177,9 +172,8 @@
 /decl/security_level/default/sierradept/code_delta
 	name = "код дельта"
 
-	light_max_bright = 0.7
-	light_inner_range = 1
-	light_outer_range = 3
+	light_range = 4
+	light_power = 2
 	light_color_alarm = COLOR_RED
 	light_color_status_display = COLOR_NAVY_BLUE
 

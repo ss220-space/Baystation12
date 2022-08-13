@@ -11,9 +11,8 @@
 	var/on = 0
 	var/activation_sound = 'sound/effects/flare.ogg'
 	light_color = "#e58775"
-	light_outer_range = 2
-	light_max_bright = 1
-	var/brightness_on = 1 // Moderate-low bright.
+	light_power = 3
+	var/brightness_on = 4 // Moderate-low bright.
 	action_button_name = null
 
 /obj/item/device/oxycandle/New()
@@ -70,7 +69,7 @@
 	if(on == 1)
 		icon_state = "oxycandle_on"
 		item_state = icon_state
-		set_light(brightness_on, light_max_bright, light_outer_range, 1, light_color)
+		set_light(brightness_on, light_color)
 	else if(on == 2)
 		icon_state = "oxycandle_burnt"
 		item_state = icon_state
