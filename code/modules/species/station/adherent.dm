@@ -113,6 +113,10 @@
 		"Jet"         = "_black"
 	)
 
+	inherent_verbs = list(
+		/mob/living/carbon/human/proc/toggle_emergency_discharge
+	)
+
 /datum/species/adherent/New()
 	equip_adjust = list(
 		"[slot_l_hand_str]" = list("[NORTH]" = list("x" = 0, "y" = 14), "[EAST]" = list("x" = 0, "y" = 14), "[SOUTH]" = list("x" = 0, "y" = 14), "[WEST]" = list("x" = 0,  "y" = 14)),

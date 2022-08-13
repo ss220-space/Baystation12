@@ -43,7 +43,12 @@ GLOBAL_LIST_EMPTY(donators_data)
 				var/list/rank_color = SSexdata.GetDataByKey(DATASTORE_RANKS_OOC_COLORS, rank)
 				if(length(rank_color))
 					ooc_color = rank_color
-		else if(check_rights(R_ADMIN, FALSE))
+
+		for(var/client/C in GLOB.admins)
+			if (C.ckey != ckey(key))
+				continue
+			if(!check_rights(R_ADMIN, FALSE, C))
+				break
 			rank = "Admin"
 			level = 5
 			points = 500

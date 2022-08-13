@@ -1390,6 +1390,10 @@
 	pixel_x = 5
 	},
 /obj/item/reagent_containers/dropper,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "acU" = (
@@ -1810,8 +1814,7 @@
 /obj/effect/floor_decal/corner/green/border,
 /obj/random/date_based/christmas/xmaslights,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	dir = 4
 	},
 /obj/machinery/reagentgrinder/juicer,
 /turf/simulated/floor/tiled,
@@ -6561,12 +6564,6 @@
 /turf/simulated/wall/prepainted,
 /area/crew_quarters/cafe)
 "amr" = (
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -34650,9 +34647,6 @@
 /obj/structure/bed/sofa/r/brown{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9
-	},
 /obj/structure/closet/walllocker{
 	pixel_y = 30
 	},
@@ -35308,9 +35302,6 @@
 /obj/structure/bed/sofa/m/brown{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/cafe)
 "gfJ" = (
@@ -35492,12 +35483,9 @@
 /obj/random/date_based/christmas/xmaslights{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 6
-	},
 /obj/structure/table/woodentable_reinforced/walnut,
-/obj/item/pizzabox{
-	pixel_y = 12
+/obj/item/pizzabox/meat{
+	pixel_y = 10
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/cafe)
@@ -36089,9 +36077,6 @@
 /area/hallway/primary/seconddeck/center)
 "izX" = (
 /obj/structure/table/woodentable_reinforced/walnut,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -36501,9 +36486,6 @@
 /obj/random/date_based/christmas/xmaslights{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/cafe)
 "jGB" = (
@@ -36555,9 +36537,6 @@
 	},
 /obj/item/device/radio/intercom{
 	pixel_y = 26
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 5
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/cafe)
@@ -37459,9 +37438,6 @@
 	dir = 4
 	},
 /obj/effect/landmark/start,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
 /obj/structure/bed/sofa/r/brown{
 	dir = 8
 	},
@@ -38398,9 +38374,6 @@
 	pixel_y = -6;
 	range = 3
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
 /obj/structure/bed/sofa/l/brown{
 	dir = 4
 	},
@@ -38800,9 +38773,6 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -20
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 10
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/cafe)
@@ -40551,7 +40521,6 @@
 /turf/simulated/open,
 /area/rnd/xenobiology/level1)
 "usq" = (
-/obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/light,
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/cafe)
@@ -41624,9 +41593,6 @@
 /obj/random/date_based/christmas/xmaslights{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/cafe)
 "xnj" = (
@@ -41688,6 +41654,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "xwq" = (
