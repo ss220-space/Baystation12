@@ -23,6 +23,7 @@
 	var/charge_tick = 0
 	var/no_reloadable = 0
 
+
 	var/hatch_open = 0 //determines if you can insert a cell in/detach a cell
 
 	var/reload_time = 5 SECONDS
@@ -113,7 +114,7 @@
 				if(!do_after(user, reload_time, src))
 					user.visible_message("[usr] stops reconfiguring the wires in [src].","<span class='warning'>You stop reconfiguring the wires in [src].</span>")
 					return
-				if(!user.unEquip(AM, src))
+				if(!user.unequip_item(AM, src))
 					return
 				power_supply = AM
 				user.visible_message("[user] inserts [AM] into [src].", "<span class='notice'>You insert [AM] and hot wire it into [src].</span>")
