@@ -21,7 +21,7 @@
 	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=null, one_hand_penalty=0, burst_accuracy=null, dispersion=null),
 		list(mode_name="4-round bursts", burst=4, fire_delay=null,  one_hand_penalty=1, burst_accuracy=list(0,0,-1,-1),       dispersion=list(0.0, 0.0, 0.5, 0.6)),
-		list(mode_name="full auto",      burst=1, fire_delay=0,    burst_delay=1,      one_hand_penalty=5,                 burst_accuracy=list(0,-1,-1,-1,-2), dispersion=list(1.0, 1.0, 1.2, 1.4, 1.6), autofire_enabled=1)
+		list(mode_name="full auto",      burst=1, fire_delay=2,  burst_delay=3,  one_hand_penalty=5, burst_accuracy=list(0,-1,-1,-1,-2), dispersion=list(1.0, 1.0, 1.2, 1.4, 1.6), autofire_enabled=1)
 		)
 
 //[INF]
@@ -135,8 +135,8 @@
 	firemodes = list(
 		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=8,  burst_accuracy=null,                dispersion=null),
 		list(mode_name="3-round bursts", burst=3,    fire_delay=null, one_hand_penalty=9,  burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",   burst=5,    fire_delay=null,        one_hand_penalty=11, burst_accuracy=list(0,-1,-2,-3,-3), dispersion=list(0.6, 1.0, 1.2, 1.2, 1.5)),
-		list(mode_name="full auto",      burst=1,    fire_delay=0,    burst_delay=1,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1),       dispersion=list(0.2, 0.6, 1.0), autofire_enabled=1)
+		list(mode_name="short bursts",   burst=5,    fire_delay=null, one_hand_penalty=11, burst_accuracy=list(0,-1,-2,-3,-3), dispersion=list(0.6, 1.0, 1.2, 1.2, 1.5)),
+		list(mode_name="full auto",      burst=1,    fire_delay=2,    burst_delay=1.5,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(0.6, 1.2, 1.4, 1.6, 1.8), autofire_enabled=1)
 		)
 
 
@@ -225,7 +225,7 @@
 		list(mode_name="semi auto",      burst=1,    fire_delay=null, use_launcher=null, one_hand_penalty=8,  burst_accuracy=null,            dispersion=null),
 		list(mode_name="3-round bursts", burst=3,    fire_delay=null, use_launcher=null, one_hand_penalty=9,  burst_accuracy=list(0,-1,-1),   dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="fire grenades",  burst=null, fire_delay=null, use_launcher=1,    one_hand_penalty=10, burst_accuracy=null,            dispersion=null),
-		list(mode_name="full auto",      burst=1,    fire_delay=0,    burst_delay=1,     use_launcher=null,   one_hand_penalty=7,             burst_accuracy = list(0,-1,-1), dispersion=list(0.2, 0.6, 1.2), autofire_enabled=1)
+		list(mode_name="full auto",      burst=1,    fire_delay=2,    burst_delay=2,     use_launcher=null,   one_hand_penalty=7,             burst_accuracy = list(0,-1,-1), dispersion=list(0.2, 0.6, 1.2), autofire_enabled=1)
 	)
 
 	var/use_launcher = 0
@@ -308,7 +308,7 @@
 	firemodes = list(
 		list(mode_name="short bursts", burst=5, fire_delay=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
 		list(mode_name="long bursts",  burst=8, fire_delay=5, one_hand_penalty=12, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="full auto",    burst=1, fire_delay=0, burst_delay=1, one_hand_penalty=12, burst_accuracy = list(0,-1,-1,-2,-2,-2), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2), autofire_enabled=1),
+		list(mode_name="full auto",    burst=1, fire_delay=1, burst_delay=1.8, one_hand_penalty=20, burst_accuracy=list(0,-1,-1,-1,-2), dispersion=list(1.6, 1.6, 2.0, 2.0, 2.4), autofire_enabled=1),
 		)
 
 	var/cover_open = 0
@@ -391,7 +391,7 @@
 	//Battle Rifle is only accurate in semi-automatic fire.
 	firemodes = list(
 		list(mode_name="semi auto", burst=1, fire_delay=null,   one_hand_penalty=8, burst_accuracy=null, dispersion=null),
-		list(mode_name="full auto", burst=1, fire_delay=0, burst_delay=2, one_hand_penalty=12, burst_accuracy = list(0,-1,-2), dispersion = list(0.0, 0.6, 1.0, 1.2, 1.4), autofire_enabled=1),
+		list(mode_name="full auto", burst=1, fire_delay=1, burst_delay=2, one_hand_penalty=12, burst_accuracy = list(0,-1,-2), dispersion = list(0.0, 0.6, 1.0, 1.2, 1.4), autofire_enabled=1),
 		)
 
 /obj/item/gun/projectile/automatic/battlerifle/on_update_icon()

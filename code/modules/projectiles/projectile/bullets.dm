@@ -206,11 +206,11 @@
 
 /obj/item/projectile/bullet/rifle
 	fire_sound = 'sound/weapons/gunshot/gunshot3.ogg'
-	damage = 45
+	damage = 35
 	armor_penetration = 25
-	penetration_modifier = 1.5
+	penetration_modifier = 0.9
 	penetrating = 0 //INF, WAS 1
-	//INF distance_falloff = 1.5
+	distance_falloff = 2
 
 /obj/item/projectile/bullet/rifle/military
 	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'

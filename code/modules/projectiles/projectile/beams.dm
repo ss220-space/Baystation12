@@ -33,6 +33,11 @@
 	damage = 40 //INF, WAS 50
 	armor_penetration = 20
 
+/obj/item/projectile/beam/auto
+	damage = 22
+	armor_penetration = 23
+	distance_falloff = 0.5
+
 /obj/item/projectile/beam/heavylaser
 	name = "heavy laser"
 	icon_state = "heavylaser"

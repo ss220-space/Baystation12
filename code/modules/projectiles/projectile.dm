@@ -213,7 +213,7 @@
 		miss_modifier = max(0 - hitchance_mod + special_miss_modifier, -30)
 //[/INF]
 	//makes moving targets harder to hit, and stationary easier to hit
-//inf	var/movment_mod = min(5, (world.time - target_mob.l_move_time) - 20)
+	var/movment_mod = min(5, (world.time - target_mob.l_move_time) - 20)
 	//Calc close distance bonus
 //[INF]
 /*
@@ -226,13 +226,13 @@
 */
 //[/INF]
 	//running in a straight line isnt as helpful tho
-/*[INF]	if(movment_mod < 0)
+	if(movment_mod < 0)
 		if(target_mob.last_move == get_dir(firer, target_mob))
 			movment_mod *= 0.25
 		else if(target_mob.last_move == get_dir(target_mob,firer))
 			movment_mod *= 0.5
 	miss_modifier -= movment_mod
-[/INF]*/
+
 	var/hit_zone = get_zone_with_miss_chance(def_zone, target_mob, miss_modifier, ranged_attack=(distance > 1 || original != target_mob)) //if the projectile hits a target we weren't originally aiming at then retain the chance to miss
 
 	var/result = PROJECTILE_FORCE_MISS
