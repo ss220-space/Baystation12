@@ -750,7 +750,7 @@ var/global/serials = list()
 	var/hud_enabled = TRUE
 
 /obj/item/gun/proc/has_ammo_counter()
-	return TRUE
+	return FALSE
 
 /obj/item/gun/proc/get_ammo_type()
 	return FALSE
