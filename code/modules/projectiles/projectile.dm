@@ -57,6 +57,10 @@
 	var/tracer_type
 	var/impact_type
 
+	// TGMC Ammo HUD Port
+	var/hud_state = "unknown" // What HUD state we use when we have ammunition.
+	var/hud_state_empty = "unknown" // The empty state. DON'T USE _FLASH IN THE NAME OF THE EMPTY STATE STRING, THAT IS ADDED BY THE CODE.
+
 	var/fire_sound
 	var/miss_sounds
 	var/ricochet_sounds

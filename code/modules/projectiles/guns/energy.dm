@@ -65,12 +65,18 @@
 
 		power_supply.give(charge_cost) //... to recharge the shot
 		update_icon()
+		var/mob/living/M = loc // TGMC Ammo HUD
+		if(istype(M)) // TGMC Ammo HUD
+			M?.hud_used.update_ammo_hud(M, src) // TGMC Ammo HUD
 	return 1
 
 /obj/item/gun/energy/consume_next_projectile()
 	if(!power_supply) return null
 	if(!ispath(projectile_type)) return null
 	if(!power_supply.checked_use(charge_cost)) return null
+	var/mob/living/M = loc // TGMC Ammo HUD
+	if(istype(M)) // TGMC Ammo HUD
+		M?.hud_used.update_ammo_hud(M, src)
 	return new projectile_type(src)
 
 /obj/item/gun/energy/proc/get_external_power_supply()
@@ -105,3 +111,21 @@
 		else
 			icon_state = "[initial(icon_state)][ratio]"
 		update_held_icon()
+
+
+// TGMC AMMO HUD
+/obj/item/gun/energy/has_ammo_counter()
+	return TRUE
+
+/obj/item/gun/energy/get_ammo_type()
+	if(!projectile_type)
+		return list("unknown", "unknown")
+	else
+		var/obj/item/projectile/P = projectile_type
+		return list(initial(P.hud_state), initial(P.hud_state_empty))
+
+/obj/item/gun/energy/get_ammo_count()
+	if(!power_supply)
+		return 0
+	else
+		return round(power_supply.maxcharge && (100.0*power_supply.charge/power_supply.maxcharge), 1)

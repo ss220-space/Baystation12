@@ -6,6 +6,8 @@
 	damage_type = BURN
 	damage_flags = 0
 	//INF distance_falloff = 2.5
+	hud_state = "plasma"
+	hud_state_empty = "battery_empty"
 
 //releases a burst of light on impact or after travelling a distance
 /obj/item/projectile/energy/flash
@@ -16,6 +18,7 @@
 	agony = 20
 	life_span = 15 //if the shell hasn't hit anything after travelling this far it just explodes.
 	muzzle_type = /obj/effect/projectile/bullet/muzzle
+	hud_state = "grenade_dummy"
 	var/flash_range = 1
 	var/brightness = 7
 	var/light_colour = "#ffffff"
@@ -49,6 +52,7 @@
 	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
 	flash_range = 2
 	brightness = 15
+	hud_state = "grenade_dummy"
 
 /obj/item/projectile/energy/flash/flare/on_hit(atom/target, blocked = 0, def_zone = null)
 	. = ..()
@@ -75,8 +79,8 @@
 			if(T && (T != TO) && (TO.z == T.z) && !mob.blinded)
 				to_chat(mob, SPAN_NOTICE("You see a bright light to \the [dir2text(get_dir(T,TO))]"))
 			CHECK_TICK
-				
-/obj/item/projectile/energy/electrode	//has more pain than a beam because it's harder to hit 
+
+/obj/item/projectile/energy/electrode	//has more pain than a beam because it's harder to hit
 	name = "electrode"
 	icon_state = "spark"
 	fire_sound = 'sound/weapons/Taser.ogg'
@@ -85,6 +89,7 @@
 	damage_type = BURN
 	eyeblur = 1//Some feedback that you've been hit
 	step_delay = 0.7
+	hud_state = "taser"
 
 /obj/item/projectile/energy/electrode/green
 	icon_state = "spark_green"
@@ -92,6 +97,7 @@
 /obj/item/projectile/energy/electrode/stunshot
 	agony = 80
 	damage = 3
+	hud_state = "taser"
 
 /obj/item/projectile/energy/declone
 	name = "decloner beam"
@@ -100,6 +106,7 @@
 	damage = 30
 	damage_type = CLONE
 	irradiate = 40
+	hud_state = "plasma_pistol"
 
 /obj/item/projectile/energy/dart
 	name = "dart"
@@ -107,6 +114,7 @@
 	damage = 5
 	damage_type = TOX
 	weaken = 5
+	hud_state = "pistol_tranq"
 
 /obj/item/projectile/energy/bolt
 	name = "bolt"
@@ -115,11 +123,13 @@
 	damage_type = TOX
 	agony = 40
 	stutter = 10
+	hud_state = "electrothermal"
 
 /obj/item/projectile/energy/bolt/large
 	name = "largebolt"
 	damage = 20
 	agony = 60
+	hud_state = "electrothermal"
 
 /obj/item/projectile/energy/neurotoxin
 	name = "neuro"
@@ -127,6 +137,7 @@
 	damage = 5
 	agony = 20
 	life_span = 6
+	hud_state = "electrothermal"
 
 /obj/item/projectile/energy/phoron
 	name = "phoron bolt"
@@ -135,6 +146,7 @@
 	damage = 20
 	damage_type = TOX
 	irradiate = 20
+	hud_state = "plasma_rifle"
 
 /obj/item/projectile/energy/plasmastun
 	name = "plasma pulse"
@@ -146,6 +158,7 @@
 	agony = 70
 	damage_type = BURN
 	vacuum_traversal = 0
+	hud_state = "plasma_rifle_blast"
 	var/min_dizziness_amt = 60
 	var/med_dizziness_amt = 120
 	var/max_dizziness_amt = 300
@@ -222,3 +235,4 @@
 	damage = 10
 	armor_penetration = 35
 	damage_type = BRUTE
+	hud_state = "plasma_sphere"

@@ -15,6 +15,8 @@
 	penetration_modifier = 0.3
 	armor_penetration = 10 //INF, WAS NOTHING (0)
 	//INF distance_falloff = 2.5
+	hud_state = "laser"
+	hud_state_empty = "battery_empty"
 
 	muzzle_type = /obj/effect/projectile/laser/muzzle
 	tracer_type = /obj/effect/projectile/laser/tracer
@@ -24,14 +26,17 @@
 	fire_sound = 'sound/weapons/Taser.ogg'
 	damage = 0
 	eyeblur = 2
+	hud_state = "laser"
 
 /obj/item/projectile/beam/smalllaser
 	damage = 25
 	armor_penetration = 0 //INF, WAS 10
+	hud_state = "laser"
 
 /obj/item/projectile/beam/midlaser
 	damage = 40 //INF, WAS 50
 	armor_penetration = 20
+	hud_state = "laser"
 
 /obj/item/projectile/beam/heavylaser
 	name = "heavy laser"
@@ -40,6 +45,7 @@
 	damage = 60
 	armor_penetration = 30
 	//INF distance_falloff = 0.5
+	hud_state = "laser_overcharge"
 
 	muzzle_type = /obj/effect/projectile/laser/heavy/muzzle
 	tracer_type = /obj/effect/projectile/laser/heavy/tracer
@@ -52,6 +58,7 @@
 	damage = 30
 	armor_penetration = 30
 	penetration_modifier = 0.8
+	hud_state = "laser_sniper"
 
 	muzzle_type = /obj/effect/projectile/laser/xray/muzzle
 	tracer_type = /obj/effect/projectile/laser/xray/tracer
@@ -67,6 +74,7 @@
 	fire_sound='sound/weapons/pulse.ogg'
 	damage = 15
 	armor_penetration = 30
+	hud_state = "pulse"
 
 	muzzle_type = /obj/effect/projectile/laser/pulse/muzzle
 	tracer_type = /obj/effect/projectile/laser/pulse/tracer
@@ -120,6 +128,7 @@
 	damage = 0
 	no_attack_log = TRUE
 	damage_type = BURN
+	hud_state = "monkey"
 
 	muzzle_type = /obj/effect/projectile/laser/blue/muzzle
 	tracer_type = /obj/effect/projectile/laser/blue/tracer
@@ -139,6 +148,7 @@
 	damage = 0
 	no_attack_log = TRUE
 	damage_type = BURN
+	hud_state = "monkey"
 
 /obj/item/projectile/beam/lastertag/red/on_hit(var/atom/target, var/blocked = 0)
 	if(istype(target, /mob/living/carbon/human))
@@ -153,6 +163,7 @@
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GLASS | PASS_FLAG_GRILLE
 	damage = 0
 	damage_type = BURN
+	hud_state = "monkey"
 
 	muzzle_type = /obj/effect/projectile/laser/omni/muzzle
 	tracer_type = /obj/effect/projectile/laser/omni/tracer
@@ -174,6 +185,7 @@
 	stun = 3
 	weaken = 3
 	stutter = 3
+	hud_state = "laser_sniper"
 
 	muzzle_type = /obj/effect/projectile/laser/xray/muzzle
 	tracer_type = /obj/effect/projectile/laser/xray/tracer
@@ -189,6 +201,7 @@
 	damage_type = BURN
 	eyeblur = 1//Some feedback that you've been hit
 	agony = 40
+	hud_state = "taser"
 
 	muzzle_type = /obj/effect/projectile/stun/muzzle
 	tracer_type = /obj/effect/projectile/stun/tracer

@@ -4,6 +4,7 @@
 	icon = 'icons/obj/guns/laser_carbine.dmi'
 	icon_state = "laser"
 	item_state = "laser"
+	hud_enabled = TRUE
 	slot_flags = SLOT_BELT|SLOT_BACK
 	force = 10
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)

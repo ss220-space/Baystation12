@@ -12,6 +12,8 @@
 	penetration_modifier = 1.0
 	var/mob_passthrough_check = 0
 	var/is_pellet = FALSE
+	hud_state = "pistol_lightap"
+	hud_state_empty = "pistol_empty"  // Just in case we somehow have no hud_state_empty defined
 
 	muzzle_type = /obj/effect/projectile/bullet/muzzle
 	miss_sounds = list('sound/weapons/guns/miss1.ogg','sound/weapons/guns/miss2.ogg','sound/weapons/guns/miss3.ogg','sound/weapons/guns/miss4.ogg')
@@ -129,11 +131,15 @@
 	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
 	damage = 45
 	distance_falloff = 3
+	hud_state = "pistol"
+	hud_state_empty = "pistol_empty"
 
 /obj/item/projectile/bullet/pistol/holdout
 	damage = 40
 	penetration_modifier = 1.2
 	//INF distance_falloff = 4
+	hud_state = "pistol"
+	hud_state_empty = "pistol_empty"
 
 /obj/item/projectile/bullet/pistol/strong
 	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
@@ -141,6 +147,7 @@
 	penetration_modifier = 0.8
 	distance_falloff = 2.5
 	armor_penetration = 15
+	hud_state = "pistol_light_ap"
 
 /obj/item/projectile/bullet/pistol/rubber //"rubber" bullets
 	name = "rubber bullet"
@@ -148,9 +155,11 @@
 	damage = 5
 	agony = 40
 	embed = FALSE
+	hud_state = "pistol_special"
 
 /obj/item/projectile/bullet/pistol/rubber/holdout
 	agony = 30
+	hud_state = "pistol_special"
 
 //4mm. Tiny, very low damage, does not embed, but has very high penetration. Only to be used for the experimental SMG.
 /obj/item/projectile/bullet/flechette
@@ -160,6 +169,7 @@
 	armor_penetration = 70
 	embed = FALSE
 	//INF distance_falloff = 2
+	hud_state = "shotgun_flechette"
 
 /* shotgun projectiles */
 
@@ -168,6 +178,8 @@
 	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
 	damage = 65
 	armor_penetration = 10
+	hud_state = "shotgun_slug"
+	hud_state_empty = "shotgun_empty"
 
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
 	name = "beanbag"
@@ -177,6 +189,8 @@
 	embed = FALSE
 	armor_penetration = 0
 	//INF distance_falloff = 3
+	hud_state = "shotgun_beanbag"
+
 
 //Should do about 180 damage at 1 tile distance (adjacent), and 120 damage at 3 tiles distance.
 //Overall less damage than slugs in exchange for more damage at very close range and more embedding
@@ -188,6 +202,7 @@
 	pellets = 6
 	range_step = 1
 	spread_step = 50
+	hud_state = "shotgun_buckshot"
 
 /obj/item/projectile/bullet/pellet/shotgun/flechette
 	name = "flechette"
@@ -201,6 +216,7 @@
 	spread_step = 2
 	penetration_modifier = 0.5
 	hitchance_mod = 5
+	hud_state = "shotgun_flechette"
 
 /* "Rifle" rounds */
 
@@ -211,12 +227,16 @@
 	penetration_modifier = 1.5
 	penetrating = 0 //INF, WAS 1
 	//INF distance_falloff = 1.5
+	hud_state = "rifle"
+	hud_state_empty = "rifle_empty"
 
 /obj/item/projectile/bullet/rifle/military
 	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 40
 	armor_penetration = 35
 	penetration_modifier = 1
+	hud_state = "rifle_heavy"
+
 
 /obj/item/projectile/bullet/rifle/shell
 	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
@@ -227,12 +247,14 @@
 	penetrating = 3
 	armor_penetration = 70
 	penetration_modifier = 1.2
+	hud_state = "rifle_ap"
 
 /obj/item/projectile/bullet/rifle/shell/apds
 	damage = 70
 	penetrating = 5
 	armor_penetration = 80
 	penetration_modifier = 1.5
+	hud_state = "rifle_ap"
 
 /* Miscellaneous */
 /obj/item/projectile/bullet/gyro

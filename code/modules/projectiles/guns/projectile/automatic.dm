@@ -156,6 +156,9 @@
 		icon_state = "arifle-empty"
 		wielded_item_state = "arifle-wielded-empty"
 
+/obj/item/gun/projectile/automatic/assault_rifle/has_ammo_counter()
+	return TRUE
+
 /obj/item/gun/projectile/automatic/sec_smg
 	name = "WT-550 submachine gun"
 	desc = "The WT-550 Saber is a cheap self-defense weapon, mass-produced by Ward-Takahashi for paramilitary and private use."

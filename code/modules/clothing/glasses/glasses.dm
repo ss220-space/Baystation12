@@ -170,16 +170,31 @@
 
 /obj/item/clothing/glasses/tacgoggles
 	name = "tactical goggles"
-	desc = "Self-polarizing goggles with light amplification for dark environments. Made from durable synthetic."
+	desc = "Augmented reality glasses with an AI-based combat computer that reads the amount and type of ammunition."
 	icon_state = "swatgoggles"
 	origin_tech = list(TECH_MAGNET = 2, TECH_COMBAT = 4)
 	darkness_view = 4 //inf, was 5
 	action_button_name = "Toggle Goggles"
 	toggleable = TRUE
+	hud_type = HUD_TACTICAL
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	siemens_coefficient = 0.6
 	electric = TRUE
 	tint = 1 //INF, WAS NOTHING
+
+/obj/item/clothing/glasses/tacgoggles/tachud
+	name = "tactical goggles"
+	desc = "Self-polarizing goggles with light amplification for dark environments. Made from durable synthetic."
+	icon_state = "secgoggles"
+	off_state = "desec"
+	origin_tech = list(TECH_MAGNET = 2, TECH_COMBAT = 4)
+	hud_type = HUD_TACTICAL
+	darkness_view = 5
+	action_button_name = "Toggle Goggles"
+	toggleable = TRUE
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	siemens_coefficient = 0.6
+	electric = TRUE
 
 /obj/item/clothing/glasses/monocle
 	name = "monocle"

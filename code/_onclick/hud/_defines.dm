@@ -133,3 +133,8 @@
 #define ui_pai_light "NORTH,WEST+3:6"
 #define ui_pai_rest "NORTH,WEST+4:6"
 
+// Goes above HUD, mid-right
+#define ui_ammo_hud1 "WEST:6,CENTER:15"
+#define ui_ammo_hud2 "WEST:6,CENTER:48"
+#define ui_ammo_hud3 "WEST:6,CENTER+3:50"
+#define ui_ammo_hud4 "WEST:6,CENTER+4:75"

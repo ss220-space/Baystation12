@@ -79,11 +79,13 @@
 	use(amount)
 	return 1
 
+
 /obj/item/cell/proc/give(var/amount)
 	var/amount_used = min(maxcharge-charge,amount)
 	charge += amount_used
 	update_icon()
 	return amount_used
+
 
 /obj/item/cell/examine(mob/user)
 	. = ..()
