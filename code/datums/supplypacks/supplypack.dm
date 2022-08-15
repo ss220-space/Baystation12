@@ -29,9 +29,9 @@
 	switch(security_level)
 		if(SUPPLY_SECURITY_ELEVATED)
 			if(security_state.all_security_levels.len > 1)
-				security_level = security_state.all_security_levels[2] 
+				security_level = security_state.all_security_levels[2]
 			else
-				security_level = security_state.high_security_level 
+				security_level = security_state.high_security_level
 		if(SUPPLY_SECURITY_HIGH)
 			security_level = security_state.high_security_level
 	if(!istype(security_level))
@@ -41,6 +41,10 @@
 /decl/hierarchy/supply_pack/proc/spawn_contents(var/location)
 	var/decl/supply_method/sm = get_supply_method(supply_method)
 	return sm.spawn_contents(src, location)
+
+/decl/hierarchy/supply_pack/proc/get_cost()
+	. = cost
+	. *= SSsupply.pack_price_modifier
 
 /*
 //SUPPLY PACKS
