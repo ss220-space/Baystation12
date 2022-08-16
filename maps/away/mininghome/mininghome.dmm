@@ -3609,7 +3609,7 @@
 /area/map_template/mininghome_living_north)
 "FA" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	power_rating = s
+	power_rating = 20000
 	},
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 1;
