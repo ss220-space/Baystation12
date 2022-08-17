@@ -1,3 +1,6 @@
+/obj/item/gun/projectile/shotgun // INF
+	slot_flags = 0
+
 /obj/item/gun/projectile/shotgun/pump
 	name = "shotgun"
 	desc = "The mass-produced W-T Remmington 29x shotgun is a favourite of police and security forces on many worlds. Useful for sweeping alleys."

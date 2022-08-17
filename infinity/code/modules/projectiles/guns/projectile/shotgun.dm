@@ -43,6 +43,7 @@
 	force = 10
 	caliber = CALIBER_SHOTGUN
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BELT|SLOT_BACK|SLOT_HOLSTER
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/shotguntaj/net
 	allowed_magazines = /obj/item/ammo_magazine/shotguntaj
