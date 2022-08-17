@@ -22,7 +22,7 @@
 	name = "First-Aid (empty)"
 
 /obj/item/storage/firstaid/regular
-	icon_state = "firstaid"
+	icon_state = "firstaid-brute"
 
 	startswith = list(
 		/obj/item/stack/medical/bruise_pack = 2,
@@ -35,8 +35,8 @@
 /obj/item/storage/firstaid/trauma
 	name = "trauma first-aid kit"
 	desc = "It's an emergency medical kit for when people brought ballistic weapons to a laser fight."
-	icon_state = "radfirstaid"
-	item_state = "firstaid-ointment"
+	icon_state = "firstaid-brutealt"
+	item_state = "firstaid-brutealt"
 
 	startswith = list(
 		/obj/item/storage/med_pouch/trauma = 4
@@ -44,13 +44,13 @@
 
 /obj/item/storage/firstaid/trauma/New()
 	..()
-	icon_state = pick("radfirstaid", "radfirstaid2", "radfirstaid3")
+	icon_state = pick("firstaid-brutealt", "firstaid-brute")
 
 /obj/item/storage/firstaid/fire
 	name = "fire first-aid kit"
 	desc = "It's an emergency medical kit for when the toxins lab <i>-spontaneously-</i> burns down."
 	icon_state = "ointment"
-	item_state = "firstaid-ointment"
+	item_state = "firstaid-burn"
 
 	startswith = list(
 		/obj/item/storage/med_pouch/burn = 4
@@ -58,13 +58,13 @@
 
 /obj/item/storage/firstaid/fire/New()
 	..()
-	icon_state = pick("ointment","firefirstaid")
+	icon_state = pick("firstaid-burn","firstaid-burnalt")
 
 /obj/item/storage/firstaid/toxin
 	name = "toxin first aid"
 	desc = "Used to treat when you have a high amount of toxins in your body."
 	icon_state = "antitoxin"
-	item_state = "firstaid-toxin"
+	item_state = "antitoxin"
 
 	startswith = list(
 		/obj/item/storage/med_pouch/toxin = 4
@@ -72,22 +72,26 @@
 
 /obj/item/storage/firstaid/toxin/New()
 	..()
-	icon_state = pick("antitoxin","antitoxfirstaid","antitoxfirstaid2","antitoxfirstaid3")
+	icon_state = pick("antitoxin","antitoxfirstaid")
 
 /obj/item/storage/firstaid/o2
 	name = "oxygen deprivation first aid"
 	desc = "A box full of oxygen goodies."
-	icon_state = "o2"
+	icon_state = "firstaid-o2"
 	item_state = "firstaid-o2"
 
 	startswith = list(
 		/obj/item/storage/med_pouch/oxyloss = 4
 		)
 
+/obj/item/storage/firstaid/o2/Initialize(mapload)
+	. = ..()
+	icon_state = pick("firstaid-o2","firstaid-o2alt")
+
 /obj/item/storage/firstaid/adv
 	name = "advanced first-aid kit"
 	desc = "Contains advanced medical treatments."
-	icon_state = "purplefirstaid"
+	icon_state = "firstaid-advanced"
 	item_state = "firstaid-advanced"
 
 	startswith = list(
@@ -97,11 +101,15 @@
 		/obj/item/stack/medical/splint
 		)
 
+/obj/item/storage/firstaid/adv/Initialize(mapload)
+	. = ..()
+	icon_state = pick("firstaid-advanced","firstaid-advancedalt")
+
 /obj/item/storage/firstaid/combat
 	name = "combat medical kit"
 	desc = "Contains advanced medical treatments."
-	icon_state = "bezerk"
-	item_state = "firstaid-advanced"
+	icon_state = "firstaid-combat"
+	item_state = "firstaid-combat"
 
 	startswith = list(
 		/obj/item/storage/pill_bottle/bicaridine,
@@ -130,7 +138,7 @@
 /obj/item/storage/firstaid/surgery
 	name = "surgery kit"
 	desc = "Contains tools for surgery. Has precise foam fitting for safe transport and automatically sterilizes the content between uses."
-	icon_state = "surgerykit"
+	icon_state = "firstaid-surgery"
 	item_state = "firstaid-surgery"
 
 	storage_slots = 14
@@ -164,6 +172,13 @@
 		/obj/item/FixOVein,
 		/obj/item/stack/medical/advanced/bruise_pack,
 		)
+
+/obj/item/storage/firstaid/surgery/doctorbag
+	name = "doctor's bag"
+	icon_state = "firstaid-surgeryalt"
+	item_state = "firstaid-surgeryalt"
+	desc = "A fancy high capacity aid kit for doctors, full of medical supplies and basic surgical equipment"
+
 
 /*
  * Pill Bottles

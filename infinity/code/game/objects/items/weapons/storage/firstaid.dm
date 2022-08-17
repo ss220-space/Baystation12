@@ -1,7 +1,7 @@
 /obj/item/storage/firstaid/brute
 	name = "brute first-aid kit"
 	desc = "Use it when your hands will be broken... Or worse."
-	icon_state = "radfirstaid3"
+	icon_state = "firstaid-brute"
 	item_state = "firstaid-advanced"
 
 	startswith = list(
@@ -59,4 +59,3 @@
 	desc = "Contains pills used to treat radiation effects."
 	startswith = list(/obj/item/reagent_containers/pill/hyronalin = 14)
 	wrapper_color = COLOR_YELLOW
-

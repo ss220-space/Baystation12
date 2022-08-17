@@ -7580,6 +7580,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
+/obj/item/clothing/accessory/badge,
 /turf/simulated/floor/tiled/white,
 /area/security/sierra/forensic/lab)
 "anh" = (
@@ -11969,7 +11970,8 @@
 	pixel_y = 28
 	},
 /obj/machinery/photocopier/faxmachine{
-	department = "CMO"
+	department = "CMO";
+	pixel_y = 5
 	},
 /obj/structure/table/standard,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -12221,6 +12223,7 @@
 	c_tag = "Security - Armory - Lobby"
 	},
 /obj/item/device/serial,
+/obj/item/clothing/accessory/badge/old,
 /obj/effect/floor_decal/techfloor{
 	dir = 5
 	},
@@ -15764,6 +15767,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 5
 	},
+/obj/item/clothing/accessory/badge,
 /turf/simulated/floor/tiled/white,
 /area/security/sierra/forensic/lab)
 "aBF" = (
@@ -19269,6 +19273,7 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/item/clothing/accessory/badge/holo/warden,
 /turf/simulated/floor/tiled/dark,
 /area/security/sierra/sergeant)
 "aGn" = (
@@ -19296,7 +19301,8 @@
 "aGo" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/photocopier/faxmachine{
-	department = "Warden"
+	department = "Warden";
+	pixel_y = 5
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -19995,7 +20001,8 @@
 "aHq" = (
 /obj/structure/table/steel,
 /obj/machinery/photocopier/faxmachine{
-	department = "HOS"
+	department = "HOS";
+	pixel_y = 5
 	},
 /obj/machinery/recharger/wallcharger{
 	dir = 4;
@@ -20068,6 +20075,7 @@
 	pixel_x = -32
 	},
 /obj/structure/closet/secure_closet/security/sierra,
+/obj/item/clothing/accessory/badge/holo/officer,
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/sierra/equipment)
 "aHw" = (
@@ -20895,7 +20903,8 @@
 /area/crew_quarters/heads/office/rd)
 "aIC" = (
 /obj/machinery/photocopier/faxmachine{
-	department = "Research Director's Office"
+	department = "Research Director's Office";
+	pixel_y = 5
 	},
 /obj/item/book/manual/nt_regs,
 /obj/structure/noticeboard{
@@ -21124,6 +21133,7 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet/security/sierra,
+/obj/item/clothing/accessory/badge/holo/officer,
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/sierra/equipment)
 "aIP" = (
@@ -23534,6 +23544,8 @@
 	pixel_x = -32
 	},
 /obj/structure/closet/secure_closet/security/sierra,
+/obj/item/clothing/accessory/badge/holo/officer,
+/obj/item/clothing/accessory/badge/holo/officer,
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/sierra/equipment)
 "aMg" = (
@@ -25483,6 +25495,7 @@
 /obj/machinery/light/spot{
 	dir = 8
 	},
+/obj/item/clothing/accessory/badge/holo/officer,
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/sierra/equipment)
 "aOR" = (
@@ -25498,6 +25511,7 @@
 /obj/random/date_based/christmas/xmaslights{
 	dir = 8
 	},
+/obj/item/clothing/accessory/badge/holo/hos,
 /turf/simulated/floor/wood/walnut,
 /area/security/sierra/hosbed)
 "aOS" = (
@@ -27067,7 +27081,8 @@
 	},
 /obj/structure/table/standard,
 /obj/machinery/photocopier/faxmachine{
-	department = "HOP"
+	department = "HOP";
+	pixel_y = 5
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
