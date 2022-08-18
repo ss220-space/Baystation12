@@ -7469,7 +7469,8 @@
 "anV" = (
 /obj/structure/table/steel,
 /obj/machinery/photocopier/faxmachine{
-	department = "CE"
+	department = "CE";
+	pixel_y = 5
 	},
 /obj/machinery/requests_console{
 	announcementConsole = 1;
@@ -7565,7 +7566,8 @@
 "aoe" = (
 /obj/structure/table/glass,
 /obj/machinery/photocopier/faxmachine{
-	department = "Bridge"
+	department = "Bridge";
+	pixel_y = 5
 	},
 /obj/effect/floor_decal/corner/blue/mono,
 /obj/effect/floor_decal/borderfloorblack{
@@ -8900,6 +8902,9 @@
 "aqh" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/machinery/recharger,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Cafe - Rooms"
+	},
 /turf/simulated/floor/carpet/orange,
 /area/crew_quarters/cafe)
 "aqi" = (
@@ -14742,7 +14747,7 @@
 "azR" = (
 /obj/structure/table/steel,
 /obj/machinery/newscaster{
-	pixel_y = 30
+	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -19483,7 +19488,8 @@
 "aIF" = (
 /obj/structure/table/woodentable/walnut,
 /obj/machinery/photocopier/faxmachine{
-	department = "Captain"
+	department = "Captain";
+	pixel_y = 6
 	},
 /obj/machinery/button/alternate/door{
 	desc = "A remote control-switch for the office door.";
@@ -38160,9 +38166,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/nano)
 "oIG" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/item/paper_bin,
 /obj/item/pen,
@@ -39033,8 +39036,8 @@
 	},
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/machinery/newscaster{
-	pixel_x = 26;
-	pixel_y = 2
+	pixel_y = 33;
+	pixel_x = -1
 	},
 /obj/item/device/flashlight/lamp/green,
 /turf/simulated/floor/wood/mahogany,
@@ -39343,12 +39346,12 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/heads/captain/beach)
 "rBG" = (
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Cafe - Rooms"
-	},
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/machinery/fabricator/micro/bartender{
 	pixel_x = 4
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/orange,
 /area/crew_quarters/cafe)

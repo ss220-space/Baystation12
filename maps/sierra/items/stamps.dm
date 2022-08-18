@@ -1,18 +1,18 @@
 /obj/item/stamp/hop
 	name = "head of personel's rubber stamp"
-	icon_state = "stamp-xo"
+	icon_state = "stamp-hop"
 
 /obj/item/stamp/hos
 	name = "head of security's rubber stamp"
-	icon_state = "stamp-cos"
+	icon_state = "stamp-hos"
 
 /obj/item/stamp/ward
 	name = "warden's rubber stamp"
-	icon_state = "stamp-brig"
+	icon_state = "stamp-ward"
 
 /obj/item/stamp/qm
 	name = "quartermaster's rubber stamp"
-	icon_state = "stamp-deckchief"
+	icon_state = "stamp-qm"
 
 /obj/item/stamp/supply
 	name = "supply rubber stamp"
@@ -24,4 +24,4 @@
 
 /obj/item/stamp/internalaffairs
 	name = "internal affaits agent's stamp"
-	icon_state = "stamp-corp"
+	icon_state = "stamp-intaff"
