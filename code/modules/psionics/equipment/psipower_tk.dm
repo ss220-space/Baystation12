@@ -1,6 +1,6 @@
 /obj/item/psychic_power/telekinesis
 	name = "telekinetic grip"
-	maintain_cost = 6
+	maintain_cost = 2
 	icon_state = "telekinesis"
 	var/atom/movable/focus
 
@@ -55,8 +55,8 @@
 	if(!target || !user || (isobj(target) && !isturf(target.loc)) || !user.psi || !user.psi.can_use() || !user.psi.spend_power(8))
 		return
 
-	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN * 2)
-	user.psi.set_cooldown(8)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN * 8)
+	user.psi.set_cooldown(32)
 
 	var/user_psi_leech = user.do_psionics_check(5, user)
 	if(user_psi_leech)
@@ -85,10 +85,13 @@
 		else
 			if(!focus.anchored)
 				var/user_rank = owner.psi.get_rank(PSI_PSYCHOKINESIS)
-				focus.throw_at(target, user_rank*2, user_rank*3, owner)
+				focus.throw_at(target, user_rank*1.5, user_rank*2, owner)
 			sleep(1)
 			sparkle()
 		owner.drop_from_inventory(src)
+
+	if(!user.psi.spend_power(2)) // So you can't spam-click kill everything that moves
+		return FALSE
 
 /obj/item/psychic_power/telekinesis/proc/sparkle()
 	set waitfor = 0

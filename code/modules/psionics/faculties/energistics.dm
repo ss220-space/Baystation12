@@ -94,7 +94,7 @@
 /decl/psionic_power/energistics/spark
 	name =            "Spark"
 	cost =            1
-	cooldown =        1
+	cooldown =        5
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
 	use_description = "Target a non-living target in melee range on harm intent to cause some sparks to appear. This can light fires."

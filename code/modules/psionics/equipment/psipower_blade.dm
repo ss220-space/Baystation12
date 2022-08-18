@@ -16,6 +16,6 @@
 	icon_state = "psiblade_long"
 
 /obj/item/psychic_power/psiblade/master/grand/paramount // Silly typechecks because rewriting old interaction code is outside of scope.
-	force = 50
+	force = 40
 	maintain_cost = 4
 	icon_state = "psiblade_long"
