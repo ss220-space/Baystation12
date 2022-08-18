@@ -20729,8 +20729,7 @@
 /area/rnd/xenobiology/level2)
 "GO" = (
 /obj/machinery/photocopier/faxmachine{
-	department = "Exploration Leader";
-	pixel_y = 5
+	department = "Exploration Leader"
 	},
 /obj/structure/table/reinforced,
 /obj/machinery/light,
