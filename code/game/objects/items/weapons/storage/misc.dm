@@ -169,3 +169,48 @@
 		icon_state = "lollijar"
 	else
 		icon_state = "lollijar_empty"
+
+
+/obj/item/storage/bar_fruit_jar
+	name = "Fruit jar"
+	desc = "Jar with fresh fruit. They are definitely edible and never plastic."
+	icon_state = "fruitjar"
+	max_storage_space = 20
+	startswith = list(
+		/obj/item/reagent_containers/food/snacks/grown/apple = 2,
+		/obj/item/reagent_containers/food/snacks/grown/orange = 2,
+		/obj/item/reagent_containers/food/snacks/grown/lime = 2,
+		/obj/item/reagent_containers/food/snacks/grown/lemon = 2
+	)
+
+/obj/item/storage/bar_fruit_jar/on_update_icon()
+	. = ..()
+	if(contents.len)
+		icon_state = "fruitjar"
+	else
+		icon_state = "fruitjar_empty"
+
+/obj/item/storage/music_tape_holder
+	name = "Tape holder"
+	desc = "It can hold a few tapes and screwdriwer."
+	icon_state = "tape_holder"
+	w_class = ITEM_SIZE_SMALL
+	max_w_class = ITEM_SIZE_SMALL //Don't worry, see can_hold[]
+	max_storage_space = 5
+	can_hold = list(
+		/obj/item/music_tape,
+		/obj/item/device/flashlight/pen,
+		/obj/item/device/tape,
+		/obj/item/material/coin,
+		/obj/item/dice,
+		/obj/item/disk,
+		/obj/item/paper,
+		/obj/item/paper_bundle,
+		/obj/item/pen,
+		/obj/item/photo,
+		/obj/item/screwdriver
+	)
+	startswith = list(
+		/obj/item/music_tape/custom = 2,
+		/obj/item/screwdriver = 1
+	)

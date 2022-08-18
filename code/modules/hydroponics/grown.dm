@@ -297,6 +297,18 @@
 /obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris
 	plantname = "ambrosia"
 
+/obj/item/reagent_containers/food/snacks/grown/apple
+	plantname = "apple"
+
+/obj/item/reagent_containers/food/snacks/grown/orange
+	plantname = "orange"
+
+/obj/item/reagent_containers/food/snacks/grown/lime
+	plantname = "lime"
+
+/obj/item/reagent_containers/food/snacks/grown/lemon
+	plantname = "lemon"
+
 /obj/item/reagent_containers/food/snacks/fruit_slice
 	name = "fruit slice"
 	desc = "A slice of some tasty fruit."

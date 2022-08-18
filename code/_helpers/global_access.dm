@@ -115,8 +115,6 @@
 			return global.SSnano;
 		if("SSobj")
 			return global.SSobj;
-		if("SSorbit")
-			return global.SSorbit;
 		if("SSpersistence")
 			return global.SSpersistence;
 		if("SSplants")
@@ -1006,8 +1004,6 @@
 			global.SSnano=newval;
 		if("SSobj")
 			global.SSobj=newval;
-		if("SSorbit")
-			global.SSorbit=newval;
 		if("SSpersistence")
 			global.SSpersistence=newval;
 		if("SSplants")
@@ -1839,7 +1835,6 @@
 	"SSmobs",
 	"SSnano",
 	"SSobj",
-	"SSorbit",
 	"SSpersistence",
 	"SSplants",
 	"SSprocessing",

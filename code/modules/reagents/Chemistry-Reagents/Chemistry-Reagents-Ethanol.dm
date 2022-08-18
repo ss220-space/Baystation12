@@ -757,7 +757,7 @@
 /datum/reagent/ethanol/forget_me_shot
 	name = "Forget Me Shot"
 	description = "If you haven't heard of it, that means it worked."
-	taste_description = "mind-numbing venom"
+	taste_description = "mind-numbing venom, alcohol is so strong that your face involuntarily scrunches up. Maybe you just forgot something. What does this shot do in your hand?"
 	color = "#a8934b"
 	strength = 5
 
