@@ -6,10 +6,10 @@
 
 /obj/item/clothing/accessory/badge
 	name = "badge"
-	desc = "A leather-backed badge, with gold trimmings."
-	icon_state = "detectivebadge"
+	desc = "NanoTrasen Security Department detective's badge, made from gold."
+	icon_state = "marshalbadge"
 	slot_flags = SLOT_BELT | SLOT_TIE
-	slot = ACCESSORY_SLOT_INSIGNIA
+	slot = ACCESSORY_SLOT_MEDAL
 	high_visibility = 1
 	var/badge_string = "Detective"
 	var/stored_name
@@ -87,13 +87,46 @@
 	var/badge_number
 	var/emagged //emag_act removes access requirements
 
+/obj/item/clothing/accessory/badge/holo/officer
+	name = "officer's badge"
+	desc = "A bronze corporate security badge. Stamped with the words 'Security Officer.'"
+	icon_state = "bronzebadge"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/holo/warden
+	name = "warden's holobadge"
+	desc = "A silver corporate security badge. Stamped with the words 'Warden.'"
+	icon_state = "silverbadge"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/holo/hos
+	name = "head of security's holobadge"
+	desc = "An immaculately polished gold security badge. Stamped with the words 'Head of Security.'"
+	icon_state = "goldbadge"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/holo/investigator
+	name = "\improper Internal Investigations holobadge"
+	desc = "This badge marks the holder as an internal affairs investigator."
+	icon_state = "invbadge"
+	badge_string = "Internal Investigations"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/holo/sheriff
+	name = "sheriff badge"
+	desc = "A star-shaped brass badge denoting who the law is around these parts."
+	icon_state = "sheriff"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
 /obj/item/clothing/accessory/badge/holo/NT
 	name = "corporate holobadge"
 	desc = "This glowing green badge marks the holder as a member of corporate security."
 	icon_state = "ntholobadge"
 	color = null
 	badge_string = "Corporate Security"
-	badge_access = access_research
+	badge_access = access_security
+	slot = ACCESSORY_SLOT_INSIGNIA
+	slot_flags = SLOT_TIE | SLOT_BELT
 
 /obj/item/clothing/accessory/badge/holo/cord
 	icon_state = "holobadge-cord"
@@ -149,6 +182,7 @@
 	name = "holobadge box"
 	desc = "A box containing security holobadges."
 	startswith = list(/obj/item/clothing/accessory/badge/holo = 4,
+					  /obj/item/clothing/accessory/badge/holo/officer = 2,
 					  /obj/item/clothing/accessory/badge/holo/cord = 2)
 
 /obj/item/storage/box/holobadgeNT
@@ -157,11 +191,6 @@
 	startswith = list(/obj/item/clothing/accessory/badge/holo/NT = 4,
 					  /obj/item/clothing/accessory/badge/holo/NT/cord = 2)
 
-/obj/item/clothing/accessory/badge/old
-	name = "faded badge"
-	desc = "A faded badge, backed with leather. Looks crummy."
-	icon_state = "badge_round"
-	badge_string = "Unknown"
 
 /obj/item/clothing/accessory/badge/defenseintel
 	name = "\improper DIA investigator's badge"
@@ -197,12 +226,56 @@
 	slot = ACCESSORY_SLOT_INSIGNIA
 	badge_string = FACTION_SPACECOPS
 
+//Other badges
+
+/obj/item/clothing/accessory/badge/old
+	name = "faded badge"
+	desc = "A faded law enforcement badge in an older design."
+	icon_state = "badge_round"
+
+/obj/item/clothing/accessory/badge/solid
+	name = "\improper SolGov ID badge"
+	desc = "A descriptive identification badge with the holder's credentials. This one indicates the holder is representing the SCG."
+	icon_state = "solbadge"
+	badge_string = null
+
+/obj/item/clothing/accessory/badge/ntid
+	name = "\improper NT ID badge"
+	desc = "A descriptive identification badge with the holder's credentials. This one has red marks with the NanoTrasen logo on it."
+	icon_state = "ntbadge"
+	badge_string = null
+
 /obj/item/clothing/accessory/badge/press
-	name = "press badge"
-	desc = "A leather-backed plastic badge displaying that the owner is certified press personnel."
+	name = "corporate press pass"
+	desc = "A corporate reporter's pass, emblazoned with the NanoTrasen logo."
 	icon_state = "pressbadge"
-	badge_string = "Journalist"
-	
+	item_state = "pbadge"
+	badge_string = "Corporate Reporter"
+	w_class = ITEM_SIZE_TINY
+
+/obj/item/clothing/accessory/badge/press/independent
+	name = "press pass"
+	desc = "A freelance journalist's pass, certified by Oculum Broadcast."
+	icon_state = "pressbadge-i"
+	badge_string = "Freelance Journalist"
+
+/obj/item/clothing/accessory/badge/press/plastic
+	name = "plastic press pass"
+	desc = "A journalist's 'pass' shaped, for whatever reason, like a security badge. It is made of plastic."
+	icon_state = "pbadge"
+	badge_string = "Sicurity Journelist"
+	w_class = ITEM_SIZE_SMALL
+
+// Sheriff Badge (toy)
+/obj/item/clothing/accessory/badge/sheriff
+	name = "sheriff badge"
+	desc = "This town ain't big enough for the two of us, pardner."
+	icon_state = "sheriff"
+	item_state = "goldbadge"
+	icon_state = "sheriff_toy"
+	item_state = "sheriff_toy"
+
+
 /obj/item/clothing/accessory/badge/tags/skrell
 	name = "\improper Skrellian holobadge"
 	desc = "A high tech Skrellian holobadge, designed to project information about the owner."
@@ -213,23 +286,23 @@
 	if(!istype(H))
 		return
 	desc = "Blood type: [H.b_type]"
-	
+
 /obj/item/clothing/accessory/badge/tags/skrell/verb/set_sdtf()
 	set name = "Set SDTF Name"
 	set category = "Object"
 	set src in usr
-	
+
 	if(usr.incapacitated())
 		to_chat(usr, "<span class='warning'>You're unable to do that.</span>")
 		return
-	
+
 	var/obj/item/in_hand = usr.get_active_hand()
 	if(in_hand != src)
 		to_chat(usr, "<span class='warning'>You have to be holding [src] to modify it.</span>")
 		return
-	
+
 	badge_string = sanitize(input(usr, "Input your SDTF.", "SDTF Holobadge") as null|text, MAX_NAME_LEN)
-	
+
 	if(usr.incapacitated())	//Because things can happen while you're typing
 		to_chat(usr, "<span class='warning'>You're unable to do that.</span>")
 		return
@@ -237,7 +310,7 @@
 	if(in_hand != src)
 		to_chat(usr, "<span class='warning'>You have to be holding [src] to modify it.</span>")
 		return
-		
+
 	if(badge_string)
 		set_name(usr.real_name)
 		set_desc(usr)

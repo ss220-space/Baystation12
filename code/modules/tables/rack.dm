@@ -1,7 +1,7 @@
 /obj/structure/table/rack
 	name = "rack"
 	desc = "Different from the Middle Ages version."
-	icon = 'icons/obj/objects.dmi'
+	icon = 'icons/obj/objects_vr.dmi'
 	icon_state = "rack"
 	can_plate = 0
 	can_reinforce = 0
@@ -30,3 +30,24 @@
 /obj/structure/table/rack/holorack/dismantle(obj/item/wrench/W, mob/user)
 	to_chat(user, "<span class='warning'>You cannot dismantle \the [src].</span>")
 	return
+
+// SOMEONE should add cool overlay stuff to this
+/obj/structure/table/rack/gun_rack
+	name = "gun rack"
+	desc = "Seems like you could prop up some rifles here."
+	icon_state = "gunrack"
+
+/obj/structure/table/rack/gun_rack/steel
+	color = "#666666"
+
+/obj/structure/table/rack/gun_rack/steel/New()
+	material = MATERIAL_STEEL
+	..()
+
+/obj/structure/table/rack/shelf
+	name = "shelving"
+	desc = "Some nice metal shelves."
+	icon_state = "shelf"
+
+/obj/structure/table/rack/shelf/steel
+	color = "#666666"
