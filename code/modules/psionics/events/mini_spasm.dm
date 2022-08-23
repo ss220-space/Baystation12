@@ -49,7 +49,7 @@
 	else
 		to_chat(victim, SPAN_DANGER("An indescribable, brain-tearing sound hisses from [icon2html(source, victim)] \the [source], and you collapse in a seizure!"))
 		victim.seizure()
-			victim.adjustBrainLoss(rand(5,15))
+		victim.adjustBrainLoss(rand(5,15))
 	sleep(45)
 	victim.psi.check_latency_trigger(100, "a psionic scream", redactive = TRUE)
 
