@@ -1,4 +1,4 @@
-/obj/item/gun/projectile/shotgun // INF
+/obj/item/gun/projectile/shotgun
 	slot_flags = 0
 
 /obj/item/gun/projectile/shotgun/pump

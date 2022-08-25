@@ -27,11 +27,9 @@
 			return 1
 		return 0
 	if(I.slot_flags & SLOT_HOLSTER)
-		// [INF]
 		if (I.w_class <= storage.max_w_class)
 			return 1
 		return 0
-		// [/INF]
 	return 0
 
 /datum/extension/holster/proc/holster(var/obj/item/I, var/mob/living/user)

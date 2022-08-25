@@ -57,7 +57,6 @@
 	name = "armpit holster"
 	desc = "A worn-out handgun holster. Perfect for concealed carry."
 	icon_state = "holster"
-	// [INF]
 	can_holster = list(
 		/obj/item/gun/projectile/energy/mg,
 		/obj/item/gun/projectile/energy/rifle,
@@ -69,7 +68,6 @@
 		/obj/item/gun/launcher/net/geniffer,
 		/obj/item/gun/launcher/crossbow/rapidcrossbowdevice
 	)
-	// [/INF]
 	body_location = UPPER_TORSO
 
 /obj/item/clothing/accessory/storage/holster/waist
