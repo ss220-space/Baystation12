@@ -27163,6 +27163,10 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/office/hop)
 "aRc" = (
@@ -38614,11 +38618,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
 "hZS" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_x = -4;
-	pixel_y = -24
-	},
 /obj/machinery/camera/network/command{
 	c_tag = "Head of Personnel - Office";
 	dir = 1
@@ -38630,6 +38629,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/computer/guestpass{
+	dir = 1;
+	pixel_y = -23
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/office/hop)
