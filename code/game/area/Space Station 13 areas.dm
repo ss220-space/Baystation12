@@ -78,11 +78,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	power_environ = 0
 	has_gravity = 0
 	area_flags = AREA_FLAG_EXTERNAL | AREA_FLAG_IS_NOT_PERSISTENT
-/*[ORIG]
-	ambience = list('sound/ambience/ambispace.ogg','sound/ambience/ambispace1.ogg','sound/ambience/ambispace2.ogg','sound/ambience/ambispace3.ogg','sound/ambience/ambispace4.ogg','sound/ambience/ambispace5.ogg','sound/music/title2.ogg','sound/music/space.ogg','sound/music/main.ogg','sound/music/traitor.ogg',\
-		'sound/ambience/ominous1.ogg','sound/ambience/ominous2.ogg','sound/ambience/ominous3.ogg', 'sound/ambience/ambispace.ogg')//inf
-[/ORIG]*/
-	ambience = list() //in deep space, no one will hear your scream //inf
+	ambience = list(\
+	'sound/ambience/space/space_serithi.ogg',\
+	'sound/ambience/space/space1.ogg',\
+	'sound/ambience/space/aurora_caelus.ogg'\
+	)
 	secure = FALSE
 
 /area/space/atmosalert()
@@ -147,8 +147,23 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	sound_env = TUNNEL_ENCLOSED
 //	turf_initializer = /decl/turf_initializer/maintenance
-	forced_ambience = list('sound/ambience/maintambience.ogg',\
-																'infinity/sound/SS2/ambience/ambmaintence.wav')//inf
+	ambience = list(\
+	'sound/ambience/maintenance/maintenance1.ogg',\
+	'sound/ambience/maintenance/maintenance2.ogg',\
+	'sound/ambience/maintenance/maintenance3.ogg',\
+	'sound/ambience/maintenance/maintenance4.ogg',\
+	'sound/ambience/maintenance/maintenance5.ogg',\
+	'sound/ambience/maintenance/maintenance5.ogg',\
+	'sound/ambience/maintenance/maintenance6.ogg',\
+	'sound/ambience/maintenance/maintenance7.ogg',\
+	'sound/ambience/maintenance/maintenance8.ogg',\
+	'sound/ambience/maintenance/maintenance9.ogg',\
+	'sound/ambience/maintenance/maintenance10.ogg',\
+	'sound/ambience/maintenance/maintenance12.ogg',\
+	'sound/ambience/maintenance/maintenance13.ogg',\
+	'sound/ambience/maintenance/maintenance14.wav',\
+	'sound/ambience/maintenance/maintenance15.ogg'\
+	)
 	req_access = list(access_maint_tunnels)
 
 /area/rnd

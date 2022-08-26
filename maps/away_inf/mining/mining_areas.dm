@@ -4,7 +4,7 @@
 	area_flags = AREA_FLAG_IS_NOT_PERSISTENT
 	sound_env = STANDARD_STATION
 	turf_initializer = /decl/turf_initializer/maintenance
-	ambience = list('infinity/sound/ambience/horror_3.ogg', 'infinity/sound/ambience/maintambience2.ogg', 'sound/ambience/ambigen3.ogg', 'sound/ambience/ambigen4.ogg', 'sound/ambience/ambigen10.ogg', 'sound/ambience/spookyspace1.ogg', 'sound/ambience/spookyspace2.ogg') // you don't want to be here
+	ambience = list('infinity/sound/ambience/horror_3.ogg', 'sound/ambience/maintenance/maintenance15.ogg', 'sound/ambience/ambigen3.ogg', 'sound/ambience/ambigen4.ogg', 'sound/ambience/ambigen10.ogg', 'sound/ambience/spookyspace1.ogg', 'sound/ambience/spookyspace2.ogg') // you don't want to be here
 	base_turf = /turf/simulated/floor/asteroid
 	req_access = list(list(access_mining, access_xenoarch))
 

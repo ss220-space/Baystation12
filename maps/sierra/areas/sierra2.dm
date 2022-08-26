@@ -169,6 +169,11 @@
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
 	area_flags = AREA_FLAG_ION_SHIELDED
+	ambience = list(\
+	'sound/ambience/engineering/engineering1.ogg',\
+	'sound/ambience/engineering/engineering2.ogg',\
+	'sound/ambience/engineering/engineering3.ogg'\
+	)
 	req_access = list(access_engine_equip)
 
 /area/engineering/engine_eva
@@ -179,6 +184,11 @@
 /area/engineering/engine_monitoring
 	name = "Second Deck - Engine - Monitoring"
 	icon_state = "engine_monitoring"
+	ambience = list(\
+	'sound/ambience/engineering/engineering1.ogg',\
+	'sound/ambience/engineering/engineering2.ogg',\
+	'sound/ambience/engineering/engineering3.ogg'\
+	)
 
 /area/engineering/engine_smes
 	name = "Second Deck - Engine - SMES"
@@ -198,10 +208,17 @@
 	icon_state = "engineering_storage"
 
 /area/engineering/atmos
- 	name = "Second Deck - Engineering - Atmospherics"
- 	icon_state = "atmos"
- 	sound_env = LARGE_ENCLOSED
- 	req_access = list(access_atmospherics)
+	name = "Second Deck - Engineering - Atmospherics"
+	icon_state = "atmos"
+	ambience = list(\
+	'sound/ambience/engineering/engineering1.ogg',\
+	'sound/ambience/engineering/engineering2.ogg',\
+	'sound/ambience/engineering/engineering3.ogg',\
+	'sound/ambience/engineering/atmospherics1.ogg'\
+	)
+	sound_env = LARGE_ENCLOSED
+	req_access = list(access_atmospherics)
+
 /area/engineering/gravitaional_generator
 	name = "Second Deck - Gravitational Generator"
 	icon_state = "engine_monitoring"
@@ -369,12 +386,12 @@
 /area/chapel/main
 	name = "Second Deck - Chapel"
 	icon_state = "chapel"
-	ambience = list(
-			'sound/ambience/ambicha1.ogg',
-			'sound/ambience/ambicha2.ogg',
-			'sound/ambience/ambicha3.ogg',
-			'sound/ambience/ambicha4.ogg'
-		)
+	ambience = list(\
+	'sound/ambience/chapel/chapel1.ogg',\
+	'sound/ambience/chapel/chapel2.ogg',\
+	'sound/ambience/chapel/chapel3.ogg',\
+	'sound/ambience/chapel/chapel4.ogg'\
+	)
 	sound_env = LARGE_ENCLOSED
 
 /area/chapel/office

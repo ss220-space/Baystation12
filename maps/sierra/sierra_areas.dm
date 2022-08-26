@@ -28,6 +28,17 @@
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
 	req_access = list(access_engine)
+	// Sounds for Substation rooms. Just electrical sounds, really.
+	ambience =  list(\
+	'sound/ambience/substation/substation1.ogg',\
+	'sound/ambience/substation/substation2.ogg',\
+	'sound/ambience/substation/substation3.ogg',\
+	'sound/ambience/substation/substation4.ogg',\
+	'sound/ambience/substation/substation5.ogg',\
+	'sound/ambience/substation/substation6.ogg',\
+	'sound/ambience/substation/substation7.ogg',\
+	'sound/ambience/substation/substation8.ogg'\
+	)
 
 /area/crew_quarters
 	icon_state = "crew_quarters"

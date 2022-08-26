@@ -1609,7 +1609,12 @@ area/assembly/robotics/office
 /area/chapel/main
 	name = "\improper Chapel"
 	icon_state = "chapel"
-	ambience = list('sound/ambience/ambicha1.ogg','sound/ambience/ambicha2.ogg','sound/ambience/ambicha3.ogg','sound/ambience/ambicha4.ogg','sound/music/traitor.ogg')
+	ambience = list(\
+	'sound/ambience/chapel/chapel1.ogg',\
+	'sound/ambience/chapel/chapel2.ogg',\
+	'sound/ambience/chapel/chapel3.ogg',\
+	'sound/ambience/chapel/chapel4.ogg'\
+	)
 	sound_env = LARGE_ENCLOSED
 
 /area/chapel/office

@@ -164,6 +164,14 @@
 	icon_state = "hangar"
 	sound_env = LARGE_ENCLOSED
 	req_access = list(access_hangar)
+	ambience = list(\
+	'sound/ambience/hangar/hangar1.ogg',\
+	'sound/ambience/hangar/hangar2.ogg',\
+	'sound/ambience/hangar/hangar3.ogg',\
+	'sound/ambience/hangar/hangar4.ogg',\
+	'sound/ambience/hangar/hangar5.ogg',\
+	'sound/ambience/hangar/hangar6.ogg'\
+	)
 
 /area/quartermaster/hangar_atmos
 	name = "Third Deck - Hangar - Atmospherics Storage"
