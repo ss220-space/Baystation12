@@ -201,7 +201,6 @@
 		'sound/ambience/ai/ambimalf.ogg',\
 		'sound/ambience/ai/ambservers.wav',\
 		'infinity/sound/ambience/ai_port_hum.ogg',\
-		'sound/ambience/ai/ai1.ogg',\
 		'sound/ambience/ai/ai2.ogg',\
 		'sound/ambience/ai/ai3.ogg'\
 		)
