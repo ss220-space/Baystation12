@@ -565,6 +565,9 @@ datum/projectile_data
 		viewY = text2num(viewrangelist[2])
 	return list(viewX, viewY)
 
+/proc/has_station_trait(var/trait)
+	return is_path_in_list(trait, SSstation.station_traits)
+
 /proc/count_living()
 	var/counter = 0
 
