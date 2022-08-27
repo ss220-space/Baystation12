@@ -14,10 +14,10 @@
 /datum/map/sierra/send_welcome()
 	var/welcome_text = "<center><img src = sierralogo.png /><br /><font size = 3><b>NSV Sierra</b> Показания Сенсоров:</font><hr />"
 	welcome_text += "Отчет сгенерирован [stationdate2text()] в [stationtime2text()]</center><br /><br />"
-	welcome_text += "Текущая система: <b>[system_name()]</b><br />"
-	welcome_text += "Следующая система для прыжка: <b>[generate_system_name()]</b><br />"
-	welcome_text += "Дней до Солнечной Системы: <b>[rand(15,45)]</b><br />"
-	welcome_text += "Дней с последнего визита в порт: <b>[rand(60,180)]</b><br />"
+	welcome_text += "Текущая система: <b>Locutus</b><br />"
+	welcome_text += "Следующая система для прыжка: <b>N/A</b><br />"
+	welcome_text += "Дней до Солнечной Системы: <b>312</b><br />"
+	welcome_text += "Дней с последнего визита в порт: <b>ERR{-index out of range-}at:str7</b><br />"
 	welcome_text += "Результаты сканирования показали следующие потенциальные объекты для исследования:<br />"
 
 	var/list/space_things = list()
@@ -48,15 +48,10 @@
 		welcome_text += "<br><b>Обнаружены сигналы бедствия:</b><br>[jointext(distress_calls, "<br>")]<br>"
 	else
 		welcome_text += "<br>Сигналов бедствия не обнаружено.<br />"
+    
+	welcome_text += "<hr> <br />"
+	welcome_text += "<b>ВНИМАНИЕ:</b> Связь с центральным командование отсутствует. Обратитесь к информационному технику за диагностикой."
 
-		if(SSstation.station_traits.len)
-			welcome_text += "<hr><b>Выявленные нештатные ситуации на смене:</b><BR>"
-			for(var/i in SSstation.station_traits)
-				var/datum/station_trait/station_trait_iterator = i
-				if(!station_trait_iterator.show_in_report)
-					return
-				welcome_text += "[station_trait_iterator.get_report()]<BR>"
-	welcome_text += "<hr>"
 
 	post_comm_message("NSV Sierra Sensor Readings", welcome_text)
-	minor_announcement.Announce(message = "Сканирование сектора завершено. Информация передана в базу данных консолей связи.")
+	minor_announcement.Announce(message = "Аварийные системы судна запущены. Сканирование сектора завершено. Связь с центральным командованием отсутствует.")
