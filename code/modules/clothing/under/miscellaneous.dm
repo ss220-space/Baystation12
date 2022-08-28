@@ -880,7 +880,7 @@
 
 /obj/item/clothing/under/inf/white_black
 	name = "white black"
-	desc = "white black uniform"
+	desc = "White top, dark bottom. Too default."
 	icon_state = "white_black"
 	item_state = "white_black"
 
