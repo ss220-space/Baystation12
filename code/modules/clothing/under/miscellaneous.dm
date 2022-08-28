@@ -867,7 +867,7 @@
 
 /obj/item/clothing/under/inf/stripped_shirt
 	name = "red checkered shirt"
-	desc = "stylish red checkered uniform"
+	desc = "Incredibly comfy and warm flannel shirt in red checkered pattern."
 	icon_state = "stripped_shirt"
 	item_state = "stripped_shirt"
 	worn_state = "stripped_shirt"
