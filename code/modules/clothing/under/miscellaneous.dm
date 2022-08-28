@@ -804,7 +804,7 @@
 	item_state = "pinstripe"
 /obj/item/clothing/under/inf/gotsis_dress_1
 	name = "red gotsis dress"
-	desc = "special dress"
+	desc = "Welcome to cabaret, lolly jolly~~"
 	icon_state = "gotsis_dress_1"
 	item_state = "gotsis_dress_1"
 
