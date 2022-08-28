@@ -786,7 +786,7 @@
 	worn_state = "chain_with_shirt"
 /obj/item/clothing/under/inf/cuttop
 	name = "grey cuttop"
-	desc = "grey shirt with jeans"
+	desc = "Loose fitting grey shirt with a broad neckline, accompained with some skinny jeans. Obviously worn by women."
 	icon_state = "cuttop"
 	item_state = "cuttop"
 	worn_state = "cuttop"
