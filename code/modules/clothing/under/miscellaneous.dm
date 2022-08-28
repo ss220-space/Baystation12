@@ -874,7 +874,7 @@
 
 /obj/item/clothing/under/inf/lify
 	name = "lify"
-	desc = "red lify"
+	desc = "Here's some childish style, I dunno. Like who the hell would wear tank top with buttons?."
 	icon_state = "lify"
 	item_state = "lify"
 
