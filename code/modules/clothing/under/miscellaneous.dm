@@ -774,7 +774,7 @@
 	item_state = "vice2"
 /obj/item/clothing/under/inf/detective
 	name = "detective's uniform"
-	desc = "detective's uniform red and black style"
+	desc = "A set of black slacks and red shirt."
 	icon_state = "detective"
 	item_state = "detective"
 	worn_state = "detective"
