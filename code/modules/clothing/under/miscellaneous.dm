@@ -792,7 +792,7 @@
 	worn_state = "cuttop"
 /obj/item/clothing/under/inf/cuttop_red
 	name = "red cuttop"
-	desc = "red shirt with jeans"
+	desc = "Loose fitting red shirt with a broad neckline, accompained with some skinny jeans. Obviously worn by women."
 	icon_state = "cuttop_red"
 	item_state = "cuttop_red"
 	worn_state = "cuttop_red"
