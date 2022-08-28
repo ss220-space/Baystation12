@@ -799,7 +799,7 @@
 
 /obj/item/clothing/under/inf/pinstripe
 	name = "pinstripe"
-	desc = "checkered shirt"
+	desc = "You ain't one to be afraid of 18 karat of bad luck."
 	icon_state = "pinstripe"
 	item_state = "pinstripe"
 /obj/item/clothing/under/inf/gotsis_dress_1
