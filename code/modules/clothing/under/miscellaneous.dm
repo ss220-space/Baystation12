@@ -780,7 +780,7 @@
 	worn_state = "detective"
 /obj/item/clothing/under/inf/chain_with_shirt
 	name = "black and white with style"
-	desc = "black jeans with stylish chain and white shirt"
+	desc = "Some weird combination of starched shirt and studded jeans with a chain hanging off the belt."
 	icon_state = "chain_with_shirt"
 	item_state = "chain_with_shirt"
 	worn_state = "chain_with_shirt"
