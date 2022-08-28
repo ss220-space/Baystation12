@@ -135,24 +135,15 @@
 /datum/gear/uniform/antiquated_skirt
 	display_name = "antiquated skirt"
 	path = /obj/item/clothing/under/inf/
-
 /datum/gear/uniform/vice
 	display_name = "vice uniform"
 	path = /obj/item/clothing/under/inf/vice
-
 /datum/gear/uniform/detective
-	display_name = "alt detective's uniform"
+	display_name = "red 'n black suit"
 	path = /obj/item/clothing/under/inf/detective
 /datum/gear/uniform/chain_with_shirt
 	display_name = "chain jeans"
 	path = /obj/item/clothing/under/inf/chain_with_shirt
-/datum/gear/uniform/vice
-	display_name = "vice uniform"
-	path = /obj/item/clothing/under/inf/vice
-/datum/gear/uniform/detective
-	display_name = "detective's uniform"
-	path = /obj/item/clothing/under/inf/detective
-
 /datum/gear/uniform/chain_with_shirt
 	display_name = "black and white with style"
 	path = /obj/item/clothing/under/inf/chain_with_shirt
@@ -162,14 +153,12 @@
 /datum/gear/uniform/cuttop_red
 	display_name = "red cuttop"
 	path = /obj/item/clothing/under/inf/cuttop_red
-
 /datum/gear/uniform/pinstripe
 	display_name = "pinstripe"
 	path = /obj/item/clothing/under/inf/pinstripe
 /datum/gear/uniform/gotsis_dress_1
 	display_name = "red gotsis dress"
 	path = /obj/item/clothing/under/inf/gotsis_dress_1
-
 /datum/gear/uniform/gotsis_dress_2
 	display_name = "orange gotsis dress"
 	path = /obj/item/clothing/under/inf/gotsis_dress_2
@@ -179,18 +168,19 @@
 /datum/gear/uniform/jacket
 	display_name = "old style jacket"
 	path = /obj/item/clothing/under/inf/jacket
+
 /datum/gear/uniform/blackservice
-	display_name = "dark service uniform"
+	display_name = "service uniform selection"
 	path = /obj/item/clothing/under/inf/blackservice
-/datum/gear/uniform/blackserviceof
-	display_name = "dark service uniform"
-	path = /obj/item/clothing/under/inf/blackserviceof
-/datum/gear/uniform/whiteservice
-	display_name = "white service uniform"
-	path = /obj/item/clothing/under/inf/whiteservice
-/datum/gear/uniform/whiteservicefem
-	display_name = "white female service uniform"
-	path = /obj/item/clothing/under/inf/whiteservicefem
+
+/datum/gear/uniform/blackservice/New()
+	..()
+	var/service = list()
+	service["dark service uniform"] = /obj/item/clothing/under/inf/blackservice
+	service["brown service uniform"] = /obj/item/clothing/under/inf/blackserviceof
+	service["white service uniform"] = /obj/item/clothing/under/inf/whiteservice
+	service["white female service uniform"] = /obj/item/clothing/under/inf/whiteservicefem
+	gear_tweaks += new/datum/gear_tweak/path(service)
 /datum/gear/uniform/harper_uniform
 	display_name = "harper uniform"
 	path = /obj/item/clothing/under/inf/harper_uniform

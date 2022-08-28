@@ -765,8 +765,6 @@
 	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
 	icon_state = "antiquated_skirt"
 	item_state = "antiquated_skirt"
-
-
 /obj/item/clothing/under/inf/vice
 	name = "vice uniform"
 	desc = "Casual set of black suit and red t-shirt."
@@ -796,7 +794,6 @@
 	icon_state = "cuttop_red"
 	item_state = "cuttop_red"
 	worn_state = "cuttop_red"
-
 /obj/item/clothing/under/inf/pinstripe
 	name = "pinstripe"
 	desc = "You ain't one to be afraid of 18 karat of bad luck."
@@ -807,16 +804,9 @@
 	desc = "Welcome to cabaret, lolly jolly~~"
 	icon_state = "gotsis_dress_1"
 	item_state = "gotsis_dress_1"
-
 /obj/item/clothing/under/inf/gotsis_dress_2
 	name = "orange gotsis dress"
 	desc = "Welcome to cabaret, lolly jolly~~"
-	icon_state = "gotsis_dress_2"
-	item_state = "gotsis_dress_2"
-
-/obj/item/clothing/under/inf/gotsis_dress_2
-	name = "orange gotsis dress"
-	desc = "special dress"
 	icon_state = "gotsis_dress_2"
 	item_state = "gotsis_dress_2"
 /obj/item/clothing/under/inf/classic_suit
@@ -824,7 +814,6 @@
 	desc = "Classic suit for really special occasions. It demands for regard, so treat it accordingly."
 	icon_state = "classic_suit"
 	item_state = "classic_suit"
-
 /obj/item/clothing/under/inf/jacket
 	name = "old style jacket"
 	desc = "You know it damn well here."
@@ -840,50 +829,37 @@
 	desc = "A set of service clothes in military style. Largely available in many of surplus stores."
 	icon_state = "blackserviceof"
 	item_state = "blackserviceof"
-
 /obj/item/clothing/under/inf/whiteservice
 	name = "white service uniform"
 	desc = "A set of service clothes in military style. This one is purposed for special occasions."
 	icon_state = "whiteservice"
 	item_state = "whiteservice"
-
 /obj/item/clothing/under/inf/whiteservicefem
 	name = "white female service uniform"
 	desc = "A set of service clothes in military style. This one is purposed for special occasions."
 	icon_state = "whiteservicefem"
 	item_state = "whiteservicefem"
-
 /obj/item/clothing/under/inf/harper_uniform
 	name = "harper uniform"
 	desc = "A maggy tank top and denim cargo pants with some knee protection sewn onto them. Seems like a perfect outfit for some garage dweller."
 	icon_state = "harper_uniform"
 	item_state = "harper_uniform"
-
-/obj/item/clothing/under/inf/harper_uniform
-	name = "harper uniform"
-	desc = "grey harper uniform"
-	icon_state = "harper_uniform"
-	item_state = "harper_uniform"
-
 /obj/item/clothing/under/inf/stripped_shirt
 	name = "red checkered shirt"
 	desc = "Incredibly comfy and warm flannel shirt in red checkered pattern."
 	icon_state = "stripped_shirt"
 	item_state = "stripped_shirt"
 	worn_state = "stripped_shirt"
-
 /obj/item/clothing/under/inf/lify
 	name = "lify"
 	desc = "Here's some childish style, I dunno. Like who the hell would wear tank top with buttons?."
 	icon_state = "lify"
 	item_state = "lify"
-
 /obj/item/clothing/under/inf/white_black
 	name = "white black"
 	desc = "White top, dark bottom. Too default."
 	icon_state = "white_black"
 	item_state = "white_black"
-
 /obj/item/clothing/under/inf/black_white
 	name = "black white"
 	desc = "Dark top, white bottom. That's... something."
