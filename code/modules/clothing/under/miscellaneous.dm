@@ -821,7 +821,7 @@
 	item_state = "gotsis_dress_2"
 /obj/item/clothing/under/inf/classic_suit
 	name = "classic suit"
-	desc = "classic suit for official receptions"
+	desc = "Classic suit for really special occasions. It demands for regard, so treat it accordingly."
 	icon_state = "classic_suit"
 	item_state = "classic_suit"
 
