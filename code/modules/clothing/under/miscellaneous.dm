@@ -849,7 +849,7 @@
 
 /obj/item/clothing/under/inf/whiteservicefem
 	name = "white female service uniform"
-	desc = "official white service uniform for woman"
+	desc = "A set of service clothes in military style. This one is purposed for special occasions."
 	icon_state = "whiteservicefem"
 	item_state = "whiteservicefem"
 
