@@ -827,7 +827,7 @@
 
 /obj/item/clothing/under/inf/jacket
 	name = "old style jacket"
-	desc = "stylish jacket back in time"
+	desc = "You know it damn well here."
 	icon_state = "jacket"
 	item_state = "jacket"
 /obj/item/clothing/under/inf/blackservice
