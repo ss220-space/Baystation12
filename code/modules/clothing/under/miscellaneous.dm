@@ -769,7 +769,7 @@
 
 /obj/item/clothing/under/inf/vice
 	name = "vice uniform"
-	desc = "black suit with red front"
+	desc = "Casual set of black suit and red t-shirt."
 	icon_state = "vice2"
 	item_state = "vice2"
 /obj/item/clothing/under/inf/detective
