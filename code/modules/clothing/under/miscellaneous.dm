@@ -886,6 +886,6 @@
 
 /obj/item/clothing/under/inf/black_white
 	name = "black white"
-	desc = "black white uniform"
+	desc = "Dark top, white bottom. That's... something."
 	icon_state = "black_white"
 	item_state = "black_white"
