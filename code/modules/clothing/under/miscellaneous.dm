@@ -855,7 +855,7 @@
 
 /obj/item/clothing/under/inf/harper_uniform
 	name = "harper uniform"
-	desc = "grey harper uniform"
+	desc = "A maggy tank top and denim cargo pants with some knee protection sewn onto them. Seems like a perfect outfit for some garage dweller."
 	icon_state = "harper_uniform"
 	item_state = "harper_uniform"
 
