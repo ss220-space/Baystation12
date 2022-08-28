@@ -837,7 +837,7 @@
 	item_state = "blackservice"
 /obj/item/clothing/under/inf/blackserviceof
 	name = "brown service uniform"
-	desc = "official service uniform"
+	desc = "A set of service clothes in military style. Largely available in many of surplus stores."
 	icon_state = "blackserviceof"
 	item_state = "blackserviceof"
 
