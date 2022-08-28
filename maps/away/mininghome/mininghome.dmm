@@ -39,7 +39,8 @@
 	tag_interior_door = "mininghomesolars_interiordoor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	id_tag = "mininghome_solars_pump"
+	id_tag = "mininghome_solars_pump";
+	power_rating = 30000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_power)
@@ -272,7 +273,8 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 1;
-	id_tag = "mininghome_solars_pump"
+	id_tag = "mininghome_solars_pump";
+	power_rating = 30000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_power)
@@ -1663,7 +1665,8 @@
 	pixel_x = 36
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	id_tag = "mininghome_solars_pump"
+	id_tag = "mininghome_solars_pump";
+	power_rating = 30000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_power)
@@ -3604,6 +3607,16 @@
 	},
 /turf/simulated/floor/steel_dirty,
 /area/map_template/mininghome_living_north)
+"FA" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	power_rating = 20000
+	},
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 1;
+	icon_state = "bordercolorhalf"
+	},
+/turf/simulated/floor/steel_dirty,
+/area/map_template/mininghome_hall)
 "FE" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -3764,7 +3777,8 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	id_tag = "mininghome_primary_pump"
+	id_tag = "mininghome_primary_pump";
+	power_rating = 20000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_hall)
@@ -4059,7 +4073,6 @@
 /area/map_template/mininghome_hangar)
 "KP" = (
 /obj/item/mech_equipment/drill,
-/obj/item/device/kit/paint/powerloader/flames_blue,
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -4217,7 +4230,8 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	id_tag = "mininghome_primary_pump"
+	id_tag = "mininghome_primary_pump";
+	power_rating = 20000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_hall)
@@ -4807,7 +4821,8 @@
 "PY" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
-	id_tag = "mininghome_primary_pump"
+	id_tag = "mininghome_primary_pump";
+	power_rating = 20000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_hall)
@@ -4964,7 +4979,8 @@
 "QS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	id_tag = "mininghome_primary_pump"
+	id_tag = "mininghome_primary_pump";
+	power_rating = 20000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_hall)
@@ -5351,7 +5367,8 @@
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	id_tag = "mininghome_solars_pump"
+	id_tag = "mininghome_solars_pump";
+	power_rating = 30000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_power)
@@ -5361,7 +5378,8 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
-	id_tag = "mininghome_primary_pump"
+	id_tag = "mininghome_primary_pump";
+	power_rating = 20000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_hall)
@@ -5924,7 +5942,8 @@
 "Yd" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 1;
-	id_tag = "mininghome_solars_pump"
+	id_tag = "mininghome_solars_pump";
+	power_rating = 30000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/mininghome_power)
@@ -20514,7 +20533,7 @@ DE
 DE
 DE
 DE
-UE
+FA
 vY
 EY
 DE

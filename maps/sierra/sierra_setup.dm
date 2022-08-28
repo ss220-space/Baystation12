@@ -51,5 +51,6 @@
 	welcome_text += "<hr> <br />"
 	welcome_text += "<b>ВНИМАНИЕ:</b> Связь с центральным командование отсутствует. Обратитесь к информационному технику за диагностикой."
 
+
 	post_comm_message("NSV Sierra Sensor Readings", welcome_text)
 	minor_announcement.Announce(message = "Аварийные системы судна запущены. Сканирование сектора завершено. Связь с центральным командованием отсутствует.")
