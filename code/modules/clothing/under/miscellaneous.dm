@@ -760,7 +760,7 @@
 
 /obj/item/clothing/under/inf
 	name = "antiquated skirt"
-	desc = "really old style brown skirt"
+	desc = "Some really old fashioned skirt. Presumably a piece of Avalonian craftsmanship."
 	icon = 'infinity/icons/obj/clothing/obj_under.dmi'
 	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
 	icon_state = "antiquated_skirt"
