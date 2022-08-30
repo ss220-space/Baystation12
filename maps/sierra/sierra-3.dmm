@@ -40794,10 +40794,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
-"ogm" = (
-/obj/structure/closet/secure_closet/RD,
-/turf/space,
-/area/space)
 "oht" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -44191,7 +44187,7 @@ aaa
 aaa
 aaa
 aaa
-ogm
+aaa
 aaa
 aaa
 aaa
