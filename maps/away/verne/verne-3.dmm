@@ -251,7 +251,7 @@
 	},
 /obj/effect/floor_decal/corner/b_green/full,
 /obj/structure/bed/sofa/r/lime{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
@@ -332,8 +332,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/structure/bed/sofa/r/blue{
-	},
+/obj/structure/bed/sofa/r/blue,
 /turf/simulated/floor/carpet/blue2,
 /area/verne/common)
 "bq" = (
@@ -362,8 +361,7 @@
 /turf/simulated/floor/tiled,
 /area/verne/common/room/seven)
 "bt" = (
-/obj/structure/bed/sofa/l/blue{
-	},
+/obj/structure/bed/sofa/l/blue,
 /turf/simulated/floor/carpet/blue2,
 /area/verne/common)
 "bu" = (
@@ -593,8 +591,7 @@
 "cx" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/floor_decal/corner/b_green/full,
-/obj/structure/bed/sofa/l/lime{
-	},
+/obj/structure/bed/sofa/l/lime,
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating/small)
 "cA" = (
@@ -881,7 +878,7 @@
 "ey" = (
 /obj/effect/floor_decal/corner/b_green/full,
 /obj/structure/bed/sofa/r/lime{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
@@ -955,8 +952,7 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/b_green/full,
-/obj/structure/bed/sofa/r/lime{
-	},
+/obj/structure/bed/sofa/r/lime,
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating/small)
 "eY" = (
@@ -1032,15 +1028,6 @@
 /obj/random/junk,
 /turf/simulated/floor/tiled/monotile,
 /area/verne/common/hallway)
-"fw" = (
-/obj/structure/closet/medical_wall/filled{
-	pixel_y = 32
-	},
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/white,
-/area/verne/medical)
 "fB" = (
 /obj/effect/floor_decal/corner/green/mono,
 /obj/machinery/light{
@@ -1296,7 +1283,7 @@
 "hG" = (
 /obj/effect/floor_decal/corner/b_green/full,
 /obj/structure/bed/sofa/m/lime{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
@@ -1598,8 +1585,7 @@
 /area/verne/common/messseating)
 "jO" = (
 /obj/effect/floor_decal/corner/b_green/full,
-/obj/structure/bed/sofa/m/lime{
-	},
+/obj/structure/bed/sofa/m/lime,
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
 "jP" = (
@@ -1834,8 +1820,7 @@
 /area/verne/common/room/four)
 "mp" = (
 /obj/effect/floor_decal/corner/b_green/full,
-/obj/structure/bed/sofa/l/lime{
-	},
+/obj/structure/bed/sofa/l/lime,
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
 "mI" = (
@@ -3260,7 +3245,7 @@
 	dir = 10
 	},
 /obj/structure/bed/sofa/l/lime{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
@@ -3446,8 +3431,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/bed/sofa/r/lime{
-	},
+/obj/structure/bed/sofa/r/lime,
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
 "zt" = (
@@ -3696,7 +3680,7 @@
 	dir = 4
 	},
 /obj/structure/bed/sofa/m/lime{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
@@ -3899,7 +3883,7 @@
 	},
 /obj/effect/floor_decal/corner/b_green/full,
 /obj/structure/bed/sofa/l/lime{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating/small)
@@ -4074,7 +4058,7 @@
 	},
 /obj/effect/floor_decal/corner/b_green/full,
 /obj/structure/bed/sofa/r/lime{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating/small)
@@ -4138,12 +4122,12 @@
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
 "Fl" = (
-/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/corner/b_green/mono,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled/monotile,
 /area/verne/common/hallway)
 "Fo" = (
@@ -4233,12 +4217,12 @@
 /turf/simulated/floor/tiled,
 /area/verne/common/hallway)
 "FX" = (
-/obj/structure/closet/walllocker/firecloset,
 /obj/effect/floor_decal/corner/b_green/mono,
 /obj/item/device/radio/intercom/map_preset/verne{
 	dir = 8;
 	pixel_x = 20
 	},
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled/monotile,
 /area/verne/stairs)
 "Gd" = (
@@ -4803,7 +4787,7 @@
 "KV" = (
 /obj/effect/floor_decal/corner/b_green/full,
 /obj/structure/bed/sofa/l/lime{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
@@ -4867,8 +4851,7 @@
 /area/verne/common/professor)
 "Lt" = (
 /obj/effect/floor_decal/corner/b_green/full,
-/obj/structure/bed/sofa/r/lime{
-	},
+/obj/structure/bed/sofa/r/lime,
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
 "Lv" = (
@@ -5077,8 +5060,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/bed/sofa/m/lime{
-	},
+/obj/structure/bed/sofa/m/lime,
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
 "Nu" = (
@@ -5849,8 +5831,7 @@
 "Ul" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/floor_decal/corner/b_green/full,
-/obj/structure/bed/sofa/l/lime{
-	},
+/obj/structure/bed/sofa/l/lime,
 /turf/simulated/floor/tiled,
 /area/verne/common/messseating)
 "Up" = (
@@ -13758,7 +13739,7 @@ zy
 lT
 Sy
 fC
-fw
+WY
 uv
 WA
 dY

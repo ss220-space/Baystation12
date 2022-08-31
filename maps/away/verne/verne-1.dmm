@@ -813,10 +813,9 @@
 "dI" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1447;
-	id = "fuelmode";
 	injecting = 1;
-	use_power = 1;
-	volume_rate = 4000
+	volume_rate = 4000;
+	id_tag = "fuelmodeverne"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
@@ -1248,6 +1247,14 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/external)
+"iP" = (
+/obj/effect/paint_stripe/gunmetal,
+/obj/structure/sign/warning/fire{
+	pixel_y = 37;
+	pixel_x = -6
+	},
+/turf/simulated/wall/ocp_wall,
+/area/verne/engineering/thrustgen)
 "iV" = (
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/smresearch)
@@ -1361,9 +1368,6 @@
 /turf/space,
 /area/space)
 "kp" = (
-/obj/structure/sign/warning/fire{
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -1807,6 +1811,9 @@
 	id_tag = "enginesverne";
 	pixel_x = -24
 	},
+/obj/machinery/air_sensor{
+	id_tag = "vernechamber"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
 "pp" = (
@@ -2016,9 +2023,6 @@
 /turf/space,
 /area/space)
 "rk" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	target_pressure = 15000
-	},
 /obj/effect/floor_decal/industrial/fire{
 	dir = 9
 	},
@@ -2030,6 +2034,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/machinery/atmospherics/valve/digital/open,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/thrusters)
 "rl" = (
@@ -2933,9 +2938,6 @@
 "Af" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 8
-	},
-/obj/machinery/air_sensor{
-	id_tag = "vernechamber"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
@@ -4253,7 +4255,7 @@
 /turf/simulated/floor,
 /area/verne/engineering/smresearch/access/lower)
 "Mu" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+/obj/machinery/atmospherics/valve/digital/open{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -4435,10 +4437,10 @@
 	pixel_y = -6
 	},
 /obj/machinery/button/blast_door{
-	id_tag = "vernechambervent";
-	name = "Thruster Chamber Vent";
+	id_tag = "vernechamberwindow";
+	name = "Thruster Chamber Window";
 	pixel_x = 6;
-	pixel_y = 24
+	pixel_y = 37
 	},
 /obj/machinery/status_light{
 	id_tag = "vernechamber";
@@ -4448,6 +4450,16 @@
 	},
 /obj/effect/floor_decal/industrial/fire{
 	dir = 5
+	},
+/obj/structure/sign/warning/fire{
+	pixel_y = 37;
+	pixel_x = -6
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "vernechambervent";
+	name = "Thruster Chamber Vent";
+	pixel_x = 6;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/thrustgen)
@@ -5394,6 +5406,14 @@
 /obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/tiled/techmaint,
 /area/verne/engineering/atmospherics)
+"YC" = (
+/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/blast/regular{
+	id_tag = "vernechamberwindow";
+	name = "Chamber Window"
+	},
+/turf/simulated/floor/plating,
+/area/verne/engineering/thrustgen)
 "YM" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 6
@@ -13890,10 +13910,10 @@ VR
 CV
 VR
 AH
-AH
+iP
 bT
 bT
-AH
+YC
 kp
 EK
 De
