@@ -217,8 +217,7 @@
 
 /obj/item/storage/box/ammo/bartender
 	name = "box of beanbag and illumination shells"
-	startswith = list(/obj/item/ammo_magazine/shotholder/beanbag = 2)
-	startswith = list(/obj/item/ammo_magazine/shotholder/flash = 2)
+	startswith = list(/obj/item/ammo_magazine/shotholder/beanbag = 2, /obj/item/ammo_magazine/shotholder/flash = 2)
 
 /obj/item/storage/box/ammo/sniperammo
 	name = "box of sniper shells"
