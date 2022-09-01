@@ -392,7 +392,8 @@
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	dir = 8;
 	internal_pressure_bound = 35000;
-	internal_pressure_bound_default = 35000
+	internal_pressure_bound_default = 35000;
+	id_tag = "vernechamber_out"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
@@ -812,10 +813,10 @@
 /area/verne/engineering/external)
 "dI" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	frequency = 1447;
 	injecting = 1;
 	volume_rate = 4000;
-	id_tag = "fuelmodeverne"
+	id = "vernechamber_in";
+	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
@@ -1114,7 +1115,8 @@
 "hq" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	internal_pressure_bound = 35000;
-	internal_pressure_bound_default = 35000
+	internal_pressure_bound_default = 35000;
+	id_tag = "vernechamber_out"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
@@ -1373,6 +1375,13 @@
 	},
 /obj/effect/floor_decal/industrial/fire{
 	dir = 1
+	},
+/obj/machinery/computer/air_control{
+	input_tag = "vernechamber_in";
+	name = "Chamber Flow Control";
+	output_tag = "vernechamber_out";
+	sensor_tag = "vernechamber";
+	frequency = 1439
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/thrustgen)
@@ -1810,9 +1819,6 @@
 /obj/machinery/sparker{
 	id_tag = "enginesverne";
 	pixel_x = -24
-	},
-/obj/machinery/air_sensor{
-	id_tag = "vernechamber"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
@@ -2939,6 +2945,9 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 8
 	},
+/obj/machinery/air_sensor{
+	id_tag = "vernechamber"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
 "Ai" = (
@@ -3434,11 +3443,11 @@
 /turf/space,
 /area/space)
 "EH" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	dir = 1
-	},
 /obj/machinery/door/airlock/external/bolted{
 	name = "Thrust Burn Chamber"
+	},
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	dir = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/verne/engineering/thrustgen)
@@ -4428,13 +4437,15 @@
 	id_tag = "fuelmodeverne";
 	name = "fuel mode control";
 	pixel_x = 24;
-	pixel_y = 6
+	pixel_y = 6;
+	desc = "A remote control for switching between cold and hot fuel modes. Use hot fuel mode with caution!"
 	},
 /obj/machinery/button/ignition{
 	dir = 8;
 	id_tag = "enginesverne";
 	pixel_x = 24;
-	pixel_y = -6
+	pixel_y = -6;
+	desc = "A remote control switch for a mounted igniter."s
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "vernechamberwindow";
@@ -5407,6 +5418,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/verne/engineering/atmospherics)
 "YC" = (
+/obj/effect/paint_stripe/gunmetal,
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/blast/regular{
 	id_tag = "vernechamberwindow";
