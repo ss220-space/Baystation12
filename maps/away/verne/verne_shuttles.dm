@@ -58,6 +58,11 @@
 	name = "SEV Torch Venerable Catfish Dock"
 	landmark_tag = "nav_verne_5"
 
+/obj/effect/shuttle_landmark/nav_verne/sierra
+	name = "NSV Sierra Venerable Catfish Dock"
+	landmark_tag = "nav_deck3_catfish"
+	docking_controller = "rescue_shuttle_dock_airlock"
+
 /obj/effect/shuttle_landmark/transit/verne
 	name = "In transit"
 	landmark_tag = "nav_transit_verne"

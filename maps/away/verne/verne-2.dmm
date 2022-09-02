@@ -1176,10 +1176,15 @@
 /turf/simulated/floor/plating,
 /area/verne/hangar)
 "et" = (
-/obj/machinery/shipsensors,
+/obj/machinery/air_sensor{
+	id_tag = "verneshuttle"
+	},
 /obj/structure/handrail{
 	dir = 4;
 	icon_state = "handrail"
+	},
+/obj/machinery/shipsensors{
+	tag = "catfish_shuttle_sensor_external"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish/engineering)
@@ -1392,10 +1397,10 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
 	},
-/obj/structure/closet/walllocker/firecloset,
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 22
 	},
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/workshop)
 "gh" = (
@@ -2567,6 +2572,17 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/verne/catfish/engineering)
+"qr" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	dir = 1;
+	id_tag = "catfish_shuttle_pump_out_internal"
+	},
+/obj/structure/handrail{
+	dir = 4;
+	icon_state = "handrail"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/verne/catfish)
 "qs" = (
 /obj/structure/railing/mapped,
 /obj/effect/floor_decal/corner/b_green/mono,
@@ -3184,6 +3200,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/verne/catfish/engineering)
+"uN" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	id_tag = "catfish_shuttle_pump_out_external";
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/verne/catfish)
 "uV" = (
 /obj/structure/railing/mapped{
 	dir = 1
@@ -3917,6 +3943,11 @@
 /obj/effect/paint_stripe/gunmetal,
 /turf/simulated/floor/plating,
 /area/verne/catfish)
+"Ac" = (
+/obj/effect/paint_stripe/gunmetal,
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/wall/r_titanium,
+/area/verne/catfish)
 "Af" = (
 /obj/machinery/portable_atmospherics/hydroponics{
 	closed_system = 1;
@@ -3968,31 +3999,38 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
-"AE" = (
-/obj/structure/handrail{
-	dir = 4;
-	icon_state = "handrail"
+"AD" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	id_tag = "catfish_shuttle_pump_out_external";
+	dir = 8
 	},
-/obj/effect/floor_decal/techfloor,
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 6
 	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/verne/catfish)
+"AE" = (
+/obj/effect/floor_decal/techfloor,
 /obj/machinery/access_button/airlock_exterior{
 	frequency = 1331;
 	master_tag = "catfish_shuttle";
 	pixel_x = -24;
-	req_access = list("ACCESS_VERNE")
+	req_access = list("ACCESS_VERNE");
+	pixel_y = 9
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
-	id_tag = "catfish_shuttle_pump_out_external"
-	},
-/obj/machinery/airlock_sensor/airlock_exterior{
+/obj/machinery/door/airlock/multi_tile/civilian{
 	frequency = 1331;
-	id_tag = "catfish_shuttle_sensor_external";
-	pixel_x = -24;
-	pixel_y = 8;
-	req_access = list("ACCESS_VERNE")
+	id_tag = "catfish_shuttle_outter";
+	name = "SRV Venerable Catfish"
 	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "verneshuttle";
+	name = "Protective Shutters"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
+	},
+/obj/machinery/meter,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
 "AL" = (
@@ -4048,11 +4086,12 @@
 /area/verne/stairs/two)
 "Bd" = (
 /obj/effect/floor_decal/techfloor,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/machinery/door/blast/regular/open{
+	id_tag = "verneshuttle";
+	name = "Protective Shutters"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
-	id_tag = "catfish_shuttle_pump_out_external"
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
@@ -4073,15 +4112,14 @@
 /area/verne/xenosci/equipment)
 "Bn" = (
 /obj/effect/floor_decal/techfloor,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/machinery/door/blast/regular/open{
+	id_tag = "verneshuttle";
+	name = "Protective Shutters"
 	},
-/obj/structure/handrail{
-	dir = 8;
-	icon_state = "handrail"
-	},
-/obj/machinery/air_sensor{
-	id_tag = "verneshuttle"
+/obj/effect/paint_stripe/gunmetal,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
@@ -4216,6 +4254,7 @@
 	},
 /obj/item/device/radio/map_preset/verne,
 /obj/effect/floor_decal/corner/b_green/mono,
+/obj/item/clothing/head/helmet/solgov/pilot,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/catfish)
 "Cm" = (
@@ -4257,22 +4296,6 @@
 /obj/effect/floor_decal/corner/b_green/mono,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/catfish)
-"CA" = (
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 8
-	},
-/obj/machinery/door/airlock/multi_tile/civilian{
-	frequency = 1331;
-	id_tag = "catfish_shuttle_outter";
-	name = "SRV Venerable Catfish"
-	},
-/obj/machinery/door/blast/regular/open{
-	id_tag = "verneshuttle";
-	name = "Protective Shutters"
-	},
-/obj/machinery/meter,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/verne/catfish)
 "CE" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -4305,12 +4328,9 @@
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/external)
 "Dd" = (
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 4
-	},
-/obj/machinery/door/blast/regular/open{
-	id_tag = "verneshuttle";
-	name = "Protective Shutters"
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	dir = 1;
+	id_tag = "catfish_shuttle_pump_out_internal"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
@@ -4469,16 +4489,8 @@
 /turf/simulated/floor/plating,
 /area/verne/hangar)
 "EI" = (
-/obj/structure/handrail{
-	dir = 4;
-	icon_state = "handrail"
-	},
 /obj/effect/floor_decal/techfloor{
 	dir = 9
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
-	dir = 1;
-	id_tag = "catfish_shuttle_pump_out_internal"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
@@ -4489,10 +4501,6 @@
 "EL" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
-	dir = 1;
-	id_tag = "catfish_shuttle_pump_out_internal"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
@@ -4566,9 +4574,6 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "Fk" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 5
-	},
 /obj/machinery/oxygen_pump{
 	dir = 4;
 	pixel_x = 32
@@ -4577,6 +4582,7 @@
 	dir = 8;
 	icon_state = "handrail"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
 "Fw" = (
@@ -4877,6 +4883,7 @@
 	dir = 8;
 	pixel_x = 20
 	},
+/obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
 "HT" = (
@@ -4962,6 +4969,21 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
 /area/verne/hangar)
+"Iy" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/structure/handrail{
+	dir = 8;
+	icon_state = "handrail"
+	},
+/obj/structure/handrail{
+	dir = 8;
+	icon_state = "handrail"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/verne/catfish)
 "IG" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -5034,6 +5056,9 @@
 /obj/item/ammo_magazine/shotholder/stun,
 /obj/item/ammo_magazine/shotholder/flash,
 /obj/item/gun/projectile/shotgun/doublebarrel/flare,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/catfish)
 "IY" = (
@@ -5065,6 +5090,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "JA" = (
@@ -5076,16 +5104,21 @@
 	name = "Net Launcher Locker";
 	pixel_y = 32
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/item/gun/launcher/net,
 /obj/item/clothing/accessory/storage/bandolier/safari,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "JG" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "JJ" = (
@@ -5116,7 +5149,6 @@
 /turf/simulated/floor/plating,
 /area/verne/engineering/decktransfer)
 "Kq" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/handrail{
 	dir = 8;
 	icon_state = "handrail"
@@ -5129,6 +5161,9 @@
 	id_tag = null;
 	master_tag = "catfish_shuttle";
 	pixel_x = 24
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
@@ -5397,7 +5432,7 @@
 	},
 /obj/effect/floor_decal/cti,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
+	dir = 10
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/catfish)
@@ -5415,7 +5450,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "MC" = (
@@ -5439,9 +5474,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/storage)
 "MQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
 /obj/structure/cable/cyan{
 	d2 = 2;
 	icon_state = "0-2"
@@ -5459,6 +5491,9 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
@@ -5613,6 +5648,13 @@
 /obj/machinery/mining/drill,
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/external)
+"Om" = (
+/obj/effect/paint_stripe/gunmetal,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/wall/r_titanium,
+/area/verne/catfish)
 "Oq" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/portable_atmospherics/canister/methyl_bromide,
@@ -5633,6 +5675,10 @@
 	},
 /obj/effect/floor_decal/corner/b_green{
 	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
@@ -5664,7 +5710,7 @@
 /obj/effect/floor_decal/corner/b_green{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "PL" = (
@@ -5958,6 +6004,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/stasis_cage,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "SK" = (
@@ -6538,6 +6587,11 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
 /area/verne/hangar)
+"WJ" = (
+/obj/effect/paint_stripe/gunmetal,
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/wall/r_titanium,
+/area/verne/catfish)
 "WL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
@@ -6842,6 +6896,13 @@
 /obj/structure/handrail{
 	dir = 1;
 	icon_state = "handrail"
+	},
+/obj/machinery/airlock_sensor/airlock_exterior{
+	frequency = 1331;
+	id_tag = "catfish_shuttle_sensor_external";
+	pixel_x = 7;
+	pixel_y = -23;
+	req_access = list("ACCESS_VERNE")
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
@@ -13623,7 +13684,7 @@ zo
 zo
 qy
 qy
-sg
+Xn
 TZ
 lh
 Gw
@@ -13775,7 +13836,7 @@ Bs
 Bs
 zt
 zt
-qB
+uN
 qB
 Mg
 qB
@@ -13927,7 +13988,7 @@ Bt
 De
 FA
 zt
-zt
+Om
 zt
 Nf
 zt
@@ -14531,7 +14592,7 @@ hu
 BT
 Vz
 AE
-CA
+qr
 EI
 GT
 Io
@@ -14835,11 +14896,11 @@ TU
 Ec
 Vz
 Bn
-zU
+Iy
 Fk
 HQ
-zt
-zt
+WJ
+Ac
 zt
 Bs
 zt
@@ -14991,7 +15052,7 @@ zt
 zt
 zt
 zt
-wz
+AD
 wz
 wz
 wz
@@ -15143,7 +15204,7 @@ ux
 ux
 Lu
 Lu
-Eh
+Am
 WI
 bL
 of

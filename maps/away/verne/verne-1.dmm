@@ -816,7 +816,8 @@
 	injecting = 1;
 	volume_rate = 4000;
 	id = "vernechamber_in";
-	use_power = 1
+	use_power = 1;
+	frequency = 1441
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/thrustgen)
@@ -1381,7 +1382,7 @@
 	name = "Chamber Flow Control";
 	output_tag = "vernechamber_out";
 	sensor_tag = "vernechamber";
-	frequency = 1439
+	sensor_name = "Verne Fuel Burn Chamber"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/thrustgen)
@@ -4431,7 +4432,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/external)
 "NX" = (
-/obj/machinery/computer/ship/engines,
 /obj/machinery/button/toggle/valve{
 	dir = 8;
 	id_tag = "fuelmodeverne";
@@ -4472,6 +4472,7 @@
 	pixel_x = 6;
 	pixel_y = 24
 	},
+/obj/machinery/computer/ship/engines,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/thrustgen)
 "Oe" = (

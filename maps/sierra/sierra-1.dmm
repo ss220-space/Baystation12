@@ -28717,6 +28717,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/sierra/dockcheck)
+"Ud" = (
+/obj/effect/shuttle_landmark/nav_verne/sierra,
+/turf/space,
+/area/space)
 "Ue" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/structure/sign/nanotrasen{
@@ -46716,7 +46720,7 @@ Is
 Is
 Is
 Is
-Is
+Ud
 Is
 Is
 Is
