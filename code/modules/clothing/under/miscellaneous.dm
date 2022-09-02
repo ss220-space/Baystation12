@@ -884,3 +884,159 @@
 	desc = "Dark top, white bottom. That's... something."
 	icon_state = "black_white"
 	item_state = "black_white"
+
+/obj/item/clothing/under/inf/biker
+	name = "biker"
+	desc = "pink biker."
+	icon_state = "biker"
+	item_state = "biker"
+
+/obj/item/clothing/under/inf/formalvest
+	name = "formal vest"
+	desc = "A standard.set with a beige necktie."
+	icon_state = "formalvest"
+	item_state = "formalvest"
+
+/obj/item/clothing/under/inf/callum
+	name = "callum vest"
+	desc = "A quite sleek vest."
+	icon_state = "callum"
+	item_state = "callum"
+
+/obj/item/clothing/under/inf/denimvest
+	name = "denim vest"
+	desc = "Slightly bleached out denim vest with rebellic emblems drawn on its back."
+	icon_state = "denimvest"
+	item_state = "denimvest"
+
+/obj/item/clothing/under/inf/olympic
+	name = "olympic clothes"
+	desc = "A set of tracksuit and trackpants in gaudy coloration. Incredibly comfy for wearing and exercising, but this contrast of colors make your eyes melt."
+	icon_state = "olympic"
+	item_state = "olympic"
+
+/obj/item/clothing/under/inf/hm_suit
+	name = "charcoal vest"
+	desc = "A woven charcoal suit and an azure necktie."
+	icon_state = "hm_suit"
+	item_state = "hm_suit"
+
+/obj/item/clothing/under/inf/mafia
+	name = "mafia outfit"
+	desc = "The business of the mafia is business."
+	icon_state = "mafia_suit"
+	item_state = "mafia_suit"
+
+/obj/item/clothing/under/inf/mafia/vest
+	name = "mafia vest"
+	desc = "Extreme problems often require extreme solutions."
+	icon_state = "mafia_vest"
+	item_state = "mafia_vest"
+
+/obj/item/clothing/under/inf/mafia/white
+	name = "white mafia outfit"
+	desc = "The best defense against the treacherous is treachery."
+	icon_state = "mafia_white"
+	item_state = "mafia_white"
+
+/obj/item/clothing/under/inf/maid
+	name = "maid dress"
+	desc = "Cliche product of Japan."
+	icon_state = "meido"
+	item_state = "meido"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+/obj/item/clothing/under/inf/noble
+	name = "artsy suit"
+	desc = "A piece of exceptional work, for Avalonian artisan. Nobles from up there tend to be fond of wearing this."
+	icon_state = "noble"
+	item_state = "noble"
+
+/obj/item/clothing/under/inf/redhawaiianshirt
+	name = "red hawaiian shirt"
+	desc = "A floral shirt worn to most vacation destinations."
+	icon_state = "hawaiian_red"
+	item_state = "hawaiian_red"
+
+/obj/item/clothing/under/inf/pinkhawaiianshirt
+	name = "pink hawaiian shirt"
+	desc = "A pink floral shirt the material feels cool and comfy."
+	icon_state = "hawaiian_pink"
+	item_state = "hawaiian_pink"
+
+/obj/item/clothing/under/inf/yellowhawaiianshirt
+	name = "yellow hawaiian shirt"
+	desc = "A yellow floral shirt for a relaxing day in space."
+	icon_state = "hawaiian_orange"
+	item_state = "hawaiian_orange"
+
+/obj/item/clothing/under/inf/bluehawaiianshirt
+	name = "blue hawaiian shirt"
+	desc = "A blue floral shirt it has a oddly colored pink flower on it."
+	icon_state = "hawaiian_blue"
+	item_state = "hawaiian_blue"
+
+/obj/item/clothing/under/inf/cuban_suit
+	name = "rhumba outfit"
+	desc = "A satin shirt and high-waisted pants, worn by dancers in the Rhumba style. It smells oddly like... sulfur?"
+	icon_state = "cuban_suit"
+	item_state = "cuban_suit"
+
+/obj/item/clothing/under/inf/victdress
+	name = "black victorian dress"
+	desc = "A victorian style dress, fancy!"
+	icon_state = "victorian_dress"
+	item_state = "victorian_dress"
+
+/obj/item/clothing/under/inf/victdress/red
+	name = "red victorian dress"
+	desc = "A victorian style dress, fancy!"
+	icon_state = "victorian_reddress"
+	item_state = "victorian_reddress"
+
+/obj/item/clothing/under/inf/victsuit
+	name = "victorian suit"
+	desc = "A victorian style suit, fancy!"
+	icon_state = "victorian_black"
+	item_state = "victorian_black"
+
+/obj/item/clothing/under/inf/victsuit/redblk
+	name = "red and black victorian suit"
+	icon_state = "victorian_redblack"
+	item_state = "victorian_redblack"
+
+/obj/item/clothing/under/inf/victsuit/red
+	name = "red victorian suit"
+	icon_state = "victorian_redvest"
+	item_state = "victorian_redvest"
+
+/obj/item/clothing/under/inf/victsuit/twilight
+	name = "dark victorian suit"
+	icon_state = "victorian_twilight"
+	item_state = "victorian_twilight"
+
+//Ретро-униформы для сотрудников отделов
+
+/obj/item/clothing/under/inf/retro/security
+	desc = "A retro corporate security jumpsuit. Although it provides same protection as modern jumpsuits do, wearing this almost feels like being wrapped in tarp."
+	name = "retro security officer's uniform"
+	icon_state = "retro_sec"
+	item_state = "retro_sec"
+
+/obj/item/clothing/under/inf/retro/medical
+	desc = "A biologically resistant retro medical uniform with high-vis reflective stripes."
+	name = "retro medical officer's uniform"
+	icon_state = "retro_med"
+	item_state = "retro_med"
+
+/obj/item/clothing/under/inf/retro/engineering
+	desc = "A faded grimy engineering jumpsuit and overall combo. It craves for being soiled with oil, dust, and grit this damn instant."
+	name = "retro engineering uniform"
+	icon_state = "retro_eng"
+	item_state = "retro_eng"
+
+/obj/item/clothing/under/inf/retro/science
+	desc = "A faded polo and set of brown slacks with distinctive pink stripes. What a ridiculous tie."
+	name = "retro science officer's uniform"
+	icon_state = "retro_sci"
+	item_state = "retro_sci"

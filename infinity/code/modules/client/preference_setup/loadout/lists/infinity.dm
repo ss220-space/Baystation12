@@ -213,3 +213,107 @@
 /datum/gear/uniform/black_white
 	display_name = "black white"
 	path = /obj/item/clothing/under/inf/black_white
+
+/datum/gear/uniform/biker
+	display_name = "biker"
+	path = /obj/item/clothing/under/inf/biker
+
+/datum/gear/uniform/formalvest
+	display_name = "formal vest"
+	path = /obj/item/clothing/under/inf/formalvest
+
+/datum/gear/uniform/callum
+	display_name = "callum vest"
+	path = /obj/item/clothing/under/inf/callum
+
+/datum/gear/uniform/denimvest
+	display_name = "denim vest"
+	path = /obj/item/clothing/under/inf/denimvest
+
+/datum/gear/uniform/olympic
+	display_name = "olympic clothes"
+	path = /obj/item/clothing/under/inf/olympic
+
+/datum/gear/uniform/hm_suit
+	display_name = "charcoal vest"
+	path = /obj/item/clothing/under/inf/hm_suit
+
+/datum/gear/uniform/mafia
+	display_name = "mafia outfit"
+	path = /obj/item/clothing/under/inf/mafia
+
+/datum/gear/uniform/mafia/vest
+	display_name = "mafia vest"
+	path = /obj/item/clothing/under/inf/mafia/vest
+
+/datum/gear/uniform/mafia/white
+	display_name = "white mafia outfit"
+	path = /obj/item/clothing/under/inf/mafia/white
+
+/datum/gear/uniform/maid
+	display_name = "maid dress"
+	path = /obj/item/clothing/under/inf/maid
+
+/datum/gear/uniform/noble
+	display_name = "artsy suit"
+	path = /obj/item/clothing/under/inf/noble
+
+/datum/gear/uniform/redhawaiianshirt
+	display_name = "red hawaiian shirt"
+	path = /obj/item/clothing/under/inf/redhawaiianshirt
+
+/datum/gear/uniform/pinkhawaiianshirt
+	display_name = "pink hawaiian shirt"
+	path = /obj/item/clothing/under/inf/pinkhawaiianshirt
+
+/datum/gear/uniform/yellowhawaiianshirt
+	display_name = "yellow hawaiian shirt"
+	path = /obj/item/clothing/under/inf/yellowhawaiianshirt
+
+/datum/gear/uniform/bluehawaiianshirt
+	display_name = "blue hawaiian shirt"
+	path = /obj/item/clothing/under/inf/bluehawaiianshirt
+
+/datum/gear/uniform/cuban_suit
+	display_name = "rhumba outfit"
+	path = /obj/item/clothing/under/inf/cuban_suit
+
+/datum/gear/uniform/victdress
+	display_name = "black victorian dress"
+	path = /obj/item/clothing/under/inf/victdress
+
+/datum/gear/uniform/victdress/red
+	display_name = "red victorian dress"
+	path = /obj/item/clothing/under/inf/victdress/red
+
+/datum/gear/uniform/victsuit
+	display_name = "victorian suit"
+	path = /obj/item/clothing/under/inf/victsuit
+
+/datum/gear/uniform/victsuit/redblk
+	display_name = "red and black victorian suit"
+	path = /obj/item/clothing/under/inf/victsuit/redblk
+
+/datum/gear/uniform/victsuit/red
+	display_name = "red victorian suit"
+	path = /obj/item/clothing/under/inf/victsuit/red
+
+/datum/gear/uniform/victsuit/twilight
+	display_name = "dark victorian suit"
+	path = /obj/item/clothing/under/inf/victsuit/twilight
+
+/datum/gear/uniform/retro/security
+	display_name = "retro security officer's uniform"
+	path = /obj/item/clothing/under/inf/retro/security
+
+/datum/gear/uniform/retro/medical
+	display_name = "retro medical officer's uniform"
+	path = /obj/item/clothing/under/inf/retro/medical
+
+/datum/gear/uniform/retro/engineering
+	display_name = "retro engineering uniform"
+	path = /obj/item/clothing/under/inf/retro/engineering
+
+/datum/gear/uniform/retro/science
+	display_name = "retro science officer's uniform"
+	path = /obj/item/clothing/under/inf/retro/science
