@@ -215,6 +215,11 @@
 	name = "box of stun shells"
 	startswith = list(/obj/item/ammo_magazine/shotholder/stun = 2)
 
+/obj/item/storage/box/ammo/bartender
+	name = "box of beanbag and illumination shells"
+	startswith = list(/obj/item/ammo_magazine/shotholder/beanbag = 2)
+	startswith = list(/obj/item/ammo_magazine/shotholder/flash = 2)
+
 /obj/item/storage/box/ammo/sniperammo
 	name = "box of sniper shells"
 	startswith = list(/obj/item/ammo_casing/shell = 7)

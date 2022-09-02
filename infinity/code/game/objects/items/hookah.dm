@@ -439,14 +439,6 @@
 	var/volume = 500
 
 // code/datums/supplypacks/galley.dm
-/decl/hierarchy/supply_pack/galley/hookah
-	name = "Bar - Hookah"
-	contains = list(
-		/obj/item/hookah,
-		/obj/item/storage/box/large/coal = 2
-	)
-	cost = 20
-	containername = "Hookah crate"
 
 /obj/item/storage/box/large/coal
 	name = "coal for hookah"

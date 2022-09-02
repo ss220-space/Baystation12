@@ -757,3 +757,130 @@
 	icon_state = "kimono"
 	worn_state = "kimono"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+
+/obj/item/clothing/under/inf
+	name = "antiquated skirt"
+	desc = "Some really old fashioned skirt. Presumably a piece of Avalonian craftsmanship."
+	icon = 'infinity/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
+	icon_state = "antiquated_skirt"
+	item_state = "antiquated_skirt"
+
+/obj/item/clothing/under/inf/vice
+	name = "vice uniform"
+	desc = "Casual set of black suit and red t-shirt."
+	icon_state = "vice2"
+	item_state = "vice2"
+
+/obj/item/clothing/under/inf/detective
+	name = "red 'n black suit."
+	desc = "A set of black slacks and red shirt."
+	icon_state = "detective"
+	item_state = "detective"
+	worn_state = "detective"
+
+/obj/item/clothing/under/inf/chain_with_shirt
+	name = "black and white with style"
+	desc = "Some weird combination of starched shirt and studded jeans with a chain hanging off the belt."
+	icon_state = "chain_with_shirt"
+	item_state = "chain_with_shirt"
+	worn_state = "chain_with_shirt"
+
+/obj/item/clothing/under/inf/cuttop
+	name = "grey cuttop"
+	desc = "Loose fitting grey shirt with a broad neckline, accompained with some skinny jeans. Obviously worn by women."
+	icon_state = "cuttop"
+	item_state = "cuttop"
+	worn_state = "cuttop"
+
+/obj/item/clothing/under/inf/cuttop_red
+	name = "red cuttop"
+	desc = "Loose fitting red shirt with a broad neckline, accompained with some skinny jeans. Obviously worn by women."
+	icon_state = "cuttop_red"
+	item_state = "cuttop_red"
+	worn_state = "cuttop_red"
+
+/obj/item/clothing/under/inf/pinstripe
+	name = "pinstripe"
+	desc = "You ain't one to be afraid of 18 karat of bad luck."
+	icon_state = "pinstripe"
+	item_state = "pinstripe"
+
+/obj/item/clothing/under/inf/gotsis_dress_1
+	name = "red gotsis dress"
+	desc = "Welcome to cabaret, lolly jolly~~"
+	icon_state = "gotsis_dress_1"
+	item_state = "gotsis_dress_1"
+
+/obj/item/clothing/under/inf/gotsis_dress_2
+	name = "orange gotsis dress"
+	desc = "Welcome to cabaret, lolly jolly~~"
+	icon_state = "gotsis_dress_2"
+	item_state = "gotsis_dress_2"
+
+/obj/item/clothing/under/inf/classic_suit
+	name = "classic suit"
+	desc = "Classic suit for really special occasions. It demands for regard, so treat it accordingly."
+	icon_state = "classic_suit"
+	item_state = "classic_suit"
+
+/obj/item/clothing/under/inf/jacket
+	name = "old style jacket"
+	desc = "You know it damn well here."
+	icon_state = "jacket"
+	item_state = "jacket"
+
+/obj/item/clothing/under/inf/blackservice
+	name = "dark service uniform"
+	desc = "A set of service clothes in military style. Largely available in many of surplus stores."
+	icon_state = "blackservice"
+	item_state = "blackservice"
+
+/obj/item/clothing/under/inf/blackserviceof
+	name = "brown service uniform"
+	desc = "A set of service clothes in military style. Largely available in many of surplus stores."
+	icon_state = "blackserviceof"
+	item_state = "blackserviceof"
+
+/obj/item/clothing/under/inf/whiteservice
+	name = "white service uniform"
+	desc = "A set of service clothes in military style. This one is purposed for special occasions."
+	icon_state = "whiteservice"
+	item_state = "whiteservice"
+
+/obj/item/clothing/under/inf/whiteservicefem
+	name = "white female service uniform"
+	desc = "A set of service clothes in military style. This one is purposed for special occasions."
+	icon_state = "whiteservicefem"
+	item_state = "whiteservicefem"
+
+/obj/item/clothing/under/inf/harper_uniform
+	name = "harper uniform"
+	desc = "A maggy tank top and denim cargo pants with some knee protection sewn onto them. Seems like a perfect outfit for some garage dweller."
+	icon_state = "harper_uniform"
+	item_state = "harper_uniform"
+
+/obj/item/clothing/under/inf/stripped_shirt
+	name = "red checkered shirt"
+	desc = "Incredibly comfy and warm flannel shirt in red checkered pattern."
+	icon_state = "stripped_shirt"
+	item_state = "stripped_shirt"
+	worn_state = "stripped_shirt"
+
+/obj/item/clothing/under/inf/lify
+	name = "lify"
+	desc = "Here's some childish style, I dunno. Like who the hell would wear tank top with buttons?."
+	icon_state = "lify"
+	item_state = "lify"
+
+/obj/item/clothing/under/inf/white_black
+	name = "white black"
+	desc = "White top, dark bottom. Too default."
+	icon_state = "white_black"
+	item_state = "white_black"
+
+/obj/item/clothing/under/inf/black_white
+	name = "black white"
+	desc = "Dark top, white bottom. That's... something."
+	icon_state = "black_white"
+	item_state = "black_white"

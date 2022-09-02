@@ -1001,12 +1001,6 @@
 /obj/item/storage/candle_box/scented,
 /obj/item/storage/candle_box,
 /obj/item/storage/candle_box,
-/obj/item/storage/box/large/coal,
-/obj/item/storage/box/large/coal,
-/obj/item/storage/box/large/coal,
-/obj/item/storage/box/large/coal,
-/obj/item/hookah,
-/obj/item/hookah,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galley/backroom)
 "abW" = (
@@ -6510,6 +6504,10 @@
 	health = 185;
 	name = "heavy display case";
 	req_access = list("ACCESS_CAPTAIN")
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = 24
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/captain/office_anteroom)
@@ -19312,9 +19310,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/tech)
 "aIp" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = -20
+/obj/machinery/computer/guestpass{
+	pixel_x = -20;
+	dir = 4
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/captain/office_anteroom)
@@ -20910,6 +20908,10 @@
 /obj/machinery/camera/network/command{
 	c_tag = "Captain - Office";
 	dir = 6
+	},
+/obj/machinery/computer/guestpass{
+	pixel_x = -20;
+	dir = 4
 	},
 /turf/simulated/floor/carpet/red,
 /area/crew_quarters/heads/office/captain)
@@ -27031,10 +27033,9 @@
 	pixel_x = 24
 	},
 /obj/structure/closet/cabinet,
-/obj/item/hookah,
-/obj/item/coal,
-/obj/item/coal,
-/obj/item/coal,
+/obj/random/drinkbottle,
+/obj/random/mre/dessert,
+/obj/random/single/lighter,
 /turf/simulated/floor/wood/walnut,
 /area/vacant/gambling)
 "aWB" = (
