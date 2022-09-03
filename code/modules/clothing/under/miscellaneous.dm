@@ -887,13 +887,13 @@
 
 /obj/item/clothing/under/inf/biker
 	name = "biker"
-	desc = "pink biker."
+	desc = "For when you craving for some dead meat."
 	icon_state = "biker"
 	item_state = "biker"
 
 /obj/item/clothing/under/inf/formalvest
 	name = "formal vest"
-	desc = "A standard.set with a beige necktie."
+	desc = "A standard set with a beige necktie."
 	icon_state = "formalvest"
 	item_state = "formalvest"
 
