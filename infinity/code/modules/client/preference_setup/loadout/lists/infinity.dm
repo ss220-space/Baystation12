@@ -239,16 +239,16 @@
 	path = /obj/item/clothing/under/inf/hm_suit
 
 /datum/gear/uniform/mafia
-	display_name = "mafia outfit"
+	display_name = "mafia outfit selection"
 	path = /obj/item/clothing/under/inf/mafia
 
-/datum/gear/uniform/mafia/vest
-	display_name = "mafia vest"
-	path = /obj/item/clothing/under/inf/mafia/vest
-
-/datum/gear/uniform/mafia/white
-	display_name = "white mafia outfit"
-	path = /obj/item/clothing/under/inf/mafia/white
+/datum/gear/uniform/mafia/New()
+	..()
+	var/mafia = list()
+	mafia["mafia outfit"] = /obj/item/clothing/under/inf/mafia
+	mafia["mafia vest"] = /obj/item/clothing/under/inf/mafia/vest
+	mafia["white mafia outfit"] = /obj/item/clothing/under/inf/mafia/white
+	gear_tweaks += new/datum/gear_tweak/path(mafia)
 
 /datum/gear/uniform/maid
 	display_name = "maid dress"
@@ -257,6 +257,7 @@
 /datum/gear/uniform/noble
 	display_name = "artsy suit"
 	path = /obj/item/clothing/under/inf/noble
+
 
 /datum/gear/uniform/hawaiianshirt
 	display_name = "hawaiian shirt selection"
@@ -299,13 +300,13 @@
 	victsuit["dark victorian suit"] = /obj/item/clothing/under/inf/victsuit/twilight
 	gear_tweaks += new/datum/gear_tweak/path(victsuit)
 
-/datum/gear/uniform/retro/security
+/datum/gear/uniform/retro_security
 	display_name = "retro security officer's uniform"
 	allowed_roles = list(\
 	/datum/job/hos, /datum/job/warden, /datum/job/detective, /datum/job/officer, /datum/job/security_assistant)
 	path = /obj/item/clothing/under/inf/retro/security
 
-/datum/gear/uniform/retro/medical
+/datum/gear/uniform/retro_medical
 	display_name = "retro medical officer's uniform"
 	allowed_roles = list(\
 	/datum/job/cmo, /datum/job/senior_doctor, /datum/job/doctor,\
@@ -313,10 +314,10 @@
 	/datum/job/psychiatrist, /datum/job/chemist, /datum/job/roboticist)
 	path = /obj/item/clothing/under/inf/retro/medical
 
-/datum/gear/uniform/retro/engineering
+/datum/gear/uniform/retro_engineering
 	display_name = "retro engineering uniform"
 	path = /obj/item/clothing/under/inf/retro/engineering
 
-/datum/gear/uniform/retro/science
+/datum/gear/uniform/retro_science
 	display_name = "retro science officer's uniform"
 	path = /obj/item/clothing/under/inf/retro/science
