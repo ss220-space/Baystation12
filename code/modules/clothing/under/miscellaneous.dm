@@ -987,12 +987,14 @@
 	desc = "A victorian style dress, fancy!"
 	icon_state = "victorian_dress"
 	item_state = "victorian_dress"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/inf/victdress/red
 	name = "red victorian dress"
 	desc = "A victorian style dress, fancy!"
 	icon_state = "victorian_reddress"
 	item_state = "victorian_reddress"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/inf/victsuit
 	name = "victorian suit"
@@ -1022,21 +1024,35 @@
 	name = "retro security officer's uniform"
 	icon_state = "retro_sec"
 	item_state = "retro_sec"
+	siemens_coefficient = 0.9
+	armor = list(
+		melee = ARMOR_MELEE_SMALL
+		)
 
 /obj/item/clothing/under/inf/retro/medical
 	desc = "A biologically resistant retro medical uniform with high-vis reflective stripes."
 	name = "retro medical officer's uniform"
 	icon_state = "retro_med"
 	item_state = "retro_med"
+	permeability_coefficient = 0.50
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
 
 /obj/item/clothing/under/inf/retro/engineering
 	desc = "A faded grimy engineering jumpsuit and overall combo. It craves for being soiled with oil, dust, and grit this damn instant."
 	name = "retro engineering uniform"
 	icon_state = "retro_eng"
 	item_state = "retro_eng"
+	armor = list(
+		rad = ARMOR_RAD_MINOR
+		)
 
 /obj/item/clothing/under/inf/retro/science
 	desc = "A faded polo and set of brown slacks with distinctive pink stripes. What a ridiculous tie."
 	name = "retro science officer's uniform"
 	icon_state = "retro_sci"
 	item_state = "retro_sci"
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)

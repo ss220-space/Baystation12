@@ -258,56 +258,59 @@
 	display_name = "artsy suit"
 	path = /obj/item/clothing/under/inf/noble
 
-/datum/gear/uniform/redhawaiianshirt
-	display_name = "red hawaiian shirt"
+/datum/gear/uniform/hawaiianshirt
+	display_name = "hawaiian shirt selection"
 	path = /obj/item/clothing/under/inf/redhawaiianshirt
 
-/datum/gear/uniform/pinkhawaiianshirt
-	display_name = "pink hawaiian shirt"
-	path = /obj/item/clothing/under/inf/pinkhawaiianshirt
-
-/datum/gear/uniform/yellowhawaiianshirt
-	display_name = "yellow hawaiian shirt"
-	path = /obj/item/clothing/under/inf/yellowhawaiianshirt
-
-/datum/gear/uniform/bluehawaiianshirt
-	display_name = "blue hawaiian shirt"
-	path = /obj/item/clothing/under/inf/bluehawaiianshirt
+/datum/gear/uniform/hawaiianshirt/New()
+	..()
+	var/hawaiian = list()
+	hawaiian["red hawaiian shirt"] = /obj/item/clothing/under/inf/redhawaiianshirt
+	hawaiian["pink hawaiian shirt"] = /obj/item/clothing/under/inf/pinkhawaiianshirt
+	hawaiian["yellow hawaiian shirt"] = /obj/item/clothing/under/inf/yellowhawaiianshirt
+	hawaiian["blue hawaiian shirt"] = /obj/item/clothing/under/inf/bluehawaiianshirt
+	gear_tweaks += new/datum/gear_tweak/path(hawaiian)
 
 /datum/gear/uniform/cuban_suit
 	display_name = "rhumba outfit"
 	path = /obj/item/clothing/under/inf/cuban_suit
 
 /datum/gear/uniform/victdress
-	display_name = "black victorian dress"
+	display_name = "victorian dress selection"
 	path = /obj/item/clothing/under/inf/victdress
 
-/datum/gear/uniform/victdress/red
-	display_name = "red victorian dress"
-	path = /obj/item/clothing/under/inf/victdress/red
+/datum/gear/uniform/victdress/New()
+	..()
+	var/dress = list()
+	dress["black victorian dress"] = /obj/item/clothing/under/inf/victdress
+	dress["red victorian dresst"] = /obj/item/clothing/under/inf/victdress/red
+	gear_tweaks += new/datum/gear_tweak/path(dress)
 
 /datum/gear/uniform/victsuit
-	display_name = "victorian suit"
+	display_name = "victorian suit selection"
 	path = /obj/item/clothing/under/inf/victsuit
 
-/datum/gear/uniform/victsuit/redblk
-	display_name = "red and black victorian suit"
-	path = /obj/item/clothing/under/inf/victsuit/redblk
-
-/datum/gear/uniform/victsuit/red
-	display_name = "red victorian suit"
-	path = /obj/item/clothing/under/inf/victsuit/red
-
-/datum/gear/uniform/victsuit/twilight
-	display_name = "dark victorian suit"
-	path = /obj/item/clothing/under/inf/victsuit/twilight
+/datum/gear/uniform/victsuit/New()
+	..()
+	var/victsuit = list()
+	victsuit["victorian suit"] = /obj/item/clothing/under/inf/victsuit
+	victsuit["red and black victorian suit"] = /obj/item/clothing/under/inf/victsuit/redblk
+	victsuit["red victorian suit"] = /obj/item/clothing/under/inf/victsuit/red
+	victsuit["dark victorian suit"] = /obj/item/clothing/under/inf/victsuit/twilight
+	gear_tweaks += new/datum/gear_tweak/path(victsuit)
 
 /datum/gear/uniform/retro/security
 	display_name = "retro security officer's uniform"
+	allowed_roles = list(\
+	/datum/job/hos, /datum/job/warden, /datum/job/detective, /datum/job/officer, /datum/job/security_assistant)
 	path = /obj/item/clothing/under/inf/retro/security
 
 /datum/gear/uniform/retro/medical
 	display_name = "retro medical officer's uniform"
+	allowed_roles = list(\
+	/datum/job/cmo, /datum/job/senior_doctor, /datum/job/doctor,\
+	/datum/job/doctor_trainee, /datum/job/explorer_medic,\
+	/datum/job/psychiatrist, /datum/job/chemist, /datum/job/roboticist)
 	path = /obj/item/clothing/under/inf/retro/medical
 
 /datum/gear/uniform/retro/engineering
