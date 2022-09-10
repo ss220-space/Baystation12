@@ -158,8 +158,7 @@ update_flag
 
 	overlays.Cut()
 
-	if(update_flag & 1)
-		overlays += "can-open"
+
 	if(update_flag & 2)
 		overlays += "can-connector"
 	if(update_flag & 4)
@@ -170,6 +169,8 @@ update_flag
 		overlays += "can-o2"
 	else if(update_flag & 32)
 		overlays += "can-o3"
+	if(update_flag & 1)
+		overlays += "can-open"
 	return
 
 /obj/machinery/portable_atmospherics/canister/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
