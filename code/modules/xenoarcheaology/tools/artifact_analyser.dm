@@ -2,7 +2,7 @@
 	name = "Anomaly Analyser"
 	desc = "Studies the emissions of anomalous materials to discover their uses."
 	icon = 'icons/obj/xenoarchaeology.dmi'
-	icon_state = "xenoarch_console"
+	icon_state = "xenoarch_analyser1"
 	anchored = TRUE
 	density = TRUE
 	var/scan_in_progress = 0
