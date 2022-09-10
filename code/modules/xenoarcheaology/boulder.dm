@@ -1,5 +1,5 @@
 /obj/structure/boulder
-	name = "rocky debris"
+	name = "boulder"
 	desc = "Leftover rock from an excavation, it's been partially dug out already but there's still a lot to go."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "boulder1"
@@ -10,11 +10,18 @@
 	var/datum/geosample/geological_data
 	var/datum/artifact_find/artifact_find
 	var/last_act = 0
-
+/*
 /obj/structure/boulder/New()
 	..()
 	icon_state = "boulder[rand(1,4)]"
 	excavation_level = rand(5, 50)
+*/
+/obj/structure/boulder/Initialize(mapload, var/coloration = "#9c9378")
+	icon_state = "boulder[rand(1,6)]"
+	if(coloration)
+		color = coloration
+	excavation_level = rand(5, 50)
+	. = ..()
 
 /obj/structure/boulder/Destroy()
 	qdel(geological_data)
