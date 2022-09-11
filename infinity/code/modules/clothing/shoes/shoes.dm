@@ -93,7 +93,7 @@
 	species_restricted = list(SPECIES_TAJARA)
 
 /obj/item/clothing/shoes/taj_old_shoes_cut
-	desc = "AAn old pattern shoes made of blackened leather with greenish protector. Built to withstand a lot of abuse during travel. This ones are for \"warmer\" and dry periods, good for hiking, good for toes."
+	desc = "An old pattern shoes made of blackened leather with greenish protector. Built to withstand a lot of abuse during travel. This ones are for \"warmer\" and dry periods, good for hiking, good for toes."
 	name = "toeless vintage boots"
 	icon_state = "taj_old_shoes"
 	item_state = "taj_old_shoes_cut"
