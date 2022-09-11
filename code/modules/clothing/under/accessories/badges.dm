@@ -195,6 +195,7 @@
 	name = "faded badge"
 	desc = "A faded law enforcement badge in an older design."
 	icon_state = "badge_round"
+
 /obj/item/clothing/accessory/badge/solid
 	name = "\improper SolGov ID badge"
 	desc = "A descriptive identification badge with the holder's credentials. This one indicates the holder is representing the SCG."
