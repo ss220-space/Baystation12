@@ -22,6 +22,7 @@
 	path = /obj/item/clothing/suit/storage/taj_overcoat
 	whitelisted = list(SPECIES_TAJARA)
 	sort_category = "Xenowear"
+
 /datum/gear/shoes/tajara/taj_old_shoes
 	display_name = "(Tajara) vintage boots"
 	path = /obj/item/clothing/shoes/taj_old_shoes
