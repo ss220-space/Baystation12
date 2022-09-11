@@ -201,6 +201,7 @@
 	desc = "A descriptive identification badge with the holder's credentials. This one indicates the holder is representing the SCG."
 	icon_state = "solbadge"
 	badge_string = null
+
 /obj/item/clothing/accessory/badge/ntid
 	name = "\improper NT ID badge"
 	desc = "A descriptive identification badge with the holder's credentials. This one has red marks with the NanoTrasen logo on it."
