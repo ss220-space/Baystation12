@@ -207,6 +207,7 @@
 	desc = "A descriptive identification badge with the holder's credentials. This one has red marks with the NanoTrasen logo on it."
 	icon_state = "ntbadge"
 	badge_string = null
+
 /obj/item/clothing/accessory/badge/defenseintel
 	name = "\improper DIA investigator's badge"
 	desc = "A leather-backed silver badge bearing the crest of the Defense Intelligence Agency."
