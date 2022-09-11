@@ -57,7 +57,7 @@
 
 /obj/structure/closet/secure_closet/patrol/WillContain()
 	return list(
-		/obj/item/storage/belt/security,
+		/obj/item/storage/belt/holster/security/tactical,
 		/obj/item/melee/telebaton,
 		/obj/item/clothing/glasses/sunglasses/sechud/goggles,
 		/obj/item/clothing/glasses/tacgoggles,
@@ -83,7 +83,7 @@
 
 /obj/structure/closet/secure_closet/patrol/marine_lead/WillContain()
 	return list(
-		/obj/item/storage/belt/security,
+		/obj/item/storage/belt/holster/security/tactical,
 		/obj/item/melee/telebaton,
 		/obj/item/clothing/glasses/sunglasses/sechud/goggles,
 		/obj/item/clothing/glasses/tacgoggles,
