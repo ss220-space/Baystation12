@@ -46,6 +46,7 @@
 	path = /obj/item/clothing/shoes/taj_old_shoes_cut
 	whitelisted = list(SPECIES_TAJARA)
 	sort_category = "Xenowear"
+
 /datum/gear/uniform/thermal
 	sort_category = "Xenowear"
 	display_name = "thermal suit selection"
