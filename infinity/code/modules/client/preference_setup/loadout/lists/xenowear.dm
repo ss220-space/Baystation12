@@ -10,6 +10,7 @@
 	path = /obj/item/clothing/under/taj_old_uniform
 	whitelisted = list(SPECIES_TAJARA)
 	sort_category = "Xenowear"
+
 /datum/gear/uniform/tajara/taj_new_fatigues
 	display_name = "(Tajara) CCA fatigues"
 	path = /obj/item/clothing/under/taj_new_fatigues
