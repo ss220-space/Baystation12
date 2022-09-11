@@ -16,6 +16,7 @@
 	path = /obj/item/clothing/under/taj_new_fatigues
 	whitelisted = list(SPECIES_TAJARA)
 	sort_category = "Xenowear"
+
 /datum/gear/suit/tajara/taj_overcoat
 	display_name = "(Tajara) vintage tajaran overcoat"
 	path = /obj/item/clothing/suit/storage/taj_overcoat
