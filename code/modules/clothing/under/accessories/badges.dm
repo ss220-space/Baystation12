@@ -127,6 +127,7 @@
 	badge_access = access_security
 	slot = ACCESSORY_SLOT_INSIGNIA
 	slot_flags = SLOT_TIE | SLOT_BELT
+
 /obj/item/clothing/accessory/badge/holo/cord
 	icon_state = "holobadge-cord"
 	slot_flags = SLOT_MASK | SLOT_TIE
