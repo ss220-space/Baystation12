@@ -34,6 +34,7 @@
 	path = /obj/item/clothing/shoes/taj_new_shoes
 	whitelisted = list(SPECIES_TAJARA)
 	sort_category = "Xenowear"
+
 /datum/gear/shoes/tajara/taj_new_shoes_cut
 	display_name = "(Tajara) toeless military  boots"
 	path = /obj/item/clothing/shoes/taj_new_shoes_cut
