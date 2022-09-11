@@ -250,6 +250,7 @@
 	item_state = "pbadge"
 	badge_string = "Corporate Reporter"
 	w_class = ITEM_SIZE_TINY
+
 /obj/item/clothing/accessory/badge/press/independent
 	name = "press pass"
 	desc = "A freelance journalist's pass, certified by Oculum Broadcast."
