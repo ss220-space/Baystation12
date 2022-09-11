@@ -89,6 +89,7 @@
 	if(product_ads)
 		ads_list += splittext(product_ads, ";")
 
+	update_icon()
 	build_inventory(populate_parts)
 
 /**
