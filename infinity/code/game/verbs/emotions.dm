@@ -218,3 +218,8 @@
 	set name = "Приподнять бровь"
 	set category = "Emote"
 	emote("eyebrow")
+
+/mob/living/verb/dance()
+	set name = "Танцевать"
+	set category = "Emote"
+	emote("dance")
