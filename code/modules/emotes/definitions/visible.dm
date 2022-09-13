@@ -48,6 +48,7 @@
 	user.set_dir(turn(user.dir, 45))
 	sleep(1)
 	if(user.loc != init_loc)
+		animate(user, transform = null, pixel_x = 0, pixel_y = 0, time = 1, loop = 0)
 		return
 	animate(user, transform = m345, pixel_x = rand(-5, 5), pixel_y = rand(-5, 5), time = 1, 3)
 	animate(transform = null, pixel_x = rand(-5, 5), pixel_y = rand(-5, 5), time = 2)
