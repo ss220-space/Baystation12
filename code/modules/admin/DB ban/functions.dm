@@ -241,6 +241,9 @@
 				bantype_str = "JOB_TEMPBAN"
 				bantype_pass = 1
 				isjobban = 1
+			if(BANTYPE_APPEARANCE)
+				bantype_str = "APPEARANCE_BAN"
+				bantype_pass = 1
 			if(BANTYPE_ADMIN_PERMA)
 				bantype_str = "ADMIN_PERMABAN"
 				bantype_pass = 1
