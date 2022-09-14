@@ -62,24 +62,24 @@ var/jobban_keylist[0]		//to store the keys & ranks
 			return
 
 		//Job permabans
-		var/DBQuery/query = dbcon.NewQuery("SELECT ckey, job FROM [sqlfdbkdbutil].ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)")
+		var/DBQuery/query = dbcon.NewQuery("SELECT ckey, role FROM [sqlfdbkdbutil].ban WHERE role != 'Server' AND isnull(unbanned_datetime) AND isnull(expiration_time)")
 		query.Execute()
 
 		while(query.NextRow())
 			var/ckey = query.item[1]
-			var/job = query.item[2]
+			var/role = query.item[2]
 
-			jobban_keylist.Add("[ckey] - [job]")
+			jobban_keylist.Add("[ckey] - [role]")
 
 		//Job tempbans
-		var/DBQuery/query1 = dbcon.NewQuery("SELECT ckey, job FROM [sqlfdbkdbutil].ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()")
+		var/DBQuery/query1 = dbcon.NewQuery("SELECT ckey, role FROM [sqlfdbkdbutil].ban WHERE role != 'Server'  AND isnull(unbanned_datetime) AND expiration_time > Now()")
 		query1.Execute()
 
 		while(query1.NextRow())
 			var/ckey = query1.item[1]
-			var/job = query1.item[2]
+			var/role = query1.item[2]
 
-			jobban_keylist.Add("[ckey] - [job]")
+			jobban_keylist.Add("[ckey] - [role]")
 
 /proc/jobban_savebanfile()
 	var/savefile/S=new("data/job_full.ban")

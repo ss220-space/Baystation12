@@ -75,10 +75,8 @@
 			cidquery = " OR computerid = '[computer_id]' "
 
 		var/DBQuery/query = dbcon.NewQuery({"
-		SELECT ckey, a_ckey, reason, expiration_time, duration, bantime, bantype FROM [sqlfdbkdbutil].ban
-		WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'PERMABAN' OR bantype = 'ADMIN_PERMABAN'
-		OR ((bantype = 'TEMPBAN' OR bantype = 'ADMIN_TEMPBAN') AND expiration_time > Now())) AND isnull(unbanned)"})
-
+		SELECT ckey, a_ckey, reason, expiration, bantime FROM [sqlfdbkdbutil].ban
+		WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (isnull(expiration) AND expiration > Now())) AND isnull(unbanned_datetime)"})
 		query.Execute()
 
 		while(query.NextRow())
@@ -86,18 +84,16 @@
 			var/ackey = query.item[2]
 			var/reason = query.item[3]
 			var/expiration = query.item[4]
-			var/duration = query.item[5]
-			var/bantime = query.item[6]
-			var/bantype = query.item[7]
+			var/bantime = query.item[5]
 
 			var/expires = ""
-			if(text2num(duration) > 0)
-				expires = " The ban is for [minutes_to_readable(duration)] and expires on [expiration] (server time)."
+			if(text2num(bantime) > 0)
+				expires = " The ban is for [minutes_to_readable(bantime)] and expires on [expiration] (server time)."
 
 			var/desc = "\nReason: You, or another user of this computer or connection ([pckey]) is banned from playing here. The ban reason is:\n[reason]\nThis ban was applied by [ackey] on [bantime], [expires]"
 
 			key_cache[key] = 0
-			. = list("reason"="[bantype]", "desc"="[desc]")
+			. = list("reason"="[reason]", "desc"="[desc]")
 
 		if (failedcid)
 			message_admins("[key] has logged in with a blank computer id in the ban check.")

@@ -55,29 +55,29 @@ CREATE TABLE IF NOT EXISTS `erro_admin_log` (
 --
 
 CREATE TABLE IF NOT EXISTS `erro_ban` (
-  `id` int(11) NOT NULL,
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `bantime` datetime NOT NULL,
-  `serverip` varchar(32) NOT NULL,
-  `bantype` varchar(32) NOT NULL,
-  `reason` text NOT NULL,
-  `job` varchar(32) DEFAULT NULL,
-  `duration` int(11) NOT NULL,
-  `rounds` int(11) DEFAULT NULL,
+  `server_ip` varchar(32) NOT NULL,
+  `server_port` varchar(32) NOT NULL,
+  `round_id` int(11) NOT NULL,
+  `role` varchar(32) DEFAULT NULL,
   `expiration_time` datetime NOT NULL,
+  `applies_to_admins` tinyint(1) NOT NULL DEFAULT '0',
+  `reason` text NOT NULL,
   `ckey` varchar(32) NOT NULL,
-  `computerid` varchar(32) NOT NULL DEFAULT '',
   `ip` varchar(32) NOT NULL DEFAULT '',
+  `computerid` varchar(32) NOT NULL DEFAULT '',
   `a_ckey` varchar(32) NOT NULL,
-  `a_computerid` varchar(32) NOT NULL DEFAULT '',
   `a_ip` varchar(32) NOT NULL DEFAULT '',
+  `a_computerid` varchar(32) NOT NULL DEFAULT '',
   `who` text NOT NULL,
-  `adminwho` text NOT NULL,
+  `adminwho` VARCHAR(2048) NOT NULL,
   `edits` text,
-  `unbanned` tinyint(1) DEFAULT NULL,
   `unbanned_datetime` datetime DEFAULT NULL,
   `unbanned_ckey` varchar(32) DEFAULT NULL,
+  `unbanned_ip` varchar(32) DEFAULT NULL,
   `unbanned_computerid` varchar(32) DEFAULT NULL,
-  `unbanned_ip` varchar(32) DEFAULT NULL
+  `unbanned_round_id` INT(11) DEFAULT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
