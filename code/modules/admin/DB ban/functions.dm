@@ -190,9 +190,6 @@
 				return
 		qdel(adm_query)
 
-	var/reason_public = reason
-	reason = sql_sanitize_text(reason)
-
 //[INF]
 	if(!computerid)
 		computerid = "0"
@@ -200,7 +197,7 @@
 		ip = "0.0.0.0"
 //[/INF]
 
-	var/sql = "INSERT INTO [sqlfdbkdbutil].ban (`bantime`,`server_ip`,`reason`,`role`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`) VALUES (Now(), '[world.internet_address]:[world.port]','[reason]','[role]','[Now() + expiration_time MINUTE]', '[ckey]', '[computerid]', '[ip]', '[a_ckey]', '[a_computerid]', '[a_ip]', '[who]', '[adminwho]')"
+	var/sql = "INSERT INTO [sqlfdbkdbutil].ban (`bantime`,`server_ip`,`reason`,`role`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`) VALUES (Now(), '[server_ip]:[server_port]','[reason]','[role]','[expiration_time MINUTE]', '[ckey]', '[computerid]', '[ip]', '[a_ckey]', '[a_computerid]', '[a_ip]', '[who]', '[adminwho]')"
 	var/DBQuery/query_insert = dbcon.NewQuery(sql)
 	query_insert.Execute()
 	var/setter = a_ckey
@@ -510,8 +507,6 @@
 			var/bdcolor = "#ffdddd" //banned dark
 			var/ulcolor = "#eeffee" //unbanned light
 			var/udcolor = "#ddffdd" //unbanned dark
-			var/alcolor = "#eeeeff" // auto-unbanned light
-			var/adcolor = "#ddddff" // auto-unbanned dark
 
 			output += "<table width='90%' bgcolor='#e3e3e3' cellpadding='5' cellspacing='0' align='center'>"
 			output += "<tr>"
@@ -632,7 +627,7 @@
 					output += "</tr>"
 				if(unbantime)
 					output += "<tr bgcolor='[dcolor]'>"
-					output += "<td align='center' colspan='5' bgcolor=''><b>UNBANNED by admin [unbanckey] on [unbantime]</b></td>"
+					output += "<td align='center' colspan='5' bgcolor=''><b>UNBANNED by admin [unbanned_ckey] on [unbantime]</b></td>"
 					output += "</tr>"
 
 			output += "</table></div>"
