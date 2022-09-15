@@ -48,10 +48,10 @@
 /datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/role = "Server", var/rounds = 0, var/banckey = null, var/banip = null, var/bancid = null)
 	if(!src || !src.owner)
 		return
-	_DB_ban_record(src.owner.ckey, src.owner.computer_id, src.owner.address, bantype, banned_mob, duration, reason, role, rounds, banckey, banip, bancid)
+	//_DB_ban_record(src.owner.ckey, src.owner.computer_id, src.owner.address, bantype, banned_mob, duration, reason, role, rounds, banckey, banip, bancid)
 
 //Either pass the mob you wish to ban in the 'banned_mob' attribute, or the banckey, banip and bancid variables. If both are passed, the mob takes priority! If a mob is not passed, banckey is the minimum that needs to be passed! banip and bancid are optional.
-/proc/_DB_ban_record(var/a_ckey, var/a_computerid, var/a_ip, var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/role = "", var/rounds = 0, var/banckey = null, var/banip = null, var/bancid = null)
+// /proc/_DB_ban_record(var/a_ckey, var/a_computerid, var/a_ip, var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/role = "", var/rounds = 0, var/banckey = null, var/banip = null, var/bancid = null)
 
 	if(usr)
 		if(!check_rights(R_MOD,0) && !check_rights(R_BAN))	return
@@ -154,6 +154,10 @@
 
 	qdel(query)
 
+	var/a_ckey
+	var/a_computerid
+	var/a_ip
+
 	if(src.owner && istype(src.owner, /client))
 		a_ckey = src.owner:ckey
 		a_computerid = src.owner:computer_id
@@ -200,7 +204,7 @@
 		ip = "0.0.0.0"
 //[/INF]
 
-	var/sql = "INSERT INTO [sqlfdbkdbutil].ban (`bantime`,`server_ip`,`reason`,`role`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`) VALUES (Now(), '[server_ip]:[server_port]','[reason]','[role]','[expiration_time MINUTE]', '[ckey]', '[computerid]', '[ip]', '[a_ckey]', '[a_computerid]', '[a_ip]', '[who]', '[adminwho]')"
+	var/sql = "INSERT INTO [sqlfdbkdbutil].ban (`bantime`,`server_ip`,`reason`,`role`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`) VALUES (Now(), '[server_ip]:[server_port]','[reason]','[role]','[duration]', '[ckey]', '[computerid]', '[ip]', '[a_ckey]', '[a_computerid]', '[a_ip]', '[who]', '[adminwho]')"
 	var/DBQuery/query_insert = dbcon.NewQuery(sql)
 	query_insert.Execute()
 	var/setter = a_ckey
@@ -215,7 +219,7 @@
 	if(isjobban)
 		jobban_client_fullban(ckey, role)
 
-	message_admins("[setter] has added a [bantype_str] for [ckey] [(role)?"([role])":""] [expiration_time] with the reason: \"[reason]\" to the ban database.",1)
+	message_admins("[setter] has added a [bantype_str] for [ckey] [(role)?"([role])":""] [(duration > 0)?"([duration] minutes)":""] with the reason: \"[reason]\" to the ban database.",1)
 	return 1
 
 /datum/admins/proc/DB_ban_unban(var/ckey, var/bantype, var/role = "")
