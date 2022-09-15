@@ -119,7 +119,7 @@ Class Procs:
 
 	var/machine_name = null // The human-readable name of this machine, shown when examining circuit boards.
 	var/machine_desc = null // A simple description of what this machine does, shown on examine for circuit boards.
-
+	var/speed_process = FALSE
 /obj/machinery/Initialize(mapload, d=0, populate_parts = TRUE)
 	. = ..()
 	if(d)
@@ -159,6 +159,22 @@ Class Procs:
 
 /obj/machinery/Process()
 	return PROCESS_KILL // Only process if you need to.
+
+// gotta go fast
+/obj/machinery/proc/makeSpeedProcess()
+	if(speed_process)
+		return
+	speed_process = TRUE
+	STOP_PROCESSING(SSmachines, src)
+	START_PROCESSING(SSfastprocess, src)
+
+// gotta go slow
+/obj/machinery/proc/makeNormalProcess()
+	if(!speed_process)
+		return
+	speed_process = FALSE
+	STOP_PROCESSING(SSfastprocess, src)
+	START_PROCESSING(SSmachines, src)
 
 /obj/machinery/emp_act(severity)
 	if(use_power && stat == 0)
