@@ -445,6 +445,9 @@
 	output += "<option value='[BANTYPE_TEMP]'>TEMPBAN</option>"
 	output += "<option value='[BANTYPE_JOB_PERMA]'>JOB PERMABAN</option>"
 	output += "<option value='[BANTYPE_JOB_TEMP]'>JOB TEMPBAN</option>"
+	output += "<option value='[BANTYPE_APPEARANCE]'>APPEARANCE BAN</option>"
+	output += "<option value='[BANTYPE_ADMIN_PERMA]'>ADMIN PERMABAN</option>"
+	output += "<option value='[BANTYPE_ADMIN_TEMP]'>ADMIN TEMPBAN</option>"
 	output += "</select></td>"
 	output += "<td width='50%' align='right'><b>Ckey:</b> <input type='text' name='dbbanaddckey'></td></tr>"
 	output += "<tr><td width='50%' align='right'><b>IP:</b> <input type='text' name='dbbanaddip'></td>"
@@ -484,6 +487,9 @@
 	output += "<option value='[BANTYPE_TEMP]'>TEMPBAN</option>"
 	output += "<option value='[BANTYPE_JOB_PERMA]'>JOB PERMABAN</option>"
 	output += "<option value='[BANTYPE_JOB_TEMP]'>JOB TEMPBAN</option>"
+	output += "<option value='[BANTYPE_APPEARANCE]'>APPEARANCE BAN</option>"
+	output += "<option value='[BANTYPE_ADMIN_PERMA]'>ADMIN PERMABAN</option>"
+	output += "<option value='[BANTYPE_ADMIN_TEMP]'>ADMIN TEMPBAN</option>"
 	output += "</select></td></tr></table>"
 	output += "<br><input type='submit' value='search'><br>"
 	output += "<input type='checkbox' value='[match]' name='dbmatch' [match? "checked=\"1\"" : null]> Match(min. 3 characters to search by key or ip, and 7 to search by cid)<br>"
@@ -551,10 +557,16 @@
 						bantypesearch += "'JOB_PERMABAN' "
 					if(BANTYPE_JOB_TEMP)
 						bantypesearch += "'JOB_TEMPBAN' "
+					if(BANTYPE_APPEARANCE)
+						bantypesearch += "'APPEARANCE_BAN' "
+					if(BANTYPE_ADMIN_PERMA)
+						bantypesearch = "'ADMIN_PERMABAN' "
+					if(BANTYPE_ADMIN_TEMP)
+						bantypesearch = "'ADMIN_TEMPBAN' "
 					else
 						bantypesearch += "'PERMABAN' "
 
-			var/DBQuery/select_query = dbcon.NewQuery("SELECT id, bantime, reason, role, expiration_time, ckey, a_ckey, unbanned, unbanned_ckey, unbanned_datetime, edits, ip, computerid FROM [sqlfdbkdbutil].ban WHERE 1 [playersearch] [adminsearch] [ipsearch] [cidsearch] ORDER BY bantime DESC LIMIT 100")
+			var/DBQuery/select_query = dbcon.NewQuery("SELECT id, bantime, reason, role, expiration_time, ckey, a_ckey, unbanned_ckey, unbanned_datetime, edits, ip, computerid FROM [sqlfdbkdbutil].ban WHERE 1 [playersearch] [adminsearch] [ipsearch] [cidsearch] ORDER BY bantime DESC LIMIT 100")
 			select_query.Execute()
 
 			var/now = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss") // MUST BE the same format as SQL gives us the dates in, and MUST be least to most specific (i.e. year, month, day not day, month, year)
@@ -568,22 +580,17 @@
 				var/ckey = select_query.item[6]
 				var/ackey = select_query.item[7]
 				var/unbanned_ckey = select_query.item[8]
-				var/unbanned_time = select_query.item[9]
+				var/unbantime = select_query.item[9]
 				var/edits = select_query.item[10]
 				var/ip = select_query.item[11]
 				var/cid = select_query.item[12]
 				var/applies_to_admins = select_query.item[13]
-				// true if this ban has expired
-				 var/auto = (bantype in list("TEMPBAN", "JOB_TEMPBAN")) && now > expiration_time // oh how I love ISO 8601 (ish) date strings
 
 				var/lcolor = blcolor
 				var/dcolor = bdcolor
-				if(unbanned)
+				if(unbantime)
 					lcolor = ulcolor
 					dcolor = udcolor
-				else if(auto)
-					lcolor = alcolor
-					dcolor = adcolor
 
 				var/list/ban_titles = list()
 				if (applies_to_admins)
@@ -591,7 +598,7 @@
 
 				ban_titles.Add(isnull(expiration_time) ? "PERMABAN" : "TEMPBAN")
 
-				if (role != "Server")
+				if (role != "Server" && role != "Appearance")
 					ban_titles.Add("JOBBAN")
 
 				var/ban_title_text = ban_titles.Join(" ")
@@ -600,21 +607,21 @@
 				if (isnull(expiration_time))
 					typedesc += "<font color='red'><b>[ban_title_text]</b></font>"
 				else
-					typedesc += "<b>[ban_title_text]</b><br><font size='2'>[role]<br>[(unbanned_time) ? "" : "(<a href=\"byond://?src=[UID()];dbbanedit=duration;dbbanid=[banid]\">Edit</a>))"]<br>Expires [expiration_time]</font>"
+					typedesc += "<b>[ban_title_text]</b><br><font size='2'>[role]<br>[(unbantime) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=duration;dbbanid=[banid]\">Edit</a>))"]<br>Expires [expiration_time]</font>"
 
 				output += "<tr bgcolor='[dcolor]'>"
 				output += "<td align='center'>[typedesc]</td>"
 				output += "<td align='center'><b>[ckey]</b></td>"
 				output += "<td align='center'>[bantime]</td>"
 				output += "<td align='center'><b>[ackey]</b></td>"
-				output += "<td align='center'>[(unbanned || auto) ? "" : "<b><a href=\"byond://?src=\ref[src];dbbanedit=unban;dbbanid=[banid]\">Unban</a></b>"]</td>"
+				output += "<td align='center'>[(unbantime) ? "" : "<b><a href=\"byond://?src=\ref[src];dbbanedit=unban;dbbanid=[banid]\">Unban</a></b>"]</td>"
 				output += "</tr>"
 				output += "<tr bgcolor='[dcolor]'>"
 				output += "<td align='center' colspan='2' bgcolor=''><b>IP:</b> [ip]</td>"
 				output += "<td align='center' colspan='3' bgcolor=''><b>CIP:</b> [cid]</td>"
 				output += "</tr>"
 				output += "<tr bgcolor='[lcolor]'>"
-				output += "<td align='center' colspan='5'><b>Reason: [(unbanned || auto) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=reason;dbbanid=[banid]\">Edit</a>)"]</b> <cite>\"[reason]\"</cite></td>"
+				output += "<td align='center' colspan='5'><b>Reason: [(unbantime) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=reason;dbbanid=[banid]\">Edit</a>)"]</b> <cite>\"[reason]\"</cite></td>"
 				output += "</tr>"
 				if(edits)
 					output += "<tr bgcolor='[dcolor]'>"
@@ -623,17 +630,10 @@
 					output += "<tr bgcolor='[lcolor]'>"
 					output += "<td align='center' colspan='5'><font size='2'>[edits]</font></td>"
 					output += "</tr>"
-				if(unbanned)
+				if(unbantime)
 					output += "<tr bgcolor='[dcolor]'>"
 					output += "<td align='center' colspan='5' bgcolor=''><b>UNBANNED by admin [unbanckey] on [unbantime]</b></td>"
 					output += "</tr>"
-				else if(auto)
-					output += "<tr bgcolor='[dcolor]'>"
-					output += "<td align='center' colspan='5' bgcolor=''><b>EXPIRED at [expiration]</b></td>"
-					output += "</tr>"
-				output += "<tr>"
-				output += "<td colspan='5' bgcolor='white'>&nbsp</td>"
-				output += "</tr>"
 
 			output += "</table></div>"
 
