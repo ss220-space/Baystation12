@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `erro_admin_log` (
 --
 
 CREATE TABLE IF NOT EXISTS `erro_ban` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `bantime` datetime NOT NULL,
   `server_ip` varchar(32) NOT NULL,
   `server_port` varchar(32) NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `erro_ban` (
   `unbanned_ckey` varchar(32) DEFAULT NULL,
   `unbanned_ip` varchar(32) DEFAULT NULL,
   `unbanned_computerid` varchar(32) DEFAULT NULL,
-  `unbanned_round_id` INT(11) DEFAULT NULL,
+  `unbanned_round_id` INT(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

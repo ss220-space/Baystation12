@@ -1,1 +1,1 @@
-UPDATE erro_ban SET job="Robot" WHERE job="Cyborg";
+UPDATE erro_ban SET role="Robot" WHERE role="Cyborg";
