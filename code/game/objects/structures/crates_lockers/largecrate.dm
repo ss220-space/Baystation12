@@ -36,6 +36,8 @@
 /obj/structure/largecrate/mule
 	name = "MULE crate"
 
+/obj/structure/largecrate/ammo_crate
+	icon_state = "ammo_crate"
 /obj/structure/largecrate/animal
 	icon_state = "mulecrate"
 	var/held_count = 1

@@ -65,6 +65,10 @@
 	atags["ZPCI tag"] = /obj/item/clothing/accessory/armor/tag/zpci
 	gear_tweaks += new/datum/gear_tweak/path(atags)
 
+/datum/gear/tactical/press_tag
+	display_name = "Press tag"
+	path = /obj/item/clothing/accessory/armor/tag/press
+
 /datum/gear/tactical/pcarrier
 	display_name = "empty plate carriers selection"
 	path = /obj/item/clothing/suit/armor/pcarrier

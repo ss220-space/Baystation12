@@ -758,6 +758,18 @@
 	worn_state = "kimono"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 
+/obj/item/clothing/under/taj_old_uniform
+	desc = "A loose-fitting uniform with lots of pockets made of canvas or similar material, very comfortable. Widely used by tajaran revolutionaries during slave's uprising, remained as favored uniform for a short period of time after the uprising and now just a reminder of dark age or a reason for pride. There is a tailhole on the back of the pants!"
+	name = "vintage uniform"
+	icon_state = "taj_old_uniform"
+	item_state = "taj_old_uniform"
+
+/obj/item/clothing/under/taj_new_fatigues
+	desc = "A tight-fitting union suit made of modern synthetic materials and features CCA markings, sleek. This uniform is one of the numerous variants, but the layout is somewhat similar. This one is provided by CCA Armed Forces for numerous PMC's when they sent over CCA control. There is a tailhole on the back of the pants!"
+	name = "CCA fatigues"
+	icon_state = "taj_new_fatigues"
+	item_state = "taj_new_fatigues"
+
 /obj/item/clothing/under/inf
 	name = "antiquated skirt"
 	desc = "Some really old fashioned skirt. Presumably a piece of Avalonian craftsmanship."

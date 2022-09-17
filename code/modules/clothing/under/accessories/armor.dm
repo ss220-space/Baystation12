@@ -350,8 +350,8 @@
 	w_class = ITEM_SIZE_TINY
 
 /obj/item/clothing/accessory/armor/tag/nt
-	name = "\improper CORPORATE SECURITY tag"
-	desc = "An armor tag with the words CORPORATE SECURITY printed in bottle green lettering on it."
+	name = "\improper NANOTRASEN tag"
+	desc = "An armor tag with the word NANOTRASEN printed in green lettering on it and an accompanying company logo."
 	icon_state = "nanotag"
 
 /obj/item/clothing/accessory/armor/tag/pcrc

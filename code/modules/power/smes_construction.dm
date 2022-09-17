@@ -22,6 +22,7 @@
 /obj/item/stock_parts/smes_coil/weak
 	name = "basic superconductive magnetic coil"
 	desc = "Cheaper model of standard superconductive magnetic coil. It's capacity and I/O rating are considerably lower."
+	icon_state = "smes_coil_weak"
 	ChargeCapacity = 10 KILOWATTS
 	IOCapacity = 150 KILOWATTS
 
@@ -29,6 +30,7 @@
 /obj/item/stock_parts/smes_coil/super_capacity
 	name = "superconductive capacitance coil"
 	desc = "Specialised version of standard superconductive magnetic coil. This one has significantly stronger containment field, allowing for significantly larger power storage. It's IO rating is much lower, however."
+	icon_state = "smes_coil_capacitance"
 	ChargeCapacity = 250 KILOWATTS
 	IOCapacity = 100 KILOWATTS
 
@@ -36,6 +38,7 @@
 /obj/item/stock_parts/smes_coil/super_io
 	name = "superconductive transmission coil"
 	desc = "Specialised version of standard superconductive magnetic coil. While this one won't store almost any power, it rapidly transfers power, making it useful in systems which require large throughput."
+	icon_state = "smes_coil_transmission"
 	ChargeCapacity = 20 KILOWATTS
 	IOCapacity = 1.25 MEGAWATTS
 
@@ -43,6 +46,7 @@
 /obj/item/stock_parts/smes_coil/advanced
 	name = "advanced magnetic coil"
 	desc = " An advanced magnetic coil made from rare materials. Can store and transfer more power than any previous designs."
+	icon_state = "smes_coil_transmission"
 	ChargeCapacity = 500 KILOWATTS
 	IOCapacity = 2.5 MEGAWATTS
 

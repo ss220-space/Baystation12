@@ -19,7 +19,7 @@
 
 /obj/structure/ship_munition/md_slug
 	name = "mass driver slug"
-	icon_state = "slug"
+	icon_state = "ammunition1"
 
 /obj/structure/ship_munition/ap_slug
 	name = "armor piercing mass driver slug"

@@ -1,6 +1,6 @@
 /decl/hierarchy/supply_pack/munition
 	name = "Ship Munitions"
-	containertype = /obj/structure/largecrate
+	containertype = /obj/structure/largecrate/ammo_crate
 	containername = "mass driver munition crate"
 
 /decl/hierarchy/supply_pack/munition/md_slug
@@ -10,6 +10,7 @@
 
 /decl/hierarchy/supply_pack/munition/ap_slug
 	name = "Ammo - Armor Piercing Mass Driver Slug"
+	containertype = /obj/structure/largecrate
 	contains = list(/obj/structure/ship_munition/ap_slug)
 	cost = 60
 
