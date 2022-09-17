@@ -77,14 +77,11 @@
 
 	use_power_oneoff(100)
 
-	var/items_moved = 0
 	var/new_movables = loc.contents - affecting - src
-	var/still_stuff_to_move = FALSE
 
 	for(var/atom/movable/AM in new_movables)
 		if(AM.anchored)
 			continue
-		still_stuff_to_move = TRUE
 
 		affecting.Add(AM)
 		addtimer(CALLBACK(src, .proc/post_process, AM), slow_factor)
@@ -113,8 +110,9 @@
 			if(dir & (dir-1))
 			{
 				var/obj/item/conveyor_construct/D = new/obj/item/conveyor_construct(src.loc)
+				D.id = id
+				transfer_fingerprints_to(D)
 			}
-
 			C.id = id
 			transfer_fingerprints_to(C)
 		to_chat(user, "<span class='notice'>You remove the conveyor belt.</span>")
