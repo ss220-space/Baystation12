@@ -3203,6 +3203,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/techfloor,
+/obj/effect/shuttle_landmark/reaper/dock,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/thirddeck/fore)
 "fK" = (

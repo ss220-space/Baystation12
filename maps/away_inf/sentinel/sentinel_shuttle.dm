@@ -1,6 +1,7 @@
 /datum/shuttle/autodock/overmap/reaper
 	name = "Reaper Gunboat"
 	warmup_time = 15
+	dock_target = "albatross_shuttle"
 	current_location = "nav_hangar_reaper"
 	range = 2
 	shuttle_area = /area/ship/reaper
@@ -42,6 +43,10 @@
 	name = "Docking Port"
 	landmark_tag = "nav_hangar_reaperalt"
 
+/obj/effect/shuttle_landmark/reaper/dock
+	name = "NSV Sierra Dock"
+	landmark_tag = "nav_reaper_dock"
+	docking_controller = "nuke_shuttle_dock_airlock"
 
 	////////
 	//TAGS//

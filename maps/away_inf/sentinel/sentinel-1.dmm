@@ -19,34 +19,16 @@
 /obj/structure/sign/fifthfleet,
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/dock)
-"ah" = (
-/obj/effect/floor_decal/industrial/warning/half,
-/obj/machinery/door/airlock/external{
-	frequency = 1332;
-	icon_state = "door_locked";
-	id_tag = "patrol_dock_outer";
-	locked = 1;
-	name = "Docking Port Airlock"
-	},
-/obj/machinery/door/blast/regular{
-	id_tag = "patrol_main_airlock_blast";
-	name = "Protective Blast Doors"
-	},
-/turf/simulated/floor,
-/area/ship/patrol/dock)
 "ai" = (
 /obj/effect/floor_decal/industrial/warning/half,
-/obj/machinery/door/airlock/external{
-	frequency = 1332;
-	icon_state = "door_locked";
-	id_tag = "patrol_dock_outer";
-	locked = 1;
-	name = "Docking Port Airlock"
-	},
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/blast/regular{
 	id_tag = "patrol_main_airlock_blast";
 	name = "Protective Blast Doors"
+	},
+/obj/machinery/door/airlock/external/bolted/cycling{
+	name = "Docking Port Airlock";
+	id_tag = "patrol_dock_airlock_outer"
 	},
 /turf/simulated/floor,
 /area/ship/patrol/dock)
@@ -79,10 +61,10 @@
 	dir = 5;
 	icon_state = "warning"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	id_tag = "patrol_dock_pump"
-	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "patrol_dock_airlock_pump"
+	},
 /turf/simulated/floor,
 /area/ship/patrol/dock)
 "ao" = (
@@ -103,15 +85,14 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	display_name = "Port Patrol Dock";
-	frequency = 1332;
 	id_tag = "patrol_dock_airlock";
 	pixel_x = 1;
 	pixel_y = -5;
 	req_access = list("ACCESS_CAVALRY");
-	tag_airpump = "patrol_dock_pump";
-	tag_chamber_sensor = "patrol_dock_sensor";
-	tag_exterior_door = "patrol_dock_outer";
-	tag_interior_door = "patrol_dock_inner"
+	tag_chamber_sensor = "patrol_dock_airlock_sensor";
+	tag_exterior_door = "patrol_dock_airlock_outer";
+	tag_interior_door = "patrol_dock_airlock_inner";
+	tag_airpump = "patrol_dock_airlock_pump"
 	},
 /obj/structure/sign/double/solgovflag/left{
 	dir = 8;
@@ -136,15 +117,15 @@
 	icon_state = "warning"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1332;
-	id_tag = "patrol_dock_sensor";
-	pixel_x = -24
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = "patrol_dock_pump"
+	id_tag = "patrol_dock_airlock_sensor";
+	pixel_x = -24;
+	master_tag = "patrol_dock_airlock"
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "patrol_dock_airlock_pump";
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/ship/patrol/dock)
 "as" = (
@@ -432,25 +413,19 @@
 /area/ship/patrol/crew/cargo)
 "aO" = (
 /obj/effect/floor_decal/industrial/warning/half,
-/obj/machinery/door/airlock/external{
-	frequency = 1332;
-	icon_state = "door_locked";
-	id_tag = "patrol_dock_inner";
-	locked = 1;
-	name = "Docking Port Airlock"
+/obj/machinery/door/airlock/external/bolted/cycling{
+	name = "Docking Port Airlock";
+	id_tag = "patrol_dock_airlock_inner"
 	},
 /turf/simulated/floor,
 /area/ship/patrol/dock)
 "aP" = (
 /obj/effect/floor_decal/industrial/warning/half,
-/obj/machinery/door/airlock/external{
-	frequency = 1332;
-	icon_state = "door_locked";
-	id_tag = "patrol_dock_inner";
-	locked = 1;
-	name = "Docking Port Airlock"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/airlock/external/bolted/cycling{
+	name = "Docking Port Airlock";
+	id_tag = "patrol_dock_airlock_inner"
+	},
 /turf/simulated/floor,
 /area/ship/patrol/dock)
 "aQ" = (
@@ -620,15 +595,6 @@
 /turf/simulated/wall,
 /area/ship/patrol/dock)
 "bk" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1332;
-	master_tag = "patrol_dock_airlock";
-	name = "interior access button";
-	pixel_x = -24;
-	pixel_y = 24;
-	req_access = list(list(13,80))
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -1064,6 +1030,7 @@
 	dir = 8;
 	icon_state = "bulb1"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/engine/starboard)
 "ch" = (
@@ -1353,14 +1320,14 @@
 /area/ship/patrol/maintenance/atmos)
 "cG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4
-	},
 /obj/structure/catwalk,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
@@ -1369,10 +1336,6 @@
 	name = "Atmospherics"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	name = "Scrubber to Waste"
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1380,24 +1343,29 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/atmos)
 "cI" = (
 /obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/manifold/visible/red,
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cJ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10
-	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cK" = (
@@ -1406,6 +1374,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cL" = (
@@ -1413,20 +1384,28 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cM" = (
-/obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 6
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cO" = (
@@ -1439,12 +1418,18 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/atmos)
 "cP" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/engine/starboard)
@@ -1851,13 +1836,11 @@
 /area/ship/patrol/maintenance/atmos)
 "dq" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dr" = (
@@ -2240,6 +2223,7 @@
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/structure/catwalk,
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "el" = (
@@ -3450,9 +3434,6 @@
 /area/ship/reaper)
 "gB" = (
 /obj/item/bodybag/cryobag,
-/obj/structure/closet/medical_wall/filled{
-	pixel_x = 26
-	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
@@ -3573,7 +3554,7 @@
 /area/ship/patrol/crew/hallway/lower/aft)
 "gM" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/walllocker/firecloset,
+/obj/structure/closet/hydrant,
 /turf/simulated/floor/tiled,
 /area/ship/patrol/crew/hallway/lower/aft)
 "gN" = (
@@ -4622,9 +4603,6 @@
 /area/ship/reaper)
 "iB" = (
 /obj/structure/handrail,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	id_tag = "patrol_shuttle_pump"
-	},
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = -22
@@ -4633,29 +4611,26 @@
 	pixel_y = 32
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "patrol_shuttle_pump"
+	},
 /turf/simulated/floor/plating,
 /area/ship/reaper)
 "iC" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1337;
+	frequency = 1380;
 	id_tag = "patrol_shuttle_sensor";
 	pixel_x = 27;
 	pixel_y = 6
-	},
-/obj/machinery/access_button/airlock_exterior{
-	frequency = 1337;
-	master_tag = "albatross_shuttle";
-	pixel_x = 25;
-	pixel_y = -5
 	},
 /obj/structure/handrail,
 /obj/machinery/oxygen_pump{
 	pixel_y = 32
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	id_tag = "patrol_shuttle_pump"
 	},
-/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/ship/reaper)
 "iD" = (
@@ -4887,7 +4862,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1337;
+	frequency = 1380;
 	master_tag = "albatross_shuttle";
 	pixel_x = 24;
 	pixel_y = -24
@@ -4905,7 +4880,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1337;
+	frequency = 1380;
 	id_tag = "patrol_shuttle_inner";
 	name = "Reaper External Access"
 	},
@@ -4933,7 +4908,7 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 1;
-	frequency = 1337;
+	frequency = 1380;
 	id_tag = "albatross_shuttle";
 	pixel_y = -24;
 	req_access = list("ACCESS_CAVALRY");
@@ -4941,6 +4916,9 @@
 	tag_chamber_sensor = "patrol_shuttle_sensor";
 	tag_exterior_door = "patrol_shuttle_outer";
 	tag_interior_door = "patrol_shuttle_inner"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/reaper)
@@ -4951,7 +4929,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1337;
+	frequency = 1380;
 	id_tag = "patrol_shuttle_outer";
 	name = "Reaper External Access"
 	},
@@ -4960,6 +4938,12 @@
 	dir = 4;
 	id_tag = "reaper_rear_hatch_lock";
 	name = "Reaper Rear Hatch"
+	},
+/obj/machinery/access_button/airlock_exterior{
+	frequency = 1380;
+	master_tag = "albatross_shuttle";
+	pixel_x = 6;
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/reaper)
@@ -8538,6 +8522,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 9
+	},
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/engine/starboard)
 "uh" = (
@@ -8781,6 +8768,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
+"DW" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/unary/outlet_injector{
+	use_power = 1;
+	icon_state = "map_injector"
+	},
+/turf/simulated/floor/plating,
+/area/ship/patrol/maintenance/engine/starboard)
 "DY" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -8919,6 +8914,13 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/command/eva)
+"KF" = (
+/obj/effect/paint/meatstation/lab,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6
+	},
+/turf/simulated/wall/r_wall,
+/area/ship/patrol/maintenance/engine/starboard)
 "KP" = (
 /obj/effect/paint/meatstation/lab,
 /obj/structure/cable{
@@ -8973,6 +8975,15 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
+"MR" = (
+/obj/effect/paint/dark_gunmetal,
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 1;
+	target_pressure = 15000;
+	name = "Waste to Space"
+	},
+/turf/simulated/wall/r_wall,
+/area/ship/patrol/maintenance/engine/starboard)
 "Ne" = (
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/r_wall,
@@ -9078,6 +9089,9 @@
 	dir = 9
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "QH" = (
@@ -9298,6 +9312,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/patrol/crew/hallway/lower/starboard)
+"XC" = (
+/obj/effect/paint/dark_gunmetal,
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/turf/simulated/wall/r_wall,
+/area/ship/patrol/maintenance/engine/starboard)
 "XG" = (
 /obj/effect/floor_decal/corner/pink{
 	dir = 9
@@ -16886,7 +16905,7 @@ aa
 aa
 aa
 aa
-ah
+ai
 am
 ar
 aO
@@ -19449,10 +19468,10 @@ aa
 aa
 aa
 ak
-ak
-AU
-AU
-AU
+KF
+XC
+XC
+MR
 cg
 cP
 dx
@@ -19570,7 +19589,7 @@ aa
 aa
 aa
 aa
-PF
+DW
 tS
 KP
 PD
