@@ -436,6 +436,7 @@
 	},
 /obj/machinery/meter,
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aT" = (
@@ -480,12 +481,14 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/meter,
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aZ" = (
 /obj/machinery/meter,
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "ba" = (
@@ -497,10 +500,12 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bc" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bd" = (
@@ -514,6 +519,7 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bf" = (
@@ -644,6 +650,7 @@
 	},
 /obj/machinery/meter,
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bq" = (
