@@ -14,9 +14,9 @@
 	var/forwards		// this is the default (forward) direction, set by the map dir
 	var/backwards		// hopefully self-explanatory
 	var/movedir			// the actual direction to move stuff in
-
 	var/id = ""			// the control ID	- must match controller ID
-
+	var/slow_factor = 5 	// How slow the items move on the conveyor. MUST be >=1
+	var/list/affecting = list()
 /obj/machinery/conveyor/centcom_auto
 	id = "round_end_belt"
 
@@ -61,44 +61,58 @@
 	// machine process
 	// move items to the target location
 /obj/machinery/conveyor/Process()
+	if(!operating && speed_process)
+	{
+		makeNormalProcess()
+	}
+	else if(operating && !speed_process)
+	{
+		makeSpeedProcess()
+	}
+
 	if(stat & (BROKEN | NOPOWER))
 		return
 	if(!operating)
 		return
+
 	use_power_oneoff(100)
 
-	/**
-	 * the list of all items that will be moved this ptick
-	 * moved items will be all in loc
-	 */
-	var/list/affecting = list()
+	var/new_movables = loc.contents - affecting - src
 
-	var/items_moved = 0
-	for(var/thing in loc)
-		if(thing == src)
+	for(var/atom/movable/AM in new_movables)
+		if(AM.anchored)
 			continue
-		if(items_moved >= 10)
-			break
-		var/atom/movable/AM = thing
-		if(!AM.anchored && AM.simulated)
-			affecting += AM
-			items_moved++
-	if(affecting.len)
-		addtimer(CALLBACK(src, .proc/post_process, affecting), 1) // slight delay to prevent infinite propagation due to map order
 
-/obj/machinery/conveyor/proc/post_process(list/affecting)
-	for(var/A in affecting)
-		if(TICK_CHECK)
-			break
-		var/atom/movable/AM = A
-		if(AM.loc == src.loc) // prevents the object from being affected if it's not currently here.
-			step(A,movedir)
+		affecting.Add(AM)
+		addtimer(CALLBACK(src, .proc/post_process, AM), slow_factor)
+		CHECK_TICK
+
+/obj/machinery/conveyor/proc/post_process(atom/movable/AM)
+	affecting.Remove(AM)
+	if(AM.anchored)
+		return
+	if(AM.loc != src.loc)
+		return
+
+	var/move_time = 0
+	if (slow_factor>1) // yes, 1 is special
+		move_time=CEILING(slow_factor, 2) // yes.
+
+	var/gl_size = world.icon_size/max(DS2TICKS(move_time), 1)
+	step_glide(AM, movedir, gl_size)
+	//step(AM,movedir)
 
 // attack with item, place item on conveyor
 /obj/machinery/conveyor/attackby(var/obj/item/I, mob/user)
 	if(isCrowbar(I))
 		if(!(stat & BROKEN))
 			var/obj/item/conveyor_construct/C = new/obj/item/conveyor_construct(src.loc)
+			if(dir & (dir-1))
+			{
+				var/obj/item/conveyor_construct/D = new/obj/item/conveyor_construct(src.loc)
+				D.id = id
+				transfer_fingerprints_to(D)
+			}
 			C.id = id
 			transfer_fingerprints_to(C)
 		to_chat(user, "<span class='notice'>You remove the conveyor belt.</span>")

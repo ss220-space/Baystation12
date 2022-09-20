@@ -60,7 +60,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes = 10, /obj/item/storage/box/matches = 10, /obj/item/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
+	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/syndicate_mothership/raider_base)
@@ -122,6 +122,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/device/flash,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/syndicate_mothership/raider_base)
 "at" = (
@@ -309,6 +310,7 @@
 /area/map_template/syndicate_mothership/raider_base)
 "aW" = (
 /obj/machinery/mech_recharger,
+/obj/item/robot_parts/head,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/syndicate_mothership/raider_base)
 "aX" = (
@@ -530,6 +532,7 @@
 /obj/structure/hygiene/shower{
 	dir = 1
 	},
+/obj/item/robot_parts/r_arm,
 /turf/simulated/floor/tiled/freezer,
 /area/map_template/syndicate_mothership/raider_base)
 "bE" = (
@@ -777,6 +780,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/robot_parts/l_leg,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/syndicate_mothership/raider_base)
 "cm" = (
@@ -864,6 +868,7 @@
 	dir = 8;
 	icon_state = "bulb_map"
 	},
+/obj/item/robot_parts/l_arm,
 /turf/simulated/floor/wood/walnut,
 /area/map_template/syndicate_mothership/raider_base)
 "cC" = (
@@ -899,6 +904,7 @@
 /area/map_template/syndicate_mothership/raider_base)
 "cG" = (
 /obj/machinery/light/small,
+/obj/item/device/flash,
 /turf/simulated/floor/asteroid/aired,
 /area/map_template/syndicate_mothership/raider_base)
 "cH" = (
@@ -1288,8 +1294,6 @@
 "dE" = (
 /obj/structure/table/rack,
 /obj/item/melee/energy/sword/pirate,
-/obj/item/clothing/suit/space/pirate,
-/obj/item/clothing/suit/space/pirate,
 /obj/item/tank/oxygen,
 /obj/item/clothing/shoes/magboots,
 /obj/random/voidsuit,
@@ -1304,8 +1308,6 @@
 "dF" = (
 /obj/structure/table/rack,
 /obj/item/melee/energy/sword/pirate,
-/obj/item/clothing/suit/space/pirate,
-/obj/item/clothing/suit/space/pirate,
 /obj/item/tank/oxygen,
 /obj/item/clothing/shoes/magboots,
 /obj/random/voidsuit,
@@ -1668,11 +1670,9 @@
 /turf/simulated/floor/shuttle/white,
 /area/map_template/skipjack_station/start)
 "eB" = (
-/obj/structure/closet/medical_wall/filled{
-	pixel_x = 28
-	},
-/turf/simulated/floor/shuttle/white,
-/area/map_template/skipjack_station/start)
+/obj/item/robot_parts/robot_suit,
+/turf/simulated/floor/asteroid/aired,
+/area/map_template/syndicate_mothership/raider_base)
 "eC" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/glass/bottle/stoxin,
@@ -1833,6 +1833,22 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/shuttle/black,
 /area/map_template/skipjack_station/start)
+"fA" = (
+/obj/item/cell/high,
+/turf/simulated/floor/asteroid/aired,
+/area/map_template/syndicate_mothership/raider_base)
+"hb" = (
+/obj/item/device/mmi,
+/turf/simulated/floor/asteroid/aired,
+/area/map_template/syndicate_mothership/raider_base)
+"hS" = (
+/obj/item/robot_parts/r_leg,
+/turf/simulated/floor/asteroid/aired,
+/area/map_template/syndicate_mothership/raider_base)
+"BH" = (
+/obj/item/robot_parts/chest,
+/turf/simulated/floor/plating,
+/area/map_template/syndicate_mothership/raider_base)
 
 (1,1,1) = {"
 aa
@@ -2865,7 +2881,7 @@ ab
 ab
 ab
 ab
-ap
+fA
 ap
 aY
 ap
@@ -2935,7 +2951,7 @@ ab
 ab
 ab
 ab
-ap
+hS
 ap
 aq
 aq
@@ -3086,10 +3102,10 @@ ab
 aq
 ap
 ab
-ap
+hb
 aY
 ap
-ap
+eB
 ab
 ab
 ab
@@ -4904,7 +4920,7 @@ dR
 dX
 dX
 en
-eB
+eF
 eG
 eF
 eP
@@ -5171,7 +5187,7 @@ ab
 ab
 ac
 aX
-bl
+BH
 bx
 bk
 bl

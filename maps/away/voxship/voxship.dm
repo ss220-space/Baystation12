@@ -11,10 +11,10 @@
 	description = "Vox Scavenger Ship."
 	suffixes = list("voxship/voxship-2.dmm")
 	spawn_cost = 0.5
-	player_cost = 5 // INF, было player_cost = 4 | Нынешнее значение основано на количестве игроков в авейке ~bear1ake
+	player_cost = 4 // INF, было player_cost = 4 | Нынешнее значение основано на количестве игроков в авейке ~bear1ake
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/vox_ship, /datum/shuttle/autodock/overmap/vox_lander)
 	area_usage_test_exempted_root_areas = list(/area/voxship)
-	spawn_weight = 1 // INF, было spawn_weight = 0.67
+	spawn_weight = 1.3 // INF, было spawn_weight = 0.67
 
 /obj/effect/overmap/visitable/sector/vox_scav_ship
 	name = "small asteroid cluster"
