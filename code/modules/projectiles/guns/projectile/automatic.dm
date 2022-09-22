@@ -467,3 +467,105 @@
 	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=2,      one_hand_penalty=8, burst_accuracy=null, dispersion=null)
 		)
+
+/obj/item/gun/projectile/automatic/akrifle
+	name = "\improper SkM-44(k)"
+	desc = "An obsolete assault rifle seized from some frontier armory and extensively modified to ICCG standards. Chambered in 7.62x39mm.."
+	icon = 'icons/obj/guns/48x32guns.dmi'
+	icon_state = "ak12"
+	item_state = null
+	force = 10
+	caliber = CALIBER_RIFLE
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/rifle/ak
+	allowed_magazines = /obj/item/ammo_magazine/rifle/ak
+	wielded_item_state = "ak12-wielded"
+	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
+	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
+
+	//Assault rifle, burst fire degrades quicker than SMG, worse one-handing penalty, slightly increased move delay
+	firemodes = list(
+		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=8,  burst_accuracy=null,                dispersion=null),
+		list(mode_name="2-round bursts", burst=2,    fire_delay=null, one_hand_penalty=9,  burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="full auto",      burst=1,    fire_delay=2,    burst_delay=1.3,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(0.9, 1.2, 1.4, 1.6, 1.8), autofire_enabled=1)
+		)
+
+
+/obj/item/gun/projectile/automatic/akrifle/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "ak12"
+		wielded_item_state = "ak12-wielded"
+	else
+		icon_state = "ak12-empty"
+		wielded_item_state = "ak12-wielded-empty"
+
+
+/obj/item/gun/projectile/automatic/aksu
+	name = "\improper SkM-44(u)"
+	desc = "A cheap redesign of an already cheap rifle. Supplied without folding stock for easy storage, accuracy of this modification is rather questionable"
+	icon = 'icons/obj/guns/48x32guns.dmi'
+	icon_state = "aks"
+	item_state = null
+	force = 10
+	caliber = CALIBER_RIFLE
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/rifle/ak
+	allowed_magazines = /obj/item/ammo_magazine/rifle/ak
+	wielded_item_state = "aksu-wielded"
+	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
+	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
+
+	//Assault rifle, burst fire degrades quicker than SMG, worse one-handing penalty, slightly increased move delay
+	firemodes = list(
+		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=8,  burst_accuracy=null,                dispersion=null),
+		list(mode_name="2-round bursts", burst=2,    fire_delay=null, one_hand_penalty=9,  burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="full auto",      burst=1,    fire_delay=1.7,    burst_delay=1.3,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(1.3, 1.5, 1.7, 1.9, 2.2), autofire_enabled=1)
+		)
+
+/obj/item/gun/projectile/automatic/aksu/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "aks"
+		wielded_item_state = "aks-wielded"
+	else
+		icon_state = "aks-empty"
+		wielded_item_state = "aks-wielded-empty"
+
+
+/obj/item/gun/projectile/automatic/aks74u
+	name = "\improper SkM-34(u)"
+	desc = "An obsolete model of the SkM-44(u). Supplied without folding buttstock for easy storage, the forend is made of bakelite."
+	icon = 'icons/obj/guns/48x32guns.dmi'
+	icon_state = "aks74u"
+	item_state = null
+	force = 10
+	caliber = CALIBER_RIFLE
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/rifle/ak
+	allowed_magazines = /obj/item/ammo_magazine/rifle/ak
+	wielded_item_state = "ak12-wielded"
+	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
+	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
+
+	//Assault rifle, burst fire degrades quicker than SMG, worse one-handing penalty, slightly increased move delay
+	firemodes = list(
+		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=8,  burst_accuracy=null,                dispersion=null),
+		list(mode_name="2-round bursts", burst=2,    fire_delay=null, one_hand_penalty=9,  burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="full auto",      burst=1,    fire_delay=1.7,    burst_delay=1.3,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(1.3, 1.5, 1.7, 1.9, 2.2), autofire_enabled=1)
+		)
+
+/obj/item/gun/projectile/automatic/aks74u/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "aks74u"
+		wielded_item_state = "aks74u-wielded"
+	else
+		icon_state = "aks74u-empty"
+		wielded_item_state = "aks74u-wielded-empty"

@@ -55,15 +55,14 @@
 	w_class = ITEM_SIZE_HUGE
 	throw_speed = 2
 	throw_range = 10
-	scope_zoom = 1.3
 	force = 5
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
-	slot_flags = SLOT_BACK
+	slot_flags = 0
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 5)
 	fire_sound = 'sound/effects/bang.ogg'
 	combustion = 1
 
-	release_force = 1.5
+	release_force = 5
 	throw_distance = 20
 	max_rockets = 1
 
