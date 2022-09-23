@@ -5,7 +5,7 @@
 	sort_category = "Xenowear"
 	flags = GEAR_HAS_COLOR_SELECTION
 
-/datum/gear/uniform/tajara/taj_old_uniform
+/datum/gear/uniform/tajara
 	display_name = "(Tajara) vintage uniform"
 	path = /obj/item/clothing/under/taj_old_uniform
 	whitelisted = list(SPECIES_TAJARA)
@@ -14,16 +14,12 @@
 /datum/gear/uniform/tajara/taj_new_fatigues
 	display_name = "(Tajara) CCA fatigues"
 	path = /obj/item/clothing/under/taj_new_fatigues
-	whitelisted = list(SPECIES_TAJARA)
-	sort_category = "Xenowear"
 
-/datum/gear/suit/tajara/taj_overcoat
+/datum/gear/suit/tajara
 	display_name = "(Tajara) vintage tajaran overcoat"
 	path = /obj/item/clothing/suit/storage/taj_overcoat
-	whitelisted = list(SPECIES_TAJARA)
-	sort_category = "Xenowear"
 
-/datum/gear/shoes/tajara/taj_old_shoes
+/datum/gear/shoes/tajara
 	display_name = "(Tajara) vintage boots"
 	path = /obj/item/clothing/shoes/taj_old_shoes
 	whitelisted = list(SPECIES_TAJARA)
@@ -32,20 +28,14 @@
 /datum/gear/shoes/tajara/taj_new_shoes
 	display_name = "(Tajara) military boots"
 	path = /obj/item/clothing/shoes/taj_new_shoes
-	whitelisted = list(SPECIES_TAJARA)
-	sort_category = "Xenowear"
 
 /datum/gear/shoes/tajara/taj_new_shoes_cut
 	display_name = "(Tajara) toeless military  boots"
 	path = /obj/item/clothing/shoes/taj_new_shoes_cut
-	whitelisted = list(SPECIES_TAJARA)
-	sort_category = "Xenowear"
 
 /datum/gear/shoes/tajara/taj_old_shoes_cut
 	display_name = "(Tajara) toeless vintage boots"
 	path = /obj/item/clothing/shoes/taj_old_shoes_cut
-	whitelisted = list(SPECIES_TAJARA)
-	sort_category = "Xenowear"
 
 /datum/gear/uniform/thermal
 	sort_category = "Xenowear"
