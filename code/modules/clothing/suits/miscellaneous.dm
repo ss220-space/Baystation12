@@ -571,8 +571,152 @@
 	icon_open = "zipperjacket_open"
 	icon_closed = "zipperjacket"
 
-
 /obj/item/clothing/suit/storage/pullover
 	name = "pullover sweater"
 	desc = "A sweater made of a soft material with a short zipper on the collar."
 	icon_state = "pullover"
+
+/obj/item/clothing/suit/storage/inf
+	name = "blue kimono"
+	desc = "blue kimono "
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+
+	icon_state = "blue_kimono"
+	item_state = "blue_kimono"
+	body_parts_covered = UPPER_TORSO
+	/*
+	desc = "Some really old fashioned skirt. Presumably a piece of Avalonian craftsmanship."
+	icon = 'infinity/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
+	icon_state = "antiquated_skirt"
+	item_state = "antiquated_skirt"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
+	*/
+
+/obj/item/clothing/suit/storage/inf/kimono
+	name = "kimono"
+	desc = "kimono"
+	icon_state = "kimono"
+	item_state = "kimono"
+
+/obj/item/clothing/suit/storage/inf/red_short_kimono
+	name = "red_short_kimono"
+	desc = "red_short_kimono"
+	icon_state = "red_short_kimono"
+	item_state = "red_short_kimono"
+
+/obj/item/clothing/suit/storage/inf/black_kimono
+	name = "black_kimono"
+	desc = "black_kimono"
+	icon_state = "black_kimono"
+	item_state = "black_kimono"
+
+/obj/item/clothing/suit/storage/inf/brand_jacket
+	name = "brand jacket"
+	desc = "brand jacket"
+	icon_state = "brand_jacket"
+	item_state = "brand_jacket"
+
+/obj/item/clothing/suit/storage/inf/brand_orange_jacket
+	name = "brand orange jacket"
+	desc = "brand orange jacket"
+	icon_state = "brand_orange_jacket"
+	item_state = "brand_orange_jacket"
+
+/obj/item/clothing/suit/storage/inf/brand_rjacket
+	name = "brand rjacket"
+	desc = "brand rjacket"
+	icon_state = "brand_rjacket"
+	item_state = "brand_rjacket"
+
+/obj/item/clothing/suit/storage/inf/long_coat
+	name = "long coat"
+	desc = "long coat"
+	icon_state = "long_coat"
+	item_state = "long_coat"
+
+/obj/item/clothing/suit/storage/inf/pullover
+	name = "pullover"
+	desc = "pullover"
+	icon_state = "pullover"
+	item_state = "pullover"
+
+/obj/item/clothing/suit/storage/inf/jensencoat
+	name = "jensencoat"
+	desc = "jensencoat"
+	icon_state = "jensencoat"
+	item_state = "jensencoat"
+
+/obj/item/clothing/suit/storage/inf/leon_jacket
+	name = "leon jacket"
+	desc = "leon jacket"
+	icon_state = "leon_jacket"
+	item_state = "leon_jacket"
+
+/obj/item/clothing/suit/storage/inf/gentlecoat
+	name = "gentlecoat"
+	desc = "gentlecoat"
+	icon_state = "gentlecoat"
+	item_state = "gentlecoat"
+
+/*
+/obj/item/clothing/suit/storage/inf/blackjack_jacket
+	name = "blackjack jacket"
+	desc = "blackjack jacket"
+	icon_state = "blackjack_jacket"
+	item_state = "blackjack_jacket"
+*/
+
+/*
+/obj/item/clothing/suit/storage/inf/killer_suit
+	name = "killer suit"
+	desc = "killer suit"
+	icon_state = "killer_suit"
+	item_state = "killer_suit"
+*/
+
+/obj/item/clothing/suit/storage/inf/army_overcoat
+	name = "army overcoat"
+	desc = "army overcoat"
+	icon_state = "army_overcoat"
+	item_state = "army_overcoat"
+	armor = list(
+		melee = ARMOR_MELEE_KNIVES,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_BALLISTIC_MINOR,
+		energy = ARMOR_BALLISTIC_MINOR,
+		bomb = ARMOR_BALLISTIC_MINOR,
+	)
+
+/obj/item/clothing/suit/storage/toggle/inf
+	name = "fiery jacket"
+	desc = "fiery jacket"
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+
+	icon_state = "fiery_jacket"
+	icon_open = "fiery_jacket_open"
+	icon_closed = "fiery_jacket"
+	body_parts_covered = UPPER_TORSO
+	blood_overlay_type = "suit"
+	//valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_INSIGNIA, ACCESSORY_SLOT_RANK)
+	//restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
+
+/obj/item/clothing/suit/storage/toggle/inf/white_fiery_jacket
+	name = "white_fiery_jacket"
+	desc = "white_fiery_jacket"
+	icon_state = "white_fiery_jacket"
+	icon_open = "white_fiery_jacket_open"
+	icon_closed = "white_fiery_jacket"
+
+/obj/item/clothing/suit/storage/toggle/inf/white_fiery_jacket
+	name = "white_fiery_jacket"
+	desc = "white_fiery_jacket"
+	icon_state = "white_fiery_jacket"
+	icon_open = "white_fiery_jacket_open"
+	icon_closed = "white_fiery_jacket"
+
+// blue_fiery(_t) !!
+//merser_jacket(_t) !!
