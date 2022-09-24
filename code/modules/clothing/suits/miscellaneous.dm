@@ -657,7 +657,7 @@
 
 /obj/item/clothing/suit/storage/inf/gentlecoat
 	name = "gentlecoat"
-	desc = "gentlecoat"
+	desc = "A tweed tailcoat purposed for some wannabe gentleman."
 	icon_state = "gentlecoat"
 	item_state = "gentlecoat"
 
