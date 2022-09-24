@@ -608,7 +608,7 @@
 	item_state = "red_short_kimono"
 
 /obj/item/clothing/suit/storage/inf/black_kimono
-	name = "black_kimono"
+	name = "black kimono"
 	desc = "Traditional Japanese garb, purposed for wearing by women."
 	icon_state = "black_kimono"
 	item_state = "black_kimono"
