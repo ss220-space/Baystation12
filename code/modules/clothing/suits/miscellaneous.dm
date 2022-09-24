@@ -633,7 +633,7 @@
 
 /obj/item/clothing/suit/storage/inf/long_coat
 	name = "long coat"
-	desc = "long coat"
+	desc = "Just a blank fabric black longcoat. It's surprisingly light."
 	icon_state = "long_coat"
 	item_state = "long_coat"
 
