@@ -706,7 +706,7 @@
 
 /obj/item/clothing/suit/storage/toggle/inf/white_fiery_jacket
 	name = "white_fiery_jacket"
-	desc = "white_fiery_jacket"
+	desc = "What a fiery coloration."
 	icon_state = "white_fiery_jacket"
 	icon_open = "white_fiery_jacket_open"
 	icon_closed = "white_fiery_jacket"
