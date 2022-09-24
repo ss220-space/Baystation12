@@ -705,7 +705,7 @@
 	//restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
 /obj/item/clothing/suit/storage/toggle/inf/white_fiery_jacket
-	name = "white_fiery_jacket"
+	name = "fiery jacket"
 	desc = "What a fiery coloration."
 	icon_state = "white_fiery_jacket"
 	icon_open = "white_fiery_jacket_open"
