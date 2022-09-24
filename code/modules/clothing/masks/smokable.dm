@@ -246,20 +246,6 @@
 	brand = "\improper Carcinoma Angel"
 	color = "#869286"
 
-/obj/item/clothing/mask/smokable/cigarette/yava
-	name = "dark cigarette"
-	brand = "\improper Yava"
-	color = "#869286"
-	type_butt = /obj/item/trash/cigbutt/jerichos
-	filling = list(/datum/reagent/tobacco/bad = 1.5)
-
-/obj/item/clothing/mask/smokable/cigarette/prima
-	name = "dark cigarette"
-	brand = "\improper Prima"
-	color = "#869286"
-	type_butt = /obj/item/trash/cigbutt/jerichos
-	filling = list(/datum/reagent/tobacco/bad = 1.5)
-
 /obj/item/clothing/mask/smokable/cigarette/professionals
 	name = "thin cigarette"
 	brand = "\improper Professional"

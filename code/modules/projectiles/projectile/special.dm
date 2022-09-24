@@ -184,19 +184,6 @@
 		..()
 	return
 
-/obj/item/missile/rpg
-	icon = 'icons/obj/grenade.dmi'
-	icon_state = "missile"
-	throwforce = 15
-
-/obj/item/missile/rpg/throw_impact(atom/hit_atom)
-	if(primed)
-		explosion(hit_atom, 0, 1, 4, 8)
-		qdel(src)
-	else
-		..()
-	return
-
 /obj/item/projectile/hotgas
 	name = "gas vent"
 	icon_state = null
