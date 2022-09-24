@@ -651,7 +651,7 @@
 
 /obj/item/clothing/suit/storage/inf/leon_jacket
 	name = "patterned leather jacket"
-	desc = "leon jacket"
+	desc = "A black leather jacket wit some bizarre patterns."
 	icon_state = "leon_jacket"
 	item_state = "leon_jacket"
 
