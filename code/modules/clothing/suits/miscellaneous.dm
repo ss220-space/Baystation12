@@ -645,7 +645,7 @@
 
 /obj/item/clothing/suit/storage/inf/jensencoat
 	name = "jensencoat"
-	desc = "jensencoat"
+	desc = "You may've never asked for this."
 	icon_state = "jensencoat"
 	item_state = "jensencoat"
 
