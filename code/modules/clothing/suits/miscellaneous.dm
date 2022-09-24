@@ -692,7 +692,7 @@
 
 /obj/item/clothing/suit/storage/toggle/inf
 	name = "fiery jacket"
-	desc = "fiery jacket"
+	desc = "What a fiery coloration."
 	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
 
