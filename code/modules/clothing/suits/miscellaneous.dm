@@ -577,13 +577,13 @@
 	icon_state = "pullover"
 
 /obj/item/clothing/suit/storage/inf
-	name = "blue kimono"
+	name = "kimono"
 	desc = "Traditional Japanese garb, purposed for wearing by women."
 	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
 
-	icon_state = "blue_kimono"
-	item_state = "blue_kimono"
+	icon_state = "kimono"
+	item_state = "kimono"
 	body_parts_covered = UPPER_TORSO
 	/*
 	desc = "Some really old fashioned skirt. Presumably a piece of Avalonian craftsmanship."
@@ -595,11 +595,11 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
 	*/
 
-/obj/item/clothing/suit/storage/inf/kimono
-	name = "kimono"
+/obj/item/clothing/suit/storage/inf/blue_kimono
+	name = "blue kimono"
 	desc = "Traditional Japanese garb, purposed for wearing by women."
-	icon_state = "kimono"
-	item_state = "kimono"
+	icon_state = "blue_kimono"
+	item_state = "blue_kimono"
 
 /obj/item/clothing/suit/storage/inf/red_short_kimono
 	name = "red short kimono"
@@ -637,7 +637,7 @@
 	icon_state = "long_coat"
 	item_state = "long_coat"
 
-/obj/item/clothing/suit/storage/inf/pullover
+/obj/item/clothing/suit/storage/inf/old_pullover
 	name = "pullover"
 	desc = "pullover"
 	icon_state = "pullover"
@@ -710,6 +710,3 @@
 	icon_state = "white_fiery_jacket"
 	icon_open = "white_fiery_jacket_open"
 	icon_closed = "white_fiery_jacket"
-
-// blue_fiery(_t) !!
-//merser_jacket(_t) !!

@@ -159,12 +159,70 @@
 	trenchcoats += /obj/item/clothing/suit/leathercoat
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(trenchcoats)
 
-
 /datum/gear/suit/pullover
 	display_name = "sweater, pullover"
 	path = /obj/item/clothing/suit/storage/pullover
 
-
 /datum/gear/suit/zipper
 	display_name = "sweater, zip up"
 	path = /obj/item/clothing/suit/storage/toggle/zipper
+
+/datum/gear/suit/kimono
+	display_name = "kimono selection"
+	path = /obj/item/clothing/suit/storage/inf
+
+/datum/gear/suit/kimono/New()
+	..()
+	var/kim = list()
+	kim += /obj/item/clothing/suit/storage/inf
+	kim += /obj/item/clothing/suit/storage/inf/blue_kimono
+	kim += /obj/item/clothing/suit/storage/inf/red_short_kimono
+	kim += /obj/item/clothing/suit/storage/inf/black_kimono
+	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(kim)
+
+/datum/gear/suit/brand_jacket
+	display_name = "brand jacket selection"
+	path = /obj/item/clothing/suit/storage/inf/brand_jacket
+
+/datum/gear/suit/brand_jacket/New()
+	..()
+	var/jack = list()
+	jack += /obj/item/clothing/suit/storage/inf/brand_jacket
+	jack += /obj/item/clothing/suit/storage/inf/brand_orange_jacket
+	jack += /obj/item/clothing/suit/storage/inf/brand_rjacket
+	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(jack)
+
+/datum/gear/suit/long_coat
+	display_name = "long coat"
+	path = /obj/item/clothing/suit/storage/inf/long_coat
+
+/datum/gear/suit/old_pullover
+	display_name = "old pullover sweater"
+	path = /obj/item/clothing/suit/storage/inf/old_pullover
+
+/datum/gear/suit/jensencoat
+	display_name = "short trenchcoat"
+	path = /obj/item/clothing/suit/storage/inf/jensencoat
+
+/datum/gear/suit/leon_jacket
+	display_name = "patterned leather jacket"
+	path = /obj/item/clothing/suit/storage/inf/leon_jacket
+
+/datum/gear/suit/gentlecoat
+	display_name = "gentlecoat"
+	path = /obj/item/clothing/suit/storage/inf/gentlecoat
+
+/datum/gear/suit/army_overcoat
+	display_name = "army overcoat"
+	path = /obj/item/clothing/suit/storage/inf/army_overcoat
+
+/datum/gear/suit/fiery_jacket
+	display_name = "fiery jacket selection"
+	path = /obj/item/clothing/suit/storage/toggle/inf
+
+/datum/gear/suit/fiery_jacket/New()
+	..()
+	var/fjack = list()
+	fjack += /obj/item/clothing/suit/storage/inf/brand_jacket
+	fjack += /obj/item/clothing/suit/storage/toggle/inf/white_fiery_jacket
+	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(fjack)
