@@ -620,7 +620,7 @@
 	item_state = "brand_jacket"
 
 /obj/item/clothing/suit/storage/inf/brand_orange_jacket
-	name = "brand orange jacket"
+	name = "brand jacket"
 	desc = "What a fiery coloration."
 	icon_state = "brand_orange_jacket"
 	item_state = "brand_orange_jacket"
