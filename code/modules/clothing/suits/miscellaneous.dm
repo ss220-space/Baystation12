@@ -602,7 +602,7 @@
 	item_state = "kimono"
 
 /obj/item/clothing/suit/storage/inf/red_short_kimono
-	name = "red_short_kimono"
+	name = "red short kimono"
 	desc = "red_short_kimono"
 	icon_state = "red_short_kimono"
 	item_state = "red_short_kimono"
