@@ -9,7 +9,7 @@
 	desc = "NanoTrasen Security Department detective's badge, made from gold."
 	icon_state = "marshalbadge"
 	slot_flags = SLOT_BELT | SLOT_TIE
-	slot = ACCESSORY_SLOT_MEDAL
+	slot = ACCESSORY_SLOT_INSIGNIA // ACCESSORY_SLOT_MEDAL
 	high_visibility = 1
 	var/badge_string = "Detective"
 	var/stored_name
