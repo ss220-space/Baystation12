@@ -578,7 +578,7 @@
 
 /obj/item/clothing/suit/storage/inf
 	name = "blue kimono"
-	desc = "blue kimono "
+	desc = "Traditional Japanese garb, purposed for wearing by women."
 	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
 
