@@ -650,7 +650,7 @@
 	item_state = "jensencoat"
 
 /obj/item/clothing/suit/storage/inf/leon_jacket
-	name = "leon jacket"
+	name = "patterned leather jacket"
 	desc = "leon jacket"
 	icon_state = "leon_jacket"
 	item_state = "leon_jacket"
