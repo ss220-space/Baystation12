@@ -5,7 +5,7 @@
 /area/AIsattele
 	name = "\improper AI Satellite Teleporter Room"
 	icon_state = "teleporter"
-	ambience = list('sound/ambience/ambimalf.ogg')
+	ambience = list('sound/ambience/ai/ai1.ogg')
 
 /area/constructionsite
 	name = "\improper Construction Site"
