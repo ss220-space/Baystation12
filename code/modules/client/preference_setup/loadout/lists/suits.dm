@@ -223,6 +223,6 @@
 /datum/gear/suit/fiery_jacket/New()
 	..()
 	var/fjack = list()
-	fjack += /obj/item/clothing/suit/storage/inf/brand_jacket
+	fjack += /obj/item/clothing/suit/storage/toggle/inf
 	fjack += /obj/item/clothing/suit/storage/toggle/inf/white_fiery_jacket
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(fjack)

@@ -979,8 +979,8 @@
 /obj/item/clothing/under/inf/yellowhawaiianshirt
 	name = "yellow hawaiian shirt"
 	desc = "A yellow floral shirt for a relaxing day in space."
-	icon_state = "hawaiian_orange"
-	item_state = "hawaiian_orange"
+	icon_state = "hawaiian_yellow"
+	item_state = "hawaiian_yellow"
 
 /obj/item/clothing/under/inf/bluehawaiianshirt
 	name = "blue hawaiian shirt"

@@ -614,19 +614,19 @@
 	item_state = "black_kimono"
 
 /obj/item/clothing/suit/storage/inf/brand_jacket
-	name = "brand jacket"
+	name = "blue brand jacket"
 	desc = "What a fiery coloration."
 	icon_state = "brand_jacket"
 	item_state = "brand_jacket"
 
 /obj/item/clothing/suit/storage/inf/brand_orange_jacket
-	name = "brand jacket"
+	name = "orange brand jacket"
 	desc = "What a fiery coloration."
 	icon_state = "brand_orange_jacket"
 	item_state = "brand_orange_jacket"
 
 /obj/item/clothing/suit/storage/inf/brand_rjacket
-	name = "brand jacket"
+	name = "red brand jacket"
 	desc = "What a fiery coloration."
 	icon_state = "brand_rjacket"
 	item_state = "brand_rjacket"
@@ -638,8 +638,8 @@
 	item_state = "long_coat"
 
 /obj/item/clothing/suit/storage/inf/old_pullover
-	name = "pullover"
-	desc = "pullover"
+	name = "old pullover"
+	desc = "old style pullover"
 	icon_state = "pullover"
 	item_state = "pullover"
 
@@ -701,8 +701,6 @@
 	icon_closed = "fiery_jacket"
 	body_parts_covered = UPPER_TORSO
 	blood_overlay_type = "suit"
-	//valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_INSIGNIA, ACCESSORY_SLOT_RANK)
-	//restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
 /obj/item/clothing/suit/storage/toggle/inf/white_fiery_jacket
 	name = "fiery jacket"
