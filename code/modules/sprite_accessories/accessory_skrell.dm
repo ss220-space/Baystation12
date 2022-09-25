@@ -11,64 +11,69 @@
 	gender = FEMALE
 
 /datum/sprite_accessory/hair/skr/skrell_verylong
-	name = "Skrell Male Tentacles"
+	name = "Female Very Long Tentacles"
 	icon_state = "skrell_verylong"
+	gender = FEMALE
 
 /datum/sprite_accessory/hair/skr/skrell_lbehind
-	name = "Skrell Female Tentacles"
+	name = "Female Long One Left Back Tentacles"
 	icon_state = "skrell_lbehind"
+	gender = FEMALE
 
 /datum/sprite_accessory/hair/skr/skrell_rbehind
-	name = "Skrell Female Tentacles"
+	name = "Female Long One Right Back Tentacles"
 	icon_state = "skrell_rbehind"
-
-/datum/sprite_accessory/hair/skr/skrell_rbehind
-	name = "Skrell Female Tentacles"
-	icon_state = "skrell_rbehind"
+	gender = FEMALE
 
 /datum/sprite_accessory/hair/skr/skrell_rbehind_long
-	name = "Skrell Female Tentacles"
+	name = "Female Very Long One Right Back Tentacles"
 	icon_state = "skrell_rbehind_long"
+	gender = FEMALE
 
 /datum/sprite_accessory/hair/skr/skrell_lbehind_long
-	name = "Skrell Female Tentacles"
+	name = "Female Very Long One Left Back Tentacles"
 	icon_state = "skrell_lbehind_long"
+	gender = FEMALE
 
 /datum/sprite_accessory/hair/skr/skrell_bbehind
-	name = "Skrell Female Tentacles"
+	name = "Female Long Back Tentacles"
 	icon_state = "skrell_bbehind"
-
+	gender = FEMALE
 /datum/sprite_accessory/hair/skr/skrell_bbehind_short
-	name = "Skrell Female Tentacles"
+	name = "Male Short Back Tentacles"
 	icon_state = "skrell_bbehind_short"
-
+	gender = MALE
 /datum/sprite_accessory/hair/skr/skrell_bbehind_long
-	name = "Skrell Female Tentacles"
+	name = "Female Very Long Back Tentacles"
 	icon_state = "skrell_bbehind_long"
-
+	gender = FEMALE
 /datum/sprite_accessory/hair/skr/skrell_insulted
-	name = "Skrell Female Tentacles"
+	name = "Female Long Twisted Tentacles"
 	icon_state = "skrell_insulted"
+	gender = FEMALE
 
 /datum/sprite_accessory/hair/skr/skrell_excited
-	name = "Skrell Female Tentacles"
+	name = "Female Long Wave Tentacles"
 	icon_state = "skrell_excited"
+	gender = FEMALE
 
 /datum/sprite_accessory/hair/skr/skrell_reserved
-	name = "Skrell Female Tentacles"
+	name = "Male Short Twisted Tentacles"
 	icon_state = "skrell_reserved"
+	gender = MALE
 
 /datum/sprite_accessory/hair/skr/skrell_veryshort
-	name = "Skrell Female Tentacles"
+	name = "Male Very Short Back Tentacles"
 	icon_state = "skrell_veryshort"
-
+	gender = MALE
 /datum/sprite_accessory/hair/skr/skrell_tuux
-	name = "Skrell Female Tentacles"
+	name = "Male Short Wave Back Tentacles"
 	icon_state = "skrell_tuux"
-
+	gender = MALE
 /datum/sprite_accessory/hair/skr/skrell_ltuux
-	name = "Skrell Female Tentacles"
+	name = "Male Short Wave Tentacles"
 	icon_state = "skrell_ltuux"
+	gender = MALE
 
 /datum/sprite_accessory/skin/skrell
 	name = "Default skrell skin"
