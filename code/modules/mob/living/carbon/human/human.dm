@@ -1616,6 +1616,12 @@ GLOBAL_LIST_EMPTY(compatable_genomes_owners)
 			return 1
 	return 0
 
+/mob/living/carbon/human/proc/has_codex_augment()
+	var/obj/item/organ/internal/A = internal_organs_by_name["head augment"]
+	if(A.name == "\improper Codex access chip")
+		return TRUE
+	return FALSE
+
 /mob/living/carbon/human/slip(var/slipped_on, stun_duration=8)
 	if((species.check_no_slip(src)) || (shoes && (shoes.item_flags & ITEM_FLAG_NOSLIP)))
 		return 0

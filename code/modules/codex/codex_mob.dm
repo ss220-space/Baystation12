@@ -11,7 +11,7 @@
 	return TRUE
 
 /mob/living/carbon/human/can_use_codex()
-	return TRUE //has_implant(/obj/item/implant/codex, functioning = TRUE)
+	return has_codex_augment()
 
 /mob/living/carbon/human/get_codex_value()
 	return "[lowertext(species.name)] (species)"
