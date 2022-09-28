@@ -1617,8 +1617,9 @@ GLOBAL_LIST_EMPTY(compatable_genomes_owners)
 	return 0
 
 /mob/living/carbon/human/proc/has_codex_augment()
-	var/obj/item/organ/internal/A = internal_organs_by_name["head augment"]
-	if(A.name == "\improper Codex access chip")
+	var/obj/item/organ/internal/A = internal_organs_by_name[BP_AUGMENT_HEAD]
+	var/obj/item/organ/internal/augment/fluff/head/codex_access/I = new /obj/item/organ/internal/augment/fluff/head/codex_access
+	if(A.name == I.name)
 		return TRUE
 	return FALSE
 
