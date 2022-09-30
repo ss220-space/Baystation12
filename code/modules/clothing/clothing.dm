@@ -908,7 +908,7 @@ BLIND     // can't see anything
 		if(ishuman(H))
 			bodytype = H.species.get_bodytype(H)
 
-		if(gender_icons && bodytype == SPECIES_HUMAN && H.gender == FEMALE)
+		if(gender_icons && ((bodytype == SPECIES_HUMAN) || (bodytype == SPECIES_RESOMI)) && H.gender == FEMALE)
 			. = "_f" + suffix
 
 /obj/item/clothing/under/get_icon_state(mob/user_mob, slot)
