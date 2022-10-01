@@ -6,7 +6,7 @@
 	if(!.)
 		return
 
-	var choise = input("Which lights to break?") in list("My area", "My Z-Level", "Station", "All lights")
+	var/choise = input("Which lights to break?") in list("My area", "My Z-Level", "Station", "All lights")
 	switch(choise)
 		if ("My area")
 			var/area/usr_area = get_area(user)
