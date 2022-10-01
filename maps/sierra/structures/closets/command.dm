@@ -51,17 +51,6 @@
 		/obj/item/ammo_magazine/speedloader,
 		/obj/item/storage/box/PDAs,
 		/obj/item/storage/box/ids,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/command, /obj/item/storage/backpack/satchel/com)),
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/com, /obj/item/storage/backpack/messenger/com))
-	)
-
-/obj/structure/closet/secure_closet/captains/sierra/clothing
-	name = "captain's clothing cabinet"
-	req_access = list(access_captain)
-	icon_state = "cap"
-
-/obj/structure/closet/secure_closet/captains/sierra/clothing/WillContain()
-	return list(
 		/obj/item/clothing/suit/armor/pcarrier/medium,
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/glasses/sunglasses,
@@ -77,6 +66,17 @@
 		/obj/item/clothing/under/dress/dress_cap,
 		/obj/item/clothing/under/captainformal,
 		/obj/item/clothing/head/beret/infinity/captain,
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/command, /obj/item/storage/backpack/satchel/com)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/com, /obj/item/storage/backpack/messenger/com))
+	)
+
+/obj/structure/closet/secure_closet/captains/sierra/clothing
+	name = "captain's clothing cabinet"
+	req_access = list(access_captain)
+	icon_state = "cap"
+
+/obj/structure/closet/secure_closet/captains/sierra/clothing/WillContain()
+	return list(
 		/obj/item/clothing/under/suit_jacket/charcoal,
 		/obj/item/clothing/under/suit_jacket/navy,
 		/obj/item/clothing/under/suit_jacket/burgundy,
