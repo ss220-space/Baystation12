@@ -215,6 +215,9 @@
 	if(emp_hardened)
 		return
 	failure_timer = max(failure_timer, round(duration))
+	update()
+	queue_icon_update()
+	force_update_channels()
 	if(needs_powerdown_sound == TRUE) //INF
 		playsound(src, 'sound/machines/apc_nopower.ogg', 75, 0)
 	update()
