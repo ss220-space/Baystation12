@@ -16823,7 +16823,9 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/gym)
 "aDp" = (
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
+	id = "cafe"
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/center)
@@ -18037,7 +18039,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
+	id = "cafe"
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/center)
@@ -37183,6 +37187,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/shield/seconddeck)
+"lpQ" = (
+/obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
+	id = "cafe"
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cafe)
 "lts" = (
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 8
@@ -39327,7 +39338,9 @@
 /area/hallway/primary/seconddeck/center)
 "rbS" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
+	id = "cafe"
+	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
@@ -59542,7 +59555,7 @@ iaX
 wUs
 rDu
 fOz
-mXt
+lpQ
 qCi
 acJ
 lST
@@ -59744,7 +59757,7 @@ arm
 bat
 qTT
 tlF
-mXt
+lpQ
 avm
 aIa
 avK
