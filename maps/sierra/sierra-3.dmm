@@ -9275,9 +9275,7 @@
 	pixel_x = -24
 	},
 /obj/effect/floor_decal/corner/darkblue/mono,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/adjutants)
 "apv" = (
@@ -40285,6 +40283,20 @@
 /obj/machinery/light/spot,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/dungeon_master_lounge)
+"mxM" = (
+/obj/structure/closet/secure_closet/adjutant,
+/obj/item/modular_computer/tablet/lease/preset/command,
+/obj/item/device/flash,
+/obj/item/device/flashlight,
+/obj/item/storage/secure/safe{
+	pixel_x = -24
+	},
+/obj/effect/floor_decal/corner/darkblue/mono,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/adjutants)
 "mAz" = (
 /obj/machinery/light{
 	dir = 4
@@ -42968,18 +42980,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
-"uYv" = (
-/obj/structure/closet/secure_closet/adjutant,
-/obj/item/modular_computer/tablet/lease/preset/command,
-/obj/item/device/flash,
-/obj/item/device/flashlight,
-/obj/item/storage/secure/safe{
-	pixel_x = -24
-	},
-/obj/effect/floor_decal/corner/darkblue/mono,
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/dark,
-/area/bridge/adjutants)
 "vaj" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/table/standard,
@@ -49008,9 +49008,9 @@ aiw
 aiw
 amN
 akJ
-apu
+mxM
 apw
-uYv
+apu
 akJ
 aKy
 aKy
