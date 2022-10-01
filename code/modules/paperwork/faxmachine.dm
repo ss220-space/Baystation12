@@ -64,20 +64,18 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 /obj/machinery/photocopier/faxmachine/interact(mob/user)
 	user.set_machine(src)
 
-	var/dat = "<meta charset=\"UTF-8\">Fax Machine<BR>"
-
 	var/scan_name
 	if(scan)
 		scan_name = scan.name
 	else
 		scan_name = "--------"
 
-	dat += "Confirm Identity: <a href='byond://?src=\ref[src];scan=1'>[scan_name]</a><br>"
+	var/dat = "Confirm Identity: <a href='byond://?src=\ref[src];scan=1'>[scan_name]</a><br>"
 
 	if(authenticated)
-		dat += "<a href='byond://?src=\ref[src];logout=1'>{Log Out}</a>"
+		dat += "<a href='byond://?src=\ref[src];logout=1'>Log Out</a>"
 	else
-		dat += "<a href='byond://?src=\ref[src];auth=1'>{Log In}</a>"
+		dat += "<a href='byond://?src=\ref[src];auth=1'>Log In</a>"
 
 	dat += "<hr>"
 
@@ -109,9 +107,11 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 		if(copyitem)
 			dat += "<a href ='byond://?src=\ref[src];remove=1'>Remove Item</a><br>"
 
-	show_browser(user, dat, "window=copier")
+	//show_browser(user, dat, "window=copier")
+	var/datum/browser/popup = new(user, "copier", "Fax Machine")
+	popup.set_content(dat)
+	popup.open()
 	onclose(user, "copier")
-	return
 
 /obj/machinery/photocopier/faxmachine/OnTopic(mob/user, href_list, state)
 	if(href_list["send"])

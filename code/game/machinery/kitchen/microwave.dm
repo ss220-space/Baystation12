@@ -13,7 +13,7 @@
 	construct_state = /decl/machine_construction/default/panel_closed
 	uncreated_component_parts = null
 	stat_immune = 0
-	
+
 	machine_name = "microwave"
 	machine_desc = "Required for preparing any dish more complicated than a slice of bread. In the future, <i>everything</i> is microwaved."
 
@@ -242,7 +242,7 @@
 
 /obj/machinery/microwave/interact(mob/user as mob) // The microwave Menu
 	user.set_machine(src)
-	var/dat = list()
+	var/dat
 	if(broken > 0)
 		dat += "<TT><b><i>This microwave is very broken. You'll need to fix it before you can use it again.</i></b></TT>"
 	else if(operating)
@@ -295,11 +295,12 @@
 					display_name = "Coldsauce"
 				dat += "<B>[display_name]:</B> [R.volume] unit\s"
 
-		dat += "<HR><BR><A href='?src=\ref[src];action=cook'>Turn on!<BR><A href='?src=\ref[src];action=dispose'>Eject ingredients!"
+		dat += "<HR><A href='?src=\ref[src];action=cook'>Turn on!</a><br><A href='?src=\ref[src];action=dispose'>Eject ingredients!</a>"
 
-	show_browser(user, "<HEAD><TITLE>Microwave Controls</TITLE></HEAD><TT>[jointext(dat,"<br>")]</TT>", "window=microwave")
+	var/datum/browser/popup = new(user, "microwave", "Microwave Controls")
+	popup.set_content(dat)
+	popup.open()
 	onclose(user, "microwave")
-	return
 
 
 
