@@ -8153,10 +8153,6 @@
 	dir = 8
 	},
 /obj/machinery/disposal,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/floor_decal/corner/black/mono,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -12059,6 +12055,9 @@
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/effect/floor_decal/corner/black/mono,
 /obj/structure/reagent_dispensers/water_cooler,
+/obj/machinery/firealarm{
+	pixel_y = 20
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "avq" = (
