@@ -7609,7 +7609,7 @@
 /obj/structure/filingcabinet,
 /obj/item/folder/white,
 /obj/item/folder/white,
-/obj/effect/floor_decal/borderfloorblack/full,
+/obj/effect/floor_decal/borderfloor/full,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 9
 	},
@@ -7744,10 +7744,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/heads/office/ce)
 "aoo" = (
-/obj/effect/floor_decal/borderfloorblack/corner{
+/obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/darkblue/bordercorner{
+/obj/effect/floor_decal/corner/darkblue/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -9580,6 +9580,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/displaycase{
+	desc = "A fortified display case for prized possessions. It taunts you to kick it.";
+	health = 185;
+	name = "heavy display case";
+	req_access = list("ACCESS_CAPTAIN")
+	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/cobed)
 "ari" = (
@@ -10235,7 +10241,7 @@
 /obj/structure/filingcabinet,
 /obj/item/folder/yellow,
 /obj/item/folder/yellow,
-/obj/effect/floor_decal/borderfloorblack/full,
+/obj/effect/floor_decal/borderfloor/full,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
 	},
@@ -10524,9 +10530,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloorblack{
-	dir = 1
+	dir = 9
 	},
 /obj/effect/floor_decal/corner/darkblue/border{
+	dir = 9
+	},
+/obj/structure/window/reinforced/polarized{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -12023,6 +12032,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/darkblue/bordercorner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "avm" = (
@@ -14263,13 +14278,13 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/blue/border{
+/obj/effect/floor_decal/corner/darkblue/border{
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor/corner2{
 	dir = 6
 	},
-/obj/effect/floor_decal/corner/blue/bordercorner2{
+/obj/effect/floor_decal/corner/darkblue/bordercorner2{
 	dir = 6
 	},
 /obj/random/date_based/christmas/xmaslights{
@@ -15833,21 +15848,6 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/nano)
-"aBJ" = (
-/obj/structure/displaycase{
-	desc = "A fortified display case for prized possessions. It taunts you to kick it.";
-	health = 185;
-	name = "heavy display case";
-	req_access = list("ACCESS_CAPTAIN")
-	},
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/darkblue/border{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/cobed)
 "aBK" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -16803,7 +16803,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/blue/border{
+/obj/effect/floor_decal/corner/darkblue/border{
 	dir = 4
 	},
 /obj/machinery/disposal,
@@ -17730,18 +17730,18 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/blue/border{
+/obj/effect/floor_decal/corner/darkblue/border{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner2{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/blue/bordercorner2{
-	dir = 5
-	},
 /obj/random/date_based/christmas/xmaslights{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/darkblue/bordercorner2{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/lobby)
@@ -18049,8 +18049,8 @@
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/darkblue/bordercorner,
 /obj/structure/table/rack,
-/obj/item/rig/command/captain/equipped,
 /obj/item/clothing/mask/gas/half,
+/obj/item/rig/command/captain/equipped,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "aFF" = (
@@ -29204,7 +29204,7 @@
 /obj/structure/filingcabinet,
 /obj/item/folder/blue,
 /obj/item/folder/blue,
-/obj/effect/floor_decal/borderfloorblack/full,
+/obj/effect/floor_decal/borderfloor/full,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
 	},
@@ -32389,7 +32389,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/level1)
 "bgL" = (
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad/longrange,
 /obj/effect/floor_decal/corner/darkblue/mono,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -33259,7 +33259,7 @@
 /obj/structure/filingcabinet,
 /obj/item/folder/red,
 /obj/item/folder/red,
-/obj/effect/floor_decal/borderfloorblack/full,
+/obj/effect/floor_decal/borderfloor/full,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
 	},
@@ -33470,11 +33470,6 @@
 /obj/item/paper_bin,
 /obj/item/pen,
 /obj/item/folder/blue,
-/obj/machinery/button/windowtint{
-	pixel_x = 1;
-	pixel_y = 9;
-	id = "bridge_windows"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hall/level_one)
 "bkg" = (
@@ -35707,6 +35702,12 @@
 	dir = 8;
 	pixel_x = 21
 	},
+/obj/machinery/door/window/brigdoor/westleft{
+	id_tag = null;
+	polarized = 1;
+	req_access = list("ACCESS_CAPTAIN");
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "gXz" = (
@@ -37187,13 +37188,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/shield/seconddeck)
-"lpQ" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe"
-	},
-/turf/simulated/floor/plating,
-/area/crew_quarters/cafe)
 "lts" = (
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 8
@@ -39338,9 +39332,7 @@
 /area/hallway/primary/seconddeck/center)
 "rbS" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "cafe"
-	},
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
@@ -39987,6 +39979,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood/walnut,
+/area/crew_quarters/cafe)
+"sML" = (
+/obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
+	id = "cafe"
+	},
+/turf/simulated/floor/plating,
 /area/crew_quarters/cafe)
 "sNc" = (
 /obj/structure/disposalpipe/segment,
@@ -50055,7 +50054,7 @@ alL
 aiY
 aiY
 aiY
-aBJ
+aiY
 aoo
 awR
 aDy
@@ -59555,7 +59554,7 @@ iaX
 wUs
 rDu
 fOz
-lpQ
+sML
 qCi
 acJ
 lST
@@ -59757,7 +59756,7 @@ arm
 bat
 qTT
 tlF
-lpQ
+sML
 avm
 aIa
 avK
