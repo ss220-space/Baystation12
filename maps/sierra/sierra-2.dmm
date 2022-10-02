@@ -5252,13 +5252,6 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/effect/floor_decal/borderfloorwhite/corner2,
 /obj/effect/floor_decal/corner/paleblue/bordercorner2,
-/obj/machinery/button/blast_door{
-	id_tag = "infirmaryquar";
-	name = "Infirmary Quar Lockdown";
-	pixel_x = -5;
-	pixel_y = -20;
-	req_access = list("ACCESS_MEDICAL")
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/maintenance_equipstorage)
 "ajO" = (
@@ -29051,7 +29044,8 @@
 "baf" = (
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = -21
+	pixel_y = -21;
+	pixel_x = -8
 	},
 /obj/structure/holoplant,
 /obj/effect/floor_decal/borderfloorwhite,
@@ -29061,6 +29055,14 @@
 	},
 /obj/effect/floor_decal/corner/pink/bordercorner2{
 	dir = 9
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "infirmaryquar";
+	name = "Infirmary Quar Lockdown";
+	pixel_x = 6;
+	pixel_y = -21;
+	req_access = list("ACCESS_MEDICAL");
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/maintenance_equipstorage)
