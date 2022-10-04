@@ -248,6 +248,20 @@
 	item_state = "Dpacket"
 	startswith = list(/obj/item/clothing/mask/smokable/cigarette/professionals = 6)
 
+/obj/item/storage/fancy/cigarettes/yava
+	name = "pack of Yava"
+	desc = "That's the Yava."
+	icon_state = "yava"
+	item_state = "Dpacket"
+	startswith = list(/obj/item/clothing/mask/smokable/cigarette/yava = 6)
+
+/obj/item/storage/fancy/cigarettes/prima
+	name = "pack of Prima"
+	desc = "Horrible and without filter. But they're cheap, by the way!"
+	icon_state = "prima"
+	item_state = "Dpacket"
+	startswith = list(/obj/item/clothing/mask/smokable/cigarette/prima = 6)
+
 //cigarellos
 /obj/item/storage/fancy/cigarettes/cigarello
 	name = "pack of Trident Original cigars"
