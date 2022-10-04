@@ -1,6 +1,10 @@
 /obj/effect/overmap/visitable/sector/exoplanet/chlorine
 	name = "chlorine exoplanet"
-	desc = "An exoplanet with a chlorine based ecosystem. Large quantities of liquid chlorine are present."
+	scanner_name = "desert exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: N-Class Planetoid
+[i]Habitability[/i]>: LOW (Noxious liquid chlorine)
+[b]Notice[/b]>: An exoplanet with a chlorine based ecosystem. Large quantities of liquid chlorine are present."}
 	color = "#c9df9f"
 	planetary_area = /area/exoplanet/chlorine
 	rock_colors = list(COLOR_GRAY80, COLOR_PALE_GREEN_GRAY, COLOR_PALE_BTL_GREEN)

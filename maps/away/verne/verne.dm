@@ -18,7 +18,11 @@
 
 /obj/effect/overmap/visitable/ship/verne
 	name = "SRV Verne"
-	desc = "Sensor array detects a large vessel, identifying itself as 'SRV Verne'"
+	scanner_name = "SRV Verne"
+	scanner_desc = @{"[i]Registration[/i]: SRV Verne
+[i]Class[/i]: Research ship
+[i]Transponder[/i]: Transmitting (CIV)
+[b]Notice[/b]: Sensor array detects a large vessel, identifying itself as 'SRV Verne"}
 	vessel_mass = 10000
 	max_speed = 1/(3 SECONDS)
 	burn_delay = 2 SECONDS

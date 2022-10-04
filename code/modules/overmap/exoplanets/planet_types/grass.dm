@@ -1,6 +1,9 @@
 /obj/effect/overmap/visitable/sector/exoplanet/grass
-	name = "lush exoplanet"
-	desc = "Planet with abundant flora and fauna."
+	scanner_name = "lush exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: M-Class Planetoid
+[i]Habitability[/i]>: IDEAL
+[b]Notice[/b]>: Planet with abundant flora and fauna"}
 	color = "#407c40"
 	planetary_area = /area/exoplanet/grass
 	rock_colors = list(COLOR_ASTEROID_ROCK, COLOR_GRAY80, COLOR_BROWN)

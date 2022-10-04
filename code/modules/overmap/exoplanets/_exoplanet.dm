@@ -3,7 +3,7 @@ GLOBAL_VAR(planet_repopulation_disabled)
 /obj/effect/overmap/visitable/sector/exoplanet
 	name = "exoplanet"
 	icon_state = "globe"
-	in_space = FALSE
+	sector_flags = OVERMAP_SECTOR_KNOWN
 	known = TRUE
 	var/area/planetary_area
 	var/list/seeds = list()

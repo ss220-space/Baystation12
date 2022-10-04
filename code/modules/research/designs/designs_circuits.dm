@@ -153,7 +153,7 @@
 	build_path = /obj/item/stock_parts/circuitboard/comm_monitor
 	sort_string = "HAACA"
 	category_items = "Computer Boards"
-	
+
 /datum/design/circuit/comm_server
 	name = "telecommunications server monitoring console"
 	id = "comm_server"
@@ -639,6 +639,15 @@
 	req_tech = list(TECH_DATA = 3)
 	build_path = /obj/item/stock_parts/circuitboard/shuttle_console/explore
 	sort_string = "JFAAH"
+	category_items = "Computer Boards"
+
+
+/datum/design/circuit/weapons
+	name = "ship target control console"
+	id = "shipweapons"
+	req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/stock_parts/circuitboard/missiles
+	sort_string = "JFAAI"
 	category_items = "Computer Boards"
 
 /datum/design/circuit/biogenerator

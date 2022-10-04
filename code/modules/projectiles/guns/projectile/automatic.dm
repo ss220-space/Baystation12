@@ -158,6 +158,48 @@
 		icon_state = "arifle-empty"
 		wielded_item_state = "arifle-wielded-empty"
 
+/obj/item/gun/projectile/automatic/iccg_rifle
+	name = "LA-700"
+	desc = "HelTek LA-700 is a standart equipment of ICCG Space-assault Forces. Looks very similiar to STS-35."
+	icon = 'icons/obj/guns/iccg_rifle.dmi'
+	icon_state = "iccg_rifle"
+	item_state = null
+	force = 10
+	caliber = CALIBER_RIFLE
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/rifle
+	allowed_magazines = /obj/item/ammo_magazine/rifle
+	wielded_item_state = "arifle-wielded"
+	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
+	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
+
+	//Assault rifle, burst fire degrades quicker than SMG, worse one-handing penalty, slightly increased move delay
+	firemodes = list(
+		list(mode_name="semi auto",       burst=1, fire_delay=null,    move_delay=null, one_hand_penalty=8, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    one_hand_penalty=9, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",   burst=5, fire_delay=null, move_delay=6,    one_hand_penalty=11, burst_accuracy=list(0,-1,-2,-3,-3), dispersion=list(0.6, 1.0, 1.2, 1.2, 1.5)),
+		)
+
+//[INF]
+	accuracy = 2
+	accuracy_power = 7
+	bulk = GUN_BULK_RIFLE
+	w_class = ITEM_SIZE_HUGE
+	one_hand_penalty = 8
+
+	s_gun = "LA-700"
+//[/INF]
+/obj/item/gun/projectile/automatic/iccg_rifle/on_update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "iccg_rifle"
+		wielded_item_state = "arifle-wielded"
+	else
+		icon_state = "iccg_rifle-empty"
+		wielded_item_state = "arifle-wielded-empty"
+
 /obj/item/gun/projectile/automatic/sec_smg
 	name = "WT-550 submachine gun"
 	desc = "The WT-550 Saber is a cheap self-defense weapon, mass-produced by Ward-Takahashi for paramilitary and private use."

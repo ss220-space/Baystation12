@@ -265,16 +265,39 @@
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1442;
 	icon_state = "map_injector";
-	id = "h2_in";
+	id = "emp_in";
 	pixel_y = 1;
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/patrol/maintenance/atmos)
 "aE" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	id_tag = "emp_out";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
+	},
+/obj/machinery/air_sensor{
+	id_tag = "emp_sensor"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/patrol/maintenance/atmos)
 "aF" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1442;
+	icon_state = "map_injector";
+	id = "h2_in";
+	pixel_y = 1;
+	use_power = 1
+	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/ship/patrol/maintenance/atmos)
 "aG" = (
@@ -290,6 +313,9 @@
 	pressure_checks_default = 2;
 	pump_direction = 0;
 	use_power = 1
+	},
+/obj/machinery/air_sensor{
+	id_tag = "tox_sensor"
 	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/ship/patrol/maintenance/atmos)
@@ -436,7 +462,6 @@
 	},
 /obj/machinery/meter,
 /obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aT" = (
@@ -481,14 +506,12 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/meter,
 /obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aZ" = (
 /obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "ba" = (
@@ -500,26 +523,28 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bc" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 6
+	},
+/obj/structure/sign/warning/compressed_gas,
+/obj/effect/paint/dark_gunmetal,
+/turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/atmos)
 "bd" = (
-/obj/effect/paint/dark_gunmetal,
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
 	},
-/turf/simulated/wall/r_wall,
+/obj/effect/wallframe_spawn/reinforced_phoron,
+/turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "be" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bf" = (
@@ -650,7 +675,6 @@
 	},
 /obj/machinery/meter,
 /obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bq" = (
@@ -712,28 +736,20 @@
 	icon_state = "tube1"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
+	dir = 10
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "by" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/atmospherics/omni/filter{
-	tag_east = 2;
-	tag_north = 8;
-	tag_south = 1;
-	tag_west = 5
-	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bz" = (
-/obj/structure/closet/crate/internals/fuel,
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 10
-	},
+/obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bA" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
@@ -953,9 +969,9 @@
 /area/ship/patrol/maintenance/atmos)
 "bY" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_east = 2;
+	tag_east = 1;
 	tag_north = 3;
-	tag_south = 1;
+	tag_south = 2;
 	tag_west = 4
 	},
 /turf/simulated/floor/plating,
@@ -970,35 +986,33 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "ca" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 2;
+	tag_north = 5;
+	tag_south = 8;
+	tag_west = 1
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cb" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cc" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 5
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cd" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4
-	},
-/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "ce" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4
-	},
+/obj/structure/closet/crate/internals/fuel,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cf" = (
@@ -1009,9 +1023,6 @@
 /obj/machinery/atmospherics/binary/pump/high_power/on{
 	target_pressure = 3500
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cg" = (
@@ -1019,9 +1030,7 @@
 	dir = 8;
 	icon_state = "bulb1"
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible/black{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/engine/starboard)
 "ch" = (
@@ -1317,8 +1326,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
@@ -1334,31 +1343,50 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	dir = 4;
-	target_pressure = 15000
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/atmos)
 "cI" = (
+/obj/machinery/meter,
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cJ" = (
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cK" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 5
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/ship/patrol/maintenance/atmos)
+"cL" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cM" = (
@@ -1367,11 +1395,17 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cO" = (
@@ -1384,6 +1418,9 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/atmos)
 "cP" = (
@@ -1391,7 +1428,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/engine/starboard)
 "cQ" = (
@@ -1793,8 +1832,6 @@
 	req_access = list("ACCESS_CAVALRY")
 	},
 /obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dq" = (
@@ -1803,7 +1840,7 @@
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dr" = (
@@ -1841,7 +1878,6 @@
 	req_access = list("ACCESS_CAVALRY")
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/engine/starboard)
 "dy" = (
@@ -1913,7 +1949,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dG" = (
@@ -1970,9 +2005,6 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
-	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/engine/starboard)
@@ -2166,17 +2198,12 @@
 	req_access = list("ACCESS_CAVALRY")
 	},
 /obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 5
-	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "eh" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/railing/mapped{
-	dir = 8
-	},
-/obj/machinery/atmospherics/unary/tank{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -5701,7 +5728,6 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/item/reagent_containers/chem_disp_cartridge/boron,
 /obj/item/sealgen_case,
 /obj/item/sealgen_case,
 /turf/simulated/floor/tiled,
@@ -8496,7 +8522,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/black{
+/obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 9
 	},
 /turf/simulated/wall/r_wall,
@@ -8890,7 +8916,7 @@
 /area/ship/patrol/command/eva)
 "KF" = (
 /obj/effect/paint/meatstation/lab,
-/obj/machinery/atmospherics/pipe/simple/visible/black{
+/obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
 	},
 /turf/simulated/wall/r_wall,
@@ -9059,10 +9085,14 @@
 /turf/simulated/floor/tiled,
 /area/ship/patrol/crew/hallway/lower)
 "Qt" = (
-/obj/machinery/air_sensor{
-	id_tag = "tox_sensor"
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
 	},
-/turf/simulated/floor/reinforced/hydrogen,
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "QH" = (
 /obj/effect/paint/red,
@@ -9284,7 +9314,7 @@
 /area/ship/patrol/crew/hallway/lower/starboard)
 "XC" = (
 /obj/effect/paint/dark_gunmetal,
-/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/engine/starboard)
 "XG" = (
@@ -18711,7 +18741,7 @@ aD
 bb
 by
 cb
-cJ
+cL
 dr
 dI
 ej
@@ -18830,10 +18860,10 @@ aa
 aj
 Uk
 aE
-bc
+bb
 bz
 cc
-cJ
+cL
 dt
 dt
 dt
@@ -18951,11 +18981,11 @@ aa
 aa
 aj
 Uk
-Qt
+Uk
 bc
 bA
 cd
-cJ
+Qt
 du
 dJ
 Rs
@@ -19074,7 +19104,7 @@ aa
 aj
 Uk
 aF
-bc
+bd
 bB
 ce
 cM
@@ -19320,7 +19350,7 @@ Uk
 Uk
 Uk
 Uk
-bd
+Uk
 cO
 Uk
 Uk

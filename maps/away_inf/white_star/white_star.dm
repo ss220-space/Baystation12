@@ -2,11 +2,16 @@
 
 /obj/effect/overmap/visitable/ship/white_star
 	name = "Unidentified ship"
-	desc = "Error. Scanning is impossible."
+	scanner_name = "Unidentified ship"
+	desc = "Spacefaring vessel. No IFF detected."
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[i]Class[/i]: UNKNOWN
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: Unregistered vessel"}
 	color = "#c6d8eb"
 	vessel_mass = 3500
 	max_speed = 1/(2 SECONDS)
-	//	icon_state = "malf_ship"
+	icon_state = "malf_ship"
 
 /datum/map_template/ruin/away_site/white_star
  	name = "White_star"

@@ -15,8 +15,13 @@
 
 /obj/effect/overmap/visitable/ship/unishi
 	name = "SRV Verne"
-	desc = "Sensor array detects unknown class medium size vessel. The vessel appears unarmed.\
-	A small amount of radiation has been detected at the aft of the ship"
+	desc = "Spacefaring vessel."
+	scanner_name = "SRV Verne"
+	scanner_desc = @{"[i]Registration[/i]: SRV Verne
+[i]Class[/i]: Unknown class medium size vessel
+[i]Transponder[/i]: Transmitting (CIV), non-hostile
+[b]Notice[/b]: Sensor array detects unknown class medium size vessel. The vessel appears unarmed.\
+	A small amount of radiation has been detected at the aft of the ship"}
 	vessel_mass = 5000
 	max_speed = 1/(3 SECONDS)
 	initial_generic_waypoints = list(
@@ -170,4 +175,3 @@ obj/item/weapon/paper/prof2
 
 /datum/chemical_reaction/clonexadone/nophoron
 	required_reagents = list(/datum/reagent/cryoxadone = 1, /datum/reagent/sodium = 1, /datum/reagent/toxin/phoron/safe = 0.1)
-

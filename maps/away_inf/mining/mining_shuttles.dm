@@ -38,7 +38,7 @@
 	shuttle_tag = "Data Capsule"
 
 /obj/effect/overmap/visitable/ship/landable/data_capsule
-	name = "Data Capsule"
+	scanner_name = "Data Capsule"
 	shuttle = "Data Capsule"
 	max_speed = 1/10
 	burn_delay = 2 SECONDS

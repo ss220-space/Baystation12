@@ -514,6 +514,23 @@
 /decl/closet_appearance/secure_closet/sol/two/dark
 	color = COLOR_DARK_BLUE_GRAY
 
+/decl/closet_appearance/secure_closet/farfleet
+	extra_decals = list(
+		"stripe_vertical_left_full" = COLOR_DARK_BLUE_GRAY,
+		"stripe_vertical_right_full" = COLOR_DARK_BLUE_GRAY,
+		"security" = COLOR_RED_LIGHT
+	)
+
+/decl/closet_appearance/secure_closet/farfleet/two
+	color = COLOR_DARK_BLUE_GRAY
+	decals = list(
+		"lower_side_vent"
+	)
+	extra_decals = list(
+		"stripe_vertical_mid_full" = COLOR_RED_LIGHT ,
+		"security" = COLOR_RED_LIGHT
+	)
+
 // Crates.
 /decl/closet_appearance/crate
 	decals = null

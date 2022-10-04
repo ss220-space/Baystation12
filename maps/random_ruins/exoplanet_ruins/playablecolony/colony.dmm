@@ -2425,6 +2425,7 @@
 /area/map_template/colony/engineering)
 "eN" = (
 /obj/structure/table/marble,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/lino,
 /area/map_template/colony/messhall)
 "eO" = (

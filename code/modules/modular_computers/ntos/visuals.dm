@@ -12,9 +12,9 @@
 		if(istype(A))
 			screen_icon_file = A.icon
 	if(active_program)
-		return image(screen_icon_file, active_program.program_icon_state)
+		return overlay_image(screen_icon_file, active_program.program_icon_state, plane = EFFECTS_ABOVE_LIGHTING_PLANE, layer = ABOVE_LIGHTING_LAYER)
 	else
-		return image(screen_icon_file, menu_icon)
+		return overlay_image(screen_icon_file, menu_icon, plane = EFFECTS_ABOVE_LIGHTING_PLANE, layer = ABOVE_LIGHTING_LAYER)
 
 /datum/extension/interactive/ntos/proc/get_keyboard_overlay()
 	if(!on)
@@ -25,7 +25,7 @@
 			screen_icon_file = A.icon
 	if(active_program && active_program.program_key_state)
 		return image(screen_icon_file, active_program.program_key_state)
-	
+
 /datum/extension/interactive/ntos/proc/visible_error(message)
 	var/atom/A = holder
 	if(istype(A))

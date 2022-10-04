@@ -2,7 +2,11 @@
 
 /obj/effect/overmap/visitable/ship/errant_pisces
 	name = "XCV Ahab's Harpoon"
-	desc = "Sensors detect civilian vessel with unusual signs of life aboard."
+	scanner_name = "XCV Ahab's Harpoon"
+	scanner_desc = @{"[i]Registration[/i]: XCV Ahab's Harpoon
+[i]Class[/i]: UNKNOWN
+[i]Transponder[/i]: Transmitting (CIV)
+[b]Notice[/b]: Sensors detect civilian vessel with unusual signs of life aboard"}
 	color = "#bd6100"
 	max_speed = 1/(3 SECONDS)
 	burn_delay = 15 SECONDS

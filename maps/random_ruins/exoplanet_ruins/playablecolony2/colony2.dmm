@@ -1709,6 +1709,7 @@
 	req_access = list()
 	},
 /obj/effect/floor_decal/corner/paleblue/mono,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/colony2/commons)
 "Hb" = (

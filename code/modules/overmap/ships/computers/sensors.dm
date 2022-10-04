@@ -9,6 +9,16 @@
 	machine_desc = "Used to activate, monitor, and configure a spaceship's sensors. Higher range means higher temperature; dangerously high temperatures may fry the delicate equipment."
 	var/obj/machinery/shipsensors/sensors
 	var/print_language = LANGUAGE_HUMAN_EURO
+	var/working_sound = 'sound/machines/sensors/dradis.ogg'
+	var/datum/sound_token/sound_token
+	var/sound_id
+
+// fancy sprite
+/obj/machinery/computer/ship/sensors/adv
+	icon_keyboard = null
+	icon_state = "adv_sensors"
+	icon_screen = "adv_sensors_screen"
+	light_color = "#05A6A8"
 
 /obj/machinery/computer/ship/sensors/spacer
 	construct_state = /decl/machine_construction/default/panel_closed/computer/no_deconstruct
@@ -19,6 +29,19 @@
 	if(!(. = ..()))
 		return
 	find_sensors()
+
+/obj/machinery/computer/ship/sensors/proc/update_sound()
+	if(!working_sound)
+		return
+	if(!sound_id)
+		sound_id = "[type]_[sequential_id(/obj/machinery/computer/ship/sensors)]"
+	if(linked && sensors.use_power ** sensors.powered())
+		var/volume = 10
+		if(!sound_token)
+			sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, working_sound, volume = volume, range = 10)
+		sound_token.SetVolume(volume)
+	else if(sound_token)
+		QDEL_NULL(sound_token)
 
 /obj/machinery/computer/ship/sensors/proc/find_sensors()
 	if(!linked)
@@ -55,6 +78,7 @@
 			data["status"] = "OK"
 		var/list/contacts = list()
 		for(var/obj/effect/overmap/O in view(7,linked))
+			var/datum/overmap_contact/record
 			if(linked == O)
 				continue
 			if(!O.scannable)
@@ -62,7 +86,12 @@
 			var/bearing = round(90 - Atan2(O.x - linked.x, O.y - linked.y),5)
 			if(bearing < 0)
 				bearing += 360
-			contacts.Add(list(list("name"=O.name, "ref"="\ref[O]", "bearing"=bearing)))
+			for(var/key in contact_datums)
+				record = contact_datums[O]
+			if(record)
+				if(!record.identified)
+					continue
+			contacts.Add(list(list("name"=O.scanner_name, "ref"="\ref[O]", "bearing"=bearing)))
 		if(contacts.len)
 			data["contacts"] = contacts
 	else
@@ -72,7 +101,7 @@
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "shipsensors.tmpl", "[linked.name] Sensors Control", 420, 530, src)
+		ui = new(user, src, ui_key, "shipsensors.tmpl", "[linked.scanner_name] Sensors Control", 420, 530, src)
 		ui.set_initial_data(data)
 		ui.open()
 		ui.set_auto_update(1)
@@ -112,15 +141,6 @@
 			new/obj/item/paper/(get_turf(src), O.get_scan_data(user), "paper (Sensor Scan - [O])", L = print_language)
 		return TOPIC_HANDLED
 
-/obj/machinery/computer/ship/sensors/Process()
-	..()
-	if(!linked)
-		return
-	if(sensors && sensors.use_power && sensors.powered())
-		var/sensor_range = round(sensors.range*1.5) + 1
-		linked.set_light(1, sensor_range, sensor_range+1)
-	else
-		linked.set_light(0)
 
 /obj/machinery/shipsensors
 	name = "sensors suite"
@@ -135,7 +155,7 @@
 	var/heat = 0
 	var/range = 1
 	idle_power_usage = 5000
-	use_power = 0 //INF. Turned off at roundstart
+	use_power = 1 //INF. Turned off at roundstart
 
 /obj/machinery/shipsensors/attackby(obj/item/W, mob/user)
 	var/damage = max_health - health
@@ -231,6 +251,15 @@
 	health = min(max(health - value, 0),max_health)
 	if(use_power && health == 0)
 		toggle()
+
+
+// fancy sprite
+/obj/machinery/computer/ship/sensors/adv
+	icon_keyboard = null
+	icon_state = "adv_sensors"
+	icon_screen = "adv_sensors_screen"
+	light_color = "#05A6A8"
+	base_type = /obj/machinery/computer/ship/navigation
 
 /obj/machinery/shipsensors/weak
 	heat_reduction = 0.2
