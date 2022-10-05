@@ -271,191 +271,299 @@
 	icon_state = "tesh_cloak_iaa"
 	item_state = "tesh_cloak_iaa"
 
-/obj/item/clothing/suit/storage/resomicloak/tesh_cloak_dretrowave
-	name = "Resomi cloak dretrowave"
+/obj/item/clothing/suit/storage/resomicloak_alt
+	icon = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+	name = "resomi cloak dretrowave"
 	desc = "A soft Resomi cloak"
 	icon_state = "tesh_cloak_dretrowave"
-	item_state = "tesh_cloak_dretrowave"
+	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO
 
-//Belted cloaks
-/obj/item/clothing/suit/storage/resomicloak/belted/iaa
+/obj/item/clothing/suit/storage/resomicloak_alt/tesh_cloak_dretrowave
+	name = "resomi cloak dretrowave"
+	icon_state = "tesh_cloak_dretrowave"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/green_grey
+	name = "green and grey cloak"
+	icon_state = "tesh_cloak_gg_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/blue_grey
+	name = "blue and grey cloak"
+	icon_state = "tesh_cloak_blug_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/purple_grey
+	name = "purple and grey cloak"
+	icon_state = "tesh_cloak_pg_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/cmo
+	name = "chief medical officer cloak"
+	desc = "A soft Resomi cloak made the Cheif Medical Officer"
+	icon_state = "tesh_cloak_cmo_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/medical
+	name = "medical cloak"
+	desc = "A soft Resomi cloak made for the Medical department"
+	icon_state = "tesh_cloak_doc_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/chemistry
+	name = "chemist cloak"
+	desc = "A soft Resomi cloak made for the Chemist"
+	icon_state = "tesh_cloak_chem_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/psych
+	name = "psychiatrist cloak"
+	desc = "A soft Resomi cloak made for the Psychiatrist"
+	icon_state = "tesh_cloak_psych"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/ce
+	name = "cheif engineer cloak"
+	desc = "A soft Resomi cloak made the Chief Engineer"
+	icon_state = "tesh_cloak_ce_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/engineer
+	name = "engineering cloak"
+	desc = "A soft Resomi cloak made for the Engineering department"
+	icon_state = "tesh_cloak_engie_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/atmos
+	name = "atmospherics cloak"
+	desc = "A soft Resomi cloak made for the Atmospheric Technician"
+	icon_state = "tesh_cloak_atmos_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/hos
+	name = "head of security cloak"
+	desc = "A soft Resomi cloak made for the Head of Security"
+	icon_state = "tesh_cloak_hos"
+/obj/item/clothing/suit/storage/resomicloak_alt/qm
+	name = "quartermaster cloak"
+	desc = "A soft Resomi cloak made for the Quartermaster"
+	icon_state = "tesh_cloak_qm_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/cargo
+	name = "cargo cloak"
+	desc = "A soft Resomi cloak made for the Cargo department"
+	icon_state = "tesh_cloak_car_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/mining
+	name = "mining cloak"
+	desc = "A soft Resomi cloak made for Mining"
+	icon_state = "tesh_cloak_mine_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/hop
+	name = "head of personnel cloak"
+	desc = "A soft Resomi cloak made for the Head of Personnel"
+	icon_state = "tesh_cloak_hop"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/service
+	name = "service cloak"
+	desc = "A soft Resomi cloak made for the Service department"
+	icon_state = "tesh_cloak_serv_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/sec
+	name = "security cloak"
+	desc = "A soft Resomi cloak made for the Security department"
+	icon_state = "tesh_cloak_sec_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/iaa
+	name = "internal affairs cloak"
+	desc = "A soft Resomi cloak made for the Internal Affairs Agent"
+	icon_state = "tesh_cloak_iaa"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/robo
+	name = "roboticist cloak"
+	desc = "A soft Resomi cloak made for the Roboticist"
+	icon_state = "tesh_cloak_robo_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/rd
+	name = "research director cloak"
+	desc = "A soft Resomi cloak made for the Research Director"
+	icon_state = "tesh_cloak_rd"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/sci
+	name = "scientist cloak"
+	desc = "A soft Resomi cloak made for the Science department"
+	icon_state = "tesh_cloak_sci_alt"
+
+/obj/item/clothing/suit/storage/resomicloak_alt/iaa
 	name = "internal affairs cloak"
 	desc = "A soft Resomi cloak made for the Internal Affairs Agent"
 	icon_state = "tesh_cloak_iaa"
 	item_state = "tesh_cloak_iaa"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak
+//Belted cloaks
+/obj/item/clothing/suit/storage/resomicloak_belted
 	name = "belted cloak"
-	desc = "A more ridged and stylized Teshari cloak."
+	desc = "A more ridged and stylized Resomi cloak."
+	icon = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
 	icon_state = "tesh_beltcloak_bo"
-	body_parts_covered = UPPER_TORSO|ARMS
+	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO
+	species_restricted = list(SPECIES_RESOMI)
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_orange
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_orange
 	name = "black belted cloak (orange)"
 	icon_state = "tesh_beltcloak_bo"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_grey
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_grey
 	name = "black belted cloak"
 	icon_state = "tesh_beltcloak_bg"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_midgrey
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_midgrey
 	name = "black belted cloak (medium grey)"
 	icon_state = "tesh_beltcloak_bmg"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_lightgrey
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_lightgrey
 	name = "black belted cloak (light grey)"
 	icon_state = "tesh_beltcloak_blg"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_white
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_white
 	name = "black belted cloak (white)"
 	icon_state = "tesh_beltcloak_bw"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_red
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_red
 	name = "black belted cloak (red)"
 	icon_state = "tesh_beltcloak_br"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black
 	name = "black simple belted cloak"
 	icon_state = "tesh_beltcloak_bn"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_yellow
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_yellow
 	name = "black belted cloak (yellow)"
 	icon_state = "tesh_beltcloak_by"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_green
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_green
 	name = "black belted cloak (green)"
 	icon_state = "tesh_beltcloak_bgr"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_blue
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_blue
 	name = "black belted cloak (blue)"
 	icon_state = "tesh_beltcloak_bbl"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_purple
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_purple
 	name = "black belted cloak (purple)"
 	icon_state = "tesh_beltcloak_bp"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_pink
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_pink
 	name = "black belted cloak (pink)"
 	icon_state = "tesh_beltcloak_bpi"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/black_brown
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/black_brown
 	name = "black belted cloak (brown)"
 	icon_state = "tesh_beltcloak_bbr"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/orange_grey
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/orange_grey
 	name = "orange belted cloak"
 	icon_state = "tesh_beltcloak_og"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/rainbow
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/rainbow
 	name = "rainbow belted cloak"
 	icon_state = "tesh_beltcloak_rainbow"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/lightgrey_grey
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/lightgrey_grey
 	name = "light grey belted cloak"
 	icon_state = "tesh_beltcloak_lgg"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/white_grey
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/white_grey
 	name = "white belted cloak"
 	icon_state = "tesh_beltcloak_wg"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/standard/brown_grey
+/obj/item/clothing/suit/storage/resomicloak_belted/standard/brown_grey
 	name = "brown belted cloak"
 	icon_state = "tesh_beltcloak_brg"
 
 //Belted job cloaks
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/cargo
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/cargo
 	name = "cargo belted cloak"
-	desc = "A soft Teshari cloak made for the Cargo department"
+	desc = "A soft Resomi cloak made for the Cargo department"
 	icon_state = "tesh_beltcloak_car"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/mining
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/mining
 	name = "mining belted cloak"
-	desc = "A soft Teshari cloak made for Mining"
+	desc = "A soft Resomi cloak made for Mining"
 	icon_state = "tesh_beltcloak_mine"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/command
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/command
 	name = "command belted cloak"
-	desc = "A soft Teshari cloak made for the Command department"
+	desc = "A soft Resomi cloak made for the Command department"
 	icon_state = "tesh_beltcloak_comm"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/ce
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/ce
 	name = "chief engineer belted cloak"
-	desc = "A soft Teshari cloak made the Chief Engineer"
+	desc = "A soft Resomi cloak made the Chief Engineer"
 	icon_state = "tesh_beltcloak_ce"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/engineer
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/engineer
 	name = "engineering belted cloak"
-	desc = "A soft Teshari cloak made for the Engineering department"
+	desc = "A soft Resomi cloak made for the Engineering department"
 	icon_state = "tesh_beltcloak_engie"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/atmos
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/atmos
 	name = "atmospherics belted cloak"
-	desc = "A soft Teshari cloak made for the Atmospheric Technician"
+	desc = "A soft Resomi cloak made for the Atmospheric Technician"
 	icon_state = "tesh_beltcloak_atmos"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/cmo
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/cmo
 	name = "chief medical officer belted  cloak"
-	desc = "A soft Teshari cloak made the Chief Medical Officer"
+	desc = "A soft Resomi cloak made the Chief Medical Officer"
 	icon_state = "tesh_beltcloak_cmo"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/medical
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/medical
 	name = "medical belted cloak"
-	desc = "A soft Teshari cloak made for the Medical department"
+	desc = "A soft Resomi cloak made for the Medical department"
 	icon_state = "tesh_beltcloak_doc"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/chemistry
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/chemistry
 	name = "chemist belted cloak"
-	desc = "A soft Teshari cloak made for the Chemist"
+	desc = "A soft Resomi cloak made for the Chemist"
 	icon_state = "tesh_beltcloak_chem"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/viro
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/viro
 	name = "virologist belted cloak"
-	desc = "A soft Teshari cloak made for the Virologist"
+	desc = "A soft Resomi cloak made for the Virologist"
 	icon_state = "tesh_beltcloak_viro"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/sci
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/sci
 	name = "scientist belted cloak"
-	desc = "A soft Teshari cloak made for the Science department"
+	desc = "A soft Resomi cloak made for the Science department"
 	icon_state = "tesh_beltcloak_sci"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/robo
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/robo
 	name = "roboticist belted cloak"
-	desc = "A soft Teshari cloak made for the Roboticist"
+	desc = "A soft Resomi cloak made for the Roboticist"
 	icon_state = "tesh_beltcloak_robo"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/sec
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/sec
 	name = "security belted cloak"
-	desc = "A soft Teshari cloak made for the Security department"
+	desc = "A soft Resomi cloak made for the Security department"
 	icon_state = "tesh_beltcloak_sec"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/qm
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/qm
 	name = "quartermaster belted cloak"
-	desc = "A soft Teshari cloak made for the Quartermaster"
+	desc = "A soft Resomi cloak made for the Quartermaster"
 	icon_state = "tesh_beltcloak_qm"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/service
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/service
 	name = "service belted cloak"
-	desc = "A soft Teshari cloak made for the Service department"
+	desc = "A soft Resomi cloak made for the Service department"
 	icon_state = "tesh_beltcloak_serv"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/iaa
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/iaa
 	name = "internal affairs belted cloak"
-	desc = "A soft Teshari cloak made for the Internal Affairs Agent"
+	desc = "A soft Resomi cloak made for the Internal Affairs Agent"
 	icon_state = "tesh_beltcloak_iaa"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/wrdn
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/wrdn
 	name = "warden belted cloak"
-	desc = "A soft Teshari cloak made for the Warden"
+	desc = "A soft Resomi cloak made for the Warden"
 	icon_state = "tesh_beltcloak_wrdn"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/hos
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/hos
 	name = "security chief belted cloak"
-	desc = "A soft Teshari cloak made for the Head of Security"
+	desc = "A soft Resomi cloak made for the Head of Security"
 	icon_state = "tesh_beltcloak_hos"
 
-/obj/item/clothing/suit/storage/resomicloak/beltcloak/jobs/jani
+/obj/item/clothing/suit/storage/resomicloak_belted/jobs/jani
 	name = "janitor belted cloak"
-	desc = "A soft Teshari cloak made for the Janitor"
+	desc = "A soft Resomi cloak made for the Janitor"
 	icon_state = "tesh_beltcloak_jani"
 
 
@@ -523,7 +631,7 @@
 		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'
 	)
 
-//Hooded teshari cloaks
+//Hooded Resomi cloaks
 /obj/item/clothing/suit/storage/hooded/resomi
 	name = "Hooded Resomi Cloak"
 	desc = "A soft resomi cloak with an added hood."
