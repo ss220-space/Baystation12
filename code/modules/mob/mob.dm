@@ -457,6 +457,12 @@
 	unset_machine()
 	reset_view(null)
 
+/*
+/mob/verb/tail_layer()
+	set name = "Tail"
+	set category = "IC"
+	switch_tail_layer(src)
+*/
 /mob/DefaultTopicState()
 	return GLOB.view_state
 
@@ -983,6 +989,13 @@
 // It should not use both.
 /mob/on_update_icon()
 	return update_icons()
+
+/mob/proc/switch_tail_layer()
+	set category = "Abilities"
+	set name = "Toggle tail layer"
+	set desc = "tail will be over or under backpack"
+	tail_layer = !tail_layer
+	to_chat(src, "<span class='notice'>Your tail will be [tail_layer == TRUE ? "over" : "under"] backpacks.</span>")
 
 /mob/proc/face_direction()
 	set_face_dir()
