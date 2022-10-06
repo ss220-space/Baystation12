@@ -5686,8 +5686,9 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck Hallway - Grove Branch";
-	dir = 4
+	c_tag = "Cafe - Food Display";
+	dir = 4;
+	pixel_y = 18
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -5817,10 +5818,6 @@
 	dir = 2;
 	id_tag = "bar<-cafe";
 	name = "Bar Shutters"
-	},
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Bartenders'";
-	dir = 8
 	},
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -38161,7 +38158,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/nano)
 "oIG" = (
-/obj/machinery/light{
+/obj/machinery/light/spot{
 	dir = 1
 	},
 /obj/structure/table/woodentable_reinforced/walnut,
@@ -39636,6 +39633,23 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/forestarboard)
+"sst" = (
+/obj/effect/floor_decal/industrial/hatch/grey,
+/obj/structure/table/steel_reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id_tag = "bar<-cafe";
+	name = "Bar Shutters"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Bartenders'";
+	dir = 4;
+	pixel_y = 19
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/crew_quarters/bar)
 "str" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -41103,8 +41117,13 @@
 /obj/machinery/button/windowtint{
 	dir = 4;
 	id = "cap_windows";
-	pixel_x = -23;
-	pixel_y = 6
+	pixel_x = -21;
+	pixel_y = -1
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Cafe - Piano";
+	dir = 4;
+	pixel_y = 18
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -58137,7 +58156,7 @@ wAG
 agR
 alp
 hOm
-avt
+sst
 aln
 aVY
 oFT
