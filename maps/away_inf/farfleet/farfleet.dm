@@ -94,7 +94,7 @@
 /obj/machinery/telecomms/allinone/iccgn
 	listening_freqs = list(ICCGN_FREQ)
 	channel_color = COMMS_COLOR_ICCG
-	channel_name = "ICGN"
+	channel_name = "ICGN Ship"
 	circuitboard = /obj/item/stock_parts/circuitboard/telecomms/allinone/iccgn
 
 
@@ -112,7 +112,7 @@
 
 /obj/item/device/encryptionkey/iccgn
 	name = "\improper ICCGN radio encryption key"
-	channels = list("ICCGN" = 1)
+	channels = list("ICGN Ship" = 1)
 
 /obj/item/stock_parts/circuitboard/telecomms/allinone/iccgn
 	build_path = /obj/machinery/telecomms/allinone/iccgn

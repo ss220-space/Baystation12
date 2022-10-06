@@ -176,7 +176,7 @@ var/list/radiochannels = list(
 //[/INF]
 	"Medical (I)"	= MED_I_FREQ,
 	"Security (I)"	= SEC_I_FREQ,
-	"ICGN"   = ICCGN_FREQ
+	"ICGN Ship"   = ICCGN_FREQ
 )
 
 var/list/channel_color_presets = list(
