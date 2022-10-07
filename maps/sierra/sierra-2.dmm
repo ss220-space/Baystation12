@@ -5685,11 +5685,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Cafe - Food Display";
-	dir = 4;
-	pixel_y = 18
-	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "akE" = (
@@ -5820,6 +5815,10 @@
 	name = "Bar Shutters"
 	},
 /obj/structure/table/steel_reinforced,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Bartenders'";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/bar)
 "akS" = (
@@ -37864,6 +37863,9 @@
 	pixel_y = 2
 	},
 /obj/structure/table/woodentable_reinforced/mahogany,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Cafe - Food Display"
+	},
 /turf/simulated/floor/wood/yew,
 /area/crew_quarters/cafe)
 "nVM" = (
@@ -38994,10 +38996,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced/airless,
 /area/space)
-"qMf" = (
-/obj/machinery/status_display,
-/turf/simulated/wall/prepainted,
-/area/maintenance/seconddeck/emergency)
 "qNk" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -39633,23 +39631,6 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/forestarboard)
-"sst" = (
-/obj/effect/floor_decal/industrial/hatch/grey,
-/obj/structure/table/steel_reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/shutters{
-	dir = 2;
-	id_tag = "bar<-cafe";
-	name = "Bar Shutters"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Bartenders'";
-	dir = 4;
-	pixel_y = 19
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/crew_quarters/bar)
 "str" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -41118,12 +41099,11 @@
 	dir = 4;
 	id = "cap_windows";
 	pixel_x = -21;
-	pixel_y = -1
+	pixel_y = 5
 	},
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Cafe - Piano";
-	dir = 4;
-	pixel_y = 18
+	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -41599,7 +41579,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/light{
+/obj/machinery/light/spot{
 	dir = 1
 	},
 /obj/structure/reagent_dispensers/water_cooler,
@@ -58156,7 +58136,7 @@ wAG
 agR
 alp
 hOm
-sst
+avt
 aln
 aVY
 oFT
@@ -59368,7 +59348,7 @@ wQu
 wQu
 wQu
 wQu
-qMf
+wQu
 aqh
 pnB
 vzV
