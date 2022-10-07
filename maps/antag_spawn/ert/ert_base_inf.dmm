@@ -3636,8 +3636,9 @@
 /area/map_template/rescue_base/office)
 "Dd" = (
 /obj/structure/table/rack,
-/obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser,
+/obj/item/gun/energy/laser/assault,
+/obj/item/gun/energy/laser/assault,
+/obj/item/gun/energy/laser/assault,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
