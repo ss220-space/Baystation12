@@ -307,3 +307,12 @@
 	containername = "security voidsuit crate"
 	containertype = /obj/structure/closet/crate/secure/large
 	access = access_brig
+
+/decl/hierarchy/supply_pack/security/laserassault
+	name = "Weapons - Laser Assault Rifle"
+	contains = list(/obj/item/gun/energy/laser/assault = 3)
+	cost = 130
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "Laser Assault Rifle"
+	access = access_security
+	security_level = SUPPLY_SECURITY_HIGH
