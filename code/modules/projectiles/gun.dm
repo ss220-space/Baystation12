@@ -346,9 +346,9 @@ obj/item/gun/Destroy()
 			pointblank = 0
 
 	//update timing
-	var/delay = min(max(burst_delay+1, fire_delay), DEFAULT_QUICK_COOLDOWN)
+	var/delay = max(burst_delay+1, fire_delay)
 	if(delay)
-		user.setClickCooldown(delay)
+		user.setClickCooldown(min(delay, DEFAULT_QUICK_COOLDOWN))
 	next_fire_time = world.time + delay
 
 //obtains the next projectile to fire
