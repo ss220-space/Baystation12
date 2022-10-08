@@ -59,18 +59,14 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube_map"
-	},
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/command/snz_exterior_dock)
 "ah" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
-/obj/item/rig/military,
-/obj/item/rig/military,
-/obj/item/rig/military,
+/obj/item/rig/droptroops,
+/obj/item/rig/droptroops,
+/obj/item/rig/droptroops,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/barracks/armory)
 "aj" = (
@@ -308,6 +304,8 @@
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 9
 	},
+/obj/item/storage/fancy/cigarettes/yava,
+/obj/item/storage/fancy/cigarettes/prima,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/barracks)
 "aM" = (
@@ -382,9 +380,9 @@
 /turf/simulated/floor/plating,
 /area/map_template/snz)
 "aV" = (
-/obj/item/gun/projectile/pistol/military/alt,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/closet/secure_closet/farfleet/fleet/engi,
+/obj/item/storage/belt/holster/security/tactical/farfleet,
 /turf/simulated/floor/wood/walnut,
 /area/ship/farfleet/crew/fleet)
 "aX" = (
@@ -431,6 +429,7 @@
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
 	},
+/obj/item/storage/fancy/cigarettes/prima,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/barracks)
 "bb" = (
@@ -471,7 +470,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/barracks)
 "be" = (
-/obj/structure/closet/secure_closet/guncabinet/farfleet/assault,
+/obj/structure/closet/secure_closet/guncabinet/farfleet/aks_cabinet,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/barracks/armory)
 "bf" = (
@@ -825,9 +824,9 @@
 /turf/simulated/floor/wood/walnut,
 /area/ship/farfleet/crew/fleet)
 "bS" = (
-/obj/item/gun/projectile/pistol/military/alt,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/closet/secure_closet/farfleet/fleet/med,
+/obj/item/storage/belt/holster/security/tactical/farfleet,
 /turf/simulated/floor/wood/walnut,
 /area/ship/farfleet/crew/fleet)
 "bU" = (
@@ -862,6 +861,7 @@
 /obj/item/gun/projectile/pistol/magnum_pistol,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/closet/secure_closet/farfleet/sergeant,
+/obj/item/storage/fancy/cigarettes/prima,
 /turf/simulated/floor/wood/walnut,
 /area/ship/farfleet/crew/fleet)
 "bX" = (
@@ -912,7 +912,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/snz)
 "cb" = (
-/obj/item/gun/projectile/pistol/magnum_pistol,
 /obj/structure/closet/secure_closet/farfleet/fleet_cpt,
 /turf/simulated/floor/wood/walnut,
 /area/ship/farfleet/crew/captain)
@@ -2834,7 +2833,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/snz)
 "gH" = (
-/obj/structure/decor/random_radio,
+/obj/structure/decor/random_radio{
+	name = "Radio Substation";
+	desc = "Radio substation used for long-range comms"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "gJ" = (
@@ -3532,6 +3534,8 @@
 /obj/effect/floor_decal/carpet/blue2{
 	dir = 8
 	},
+/obj/item/storage/fancy/cigarettes/yava,
+/obj/item/folder/envelope/farfleet,
 /turf/simulated/floor/carpet/blue2,
 /area/ship/farfleet/crew/captain)
 "lU" = (
@@ -3613,12 +3617,6 @@
 /turf/space,
 /area/space)
 "nq" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/critical{
-	name = "south bump";
-	pixel_y = -24;
-	req_access = list("ACCESS_CAVALRY")
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
 /obj/item/stack/material/steel/fifty,
@@ -3645,7 +3643,10 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/structure/decor/comm_tower/starts_on,
+/obj/structure/decor/comm_tower/starts_on{
+	desc = "Long-range Comms tower";
+	name = "Comms Tower"
+	},
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
@@ -4259,12 +4260,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/crew/hallway/upper)
 "uA" = (
-/obj/structure/decor/nt_biocan,
 /obj/structure/railing/mapped,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/decor/nt_biocan{
+	name = "Capacitor";
+	desc = "Capacitor, used for voltage maintaining"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
@@ -4544,6 +4548,10 @@
 "wd" = (
 /obj/effect/floor_decal/corner/darkblue/half{
 	dir = 8
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/paper/turrets{
+	language = "Pan-Slavic"
 	},
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/command/snz_exterior_dock)
@@ -5252,6 +5260,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/reagent_containers/food/snacks/canned/caviar/true,
+/obj/item/reagent_containers/food/snacks/canned/caviar/true,
 /turf/simulated/floor/tiled/freezer,
 /area/ship/farfleet/crew/freezer)
 "De" = (
@@ -5497,10 +5507,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/decor/random_radio,
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
+	},
+/obj/structure/decor/random_radio{
+	name = "Radio Substation";
+	desc = "Radio substation used for long-range comms"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
@@ -5783,6 +5796,7 @@
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
 	},
+/obj/item/storage/fancy/cigarettes/prima,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/barracks)
 "HA" = (
@@ -6503,7 +6517,10 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "Pr" = (
-/obj/structure/decor/nt_biocan,
+/obj/structure/decor/nt_biocan{
+	name = "Capacitor";
+	desc = "Capacitor, used for voltage maintaining"
+	},
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
@@ -6805,7 +6822,6 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
-/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/upper/aft)
 "Sg" = (
@@ -6886,7 +6902,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/catwalk,
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/upper/aft)
@@ -7024,6 +7039,15 @@
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/crew/brig)
+"Ua" = (
+/obj/structure/ladder,
+/obj/structure/catwalk,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube_map"
+	},
+/turf/simulated/open,
+/area/ship/farfleet/command/snz_exterior_dock)
 "Uc" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/cable{
@@ -7091,12 +7115,15 @@
 /turf/simulated/floor/tiled/freezer,
 /area/ship/farfleet/crew/freezer)
 "UW" = (
-/obj/structure/decor/comm_tower/starts_on,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
+	},
+/obj/structure/decor/comm_tower/starts_on{
+	desc = "Long-range Comms tower";
+	name = "Comms Tower"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
@@ -7379,6 +7406,22 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
+"Yc" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/railing/mapped{
+	dir = 1;
+	icon_state = "railing0-1"
+	},
+/obj/structure/decor/nt_biocan{
+	name = "Capacitor";
+	desc = "Capacitor, used for voltage maintaining"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
 "Yd" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -12147,7 +12190,7 @@ TF
 HH
 HH
 hS
-ab
+Gc
 ab
 ab
 aa
@@ -12268,8 +12311,8 @@ et
 TF
 HH
 HH
-Ek
-Gc
+Yc
+aI
 ab
 Lr
 aa
@@ -13584,7 +13627,7 @@ ab
 HH
 IT
 CP
-dn
+Ua
 jJ
 wd
 HH

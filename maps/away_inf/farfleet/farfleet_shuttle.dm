@@ -27,7 +27,7 @@
 	shuttle = "SNZ Speedboat"
 	fore_dir = NORTH
 	color = "#ff7300"
-	vessel_mass = 7000
+	vessel_mass = 11000
 	vessel_size = SHIP_SIZE_SMALL
 	contact_class = /decl/ship_contact_class/destroyer_escort
 
