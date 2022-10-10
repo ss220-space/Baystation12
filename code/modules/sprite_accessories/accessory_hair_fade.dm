@@ -7,22 +7,27 @@
 	disallows = list(/datum/sprite_accessory/marking/hair_fade)
 
 /datum/sprite_accessory/marking/hair_fade/fade_up_short
+	species_allowed = list(SPECIES_HUMAN, SPECIES_RESOMI)
 	name = "Fade (Up, Short)"
 	icon_state = "fade_up_short"
 
 /datum/sprite_accessory/marking/hair_fade/fade_up_long
+	species_allowed = list(SPECIES_HUMAN, SPECIES_RESOMI)
 	name = "Fade (Up, Long)"
 	icon_state = "fade_up_long"
 
 /datum/sprite_accessory/marking/hair_fade/fade_down_short
+	species_allowed = list(SPECIES_HUMAN, SPECIES_RESOMI)
 	name = "Fade (Down, Short)"
 	icon_state = "fade_down_short"
 
 /datum/sprite_accessory/marking/hair_fade/fade_down_long
+	species_allowed = list(SPECIES_HUMAN, SPECIES_RESOMI)
 	name = "Fade (Down, Long)"
 	icon_state = "fade_down_long"
 
 /datum/sprite_accessory/marking/hair_fade/fade_high
+	species_allowed = list(SPECIES_HUMAN, SPECIES_RESOMI)
 	name = "Fade (High)"
 	icon_state = "fade_high"
 

@@ -105,7 +105,8 @@
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/resomi_sonar_ping,
-		/mob/living/proc/toggle_pass_table
+		/mob/living/proc/toggle_pass_table,
+		/mob/proc/switch_tail_layer
 		)
 
 	descriptors = list(
