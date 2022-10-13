@@ -7327,6 +7327,10 @@
 	dir = 1
 	},
 /obj/machinery/photocopier,
+/obj/structure/fireaxecabinet{
+	dir = 4;
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/adjutants)
 "amJ" = (
@@ -8316,7 +8320,32 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/wall/r_wall/prepainted,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "north bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/darkblue/border{
+	dir = 8
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4
+	},
+/obj/structure/table/rack,
+/obj/item/barrier,
+/obj/item/barrier,
+/obj/item/barrier,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/device/multitool,
+/obj/item/aicard,
+/turf/simulated/floor/tiled/dark,
 /area/bridge/adjutants)
 "aob" = (
 /obj/effect/floor_decal/corner/grey/full,
@@ -9285,6 +9314,7 @@
 	},
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/machinery/light/small,
+/obj/item/gun/energy/gun/small/secure,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/adjutants)
 "apv" = (
@@ -9313,22 +9343,14 @@
 	pixel_x = -24
 	},
 /obj/effect/floor_decal/corner/darkblue/mono,
+/obj/item/gun/energy/gun/small/secure,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/adjutants)
 "apx" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -10215,15 +10237,21 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/grey/border{
 	dir = 9
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/wood/walnut,
 /area/bridge/adjutants)
@@ -24575,7 +24603,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/aicard,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/bridge)
 "aNs" = (
@@ -24587,7 +24614,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/bridge)
 "aNt" = (
-/obj/structure/closet/secure_closet/guncabinet/sierra_emergency,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
@@ -26782,14 +26808,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 10
 	},
-/obj/structure/table/rack,
-/obj/item/barrier,
-/obj/item/barrier,
-/obj/structure/fireaxecabinet{
-	dir = 4;
-	pixel_x = -32
-	},
-/obj/item/barrier,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -28114,7 +28132,6 @@
 /area/storage/bridge)
 "aSb" = (
 /obj/effect/floor_decal/techfloor,
-/obj/structure/table/steel_reinforced,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -20
@@ -28122,8 +28139,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/device/multitool,
-/obj/item/storage/toolbox/mechanical,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/bridge)
@@ -42408,6 +42423,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/gun/energy/gun/small/secure,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/adjutants)
 "tqS" = (
