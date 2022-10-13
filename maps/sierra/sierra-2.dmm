@@ -2002,10 +2002,6 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/obj/structure/hygiene/sink{
-	dir = 4;
-	pixel_x = 22
-	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "aed" = (
