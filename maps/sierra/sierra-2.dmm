@@ -5815,10 +5815,6 @@
 	name = "Bar Shutters"
 	},
 /obj/structure/table/steel_reinforced,
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Bartenders'";
-	dir = 8
-	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/bar)
 "akS" = (
@@ -8894,6 +8890,9 @@
 "aqh" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/machinery/recharger,
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
 /turf/simulated/floor/carpet/orange,
 /area/crew_quarters/cafe)
 "aqi" = (
@@ -13360,7 +13359,7 @@
 	id_tag = "hydro<-bar";
 	name = "Hydroponics Shutters";
 	pixel_x = 24;
-	pixel_y = 6;
+	pixel_y = 1;
 	req_access = list("ACCESS_BAR")
 	},
 /obj/machinery/button/blast_door{
@@ -13368,12 +13367,16 @@
 	id_tag = "bar<-cafe";
 	name = "Bar Shutters";
 	pixel_x = 24;
-	pixel_y = -6;
+	pixel_y = -10;
 	req_access = list("ACCESS_BAR")
 	},
 /obj/machinery/jukebox/old,
 /obj/random/date_based/christmas/xmaslights,
 /obj/machinery/light/led/small,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Bartenders'";
+	dir = 8
+	},
 /turf/simulated/floor/wood/ebony,
 /area/crew_quarters/bar)
 "aya" = (
@@ -35845,7 +35848,7 @@
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -23;
-	pixel_y = 12
+	pixel_y = 10
 	},
 /obj/machinery/disposal/small{
 	dir = 4
