@@ -520,5 +520,83 @@ Holographic project of everything else.
 	holopadType = HOLOPAD_LONG_RANGE
 	base_icon = "holopad-Y"
 
+/obj/machinery/hologram/holopad/adminpad
+	name = "long range holopad"
+	desc = "It's a floor-mounted device for projecting holographic images. This one utilizes a bluespace transmitter to communicate with far away locations."
+	icon_state = "holopad-Y0"
+	map_range = 5
+	power_per_hologram = 1000 //per usage per hologram
+	holopadType = HOLOPAD_LONG_RANGE
+	base_icon = "holopad-Y"
+
+/obj/machinery/hologram/holopad/adminpad/attack_hand(var/mob/living/carbon/human/user) //Carn: Hologram requests.
+	if(!istype(user) && !isrobot(user))
+		return
+	if(stat & NOPOWER)
+		return
+	if(incoming_connection)
+		if(QDELETED(connected)) // If the sourcepad was deleted, most likely.
+			end_call()
+			return
+		visible_message("The pad hums quietly as it establishes a connection.")
+		if(caller_id && caller_id.loc != connected.loc)
+			visible_message("The pad flashes an error message. The caller has left their holopad.")
+			return
+		take_call()
+		return
+	else if(connected && !incoming_connection)
+		visible_message("Severing connection to distant holopad.")
+		end_call()
+		return
+	switch(alert(user,"Would you like to request an AI's presence or establish communications with another pad?", "Holopad","AI","Holocomms","Cancel"))
+		if("AI")
+			if(last_request + 200 < world.time) //don't spam the AI with requests you jerk!
+				last_request = world.time
+				to_chat(user, "<span class='notice'>You request an AI's presence.</span>")
+				var/area/area = get_area(src)
+				for(var/mob/living/silicon/ai/AI in GLOB.living_mob_list_)
+					if(!AI.client)	continue
+					to_chat(AI, "<span class='info'>Your presence is requested at <a href='?src=\ref[AI];jumptoholopad=\ref[src]'>\the [area]</a>.</span>")
+			else
+				to_chat(user, "<span class='notice'>A request for AI presence was already sent recently.</span>")
+		if("Holocomms")
+			var/call_type = alert(user, "Would you like to make it a conference call?", "Holopad", "Yes", "No")
+			if(call_type == "Yes")
+				conference = TRUE
+			if(user.loc != src.loc && !conference)
+				to_chat(user, "<span class='info'>Please step onto the holopad.</span>")
+				return
+			if(last_request + 200 < world.time) //don't spam other people with requests either, you jerk!
+				last_request = world.time
+				var/list/holopadlist = list()
+				var/zlevels = GetConnectedZlevels(z)
+				var/zlevels_long = list()
+				if(GLOB.using_map.use_overmap && holopadType == HOLOPAD_LONG_RANGE)
+					for(var/zlevel in map_sectors)
+						var/obj/effect/overmap/visitable/O = map_sectors["[zlevel]"]
+						if(!isnull(O))
+							zlevels_long |= O.map_z
+				for(var/obj/machinery/hologram/holopad/H in SSmachines.machinery)
+					if (H.operable())
+						if(H.z in zlevels)
+							holopadlist["[H.loc.loc.name]"] = H	//Define a list and fill it with the area of every holopad in the world
+						if (H.holopadType == HOLOPAD_LONG_RANGE && (H.z in zlevels_long))
+							holopadlist["[H.loc.loc.name]"] = H	//Define a list and fill it with the area of every holopad in the world
+				holopadlist = sortAssoc(holopadlist)
+				var/temppad = input(user, "Which holopad would you like to contact?", "holopad list") as null|anything in holopadlist
+				var/obj/machinery/hologram/holopad/targetpad = holopadlist["[temppad]"]
+				if(!targetpad)
+					return
+				if(targetpad == src)
+					to_chat(user, "<span class='info'>Using such sophisticated technology, just to talk to yourself seems a bit silly.</span>")
+					return
+				if(targetpad.connected)
+					to_chat(user, "<span class='info'>The pad flashes a busy sign. Maybe you should try again later..</span>")
+					return
+				make_call(targetpad, conference ? null : user)
+			else
+				to_chat(user, "<span class='notice'>A request for holographic communication was already sent recently.</span>")
+
+
 #undef RANGE_BASED
 #undef AREA_BASED
