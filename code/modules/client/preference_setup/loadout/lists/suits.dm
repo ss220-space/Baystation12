@@ -216,6 +216,18 @@
 	display_name = "army overcoat"
 	path = /obj/item/clothing/suit/storage/inf/army_overcoat
 
+/datum/gear/suit/tailcoat
+	display_name = "tailcoat"
+	path = /obj/item/clothing/suit/storage/inf/tailcoat
+
+/datum/gear/suit/faln_jacket
+	display_name = "faln jacket"
+	path = /obj/item/clothing/suit/storage/hooded/faln_jacket
+
+/datum/gear/suit/biker_jacket
+	display_name = "biker jacket"
+	path = /obj/item/clothing/suit/storage/toggle/inf/biker_jacket
+
 /datum/gear/suit/fiery_jacket
 	display_name = "fiery jacket selection"
 	path = /obj/item/clothing/suit/storage/toggle/inf

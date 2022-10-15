@@ -661,6 +661,31 @@
 	icon_state = "gentlecoat"
 	item_state = "gentlecoat"
 
+/obj/item/clothing/suit/storage/inf/tailcoat
+	name = "tailcoat"
+	desc = "A tailcoat."
+	icon_state = "papaleroy_tailcoat"
+	item_state = "papaleroy_tailcoat"
+
+/obj/item/clothing/suit/storage/hooded/faln_jacket
+	name = "faln jacket"
+	desc = "A faln jacket."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "papaleroy_faln_jacket"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	action_button_name = "Toggle Hood"
+	hoodtype = /obj/item/clothing/head/faln_jacket_hood
+
+/obj/item/clothing/head/faln_jacket_hood
+	name = "faln jacket hood"
+	desc = "A hood attached to a faln jacket hood."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(slot_head_str = 'infinity/icons/mob/onmob/onmob_head.dmi')
+	icon_state = "papaleroy_faln_jacket_hood"
+	body_parts_covered = HEAD
+	flags_inv = HIDEEARS | BLOCKHAIR
+
 /*
 /obj/item/clothing/suit/storage/inf/blackjack_jacket
 	name = "blackjack jacket"
@@ -708,3 +733,10 @@
 	icon_state = "white_fiery_jacket"
 	icon_open = "white_fiery_jacket_open"
 	icon_closed = "white_fiery_jacket"
+
+/obj/item/clothing/suit/storage/toggle/inf/biker_jacket
+	name = "biker jacket"
+	desc = "What a jacket."
+	icon_state = "biker_jacket"
+	icon_open = "biker_jacket_open"
+	icon_closed = "biker_jacket"

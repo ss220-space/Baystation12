@@ -31,3 +31,32 @@
 	cowboy_selection_type["classic cowboy boots"] = /obj/item/clothing/shoes/cowboy/classic
 	cowboy_selection_type["snakeskin cowboy boots"] = /obj/item/clothing/shoes/cowboy/snakeskin
 	gear_tweaks += new/datum/gear_tweak/path(cowboy_selection_type)
+
+/datum/gear/shoes/brand_shoes
+	display_name = "brand shoes selection"
+	path = /obj/item/clothing/shoes/brand_shoes
+
+/datum/gear/shoes/brand_shoes/New()
+	..()
+	var/b_shoes = list()
+	b_shoes["brand_shoes1"] = /obj/item/clothing/shoes/brand_shoes
+	b_shoes["brand_shoes2"] = /obj/item/clothing/shoes/brand_shoes/two
+	b_shoes["brand_shoes3"] = /obj/item/clothing/shoes/brand_shoes/three
+	b_shoes["brand_shoes4"] = /obj/item/clothing/shoes/brand_shoes/four
+	b_shoes["brand_shoes5"] = /obj/item/clothing/shoes/brand_shoes/faln
+	gear_tweaks += new/datum/gear_tweak/path(b_shoes)
+
+/datum/gear/shoes/noble_boots
+	display_name = "noble boots"
+	path = /obj/item/clothing/shoes/noble_boots
+
+/datum/gear/shoes/geta
+	display_name = "geta shoes selection"
+	path = /obj/item/clothing/shoes/red_geta
+
+/datum/gear/shoes/geta/New()
+	..()
+	var/get = list()
+	get["red geta"] = /obj/item/clothing/shoes/red_geta
+	get["black geta"] = /obj/item/clothing/shoes/black_geta
+	gear_tweaks += new/datum/gear_tweak/path(get)
