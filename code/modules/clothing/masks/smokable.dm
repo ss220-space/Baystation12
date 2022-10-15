@@ -251,14 +251,14 @@
 	brand = "\improper Yava"
 	color = "#869286"
 	type_butt = /obj/item/trash/cigbutt/jerichos
-	filling = list(/datum/reagent/tobacco/bad = 1.5)
+	filling = list(/datum/reagent/tobacco/bad/yava= 1.5)
 
 /obj/item/clothing/mask/smokable/cigarette/prima
 	name = "dark cigarette"
 	brand = "\improper Prima"
 	color = "#869286"
 	type_butt = /obj/item/trash/cigbutt/jerichos
-	filling = list(/datum/reagent/tobacco/bad = 1.5)
+	filling = list(/datum/reagent/tobacco/bad/soviet = 1.7)
 
 /obj/item/clothing/mask/smokable/cigarette/professionals
 	name = "thin cigarette"
