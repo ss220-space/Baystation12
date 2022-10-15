@@ -148,9 +148,11 @@
 			if(bearing < 0)
 				bearing += 360
 			if(istype(O, /obj/effect/overmap/projectile))
+				if(bearing == 0)
+					return
 				if(bearing <= 179)
-					src.visible_message(SPAN_WARNING("Пуск ракеты, передняя полусфера"))
+					src.visible_message(SPAN_WARNING("<b>[name]</b> states, обнаружен пуск ракеты, передняя полусфера"))
 					playsound(src.loc, 'sound/machines/defib_safetyOff.ogg', 100, 1)
 				if(bearing >= 180)
-					src.visible_message(SPAN_DANGER("Пуск ракеты, задняя полусфера"))
+					src.visible_message(SPAN_DANGER("<b>[name]</b> states, обнаружен пуск ракеты, задняя полусфера"))
 					playsound(src.loc, 'sound/machines/defib_safetyOn.ogg', 100, 1)
