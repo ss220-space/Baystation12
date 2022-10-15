@@ -12,6 +12,7 @@
 	var/working_sound = 'sound/machines/sensors/dradis.ogg'
 	var/datum/sound_token/sound_token
 	var/sound_id
+	var/list/last_scan
 
 // fancy sprite
 /obj/machinery/computer/ship/sensors/adv
@@ -91,9 +92,10 @@
 			if(record)
 				if(!record.identified)
 					continue
-			contacts.Add(list(list("name"=O.scanner_name, "ref"="\ref[O]", "bearing"=bearing)))
+			contacts.Add(list(list("name"=O.scanner_name, "color"= O.color, "ref"="\ref[O]", "bearing"=bearing)))
 		if(contacts.len)
 			data["contacts"] = contacts
+		data["last_scan"] = last_scan
 	else
 		data["status"] = "MISSING"
 		data["range"] = "N/A"
@@ -137,8 +139,18 @@
 	if (href_list["scan"])
 		var/obj/effect/overmap/O = locate(href_list["scan"])
 		if(istype(O) && !QDELETED(O) && (O in view(7,linked)))
-			playsound(loc, "sound/machines/dotprinter.ogg", 30, 1)
-			new/obj/item/paper/(get_turf(src), O.get_scan_data(user), "paper (Sensor Scan - [O])", L = print_language)
+			playsound(loc, "sound/effects/ping.ogg", 50, 1)
+			LAZYSET(last_scan, "data", O.get_scan_data(user))
+			LAZYSET(last_scan, "location", "[O.x],[O.y]")
+			LAZYSET(last_scan, "name", "[O]")
+			to_chat(user, SPAN_NOTICE("Successfully scanned [O]."))
+		else
+			to_chat(user, SPAN_WARNING("Could not get a scan!"))
+		return TOPIC_HANDLED
+
+	if (href_list["print"])
+		playsound(loc, "sound/machines/dotprinter.ogg", 30, 1)
+		new/obj/item/paper/(get_turf(src), last_scan["data"], "paper (Sensor Scan - [last_scan["name"]])")
 		return TOPIC_HANDLED
 
 
