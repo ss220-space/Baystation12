@@ -56,16 +56,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
-"an" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/antispace{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/farfleet/command/launcher)
 "ao" = (
 /obj/structure/noticeboard{
 	dir = 8;
@@ -238,14 +228,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/fussion/control)
-"aF" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/antispace,
-/turf/simulated/floor/reinforced,
-/area/ship/farfleet/command/launcher/north)
 "aG" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/corner/darkblue/half{
@@ -290,7 +272,7 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/atmos_equipment)
 "aK" = (
-/obj/effect/floor_decal/industrial/outline/green,
+/obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/missile/diffusive,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher)
@@ -336,16 +318,6 @@
 	id = "bsa"
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/ship/farfleet/command/launcher/north)
-"aQ" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/he{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "aR" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -636,10 +608,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor,
 /area/ship/farfleet/engineering/atmospherics)
-"bD" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/turf/simulated/floor/reinforced,
-/area/ship/farfleet/command/launcher/north)
 "bE" = (
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "prototype_controller_patrol";
@@ -945,14 +913,14 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/farfleet/engineering/fussion/control)
 "cp" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/obj/structure/missile/impact,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
+/obj/effect/floor_decal/industrial/outline/green,
+/obj/structure/missile/antispace,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "cq" = (
@@ -965,6 +933,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/darkblue/border,
+/obj/item/storage/fancy/cigarettes/yava,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/command/bridge)
 "cu" = (
@@ -1040,14 +1009,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/farfleet/engineering/fussion/control)
-"cF" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/antispace,
-/turf/simulated/floor/reinforced,
-/area/ship/farfleet/command/launcher)
 "cI" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/stack/material/glass/fifty{
@@ -1218,10 +1179,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/crew/comms)
 "cZ" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/obj/structure/missile/impact{
+/obj/structure/missile/antispace{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/green,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher)
 "da" = (
@@ -1668,7 +1629,9 @@
 /turf/simulated/floor/plating,
 /area/ship/farfleet/engineering/fussion/control)
 "dR" = (
-/obj/structure/decor/dominator/blue,
+/obj/structure/decor/dominator/blue{
+	name = "Long-range Relay"
+	},
 /turf/simulated/floor/bluegrid,
 /area/ship/farfleet/crew/comms)
 "dS" = (
@@ -1693,7 +1656,10 @@
 	pixel_x = 22;
 	req_access = list("ACCESS_ICCGN")
 	},
-/obj/structure/decor/nt_solifier/starts_on,
+/obj/structure/decor/nt_solifier/starts_on{
+	desc = "Long-range bluespace hub";
+	name = "Long-range Hub"
+	},
 /turf/simulated/floor/bluegrid,
 /area/ship/farfleet/crew/comms)
 "dW" = (
@@ -2134,7 +2100,6 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/crew)
 "fb" = (
-/obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/missile/he{
 	dir = 4
 	},
@@ -2143,6 +2108,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "fc" = (
@@ -2211,9 +2177,9 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/reactor)
 "fh" = (
-/obj/effect/floor_decal/industrial/outline/orange,
 /obj/machinery/light/spot,
-/obj/structure/missile/impact{
+/obj/effect/floor_decal/industrial/outline/green,
+/obj/structure/missile/antispace{
 	dir = 4
 	},
 /turf/simulated/floor/reinforced,
@@ -2265,9 +2231,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/impact{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -2718,24 +2681,9 @@
 /turf/simulated/floor/plating,
 /area/ship/farfleet/engineering/fussion/control)
 "gh" = (
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
-"gi" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/he{
-	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/farfleet/command/launcher)
 "gk" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor,
@@ -2794,8 +2742,8 @@
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/engine/starboard)
 "gt" = (
-/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/missile/he,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "gu" = (
@@ -3078,7 +3026,10 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/reactor)
 "hf" = (
-/obj/structure/decor/bsb_on,
+/obj/structure/decor/bsb_on{
+	desc = "Bluespace Receiver, a vital part of ship triangulating";
+	name = "Bluespace Receiver"
+	},
 /turf/simulated/floor/bluegrid,
 /area/ship/farfleet/crew/comms)
 "hg" = (
@@ -3232,7 +3183,6 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/hallway)
 "hx" = (
-/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/missile/he{
 	dir = 4
 	},
@@ -3250,6 +3200,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "hA" = (
@@ -3366,8 +3317,8 @@
 /turf/simulated/wall/r_wall,
 /area/ship/farfleet/crew/kitchen)
 "hY" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/obj/structure/missile/impact,
+/obj/effect/floor_decal/industrial/outline/green,
+/obj/structure/missile/antispace,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher)
 "ia" = (
@@ -3501,13 +3452,13 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/fussion/control)
 "iC" = (
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/missile/he,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher)
 "iG" = (
-/obj/effect/floor_decal/industrial/outline/green,
 /obj/structure/missile/diffusive,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "iI" = (
@@ -3791,14 +3742,6 @@
 /obj/effect/paint/hull,
 /turf/simulated/wall/ocp_wall,
 /area/ship/farfleet/command/bsd)
-"jP" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/he,
-/turf/simulated/floor/reinforced,
-/area/ship/farfleet/command/launcher/north)
 "jR" = (
 /obj/structure/table/standard,
 /obj/machinery/vending/wallmed1{
@@ -3981,6 +3924,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
+/obj/item/storage/fancy/cigarettes/prima,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/crew/brig/emergency_armory)
 "kx" = (
@@ -5266,13 +5210,13 @@
 /turf/simulated/floor,
 /area/ship/farfleet/engineering/fussion/control)
 "oo" = (
-/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "op" = (
@@ -5788,6 +5732,10 @@
 	},
 /turf/simulated/wall/r_titanium,
 /area/ship/farfleet/command/launcher)
+"qg" = (
+/obj/structure/closet/bombcloset,
+/turf/simulated/floor/tiled/dark,
+/area/ship/farfleet/command/launcher)
 "qj" = (
 /obj/structure/showcase{
 	desc = "A bewilderingly complex prototype designed to split the fabric of spacetime and allow access to Bluespace.";
@@ -5837,7 +5785,7 @@
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/lower)
 "qB" = (
-/obj/effect/floor_decal/industrial/outline/blue,
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/missile/he{
 	dir = 4
 	},
@@ -5897,7 +5845,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/command/eva)
 "rq" = (
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -5940,6 +5888,7 @@
 /area/ship/farfleet/medbay)
 "rU" = (
 /obj/structure/table/steel_reinforced,
+/obj/item/hand_labeler,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/command/launcher/north)
 "rV" = (
@@ -5978,6 +5927,14 @@
 	},
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/engine/starboard)
+"sd" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/obj/item/storage/fancy/cigarettes/prima,
+/turf/simulated/floor/tiled/white,
+/area/ship/farfleet/crew/kitchen)
 "se" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -6117,6 +6074,7 @@
 /area/space)
 "sS" = (
 /obj/structure/table/steel_reinforced,
+/obj/item/hand_labeler,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/command/launcher)
 "sV" = (
@@ -6316,7 +6274,12 @@
 /turf/simulated/floor,
 /area/turbolift/farfleet_first)
 "uL" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
 /obj/machinery/light,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher)
@@ -6372,7 +6335,7 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/farfleet/crew/kitchen)
 "vr" = (
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -6417,6 +6380,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/command/bridge)
+"vX" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/obj/item/storage/fancy/cigarettes/yava,
+/turf/simulated/floor/tiled/white,
+/area/ship/farfleet/crew/kitchen)
 "vZ" = (
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/crew)
@@ -6710,10 +6681,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/crew/hallway/lower)
-"xW" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/turf/simulated/floor/reinforced,
-/area/ship/farfleet/command/launcher)
 "xY" = (
 /turf/simulated/floor/bluegrid,
 /area/ship/farfleet/command/bsd)
@@ -7058,17 +7025,6 @@
 /obj/effect/floor_decal/corner/darkblue/three_quarters{
 	dir = 4
 	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/window{
-	dir = 8
-	},
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/dock)
 "AB" = (
@@ -7134,7 +7090,7 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/crew/hallway/lower)
 "Bc" = (
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/missile/he{
 	dir = 4
 	},
@@ -7235,7 +7191,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/antispace,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -7270,7 +7225,7 @@
 /turf/simulated/wall/r_wall,
 /area/ship/farfleet/maintenance/engine/port)
 "Cm" = (
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/missile/he,
 /obj/structure/cable{
 	d1 = 1;
@@ -7355,7 +7310,7 @@
 /turf/simulated/wall/r_wall,
 /area/ship/farfleet/engineering/fussion/control)
 "Dk" = (
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher)
 "Du" = (
@@ -8197,7 +8152,12 @@
 /turf/simulated/wall/r_wall,
 /area/ship/farfleet/command/launcher)
 "Kk" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -8427,13 +8387,13 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/command/eva)
 "Mu" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/obj/structure/missile/impact,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/outline/green,
+/obj/structure/missile/antispace,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher)
 "Mv" = (
@@ -8991,15 +8951,14 @@
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/lower/starboard)
 "QO" = (
-/obj/effect/floor_decal/industrial/danger/corner,
-/obj/effect/floor_decal/industrial/danger/corner{
-	dir = 4
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
 	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/farfleet/command/launcher)
+/obj/item/mop,
+/obj/item/reagent_containers/glass/bucket,
+/turf/simulated/floor,
+/area/ship/farfleet/maintenance/lower)
 "Ra" = (
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/r_wall,
@@ -9077,10 +9036,10 @@
 /turf/simulated/wall/r_titanium,
 /area/ship/farfleet/command/launcher)
 "RD" = (
-/obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "RI" = (
@@ -9350,7 +9309,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/danger,
-/obj/structure/missile/antispace,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -9950,7 +9908,6 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/crew/hallway/lower)
 "XF" = (
-/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/missile/he,
 /obj/structure/cable{
 	d1 = 1;
@@ -9958,6 +9915,7 @@
 	icon_state = "1-8";
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "XK" = (
@@ -10167,6 +10125,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/command/bridge)
+"YV" = (
+/obj/structure/closet/bombcloset,
+/turf/simulated/floor/tiled/dark,
+/area/ship/farfleet/command/launcher/north)
 "YW" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -10194,8 +10156,8 @@
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/crew/hallway/lower)
 "YZ" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/obj/structure/missile/impact,
+/obj/effect/floor_decal/industrial/outline/green,
+/obj/structure/missile/antispace,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "Zf" = (
@@ -14955,7 +14917,7 @@ kN
 fb
 fm
 hx
-aQ
+lE
 fh
 LD
 cw
@@ -14981,9 +14943,9 @@ kq
 lH
 vy
 cZ
-an
+Zn
 Bc
-gi
+TI
 qB
 pV
 pV
@@ -15074,11 +15036,11 @@ aa
 aa
 LD
 LD
-fM
+gh
 lE
 oo
 lE
-bD
+iK
 LD
 mY
 mY
@@ -15102,11 +15064,11 @@ rK
 kq
 kq
 vy
-xW
+EE
 Zn
 rq
 Zn
-Qn
+Dk
 vy
 vy
 aa
@@ -15196,7 +15158,7 @@ aa
 aa
 LD
 LD
-Kk
+bq
 lE
 tQ
 lE
@@ -15228,7 +15190,7 @@ Mv
 Zn
 wz
 Zn
-uL
+tr
 vy
 vy
 aa
@@ -15318,7 +15280,7 @@ aa
 aa
 LD
 LD
-pm
+Kk
 Ir
 Tg
 nP
@@ -15347,10 +15309,10 @@ kq
 FR
 kq
 Ji
-QO
+zz
 sr
 zz
-Ji
+uL
 vy
 vy
 aa
@@ -15563,7 +15525,7 @@ aa
 LD
 LD
 iG
-jP
+lE
 XF
 Ce
 cp
@@ -15593,7 +15555,7 @@ VL
 Mu
 TI
 Cm
-cF
+Zn
 aK
 vy
 vy
@@ -15684,11 +15646,11 @@ aa
 aa
 LD
 LD
-iK
+fM
 lE
 gh
 lE
-bD
+iK
 mY
 mY
 DH
@@ -15712,11 +15674,11 @@ OH
 Tc
 kq
 kq
-xW
+EE
 Zn
 Dk
 Zn
-EE
+Qn
 vy
 vy
 aa
@@ -15807,10 +15769,10 @@ aa
 LD
 LD
 Kk
-lE
+nP
 bq
-lE
-bq
+nP
+pm
 hJ
 TB
 TB
@@ -15834,10 +15796,10 @@ bP
 bP
 bP
 Bf
+Ji
+zz
 tr
-Zn
-tr
-Zn
+zz
 uL
 vy
 vy
@@ -15929,9 +15891,9 @@ aa
 LD
 LD
 iG
-jP
+lE
 gt
-aF
+lE
 YZ
 mY
 TB
@@ -15957,9 +15919,9 @@ JK
 bP
 kq
 hY
-cF
+Zn
 iC
-cF
+Zn
 aK
 vy
 vy
@@ -16050,12 +16012,12 @@ aa
 aa
 LD
 LD
-iK
+fM
 lE
 RD
 lE
-bD
-mY
+iK
+YV
 TB
 sN
 xN
@@ -16077,12 +16039,12 @@ rS
 kP
 ug
 bP
-kq
-xW
+qg
+EE
 Zn
 vr
 Zn
-EE
+Qn
 vy
 vy
 aa
@@ -17523,7 +17485,7 @@ dz
 pi
 dg
 vq
-dY
+sd
 dY
 eS
 fp
@@ -17768,7 +17730,7 @@ pi
 HC
 dC
 dY
-dY
+vX
 eS
 ft
 fP
@@ -18883,7 +18845,7 @@ qn
 Bz
 SI
 sa
-Sv
+QO
 Bz
 aa
 aa
