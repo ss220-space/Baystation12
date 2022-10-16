@@ -8,8 +8,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/farfleet/antitank/WillContain()
 	return list(
-		/obj/item/gun/launcher/rocket = 1,
-		/obj/item/ammo_casing/rocket = 5,
+		/obj/item/gun/launcher/rocket/rpg18 = 3,
 		/obj/item/gun/magnetic/railgun/tcc  = 2
 	)
 
