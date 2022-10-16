@@ -749,7 +749,7 @@
 
 /obj/item/clothing/suit/storage/toggle/inf/the_jacket
 	name = "the jacket"
-	desc = "The jacket."
+	desc = "Stylish jacket for a real hero. Just like me."
 	icon_state = "the_jacket"
 	icon_open = "the_jacket_open"
 	icon_closed = "the_jacket"
