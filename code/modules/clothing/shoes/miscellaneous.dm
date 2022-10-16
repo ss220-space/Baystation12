@@ -356,7 +356,7 @@ obj/item/clothing/shoes/heels/red
 
 /obj/item/clothing/shoes/noble_boots
 	name = "noble boots"
-	desc = "noble boots"
+	desc = "Polished leather boots that would rather fit some Avalonian nobleman."
 	icon = 'infinity/icons/obj/clothing/obj_feet.dmi'
 	item_icons = list(slot_shoes_str = 'infinity/icons/mob/onmob/onmob_feet.dmi')
 	icon_state = "noble_boots"
