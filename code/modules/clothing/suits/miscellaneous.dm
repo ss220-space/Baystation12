@@ -669,7 +669,7 @@
 
 /obj/item/clothing/suit/storage/hooded/faln_jacket
 	name = "faln jacket"
-	desc = "A faln jacket."
+	desc = "A very special piece of sports apparel, this jacket is warm, completely water and wind proof, and provides the air circulation through the membrane in its inner shell."
 	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
 	icon_state = "papaleroy_faln_jacket"
