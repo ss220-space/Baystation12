@@ -109,7 +109,7 @@
 	var/hoodtype = null
 	var/suittoggled = 0
 	name = "crimson cloak"
-	desc = "A simple crimson cloak."
+	desc = "A huge crimson cloak. Its outer shell is made of heavy and durable tarp-like material, and the inner shell is made of very warm and comfortable fleece."
 	icon_state = "crimson_cloak"
 	item_state = "crimson_cloak"
 	action_button_name = "Toggle Hood"
