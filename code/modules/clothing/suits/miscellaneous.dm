@@ -736,7 +736,7 @@
 
 /obj/item/clothing/suit/storage/toggle/inf/biker_jacket
 	name = "biker jacket"
-	desc = "What a jacket."
+	desc = "A common atribute for the rockers, rebels, and punks alike."
 	icon_state = "biker_jacket"
 	icon_open = "biker_jacket_open"
 	icon_closed = "biker_jacket"
