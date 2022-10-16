@@ -2251,13 +2251,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/ship/farfleet/crew/kitchen)
-"fp" = (
-/obj/effect/paint/dark_gunmetal,
-/obj/machinery/vending/coffee/small{
-	pixel_y = -4
-	},
-/turf/simulated/wall,
-/area/ship/farfleet/crew/kitchen)
 "fq" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
 	dir = 4
@@ -17341,7 +17334,7 @@ ng
 tw
 BZ
 yC
-fp
+pi
 dc
 ex
 ex
