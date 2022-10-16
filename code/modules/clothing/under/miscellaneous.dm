@@ -1072,7 +1072,7 @@
 
 /obj/item/clothing/under/inf/faln_trousers
 	name = "faln trousers"
-	desc = "faln trousers"
+	desc = "These athletic pants are truly a masterpiece as they perfectly fit for any type of figure."
 	icon_state = "papaleroy_faln_trousers"
 	item_state = "papaleroy_faln_trousers"
 
