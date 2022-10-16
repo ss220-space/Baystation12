@@ -322,7 +322,7 @@ obj/item/clothing/shoes/heels/red
 
 /obj/item/clothing/shoes/brand_shoes/three
 	name = "brand shoes"
-	desc = "brand_shoes"
+	desc = "Some sneakers with pretty much distinctive fashion."
 	icon_state = "brand_shoes3"
 	item_state = "brand_shoes3"
 
