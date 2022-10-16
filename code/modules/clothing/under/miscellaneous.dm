@@ -1052,7 +1052,7 @@
 
 /obj/item/clothing/under/inf/aristo
 	name = "aristo uniform"
-	desc = "Aristo uniform"
+	desc = "Delicately sewn, this suit is magnificently fine and very expensive. Not for just any bourgeois."
 	icon_state = "papaleroy_aristo_suit"
 	item_state = "papaleroy_aristo_suit"
 
