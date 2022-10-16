@@ -224,9 +224,13 @@
 	display_name = "faln jacket"
 	path = /obj/item/clothing/suit/storage/hooded/faln_jacket
 
-/datum/gear/suit/biker_jacket
-	display_name = "biker jacket"
-	path = /obj/item/clothing/suit/storage/toggle/inf/biker_jacket
+/datum/gear/suit/drive_jacket
+	display_name = "drive jacket"
+	path = /obj/item/clothing/suit/storage/inf/drive_jacket
+
+/datum/gear/suit/the_jacket
+	display_name = "the jacket"
+	path = /obj/item/clothing/suit/storage/toggle/inf/the_jacket
 
 /datum/gear/suit/fiery_jacket
 	display_name = "fiery jacket selection"

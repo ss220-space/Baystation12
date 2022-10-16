@@ -667,6 +667,12 @@
 	icon_state = "papaleroy_tailcoat"
 	item_state = "papaleroy_tailcoat"
 
+/obj/item/clothing/suit/storage/inf/drive_jacket
+	name = "drive jacket"
+	desc = "Drive jacket"
+	icon_state = "drive_jacket"
+	item_state = "drive_jacket"
+
 /obj/item/clothing/suit/storage/hooded/faln_jacket
 	name = "faln jacket"
 	desc = "A very special piece of sports apparel, this jacket is warm, completely water and wind proof, and provides the air circulation through the membrane in its inner shell."
@@ -740,3 +746,10 @@
 	icon_state = "biker_jacket"
 	icon_open = "biker_jacket_open"
 	icon_closed = "biker_jacket"
+
+/obj/item/clothing/suit/storage/toggle/inf/the_jacket
+	name = "the jacket"
+	desc = "The jacket."
+	icon_state = "the_jacket"
+	icon_open = "the_jacket_open"
+	icon_closed = "the_jacket"

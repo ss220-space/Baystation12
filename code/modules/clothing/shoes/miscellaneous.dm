@@ -326,8 +326,8 @@ obj/item/clothing/shoes/heels/red
 	icon_state = "brand_shoes3"
 	item_state = "brand_shoes3"
 
-/obj/item/clothing/shoes/brand_shoes/four
-	name = "brand shoes"
+/obj/item/clothing/shoes/brand_shoes/antiquated
+	name = "antiquated shoes"
 	desc = "Some sneakers with pretty much distinctive fashion."
 	icon_state = "antiquated_shoes"
 	item_state = "antiquated_shoes"

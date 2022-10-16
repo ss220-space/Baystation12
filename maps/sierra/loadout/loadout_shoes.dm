@@ -39,12 +39,15 @@
 /datum/gear/shoes/brand_shoes/New()
 	..()
 	var/b_shoes = list()
-	b_shoes["brand_shoes1"] = /obj/item/clothing/shoes/brand_shoes
-	b_shoes["brand_shoes2"] = /obj/item/clothing/shoes/brand_shoes/two
-	b_shoes["brand_shoes3"] = /obj/item/clothing/shoes/brand_shoes/three
-	b_shoes["brand_shoes4"] = /obj/item/clothing/shoes/brand_shoes/four
-	b_shoes["brand_shoes5"] = /obj/item/clothing/shoes/brand_shoes/faln
+	b_shoes["white yellow shoes"] = /obj/item/clothing/shoes/brand_shoes
+	b_shoes["black red shoes"] = /obj/item/clothing/shoes/brand_shoes/two
+	b_shoes["black shoes"] = /obj/item/clothing/shoes/brand_shoes/three
+	b_shoes["faln shoes"] = /obj/item/clothing/shoes/brand_shoes/faln
 	gear_tweaks += new/datum/gear_tweak/path(b_shoes)
+
+/datum/gear/shoes/antiquated
+	display_name = "antiquated shoes"
+	path = /obj/item/clothing/shoes/brand_shoes/antiquated
 
 /datum/gear/shoes/noble_boots
 	display_name = "noble boots"
