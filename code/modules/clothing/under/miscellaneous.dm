@@ -1058,7 +1058,7 @@
 
 /obj/item/clothing/under/inf/milsim
 	name = "milsim uniform"
-	desc = "Milsim uniform"
+	desc = "Set of milsim navy fatigues which is very common in many of surplus stores."
 	icon_state = "papaleroy_milsim"
 	item_state = "papaleroy_milsim"
 
