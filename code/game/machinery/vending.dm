@@ -499,7 +499,7 @@
 	SSnano.update_uis(src)
 
 /obj/machinery/vending/Process()
-	if(stat & (BROKEN|NOPOWER))
+	if(inoperable())
 		return
 
 	if(!src.active)
@@ -519,8 +519,8 @@
 
 	return
 
-/obj/machinery/vending/proc/speak(var/message)
-	if(stat & NOPOWER)
+/obj/machinery/vending/proc/speak(message)
+	if(!is_powered())
 		return
 
 	if (!message)
@@ -1417,6 +1417,8 @@
 	products = list(
 					/obj/item/reagent_containers/food/drinks/cans/syndicola = 50,
 					/obj/item/reagent_containers/food/drinks/cans/syndicolax = 30,
+					/obj/item/reagent_containers/food/drinks/cans/kompot = 20,
+					/obj/item/reagent_containers/food/drinks/cans/kvass = 20,
 					/obj/item/reagent_containers/food/drinks/cans/artbru = 20,
 					/obj/item/reagent_containers/food/drinks/glass2/square/boda = 20,
 					/obj/item/reagent_containers/food/drinks/glass2/square/bodaplus = 20
