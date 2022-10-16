@@ -1064,7 +1064,7 @@
 
 /obj/item/clothing/under/inf/rubywhite
 	name = "rubywhite uniform"
-	desc = "Rubywhite uniform"
+	desc = "Scarlet shirt accompained with white slacks held with suspenders."
 	icon_state = "papaleroy_rubywhite"
 	item_state = "papaleroy_rubywhite"
 	worn_state = "papaleroy_rubywhite"
