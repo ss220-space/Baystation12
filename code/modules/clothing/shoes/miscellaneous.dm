@@ -334,7 +334,7 @@ obj/item/clothing/shoes/heels/red
 
 /obj/item/clothing/shoes/brand_shoes/faln
 	name = "faln shoes"
-	desc = "faln shoes"
+	desc = "The trekking sneakers that provide nigh-perfect ankle support and traction on any type of terrain."
 	icon_state = "papaleroy_faln_sneakers"
 	item_state = "papaleroy_faln_sneakers"
 
