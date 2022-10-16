@@ -308,7 +308,7 @@ obj/item/clothing/shoes/heels/red
 
 /obj/item/clothing/shoes/brand_shoes
 	name = "brand shoes"
-	desc = "brand_shoes"
+	desc = "Some sneakers with pretty much distinctive fashion."
 	icon = 'infinity/icons/obj/clothing/obj_feet.dmi'
 	item_icons = list(slot_shoes_str = 'infinity/icons/mob/onmob/onmob_feet.dmi')
 	icon_state = "brand_shoes1"
