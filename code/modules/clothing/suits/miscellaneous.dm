@@ -663,7 +663,7 @@
 
 /obj/item/clothing/suit/storage/inf/tailcoat
 	name = "tailcoat"
-	desc = "A tailcoat."
+	desc = "A very delicate tailcoat, it imbues its wearer with vibe of snobbery and excessive self-importance."
 	icon_state = "papaleroy_tailcoat"
 	item_state = "papaleroy_tailcoat"
 
