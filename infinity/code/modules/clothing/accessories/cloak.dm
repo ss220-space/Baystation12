@@ -101,7 +101,7 @@
 
 /obj/item/clothing/accessory/cloak/antiq
 	name = "antiquated cape"
-	desc = "A simple antiquated cape."
+	desc = "This cape is so much aged that you can almost think it's a relic."
 	icon_state = "antiquated_cape"
 
 /obj/item/clothing/accessory/cloak/hooded
