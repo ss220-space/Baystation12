@@ -340,7 +340,7 @@ obj/item/clothing/shoes/heels/red
 
 /obj/item/clothing/shoes/red_geta
 	name = "red geta"
-	desc = "red geta"
+	desc = "These sandals originate from culture of Japan and are meant to be an accompaniment for kimonos."
 	icon = 'infinity/icons/obj/clothing/obj_feet.dmi'
 	item_icons = list(slot_shoes_str = 'infinity/icons/mob/onmob/onmob_feet.dmi')
 	icon_state = "red_geta"
