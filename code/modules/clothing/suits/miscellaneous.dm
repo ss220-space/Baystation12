@@ -669,7 +669,7 @@
 
 /obj/item/clothing/suit/storage/inf/drive_jacket
 	name = "drive jacket"
-	desc = "Drive jacket"
+	desc = "Stylish jacket for a real hero. Just like me."
 	icon_state = "drive_jacket"
 	item_state = "drive_jacket"
 
