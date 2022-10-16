@@ -1068,6 +1068,7 @@
 	icon_state = "papaleroy_rubywhite"
 	item_state = "papaleroy_rubywhite"
 	worn_state = "papaleroy_rubywhite"
+	gender_icons = 1
 	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
 
 /obj/item/clothing/under/inf/faln_trousers
