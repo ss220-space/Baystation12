@@ -13,7 +13,7 @@
 	var/servo_cost = 0.8
 
 /obj/item/organ/internal/cell/print
-	cell = /obj/item/cell/super
+	cell = /obj/item/cell/high
 
 /obj/item/organ/internal/cell/New()
 	robotize()
