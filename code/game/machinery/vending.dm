@@ -91,7 +91,6 @@
 
 	update_icon()
 	build_inventory(populate_parts)
-	update_icon()
 
 /**
  *  Build src.produdct_records from the products lists
