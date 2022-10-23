@@ -25,3 +25,9 @@
 	head = /obj/item/clothing/head/wizard/marisa
 	suit = /obj/item/clothing/suit/wizrobe/marisa
 	shoes = /obj/item/clothing/shoes/sandal/marisa
+
+/decl/hierarchy/outfit/wizard/bondrewd
+	name = "Wizard - Bondrewd"
+	head = /obj/item/clothing/head/wizard/bondrewd_wiz
+	suit = /obj/item/clothing/suit/wizrobe/bondrewd
+	shoes = /obj/item/clothing/suit/wizrobe/bondrewd

@@ -59,6 +59,12 @@
 	desc = "An energized net meant to subdue animals."
 	net_type = /obj/effect/energy_net/safari
 
+/obj/item/energy_net/psionic
+	name = "psionic net"
+	icon = 'icons/effects/razorweb.dmi'
+	icon_state = "wad"
+	net_type = /obj/effect/energy_net/psionic
+
 /obj/item/energy_net/dropped()
 	..()
 	spawn(10)
@@ -113,6 +119,23 @@
 	temporary = 0
 	min_free_time = 5
 	max_free_time = 10
+
+/obj/effect/energy_net/psionic
+	name = "psionic net"
+	desc = "Psychokinetic net. Manifestation of psionic's will to capture someone."
+	icon = 'icons/effects/razorweb.dmi'
+	icon_state = "razorweb"
+
+	density = TRUE
+	opacity = 0
+	mouse_opacity = 1
+	anchored = TRUE
+	can_buckle = 0 //no manual buckling or unbuckling
+	health = 15
+	countdown = 10
+	temporary = 1
+	min_free_time = 35
+	max_free_time = 60
 
 /obj/effect/energy_net/teleport
 	countdown = 60

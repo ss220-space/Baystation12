@@ -13,9 +13,9 @@
 	var/operating = FALSE
 	var/list/boosted_faculties
 	var/boosted_rank = PSI_RANK_PARAMOUNT
-	var/unboosted_rank = PSI_RANK_MASTER
+	var/unboosted_rank = PSI_RANK_GRANDMASTER
 	var/max_boosted_faculties = 3
-	var/boosted_psipower = 120
+	var/boosted_psipower = 100
 	tint = 0 //INF, WAS NOTHING (0) (we have tint = 2 at space helmets)
 
 /obj/item/clothing/head/helmet/space/psi_amp/lesser
@@ -28,7 +28,7 @@
 	max_boosted_faculties = 2
 	boosted_rank = PSI_RANK_MASTER
 	unboosted_rank = PSI_RANK_OPERANT
-	boosted_psipower = 50
+	boosted_psipower = 60
 
 /obj/item/clothing/head/helmet/space/psi_amp/Initialize()
 	. = ..()
