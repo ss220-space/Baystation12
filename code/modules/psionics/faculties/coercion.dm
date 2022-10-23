@@ -212,7 +212,7 @@
 			user.psi.backblast(rand(5,10))
 			return TRUE
 		to_chat(user, SPAN_WARNING("You clear \the [target]'s mind of ailments."))
-		to_chat(target, SPAN_WARNING("Your mind is cleared of ailments."))
+		to_chat(target, SPAN_WARNING("You feel like your mind became more focused. Your mind became empty from any worries and strong feelings. If there was any psychological aligments in your mind, they're gone. At least for now."))
 
 		var/coercion_rank = user.psi.get_rank(PSI_COERCION)
 		if(coercion_rank >= PSI_RANK_GRANDMASTER)
@@ -222,3 +222,49 @@
 			var/mob/living/carbon/M = target
 			M.adjust_hallucination(-30)
 		return TRUE
+
+/decl/psionic_power/coercion/commune
+	name =              "Commune"
+	cost =              15
+	cooldown =          10
+	use_melee =         TRUE
+	use_ranged =        TRUE
+	min_rank =          PSI_RANK_OPERANT
+	use_description =   "Target the mouth and click on a creature on disarm intent to psionically send them a message."
+
+/decl/psionic_power/coercion/commune/invoke(var/mob/living/user, var/mob/living/target)
+	if((target == user) || user.zone_sel.selecting != BP_MOUTH)
+		return FALSE
+	. = ..()
+	if(.)
+		user.visible_message(SPAN_NOTICE("<i>[user] blinks, their eyes briefly developing an unnatural shine.</i>"))
+		if(target.stat == DEAD)
+			to_chat(user, SPAN_OCCULT("Not even a psion of your level can speak to the dead."))
+			return
+
+		var/text =  input(user, "Speak someting", "Send Message", "Commune") as null|text
+		text = sanitize(text)
+		if(!text)
+			return
+		if( user.incapacitated() || !do_after(user, 20))
+			return TRUE
+
+		if(target.stat == DEAD)
+			to_chat(user, SPAN_OCCULT("Not even a psion of your level can speak to the dead."))
+			return
+
+		log_say("[key_name(user)] communed to [key_name(target)]: [text]",ckey=key_name(src))
+
+		to_chat(user, SPAN_OCCULT("You psionically say to [target]: [text]"))
+
+		for (var/mob/M in GLOB.player_list)
+			if (istype(M, /mob/new_player))
+				continue
+			else if(M.stat == DEAD && !M.client.prefs.muted & MUTE_DEADCHAT)
+				to_chat(M, "<span class='notice'>[user] psionically says to [target]:</span> [text]")
+
+		var/mob/living/carbon/human/H = target
+		if(H.psi)
+			to_chat(H, SPAN_OCCULT("<b>You instinctively sense [user] passing a thought into your mind:</b> [text]"))
+		else
+			to_chat(H, SPAN_ALIEN("<b>A thought from outside your consciousness slips into your mind:</b> [text]"))

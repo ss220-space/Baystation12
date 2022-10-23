@@ -199,6 +199,12 @@
 	icon_state = "black"
 	body_parts_covered = FEET
 
+/obj/item/clothing/shoes/bondrewd
+	desc = "A pair of durable shoes. Them must belongs to a dedicated scientist."
+	name = "abyssal boots"
+	icon_state = "boris_boots"
+	body_parts_covered = FEET
+
 /obj/item/clothing/shoes/clown_shoes
 	desc = "The prankster's standard-issue clowning shoes. Damn they're huge!"
 	name = "clown shoes"

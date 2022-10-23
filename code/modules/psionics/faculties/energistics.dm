@@ -51,15 +51,15 @@
 				charging_cell.give(rand(15,45))
 			return TRUE
 
-/decl/psionic_power/energistics/zorch
-	name =             "Zorch"
+/decl/psionic_power/energistics/psibeam
+	name =             "Psi Beam"
 	cost =             20
 	cooldown =         20
 	use_ranged =       TRUE
 	min_rank =         PSI_RANK_MASTER
 	use_description = "Use this ranged laser attack while on harm intent. Your mastery of Energistics will determine how powerful the laser is. Be wary of overuse, and try not to fry your own brain."
 
-/decl/psionic_power/energistics/zorch/invoke(var/mob/living/user, var/mob/living/target)
+/decl/psionic_power/energistics/psibeam/invoke(var/mob/living/user, var/mob/living/target)
 	. = ..()
 	if(.)
 		user.visible_message("<span class='danger'>\The [user]'s eyes flare with light!</span>")
@@ -70,17 +70,17 @@
 
 		switch(user_rank)
 			if(PSI_RANK_PARAMOUNT)
-				pew = new /obj/item/projectile/beam/heavylaser(get_turf(user))
-				pew.name = "gigawatt mental laser"
-				pew_sound = 'sound/weapons/lasercannonfire.ogg'
+				pew = new /obj/item/projectile/beam/psibeam/large(get_turf(user))
+				pew.name = "bright psionic beam"
+				pew_sound = 'sound/weapons/Laser2.ogg'
 			if(PSI_RANK_GRANDMASTER)
-				pew = new /obj/item/projectile/beam/midlaser(get_turf(user))
-				pew.name = "megawatt mental laser"
-				pew_sound = 'sound/weapons/Laser.ogg'
+				pew = new /obj/item/projectile/beam/psibeam(get_turf(user))
+				pew.name = "psionic beam"
+				pew_sound = 'sound/weapons/Laser2.ogg'
 			if(PSI_RANK_MASTER)
-				pew = new /obj/item/projectile/beam/stun(get_turf(user))
-				pew.name = "mental laser"
-				pew_sound = 'sound/weapons/Taser.ogg'
+				pew = new /obj/item/projectile/beam/psibeam/small(get_turf(user))
+				pew.name = "dim psionic beam"
+				pew_sound = 'sound/weapons/Laser2.ogg'
 
 		if(istype(pew))
 			playsound(pew.loc, pew_sound, 25, 1)
