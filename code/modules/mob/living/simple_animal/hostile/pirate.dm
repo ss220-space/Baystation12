@@ -18,7 +18,6 @@
 	natural_weapon = /obj/item/melee/energy/sword/pirate/activated
 	unsuitable_atmos_damage = 15
 	var/corpse = /obj/effect/landmark/corpse/pirate
-	var/weapon1 = /obj/item/melee/energy/sword/pirate
 
 	faction = "pirate"
 
@@ -34,7 +33,6 @@
 	rapid = 1
 	projectiletype = /obj/item/projectile/beam
 	corpse = /obj/effect/landmark/corpse/pirate/ranged
-	weapon1 = /obj/item/gun/energy/laser
 
 	ai_holder_type = /datum/ai_holder/simple_animal/pirate/ranged
 
@@ -42,8 +40,6 @@
 	..(gibbed, deathmessage, show_dead_message)
 	if(corpse)
 		new corpse (src.loc)
-	if(weapon1)
-		new weapon1 (src.loc)
 	qdel(src)
 	return
 
