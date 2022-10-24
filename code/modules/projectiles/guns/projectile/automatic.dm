@@ -468,6 +468,15 @@
 		list(mode_name="semi auto",       burst=1, fire_delay=2,      one_hand_penalty=8, burst_accuracy=null, dispersion=null)
 		)
 
+/obj/item/gun/projectile/automatic/semistrip/on_update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "semistrip"
+		wielded_item_state = "semistrip-wielded"
+	else
+		icon_state = "semistrip-empty"
+		wielded_item_state = "semistrip-wielded"
+
 /obj/item/gun/projectile/automatic/akrifle
 	name = "\improper SkM-44(k)"
 	desc = "An obsolete assault rifle seized from some frontier armory and extensively modified to ICCG standards. Chambered in 7.62x39mm.."
