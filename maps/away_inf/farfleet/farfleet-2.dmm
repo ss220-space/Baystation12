@@ -1268,7 +1268,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/snz)
 "cR" = (
-/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/wallframe_spawn/no_grille,
 /turf/simulated/floor,
 /area/ship/farfleet/crew/captain)
 "cU" = (
