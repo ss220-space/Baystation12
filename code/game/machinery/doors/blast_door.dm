@@ -332,7 +332,6 @@
 
  // Whoever wrote the old code for multi-tile spesspod doors needs to burn in hell. - Unknown
  // Wise words. - Bxil
-
 /obj/machinery/door/blast/multi_tile
 	name = "large blast door"
 
@@ -340,17 +339,9 @@
 	. = ..()
 	apply_opacity_to_my_turfs(opacity)
 
-/obj/machinery/door/blast/multi_tile/open()
-	if((. = ..()))
-		apply_opacity_to_my_turfs(opacity)
-
-/obj/machinery/door/blast/multi_tile/close()
-	if((. = ..()))
-		apply_opacity_to_my_turfs(opacity)
-
-/obj/machinery/door/blast/multi_tile/Destroy()
-	apply_opacity_to_my_turfs(0)
-	return ..()
+/obj/machinery/door/blast/multi_tile/set_opacity()
+	. = ..()
+	apply_opacity_to_my_turfs(opacity)
 
 //Multi-tile poddoors don't turn invisible automatically, so we change the opacity of the turfs below instead one by one.
 /obj/machinery/door/blast/multi_tile/proc/apply_opacity_to_my_turfs(new_opacity)
