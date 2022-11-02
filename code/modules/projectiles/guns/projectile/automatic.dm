@@ -425,3 +425,12 @@
 	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=2,      one_hand_penalty=8, burst_accuracy=null, dispersion=null)
 		)
+
+/obj/item/gun/projectile/automatic/semistrip/on_update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "semistrip"
+		wielded_item_state = "semistrip-wielded"
+	else
+		icon_state = "semistrip-empty"
+		wielded_item_state = "semistrip-wielded"

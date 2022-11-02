@@ -45,6 +45,8 @@
 			return global.SSantags;
 		if("SSao")
 			return global.SSao;
+		if("SSassets")
+			return global.SSassets;
 		if("SSatoms")
 			return global.SSatoms;
 		if("SScharacter_setup")
@@ -65,6 +67,8 @@
 			return global.SSculture;
 		if("SScustomitems")
 			return global.SScustomitems;
+		if("SSdbcore")
+			return global.SSdbcore;
 		if("SSdisposals")
 			return global.SSdisposals;
 		if("SSevac")
@@ -93,6 +97,8 @@
 			return global.SSicon_update;
 		if("SSinactivity")
 			return global.SSinactivity;
+		if("SSinput")
+			return global.SSinput;
 		if("SSjobs")
 			return global.SSjobs;
 		if("SSkv")
@@ -143,6 +149,8 @@
 			return global.SSsupply;
 		if("SStemperature")
 			return global.SStemperature;
+		if("SStgui")
+			return global.SStgui;
 		if("SSthrowing")
 			return global.SSthrowing;
 		if("SSticker")
@@ -173,8 +181,6 @@
 			return global.Tier4Runes;
 		if("WALLITEMS")
 			return global.WALLITEMS;
-		if("_all_globals")
-			return global._all_globals;
 		if("_client_preferences")
 			return global._client_preferences;
 		if("_client_preferences_by_key")
@@ -269,6 +275,8 @@
 			return global.all_unit_tests_passed;
 		if("all_virtual_listeners")
 			return global.all_virtual_listeners;
+		if("alldirs")
+			return global.alldirs;
 		if("alphabet")
 			return global.alphabet;
 		if("announced_news_types")
@@ -291,8 +299,6 @@
 			return global.ascii_reset;
 		if("ascii_yellow")
 			return global.ascii_yellow;
-		if("asset_datums")
-			return global.asset_datums;
 		if("assigned")
 			return global.assigned;
 		if("assigned_blocks")
@@ -323,6 +329,8 @@
 			return global.can_call_ert;
 		if("captain_announcement")
 			return global.captain_announcement;
+		if("cardinal")
+			return global.cardinal;
 		if("channel_color_presets")
 			return global.channel_color_presets;
 		if("channel_to_radio_key")
@@ -349,6 +357,8 @@
 			return global.config;
 		if("contamination_overlay")
 			return global.contamination_overlay;
+		if("cornerdirs")
+			return global.cornerdirs;
 		if("create_mob_html")
 			return global.create_mob_html;
 		if("create_object_html")
@@ -363,6 +373,8 @@
 			return global.csrfz_check;
 		if("damage_icon_parts")
 			return global.damage_icon_parts;
+		if("db_version")
+			return global.db_version;
 		if("dbcon")
 			return global.dbcon;
 		if("dbcon_old")
@@ -769,16 +781,22 @@
 			return global.sqlenabled;
 		if("sqlfdbkdb")
 			return global.sqlfdbkdb;
+		if("sqlfdbkdbutil")
+			return global.sqlfdbkdbutil;
 		if("sqlfdbklogin")
 			return global.sqlfdbklogin;
 		if("sqlfdbkpass")
 			return global.sqlfdbkpass;
+		if("sqlfdbktableprefix")
+			return global.sqlfdbktableprefix;
 		if("sqllogin")
 			return global.sqllogin;
 		if("sqlpass")
 			return global.sqlpass;
 		if("sqlport")
 			return global.sqlport;
+		if("stack_trace_storage")
+			return global.stack_trace_storage;
 		if("station_account")
 			return global.station_account;
 		if("station_date")
@@ -936,6 +954,8 @@
 			global.SSantags=newval;
 		if("SSao")
 			global.SSao=newval;
+		if("SSassets")
+			global.SSassets=newval;
 		if("SSatoms")
 			global.SSatoms=newval;
 		if("SScharacter_setup")
@@ -956,6 +976,8 @@
 			global.SSculture=newval;
 		if("SScustomitems")
 			global.SScustomitems=newval;
+		if("SSdbcore")
+			global.SSdbcore=newval;
 		if("SSdisposals")
 			global.SSdisposals=newval;
 		if("SSevac")
@@ -984,6 +1006,8 @@
 			global.SSicon_update=newval;
 		if("SSinactivity")
 			global.SSinactivity=newval;
+		if("SSinput")
+			global.SSinput=newval;
 		if("SSjobs")
 			global.SSjobs=newval;
 		if("SSkv")
@@ -1034,6 +1058,8 @@
 			global.SSsupply=newval;
 		if("SStemperature")
 			global.SStemperature=newval;
+		if("SStgui")
+			global.SStgui=newval;
 		if("SSthrowing")
 			global.SSthrowing=newval;
 		if("SSticker")
@@ -1064,8 +1090,6 @@
 			global.Tier4Runes=newval;
 		if("WALLITEMS")
 			global.WALLITEMS=newval;
-		if("_all_globals")
-			global._all_globals=newval;
 		if("_client_preferences")
 			global._client_preferences=newval;
 		if("_client_preferences_by_key")
@@ -1160,6 +1184,8 @@
 			global.all_unit_tests_passed=newval;
 		if("all_virtual_listeners")
 			global.all_virtual_listeners=newval;
+		if("alldirs")
+			global.alldirs=newval;
 		if("alphabet")
 			global.alphabet=newval;
 		if("announced_news_types")
@@ -1182,8 +1208,6 @@
 			global.ascii_reset=newval;
 		if("ascii_yellow")
 			global.ascii_yellow=newval;
-		if("asset_datums")
-			global.asset_datums=newval;
 		if("assigned")
 			global.assigned=newval;
 		if("assigned_blocks")
@@ -1214,6 +1238,8 @@
 			global.can_call_ert=newval;
 		if("captain_announcement")
 			global.captain_announcement=newval;
+		if("cardinal")
+			global.cardinal=newval;
 		if("channel_color_presets")
 			global.channel_color_presets=newval;
 		if("channel_to_radio_key")
@@ -1240,6 +1266,8 @@
 			global.config=newval;
 		if("contamination_overlay")
 			global.contamination_overlay=newval;
+		if("cornerdirs")
+			global.cornerdirs=newval;
 		if("create_mob_html")
 			global.create_mob_html=newval;
 		if("create_object_html")
@@ -1254,6 +1282,8 @@
 			global.csrfz_check=newval;
 		if("damage_icon_parts")
 			global.damage_icon_parts=newval;
+		if("db_version")
+			global.db_version=newval;
 		if("dbcon")
 			global.dbcon=newval;
 		if("dbcon_old")
@@ -1660,16 +1690,22 @@
 			global.sqlenabled=newval;
 		if("sqlfdbkdb")
 			global.sqlfdbkdb=newval;
+		if("sqlfdbkdbutil")
+			global.sqlfdbkdbutil=newval;
 		if("sqlfdbklogin")
 			global.sqlfdbklogin=newval;
 		if("sqlfdbkpass")
 			global.sqlfdbkpass=newval;
+		if("sqlfdbktableprefix")
+			global.sqlfdbktableprefix=newval;
 		if("sqllogin")
 			global.sqllogin=newval;
 		if("sqlpass")
 			global.sqlpass=newval;
 		if("sqlport")
 			global.sqlport=newval;
+		if("stack_trace_storage")
+			global.stack_trace_storage=newval;
 		if("station_account")
 			global.station_account=newval;
 		if("station_date")
@@ -1804,6 +1840,7 @@
 	"SSalarm",
 	"SSantags",
 	"SSao",
+	"SSassets",
 	"SSatoms",
 	"SScharacter_setup",
 	"SSchat",
@@ -1814,6 +1851,7 @@
 	"SScuisine",
 	"SSculture",
 	"SScustomitems",
+	"SSdbcore",
 	"SSdisposals",
 	"SSevac",
 	"SSevent",
@@ -1828,6 +1866,7 @@
 	"SSgraphs_update",
 	"SSicon_update",
 	"SSinactivity",
+	"SSinput",
 	"SSjobs",
 	"SSkv",
 	"SSlighting",
@@ -1853,6 +1892,7 @@
 	"SSsun",
 	"SSsupply",
 	"SStemperature",
+	"SStgui",
 	"SSthrowing",
 	"SSticker",
 	"SStimer",
@@ -1868,7 +1908,6 @@
 	"Tier3Runes",
 	"Tier4Runes",
 	"WALLITEMS",
-	"_all_globals",
 	"_client_preferences",
 	"_client_preferences_by_key",
 	"_client_preferences_by_type",
@@ -1916,6 +1955,7 @@
 	"all_ui_styles",
 	"all_unit_tests_passed",
 	"all_virtual_listeners",
+	"alldirs",
 	"alphabet",
 	"announced_news_types",
 	"antag_add_finished",
@@ -1927,7 +1967,6 @@
 	"ascii_red",
 	"ascii_reset",
 	"ascii_yellow",
-	"asset_datums",
 	"assigned",
 	"assigned_blocks",
 	"attack_log_repository",
@@ -1943,6 +1982,7 @@
 	"cameranet",
 	"can_call_ert",
 	"captain_announcement",
+	"cardinal",
 	"channel_color_presets",
 	"channel_to_radio_key",
 	"chargen_robolimbs",
@@ -1956,6 +1996,7 @@
 	"common_tools",
 	"config",
 	"contamination_overlay",
+	"cornerdirs",
 	"create_mob_html",
 	"create_object_html",
 	"create_turf_html",
@@ -1963,6 +2004,7 @@
 	"crew_repository",
 	"csrfz_check",
 	"damage_icon_parts",
+	"db_version",
 	"dbcon",
 	"dbcon_old",
 	"debug_verbs",
@@ -2166,11 +2208,14 @@
 	"sqldb",
 	"sqlenabled",
 	"sqlfdbkdb",
+	"sqlfdbkdbutil",
 	"sqlfdbklogin",
 	"sqlfdbkpass",
+	"sqlfdbktableprefix",
 	"sqllogin",
 	"sqlpass",
 	"sqlport",
+	"stack_trace_storage",
 	"station_account",
 	"station_date",
 	"stool_cache",

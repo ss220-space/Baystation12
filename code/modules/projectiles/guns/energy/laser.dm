@@ -120,7 +120,7 @@ obj/item/gun/energy/retro
 
 	firemodes = list(
 		list(mode_name="single fire", fire_delay=4, burst=1, one_hand_penalty = 2, dispersion=list(0, 0.2, 0.4)),
-		list(mode_name="short bursts", fire_delay=4, burst=3, burst_delay = 2, one_hand_penalty=6, dispersion=list(0.6, 0.8, 1.0, 1.2, 1.4), burst_accuracy=list(0,-1,-1,-2,-3)),
+		list(mode_name="short bursts", fire_delay=4, burst=3, burst_delay = 3.1, one_hand_penalty=6, dispersion=list(0.6, 0.8, 1.0, 1.2, 1.4), burst_accuracy=list(0,-1,-1,-2,-3)),
 		list(mode_name="full auto", fire_delay=2, burst=1, burst_delay=2.8, one_hand_penalty=4, dispersion=list(0.4, 0.8, 1.2, 1.4), burst_accuracy=list(0,-1,-1,-2), autofire_enabled=1),
 		)
 
