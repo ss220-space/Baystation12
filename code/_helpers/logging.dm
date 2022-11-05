@@ -150,6 +150,9 @@ GLOBAL_VAR_INIT(log_end, (ascii2text(13))) // CRLF for all logs
 	to_world_log("## UNIT_TEST ##: [text]")
 	log_debug(text)
 
+/proc/log_asset(text)
+	rustg_log_write(GLOB.world_game_log, "ASSETS: [text][GLOB.log_end]")
+
 /proc/log_qdel(text)
 	to_file(GLOB.world_qdel_log, "\[[time_stamp()]]QDEL: [text]")
 
