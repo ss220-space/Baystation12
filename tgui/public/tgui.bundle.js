@@ -83624,181 +83624,241 @@ var ItemList = function ItemList(props, context) {
 
 /***/ }),
 
-/***/ "./packages/tgui/interfaces/Vending.js":
-/*!*********************************************!*\
-  !*** ./packages/tgui/interfaces/Vending.js ***!
-  \*********************************************/
+/***/ "./packages/tgui/interfaces/VendingMachine.js":
+/*!****************************************************!*\
+  !*** ./packages/tgui/interfaces/VendingMachine.js ***!
+  \****************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
 exports.__esModule = true;
-exports.VendingProducts = exports.VendingMaintenance = exports.Vending = void 0;
+exports.VendingMachine = void 0;
 
 var _inferno = __webpack_require__(/*! inferno */ "./.yarn/cache/inferno-npm-7.4.11-3352a2fb62-1651aad357.zip/node_modules/inferno/index.esm.js");
 
 var _react = __webpack_require__(/*! common/react */ "./packages/common/react.ts");
 
-var _backend = __webpack_require__(/*! ../backend */ "./packages/tgui/backend.ts");
+var _backend = __webpack_require__(/*! tgui/backend */ "./packages/tgui/backend.ts");
 
-var _components = __webpack_require__(/*! ../components */ "./packages/tgui/components/index.js");
+var _components = __webpack_require__(/*! tgui/components */ "./packages/tgui/components/index.js");
 
-var _layouts = __webpack_require__(/*! ../layouts */ "./packages/tgui/layouts/index.js");
+var _Table = __webpack_require__(/*! tgui/components/Table */ "./packages/tgui/components/Table.js");
+
+var _layouts = __webpack_require__(/*! tgui/layouts */ "./packages/tgui/layouts/index.js");
 
 var VendingRow = function VendingRow(props, context) {
   var _useBackend = (0, _backend.useBackend)(context),
       act = _useBackend.act,
       data = _useBackend.data;
 
-  var actively_vending = data.actively_vending;
-  var product = props.product;
+  var product = props.product,
+      productStock = props.productStock,
+      custom = props.custom;
+  var free = product.price === 0;
   return (0, _inferno.createComponentVNode)(2, _components.Table.Row, {
     children: [(0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "collapsing": true,
-      children: product.isatom && (0, _inferno.createVNode)(1, "span", (0, _react.classes)(['vending32x32', product.path]), null, 1, {
+      children: product.base64 && (0, _inferno.createVNode)(1, "img", null, null, 1, {
+        "src": "data:image/jpeg;base64," + product.img,
         "style": {
           'vertical-align': 'middle',
           'horizontal-align': 'middle'
         }
-      }) || null
+      }) || (0, _inferno.createVNode)(1, "span", (0, _react.classes)(['vending32x32', product.path]), null, 1, {
+        "style": {
+          'vertical-align': 'middle',
+          'horizontal-align': 'middle'
+        }
+      })
     }), (0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "bold": true,
-      "color": product.color,
-      children: (0, _inferno.createComponentVNode)(2, _components.Box, {
-        "inline": true,
-        "position": "relative",
-        children: [product.name, product.desc ? (0, _inferno.createComponentVNode)(2, _components.Tooltip, {
-          "content": product.desc,
-          "position": "right"
-        }) : null]
-      })
+      children: product.name
     }), (0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "collapsing": true,
       "textAlign": "center",
       children: (0, _inferno.createComponentVNode)(2, _components.Box, {
-        "color": product.amount <= 0 && 'bad' || product.amount <= product.max_amount / 2 && 'average' || 'good',
-        children: [product.amount, " in stock"]
+        "color": custom && 'good' || productStock <= 0 && 'bad' || productStock <= product.max_amount / 2 && 'average' || 'good',
+        children: [productStock, " in stock"]
       })
     }), (0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "collapsing": true,
       "textAlign": "center",
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
+      children: custom && (0, _inferno.createComponentVNode)(2, _components.Button, {
         "fluid": true,
-        "icon": product.price ? 'credit-card' : 'download',
-        "iconSpin": actively_vending === product.name,
-        "disabled": product.amount === 0,
-        "content": product.price ? 'Buy (' + product.price + '₮)' : 'Vend',
         "onClick": function () {
           function onClick() {
-            return act('vend', {
-              'vend': product.key
+            return act('dispense', {
+              'item': product.name
             });
           }
 
           return onClick;
-        }()
+        }(),
+        children: [data.access ? 'FREE' : product.price, " ", !data.access && (0, _inferno.createComponentVNode)(2, _components.Icon, {
+          "style": "margin-left: 6px",
+          "name": "shopping-cart"
+        })]
+      }) || (0, _inferno.createComponentVNode)(2, _components.Button, {
+        "fluid": true,
+        "disabled": productStock === 0,
+        "onClick": function () {
+          function onClick() {
+            return act('dispense', {
+              'ref': product.key
+            });
+          }
+
+          return onClick;
+        }(),
+        children: [free ? 'FREE' : product.price, " ", !data.access && (0, _inferno.createComponentVNode)(2, _components.Icon, {
+          "style": "margin-left: 6px",
+          "name": "shopping-cart"
+        })]
       })
     })]
   });
 };
 
-var Vending = function Vending(props, context) {
+var VendingMachine = function VendingMachine(props, context) {
   var _useBackend2 = (0, _backend.useBackend)(context),
       act = _useBackend2.act,
       data = _useBackend2.data;
 
-  var panel = data.panel;
+  var mode = data.mode,
+      _data$product_records = data.product_records,
+      product_records = _data$product_records === void 0 ? [] : _data$product_records,
+      _data$coin_records = data.coin_records,
+      coin_records = _data$coin_records === void 0 ? [] : _data$coin_records,
+      _data$hidden_records = data.hidden_records,
+      hidden_records = _data$hidden_records === void 0 ? [] : _data$hidden_records;
+  var inventory;
+  var custom = false;
+
+  if (data.vending_machine_input) {
+    inventory = data.vending_machine_input || [];
+    custom = true;
+  } else {
+    inventory = [].concat(product_records, coin_records);
+
+    if (data.extended_inventory) {
+      inventory = [].concat(inventory, hidden_records);
+    }
+  } // Just in case we still have undefined values in the list
+
+
+  inventory = inventory.filter(function (item) {
+    return !!item;
+  });
   return (0, _inferno.createComponentVNode)(2, _layouts.Window, {
     "width": 450,
     "height": 600,
     "resizable": true,
-    children: (0, _inferno.createComponentVNode)(2, _layouts.Window.Content, {
+    children: [!!mode && (0, _inferno.createComponentVNode)(2, _components.Dimmer, {
+      children: mode === 1 && (0, _inferno.createComponentVNode)(2, _components.Section, {
+        "title": 'Purchasing',
+        "height": 12,
+        "pl": 1,
+        "pr": 1,
+        children: (0, _inferno.createComponentVNode)(2, _components.Flex, {
+          "height": 8,
+          "direction": 'column',
+          "justify": 'space-between',
+          children: [(0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
+            children: (0, _inferno.createComponentVNode)(2, _components.Table, {
+              children: [(0, _inferno.createComponentVNode)(2, _Table.TableRow, {
+                children: [(0, _inferno.createComponentVNode)(2, _Table.TableCell, {
+                  "bold": true,
+                  children: "Item"
+                }), (0, _inferno.createComponentVNode)(2, _Table.TableCell, {
+                  "bold": true,
+                  "textAlign": "right",
+                  children: "Price"
+                })]
+              }), (0, _inferno.createComponentVNode)(2, _Table.TableRow, {
+                children: [(0, _inferno.createComponentVNode)(2, _Table.TableCell, {
+                  children: data.product
+                }), (0, _inferno.createComponentVNode)(2, _Table.TableCell, {
+                  "textAlign": "right",
+                  children: [data.price, " ", (0, _inferno.createComponentVNode)(2, _components.Icon, {
+                    "name": "coins"
+                  })]
+                })]
+              })]
+            })
+          }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
+            children: (0, _inferno.createComponentVNode)(2, _components.Box, {
+              "color": data.message_err ? 'bad' : null,
+              children: data.message
+            })
+          }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
+            "align": "center",
+            children: (0, _inferno.createComponentVNode)(2, _components.Button, {
+              "content": 'Cancel',
+              "onClick": function () {
+                function onClick() {
+                  return act('cancel_purchase');
+                }
+
+                return onClick;
+              }()
+            })
+          })]
+        })
+      }) || mode === 2 && (0, _inferno.createComponentVNode)(2, _components.Section, {
+        "transparent": true,
+        children: [(0, _inferno.createComponentVNode)(2, _components.Icon, {
+          "name": "cog",
+          "spin": 1
+        }), (0, _inferno.createComponentVNode)(2, _components.Box, {
+          "inline": true,
+          "ml": 1,
+          children: "Vending..."
+        })]
+      })
+    }), (0, _inferno.createComponentVNode)(2, _layouts.Window.Content, {
       "scrollable": true,
-      children: [(0, _inferno.createComponentVNode)(2, VendingProducts), panel ? (0, _inferno.createComponentVNode)(2, VendingMaintenance) : null]
-    })
-  });
-};
+      children: (0, _inferno.createComponentVNode)(2, _components.Section, {
+        "title": "Products",
+        "buttons": (0, _inferno.createComponentVNode)(2, _components.Box, {
+          children: [!!data.coin && (0, _inferno.createComponentVNode)(2, _components.Button, {
+            "content": "Remove coin",
+            "onClick": function () {
+              function onClick() {
+                return act('remove_coin');
+              }
 
-exports.Vending = Vending;
+              return onClick;
+            }()
+          }), !!data.panel && (0, _inferno.createComponentVNode)(2, _components.Button, {
+            "icon": data.speaker ? 'check-square-o' : 'square-o',
+            "selected": data.speaker,
+            "content": "Speaker",
+            "onClick": function () {
+              function onClick() {
+                return act('toggle_voice');
+              }
 
-var VendingProducts = function VendingProducts(props, context) {
-  var _useBackend3 = (0, _backend.useBackend)(context),
-      act = _useBackend3.act,
-      data = _useBackend3.data;
-
-  var coin = data.coin,
-      chargesMoney = data.chargesMoney,
-      user = data.user,
-      userMoney = data.userMoney,
-      guestNotice = data.guestNotice,
-      products = data.products; // Just in case we still have undefined values in the list
-
-  var myproducts = products.filter(function (item) {
-    return !!item;
-  });
-  return (0, _inferno.createFragment)([!!chargesMoney && (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "User",
-    children: user && (0, _inferno.createComponentVNode)(2, _components.Box, {
-      children: ["Welcome, ", (0, _inferno.createVNode)(1, "b", null, user.name, 0), ", ", (0, _inferno.createVNode)(1, "b", null, user.job || 'Unemployed', 0), "!", (0, _inferno.createVNode)(1, "br"), "Your balance is ", (0, _inferno.createVNode)(1, "b", null, [userMoney, (0, _inferno.createTextVNode)("\u20AE Thalers")], 0), "."]
-    }) || (0, _inferno.createComponentVNode)(2, _components.Box, {
-      "color": "light-grey",
-      children: guestNotice
-    })
-  }), (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Products",
-    children: (0, _inferno.createComponentVNode)(2, _components.Table, {
-      children: myproducts.map(function (product) {
-        return (0, _inferno.createComponentVNode)(2, VendingRow, {
-          "product": product
-        }, product.name);
+              return onClick;
+            }()
+          })]
+        }),
+        children: (0, _inferno.createComponentVNode)(2, _components.Table, {
+          children: inventory.map(function (product) {
+            return (0, _inferno.createComponentVNode)(2, VendingRow, {
+              "custom": custom,
+              "product": product,
+              "productStock": product.amount
+            }, product.name);
+          })
+        })
       })
-    })
-  }), !!coin && (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": coin + ' deposited',
-    "buttons": (0, _inferno.createComponentVNode)(2, _components.Button, {
-      "icon": "eject",
-      "content": "Eject Coin",
-      "onClick": function () {
-        function onClick() {
-          return act('remove_coin');
-        }
-
-        return onClick;
-      }()
-    })
-  })], 0);
-};
-
-exports.VendingProducts = VendingProducts;
-
-var VendingMaintenance = function VendingMaintenance(props, context) {
-  var _useBackend4 = (0, _backend.useBackend)(context),
-      act = _useBackend4.act,
-      data = _useBackend4.data;
-
-  var speaker = data.speaker;
-  return (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Maintenance Panel",
-    children: (0, _inferno.createComponentVNode)(2, _components.Section, {
-      "title": "Speaker",
-      "buttons": (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "icon": speaker ? 'volume-up' : 'volume-off',
-        "content": speaker ? 'Enabled' : 'Disabled',
-        "selected": speaker,
-        "onClick": function () {
-          function onClick() {
-            return act('togglevoice');
-          }
-
-          return onClick;
-        }()
-      })
-    })
+    })]
   });
 };
 
-exports.VendingMaintenance = VendingMaintenance;
+exports.VendingMachine = VendingMachine;
 
 /***/ }),
 
@@ -91647,8 +91707,8 @@ var map = {
 	"./Turbolift.js": "./packages/tgui/interfaces/Turbolift.js",
 	"./Uplink": "./packages/tgui/interfaces/Uplink.js",
 	"./Uplink.js": "./packages/tgui/interfaces/Uplink.js",
-	"./Vending": "./packages/tgui/interfaces/Vending.js",
-	"./Vending.js": "./packages/tgui/interfaces/Vending.js",
+	"./VendingMachine": "./packages/tgui/interfaces/VendingMachine.js",
+	"./VendingMachine.js": "./packages/tgui/interfaces/VendingMachine.js",
 	"./Wires": "./packages/tgui/interfaces/Wires.js",
 	"./Wires.js": "./packages/tgui/interfaces/Wires.js",
 	"./XenoarchArtifactAnalyzer": "./packages/tgui/interfaces/XenoarchArtifactAnalyzer.tsx",
