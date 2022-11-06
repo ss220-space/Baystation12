@@ -149,6 +149,8 @@
 			return global.SSsupply;
 		if("SStemperature")
 			return global.SStemperature;
+		if("SStgui")
+			return global.SStgui;
 		if("SSthrowing")
 			return global.SSthrowing;
 		if("SSticker")
@@ -795,6 +797,8 @@
 			return global.sqlpass;
 		if("sqlport")
 			return global.sqlport;
+		if("stack_trace_storage")
+			return global.stack_trace_storage;
 		if("station_account")
 			return global.station_account;
 		if("station_date")
@@ -1056,6 +1060,8 @@
 			global.SSsupply=newval;
 		if("SStemperature")
 			global.SStemperature=newval;
+		if("SStgui")
+			global.SStgui=newval;
 		if("SSthrowing")
 			global.SSthrowing=newval;
 		if("SSticker")
@@ -1702,6 +1708,8 @@
 			global.sqlpass=newval;
 		if("sqlport")
 			global.sqlport=newval;
+		if("stack_trace_storage")
+			global.stack_trace_storage=newval;
 		if("station_account")
 			global.station_account=newval;
 		if("station_date")
@@ -1888,6 +1896,7 @@
 	"SSsun",
 	"SSsupply",
 	"SStemperature",
+	"SStgui",
 	"SSthrowing",
 	"SSticker",
 	"SStimer",
@@ -2211,6 +2220,7 @@
 	"sqllogin",
 	"sqlpass",
 	"sqlport",
+	"stack_trace_storage",
 	"station_account",
 	"station_date",
 	"stool_cache",

@@ -80,3 +80,16 @@
 		"font-awesome.css"    = file("html/font-awesome/css/all.min.css"),
 		"v4shim.css"          = file("html/font-awesome/css/v4-shims.min.css")
 	)
+
+/datum/asset/simple/tgui
+		assets = list(
+		"tgui.bundle.js" = file("tgui/public/tgui.bundle.js"),
+		"tgui.bundle.css" = file("tgui/public/tgui.bundle.css"),
+	)
+
+/datum/asset/simple/tgfont
+	assets = list(
+		"tgfont.eot" = file("tgui/packages/tgfont/dist/tgfont.eot"),
+		"tgfont.woff2" = file("tgui/packages/tgfont/dist/tgfont.woff2"),
+		"tgfont.css" = file("tgui/packages/tgfont/dist/tgfont.css"),
+	)
