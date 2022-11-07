@@ -14,7 +14,7 @@
 		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/misc.dmi',
 		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/misc.dmi'
 	)
-	var/renameable = FASLE
+	var/renameable = FALSE
 
 /obj/item/clothing/accessory/necklace/collar/gold
 	name = "golden tag collar"
