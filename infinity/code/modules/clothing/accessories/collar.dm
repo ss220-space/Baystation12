@@ -48,7 +48,7 @@
 			if(!inscription)
 				return
 			to_chat(user, SPAN_WARNING("You carve \"[inscription]\" into \the [src]."))
-			name = initial(name) + " ([stinscriptionr])"
+			name = initial(name) + " ([inscription])"
 			desc = initial(desc) + " The tag says \"[inscription]\"."
 
 /obj/item/clothing/accessory/necklace/collar/holo
