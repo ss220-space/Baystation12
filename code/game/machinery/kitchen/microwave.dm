@@ -95,7 +95,7 @@
 		return
 
 	else if(dirtiness == 100) // The microwave is all dirty, so it can't be used!
-		var/has_rag = istype(O, /obj/item/reagent_containers/glass/rag)
+		var/has_rag = istype(O, /obj/item/reagent_containers/misc/rag)
 		var/has_cleaner = O.reagents != null && O.reagents.has_reagent(/datum/reagent/space_cleaner, 5)
 
 		// If they're trying to clean it, let them

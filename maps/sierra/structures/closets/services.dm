@@ -102,7 +102,7 @@
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/storage/pill_bottle/dylovene,
 		/obj/item/reagent_containers/spray/cleaner,
-		/obj/item/reagent_containers/glass/rag,
+		/obj/item/reagent_containers/misc/rag,
 		/obj/item/paper/sierra/bar_permit,
 		/obj/item/gun/projectile/shotgun/doublebarrel/empty,
 		/obj/item/clothing/head/beret/infinity

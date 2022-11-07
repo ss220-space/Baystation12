@@ -61,7 +61,7 @@
 	item_icons = list(slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
 	icon_state = "janitor_jacket"
 	body_parts_covered = UPPER_TORSO|ARMS
-	allowed = list(/obj/item/device/flashlight,/obj/item/device/lightreplacer,/obj/item/storage/bag/trash,/obj/item/grenade/chem_grenade/cleaner,/obj/item/reagent_containers/spray/cleaner, /obj/item/mop, /obj/item/reagent_containers/glass/bucket)
+	allowed = list(/obj/item/device/flashlight,/obj/item/device/lightreplacer,/obj/item/storage/bag/trash,/obj/item/grenade/chem_grenade/cleaner,/obj/item/reagent_containers/spray/cleaner, /obj/item/mop, /obj/item/reagent_containers/misc/bucket)
 
 /obj/item/clothing/suit/storage/tgbomber/militaryjacket
 	name = "military jacket"
