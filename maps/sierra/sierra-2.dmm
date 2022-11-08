@@ -7608,13 +7608,13 @@
 	},
 /obj/structure/filingcabinet,
 /obj/item/folder/white,
-/obj/item/folder/white,
 /obj/effect/floor_decal/borderfloor/full,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 9
 	},
-/obj/item/folder/white,
-/obj/item/folder/white,
+/obj/item/folder/blue,
+/obj/item/folder/red,
+/obj/item/folder/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "aoe" = (
@@ -7792,9 +7792,8 @@
 	dir = 8
 	},
 /obj/structure/table/woodentable/walnut,
-/obj/item/storage/secure/briefcase/nukedisk,
-/obj/prefab/hand_teleporter,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/storage/box/donut,
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/cobed)
 "aow" = (
@@ -9101,8 +9100,6 @@
 	icon_state = "0-8"
 	},
 /obj/structure/table/woodentable/walnut,
-/obj/item/paper_bin,
-/obj/item/pen/multi/cmd/captain,
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/cobed)
 "aqv" = (
@@ -10238,15 +10235,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "asz" = (
-/obj/structure/filingcabinet,
-/obj/item/folder/yellow,
-/obj/item/folder/yellow,
 /obj/effect/floor_decal/borderfloor/full,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
 	},
-/obj/item/folder/yellow,
-/obj/item/folder/yellow,
+/obj/structure/table/steel_reinforced,
+/obj/item/hand_labeler,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -24;
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "asA" = (
@@ -10533,9 +10531,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/darkblue/border{
-	dir = 1
-	},
-/obj/structure/window/reinforced/polarized{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -16900,6 +16895,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/bed/chair/rounded/blue{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "aDz" = (
@@ -17094,6 +17092,7 @@
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 1
 	},
+/obj/item/folder,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "aDP" = (
@@ -18042,9 +18041,6 @@
 "aFE" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/darkblue/bordercorner,
-/obj/structure/table/rack,
-/obj/item/clothing/mask/gas/half,
-/obj/item/rig/command/captain/equipped,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "aFF" = (
@@ -19463,16 +19459,16 @@
 /area/vacant/gambling)
 "aIu" = (
 /obj/structure/bed/chair/rounded/black{
-	dir = 8
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/darkblue/border{
+	dir = 1
 	},
 /obj/effect/landmark/start{
 	name = "Captain"
-	},
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/darkblue/border{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -24252,11 +24248,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/tech)
 "aRm" = (
-/obj/structure/bed/chair/rounded/blue,
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/darkblue/border,
-/turf/simulated/floor/tiled/dark,
-/area/bridge/meeting_room)
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/floor/reinforced,
+/area/bridge/hall/level_one)
 "aRn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -29200,9 +29194,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/filingcabinet,
-/obj/item/folder/blue,
-/obj/item/folder/blue,
 /obj/effect/floor_decal/borderfloor/full,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
@@ -29210,11 +29201,12 @@
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
 	},
-/obj/item/folder/blue,
-/obj/item/folder/blue,
 /obj/machinery/light/spot{
 	dir = 8
 	},
+/obj/structure/table/steel_reinforced,
+/obj/item/paper_bin,
+/obj/item/pen/multi/cmd/captain,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "baf" = (
@@ -29775,9 +29767,9 @@
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 6
 	},
-/obj/structure/table/steel_reinforced,
-/obj/item/hand_labeler,
-/obj/item/pen,
+/obj/structure/table/rack,
+/obj/item/rig/command/captain/equipped,
+/obj/item/clothing/mask/gas/half,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "bbr" = (
@@ -32279,6 +32271,9 @@
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 4
 	},
+/obj/structure/bed/chair/rounded/blue{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "bgz" = (
@@ -32287,9 +32282,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/structure/table/glass{
-	color = "#6666bb"
 	},
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/corner/darkblue/border,
@@ -32349,13 +32341,24 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "bgH" = (
-/obj/structure/closet/crate/secure/loot,
-/turf/simulated/floor/reinforced,
-/area/crew_quarters/heads/cobed)
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/darkblue/border{
+	dir = 4
+	},
+/obj/structure/bed/chair/rounded/blue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/meeting_room)
 "bgI" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 4
+	},
+/obj/structure/table/glass{
+	color = "#6666bb"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
@@ -32643,7 +32646,6 @@
 /obj/structure/table/glass{
 	color = "#6666bb"
 	},
-/obj/item/folder,
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
@@ -33255,15 +33257,17 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/structure/filingcabinet,
-/obj/item/folder/red,
-/obj/item/folder/red,
 /obj/effect/floor_decal/borderfloor/full,
 /obj/effect/floor_decal/corner/darkblue/border{
 	dir = 8
 	},
-/obj/item/folder/red,
-/obj/item/folder/red,
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/secure/briefcase/nukedisk,
+/obj/prefab/hand_teleporter,
+/obj/machinery/newscaster/security_unit{
+	pixel_x = -26;
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
 "bit" = (
@@ -35726,12 +35730,6 @@
 /obj/machinery/recharger/wallcharger{
 	dir = 8;
 	pixel_x = 21
-	},
-/obj/machinery/door/window/brigdoor/westleft{
-	id_tag = null;
-	polarized = 1;
-	req_access = list("ACCESS_CAPTAIN");
-	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/cobed)
@@ -49469,8 +49467,8 @@ aam
 aam
 abI
 abI
-bgH
-abJ
+aiY
+aRm
 abJ
 aJr
 bgr
@@ -50494,8 +50492,8 @@ aoj
 aEe
 aEn
 bgy
-bet
-bet
+bgH
+bgH
 bdE
 beu
 aKj
@@ -50694,7 +50692,7 @@ pVD
 lPA
 xWS
 aLi
-aRm
+beF
 aPT
 bgI
 aPJ
@@ -50896,11 +50894,11 @@ rDI
 lPA
 xWS
 aLi
-aRm
+beF
 bgz
 bgL
 aDO
-aFv
+aIu
 aVV
 aKj
 aKj
@@ -51098,7 +51096,7 @@ bkr
 lPA
 xWS
 aLi
-aRm
+beF
 bgA
 bhd
 aPK
@@ -51302,7 +51300,7 @@ aoj
 aOi
 aQS
 wLc
-aIu
+biU
 biU
 oIx
 beG
