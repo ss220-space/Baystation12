@@ -221,7 +221,6 @@
 /obj/machinery/door/window/attackby(obj/item/I as obj, mob/user as mob)
 
 	//If it's in the process of opening/closing, ignore the click
-	to_chat(user, SPAN_NOTICE("arePowerSystemsOn():[src.powered()]"))
 	if (src.operating == 1)
 		return
 	if(isScrewdriver(I))
