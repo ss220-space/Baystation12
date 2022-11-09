@@ -321,3 +321,19 @@
 /datum/gear/uniform/retro_science
 	display_name = "retro science officer's uniform"
 	path = /obj/item/clothing/under/inf/retro/science
+
+/datum/gear/uniform/aristo
+	display_name = "aristo uniform"
+	path = /obj/item/clothing/under/inf/aristo
+
+/datum/gear/uniform/milsim
+	display_name = "milsim uniform"
+	path = /obj/item/clothing/under/inf/milsim
+
+/datum/gear/uniform/rubywhite
+	display_name = "rubywhite"
+	path = /obj/item/clothing/under/inf/rubywhite
+
+/datum/gear/uniform/faln_trousers
+	display_name = "faln trousers"
+	path = /obj/item/clothing/under/inf/faln_trousers

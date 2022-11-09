@@ -98,3 +98,89 @@
 	name = "blue cloak"
 	desc = "A simple blue and white cloak."
 	icon_state = "medcloak"
+
+/obj/item/clothing/accessory/cloak/antiq
+	name = "antiquated cape"
+	desc = "This cape is so much aged that you can almost think it's a relic."
+	icon_state = "antiquated_cape"
+
+/obj/item/clothing/accessory/cloak/hooded
+	var/obj/item/clothing/head/hood
+	var/hoodtype = null
+	var/suittoggled = 0
+	name = "Crimson Fleece"
+	desc = "A huge crimson cloak. Its outer shell is made of heavy and durable tarp-like material, and the inner shell is made of very warm and comfortable fleece."
+	icon_state = "crimson_cloak"
+	item_state = "crimson_cloak"
+	action_button_name = "Toggle Hood"
+	hoodtype = /obj/item/clothing/head/cloak_hood
+
+/obj/item/clothing/accessory/cloak/hooded/New()
+	MakeHood()
+	..()
+
+/obj/item/clothing/accessory/cloak/hooded/Destroy()
+	QDEL_NULL(hood)
+	return ..()
+
+/obj/item/clothing/accessory/cloak/hooded/proc/MakeHood()
+	if(!hood)
+		hood = new hoodtype(src)
+
+/obj/item/clothing/accessory/cloak/hooded/ui_action_click()
+	ToggleHood()
+
+/obj/item/clothing/accessory/cloak/hooded/equipped(mob/user, slot)
+	if((slot != slot_w_uniform) && (slot != slot_tie))
+		RemoveHood()
+	..()
+
+/obj/item/clothing/accessory/cloak/hooded/proc/RemoveHood()
+	if(!hood)
+		return
+	suittoggled = 0
+	update_icon()
+	if(ishuman(hood.loc))
+		var/mob/living/carbon/H = hood.loc
+		H.drop_from_inventory(hood)
+		H.update_inv_wear_suit()
+	hood.forceMove(src)
+
+/obj/item/clothing/accessory/cloak/hooded/dropped()
+	RemoveHood()
+
+/obj/item/clothing/accessory/cloak/hooded/proc/ToggleHood()
+	if(!suittoggled)
+		if(ishuman(loc))
+			var/mob/living/carbon/human/H = src.loc
+			if(H.wear_suit != src)
+				to_chat(H, SPAN_WARNING("You must be wearing \the [src] to put up the hood!"))
+				return
+			if(H.head)
+				to_chat(H, SPAN_WARNING("You're already wearing something on your head!"))
+				return
+			else
+				H.equip_to_slot_if_possible(hood,slot_head,0,0,1)
+				suittoggled = 1
+				hood.icon_state = "[icon_state]_hood"
+				hood.item_state = "[item_state]_hood"
+				update_icon()
+				H.update_inv_wear_suit()
+	else
+		RemoveHood()
+
+/obj/item/clothing/accessory/cloak/hooded/on_update_icon()
+	if(suittoggled)
+		icon_state = "[initial(icon_state)]_t"
+	else
+		icon_state = "[initial(icon_state)]"
+
+
+/obj/item/clothing/head/cloak_hood
+	name = "crimson hood"
+	desc = "A hood."
+	icon = 'infinity/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(slot_head_str = 'infinity/icons/mob/onmob/onmob_head.dmi')
+	icon_state = "crimson_cloak_hood"
+	flags_inv = BLOCKHEADHAIR
+	body_parts_covered = HEAD

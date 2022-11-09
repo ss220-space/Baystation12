@@ -305,22 +305,59 @@ obj/item/clothing/shoes/heels/red
 	name = "red high heels"
 	desc = "A pair of red high heels."
 	color = COLOR_RED
-/obj/item/clothing/under/medic/paramedic
-    name = "first responder uniform"
-    desc = "Light and bulky paramedic jumpsuit with bright markings. It's too big to fit anyone, but unathi."
-    species_restricted  = list(SPECIES_UNATHI)
-    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
-    icon_state = "unathi_paramedic"
-    item_state = "unathi_paramedic"
-    worn_state = "unathi_paramedic"
-    //rolled_sleeves = 0
 
-/obj/item/clothing/under/unathi_work
-    name = "sturdy uniform"
-    desc = "A large uniform made of sturdy canvas with leather harness for industrial environment. It's too big to fit anyone, but unathi."
-    species_restricted  = list(SPECIES_UNATHI)
-    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
-    icon_state = "unathi_work"
-    item_state = "unathi_work"
-    worn_state = "unathi_work"
-    //rolled_sleeves = 0
+/obj/item/clothing/shoes/brand_shoes
+	name = "brand shoes"
+	desc = "Some sneakers with pretty much distinctive fashion."
+	icon = 'infinity/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'infinity/icons/mob/onmob/onmob_feet.dmi')
+	icon_state = "brand_shoes1"
+	item_state = "brand_shoes1"
+
+/obj/item/clothing/shoes/brand_shoes/two
+	name = "brand shoes"
+	desc = "Some sneakers with pretty much distinctive fashion."
+	icon_state = "brand_shoes2"
+	item_state = "brand_shoes2"
+
+/obj/item/clothing/shoes/brand_shoes/three
+	name = "brand shoes"
+	desc = "Some sneakers with pretty much distinctive fashion."
+	icon_state = "brand_shoes3"
+	item_state = "brand_shoes3"
+
+/obj/item/clothing/shoes/brand_shoes/antiquated
+	name = "antiquated shoes"
+	desc = "Some sneakers with pretty much distinctive fashion."
+	icon_state = "antiquated_shoes"
+	item_state = "antiquated_shoes"
+
+/obj/item/clothing/shoes/brand_shoes/faln
+	name = "faln shoes"
+	desc = "The trekking sneakers that provide nigh-perfect ankle support and traction on any type of terrain."
+	icon_state = "papaleroy_faln_sneakers"
+	item_state = "papaleroy_faln_sneakers"
+
+/obj/item/clothing/shoes/red_geta
+	name = "red geta"
+	desc = "These sandals originate from culture of Japan and are meant to be an accompaniment for kimonos."
+	icon = 'infinity/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'infinity/icons/mob/onmob/onmob_feet.dmi')
+	icon_state = "red_geta"
+	item_state = "red_geta"
+
+/obj/item/clothing/shoes/black_geta
+	name = "black geta"
+	desc = "These sandals originate from culture of Japan and are meant to be an accompaniment for kimonos."
+	icon = 'infinity/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'infinity/icons/mob/onmob/onmob_feet.dmi')
+	icon_state = "black_geta"
+	item_state = "black_geta"
+
+/obj/item/clothing/shoes/noble_boots
+	name = "noble boots"
+	desc = "Polished leather boots that would rather fit some Avalonian nobleman."
+	icon = 'infinity/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'infinity/icons/mob/onmob/onmob_feet.dmi')
+	icon_state = "noble_boots"
+	item_state = "noble_boots"
