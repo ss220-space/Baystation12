@@ -283,7 +283,7 @@
 		return 1
 	if(isCrowbar(I))
 		if(powered() && density)
-			to_chat(user, "<span class='notice'>The airlock's motors resist your efforts to force it.</span>")
+			to_chat(user, "<span class='notice'>The windoor's motors resist your efforts to force it.</span>")
 		else if(src.p_open)
 			playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
 			user.visible_message("[user] removes the electronics from the windoor.", "You start to remove electronics from the windoor.")
