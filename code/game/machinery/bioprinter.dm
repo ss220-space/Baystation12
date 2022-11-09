@@ -120,7 +120,7 @@
 		BP_R_FOOT   = list(/obj/item/organ/external/foot/right, 40),
 		BP_L_HAND   = list(/obj/item/organ/external/hand,       40),
 		BP_R_HAND   = list(/obj/item/organ/external/hand/right, 40),
-		BP_CELL		= list(/obj/item/organ/internal/cell, 25)
+		BP_CELL		= list(/obj/item/organ/internal/cell/print, 25)
 		)
 
 	machine_name = "prosthetic organ fabricator"
