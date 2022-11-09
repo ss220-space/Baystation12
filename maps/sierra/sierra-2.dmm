@@ -7285,6 +7285,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/random/date_based/christmas/tree{
+	pixel_x = 16;
+	pixel_y = 16
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cafe)
 "anD" = (
