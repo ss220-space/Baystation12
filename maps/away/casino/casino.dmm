@@ -2084,7 +2084,7 @@
 /turf/simulated/floor/plating,
 /area/casino/casino_maintenance)
 "fO" = (
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/plating,
 /area/casino/casino_maintenance)
 "fP" = (
@@ -3720,7 +3720,7 @@
 "kf" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/drinks/bottle/rum,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /obj/random/drinkbottle,
 /obj/random/drinkbottle,
 /obj/random/drinkbottle,

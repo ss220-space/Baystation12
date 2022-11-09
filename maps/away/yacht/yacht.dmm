@@ -266,7 +266,7 @@
 "aM" = (
 /obj/structure/table/marble,
 /obj/item/pizzabox/vegetable,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/yew,
 /area/yacht/living)
@@ -1009,7 +1009,7 @@
 	level = 2
 	},
 /obj/item/shovel/spade,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/yew,
 /area/yacht/living)

@@ -3327,7 +3327,7 @@
 	dir = 1;
 	icon_state = "railing0-1"
 	},
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /turf/simulated/floor/plating,
 /area/maintenance/waterstore)
 "lw" = (
@@ -4230,7 +4230,7 @@
 /area/storage/primary)
 "oD" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/steel_grid,
 /area/janitor/storage)
@@ -4689,7 +4689,7 @@
 /area/maintenance/fourthdeck/starboard)
 "qo" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/steel_grid,
 /area/janitor)
@@ -14652,7 +14652,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/aft)
 "Vh" = (
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},

@@ -1361,7 +1361,7 @@
 /area/ship/ascent_caulship)
 "cY" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/reagent_containers/glass/bucket/ascent,
+/obj/item/reagent_containers/misc/bucket/ascent,
 /obj/item/mop/advanced/ascent,
 /obj/item/material/knife/kitchen/cleaver/ascent,
 /turf/simulated/floor/ascent/tiled,
