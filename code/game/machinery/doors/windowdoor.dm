@@ -220,7 +220,7 @@
 
 /obj/machinery/door/window/attackby(obj/item/I as obj, mob/user as mob)
 
-	//If it's in the process of opening/closing, ignore the click
+	//If it's in the process of opening/closing, ignore the click-
 	if (src.operating == 1)
 		return
 	if(isScrewdriver(I))
@@ -284,28 +284,6 @@
 	if(isCrowbar(I))
 		if(powered() && density)
 			to_chat(user, "<span class='notice'>The airlock's motors resist your efforts to force it.</span>")
-		/* else if(src.operating == -1 && src.p_open)
-			playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
-			user.visible_message("[user] removes the electronics from the windoor.", "You start to remove electronics from the windoor.")
-			if (do_after(user,40,src))
-				to_chat(user, "<span class='notice'>You removed the windoor electronics!</span>")
-
-				var/obj/structure/windoor_assembly/wa = new/obj/structure/windoor_assembly(src.loc)
-				if (istype(src, /obj/machinery/door/window/brigdoor))
-					wa.secure = "secure_"
-					wa.SetName("Secure Wired Windoor Assembly")
-				else
-					wa.SetName("Wired Windoor Assembly")
-				if (src.base_state == "right" || src.base_state == "rightsecure")
-					wa.facing = "r"
-				wa.set_dir(src.dir)
-				wa.state = "02"
-				wa.update_icon()
-
-				shatter(src)
-				operating = 0
-				return
-				*/
 		else if(src.p_open)
 			playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
 			user.visible_message("[user] removes the electronics from the windoor.", "You start to remove electronics from the windoor.")
