@@ -2248,7 +2248,7 @@
 /obj/item/airlock_brace,
 /obj/item/airlock_brace,
 /obj/structure/table/rack,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/item/clothing/mask/plunger,
 /obj/structure/cable{
 	d1 = 1;

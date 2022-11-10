@@ -975,7 +975,7 @@
 /obj/item/seeds/cornseed,
 /obj/item/seeds/cornseed,
 /obj/item/material/hatchet,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/item/material/minihoe,
 /obj/item/plantspray/pests,
 /obj/item/plantspray/pests,
