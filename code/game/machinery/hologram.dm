@@ -65,10 +65,11 @@ var/const/HOLOPAD_MODE = RANGE_BASED
 	var/holopadType = HOLOPAD_SHORT_RANGE //Whether the holopad is short-range or long-range.
 	var/base_icon = "holopad-B"
 
-/obj/machinery/hologram/holopad/New()
+/obj/machinery/hologram/holopad/Initialize()
 	..()
 	desc = "It's a floor-mounted device for projecting holographic images. Its ID is '[loc.loc]'"
 
+/*
 /obj/machinery/hologram/holopad/power_change()
 	. = ..()
 	if(stat & NOPOWER)
@@ -79,11 +80,11 @@ var/const/HOLOPAD_MODE = RANGE_BASED
 		update_use_power(POWER_USE_OFF)
 	else
 		update_use_power(POWER_USE_IDLE)
+*/
 
 /obj/machinery/hologram/holopad/attack_hand(var/mob/living/carbon/human/user) //Carn: Hologram requests.
 	if(!istype(user) && !isrobot(user))
 		return
-	power_change()
 	if(stat & NOPOWER)
 		return
 	if(incoming_connection)
