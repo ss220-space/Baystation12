@@ -15,15 +15,17 @@
 	scanner_name = "Farfleet Reconnaissance Craft"
 	scanner_desc = @{"[i]Registration[/i]: ICCGN Farfleet Reconnaissance Craft
 [i]Transponder[/i]: Transmitting (MIL), ICCG
-[b]Notice[/b]: Proect-2880 Gagarin-Class Farfleet Reconnaissance Craft. This Craft has ICCGN Farfleet designation. Future scanning of ship internals scrambled."}
+[b]Notice[/b]: Warning! Slight traces of a cloaking device are present. This Craft has ICCGN Farfleet designation. Future scanning of ship internals blocked."}
 	contact_class = /decl/ship_contact_class/gagarin
 	color = "#fc7a00"
 	fore_dir = WEST
 	vessel_mass = 27500
 	known_ships = list(/obj/effect/overmap/visitable/ship/landable/snz)
 	vessel_size = SHIP_SIZE_SMALL
+	hide_from_reports = TRUE
 	start_x = 39
 	start_y = 39
+	icon_state = "iccgn_ship"
 
 	initial_generic_waypoints = list(
 		"nav_farfleet_1",
@@ -39,7 +41,7 @@
 
 
 /obj/effect/overmap/visitable/ship/farfleet/New()
-	scanner_name = "FRC [pick("Onyx","Zircon","Grad","Zirkel","Odessa","Gomel","Uragan","Shilka","Omsk","Krondstatt","Topol","Iron Dmitry","Buratino","Kerch","Kherson","Proryv","Triumph","Sochi","Elisarov","Engels","Magnitogorsk")], \a [name]"
+	scanner_name = "FRC [pick("Admiral Sobolev","Ivan Kozhedub","Sevastopol","Zirkel","Kurchatov","Gomel","Admiral Kolchak","Udaloi","Omsk","Krondstatt","Admiral Nakhimov","Iron Dmitry","Simbirsk","Apostle Peter","Admiral Chernavin","Proryv","Triumph","Besstrashnyi","Elisarov","Generalissimus Alexander Suvorov-Rymniksky","Magnitogorsk")], \a [name]"
 	for(var/area/ship/farfleet/A)
 		A.name = "\improper [name] - [A.name]"
 		GLOB.using_map.area_purity_test_exempt_areas += A.type
