@@ -2183,7 +2183,7 @@
 	pixel_x = 3
 	},
 /obj/item/reagent_containers/food/condiment/enzyme,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /obj/machinery/reagent_temperature/cooler,
 /obj/item/material/kitchen/utensil/spoon,
 /turf/simulated/floor/tiled/usedup,
@@ -2849,7 +2849,7 @@
 /obj/machinery/light,
 /obj/machinery/optable,
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/britcup,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /turf/simulated/floor/tiled/white,
 /area/ship/scrap/crew/medbay)
 "eQ" = (
@@ -3524,7 +3524,7 @@
 /obj/random/clothing,
 /obj/random/clothing,
 /obj/random/clothing,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /obj/item/clothingbag/rubbermask,
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/usedup,

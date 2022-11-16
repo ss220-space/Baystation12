@@ -46,7 +46,7 @@
 		user.unEquip(src)
 		qdel(src)
 
-/obj/item/reagent_containers/glass/bucket/wood/cult/New()
+/obj/item/reagent_containers/misc/bucket/wood/cult/New()
 	..()
 	reagents.add_reagent(/datum/reagent/hell_water, 120)
 	update_icon()

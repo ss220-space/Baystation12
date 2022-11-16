@@ -9,7 +9,8 @@
 	maxhealth = 150 //If you change this, consiter changing ../door/window/brigdoor/ health at the bottom of this .dm file
 	health = 150
 	visible = 0.0
-	use_power = POWER_USE_OFF
+	use_power = POWER_USE_IDLE
+	power_channel = ENVIRON
 	stat_immune = NOSCREEN | NOINPUT | NOPOWER
 	uncreated_component_parts = null
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CHECKS_BORDER
@@ -219,9 +220,20 @@
 
 /obj/machinery/door/window/attackby(obj/item/I as obj, mob/user as mob)
 
-	//If it's in the process of opening/closing, ignore the click
+	//If it's in the process of opening/closing, ignore the click-
 	if (src.operating == 1)
 		return
+	if(isScrewdriver(I))
+		if (src.p_open)
+			src.p_open = 0
+			user.visible_message(SPAN_NOTICE("[user.name] closes the maintenance panel on \the [src]."), SPAN_NOTICE("You close the maintenance panel on \the [src]."))
+			playsound(src.loc, "[GLOB.machinery_exposed_sound[2]]", 20)
+			return
+		else
+			src.p_open = 1
+			user.visible_message(SPAN_NOTICE("[user.name] opens the maintenance panel on \the [src]."), SPAN_NOTICE("You open the maintenance panel on \the [src]."))
+			playsound(src.loc, "[GLOB.machinery_exposed_sound[1]]", 20)
+			return
 
 	if(isCoil(I))
 		if (polarized)
@@ -269,36 +281,49 @@
 			playsound(src.loc, 'sound/weapons/blade1.ogg', 50, 1)
 			visible_message("<span class='warning'>The glass door was sliced open by [user]!</span>")
 		return 1
+	if(isCrowbar(I))
+		if(powered() && density)
+			to_chat(user, "<span class='notice'>The windoor's motors resist your efforts to force it.</span>")
+		else if(src.p_open)
+			playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
+			user.visible_message("[user] removes the electronics from the windoor.", "You start to remove electronics from the windoor.")
+			if (do_after(user,40,src))
+				to_chat(user, "<span class='notice'>You removed the windoor electronics!</span>")
 
-	//If it's emagged, crowbar can pry electronics out.
-	if (src.operating == -1 && isCrowbar(I))
-		playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
-		user.visible_message("[user] removes the electronics from the windoor.", "You start to remove electronics from the windoor.")
-		if (do_after(user,40,src))
-			to_chat(user, "<span class='notice'>You removed the windoor electronics!</span>")
-
-			var/obj/structure/windoor_assembly/wa = new/obj/structure/windoor_assembly(src.loc)
-			if (istype(src, /obj/machinery/door/window/brigdoor))
-				wa.secure = "secure_"
-				wa.SetName("Secure Wired Windoor Assembly")
+				var/obj/structure/windoor_assembly/wa = new/obj/structure/windoor_assembly(src.loc)
+				if (istype(src, /obj/machinery/door/window/brigdoor))
+					wa.secure = "secure_"
+					wa.SetName("Secure Wired Windoor Assembly")
+				else
+					wa.SetName("Wired Windoor Assembly")
+				if (src.base_state == "right" || src.base_state == "rightsecure")
+					wa.facing = "r"
+				wa.set_dir(src.dir)
+				wa.state = "02"
+				wa.update_icon()
+				if(operating == -1 || (stat & BROKEN))
+					new /obj/item/stock_parts/circuitboard/broken(src.loc)
+					operating = 0
+				else
+					if (!electronics)
+						create_electronics()
+					electronics.dropInto(loc)
+					electronics = null
+				qdel(src)
+				operating = 0
+				return
+		else if (!powered())
+			if(density)
+				spawn(0)	open(1)
 			else
-				wa.SetName("Wired Windoor Assembly")
-			if (src.base_state == "right" || src.base_state == "rightsecure")
-				wa.facing = "r"
-			wa.set_dir(src.dir)
-			wa.state = "02"
-			wa.update_icon()
-
-			shatter(src)
-			operating = 0
-			return
+				spawn(0)	close(1)
 
 	if (check_force(I, user))
 		return
 
 	src.add_fingerprint(user, 0, I)
 
-	if (src.allowed(user))
+	if (src.allowed(user) && powered())
 		if (src.density)
 			open()
 		else

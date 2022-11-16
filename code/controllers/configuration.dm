@@ -988,3 +988,8 @@ var/list/gamemode_cache = list()
 		if(M && !M.startRequirements() && !isnull(config.probabilities[M.config_tag]) && config.probabilities[M.config_tag] > 0)
 			runnable_modes[M.config_tag] = config.probabilities[M.config_tag]
 	return runnable_modes
+
+/datum/configuration/may_edit_var(user, var_to_edit)
+	if(findtext(var_to_edit, "log_") && usr?.client?.holder?.rights != R_HOST)
+		return FALSE
+	return ..()

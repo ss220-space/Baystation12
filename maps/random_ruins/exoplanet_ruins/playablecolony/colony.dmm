@@ -6058,7 +6058,7 @@
 	icon_state = "techfloor_edges"
 	},
 /obj/structure/closet/crate/hydroponics/prespawned,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/colony/hydroponics)
 "ky" = (
@@ -6858,7 +6858,7 @@
 /obj/item/storage/box/detergent,
 /obj/item/storage/box/detergent,
 /obj/item/mop,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/item/storage/bag/trash,
 /obj/item/storage/bag/trash,
 /obj/item/storage/bag/trash,

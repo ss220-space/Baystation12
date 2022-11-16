@@ -4820,7 +4820,7 @@
 "kO" = (
 /obj/structure/table/glass,
 /obj/item/pen/multi,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/item/paper,
 /turf/simulated/floor/tiled/white,
 /area/meatstation/lab)

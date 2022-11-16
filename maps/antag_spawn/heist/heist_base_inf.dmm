@@ -580,7 +580,7 @@
 /turf/simulated/floor/plating,
 /area/map_template/syndicate_mothership/raider_base)
 "bJ" = (
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/plating,
 /area/map_template/syndicate_mothership/raider_base)
 "bK" = (
@@ -821,7 +821,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/map_template/syndicate_mothership/raider_base)
 "ct" = (
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /turf/simulated/floor/wood/walnut,
 /area/map_template/syndicate_mothership/raider_base)
 "cu" = (

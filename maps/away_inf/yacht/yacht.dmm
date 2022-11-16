@@ -481,7 +481,7 @@
 /obj/item/deck/cards{
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /obj/structure/disposalpipe/junction/mirrored{
 	dir = 4
 	},
@@ -1114,7 +1114,7 @@
 "cm" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/shovel/spade,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/item/material/hatchet,
 /obj/item/storage/plants,
 /turf/simulated/floor/wood/walnut,

@@ -3002,7 +3002,7 @@
 /turf/space,
 /area/magshield/west)
 "hN" = (
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/tiled,
 /area/magshield/east)
 "hO" = (
@@ -3142,7 +3142,7 @@
 /area/magshield/east)
 "if" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/airless,
 /area/magshield/east)
 "ig" = (

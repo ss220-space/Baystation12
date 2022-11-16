@@ -25,6 +25,10 @@
 	info = "You are a Colonist, living on the rim of explored, let alone inhabited, space in a recently landed colony ship."
 	total_positions = 3
 	outfit_type = /decl/hierarchy/outfit/job/colonist2
+	min_skill = list(SKILL_HAULING = SKILL_BASIC,
+					SKILL_COMBAT = SKILL_BASIC,
+					SKILL_WEAPONS = SKILL_BASIC,
+					SKILL_MEDICAL = SKILL_BASIC)
 
 /decl/hierarchy/outfit/job/colonist2
 	name = OUTFIT_JOB_NAME("Colonist2")

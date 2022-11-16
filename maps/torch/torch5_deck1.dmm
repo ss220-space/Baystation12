@@ -28327,7 +28327,7 @@
 /area/security/questioning)
 "szb" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/effect/floor_decal/corner/research/half,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
