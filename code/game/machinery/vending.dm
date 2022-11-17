@@ -92,8 +92,8 @@
 
 	update_icon()
 	build_inventory(populate_parts)
-	prepare_icons()
 
+GLOBAL_LIST_EMPTY(vending_products)
 /**
  *  Build src.produdct_records from the products lists
  *
@@ -119,6 +119,7 @@
 			product.category = category
 
 			src.product_records.Add(product)
+			GLOB.vending_products[entry] = 1
 
 /obj/machinery/vending/Destroy()
 	QDEL_NULL(coin)
@@ -323,14 +324,10 @@
 	tgui_interact(user)
 	return TRUE
 
-/**
- * Prepare icons for TGUI window
- */
-/obj/machinery/vending/proc/prepare_icons()
-	for (var/datum/stored_items/vending_products/R in product_records)
-		var/obj/item/I = R.item_path
-		imagelist[R.item_path] = "[icon2base64(icon(initial(I.icon), initial(I.icon_state)))]"
-
+/obj/machinery/vending/ui_assets(mob/user)
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/vending),
+	)
 /**
  *  Display the TGUI window for the vending machine.
  *
@@ -363,12 +360,12 @@
 			continue
 
 		listed_products.Add(list(list(
-			"base64" = list_find(imagelist, I.item_path),
-			"img" = list_find(imagelist, I.item_path) ? imagelist[I.item_path] : null,
 			"key" = key,
 			"name" = I.item_name,
 			"price" = I.price,
 			"color" = I.display_color,
+			"isatom" = ispath(I.item_path, /atom),
+			"path" = replacetext(replacetext("[I.item_path]", "/obj/item/", ""), "/", "-"),
 			"amount" = I.get_amount()
 		)))
 

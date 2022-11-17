@@ -83660,18 +83660,12 @@ var VendingRow = function VendingRow(props, context) {
   return (0, _inferno.createComponentVNode)(2, _components.Table.Row, {
     children: [(0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "collapsing": true,
-      children: product.base64 && (0, _inferno.createVNode)(1, "img", null, null, 1, {
-        "src": "data:image/jpeg;base64," + product.img,
+      children: product.isatom && (0, _inferno.createVNode)(1, "span", (0, _react.classes)(['vending32x32', product.path]), null, 1, {
         "style": {
           'vertical-align': 'middle',
           'horizontal-align': 'middle'
         }
-      }) || (0, _inferno.createVNode)(1, "span", (0, _react.classes)(['vending32x32', product.path]), null, 1, {
-        "style": {
-          'vertical-align': 'middle',
-          'horizontal-align': 'middle'
-        }
-      })
+      }) || null
     }), (0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "bold": true,
       children: product.name

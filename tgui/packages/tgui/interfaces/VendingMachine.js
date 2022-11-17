@@ -11,15 +11,7 @@ const VendingRow = (props, context) => {
   return (
     <Table.Row>
       <Table.Cell collapsing>
-        {(product.base64 && (
-          <img
-            src={`data:image/jpeg;base64,${product.img}`}
-            style={{
-              'vertical-align': 'middle',
-              'horizontal-align': 'middle',
-            }}
-          />
-        )) || (
+        {(product.isatom && (
           <span
             className={classes(['vending32x32', product.path])}
             style={{
@@ -27,7 +19,7 @@ const VendingRow = (props, context) => {
               'horizontal-align': 'middle',
             }}
           />
-        )}
+        )) || null}
       </Table.Cell>
       <Table.Cell bold>{product.name}</Table.Cell>
       <Table.Cell collapsing textAlign="center">
