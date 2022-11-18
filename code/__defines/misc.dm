@@ -311,3 +311,5 @@
 
 #define UI_FONT_GOOD(X) "<font color='55cc55'>[X]</font>"
 #define UI_FONT_BAD(X) "<font color='cc5555'>[X]</font>"
+
+#define DEFAULT_OVERMAP_RANGE 0 // Makes general computers and devices be able to connect to other overmap z-levels on the same tile.

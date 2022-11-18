@@ -367,7 +367,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 			if ((site.template_flags & TEMPLATE_FLAG_ALLOW_DUPLICATES) && !(site.template_flags & TEMPLATE_FLAG_RUIN_STARTS_DISALLOWED))
 				/* Не знаю, кому в голову пришло запихивать всякие дробные числа, когда rand их не может поддерживать,
 				* но давайте мы улучшим ситуацию, умножив "массу" каждой авейки на 100 и округлив её до целых.
-				* Так мы сможем адекватнее подбирать и балансировать авейки и не ломать pickweight. 
+				* Так мы сможем адекватнее подбирать и балансировать авейки и не ломать pickweight.
 				* А ещё не нужно делать стоимость в 0. Иначе просто ничего не выберется ~bear1ake */
 				available[site] = round(site.spawn_weight * 100) // INF, было available[site] = site.spawn_weight
 		else if (!(site.template_flags & TEMPLATE_FLAG_RUIN_STARTS_DISALLOWED))
@@ -395,7 +395,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		points -= costs[1]
 		players -= costs[2]
 
-	report_progress("Finished selecting away sites ([english_list(selected)]) for [away_site_budget - points] cost of [away_site_budget] spawn and [players] of [players_budget] players budget.") // INF, было report_progress("Finished selecting away sites ([english_list(selected)]) for [away_site_budget - points] cost of [away_site_budget] budget.") 
+	report_progress("Finished selecting away sites ([english_list(selected)]) for [away_site_budget - points] cost of [away_site_budget] spawn and [players] of [players_budget] players budget.") // INF, было report_progress("Finished selecting away sites ([english_list(selected)]) for [away_site_budget - points] cost of [away_site_budget] budget.")
 
 	for (var/datum/map_template/template in selected)
 		if (template.load_new_z())
@@ -444,6 +444,42 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		INCREMENT_WORLD_Z_SIZE
 		empty_levels = list(world.maxz)
 	return pick(empty_levels)
+
+// Get a list of 'nearby' or 'connected' zlevels.
+// You should at least return a list with the given z if nothing else.
+/datum/map/proc/get_map_levels(var/srcz, var/long_range = FALSE, var/om_range = -1)
+	//Get what sector we're in
+	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
+	if(istype(O))
+		//Just the sector we're in
+		if(om_range == -1)
+			return O.map_z.Copy()
+
+		//Otherwise every sector we're on top of
+		var/list/connections = list()
+		var/turf/T = get_turf(O)
+		var/turfrange = long_range ? max(0, om_range) : om_range
+		for(var/obj/effect/overmap/visitable/V in range(turfrange, T))
+			connections += V.map_z // Adding list to list adds contents
+		return connections
+
+	//Traditional behavior, if not in an overmap sector
+	else
+		//If long range, and they're at least in contact levels, return contact levels.
+		if (long_range && (srcz in contact_levels))
+			return contact_levels.Copy()
+		//If in station levels, return station levels
+		else if (srcz in station_levels)
+			return station_levels.Copy()
+		//Anything in multiz then (or just themselves)
+		else
+			return GetConnectedZlevels(srcz)
+
+/proc/get_overmap_sector(var/z)
+	if(GLOB.using_map.use_overmap)
+		return map_sectors["[z]"]
+	else
+		return null
 
 
 /datum/map/proc/setup_economy()

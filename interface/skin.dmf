@@ -133,8 +133,8 @@ window "mainwindow"
 		menu = "menu"
 	elem "asset_cache_browser"
 		type = BROWSER
-		pos = 424,208
-		size = 1x1
+		pos = 0,0
+		size = 200x200
 		anchor1 = none
 		anchor2 = none
 		is-visible = false

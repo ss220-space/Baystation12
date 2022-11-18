@@ -155,6 +155,13 @@ NOTE: It checks usr by default. Supply the "user" argument if you wish to check 
 	log_and_message_admins("has turned stealth mode [holder.stealthy_ ? "ON" : "OFF"]")
 	SSstatistics.add_field_details("admin_verb","SM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+/proc/check_rights_for(client/subject, rights_required)
+	if(subject && subject.holder)
+		if(rights_required && !(rights_required & subject.holder.rights))
+			return 0
+		return 1
+	return 0
+
 #undef STEALTH_OFF
 #undef STEALTH_MANUAL
 #undef STEALTH_AUTO
