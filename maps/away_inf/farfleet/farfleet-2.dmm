@@ -220,10 +220,10 @@
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
 "az" = (
-/obj/item/missile_equipment/passenger,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/rack,
-/obj/item/missile_equipment/passenger,
+/obj/item/missile_equipment/payload/explosive,
+/obj/item/missile_equipment/payload/explosive,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
 "aA" = (
@@ -288,10 +288,6 @@
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/map_template/snz)
-"aI" = (
-/obj/structure/railing/mapped,
-/turf/simulated/floor/reinforced/airless,
-/area/space)
 "aK" = (
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/airless,
@@ -2910,10 +2906,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
-"gV" = (
-/obj/machinery/hologram/holopad/longrange/remoteship,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
 "gW" = (
 /obj/machinery/shieldgen,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -3147,30 +3139,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/crew/hallway/upper)
-"hS" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped{
-	dir = 8;
-	icon_state = "railing0-1"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/space)
-"hY" = (
-/obj/structure/railing/mapped,
-/obj/structure/railing/mapped{
-	dir = 4;
-	icon_state = "railing0-1"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/space)
 "ia" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
@@ -3650,14 +3618,6 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
-	},
-/obj/structure/decor/comm_tower/starts_on{
-	desc = "Long-range Comms tower";
-	name = "Comms Tower"
-	},
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
@@ -4442,16 +4402,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
-"vC" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
-	},
-/obj/structure/railing/mapped,
-/turf/simulated/floor/reinforced/airless,
-/area/space)
 "vF" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/structure/cable{
@@ -4506,13 +4456,13 @@
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/upper/aft)
 "vS" = (
-/obj/item/missile_equipment/passenger,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/table/rack,
-/obj/item/missile_equipment/passenger,
+/obj/item/missile_equipment/payload/emp,
+/obj/item/missile_equipment/payload/emp,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
 "vU" = (
@@ -5076,13 +5026,13 @@
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/snz_exterior_dock)
 "AV" = (
-/obj/item/missile_equipment/thruster/planet,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/table/rack,
-/obj/item/missile_equipment/thruster/planet,
+/obj/item/missile_equipment/thruster,
+/obj/item/missile_equipment/thruster,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
 "Br" = (
@@ -5419,18 +5369,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/ship/farfleet/crew/freezer)
-"Ek" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/space)
 "Eo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
@@ -5509,22 +5447,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/command/snz_exterior_dock)
-"ES" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/obj/structure/decor/random_radio{
-	name = "Radio Substation";
-	desc = "Radio substation used for long-range comms"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/space)
 "EY" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -5643,14 +5565,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/ship/farfleet/crew/freezer)
-"Gc" = (
-/obj/structure/railing/mapped{
-	dir = 8;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped,
-/turf/simulated/floor/reinforced/airless,
-/area/space)
 "Gd" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -5776,22 +5690,6 @@
 /obj/item/missile_equipment/payload/antimissile,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse)
-"Hn" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped{
-	dir = 4;
-	icon_state = "railing0-1"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/space)
 "Hq" = (
 /obj/structure/closet/secure_closet/farfleet,
 /obj/machinery/light{
@@ -7419,10 +7317,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
 	},
 /obj/structure/decor/nt_biocan{
 	name = "Capacitor";
@@ -12197,8 +12091,8 @@ hj
 TF
 HH
 HH
-hS
-Gc
+iC
+ab
 ab
 ab
 aa
@@ -12320,7 +12214,7 @@ TF
 HH
 HH
 Yc
-aI
+ab
 ab
 Lr
 aa
@@ -12441,8 +12335,8 @@ BV
 Jz
 HH
 HH
-Ek
-aI
+iC
+ab
 ab
 iC
 aa
@@ -12563,8 +12457,8 @@ et
 TF
 HH
 HH
-Ek
-aI
+iC
+ab
 ab
 iC
 aa
@@ -12686,7 +12580,7 @@ TF
 HH
 HH
 nE
-vC
+Ip
 Ip
 sD
 aa
@@ -12807,8 +12701,8 @@ XS
 Gj
 HH
 HH
-ES
-aI
+iC
+ab
 ab
 ab
 aa
@@ -12908,7 +12802,7 @@ Zj
 hH
 fp
 dL
-gV
+fQ
 fQ
 fQ
 ej
@@ -12929,8 +12823,8 @@ TF
 MU
 HH
 HH
-Ek
-aI
+iC
+ab
 ab
 ab
 aa
@@ -13051,8 +12945,8 @@ NP
 Yt
 HH
 HH
-Ek
-aI
+iC
+ab
 ab
 ab
 aa
@@ -13173,8 +13067,8 @@ BV
 TF
 HH
 HH
-Ek
-aI
+iC
+ab
 ab
 ab
 aa
@@ -13295,8 +13189,8 @@ et
 TF
 HH
 HH
-Hn
-hY
+iC
+ab
 ab
 ab
 aa
