@@ -1989,7 +1989,7 @@
 /obj/effect/floor_decal/industrial/radiation/fulltile,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
 /obj/effect/catwalk_plated/dark,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/plating,
 /area/verne/engineering/powergen)
 "qL" = (

@@ -2799,7 +2799,7 @@
 "fB" = (
 /obj/structure/mopbucket,
 /obj/item/mop,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/plating,
 /area/ship/scrap/maintenance/lower)
 "fC" = (

@@ -1697,7 +1697,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/tiled/techfloor,
 /area/white_star/section3)
 "cL" = (

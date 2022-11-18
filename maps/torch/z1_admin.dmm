@@ -4979,7 +4979,7 @@
 /area/centcom/specops)
 "aBM" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket{
+/obj/item/reagent_containers/misc/bucket{
 	amount_per_transfer_from_this = 50
 	},
 /turf/unsimulated/floor{
@@ -6478,7 +6478,7 @@
 	dir = 5
 	},
 /obj/item/book/manual/barman_recipes,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -11947,7 +11947,7 @@
 /area/holodeck/source_temple)
 "pWv" = (
 /obj/structure/table/holo_woodentable,
-/obj/item/reagent_containers/glass/rag{
+/obj/item/reagent_containers/misc/rag{
 	holographic = 1
 	},
 /turf/simulated/floor/holofloor/wood,

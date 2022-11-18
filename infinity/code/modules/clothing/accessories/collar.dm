@@ -13,27 +13,43 @@
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/misc.dmi',
 		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/misc.dmi'
-		)
+	)
+	var/renameable = FALSE
 
 /obj/item/clothing/accessory/necklace/collar/gold
 	name = "golden tag collar"
 	desc = "A collar for your little pets... or the big ones."
 	icon_state = "collar_bkgold"
+	renameable = TRUE
 
 /obj/item/clothing/accessory/necklace/collar/bell
 	name = "bell collar"
 	desc = "A collar with a tiny bell hanging from it, purrfect furr kitties."
 	icon_state = "collar_bkbell"
+	renameable = TRUE
 
 /obj/item/clothing/accessory/necklace/collar/spike
 	name = "spiked collar"
 	desc = "A collar with spikes that look as sharp as your teeth."
 	icon_state = "collar_bkspike"
+	renameable = TRUE
 
 /obj/item/clothing/accessory/necklace/collar/pink
 	name = "pink collar"
 	desc = "This collar will make your pets look FA-BU-LOUS."
 	icon_state = "collar_pisilv"
+	renameable = TRUE
+
+/obj/item/clothing/accessory/necklace/collar/attackby(var/obj/item/S, var/mob/user)
+	if(renameable && S.sharp)
+		var/inscription = sanitize(input("Enter an inscription to engrave.", "Inscription") as null|text)
+
+		if(!user.stat && !user.incapacitated() && user.Adjacent(src) && S.loc == user)
+			if(!inscription)
+				return
+			to_chat(user, SPAN_WARNING("You carve \"[inscription]\" into \the [src]."))
+			name = initial(name) + " ([inscription])"
+			desc = initial(desc) + " The tag says \"[inscription]\"."
 
 /obj/item/clothing/accessory/necklace/collar/holo
 	name = "holo-collar"

@@ -17,8 +17,6 @@
 	can_escape = TRUE
 	a_intent = I_HURT
 	var/corpse = /obj/effect/landmark/corpse/syndicate
-	var/weapon1
-	var/weapon2
 	unsuitable_atmos_damage = 15
 	environment_smash = 1
 	faction = "syndicate"
@@ -28,10 +26,6 @@
 	..(gibbed, deathmessage, show_dead_message)
 	if(corpse)
 		new corpse (src.loc)
-	if(weapon1)
-		new weapon1 (src.loc)
-	if(weapon2)
-		new weapon2 (src.loc)
 	qdel(src)
 	return
 
@@ -41,8 +35,6 @@
 	icon_state = "syndicatemelee"
 	icon_living = "syndicatemelee"
 	natural_weapon = /obj/item/melee/energy/sword/red/activated
-	weapon1 = /obj/item/melee/energy/sword/red/activated
-	weapon2 = /obj/item/shield/energy
 	status_flags = 0
 
 /mob/living/simple_animal/hostile/syndicate/melee/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -89,7 +81,6 @@
 	projectilesound = 'sound/weapons/gunshot/gunshot_smg.ogg'
 	projectiletype = /obj/item/projectile/bullet/pistol
 
-	weapon1 = /obj/item/gun/projectile/automatic/merc_smg
 
 /mob/living/simple_animal/hostile/syndicate/ranged/space
 	icon_state = "syndicaterangedpsace"
