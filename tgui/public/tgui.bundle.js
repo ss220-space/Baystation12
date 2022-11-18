@@ -114,7 +114,34 @@ function popperGenerator(generatorOptions) {
             }); // Validate the provided modifiers so that the consumer will get warned
             // if one of the modifiers is invalid for any reason
 
-            if (false) { var _getComputedStyle, marginTop, marginRight, marginBottom, marginLeft, flipModifier, modifiers; }
+            if (true) {
+              var modifiers = (0, _uniqueBy["default"])([].concat(orderedModifiers, state.options.modifiers), function (_ref) {
+                var name = _ref.name;
+                return name;
+              });
+              (0, _validateModifiers["default"])(modifiers);
+
+              if ((0, _getBasePlacement["default"])(state.options.placement) === _enums.auto) {
+                var flipModifier = state.orderedModifiers.find(function (_ref2) {
+                  var name = _ref2.name;
+                  return name === 'flip';
+                });
+
+                if (!flipModifier) {}
+              }
+
+              var _getComputedStyle = (0, _getComputedStyle2["default"])(popper),
+                  marginTop = _getComputedStyle.marginTop,
+                  marginRight = _getComputedStyle.marginRight,
+                  marginBottom = _getComputedStyle.marginBottom,
+                  marginLeft = _getComputedStyle.marginLeft; // We no longer take into account `margins` on the popper, and it can
+              // cause bugs with positioning, so we'll warn the consumer
+
+
+              if ([marginTop, marginRight, marginBottom, marginLeft].some(function (margin) {
+                return parseFloat(margin);
+              })) {}
+            }
 
             runModifierEffects();
             return instance.update();
@@ -139,7 +166,7 @@ function popperGenerator(generatorOptions) {
             // anymore
 
             if (!areValidElements(reference, popper)) {
-              if (false) {}
+              if (true) {}
 
               return;
             } // Store the reference and popper rects to be read by modifiers
@@ -166,7 +193,13 @@ function popperGenerator(generatorOptions) {
             var __debug_loops__ = 0;
 
             for (var index = 0; index < state.orderedModifiers.length; index++) {
-              if (false) {}
+              if (true) {
+                __debug_loops__ += 1;
+
+                if (__debug_loops__ > 100) {
+                  break;
+                }
+              }
 
               if (state.reset === true) {
                 state.reset = false;
@@ -212,7 +245,7 @@ function popperGenerator(generatorOptions) {
       };
 
       if (!areValidElements(reference, popper)) {
-        if (false) {}
+        if (true) {}
 
         return instance;
       }
@@ -1534,10 +1567,12 @@ function effect(_ref2) {
     }
   }
 
-  if (false) {}
+  if (true) {
+    if (!(0, _instanceOf.isHTMLElement)(arrowElement)) {}
+  }
 
   if (!(0, _contains["default"])(state.elements.popper, arrowElement)) {
-    if (false) {}
+    if (true) {}
 
     return;
   }
@@ -1713,7 +1748,13 @@ function computeStyles(_ref5) {
       _options$roundOffsets = options.roundOffsets,
       roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
 
-  if (false) { var transitionProperty; }
+  if (true) {
+    var transitionProperty = (0, _getComputedStyle["default"])(state.elements.popper).transitionProperty || '';
+
+    if (adaptive && ['transform', 'top', 'right', 'bottom', 'left'].some(function (property) {
+      return transitionProperty.indexOf(property) >= 0;
+    })) {}
+  }
 
   var commonStyles = {
     placement: (0, _getBasePlacement["default"])(state.placement),
@@ -2580,7 +2621,7 @@ function computeAutoPlacement(state, options) {
   if (allowedPlacements.length === 0) {
     allowedPlacements = placements;
 
-    if (false) {}
+    if (true) {}
   } // $FlowFixMe[incompatible-type]: Flow seems to have problems with two array unions...
 
 
@@ -24582,7 +24623,7 @@ Object.keys(_indexEsm).forEach(function (key) {
   exports[key] = _indexEsm[key];
 });
 
-if (false) {}
+if (true) {}
 
 /***/ }),
 
@@ -26378,7 +26419,13 @@ var lpMarkersByName = {};
  */
 
 var mark = function mark(name, timestamp) {
-  if (false) {}
+  if (true) {
+    if (supportsPerf && !timestamp) {
+      hpMarkersByName[name] = performance.now();
+    }
+
+    lpMarkersByName[name] = timestamp || Date.now();
+  }
 };
 /**
  * Calculates and returns the difference between two markers as a string.
@@ -26388,7 +26435,18 @@ var mark = function mark(name, timestamp) {
 
 
 var measure = function measure(markerNameA, markerNameB) {
-  if (false) { var duration, markerB, markerA; }
+  if (true) {
+    var markerA = hpMarkersByName[markerNameA];
+    var markerB = hpMarkersByName[markerNameB];
+
+    if (!markerA || !markerB) {
+      markerA = lpMarkersByName[markerNameA];
+      markerB = lpMarkersByName[markerNameB];
+    }
+
+    var duration = Math.abs(markerB - markerA);
+    return formatDuration(duration);
+  }
 };
 
 var formatDuration = function formatDuration(duration) {
@@ -28097,7 +28155,9 @@ var backendMiddleware = function backendMiddleware(store) {
 
           _perf.perf.mark('resume/finish');
 
-          if (false) {}
+          if (true) {
+            logger.log('visible in', _perf.perf.measure('render/finish', 'resume/finish'));
+          }
         });
       }
 
@@ -89146,7 +89206,17 @@ var TitleBar = function TitleBar(props, context) {
 
       return onMousedown;
     }()
-  }), (0, _inferno.createVNode)(1, "div", "TitleBar__title", [typeof title === 'string' && title === title.toLowerCase() && (0, _string.toTitleCase)(title) || title, !!children && (0, _inferno.createVNode)(1, "div", "TitleBar__buttons", children, 0)], 0),  false && 0, Boolean(fancy && canClose) && (0, _inferno.createVNode)(1, "div", "TitleBar__close TitleBar__clickable", Byond.IS_LTE_IE8 ? 'x' : '×', 0, {
+  }), (0, _inferno.createVNode)(1, "div", "TitleBar__title", [typeof title === 'string' && title === title.toLowerCase() && (0, _string.toTitleCase)(title) || title, !!children && (0, _inferno.createVNode)(1, "div", "TitleBar__buttons", children, 0)], 0),  true && (0, _inferno.createVNode)(1, "div", "TitleBar__devBuildIndicator", (0, _inferno.createComponentVNode)(2, _components.Icon, {
+    "name": "bug"
+  }), 2, {
+    "onClick": function () {
+      function onClick() {
+        return dispatch((0, _actions.toggleKitchenSink)());
+      }
+
+      return onClick;
+    }()
+  }), Boolean(fancy && canClose) && (0, _inferno.createVNode)(1, "div", "TitleBar__close TitleBar__clickable", Byond.IS_LTE_IE8 ? 'x' : '×', 0, {
     "onclick": onClose
   })], 0);
 };
@@ -89286,7 +89356,9 @@ var _log = function log(level, ns) {
   }
 
   // Send logs to a remote log collector
-  if (false) {} // Send important logs to the backend
+  if (true) {
+    _client.sendLogEntry.apply(void 0, [level, ns].concat(args));
+  } // Send important logs to the backend
 
 
   if (level >= LEVEL_INFO) {
@@ -89445,7 +89517,19 @@ var createRenderer = function createRenderer(getVNode) {
     } // Report rendering time
 
 
-    if (false) {}
+    if (true) {
+      if (initialRender === 'resumed') {
+        logger.log('rendered in', _perf.perf.measure('render/start', 'render/finish'));
+      } else if (initialRender) {
+        logger.debug('serving from:', location.href);
+        logger.debug('bundle entered in', _perf.perf.measure('inception', 'init'));
+        logger.debug('initialized in', _perf.perf.measure('init', 'render/start'));
+        logger.log('rendered in', _perf.perf.measure('render/start', 'render/finish'));
+        logger.log('fully loaded in', _perf.perf.measure('inception', 'render/finish'));
+      } else {
+        logger.debug('rendered in', _perf.perf.measure('render/start', 'render/finish'));
+      }
+    }
 
     if (initialRender) {
       initialRender = false;
@@ -89548,7 +89632,13 @@ var getRoutedComponent = function getRoutedComponent(store) {
     return RefreshingWindow;
   }
 
-  if (false) { var debug; }
+  if (true) {
+    var debug = (0, _selectors.selectDebug)(state); // Show a kitchen sink
+
+    if (debug.kitchenSink) {
+      return (__webpack_require__(/*! ./debug */ "./packages/tgui/debug/index.js").KitchenSink);
+    }
+  }
 
   var name = config == null ? void 0 : config["interface"];
   var interfacePathBuilders = [function (name) {
@@ -89640,7 +89730,13 @@ var configureStore = function configureStore(options) {
   }), options.reducer]);
   var middleware = !sideEffects ? [] : [].concat(((_options$middleware = options.middleware) == null ? void 0 : _options$middleware.pre) || [], [_assets.assetMiddleware, _backend.backendMiddleware], ((_options$middleware2 = options.middleware) == null ? void 0 : _options$middleware2.post) || []);
 
-  if (false) {}
+  if (true) {
+    // We are using two if statements because Webpack is capable of
+    // removing this specific block as dead code.
+    if (sideEffects) {
+      middleware.unshift(loggingMiddleware, _debug.debugMiddleware, _debug.relayMiddleware);
+    }
+  }
 
   var enhancer = _redux.applyMiddleware.apply(void 0, middleware);
 
@@ -91884,10 +91980,40 @@ var queue = [];
 var subscribers = [];
 
 var ensureConnection = function ensureConnection() {
-  if (false) { var DEV_SERVER_IP; }
+  if (true) {
+    if (!window.WebSocket) {
+      return;
+    }
+
+    if (!socket || socket.readyState === WebSocket.CLOSED) {
+      var DEV_SERVER_IP =  false || '127.0.0.1';
+      socket = new WebSocket("ws://" + DEV_SERVER_IP + ":3000");
+
+      socket.onopen = function () {
+        // Empty the message queue
+        while (queue.length !== 0) {
+          var msg = queue.shift();
+          socket.send(msg);
+        }
+      };
+
+      socket.onmessage = function (event) {
+        var msg = JSON.parse(event.data);
+
+        for (var _iterator = _createForOfIteratorHelperLoose(subscribers), _step; !(_step = _iterator()).done;) {
+          var subscriber = _step.value;
+          subscriber(msg);
+        }
+      };
+    }
+  }
 };
 
-if (false) {}
+if (true) {
+  window.onunload = function () {
+    return socket && socket.close();
+  };
+}
 
 var subscribe = function subscribe(fn) {
   return subscribers.push(fn);
@@ -91956,11 +92082,50 @@ var serializeObject = function serializeObject(obj) {
 };
 
 var sendMessage = function sendMessage(msg) {
-  if (false) { var req, DEV_SERVER_IP, json; }
+  if (true) {
+    var json = serializeObject(msg); // Send message using WebSocket
+
+    if (window.WebSocket) {
+      ensureConnection();
+
+      if (socket.readyState === WebSocket.OPEN) {
+        socket.send(json);
+      } else {
+        // Keep only 100 latest messages in the queue
+        if (queue.length > 100) {
+          queue.shift();
+        }
+
+        queue.push(json);
+      }
+    } // Send message using plain HTTP request.
+    else {
+      var DEV_SERVER_IP =  false || '127.0.0.1';
+      var req = new XMLHttpRequest();
+      req.open('POST', "http://" + DEV_SERVER_IP + ":3001", true);
+      req.timeout = 250;
+      req.send(json);
+    }
+  }
 };
 
 var sendLogEntry = function sendLogEntry(level, ns) {
-  if (false) { var _len, args, _key; }
+  if (true) {
+    try {
+      for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+        args[_key - 2] = arguments[_key];
+      }
+
+      sendMessage({
+        type: 'log',
+        payload: {
+          level: level,
+          ns: ns || 'client',
+          args: args
+        }
+      });
+    } catch (err) {}
+  }
 };
 
 var setupHotReloading = function setupHotReloading() {
