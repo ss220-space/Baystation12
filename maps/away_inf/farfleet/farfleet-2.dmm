@@ -1321,7 +1321,8 @@
 "cZ" = (
 /obj/machinery/power/engine/ion{
 	icon_state = "nozzle";
-	dir = 8
+	dir = 8;
+	thrust_limit = 0.1
 	},
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/upper/starboard)
@@ -5279,6 +5280,14 @@
 /obj/item/reagent_containers/chem_disp_cartridge/silicon,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/maintenance/upper/starboard)
+"Do" = (
+/obj/machinery/power/engine/ion{
+	icon_state = "nozzle";
+	dir = 8;
+	thrust_limit = 0.1
+	},
+/turf/simulated/floor,
+/area/ship/farfleet/maintenance/upper/port)
 "Dr" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -6440,7 +6449,8 @@
 "Pz" = (
 /obj/machinery/power/engine/ion{
 	icon_state = "nozzle";
-	dir = 8
+	dir = 8;
+	thrust_limit = 0.1s
 	},
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/upper/port)
@@ -18673,7 +18683,7 @@ Mw
 Mw
 Mw
 ZR
-Pz
+Do
 ZR
 Mw
 Mw
@@ -18794,7 +18804,7 @@ aa
 Mw
 Mw
 Mw
-Pz
+Do
 Dx
 Pz
 Mw

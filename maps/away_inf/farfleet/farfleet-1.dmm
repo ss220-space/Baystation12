@@ -1345,7 +1345,8 @@
 "dq" = (
 /obj/machinery/power/engine/ion{
 	icon_state = "nozzle";
-	dir = 8
+	dir = 8;
+	thrust_limit = 0.1
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -4825,7 +4826,8 @@
 "nl" = (
 /obj/machinery/atmospherics/unary/engine{
 	icon_state = "nozzle";
-	dir = 8
+	dir = 8;
+	thrust_limit = 0.1
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -5605,7 +5607,7 @@
 	id_tag = "iccg_spacenorth";
 	name = "Obstruction Field Disperser Space Shield";
 	pixel_x = -24;
-	req_access = list("ACCESS_GUN")
+	req_access = list("ACCESS_GUN, ACCESS_ICCGN")
 	},
 /obj/machinery/conveyor_switch{
 	id = "bsa";
@@ -6516,7 +6518,8 @@
 "wM" = (
 /obj/machinery/power/engine/ion{
 	icon_state = "nozzle";
-	dir = 8
+	dir = 8;
+	thrust_limit = 0.1
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -9296,7 +9299,8 @@
 "Th" = (
 /obj/machinery/atmospherics/unary/engine{
 	icon_state = "nozzle";
-	dir = 8
+	dir = 8;
+	thrust_limit = 0.1
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -9607,7 +9611,7 @@
 	id_tag = "iccg_space";
 	name = "Obstruction Field Disperser Space Shield";
 	pixel_x = -24;
-	req_access = list("ACCESS_GUN")
+	req_access = list("ACCESS_GUN, ACCESS_ICCGN")
 	},
 /obj/machinery/conveyor_switch{
 	id = "bsa";
