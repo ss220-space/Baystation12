@@ -1625,7 +1625,7 @@ datum/admins/var/obj/item/paper/admin/faxreply // var to hold fax replies in
 
 
 
-	if(destination.recievefax(P))
+	if(destination.receivefax(P))
 		to_chat(src.owner, "<span class='notice'>Message reply to transmitted successfully.</span>")
 		if(P.sender) // sent as a reply
 			log_fax("[key_name(owner)] replied to a fax message from [key_name(P.sender)]")
@@ -1641,6 +1641,20 @@ datum/admins/var/obj/item/paper/admin/faxreply // var to hold fax replies in
 					to_chat(C, "<span class='log_message'><span class='prefix'>AFAX LOG:</span> [key_name_admin(owner)] has sent a fax message to [destination.department] (<a href='?_src_=holder;AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>")
 				//INF
 					GLOB.fax_cache += "*[time_stamp()]*: <span class='log_message'><span class='prefix'>AFAX LOG:</span> [key_name_admin(owner)] has sent a fax message to [destination.department] (<a href='?_src_=holder;AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span><br>"
+
+		var/plaintext_title = P.sender ? "replied to [key_name(P.sender)]'s fax" : "sent a fax message to [destination.department]"
+		var/fax_text = paper_html_to_plaintext(P.info)
+		log_game(plaintext_title)
+		log_game(fax_text)
+
+		SSwebhooks.send(
+			WEBHOOK_FAX_SENT,
+			list(
+				"name" = "[key_name(owner)] [plaintext_title].",
+				"body" = fax_text
+			)
+		)
+
 	else
 		to_chat(src.owner, "<span class='warning'>Message reply failed.</span>")
 

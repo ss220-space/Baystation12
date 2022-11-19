@@ -3,6 +3,7 @@
 #define WEBHOOK_ROUNDSTART        "webhook_roundstart"
 #define WEBHOOK_SUBMAP_LOADED     "webhook_submap_loaded"
 #define WEBHOOK_CUSTOM_EVENT      "webhook_custom_event"
+#define WEBHOOK_FAX_SENT			"webhook_fax_sent"
 
 //[INF]	Maybe move this into inf folder?
 #define WEBHOOK_SERVER_UPDATE     "webhook_server_update"       // semi-auto server updates

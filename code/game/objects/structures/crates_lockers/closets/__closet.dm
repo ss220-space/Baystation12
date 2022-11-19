@@ -169,7 +169,7 @@
 	src.opened = TRUE
 	playsound(src.loc, open_sound, 50, 1, -3)
 	if(!dense_when_open)
-		density = FALSE
+		set_density(FALSE)
 	update_icon()
 	return 1
 
@@ -184,7 +184,7 @@
 
 	playsound(src.loc, close_sound, 50, 0, -3)
 	if(!wall_mounted)
-		density = TRUE
+		set_density(TRUE)
 	animate_door(TRUE)
 	if(double_doors)
 		animate_door_alt(TRUE)
