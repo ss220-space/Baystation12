@@ -122,6 +122,9 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 		data["canburn"] = linked.can_burn()
 		data["accellimit"] = accellimit*1000
 
+		data["cancombatroll"] = linked.can_combat_roll()
+		data["cancombatturn"] = linked.can_combat_turn()
+
 		data["distress"] = linked ? linked.distress : 0 //INF
 
 		var/speed = round(linked.get_speed()*1000, 0.01)
@@ -245,10 +248,24 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 	if (href_list["manual"])
 		viewing_overmap(user) ? unlook(user) : look(user)
 
-//[INF]
 	if (href_list["distress"] && linked)
 		linked.distress = !linked.distress
-//[/INF]
+
+	if (href_list["roll"])
+		var/ndir = text2num(href_list["roll"])
+		if(ishuman(usr))
+			var/mob/living/carbon/human/H = usr
+			visible_message(SPAN_DANGER("[H] starts tilting the yoke all the way to the [ndir == WEST ? "right" : "left"]!"))
+			if(do_after(H, 1 SECOND))
+				linked.combat_roll(ndir)
+
+	if (href_list["turn"])
+		var/ndir = text2num(href_list["turn"])
+		if(ishuman(usr))
+			var/mob/living/carbon/human/H = usr
+			visible_message(SPAN_DANGER("[H] starts twisting the yoke all the way to the [ndir == WEST ? "right" : "left"]!"))
+			if(do_after(H, 1 SECOND))
+				linked.combat_turn(ndir)
 
 	add_fingerprint(user)
 	updateUsrDialog()
