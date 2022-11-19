@@ -978,7 +978,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "cc" = (
 /obj/machinery/artifact_harvester,
 /obj/effect/floor_decal/borderfloorwhite,
@@ -2436,7 +2436,7 @@
 	},
 /obj/structure/closet/crate/hydroponics/beekeeping,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "eB" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -2451,7 +2451,7 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "eD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
@@ -4616,7 +4616,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "hY" = (
 /obj/effect/paint/nt_white,
 /obj/effect/paint_stripe/nt_red,
@@ -11617,7 +11617,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "rQ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -12169,7 +12169,7 @@
 	},
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "sD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -12459,7 +12459,7 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "te" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external/escapepod{
@@ -13056,7 +13056,7 @@
 	},
 /obj/machinery/honey_extractor,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "ud" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -13378,7 +13378,7 @@
 	},
 /obj/machinery/seed_storage/garden,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "uH" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/effect/paint_stripe/yellow,
@@ -14633,7 +14633,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "wF" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "sensor_shutters"
@@ -19685,7 +19685,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "Fb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -21029,7 +21029,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "Hh" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/firedoor,
@@ -23223,7 +23223,7 @@
 	},
 /obj/structure/closet/secure_closet/hydroponics_sierra,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "KC" = (
 /obj/structure/hygiene/shower{
 	dir = 4;
@@ -23911,7 +23911,7 @@
 /area/quartermaster/hangar)
 "LO" = (
 /turf/simulated/wall/prepainted,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "LP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -25265,7 +25265,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "NY" = (
 /obj/structure/closet/emcloset{
 	anchored = 1;
@@ -28299,7 +28299,7 @@
 /area/shuttle/petrov/gas)
 "Tj" = (
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "Tk" = (
 /obj/machinery/door/blast/regular/escape_pod{
 	id_tag = "escape_pod_4"
@@ -29840,7 +29840,7 @@
 	},
 /obj/machinery/smartfridge/drying_rack,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "WB" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
@@ -30002,7 +30002,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "WS" = (
 /obj/machinery/sleeper/survival_pod{
 	dir = 1
@@ -30079,7 +30079,7 @@
 	},
 /obj/structure/stairs/south,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "Xa" = (
 /obj/machinery/sleeper{
 	dir = 8
@@ -31297,7 +31297,7 @@
 /area/exploration_shuttle/power)
 "ZH" = (
 /turf/simulated/wall/r_wall/hull,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "ZI" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/maintenance/thirddeck/forestarboard)
@@ -31403,7 +31403,7 @@
 	},
 /obj/machinery/vending/hydronutrients,
 /turf/simulated/floor/tiled,
-/area/hydroponics/storage)
+/area/hydroponics/third_deck_storage)
 "ZV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
@@ -49299,7 +49299,7 @@ Fa
 LO
 LO
 LO
-LO
+XD
 VU
 if
 tw
@@ -49501,7 +49501,7 @@ Hg
 eA
 KB
 WA
-LO
+XD
 YW
 if
 iw
@@ -49703,7 +49703,7 @@ Tj
 Tj
 eC
 uc
-LO
+XD
 eP
 vI
 tw
@@ -49905,7 +49905,7 @@ Tj
 Tj
 NX
 LO
-LO
+XD
 gZ
 tT
 tw
@@ -50106,7 +50106,7 @@ wE
 td
 cb
 sC
-LO
+XD
 bF
 hb
 gi
@@ -50308,7 +50308,7 @@ rP
 hX
 WZ
 LO
-LO
+XD
 UW
 ht
 dp
