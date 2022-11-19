@@ -22,7 +22,9 @@ GLOBAL_LIST_EMPTY(adminfaxes) //cache for faxes that have been sent to admins
 	var/department = "Unknown" // our department
 	var/destination = null // the department we're sending to
 
-/obj/machinery/photocopier/faxmachine/New()
+/obj/machinery/photocopier/faxmachine/Initialize()
+	. = ..()
+
 	GLOB.allfaxes += src
 	if(!destination) destination = "[GLOB.using_map.boss_name]"
 	if( !(("[department]" in GLOB.alldepartments) || ("[department]" in admin_departments)) )

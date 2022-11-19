@@ -403,8 +403,7 @@
 "aY" = (
 /obj/structure/table/woodentable/walnut,
 /obj/machinery/photocopier/faxmachine{
-	department = "Farfleet Recon Ship";
-	send_access = list("ACCESS_ICCGN")
+	department = "Farfleet Recon Ship"
 	},
 /obj/effect/floor_decal/carpet/blue2{
 	dir = 1
@@ -3757,6 +3756,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/barracks/armory)
 "px" = (
@@ -4150,6 +4150,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/barracks/armory)
 "tJ" = (

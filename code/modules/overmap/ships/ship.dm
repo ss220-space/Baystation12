@@ -436,7 +436,7 @@ obj/effect/overmap/visitable/ship/proc/get_base_sensor_visibility()
 			to_chat(L, SPAN_DANGER("<font size=4>The ship rapidly inclines under your feet!</font>"))
 			if(!L.buckled)
 				var/turf/T = get_step_away(get_turf(L), get_step(L, new_dir), 10)
-				L.throw_at(T, 10, 10)
+				L.throw_at(T, 4, 3)
 			shake_camera(L, 2 SECONDS, 10)
 			sound_to(L, sound('sound/effects/combatroll.ogg'))
 	last_combat_roll = world.time

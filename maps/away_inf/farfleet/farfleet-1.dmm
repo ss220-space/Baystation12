@@ -383,7 +383,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/storage)
 "aZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -545,6 +545,18 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
+"bs" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8;
+	pixel_x = 0
+	},
+/obj/machinery/atmospherics/unary/engine{
+	icon_state = "nozzle";
+	dir = 8;
+	thrust_limit = 0.1
+	},
+/turf/simulated/floor/airless,
+/area/ship/farfleet/maintenance/engine/port)
 "bv" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -1536,6 +1548,7 @@
 	dir = 6
 	},
 /obj/structure/catwalk,
+/obj/random/coin,
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/engine/port)
 "dF" = (
@@ -2787,6 +2800,7 @@
 	pixel_y = -24;
 	req_access = list("ACCESS_ICCGN")
 	},
+/obj/random/junk,
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/engine/starboard)
 "gB" = (
@@ -3816,7 +3830,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/storage)
 "kf" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -3921,6 +3935,7 @@
 	pixel_x = -24
 	},
 /obj/item/storage/fancy/cigarettes/prima,
+/obj/item/device/synthesized_instrument/guitar,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/crew/brig/emergency_armory)
 "kx" = (
@@ -4638,6 +4653,11 @@
 	},
 /turf/simulated/floor,
 /area/ship/farfleet/engineering/shield)
+"mA" = (
+/obj/effect/paint/dark_gunmetal,
+/obj/machinery/media/music_writer,
+/turf/simulated/wall,
+/area/ship/farfleet/crew/kitchen)
 "mC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -4659,7 +4679,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/autoname/maintenance,
 /obj/effect/floor_decal/industrial/warning/half,
-/turf/simulated/floor,
+/turf/simulated/floor/tiled,
 /area/ship/farfleet/maintenance/lower)
 "mG" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -4824,16 +4844,15 @@
 /turf/simulated/floor,
 /area/ship/farfleet/engineering/fussion/control)
 "nl" = (
-/obj/machinery/atmospherics/unary/engine{
-	icon_state = "nozzle";
-	dir = 8;
-	thrust_limit = 0.1
-	},
 /obj/structure/window/reinforced{
 	dir = 8;
 	icon_state = "rwindow"
 	},
-/turf/simulated/floor,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact";
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
 /area/ship/farfleet/maintenance/engine/port)
 "nn" = (
 /obj/structure/cable/yellow{
@@ -5606,8 +5625,7 @@
 	dir = 4;
 	id_tag = "iccg_spacenorth";
 	name = "Obstruction Field Disperser Space Shield";
-	pixel_x = -24;
-	req_access = list("ACCESS_GUN, ACCESS_ICCGN")
+	pixel_x = -24
 	},
 /obj/machinery/conveyor_switch{
 	id = "bsa";
@@ -5621,8 +5639,7 @@
 	},
 /obj/machinery/button/mass_driver{
 	id_tag = "missisles2";
-	pixel_x = -32;
-	req_access = list("ACCESS_ICCGN, ACCESS_GUN")
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/command/launcher/north)
@@ -5694,7 +5711,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/storage)
 "pP" = (
 /obj/effect/paint/dark_gunmetal,
@@ -5844,7 +5861,7 @@
 	dir = 8;
 	icon_state = "rwindow"
 	},
-/turf/simulated/floor,
+/turf/simulated/wall/r_wall,
 /area/ship/farfleet/maintenance/engine/starboard)
 "rq" = (
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -6149,7 +6166,7 @@
 	dir = 8;
 	icon_state = "rwindow"
 	},
-/turf/simulated/floor,
+/turf/simulated/wall/r_wall,
 /area/ship/farfleet/maintenance/engine/port)
 "tF" = (
 /obj/structure/cable{
@@ -6331,6 +6348,16 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/crew)
+"vb" = (
+/obj/machinery/button/blast_door{
+	dir = 4;
+	id_tag = "iccg_spacenorth";
+	name = "Obstruction Field Disperser Space Shield";
+	pixel_x = -24;
+	req_access = list("ACCESS_GUN, ACCESS_ICCGN")
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ship/farfleet/command/launcher/north)
 "vn" = (
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -8719,7 +8746,7 @@
 	name = "Engineering Bay";
 	req_one_access = list(10)
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/storage)
 "Ox" = (
 /obj/machinery/computer/ship/navigation/telescreen,
@@ -9083,6 +9110,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/ship/farfleet/medbay)
+"Ro" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8;
+	pixel_x = 0
+	},
+/obj/machinery/atmospherics/unary/engine{
+	icon_state = "nozzle";
+	dir = 8;
+	thrust_limit = 0.1
+	},
+/turf/simulated/floor/airless,
+/area/ship/farfleet/maintenance/engine/starboard)
 "Rr" = (
 /obj/structure/railing/mapped{
 	dir = 8;
@@ -9297,16 +9336,15 @@
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/command/launcher/north)
 "Th" = (
-/obj/machinery/atmospherics/unary/engine{
-	icon_state = "nozzle";
-	dir = 8;
-	thrust_limit = 0.1
-	},
 /obj/structure/window/reinforced{
 	dir = 8;
 	icon_state = "rwindow"
 	},
-/turf/simulated/floor,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact";
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
 /area/ship/farfleet/maintenance/engine/starboard)
 "Ti" = (
 /obj/structure/cable{
@@ -9610,8 +9648,7 @@
 	dir = 4;
 	id_tag = "iccg_space";
 	name = "Obstruction Field Disperser Space Shield";
-	pixel_x = -24;
-	req_access = list("ACCESS_GUN, ACCESS_ICCGN")
+	pixel_x = -24
 	},
 /obj/machinery/conveyor_switch{
 	id = "bsa";
@@ -9625,8 +9662,7 @@
 	},
 /obj/machinery/button/mass_driver{
 	id_tag = "missisles";
-	pixel_x = -32;
-	req_access = list("ACCESS_ICCGN")
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/command/launcher)
@@ -10143,7 +10179,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled,
 /area/ship/farfleet/engineering/storage)
 "Yl" = (
 /obj/structure/cable{
@@ -15516,7 +15552,7 @@ mY
 kG
 mY
 mY
-mY
+vb
 rQ
 gp
 gp
@@ -17587,7 +17623,7 @@ ng
 ng
 Vp
 dz
-pi
+mA
 dg
 vq
 sd
@@ -21613,10 +21649,10 @@ aa
 aa
 Ey
 wM
+Ro
 oJ
 oJ
-oJ
-oJ
+Ro
 wM
 Ey
 Yc
@@ -21630,10 +21666,10 @@ aa
 Yc
 uG
 dq
+bs
 Ge
 Ge
-Ge
-Ge
+bs
 dq
 uG
 aa
