@@ -8,7 +8,7 @@ GLOBAL_LIST_EMPTY(adminfaxes) //cache for faxes that have been sent to admins
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "fax"
 	insert_anim = "faxsend"
-	var/send_access = list(access_lawyer, access_bridge, access_armory, access_qm, access_heads, access_cent_general)
+	var/send_access = list(list(access_lawyer, access_bridge, access_armory, access_qm, access_heads, access_cent_general))
 
 	var/static/list/admin_departments = list("[GLOB.using_map.boss_name]", "Sol Governmental Authority", "Sol-Gov Job Boards", "Sol-Gov Supply Departament", "FTU Agency")
 
