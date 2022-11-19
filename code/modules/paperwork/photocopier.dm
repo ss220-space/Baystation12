@@ -45,7 +45,7 @@
 	data["can_AI_print"] = (toner >= 5)
 	data["has_toner"] =	!!toner
 	data["current_toner"] = toner
-	data["max_toner"] = 40
+	data["max_toner"] = 30
 	data["num_copies"] = copies
 	data["max_copies"] = maxcopies
 
