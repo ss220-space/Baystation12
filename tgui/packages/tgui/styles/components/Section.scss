@@ -22,6 +22,9 @@ $separator-color: colors.$primary !default;
   &:last-child {
     margin-bottom: 0;
   }
+  &--transparent {
+    background-color: transparent;
+  }
 }
 
 .Section__title {

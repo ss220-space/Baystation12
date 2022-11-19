@@ -16,6 +16,7 @@ interface SectionProps extends BoxProps {
   fill?: boolean;
   fitted?: boolean;
   scrollable?: boolean;
+  transparent?: boolean;
   flexGrow?: boolean; // VOREStation Addition
   noTopPadding?: boolean; // VOREStation Addition
   stretchContents?: boolean; // VOREStation Addition
@@ -62,6 +63,7 @@ export class Section extends Component<SectionProps> {
       fill,
       fitted,
       scrollable,
+      transparent,
       flexGrow, // VOREStation Addition
       noTopPadding, // VOREStation Addition
       stretchContents, // VOREStation Addition
@@ -77,6 +79,7 @@ export class Section extends Component<SectionProps> {
           fill && 'Section--fill',
           fitted && 'Section--fitted',
           scrollable && 'Section--scrollable',
+          transparent && 'Section--transparent',
           flexGrow && 'Section--flex', // VOREStation Addition
           className,
           computeBoxClassName(rest),

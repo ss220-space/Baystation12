@@ -73,3 +73,11 @@
 /datum/gear/clothing/cloak_medical
 	display_name = "cloak, medical"
 	path = /obj/item/clothing/accessory/cloak/medical
+
+/datum/gear/clothing/cloak_antiq
+	display_name = "antiquated cape"
+	path = /obj/item/clothing/accessory/cloak/antiq
+
+/datum/gear/clothing/cloak_hooded
+	display_name = "cloak, hooded"
+	path = /obj/item/clothing/accessory/cloak/hooded

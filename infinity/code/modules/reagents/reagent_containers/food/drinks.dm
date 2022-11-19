@@ -36,6 +36,7 @@
 				if(!Adjacent(usr))
 					return
 				standard_splash_mob(src, src)
+				return
 			if(!Adjacent(usr))
 				return
 			usr.visible_message(SPAN_NOTICE("[usr] gulped down the whole [src]!"),SPAN_NOTICE("You gulped down the whole [src]!"))

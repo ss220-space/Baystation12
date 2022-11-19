@@ -113,7 +113,7 @@
 	return TRUE
 
 /decl/surgery_step/hardsuit/get_skill_reqs(mob/living/user, mob/living/carbon/human/target, obj/item/tool)
-	return list(SKILL_EVA = SKILL_BASIC) 
+	return list(SKILL_EVA = SKILL_BASIC)
 
 /decl/surgery_step/hardsuit/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!istype(target))
@@ -156,7 +156,7 @@
 		/obj/item/reagent_containers/glass/beaker = 75,
 		/obj/item/reagent_containers/food/drinks/bottle = 75,
 		/obj/item/reagent_containers/food/drinks/glass2 = 75,
-		/obj/item/reagent_containers/glass/bucket = 50
+		/obj/item/reagent_containers/misc/bucket = 50
 	)
 	can_infect = 0
 	blood_level = 0
@@ -169,7 +169,7 @@
 		return affected
 
 /decl/surgery_step/sterilize/get_skill_reqs(mob/living/user, mob/living/carbon/human/target, obj/item/tool)
-	return list(SKILL_MEDICAL = SKILL_BASIC) 
+	return list(SKILL_MEDICAL = SKILL_BASIC)
 
 /decl/surgery_step/sterilize/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)

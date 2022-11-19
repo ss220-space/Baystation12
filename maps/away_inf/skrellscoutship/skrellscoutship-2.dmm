@@ -543,7 +543,7 @@
 /area/ship/skrellscoutship/crew/kitchen)
 "bk" = (
 /obj/structure/table/steel,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/tiled/skrell/green,
 /area/ship/skrellscoutship/crew/kitchen)
 "bl" = (

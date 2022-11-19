@@ -3612,7 +3612,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/crew/kitchen)
@@ -4305,7 +4305,7 @@
 /area/ship/patrol/maintenance/upper/starboard)
 "oL" = (
 /obj/structure/table/woodentable,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper)
 "oM" = (

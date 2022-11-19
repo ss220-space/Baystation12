@@ -569,7 +569,7 @@ obj/random/closet //A couple of random closets to spice up maint
 
 /obj/random/soap/spawn_choices()
 	return list(/obj/item/soap = 12,
-				/obj/item/reagent_containers/glass/rag = 2,
+				/obj/item/reagent_containers/misc/rag = 2,
 				/obj/item/reagent_containers/spray/cleaner = 2,
 				/obj/item/grenade/chem_grenade/cleaner = 1)
 

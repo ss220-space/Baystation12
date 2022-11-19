@@ -28,7 +28,7 @@
 	cultname = "summon hellwater"
 
 /obj/effect/rune/hellbucket/cast(var/mob/living/user)
-	new /obj/item/reagent_containers/glass/bucket/wood/cult(get_turf(src))
+	new /obj/item/reagent_containers/misc/bucket/wood/cult(get_turf(src))
 	speak_incantation(user, "N[pick("'","`")]ath chsz'rchesh tza'jink'tumakes!")
 	visible_message("<span class='notice'>\The [src] disappears with a flash of red light.</span>", "You hear a pop.")
 	qdel(src)

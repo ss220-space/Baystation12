@@ -1821,7 +1821,7 @@
 /obj/structure/closet{
 	name = "custodial"
 	},
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/item/mop,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/effect/floor_decal/techfloor{

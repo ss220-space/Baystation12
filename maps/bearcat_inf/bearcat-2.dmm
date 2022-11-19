@@ -6302,7 +6302,7 @@
 	pixel_y = 0
 	},
 /obj/machinery/seed_extractor,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/misc/bucket,
 /obj/item/material/hatchet,
 /obj/item/material/minihoe,
 /turf/simulated/floor/tiled,

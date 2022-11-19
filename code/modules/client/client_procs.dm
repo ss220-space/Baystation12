@@ -112,7 +112,6 @@
 		debug_variables(locate(href_list["SDQL_select"]))
 		return
 
-
 	..()	//redirect to hsrc.Topic()
 
 //This stops files larger than UPLOAD_LIMIT being sent from client to server via input(), client.Import() etc.
@@ -441,12 +440,6 @@
 		show_browser(src, 'code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 		// Precache the client with all other assets slowly, so as to not block other browse() calls
 		addtimer(CALLBACK(GLOBAL_PROC, /proc/getFilesSlow, src, SSassets.preload, FALSE), 5 SECONDS)
-
-/*
-/client/proc/after_send_resources()
-	var/decl/asset_cache/asset_cache = decls_repository.get_decl(/decl/asset_cache)
-	getFilesSlow(src, asset_cache.cache, register_asset = FALSE)
-*/
 
 mob/proc/MayRespawn()
 	return 0

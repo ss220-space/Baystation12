@@ -61,9 +61,7 @@ return;\
 #define SS_INIT_GOALS           -7
 #define SS_INIT_LIGHTING        -8
 #define SS_INIT_ZCOPY           -9
-
-#define SS_INIT_STICKY_BAN      -10//inf
-
+#define SS_INIT_STICKY_BAN      -10
 #define SS_INIT_XENOARCH        -11
 #define SS_INIT_BAY_LEGACY      -12
 #define SS_INIT_TICKER          -20

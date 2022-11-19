@@ -114,34 +114,7 @@ function popperGenerator(generatorOptions) {
             }); // Validate the provided modifiers so that the consumer will get warned
             // if one of the modifiers is invalid for any reason
 
-            if (true) {
-              var modifiers = (0, _uniqueBy["default"])([].concat(orderedModifiers, state.options.modifiers), function (_ref) {
-                var name = _ref.name;
-                return name;
-              });
-              (0, _validateModifiers["default"])(modifiers);
-
-              if ((0, _getBasePlacement["default"])(state.options.placement) === _enums.auto) {
-                var flipModifier = state.orderedModifiers.find(function (_ref2) {
-                  var name = _ref2.name;
-                  return name === 'flip';
-                });
-
-                if (!flipModifier) {}
-              }
-
-              var _getComputedStyle = (0, _getComputedStyle2["default"])(popper),
-                  marginTop = _getComputedStyle.marginTop,
-                  marginRight = _getComputedStyle.marginRight,
-                  marginBottom = _getComputedStyle.marginBottom,
-                  marginLeft = _getComputedStyle.marginLeft; // We no longer take into account `margins` on the popper, and it can
-              // cause bugs with positioning, so we'll warn the consumer
-
-
-              if ([marginTop, marginRight, marginBottom, marginLeft].some(function (margin) {
-                return parseFloat(margin);
-              })) {}
-            }
+            if (false) { var _getComputedStyle, marginTop, marginRight, marginBottom, marginLeft, flipModifier, modifiers; }
 
             runModifierEffects();
             return instance.update();
@@ -166,7 +139,7 @@ function popperGenerator(generatorOptions) {
             // anymore
 
             if (!areValidElements(reference, popper)) {
-              if (true) {}
+              if (false) {}
 
               return;
             } // Store the reference and popper rects to be read by modifiers
@@ -193,13 +166,7 @@ function popperGenerator(generatorOptions) {
             var __debug_loops__ = 0;
 
             for (var index = 0; index < state.orderedModifiers.length; index++) {
-              if (true) {
-                __debug_loops__ += 1;
-
-                if (__debug_loops__ > 100) {
-                  break;
-                }
-              }
+              if (false) {}
 
               if (state.reset === true) {
                 state.reset = false;
@@ -245,7 +212,7 @@ function popperGenerator(generatorOptions) {
       };
 
       if (!areValidElements(reference, popper)) {
-        if (true) {}
+        if (false) {}
 
         return instance;
       }
@@ -1567,12 +1534,10 @@ function effect(_ref2) {
     }
   }
 
-  if (true) {
-    if (!(0, _instanceOf.isHTMLElement)(arrowElement)) {}
-  }
+  if (false) {}
 
   if (!(0, _contains["default"])(state.elements.popper, arrowElement)) {
-    if (true) {}
+    if (false) {}
 
     return;
   }
@@ -1748,13 +1713,7 @@ function computeStyles(_ref5) {
       _options$roundOffsets = options.roundOffsets,
       roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
 
-  if (true) {
-    var transitionProperty = (0, _getComputedStyle["default"])(state.elements.popper).transitionProperty || '';
-
-    if (adaptive && ['transform', 'top', 'right', 'bottom', 'left'].some(function (property) {
-      return transitionProperty.indexOf(property) >= 0;
-    })) {}
-  }
+  if (false) { var transitionProperty; }
 
   var commonStyles = {
     placement: (0, _getBasePlacement["default"])(state.placement),
@@ -2621,7 +2580,7 @@ function computeAutoPlacement(state, options) {
   if (allowedPlacements.length === 0) {
     allowedPlacements = placements;
 
-    if (true) {}
+    if (false) {}
   } // $FlowFixMe[incompatible-type]: Flow seems to have problems with two array unions...
 
 
@@ -24623,7 +24582,7 @@ Object.keys(_indexEsm).forEach(function (key) {
   exports[key] = _indexEsm[key];
 });
 
-if (true) {}
+if (false) {}
 
 /***/ }),
 
@@ -26419,13 +26378,7 @@ var lpMarkersByName = {};
  */
 
 var mark = function mark(name, timestamp) {
-  if (true) {
-    if (supportsPerf && !timestamp) {
-      hpMarkersByName[name] = performance.now();
-    }
-
-    lpMarkersByName[name] = timestamp || Date.now();
-  }
+  if (false) {}
 };
 /**
  * Calculates and returns the difference between two markers as a string.
@@ -26435,18 +26388,7 @@ var mark = function mark(name, timestamp) {
 
 
 var measure = function measure(markerNameA, markerNameB) {
-  if (true) {
-    var markerA = hpMarkersByName[markerNameA];
-    var markerB = hpMarkersByName[markerNameB];
-
-    if (!markerA || !markerB) {
-      markerA = lpMarkersByName[markerNameA];
-      markerB = lpMarkersByName[markerNameB];
-    }
-
-    var duration = Math.abs(markerB - markerA);
-    return formatDuration(duration);
-  }
+  if (false) { var duration, markerB, markerA; }
 };
 
 var formatDuration = function formatDuration(duration) {
@@ -28155,9 +28097,7 @@ var backendMiddleware = function backendMiddleware(store) {
 
           _perf.perf.mark('resume/finish');
 
-          if (true) {
-            logger.log('visible in', _perf.perf.measure('render/finish', 'resume/finish'));
-          }
+          if (false) {}
         });
       }
 
@@ -32819,7 +32759,7 @@ var _events = __webpack_require__(/*! ../events */ "./packages/tgui/events.js");
 
 var _Box = __webpack_require__(/*! ./Box */ "./packages/tgui/components/Box.tsx");
 
-var _excluded = ["className", "title", "buttons", "fill", "fitted", "scrollable", "flexGrow", "noTopPadding", "stretchContents", "children"];
+var _excluded = ["className", "title", "buttons", "fill", "fitted", "scrollable", "transparent", "flexGrow", "noTopPadding", "stretchContents", "children"];
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -32882,6 +32822,7 @@ var Section = /*#__PURE__*/function (_Component) {
           fill = _this$props.fill,
           fitted = _this$props.fitted,
           scrollable = _this$props.scrollable,
+          transparent = _this$props.transparent,
           flexGrow = _this$props.flexGrow,
           noTopPadding = _this$props.noTopPadding,
           stretchContents = _this$props.stretchContents,
@@ -32889,7 +32830,7 @@ var Section = /*#__PURE__*/function (_Component) {
           rest = _objectWithoutPropertiesLoose(_this$props, _excluded);
 
       var hasTitle = (0, _react.canRender)(title) || (0, _react.canRender)(buttons);
-      return (0, _inferno.normalizeProps)((0, _inferno.createVNode)(1, "div", (0, _react.classes)(['Section', Byond.IS_LTE_IE8 && 'Section--iefix', fill && 'Section--fill', fitted && 'Section--fitted', scrollable && 'Section--scrollable', flexGrow && 'Section--flex', // VOREStation Addition
+      return (0, _inferno.normalizeProps)((0, _inferno.createVNode)(1, "div", (0, _react.classes)(['Section', Byond.IS_LTE_IE8 && 'Section--iefix', fill && 'Section--fill', fitted && 'Section--fitted', scrollable && 'Section--scrollable', transparent && 'Section--transparent', flexGrow && 'Section--flex', // VOREStation Addition
       className, (0, _Box.computeBoxClassName)(rest)]), [hasTitle && (0, _inferno.createVNode)(1, "div", "Section__title", [(0, _inferno.createVNode)(1, "span", "Section__titleText", title, 0), (0, _inferno.createVNode)(1, "div", "Section__buttons", buttons, 0)], 4), (0, _inferno.createVNode)(1, "div", "Section__rest", (0, _inferno.createVNode)(1, "div", (0, _react.classes)(['Section__content', !!stretchContents && 'Section__content--stretchContents', !!noTopPadding && 'Section__content--noTopPadding']), children, 0, null, null, this.scrollableRef), 0)], 0, Object.assign({}, (0, _Box.computeBoxProps)(rest))));
     }
 
@@ -83683,35 +83624,39 @@ var ItemList = function ItemList(props, context) {
 
 /***/ }),
 
-/***/ "./packages/tgui/interfaces/Vending.js":
-/*!*********************************************!*\
-  !*** ./packages/tgui/interfaces/Vending.js ***!
-  \*********************************************/
+/***/ "./packages/tgui/interfaces/VendingMachine.js":
+/*!****************************************************!*\
+  !*** ./packages/tgui/interfaces/VendingMachine.js ***!
+  \****************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
 exports.__esModule = true;
-exports.VendingProducts = exports.VendingMaintenance = exports.Vending = void 0;
+exports.VendingMachine = void 0;
 
 var _inferno = __webpack_require__(/*! inferno */ "./.yarn/cache/inferno-npm-7.4.11-3352a2fb62-1651aad357.zip/node_modules/inferno/index.esm.js");
 
 var _react = __webpack_require__(/*! common/react */ "./packages/common/react.ts");
 
-var _backend = __webpack_require__(/*! ../backend */ "./packages/tgui/backend.ts");
+var _backend = __webpack_require__(/*! tgui/backend */ "./packages/tgui/backend.ts");
 
-var _components = __webpack_require__(/*! ../components */ "./packages/tgui/components/index.js");
+var _components = __webpack_require__(/*! tgui/components */ "./packages/tgui/components/index.js");
 
-var _layouts = __webpack_require__(/*! ../layouts */ "./packages/tgui/layouts/index.js");
+var _Table = __webpack_require__(/*! tgui/components/Table */ "./packages/tgui/components/Table.js");
+
+var _layouts = __webpack_require__(/*! tgui/layouts */ "./packages/tgui/layouts/index.js");
 
 var VendingRow = function VendingRow(props, context) {
   var _useBackend = (0, _backend.useBackend)(context),
       act = _useBackend.act,
       data = _useBackend.data;
 
-  var actively_vending = data.actively_vending;
-  var product = props.product;
+  var product = props.product,
+      productStock = props.productStock,
+      custom = props.custom;
+  var free = product.price === 0;
   return (0, _inferno.createComponentVNode)(2, _components.Table.Row, {
     children: [(0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "collapsing": true,
@@ -83723,389 +83668,131 @@ var VendingRow = function VendingRow(props, context) {
       }) || null
     }), (0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "bold": true,
-      "color": product.color,
-      children: (0, _inferno.createComponentVNode)(2, _components.Box, {
-        "inline": true,
-        "position": "relative",
-        children: [product.name, product.desc ? (0, _inferno.createComponentVNode)(2, _components.Tooltip, {
-          "content": product.desc,
-          "position": "right"
-        }) : null]
-      })
+      children: product.name
     }), (0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "collapsing": true,
       "textAlign": "center",
       children: (0, _inferno.createComponentVNode)(2, _components.Box, {
-        "color": product.amount <= 0 && 'bad' || product.amount <= product.max_amount / 2 && 'average' || 'good',
-        children: [product.amount, " in stock"]
+        "color": custom && 'good' || productStock <= 0 && 'bad' || productStock <= product.max_amount / 2 && 'average' || 'good',
+        children: [productStock, " in stock"]
       })
     }), (0, _inferno.createComponentVNode)(2, _components.Table.Cell, {
       "collapsing": true,
       "textAlign": "center",
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
+      children: custom && (0, _inferno.createComponentVNode)(2, _components.Button, {
         "fluid": true,
-        "icon": product.price ? 'credit-card' : 'download',
-        "iconSpin": actively_vending === product.name,
-        "disabled": product.amount === 0,
-        "content": product.price ? 'Buy (' + product.price + '₮)' : 'Vend',
         "onClick": function () {
           function onClick() {
-            return act('vend', {
-              'vend': product.key
+            return act('dispense', {
+              'item': product.name
             });
           }
 
           return onClick;
-        }()
+        }(),
+        children: [data.access ? 'FREE' : product.price, " ", !data.access && (0, _inferno.createComponentVNode)(2, _components.Icon, {
+          "style": "margin-left: 6px",
+          "name": "shopping-cart"
+        })]
+      }) || (0, _inferno.createComponentVNode)(2, _components.Button, {
+        "fluid": true,
+        "disabled": productStock === 0,
+        "onClick": function () {
+          function onClick() {
+            return act('dispense', {
+              'ref': product.key
+            });
+          }
+
+          return onClick;
+        }(),
+        children: [free ? 'FREE' : product.price, " ", !data.access && (0, _inferno.createComponentVNode)(2, _components.Icon, {
+          "style": "margin-left: 6px",
+          "name": "shopping-cart"
+        })]
       })
     })]
   });
 };
 
-var Vending = function Vending(props, context) {
+var VendingMachine = function VendingMachine(props, context) {
   var _useBackend2 = (0, _backend.useBackend)(context),
       act = _useBackend2.act,
       data = _useBackend2.data;
 
-  var panel = data.panel;
+  var mode = data.mode,
+      _data$product_records = data.product_records,
+      product_records = _data$product_records === void 0 ? [] : _data$product_records,
+      _data$coin_records = data.coin_records,
+      coin_records = _data$coin_records === void 0 ? [] : _data$coin_records,
+      _data$hidden_records = data.hidden_records,
+      hidden_records = _data$hidden_records === void 0 ? [] : _data$hidden_records;
+  var inventory;
+  var custom = false;
+
+  if (data.vending_machine_input) {
+    inventory = data.vending_machine_input || [];
+    custom = true;
+  } else {
+    inventory = [].concat(product_records, coin_records);
+
+    if (data.extended_inventory) {
+      inventory = [].concat(inventory, hidden_records);
+    }
+  } // Just in case we still have undefined values in the list
+
+
+  inventory = inventory.filter(function (item) {
+    return !!item;
+  });
   return (0, _inferno.createComponentVNode)(2, _layouts.Window, {
     "width": 450,
     "height": 600,
     "resizable": true,
-    children: (0, _inferno.createComponentVNode)(2, _layouts.Window.Content, {
-      "scrollable": true,
-      children: [(0, _inferno.createComponentVNode)(2, VendingProducts), panel ? (0, _inferno.createComponentVNode)(2, VendingMaintenance) : null]
-    })
-  });
-};
-
-exports.Vending = Vending;
-
-var VendingProducts = function VendingProducts(props, context) {
-  var _useBackend3 = (0, _backend.useBackend)(context),
-      act = _useBackend3.act,
-      data = _useBackend3.data;
-
-  var coin = data.coin,
-      chargesMoney = data.chargesMoney,
-      user = data.user,
-      userMoney = data.userMoney,
-      guestNotice = data.guestNotice,
-      products = data.products; // Just in case we still have undefined values in the list
-
-  var myproducts = products.filter(function (item) {
-    return !!item;
-  });
-  return (0, _inferno.createFragment)([!!chargesMoney && (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "User",
-    children: user && (0, _inferno.createComponentVNode)(2, _components.Box, {
-      children: ["Welcome, ", (0, _inferno.createVNode)(1, "b", null, user.name, 0), ", ", (0, _inferno.createVNode)(1, "b", null, user.job || 'Unemployed', 0), "!", (0, _inferno.createVNode)(1, "br"), "Your balance is ", (0, _inferno.createVNode)(1, "b", null, [userMoney, (0, _inferno.createTextVNode)("\u20AE Thalers")], 0), "."]
-    }) || (0, _inferno.createComponentVNode)(2, _components.Box, {
-      "color": "light-grey",
-      children: guestNotice
-    })
-  }), (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Products",
-    children: (0, _inferno.createComponentVNode)(2, _components.Table, {
-      children: myproducts.map(function (product) {
-        return (0, _inferno.createComponentVNode)(2, VendingRow, {
-          "product": product
-        }, product.name);
-      })
-    })
-  }), !!coin && (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": coin + ' deposited',
-    "buttons": (0, _inferno.createComponentVNode)(2, _components.Button, {
-      "icon": "eject",
-      "content": "Eject Coin",
-      "onClick": function () {
-        function onClick() {
-          return act('remove_coin');
-        }
-
-        return onClick;
-      }()
-    })
-  })], 0);
-};
-
-exports.VendingProducts = VendingProducts;
-
-var VendingMaintenance = function VendingMaintenance(props, context) {
-  var _useBackend4 = (0, _backend.useBackend)(context),
-      act = _useBackend4.act,
-      data = _useBackend4.data;
-
-  var speaker = data.speaker;
-  return (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Maintenance Panel",
-    children: (0, _inferno.createComponentVNode)(2, _components.Section, {
-      "title": "Speaker",
-      "buttons": (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "icon": speaker ? 'volume-up' : 'volume-off',
-        "content": speaker ? 'Enabled' : 'Disabled',
-        "selected": speaker,
-        "onClick": function () {
-          function onClick() {
-            return act('togglevoice');
-          }
-
-          return onClick;
-        }()
-      })
-    })
-  });
-};
-
-exports.VendingMaintenance = VendingMaintenance;
-
-/***/ }),
-
-/***/ "./packages/tgui/interfaces/VolumePanel.tsx":
-/*!**************************************************!*\
-  !*** ./packages/tgui/interfaces/VolumePanel.tsx ***!
-  \**************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.VolumePanel = void 0;
-
-var _inferno = __webpack_require__(/*! inferno */ "./.yarn/cache/inferno-npm-7.4.11-3352a2fb62-1651aad357.zip/node_modules/inferno/index.esm.js");
-
-var _backend = __webpack_require__(/*! ../backend */ "./packages/tgui/backend.ts");
-
-var _components = __webpack_require__(/*! ../components */ "./packages/tgui/components/index.js");
-
-var _layouts = __webpack_require__(/*! ../layouts */ "./packages/tgui/layouts/index.js");
-
-var VolumePanel = function VolumePanel(props, context) {
-  var _useBackend = (0, _backend.useBackend)(context),
-      act = _useBackend.act,
-      data = _useBackend.data;
-
-  var volume_channels = data.volume_channels;
-  return (0, _inferno.createComponentVNode)(2, _layouts.Window, {
-    "width": 350,
-    "height": 600,
-    children: (0, _inferno.createComponentVNode)(2, _layouts.Window.Content, {
-      children: (0, _inferno.createComponentVNode)(2, _components.Section, {
-        "title": "Volume Levels",
-        children: (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-          children: Object.keys(volume_channels).map(function (key) {
-            return (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-              "label": key,
-              children: [(0, _inferno.createComponentVNode)(2, _components.Slider, {
-                "width": "88%",
-                "minValue": 0,
-                "maxValue": 200,
-                "value": volume_channels[key] * 100,
-                "onChange": function () {
-                  function onChange(e, val) {
-                    return act('adjust_volume', {
-                      channel: key,
-                      vol: val / 100
-                    });
-                  }
-
-                  return onChange;
-                }()
-              }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-                "ml": 1,
-                "icon": "undo",
-                "onClick": function () {
-                  function onClick() {
-                    return act('adjust_volume', {
-                      channel: key,
-                      vol: 1
-                    });
-                  }
-
-                  return onClick;
-                }()
-              })]
-            }, key);
-          })
-        })
-      })
-    })
-  });
-};
-
-exports.VolumePanel = VolumePanel;
-
-/***/ }),
-
-/***/ "./packages/tgui/interfaces/VorePanel.js":
-/*!***********************************************!*\
-  !*** ./packages/tgui/interfaces/VorePanel.js ***!
-  \***********************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.VorePanel = void 0;
-
-var _inferno = __webpack_require__(/*! inferno */ "./.yarn/cache/inferno-npm-7.4.11-3352a2fb62-1651aad357.zip/node_modules/inferno/index.esm.js");
-
-var _string = __webpack_require__(/*! common/string */ "./packages/common/string.ts");
-
-var _backend = __webpack_require__(/*! ../backend */ "./packages/tgui/backend.ts");
-
-var _components = __webpack_require__(/*! ../components */ "./packages/tgui/components/index.js");
-
-var _layouts = __webpack_require__(/*! ../layouts */ "./packages/tgui/layouts/index.js");
-
-var _react = __webpack_require__(/*! common/react */ "./packages/common/react.ts");
-
-var _excluded = ["spec"];
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-var stats = [null, 'average', 'bad'];
-var digestModeToColor = {
-  'Hold': null,
-  'Digest': 'red',
-  'Absorb': 'purple',
-  'Unabsorb': 'purple',
-  'Drain': 'orange',
-  'Selective': 'orange',
-  'Shrink': 'teal',
-  'Grow': 'teal',
-  'Size Steal': 'teal',
-  'Heal': 'green',
-  'Encase In Egg': 'blue'
-};
-var digestModeToPreyMode = {
-  'Hold': 'being held.',
-  'Digest': 'being digested.',
-  'Absorb': 'being absorbed.',
-  'Unabsorb': 'being unabsorbed.',
-  'Drain': 'being drained.',
-  'Selective': 'being processed.',
-  'Shrink': 'being shrunken.',
-  'Grow': 'being grown.',
-  'Size Steal': 'having your size stolen.',
-  'Heal': 'being healed.',
-  'Encase In Egg': 'being encased in an egg.'
-};
-/**
- * There are three main sections to this UI.
- *  - The Inside Panel, where all relevant data for interacting with a belly you're in is located.
- *  - The Belly Selection Panel, where you can select what belly people will go into and customize the active one.
- *  - User Preferences, where you can adjust all of your vore preferences on the fly.
- */
-
-var VorePanel = function VorePanel(props, context) {
-  var _useBackend = (0, _backend.useBackend)(context),
-      act = _useBackend.act,
-      data = _useBackend.data;
-
-  var _useLocalState = (0, _backend.useLocalState)(context, 'panelTabIndex', 0),
-      tabIndex = _useLocalState[0],
-      setTabIndex = _useLocalState[1];
-
-  var tabs = [];
-  tabs[0] = (0, _inferno.createComponentVNode)(2, VoreBellySelectionAndCustomization);
-  tabs[1] = (0, _inferno.createComponentVNode)(2, VoreUserPreferences);
-
-  var generateBellyString = function generateBellyString() {
-    var _data$selected = data.selected,
-        belly_name = _data$selected.belly_name,
-        mode = _data$selected.mode,
-        item_mode = _data$selected.item_mode,
-        addons = _data$selected.addons,
-        verb = _data$selected.verb,
-        release_verb = _data$selected.release_verb,
-        desc = _data$selected.desc,
-        absorbed_desc = _data$selected.absorbed_desc;
-    var result = '=== ' + belly_name + ' ===\n\n';
-    result += '== Controls ==\n\n';
-    result += 'Mode:\n' + mode + '\n\n';
-    result += 'Addons:\n' + addons + '\n\n';
-    result += 'Item Mode:\n' + item_mode + '\n\n';
-    result += '== Descriptions ==\n\n';
-    result += 'Verb:\n' + verb + '\n\n';
-    result += 'Release Verb:\n' + release_verb + '\n\n';
-    result += 'Description:\n"' + desc + '"\n\n';
-    result += 'Absorbed Description:\n"' + absorbed_desc + '"\n\n';
-    return result;
-  };
-
-  var downloadPrefs = function downloadPrefs() {
-    var belly_name = data.selected.belly_name;
-    var extension = '.txt';
-    var now = new Date();
-    var hours = String(now.getHours());
-
-    if (hours.length < 2) {
-      hours = '0' + hours;
-    }
-
-    var minutes = String(now.getMinutes());
-
-    if (minutes.length < 2) {
-      minutes = '0' + minutes;
-    }
-
-    var dayofmonth = String(now.getDate());
-
-    if (dayofmonth.length < 2) {
-      dayofmonth = '0' + dayofmonth;
-    }
-
-    var month = String(now.getMonth() + 1); // 0-11
-
-    if (month.length < 2) {
-      month = '0' + month;
-    }
-
-    var year = String(now.getFullYear());
-    var datesegment = ' ' + year + '-' + month + '-' + dayofmonth + ' (' + hours + ' ' + minutes + ')';
-    var filename = belly_name + datesegment + extension;
-    var blob = new Blob([generateBellyString()], {
-      type: 'text/html;charset=utf8;'
-    });
-    window.navigator.msSaveOrOpenBlob(blob, filename);
-  };
-
-  return (0, _inferno.createComponentVNode)(2, _layouts.Window, {
-    "width": 890,
-    "height": 660,
-    "theme": "abstract",
-    "resizable": true,
-    children: (0, _inferno.createComponentVNode)(2, _layouts.Window.Content, {
-      "scrollable": true,
-      children: [data.unsaved_changes && (0, _inferno.createComponentVNode)(2, _components.NoticeBox, {
-        "danger": true,
+    children: [!!mode && (0, _inferno.createComponentVNode)(2, _components.Dimmer, {
+      children: mode === 1 && (0, _inferno.createComponentVNode)(2, _components.Section, {
+        "title": 'Purchasing',
+        "height": 12,
+        "pl": 1,
+        "pr": 1,
         children: (0, _inferno.createComponentVNode)(2, _components.Flex, {
+          "height": 8,
+          "direction": 'column',
+          "justify": 'space-between',
           children: [(0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-            "basis": "90%",
-            children: "Warning: Unsaved Changes!"
-          }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-            children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-              "content": "Save Prefs",
-              "icon": "save",
-              "onClick": function () {
-                function onClick() {
-                  return act('saveprefs');
-                }
-
-                return onClick;
-              }()
+            children: (0, _inferno.createComponentVNode)(2, _components.Table, {
+              children: [(0, _inferno.createComponentVNode)(2, _Table.TableRow, {
+                children: [(0, _inferno.createComponentVNode)(2, _Table.TableCell, {
+                  "bold": true,
+                  children: "Item"
+                }), (0, _inferno.createComponentVNode)(2, _Table.TableCell, {
+                  "bold": true,
+                  "textAlign": "right",
+                  children: "Price"
+                })]
+              }), (0, _inferno.createComponentVNode)(2, _Table.TableRow, {
+                children: [(0, _inferno.createComponentVNode)(2, _Table.TableCell, {
+                  children: data.product
+                }), (0, _inferno.createComponentVNode)(2, _Table.TableCell, {
+                  "textAlign": "right",
+                  children: [data.price, " ", (0, _inferno.createComponentVNode)(2, _components.Icon, {
+                    "name": "coins"
+                  })]
+                })]
+              })]
             })
           }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
+            children: (0, _inferno.createComponentVNode)(2, _components.Box, {
+              "color": data.message_err ? 'bad' : null,
+              children: data.message
+            })
+          }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
+            "align": "center",
             children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-              "content": "Save Prefs & Export Selected Belly",
-              "icon": "download",
+              "content": 'Cancel',
               "onClick": function () {
                 function onClick() {
-                  act('saveprefs');
-                  downloadPrefs();
+                  return act('cancel_purchase');
                 }
 
                 return onClick;
@@ -84113,2644 +83800,59 @@ var VorePanel = function VorePanel(props, context) {
             })
           })]
         })
-      }) || null, (0, _inferno.createComponentVNode)(2, VoreInsidePanel), (0, _inferno.createComponentVNode)(2, _components.Tabs, {
-        children: [(0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-          "selected": tabIndex === 0,
-          "onClick": function () {
-            function onClick() {
-              return setTabIndex(0);
-            }
-
-            return onClick;
-          }(),
-          children: ["Bellies", (0, _inferno.createComponentVNode)(2, _components.Icon, {
-            "name": "list",
-            "ml": 0.5
-          })]
-        }), (0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-          "selected": tabIndex === 1,
-          "onClick": function () {
-            function onClick() {
-              return setTabIndex(1);
-            }
-
-            return onClick;
-          }(),
-          children: ["Preferences", (0, _inferno.createComponentVNode)(2, _components.Icon, {
-            "name": "user-cog",
-            "ml": 0.5
-          })]
+      }) || mode === 2 && (0, _inferno.createComponentVNode)(2, _components.Section, {
+        "transparent": true,
+        children: [(0, _inferno.createComponentVNode)(2, _components.Icon, {
+          "name": "cog",
+          "spin": 1
+        }), (0, _inferno.createComponentVNode)(2, _components.Box, {
+          "inline": true,
+          "ml": 1,
+          children: "Vending..."
         })]
-      }), tabs[tabIndex] || 'Error']
-    })
-  });
-};
-
-exports.VorePanel = VorePanel;
-
-var VoreInsidePanel = function VoreInsidePanel(props, context) {
-  var _useBackend2 = (0, _backend.useBackend)(context),
-      act = _useBackend2.act,
-      data = _useBackend2.data;
-
-  var _data$inside = data.inside,
-      absorbed = _data$inside.absorbed,
-      belly_name = _data$inside.belly_name,
-      belly_mode = _data$inside.belly_mode,
-      desc = _data$inside.desc,
-      pred = _data$inside.pred,
-      contents = _data$inside.contents,
-      ref = _data$inside.ref;
-
-  if (!belly_name) {
-    return (0, _inferno.createComponentVNode)(2, _components.Section, {
-      "title": "Inside",
-      children: "You aren't inside anyone."
-    });
-  }
-
-  return (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Inside",
-    children: [(0, _inferno.createComponentVNode)(2, _components.Box, {
-      "color": "green",
-      "inline": true,
-      children: ["You are currently ", absorbed ? 'absorbed into' : 'inside']
-    }), "\xA0", (0, _inferno.createComponentVNode)(2, _components.Box, {
-      "color": "yellow",
-      "inline": true,
-      children: [pred, "'s"]
-    }), "\xA0", (0, _inferno.createComponentVNode)(2, _components.Box, {
-      "color": "red",
-      "inline": true,
-      children: belly_name
-    }), "\xA0", (0, _inferno.createComponentVNode)(2, _components.Box, {
-      "color": "yellow",
-      "inline": true,
-      children: "and you are"
-    }), "\xA0", (0, _inferno.createComponentVNode)(2, _components.Box, {
-      "color": digestModeToColor[belly_mode],
-      "inline": true,
-      children: digestModeToPreyMode[belly_mode]
-    }), "\xA0", (0, _inferno.createComponentVNode)(2, _components.Box, {
-      "color": "label",
-      children: desc
-    }), contents.length && (0, _inferno.createComponentVNode)(2, _components.Collapsible, {
-      "title": "Belly Contents",
-      children: (0, _inferno.createComponentVNode)(2, VoreContentsPanel, {
-        "contents": contents,
-        "belly": ref
       })
-    }) || 'There is nothing else around you.']
-  });
-};
-
-var VoreBellySelectionAndCustomization = function VoreBellySelectionAndCustomization(props, context) {
-  var _useBackend3 = (0, _backend.useBackend)(context),
-      act = _useBackend3.act,
-      data = _useBackend3.data;
-
-  var our_bellies = data.our_bellies,
-      selected = data.selected;
-  return (0, _inferno.createComponentVNode)(2, _components.Flex, {
-    children: [(0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-      "shrink": true,
+    }), (0, _inferno.createComponentVNode)(2, _layouts.Window.Content, {
+      "scrollable": true,
       children: (0, _inferno.createComponentVNode)(2, _components.Section, {
-        "title": "My Bellies",
-        "scollable": true,
-        children: (0, _inferno.createComponentVNode)(2, _components.Tabs, {
-          "vertical": true,
-          children: [(0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
+        "title": "Products",
+        "buttons": (0, _inferno.createComponentVNode)(2, _components.Box, {
+          children: [!!data.coin && (0, _inferno.createComponentVNode)(2, _components.Button, {
+            "content": "Remove coin",
             "onClick": function () {
               function onClick() {
-                return act('newbelly');
+                return act('remove_coin');
               }
 
               return onClick;
-            }(),
-            children: ["New", (0, _inferno.createComponentVNode)(2, _components.Icon, {
-              "name": "plus",
-              "ml": 0.5
-            })]
-          }), (0, _inferno.createComponentVNode)(2, _components.Divider), our_bellies.map(function (belly) {
-            return (0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-              "selected": belly.selected,
-              "textColor": digestModeToColor[belly.digest_mode],
-              "onClick": function () {
-                function onClick() {
-                  return act('bellypick', {
-                    bellypick: belly.ref
-                  });
-                }
+            }()
+          }), !!data.panel && (0, _inferno.createComponentVNode)(2, _components.Button, {
+            "icon": data.speaker ? 'check-square-o' : 'square-o',
+            "selected": data.speaker,
+            "content": "Speaker",
+            "onClick": function () {
+              function onClick() {
+                return act('toggle_voice');
+              }
 
-                return onClick;
-              }(),
-              children: (0, _inferno.createComponentVNode)(2, _components.Box, {
-                "inline": true,
-                "textColor": belly.selected && digestModeToColor[belly.digest_mode] || null,
-                children: [belly.name, " (", belly.contents, ")"]
-              })
-            }, belly.name);
+              return onClick;
+            }()
           })]
-        })
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-      "grow": true,
-      children: selected && (0, _inferno.createComponentVNode)(2, _components.Section, {
-        "title": selected.belly_name,
-        children: (0, _inferno.createComponentVNode)(2, VoreSelectedBelly, {
-          "belly": selected
+        }),
+        children: (0, _inferno.createComponentVNode)(2, _components.Table, {
+          children: inventory.map(function (product) {
+            return (0, _inferno.createComponentVNode)(2, VendingRow, {
+              "custom": custom,
+              "product": product,
+              "productStock": product.amount
+            }, product.name);
+          })
         })
       })
     })]
   });
 };
-/**
- * Subtemplate of VoreBellySelectionAndCustomization
- */
 
-
-var VoreSelectedBelly = function VoreSelectedBelly(props, context) {
-  var _useBackend4 = (0, _backend.useBackend)(context),
-      act = _useBackend4.act;
-
-  var belly = props.belly;
-  var contents = belly.contents;
-
-  var _useLocalState2 = (0, _backend.useLocalState)(context, 'bellyTabIndex', 0),
-      tabIndex = _useLocalState2[0],
-      setTabIndex = _useLocalState2[1];
-
-  var tabs = [];
-  tabs[0] = (0, _inferno.createComponentVNode)(2, VoreSelectedBellyControls, {
-    "belly": belly
-  });
-  tabs[1] = (0, _inferno.createComponentVNode)(2, VoreSelectedBellyDescriptions, {
-    "belly": belly
-  });
-  tabs[2] = (0, _inferno.createComponentVNode)(2, VoreSelectedBellyOptions, {
-    "belly": belly
-  });
-  tabs[3] = (0, _inferno.createComponentVNode)(2, VoreSelectedBellySounds, {
-    "belly": belly
-  });
-  tabs[4] = (0, _inferno.createComponentVNode)(2, VoreSelectedBellyVisuals, {
-    "belly": belly
-  });
-  tabs[5] = (0, _inferno.createComponentVNode)(2, VoreSelectedBellyInteractions, {
-    "belly": belly
-  });
-  tabs[6] = (0, _inferno.createComponentVNode)(2, VoreContentsPanel, {
-    "outside": true,
-    "contents": contents
-  });
-  return (0, _inferno.createFragment)([(0, _inferno.createComponentVNode)(2, _components.Tabs, {
-    children: [(0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-      "selected": tabIndex === 0,
-      "onClick": function () {
-        function onClick() {
-          return setTabIndex(0);
-        }
-
-        return onClick;
-      }(),
-      children: "Controls"
-    }), (0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-      "selected": tabIndex === 1,
-      "onClick": function () {
-        function onClick() {
-          return setTabIndex(1);
-        }
-
-        return onClick;
-      }(),
-      children: "Descriptions"
-    }), (0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-      "selected": tabIndex === 2,
-      "onClick": function () {
-        function onClick() {
-          return setTabIndex(2);
-        }
-
-        return onClick;
-      }(),
-      children: "Options"
-    }), (0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-      "selected": tabIndex === 3,
-      "onClick": function () {
-        function onClick() {
-          return setTabIndex(3);
-        }
-
-        return onClick;
-      }(),
-      children: "Sounds"
-    }), (0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-      "selected": tabIndex === 4,
-      "onClick": function () {
-        function onClick() {
-          return setTabIndex(4);
-        }
-
-        return onClick;
-      }(),
-      children: "Visuals"
-    }), (0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-      "selected": tabIndex === 5,
-      "onClick": function () {
-        function onClick() {
-          return setTabIndex(5);
-        }
-
-        return onClick;
-      }(),
-      children: "Interactions"
-    }), (0, _inferno.createComponentVNode)(2, _components.Tabs.Tab, {
-      "selected": tabIndex === 6,
-      "onClick": function () {
-        function onClick() {
-          return setTabIndex(6);
-        }
-
-        return onClick;
-      }(),
-      children: ["Contents (", contents.length, ")"]
-    })]
-  }), tabs[tabIndex] || 'Error'], 0);
-};
-
-var VoreSelectedBellyControls = function VoreSelectedBellyControls(props, context) {
-  var _useBackend5 = (0, _backend.useBackend)(context),
-      act = _useBackend5.act;
-
-  var belly = props.belly;
-  var belly_name = belly.belly_name,
-      mode = belly.mode,
-      item_mode = belly.item_mode,
-      addons = belly.addons;
-  return (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-    children: [(0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Name",
-      "buttons": (0, _inferno.createFragment)([(0, _inferno.createComponentVNode)(2, _components.Button, {
-        "icon": "arrow-up",
-        "tooltipPosition": "left",
-        "tooltip": "Move this belly tab up.",
-        "onClick": function () {
-          function onClick() {
-            return act('move_belly', {
-              dir: -1
-            });
-          }
-
-          return onClick;
-        }()
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "icon": "arrow-down",
-        "tooltipPosition": "left",
-        "tooltip": "Move this belly tab down.",
-        "onClick": function () {
-          function onClick() {
-            return act('move_belly', {
-              dir: 1
-            });
-          }
-
-          return onClick;
-        }()
-      })], 4),
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_name'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": belly_name
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Mode",
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "color": digestModeToColor[mode],
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_mode'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": mode
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Mode Addons",
-      children: [addons.length && addons.join(', ') || 'None', (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_addons'
-            });
-          }
-
-          return onClick;
-        }(),
-        "ml": 1,
-        "icon": "plus"
-      })]
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Item Mode",
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_item_mode'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": item_mode
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "basis": "100%",
-      "mt": 1,
-      children: (0, _inferno.createComponentVNode)(2, _components.Button.Confirm, {
-        "fluid": true,
-        "icon": "exclamation-triangle",
-        "confirmIcon": "trash",
-        "color": "red",
-        "content": "Delete Belly",
-        "confirmContent": "This is irreversable!",
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_del'
-            });
-          }
-
-          return onClick;
-        }()
-      })
-    })]
-  });
-};
-
-var VoreSelectedBellyDescriptions = function VoreSelectedBellyDescriptions(props, context) {
-  var _useBackend6 = (0, _backend.useBackend)(context),
-      act = _useBackend6.act;
-
-  var belly = props.belly;
-  var verb = belly.verb,
-      release_verb = belly.release_verb,
-      desc = belly.desc,
-      absorbed_desc = belly.absorbed_desc;
-  return (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-    children: [(0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Description",
-      "buttons": (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_desc'
-            });
-          }
-
-          return onClick;
-        }(),
-        "icon": "pen"
-      }),
-      children: desc
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Description (Absorbed)",
-      "buttons": (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_absorbed_desc'
-            });
-          }
-
-          return onClick;
-        }(),
-        "icon": "pen"
-      }),
-      children: absorbed_desc
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Vore Verb",
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_verb'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": verb
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Release Verb",
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_release_verb'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": release_verb
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Examine Messages",
-      children: [(0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'em'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Examine Message (when full)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'ema'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Examine Message (with absorbed victims)"
-      })]
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Struggle Messages",
-      children: [(0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'smo'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Struggle Message (outside)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'smi'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Struggle Message (inside)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'asmo'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Absorbed Struggle Message (outside)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'asmi'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Absorbed Struggle Message (inside)"
-      })]
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Bellymode Messages",
-      children: [(0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'dmp'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Digest Message (to prey)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'dmo'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Digest Message (to you)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'amp'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Absorb Message (to prey)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'amo'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Absorb Message (to you)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'uamp'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Unabsorb Message (to prey)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'uamo'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Unabsorb Message (to you)"
-      })]
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Idle Messages",
-      children: [(0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_hold'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Hold)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_holdabsorbed'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Hold Absorbed)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_digest'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Digest)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_absorb'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Absorb)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_unabsorb'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Unabsorb)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_drain'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Drain)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_heal'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Heal)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_steal'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Size Steal)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_shrink'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Shrink)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_grow'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Grow)"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'im_egg'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Idle Messages (Encase In Egg)"
-      })]
-    }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-      "label": "Reset Messages",
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "color": "red",
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_msgs',
-              msgtype: 'reset'
-            });
-          }
-
-          return onClick;
-        }(),
-        "content": "Reset Messages"
-      })
-    })]
-  });
-};
-
-var VoreSelectedBellyOptions = function VoreSelectedBellyOptions(props, context) {
-  var _useBackend7 = (0, _backend.useBackend)(context),
-      act = _useBackend7.act;
-
-  var belly = props.belly;
-  var can_taste = belly.can_taste,
-      nutrition_percent = belly.nutrition_percent,
-      digest_brute = belly.digest_brute,
-      digest_burn = belly.digest_burn,
-      digest_oxy = belly.digest_oxy,
-      digest_tox = belly.digest_tox,
-      digest_clone = belly.digest_clone,
-      bulge_size = belly.bulge_size,
-      display_absorbed_examine = belly.display_absorbed_examine,
-      shrink_grow_size = belly.shrink_grow_size,
-      emote_time = belly.emote_time,
-      emote_active = belly.emote_active,
-      contaminates = belly.contaminates,
-      contaminate_flavor = belly.contaminate_flavor,
-      contaminate_color = belly.contaminate_color,
-      egg_type = belly.egg_type,
-      selective_preference = belly.selective_preference,
-      save_digest_mode = belly.save_digest_mode;
-  return (0, _inferno.createComponentVNode)(2, _components.Flex, {
-    "wrap": "wrap",
-    children: [(0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-      "basis": "49%",
-      "grow": 1,
-      children: (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-        children: [(0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Can Taste",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_tastes'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": can_taste ? 'toggle-on' : 'toggle-off',
-            "selected": can_taste,
-            "content": can_taste ? 'Yes' : 'No'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Contaminates",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_contaminate'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": contaminates ? 'toggle-on' : 'toggle-off',
-            "selected": contaminates,
-            "content": contaminates ? 'Yes' : 'No'
-          })
-        }), contaminates && (0, _inferno.createFragment)([(0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Contamination Flavor",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_contamination_flavor'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": "pen",
-            "content": contaminate_flavor
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Contamination Color",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_contamination_color'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": "pen",
-            "content": (0, _string.capitalize)(contaminate_color)
-          })
-        })], 4) || null, (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Nutritional Gain",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_nutritionpercent'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": nutrition_percent + '%'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Required Examine Size",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_bulge_size'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": bulge_size * 100 + '%'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Display Absorbed Examines",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_display_absorbed_examine'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": display_absorbed_examine ? 'toggle-on' : 'toggle-off',
-            "selected": display_absorbed_examine,
-            "content": display_absorbed_examine ? 'True' : 'False'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Save Digest Mode",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_save_digest_mode'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": save_digest_mode ? 'toggle-on' : 'toggle-off',
-            "selected": save_digest_mode,
-            "content": save_digest_mode ? 'True' : 'False'
-          })
-        })]
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-      "basis": "49%",
-      "grow": 1,
-      children: (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-        children: [(0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Idle Emotes",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_emoteactive'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": emote_active ? 'toggle-on' : 'toggle-off',
-            "selected": emote_active,
-            "content": emote_active ? 'Active' : 'Inactive'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Idle Emote Delay",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_emotetime'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": emote_time + ' seconds'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Digest Brute Damage",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_brute_dmg'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": digest_brute
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Digest Burn Damage",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_burn_dmg'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": digest_burn
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Digest Suffocation Damage",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_oxy_dmg'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": digest_oxy
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Digest Toxins Damage",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_tox_dmg'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": digest_tox
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Digest Clone Damage",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_clone_dmg'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": digest_clone
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Shrink/Grow Size",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_grow_shrink'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": shrink_grow_size * 100 + '%'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Egg Type",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_egg_type'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": "pen",
-            "content": (0, _string.capitalize)(egg_type)
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Selective Mode Preference",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_selective_mode_pref_toggle'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": (0, _string.capitalize)(selective_preference)
-          })
-        })]
-      })
-    })]
-  });
-};
-
-var VoreSelectedBellySounds = function VoreSelectedBellySounds(props, context) {
-  var _useBackend8 = (0, _backend.useBackend)(context),
-      act = _useBackend8.act;
-
-  var belly = props.belly;
-  var is_wet = belly.is_wet,
-      wet_loop = belly.wet_loop,
-      fancy = belly.fancy,
-      sound = belly.sound,
-      release_sound = belly.release_sound;
-  return (0, _inferno.createComponentVNode)(2, _components.Flex, {
-    "wrap": "wrap",
-    children: (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-      "basis": "49%",
-      "grow": 1,
-      children: (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-        children: [(0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Fleshy Belly",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_wetness'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": is_wet ? 'toggle-on' : 'toggle-off',
-            "selected": is_wet,
-            "content": is_wet ? 'Yes' : 'No'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Internal Loop",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_wetloop'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": wet_loop ? 'toggle-on' : 'toggle-off',
-            "selected": wet_loop,
-            "content": wet_loop ? 'Yes' : 'No'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Use Fancy Sounds",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_fancy_sound'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": fancy ? 'toggle-on' : 'toggle-off',
-            "selected": fancy,
-            "content": fancy ? 'Yes' : 'No'
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Vore Sound",
-          children: [(0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_sound'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": sound
-          }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_soundtest'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": "volume-up"
-          })]
-        }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Release Sound",
-          children: [(0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_release'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": release_sound
-          }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_releasesoundtest'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": "volume-up"
-          })]
-        })]
-      })
-    })
-  });
-};
-
-var VoreSelectedBellyVisuals = function VoreSelectedBellyVisuals(props, context) {
-  var _useBackend9 = (0, _backend.useBackend)(context),
-      act = _useBackend9.act;
-
-  var belly = props.belly;
-  var belly_fullscreen = belly.belly_fullscreen,
-      possible_fullscreens = belly.possible_fullscreens,
-      disable_hud = belly.disable_hud,
-      belly_fullscreen_color = belly.belly_fullscreen_color,
-      mapRef = belly.mapRef,
-      colorization_enabled = belly.colorization_enabled;
-  return (0, _inferno.createFragment)([(0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Belly Fullscreens Preview and Coloring",
-    children: (0, _inferno.createComponentVNode)(2, _components.Flex, {
-      "direction": "row",
-      children: [(0, _inferno.createComponentVNode)(2, _components.Box, {
-        "backgroundColor": belly_fullscreen_color,
-        "width": "20px",
-        "height": "20px"
-      }), (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "icon": "eye-dropper",
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_fullscreen_color',
-              val: null
-            });
-          }
-
-          return onClick;
-        }(),
-        children: "Select Color"
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Enable Coloration",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_colorization_enabled'
-              });
-            }
-
-            return onClick;
-          }(),
-          "icon": colorization_enabled ? 'toggle-on' : 'toggle-off',
-          "selected": colorization_enabled,
-          "content": colorization_enabled ? 'Yes' : 'No'
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Preview Belly",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_preview_belly'
-              });
-            }
-
-            return onClick;
-          }(),
-          "content": 'Preview'
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Clear Preview",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_clear_preview'
-              });
-            }
-
-            return onClick;
-          }(),
-          "content": 'Clear'
-        })
-      })]
-    })
-  }), (0, _inferno.createComponentVNode)(2, _components.Section, {
-    children: [(0, _inferno.createComponentVNode)(2, _components.Section, {
-      "title": "Vore FX",
-      children: (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-        children: (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-          "label": "Disable Prey HUD",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_disable_hud'
-                });
-              }
-
-              return onClick;
-            }(),
-            "icon": disable_hud ? 'toggle-on' : 'toggle-off',
-            "selected": disable_hud,
-            "content": disable_hud ? 'Yes' : 'No'
-          })
-        })
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.Section, {
-      "title": "Belly Fullscreens Styles",
-      "width": "800px",
-      children: ["Belly styles:", (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "fluid": true,
-        "selected": belly_fullscreen === '' || belly_fullscreen === null,
-        "onClick": function () {
-          function onClick() {
-            return act('set_attribute', {
-              attribute: 'b_fullscreen',
-              val: null
-            });
-          }
-
-          return onClick;
-        }(),
-        children: "Disabled"
-      }), Object.keys(possible_fullscreens).map(function (key) {
-        return (0, _inferno.createVNode)(1, "span", null, (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "width": "256px",
-          "height": "256px",
-          "selected": key === belly_fullscreen,
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_fullscreen',
-                val: key
-              });
-            }
-
-            return onClick;
-          }(),
-          children: (0, _inferno.createComponentVNode)(2, _components.Box, {
-            "className": (0, _react.classes)(['vore240x240', key]),
-            "style": {
-              transform: 'translate(0%, 4%)'
-            }
-          })
-        }, key), 2, {
-          "style": {
-            width: '256px'
-          }
-        });
-      })]
-    })]
-  })], 4);
-};
-
-var VoreSelectedBellyInteractions = function VoreSelectedBellyInteractions(props, context) {
-  var _useBackend10 = (0, _backend.useBackend)(context),
-      act = _useBackend10.act;
-
-  var belly = props.belly;
-  var escapable = belly.escapable,
-      interacts = belly.interacts;
-  return (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Belly Interactions",
-    "buttons": (0, _inferno.createComponentVNode)(2, _components.Button, {
-      "onClick": function () {
-        function onClick() {
-          return act('set_attribute', {
-            attribute: 'b_escapable'
-          });
-        }
-
-        return onClick;
-      }(),
-      "icon": escapable ? 'toggle-on' : 'toggle-off',
-      "selected": escapable,
-      "content": escapable ? 'Interactions On' : 'Interactions Off'
-    }),
-    children: escapable ? (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-      children: [(0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Escape Chance",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "content": interacts.escapechance + '%',
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_escapechance'
-              });
-            }
-
-            return onClick;
-          }()
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Escape Time",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "content": interacts.escapetime / 10 + 's',
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_escapetime'
-              });
-            }
-
-            return onClick;
-          }()
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Divider), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Transfer Chance",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "content": interacts.transferchance + '%',
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_transferchance'
-              });
-            }
-
-            return onClick;
-          }()
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Transfer Location",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "content": interacts.transferlocation ? interacts.transferlocation : 'Disabled',
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_transferlocation'
-              });
-            }
-
-            return onClick;
-          }()
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Divider), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Secondary Transfer Chance",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "content": interacts.transferchance_secondary + '%',
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_transferchance_secondary'
-              });
-            }
-
-            return onClick;
-          }()
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Secondary Transfer Location",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "content": interacts.transferlocation_secondary ? interacts.transferlocation_secondary : 'Disabled',
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_transferlocation_secondary'
-              });
-            }
-
-            return onClick;
-          }()
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Divider), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Absorb Chance",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "content": interacts.absorbchance + '%',
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_absorbchance'
-              });
-            }
-
-            return onClick;
-          }()
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": "Digest Chance",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "content": interacts.digestchance + '%',
-          "onClick": function () {
-            function onClick() {
-              return act('set_attribute', {
-                attribute: 'b_digestchance'
-              });
-            }
-
-            return onClick;
-          }()
-        })
-      })]
-    }) : 'These options only display while interactions are turned on.'
-  });
-};
-
-var VoreContentsPanel = function VoreContentsPanel(props, context) {
-  var _useBackend11 = (0, _backend.useBackend)(context),
-      act = _useBackend11.act,
-      data = _useBackend11.data;
-
-  var show_pictures = data.show_pictures;
-  var contents = props.contents,
-      belly = props.belly,
-      _props$outside = props.outside,
-      outside = _props$outside === void 0 ? false : _props$outside;
-  return (0, _inferno.createFragment)([outside && (0, _inferno.createComponentVNode)(2, _components.Button, {
-    "textAlign": "center",
-    "fluid": true,
-    "mb": 1,
-    "onClick": function () {
-      function onClick() {
-        return act('pick_from_outside', {
-          'pickall': true
-        });
-      }
-
-      return onClick;
-    }(),
-    children: "All"
-  }) || null, show_pictures && (0, _inferno.createComponentVNode)(2, _components.Flex, {
-    "wrap": "wrap",
-    "justify": "center",
-    "align": "center",
-    children: contents.map(function (thing) {
-      return (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "33%",
-        children: [(0, _inferno.createComponentVNode)(2, _components.Button, {
-          "width": "64px",
-          "color": thing.absorbed ? 'purple' : stats[thing.stat],
-          "style": {
-            'vertical-align': 'middle',
-            'margin-right': '5px',
-            'border-radius': '20px'
-          },
-          "onClick": function () {
-            function onClick() {
-              return act(thing.outside ? 'pick_from_outside' : 'pick_from_inside', {
-                'pick': thing.ref,
-                'belly': belly
-              });
-            }
-
-            return onClick;
-          }(),
-          children: (0, _inferno.createVNode)(1, "img", null, null, 1, {
-            "src": 'data:image/jpeg;base64, ' + thing.icon,
-            "width": "64px",
-            "height": "64px",
-            "style": {
-              '-ms-interpolation-mode': 'nearest-neighbor',
-              'margin-left': '-5px'
-            }
-          })
-        }), thing.name]
-      }, thing.name);
-    })
-  }) || (0, _inferno.createComponentVNode)(2, _components.LabeledList, {
-    children: contents.map(function (thing) {
-      return (0, _inferno.createComponentVNode)(2, _components.LabeledList.Item, {
-        "label": thing.name,
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "fluid": true,
-          "mt": -1,
-          "mb": -1,
-          "color": thing.absorbed ? 'purple' : stats[thing.stat],
-          "onClick": function () {
-            function onClick() {
-              return act(thing.outside ? 'pick_from_outside' : 'pick_from_inside', {
-                'pick': thing.ref,
-                'belly': belly
-              });
-            }
-
-            return onClick;
-          }(),
-          children: "Interact"
-        })
-      }, thing.ref);
-    })
-  })], 0);
-};
-
-var VoreUserPreferences = function VoreUserPreferences(props, context) {
-  var _useBackend12 = (0, _backend.useBackend)(context),
-      act = _useBackend12.act,
-      data = _useBackend12.data;
-
-  var _data$prefs = data.prefs,
-      digestable = _data$prefs.digestable,
-      devourable = _data$prefs.devourable,
-      resizable = _data$prefs.resizable,
-      feeding = _data$prefs.feeding,
-      absorbable = _data$prefs.absorbable,
-      digest_leave_remains = _data$prefs.digest_leave_remains,
-      allowmobvore = _data$prefs.allowmobvore,
-      permit_healbelly = _data$prefs.permit_healbelly,
-      show_vore_fx = _data$prefs.show_vore_fx,
-      can_be_drop_prey = _data$prefs.can_be_drop_prey,
-      can_be_drop_pred = _data$prefs.can_be_drop_pred,
-      allow_inbelly_spawning = _data$prefs.allow_inbelly_spawning,
-      allow_spontaneous_tf = _data$prefs.allow_spontaneous_tf,
-      step_mechanics_active = _data$prefs.step_mechanics_active,
-      pickup_mechanics_active = _data$prefs.pickup_mechanics_active,
-      noisy = _data$prefs.noisy,
-      drop_vore = _data$prefs.drop_vore,
-      stumble_vore = _data$prefs.stumble_vore,
-      slip_vore = _data$prefs.slip_vore,
-      throw_vore = _data$prefs.throw_vore,
-      nutrition_message_visible = _data$prefs.nutrition_message_visible,
-      weight_message_visible = _data$prefs.weight_message_visible;
-  var show_pictures = data.show_pictures;
-  var preferences = {
-    digestion: {
-      action: 'toggle_digest',
-      test: digestable,
-      tooltip: {
-        main: "This button is for those who don't like being digested. It can make you undigestable.",
-        enable: 'Click here to allow digestion.',
-        disable: 'Click here to prevent digestion.'
-      },
-      content: {
-        enabled: 'Digestion Allowed',
-        disabled: 'No Digestion'
-      }
-    },
-    absorbable: {
-      action: 'toggle_absorbable',
-      test: absorbable,
-      tooltip: {
-        main: "This button allows preds to know whether you prefer or don't prefer to be absorbed.",
-        enable: 'Click here to allow being absorbed.',
-        disable: 'Click here to disallow being absorbed.'
-      },
-      content: {
-        enabled: 'Absorption Allowed',
-        disabled: 'No Absorption'
-      }
-    },
-    devour: {
-      action: 'toggle_devour',
-      test: devourable,
-      tooltip: {
-        main: 'This button is to toggle your ability to be devoured by others.',
-        enable: 'Click here to allow being devoured.',
-        disable: 'Click here to prevent being devoured.'
-      },
-      content: {
-        enabled: 'Devouring Allowed',
-        disabled: 'No Devouring'
-      }
-    },
-    mobvore: {
-      action: 'toggle_mobvore',
-      test: allowmobvore,
-      tooltip: {
-        main: "This button is for those who don't like being eaten by mobs.",
-        enable: 'Click here to allow being eaten by mobs.',
-        disable: 'Click here to prevent being eaten by mobs.'
-      },
-      content: {
-        enabled: 'Mobs eating you allowed',
-        disabled: 'No Mobs eating you'
-      }
-    },
-    feed: {
-      action: 'toggle_feed',
-      test: feeding,
-      tooltip: {
-        main: 'This button is to toggle your ability to be fed to or by others vorishly.',
-        enable: 'Click here to allow being fed to/by other people.',
-        disable: 'Click here to prevent being fed to/by other people.'
-      },
-      content: {
-        enabled: 'Feeding Allowed',
-        disabled: 'No Feeding'
-      }
-    },
-    healbelly: {
-      action: 'toggle_healbelly',
-      test: permit_healbelly,
-      tooltip: {
-        main: "This button is for those who don't like healbelly used on them as a mechanic." + ' It does not affect anything, but is displayed under mechanical prefs for ease of quick checks.',
-        enable: 'Click here to allow being heal-bellied.',
-        disable: 'Click here to prevent being heal-bellied.'
-      },
-      content: {
-        enabled: 'Heal-bellies Allowed',
-        disabled: 'No Heal-bellies'
-      }
-    },
-    dropnom_prey: {
-      action: 'toggle_dropnom_prey',
-      test: can_be_drop_prey,
-      tooltip: {
-        main: 'This toggle is for spontaneous, environment related vore' + ' as prey, including drop-noms, teleporters, etc.',
-        enable: 'Click here to allow being spontaneous prey.',
-        disable: 'Click here to prevent being spontaneous prey.'
-      },
-      content: {
-        enabled: 'Spontaneous Prey Enabled',
-        disabled: 'Spontaneous Prey Disabled'
-      }
-    },
-    dropnom_pred: {
-      action: 'toggle_dropnom_pred',
-      test: can_be_drop_pred,
-      tooltip: {
-        main: 'This toggle is for spontaneous, environment related vore' + ' as a predator, including drop-noms, teleporters, etc.',
-        enable: 'Click here to allow being spontaneous pred.',
-        disable: 'Click here to prevent being spontaneous pred.'
-      },
-      content: {
-        enabled: 'Spontaneous Pred Enabled',
-        disabled: 'Spontaneous Pred Disabled'
-      }
-    },
-    toggle_drop_vore: {
-      action: 'toggle_drop_vore',
-      test: drop_vore,
-      tooltip: {
-        main: 'Allows for dropnom spontaneous vore to occur. ' + 'Note, you still need spontaneous vore pred and/or prey enabled.',
-        enable: 'Click here to allow for dropnoms.',
-        disable: 'Click here to disable dropnoms.'
-      },
-      content: {
-        enabled: 'Drop Noms Enabled',
-        disabled: 'Drop Noms Disabled'
-      }
-    },
-    toggle_slip_vore: {
-      action: 'toggle_slip_vore',
-      test: slip_vore,
-      tooltip: {
-        main: 'Allows for slip related spontaneous vore to occur. ' + 'Note, you still need spontaneous vore pred and/or prey enabled.',
-        enable: 'Click here to allow for slip vore.',
-        disable: 'Click here to disable slip vore.'
-      },
-      content: {
-        enabled: 'Slip Vore Enabled',
-        disabled: 'Slip Vore Disabled'
-      }
-    },
-    toggle_stumble_vore: {
-      action: 'toggle_stumble_vore',
-      test: stumble_vore,
-      tooltip: {
-        main: 'Allows for stumble related spontaneous vore to occur. ' + ' Note, you still need spontaneous vore pred and/or prey enabled.',
-        enable: 'Click here to allow for stumble vore.',
-        disable: 'Click here to disable stumble vore.'
-      },
-      content: {
-        enabled: 'Stumble Vore Enabled',
-        disabled: 'Stumble Vore Disabled'
-      }
-    },
-    toggle_throw_vore: {
-      action: 'toggle_throw_vore',
-      test: throw_vore,
-      tooltip: {
-        main: 'Allows for throw related spontaneous vore to occur. ' + ' Note, you still need spontaneous vore pred and/or prey enabled.',
-        enable: 'Click here to allow for throw vore.',
-        disable: 'Click here to disable throw vore.'
-      },
-      content: {
-        enabled: 'Throw Vore Enabled',
-        disabled: 'Throw Vore Disabled'
-      }
-    },
-    inbelly_spawning: {
-      action: 'toggle_allow_inbelly_spawning',
-      test: allow_inbelly_spawning,
-      tooltip: {
-        main: 'This toggle is ghosts being able to spawn in one of your bellies.' + ' You will have to confirm again when they attempt to.',
-        enable: 'Click here to allow prey to spawn in you.',
-        disable: 'Click here to prevent prey from spawning in you.'
-      },
-      content: {
-        enabled: 'Inbelly Spawning Allowed',
-        disabled: 'Inbelly Spawning Forbidden'
-      }
-    },
-    noisy: {
-      action: 'toggle_noisy',
-      test: noisy,
-      tooltip: {
-        main: 'Toggle audible hunger noises.',
-        enable: 'Click here to turn on hunger noises.',
-        disable: 'Click here to turn off hunger noises.'
-      },
-      content: {
-        enabled: 'Hunger Noises Enabled',
-        disabled: 'Hunger Noises Disabled'
-      }
-    },
-    resize: {
-      action: 'toggle_resize',
-      test: resizable,
-      tooltip: {
-        main: 'This button is to toggle your ability to be resized by others.',
-        enable: 'Click here to allow being resized.',
-        disable: 'Click here to prevent being resized.'
-      },
-      content: {
-        enabled: 'Resizing Allowed',
-        disabled: 'No Resizing'
-      }
-    },
-    steppref: {
-      action: 'toggle_steppref',
-      test: step_mechanics_active,
-      tooltip: {
-        main: '',
-        enable: 'You will not participate in step mechanics.' + ' Click to enable step mechanics.',
-        disable: 'This setting controls whether or not you participate in size-based step mechanics.' + ' Includes both stepping on others, as well as getting stepped on. Click to disable step mechanics.'
-      },
-      content: {
-        enabled: 'Step Mechanics Enabled',
-        disabled: 'Step Mechanics Disabled'
-      }
-    },
-    vore_fx: {
-      action: 'toggle_fx',
-      test: show_vore_fx,
-      tooltip: {
-        main: '',
-        enable: 'Regardless of Predator Setting, you will not see their FX settings.' + ' Click this to enable showing FX.',
-        disable: 'This setting controls whether or not a pred is allowed to mess with your HUD and fullscreen overlays.' + ' Click to disable all FX.'
-      },
-      content: {
-        enabled: 'Show Vore FX',
-        disabled: 'Do Not Show Vore FX'
-      }
-    },
-    remains: {
-      action: 'toggle_leaveremains',
-      test: digest_leave_remains,
-      tooltip: {
-        main: '',
-        enable: 'Regardless of Predator Setting, you will not leave remains behind.' + ' Click this to allow leaving remains.',
-        disable: 'Your Predator must have this setting enabled in their belly modes to allow remains to show up,' + ' if they do not, they will not leave your remains behind, even with this on. Click to disable remains.'
-      },
-      content: {
-        enabled: 'Allow Leaving Remains',
-        disabled: 'Do Not Allow Leaving Remains'
-      }
-    },
-    pickuppref: {
-      action: 'toggle_pickuppref',
-      test: pickup_mechanics_active,
-      tooltip: {
-        main: '',
-        enable: 'You will not participate in pick-up mechanics.' + ' Click this to allow picking up/being picked up.',
-        disable: 'Allows macros to pick you up into their hands, and you to pick up micros.' + ' Click to disable pick-up mechanics.'
-      },
-      content: {
-        enabled: 'Pick-up Mechanics Enabled',
-        disabled: 'Pick-up Mechanics Disabled'
-      }
-    },
-    spontaneous_tf: {
-      action: 'toggle_allow_spontaneous_tf',
-      test: allow_spontaneous_tf,
-      tooltip: {
-        main: 'This toggle is for spontaneous or environment related transformation' + ' as a victim, such as via chemicals.',
-        enable: 'Click here to allow being spontaneously transformed.',
-        disable: 'Click here to disable being spontaneously transformed.'
-      },
-      content: {
-        enabled: 'Spontaneous TF Enabled',
-        disabled: 'Spontaneous TF Disabled'
-      }
-    },
-    examine_nutrition: {
-      action: 'toggle_nutrition_ex',
-      test: nutrition_message_visible,
-      tooltip: {
-        main: '',
-        enable: 'Click here to enable nutrition messages.',
-        disable: 'Click here to disable nutrition messages.'
-      },
-      content: {
-        enabled: 'Examine Nutrition Messages Active',
-        disabled: 'Examine Nutrition Messages Inactive'
-      }
-    },
-    examine_weight: {
-      action: 'toggle_weight_ex',
-      test: weight_message_visible,
-      tooltip: {
-        main: '',
-        enable: 'Click here to enable weight messages.',
-        disable: 'Click here to disable weight messages.'
-      },
-      content: {
-        enabled: 'Examine Weight Messages Active',
-        disabled: 'Examine Weight Messages Inactive'
-      }
-    }
-  };
-  return (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Mechanical Preferences",
-    "buttons": (0, _inferno.createComponentVNode)(2, _components.Button, {
-      "icon": "eye",
-      "selected": show_pictures,
-      "onClick": function () {
-        function onClick() {
-          return act('show_pictures');
-        }
-
-        return onClick;
-      }(),
-      children: ["Contents Preference: ", show_pictures ? 'Show Pictures' : 'Show List']
-    }),
-    children: [(0, _inferno.createComponentVNode)(2, _components.Flex, {
-      "spacing": 1,
-      "wrap": "wrap",
-      "justify": "center",
-      children: [(0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.digestion
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        "grow": 1,
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.absorbable
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.devour
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.mobvore
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        "grow": 1,
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.feed
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.healbelly,
-          "tooltipPosition": "top"
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.dropnom_prey
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        "grow": 1,
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.dropnom_pred
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.toggle_drop_vore
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.toggle_slip_vore
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        "grow": 1,
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.toggle_stumble_vore
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.toggle_throw_vore
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.inbelly_spawning
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        "grow": 1,
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.noisy
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.resize
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.steppref,
-          "tooltipPosition": "top"
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        "grow": 1,
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.vore_fx,
-          "tooltipPosition": "top"
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.remains,
-          "tooltipPosition": "top"
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.pickuppref,
-          "tooltipPosition": "top"
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        "grow": 1,
-        children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-          "spec": preferences.spontaneous_tf
-        })
-      }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-        "basis": "32%",
-        children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-          "fluid": true,
-          "content": "Selective Mode Preference",
-          "onClick": function () {
-            function onClick() {
-              return act('switch_selective_mode_pref');
-            }
-
-            return onClick;
-          }()
-        })
-      })]
-    }), (0, _inferno.createComponentVNode)(2, _components.Section, {
-      "title": "Aesthetic Preferences",
-      children: (0, _inferno.createComponentVNode)(2, _components.Flex, {
-        "spacing": 1,
-        "wrap": "wrap",
-        "justify": "center",
-        children: [(0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-          "basis": "50%",
-          "grow": 1,
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "fluid": true,
-            "content": "Set Taste",
-            "icon": "grin-tongue",
-            "onClick": function () {
-              function onClick() {
-                return act('setflavor');
-              }
-
-              return onClick;
-            }()
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-          "basis": "50%",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "fluid": true,
-            "content": "Set Smell",
-            "icon": "wind",
-            "onClick": function () {
-              function onClick() {
-                return act('setsmell');
-              }
-
-              return onClick;
-            }()
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-          "basis": "50%",
-          "grow": 1,
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_msgs',
-                  msgtype: 'en'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": "Set Nutrition Examine Message",
-            "icon": "flask",
-            "fluid": true
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-          "basis": "50%",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "onClick": function () {
-              function onClick() {
-                return act('set_attribute', {
-                  attribute: 'b_msgs',
-                  msgtype: 'ew'
-                });
-              }
-
-              return onClick;
-            }(),
-            "content": "Set Weight Examine Message",
-            "icon": "weight-hanging",
-            "fluid": true
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-          "basis": "50%",
-          "grow": 1,
-          children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-            "spec": preferences.examine_nutrition
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-          "basis": "50%",
-          children: (0, _inferno.createComponentVNode)(2, VoreUserPreferenceItem, {
-            "spec": preferences.examine_weight
-          })
-        })]
-      })
-    }), (0, _inferno.createComponentVNode)(2, _components.Divider), (0, _inferno.createComponentVNode)(2, _components.Section, {
-      children: (0, _inferno.createComponentVNode)(2, _components.Flex, {
-        "spacing": 1,
-        children: [(0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-          "basis": "49%",
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "fluid": true,
-            "content": "Save Prefs",
-            "icon": "save",
-            "onClick": function () {
-              function onClick() {
-                return act('saveprefs');
-              }
-
-              return onClick;
-            }()
-          })
-        }), (0, _inferno.createComponentVNode)(2, _components.Flex.Item, {
-          "basis": "49%",
-          "grow": 1,
-          children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-            "fluid": true,
-            "content": "Reload Prefs",
-            "icon": "undo",
-            "onClick": function () {
-              function onClick() {
-                return act('reloadprefs');
-              }
-
-              return onClick;
-            }()
-          })
-        })]
-      })
-    })]
-  });
-};
-
-var VoreUserPreferenceItem = function VoreUserPreferenceItem(props, context) {
-  var _useBackend13 = (0, _backend.useBackend)(context),
-      act = _useBackend13.act;
-
-  var spec = props.spec,
-      rest = _objectWithoutPropertiesLoose(props, _excluded);
-
-  var action = spec.action,
-      test = spec.test,
-      tooltip = spec.tooltip,
-      content = spec.content;
-  return (0, _inferno.normalizeProps)((0, _inferno.createComponentVNode)(2, _components.Button, Object.assign({
-    "onClick": function () {
-      function onClick() {
-        return act(action);
-      }
-
-      return onClick;
-    }(),
-    "icon": test ? 'toggle-on' : 'toggle-off',
-    "selected": test,
-    "fluid": true,
-    "tooltip": tooltip.main + ' ' + (test ? tooltip.disable : tooltip.enable),
-    "content": test ? content.enabled : content.disabled
-  }, rest)));
-};
-
-/***/ }),
-
-/***/ "./packages/tgui/interfaces/VorePanelExport.tsx":
-/*!******************************************************!*\
-  !*** ./packages/tgui/interfaces/VorePanelExport.tsx ***!
-  \******************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.VorePanelExport = void 0;
-
-var _inferno = __webpack_require__(/*! inferno */ "./.yarn/cache/inferno-npm-7.4.11-3352a2fb62-1651aad357.zip/node_modules/inferno/index.esm.js");
-
-var _backend = __webpack_require__(/*! ../backend */ "./packages/tgui/backend.ts");
-
-var _layouts = __webpack_require__(/*! ../layouts */ "./packages/tgui/layouts/index.js");
-
-var _components = __webpack_require__(/*! ../components */ "./packages/tgui/components/index.js");
-
-var ModeSpan = {
-  'Hold': '<span class="badge text-bg-secondary">Hold</span>',
-  'Digest': '<span class="badge text-bg-danger">Digest</span>',
-  'Absorb': '<span class="badge text-bg-light">Absorb</span>',
-  'Drain': '<span class="badge text-bg-warning">Drain</span>',
-  'Selective': '<span class="badge text-bg-warning">Selective</span>',
-  'Unabsorb': '<span class="badge text-bg-light">Unabsorb</span>',
-  'Heal': '<span class="badge text-bg-success">Heal</span>',
-  'Shrink': '<span class="badge text-bg-info">Shrink</span>',
-  'Grow': '<span class="badge text-bg-info">Grow</span>',
-  'Size Steal': '<span class="badge text-bg-info">Size Steal</span>',
-  'Encase In Egg': '<span class="badge text-bg-primary">Encase In Egg</span>'
-};
-var ItemModeSpan = {
-  'Hold': '<span class="badge text-bg-secondary">Item: Hold</span>',
-  'Digest (Food Only)': '<span class="badge text-bg-danger">Item: Digest (Food Only)</span>',
-  'Digest': '<span class="badge text-bg-danger">Item: Digest</span>'
-};
-var AddonIcon = {
-  'Numbing': '',
-  'Stripping': '',
-  'Leave Remains': '',
-  'Muffles': 'bi-volume-mute',
-  'Affect Worn Items': '',
-  'Jams Sensors': 'bi-wifi-off',
-  'Complete Absorb': ''
-};
-
-var GetAddons = function GetAddons(addons) {
-  var result = [];
-  addons == null ? void 0 : addons.forEach(function (addon) {
-    result.push('<span class="badge text-bg-secondary"><i class="' + AddonIcon[addon] + '"></i>' + addon + '</span>');
-  });
-
-  if (result.length === 0) {
-    result.push('No Addons Set');
-  }
-
-  return result;
-};
-
-// prettier-ignore
-var generateBellyString = function generateBellyString(belly, index) {
-  var name = belly.name,
-      desc = belly.desc,
-      absorbed_desc = belly.absorbed_desc,
-      vore_verb = belly.vore_verb,
-      release_verb = belly.release_verb,
-      mode = belly.mode,
-      addons = belly.addons,
-      item_mode = belly.item_mode,
-      digest_brute = belly.digest_brute,
-      digest_burn = belly.digest_burn,
-      digest_oxy = belly.digest_oxy,
-      digest_tox = belly.digest_tox,
-      digest_clone = belly.digest_clone,
-      can_taste = belly.can_taste,
-      contaminates = belly.contaminates,
-      contamination_flavor = belly.contamination_flavor,
-      contamination_color = belly.contamination_color,
-      nutrition_percent = belly.nutrition_percent,
-      bulge_size = belly.bulge_size,
-      display_absorbed_examine = belly.display_absorbed_examine,
-      save_digest_mode = belly.save_digest_mode,
-      emote_active = belly.emote_active,
-      emote_time = belly.emote_time,
-      shrink_grow_size = belly.shrink_grow_size,
-      egg_type = belly.egg_type,
-      selective_preference = belly.selective_preference,
-      struggle_messages_outside = belly.struggle_messages_outside,
-      struggle_messages_inside = belly.struggle_messages_inside,
-      absorbed_struggle_messages_outside = belly.absorbed_struggle_messages_outside,
-      absorbed_struggle_messages_inside = belly.absorbed_struggle_messages_inside,
-      digest_messages_owner = belly.digest_messages_owner,
-      digest_messages_prey = belly.digest_messages_prey,
-      absorb_messages_owner = belly.absorb_messages_owner,
-      absorb_messages_prey = belly.absorb_messages_prey,
-      unabsorb_messages_owner = belly.unabsorb_messages_owner,
-      unabsorb_messages_prey = belly.unabsorb_messages_prey,
-      examine_messages = belly.examine_messages,
-      examine_messages_absorbed = belly.examine_messages_absorbed,
-      emotes_digest = belly.emotes_digest,
-      emotes_hold = belly.emotes_hold,
-      emotes_holdabsorbed = belly.emotes_holdabsorbed,
-      emotes_absorb = belly.emotes_absorb,
-      emotes_heal = belly.emotes_heal,
-      emotes_drain = belly.emotes_drain,
-      emotes_steal = belly.emotes_steal,
-      emotes_egg = belly.emotes_egg,
-      emotes_shrink = belly.emotes_shrink,
-      emotes_grow = belly.emotes_grow,
-      emotes_unabsorb = belly.emotes_unabsorb,
-      is_wet = belly.is_wet,
-      wet_loop = belly.wet_loop,
-      fancy_vore = belly.fancy_vore,
-      vore_sound = belly.vore_sound,
-      release_sound = belly.release_sound,
-      disable_hud = belly.disable_hud,
-      escapable = belly.escapable,
-      escapechance = belly.escapechance,
-      escapetime = belly.escapetime,
-      transferchance = belly.transferchance,
-      transferlocation = belly.transferlocation,
-      transferchance_secondary = belly.transferchance_secondary,
-      transferlocation_secondary = belly.transferlocation_secondary,
-      absorbchance = belly.absorbchance,
-      digestchance = belly.digestchance;
-  var result = '';
-  result += '<div class="accordion-item"><h2 class="accordion-header" id="heading' + index + '">';
-  result += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + index + '" aria-expanded="false" aria-controls="collapse' + index + '">';
-  result += name + ' - (<span style="color: red;">' + digest_brute + '</span >/<span style="color: orange;">' + digest_burn + '</span>/<span style="color: blue;">' + digest_oxy + '</span>/<span style="color: green;">' + digest_tox + '</span>/<span style="color: purple;">' + digest_clone + '</span>) - ' + ModeSpan[mode] + ' - ' + ItemModeSpan[item_mode];
-  result += '</button></h2>';
-  result += '<div id="collapse' + index + '" class="accordion-collapse collapse" aria-labelledby="heading' + index + '" data-bs-parent="#accordionBellies">';
-  result += '<div class="accordion-body">';
-  result += 'Addons:<br>' + GetAddons(addons) + '<br><br>';
-  result += '<b>== Descriptions ==</b><br>';
-  result += 'Vore Verb:<br>' + vore_verb + '<br><br>';
-  result += 'Release Verb:<br>' + release_verb + '<br><br>';
-  result += 'Description:<br>"' + desc + '"<br><br>';
-  result += 'Absorbed Description:<br>"' + absorbed_desc + '"<br><br>';
-  result += '<hr>';
-  result += '<b>== Messages ==</b><br>';
-  result += '<div role="messagesTabpanel">'; // Start Div messagesTabpanel
-
-  result += '<div class="row"><div class="col-4">';
-  result += '<div class="list-group" id="messagesList" role="messagesTablist">';
-  result += '<a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#struggleMessagesOutside' + index + '" role="tab">Struggle Messages (Outside)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#struggleMessagesInside' + index + '" role="tab">Struggle Messages (Inside)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#absorbedStruggleOutside' + index + '" role="tab">Absorbed Struggle Messages (Outside)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#absorbedStruggleInside' + index + '" role="tab">Absorbed Struggle Messages (Inside)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#digestMessagesOwner' + index + '" role="tab">Digest Messages (Owner)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#digestMessagesPrey' + index + '" role="tab">Digest Messages (Prey)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#absorbMessagesOwner' + index + '" role="tab">Absorb Messages (Owner)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#absorbMessagesPrey' + index + '" role="tab">Absorb Messages (Prey)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#unabsorbMessagesOwner' + index + '" role="tab">Unabsorb Messages (Owner)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#unabsorbMessagesPrey' + index + '" role="tab">Unabsorb Messages (Prey)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#examineMessages' + index + '" role="tab">Examine Messages</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#examineMessagesAbsorbed' + index + '" role="tab">Examine Messages (Absorbed)</a>';
-  result += '</div></div>';
-  result += '<div class="col-8">';
-  result += '<div class="tab-content">';
-  result += '<div class="tab-pane fade show active" id="struggleMessagesOutside' + index + '" role="messagesTabpanel">';
-  struggle_messages_outside == null ? void 0 : struggle_messages_outside.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="struggleMessagesInside' + index + '" role="messagesTabpanel">';
-  struggle_messages_inside == null ? void 0 : struggle_messages_inside.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="absorbedStruggleOutside' + index + '" role="messagesTabpanel">';
-  absorbed_struggle_messages_outside == null ? void 0 : absorbed_struggle_messages_outside.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="absorbedStruggleInside' + index + '" role="messagesTabpanel">';
-  absorbed_struggle_messages_inside == null ? void 0 : absorbed_struggle_messages_inside.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="digestMessagesOwner' + index + '" role="messagesTabpanel">';
-  digest_messages_owner == null ? void 0 : digest_messages_owner.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="digestMessagesPrey' + index + '" role="messagesTabpanel">';
-  digest_messages_prey == null ? void 0 : digest_messages_prey.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="absorbMessagesOwner' + index + '" role="messagesTabpanel">';
-  absorb_messages_owner == null ? void 0 : absorb_messages_owner.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="absorbMessagesPrey' + index + '" role="messagesTabpanel">';
-  absorb_messages_prey == null ? void 0 : absorb_messages_prey.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="unabsorbMessagesOwner' + index + '" role="messagesTabpanel">';
-  unabsorb_messages_owner == null ? void 0 : unabsorb_messages_owner.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="unabsorbMessagesPrey' + index + '" role="messagesTabpanel">';
-  unabsorb_messages_prey == null ? void 0 : unabsorb_messages_prey.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="examineMessages' + index + '" role="messagesTabpanel">';
-  examine_messages == null ? void 0 : examine_messages.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '<div class="tab-pane fade" id="examineMessagesAbsorbed' + index + '" role="messagesTabpanel">';
-  examine_messages_absorbed == null ? void 0 : examine_messages_absorbed.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-  result += '</div>';
-  result += '</div></div>';
-  result += '</div>'; // End Div messagesTabpanel
-
-  result += '<details><summary>= Idle Messages =</summary><p>';
-  result += '<details><summary>Idle Messages (Hold):</summary><p>';
-  emotes_hold == null ? void 0 : emotes_hold.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Hold Absorbed):</summary><p>';
-  emotes_holdabsorbed == null ? void 0 : emotes_holdabsorbed.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Digest):</summary><p>';
-  emotes_digest == null ? void 0 : emotes_digest.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Absorb):</summary><p>';
-  emotes_absorb == null ? void 0 : emotes_absorb.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Unabsorb):</summary><p>';
-  emotes_unabsorb == null ? void 0 : emotes_unabsorb.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Drain):</summary><p>';
-  emotes_drain == null ? void 0 : emotes_drain.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Heal):</summary><p>';
-  emotes_heal == null ? void 0 : emotes_heal.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Size Steal):</summary><p>';
-  emotes_steal == null ? void 0 : emotes_steal.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Shrink):</summary><p>';
-  emotes_shrink == null ? void 0 : emotes_shrink.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Grow):</summary><p>';
-  emotes_grow == null ? void 0 : emotes_grow.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '<details><summary>Idle Messages (Encase In Egg):</summary><p>';
-  emotes_egg == null ? void 0 : emotes_egg.forEach(function (msg) {
-    result += msg + '<br>';
-  });
-  result += '</details></p><br>';
-  result += '</details></p><br>';
-  result += '<hr>';
-  result += '<div class="accordion" id="settingsAccordion' + index + '">'; // OPTIONS
-
-  result += '<div class="accordion-item">';
-  result += '<h2 class="accordion-header" id="settingsAccordion' + index + '-headingOne">';
-  result += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsAccordion' + index + '-collapseOne" aria-expanded="true" aria-controls="settingsAccordion' + index + '-collapseOne">';
-  result += '<b>== Options ==</b><br>';
-  result += '</button></h2>';
-  result += '<div id="settingsAccordion' + index + '-collapseOne" class="accordion-collapse collapse" aria-labelledby="settingsAccordion' + index + '-headingOne">';
-  result += '<div class="accordion-body">';
-  result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Can Taste: ' + (can_taste ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Contaminates: ' + (contaminates ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Contamination Flavor: ' + contamination_flavor + '</li>';
-  result += '<li class="list-group-item">Contamination Color: ' + contamination_color + '</li>';
-  result += '<li class="list-group-item">Nutritional Gain: ' + nutrition_percent + '%</li>';
-  result += '<li class="list-group-item">Required Examine Size: ' + bulge_size * 100 + '%</li>';
-  result += '<li class="list-group-item">Display Absorbed Examines: ' + (display_absorbed_examine ? '<span style="color: green;">True' : '<span style="color: red;">False') + '</li>';
-  result += '<li class="list-group-item">Save Digest Mode: ' + (save_digest_mode ? '<span style="color: green;">True' : '<span style="color: red;">False') + '</li>';
-  result += '<li class="list-group-item">Idle Emotes: ' + (emote_active ? '<span style="color: green;">Active' : '<span style="color: red;">Inactive') + '</li>';
-  result += '<li class="list-group-item">Idle Emote Delay: ' + emote_time + ' seconds</li>';
-  result += '<li class="list-group-item">Shrink/Grow Size: ' + shrink_grow_size * 100 + '%</li>';
-  result += '<li class="list-group-item">Egg Type: ' + egg_type + '</li>';
-  result += '<li class="list-group-item">Selective Mode Preference: ' + selective_preference + '</li>';
-  result += '</ul>';
-  result += '</div></div></div>'; // END OPTIONS
-  // SOUNDS
-
-  result += '<div class="accordion-item">';
-  result += '<h2 class="accordion-header" id="settingsAccordion' + index + '-headingTwo">';
-  result += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsAccordion' + index + '-collapseTwo" aria-expanded="true" aria-controls="settingsAccordion' + index + '-collapseTwo">';
-  result += '<b>== Sounds ==</b><br>';
-  result += '</button></h2>';
-  result += '<div id="settingsAccordion' + index + '-collapseTwo" class="accordion-collapse collapse" aria-labelledby="settingsAccordion' + index + '-headingTwo">';
-  result += '<div class="accordion-body">';
-  result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Fleshy Belly: ' + (is_wet ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Internal Loop: ' + (wet_loop ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Use Fancy Sounds: ' + (fancy_vore ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Vore Sound: ' + vore_sound + '</li>';
-  result += '<li class="list-group-item">Release Sound: ' + release_sound + '</li>';
-  result += '</ul>';
-  result += '</div></div></div>'; // END SOUNDS
-  // VISUALS
-
-  result += '<div class="accordion-item">';
-  result += '<h2 class="accordion-header" id="settingsAccordion' + index + '-headingVisuals">';
-  result += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsAccordion' + index + '-collapseVisuals" aria-expanded="true" aria-controls="settingsAccordion' + index + '-collapseVisuals">';
-  result += '<b>== Visuals ==</b><br>';
-  result += '</button></h2>';
-  result += '<div id="settingsAccordion' + index + '-collapseVisuals" class="accordion-collapse collapse" aria-labelledby="settingsAccordion' + index + '-headingVisuals>';
-  result += '<div class="accordion-body">';
-  result += '<b>Vore FX</b>';
-  result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Disable Prey HUD: ' + (disable_hud ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '</ul>';
-  result += '</div></div></div>'; // END VISUALS
-  // INTERACTIONS
-
-  result += '<div class="accordion-item">';
-  result += '<h2 class="accordion-header" id="settingsAccordion' + index + '-headingThree">';
-  result += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsAccordion' + index + '-collapseThree" aria-expanded="true" aria-controls="settingsAccordion' + index + '-collapseThree">';
-  result += '<b>== Interactions ==</b>';
-  result += '</button></h2>';
-  result += '<div id="settingsAccordion' + index + '-collapseThree" class="accordion-collapse collapse" aria-labelledby="settingsAccordion' + index + '-headingThree">';
-  result += '<div class="accordion-body">';
-  result += '<b>Belly Interactions (' + (escapable ? '<span style="color: green;">Enabled' : '<span style="color: red;">Disabled') + '</span>)</b>';
-  result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Escape Chance: ' + escapechance + '%</li>';
-  result += '<li class="list-group-item">Escape Time: ' + escapetime / 10 + 's</li>';
-  result += '<li class="list-group-item">Transfer Chance: ' + transferchance + '%</li>';
-  result += '<li class="list-group-item">Transfer Location: ' + transferlocation + '</li>';
-  result += '<li class="list-group-item">Secondary Transfer Chance: ' + transferchance_secondary + '%</li>';
-  result += '<li class="list-group-item">Secondary Transfer Location: ' + transferlocation_secondary + '</li>';
-  result += '<li class="list-group-item">Absorb Chance: ' + absorbchance + '%</li>';
-  result += '<li class="list-group-item">Digest Chance: ' + digestchance + '%</li>';
-  result += '</ul>';
-  result += '</div></div></div>'; // END INTERACTIONS
-
-  result += '</div></div></div>';
-  return result;
-};
-
-var getCurrentTimestamp = function getCurrentTimestamp() {
-  var now = new Date();
-  var hours = String(now.getHours());
-
-  if (hours.length < 2) {
-    hours = '0' + hours;
-  }
-
-  var minutes = String(now.getMinutes());
-
-  if (minutes.length < 2) {
-    minutes = '0' + minutes;
-  }
-
-  var dayofmonth = String(now.getDate());
-
-  if (dayofmonth.length < 2) {
-    dayofmonth = '0' + dayofmonth;
-  }
-
-  var month = String(now.getMonth() + 1); // 0-11
-
-  if (month.length < 2) {
-    month = '0' + month;
-  }
-
-  var year = String(now.getFullYear());
-  return ' ' + year + '-' + month + '-' + dayofmonth + ' (' + hours + ' ' + minutes + ')';
-};
-
-var downloadPrefs = function downloadPrefs(context, extension) {
-  var _useBackend = (0, _backend.useBackend)(context),
-      act = _useBackend.act,
-      data = _useBackend.data;
-
-  var db_version = data.db_version,
-      db_repo = data.db_repo,
-      mob_name = data.mob_name,
-      bellies = data.bellies;
-  var datesegment = getCurrentTimestamp();
-  var filename = mob_name + datesegment + extension;
-  var blob;
-
-  if (extension === '.html') {
-    var style = '<style>' + '</style>';
-    blob = new Blob(['<!DOCTYPE html><html lang="en"><head>' + '<meta charset="utf-8">' + '<meta name="viewport" content="width=device-width, initial-scale=1">' + '<title>' + bellies.length + ' Exported Bellies (DB_VER: ' + db_repo + '-' + db_version + ')</title>' + '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">' + '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">' + style + '</head><body class="py-4"><main><div class="container"><h2>Bellies of ' + mob_name + '</h2><p class="lead">Generated on: ' + datesegment + '</p><div class="accordion" id="accordionBellies">'], {
-      type: 'text/html;charset=utf8'
-    });
-    bellies.forEach(function (belly, i) {
-      blob = new Blob([blob, generateBellyString(belly, i)], {
-        type: 'text/html;charset=utf8'
-      });
-    });
-    blob = new Blob([blob, '</div>', '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>', '</div></main></body></html>'], {
-      type: 'text/html;charset=utf8'
-    });
-  }
-
-  window.navigator.msSaveOrOpenBlob(blob, filename);
-};
-
-var VorePanelExport = function VorePanelExport() {
-  return (0, _inferno.createComponentVNode)(2, _layouts.Window, {
-    "width": 790,
-    "height": 560,
-    "theme": "abstract",
-    "resizeable": true,
-    children: (0, _inferno.createComponentVNode)(2, _layouts.Window.Content, {
-      children: (0, _inferno.createComponentVNode)(2, VorePanelExportContent)
-    })
-  });
-};
-
-exports.VorePanelExport = VorePanelExport;
-
-var VorePanelExportContent = function VorePanelExportContent(props, context) {
-  var _useBackend2 = (0, _backend.useBackend)(context),
-      act = _useBackend2.act,
-      data = _useBackend2.data;
-
-  var bellies = data.bellies;
-  return (0, _inferno.createComponentVNode)(2, _components.Section, {
-    "title": "Vore Export Panel",
-    children: (0, _inferno.createComponentVNode)(2, _components.Section, {
-      "title": "Export",
-      children: (0, _inferno.createComponentVNode)(2, _components.Button, {
-        "fluid": true,
-        "icon": "file-alt",
-        "onClick": function () {
-          function onClick() {
-            return downloadPrefs(context, '.html');
-          }
-
-          return onClick;
-        }(),
-        children: "Export (HTML)"
-      })
-    })
-  });
-};
+exports.VendingMachine = VendingMachine;
 
 /***/ }),
 
@@ -92044,17 +89146,7 @@ var TitleBar = function TitleBar(props, context) {
 
       return onMousedown;
     }()
-  }), (0, _inferno.createVNode)(1, "div", "TitleBar__title", [typeof title === 'string' && title === title.toLowerCase() && (0, _string.toTitleCase)(title) || title, !!children && (0, _inferno.createVNode)(1, "div", "TitleBar__buttons", children, 0)], 0),  true && (0, _inferno.createVNode)(1, "div", "TitleBar__devBuildIndicator", (0, _inferno.createComponentVNode)(2, _components.Icon, {
-    "name": "bug"
-  }), 2, {
-    "onClick": function () {
-      function onClick() {
-        return dispatch((0, _actions.toggleKitchenSink)());
-      }
-
-      return onClick;
-    }()
-  }), Boolean(fancy && canClose) && (0, _inferno.createVNode)(1, "div", "TitleBar__close TitleBar__clickable", Byond.IS_LTE_IE8 ? 'x' : '×', 0, {
+  }), (0, _inferno.createVNode)(1, "div", "TitleBar__title", [typeof title === 'string' && title === title.toLowerCase() && (0, _string.toTitleCase)(title) || title, !!children && (0, _inferno.createVNode)(1, "div", "TitleBar__buttons", children, 0)], 0),  false && 0, Boolean(fancy && canClose) && (0, _inferno.createVNode)(1, "div", "TitleBar__close TitleBar__clickable", Byond.IS_LTE_IE8 ? 'x' : '×', 0, {
     "onclick": onClose
   })], 0);
 };
@@ -92194,9 +89286,7 @@ var _log = function log(level, ns) {
   }
 
   // Send logs to a remote log collector
-  if (true) {
-    _client.sendLogEntry.apply(void 0, [level, ns].concat(args));
-  } // Send important logs to the backend
+  if (false) {} // Send important logs to the backend
 
 
   if (level >= LEVEL_INFO) {
@@ -92355,19 +89445,7 @@ var createRenderer = function createRenderer(getVNode) {
     } // Report rendering time
 
 
-    if (true) {
-      if (initialRender === 'resumed') {
-        logger.log('rendered in', _perf.perf.measure('render/start', 'render/finish'));
-      } else if (initialRender) {
-        logger.debug('serving from:', location.href);
-        logger.debug('bundle entered in', _perf.perf.measure('inception', 'init'));
-        logger.debug('initialized in', _perf.perf.measure('init', 'render/start'));
-        logger.log('rendered in', _perf.perf.measure('render/start', 'render/finish'));
-        logger.log('fully loaded in', _perf.perf.measure('inception', 'render/finish'));
-      } else {
-        logger.debug('rendered in', _perf.perf.measure('render/start', 'render/finish'));
-      }
-    }
+    if (false) {}
 
     if (initialRender) {
       initialRender = false;
@@ -92470,13 +89548,7 @@ var getRoutedComponent = function getRoutedComponent(store) {
     return RefreshingWindow;
   }
 
-  if (true) {
-    var debug = (0, _selectors.selectDebug)(state); // Show a kitchen sink
-
-    if (debug.kitchenSink) {
-      return (__webpack_require__(/*! ./debug */ "./packages/tgui/debug/index.js").KitchenSink);
-    }
-  }
+  if (false) { var debug; }
 
   var name = config == null ? void 0 : config["interface"];
   var interfacePathBuilders = [function (name) {
@@ -92568,13 +89640,7 @@ var configureStore = function configureStore(options) {
   }), options.reducer]);
   var middleware = !sideEffects ? [] : [].concat(((_options$middleware = options.middleware) == null ? void 0 : _options$middleware.pre) || [], [_assets.assetMiddleware, _backend.backendMiddleware], ((_options$middleware2 = options.middleware) == null ? void 0 : _options$middleware2.post) || []);
 
-  if (true) {
-    // We are using two if statements because Webpack is capable of
-    // removing this specific block as dead code.
-    if (sideEffects) {
-      middleware.unshift(loggingMiddleware, _debug.debugMiddleware, _debug.relayMiddleware);
-    }
-  }
+  if (false) {}
 
   var enhancer = _redux.applyMiddleware.apply(void 0, middleware);
 
@@ -94635,14 +91701,8 @@ var map = {
 	"./Turbolift.js": "./packages/tgui/interfaces/Turbolift.js",
 	"./Uplink": "./packages/tgui/interfaces/Uplink.js",
 	"./Uplink.js": "./packages/tgui/interfaces/Uplink.js",
-	"./Vending": "./packages/tgui/interfaces/Vending.js",
-	"./Vending.js": "./packages/tgui/interfaces/Vending.js",
-	"./VolumePanel": "./packages/tgui/interfaces/VolumePanel.tsx",
-	"./VolumePanel.tsx": "./packages/tgui/interfaces/VolumePanel.tsx",
-	"./VorePanel": "./packages/tgui/interfaces/VorePanel.js",
-	"./VorePanel.js": "./packages/tgui/interfaces/VorePanel.js",
-	"./VorePanelExport": "./packages/tgui/interfaces/VorePanelExport.tsx",
-	"./VorePanelExport.tsx": "./packages/tgui/interfaces/VorePanelExport.tsx",
+	"./VendingMachine": "./packages/tgui/interfaces/VendingMachine.js",
+	"./VendingMachine.js": "./packages/tgui/interfaces/VendingMachine.js",
 	"./Wires": "./packages/tgui/interfaces/Wires.js",
 	"./Wires.js": "./packages/tgui/interfaces/Wires.js",
 	"./XenoarchArtifactAnalyzer": "./packages/tgui/interfaces/XenoarchArtifactAnalyzer.tsx",
@@ -94824,40 +91884,10 @@ var queue = [];
 var subscribers = [];
 
 var ensureConnection = function ensureConnection() {
-  if (true) {
-    if (!window.WebSocket) {
-      return;
-    }
-
-    if (!socket || socket.readyState === WebSocket.CLOSED) {
-      var DEV_SERVER_IP =  false || '127.0.0.1';
-      socket = new WebSocket("ws://" + DEV_SERVER_IP + ":3000");
-
-      socket.onopen = function () {
-        // Empty the message queue
-        while (queue.length !== 0) {
-          var msg = queue.shift();
-          socket.send(msg);
-        }
-      };
-
-      socket.onmessage = function (event) {
-        var msg = JSON.parse(event.data);
-
-        for (var _iterator = _createForOfIteratorHelperLoose(subscribers), _step; !(_step = _iterator()).done;) {
-          var subscriber = _step.value;
-          subscriber(msg);
-        }
-      };
-    }
-  }
+  if (false) { var DEV_SERVER_IP; }
 };
 
-if (true) {
-  window.onunload = function () {
-    return socket && socket.close();
-  };
-}
+if (false) {}
 
 var subscribe = function subscribe(fn) {
   return subscribers.push(fn);
@@ -94926,50 +91956,11 @@ var serializeObject = function serializeObject(obj) {
 };
 
 var sendMessage = function sendMessage(msg) {
-  if (true) {
-    var json = serializeObject(msg); // Send message using WebSocket
-
-    if (window.WebSocket) {
-      ensureConnection();
-
-      if (socket.readyState === WebSocket.OPEN) {
-        socket.send(json);
-      } else {
-        // Keep only 100 latest messages in the queue
-        if (queue.length > 100) {
-          queue.shift();
-        }
-
-        queue.push(json);
-      }
-    } // Send message using plain HTTP request.
-    else {
-      var DEV_SERVER_IP =  false || '127.0.0.1';
-      var req = new XMLHttpRequest();
-      req.open('POST', "http://" + DEV_SERVER_IP + ":3001", true);
-      req.timeout = 250;
-      req.send(json);
-    }
-  }
+  if (false) { var req, DEV_SERVER_IP, json; }
 };
 
 var sendLogEntry = function sendLogEntry(level, ns) {
-  if (true) {
-    try {
-      for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-        args[_key - 2] = arguments[_key];
-      }
-
-      sendMessage({
-        type: 'log',
-        payload: {
-          level: level,
-          ns: ns || 'client',
-          args: args
-        }
-      });
-    } catch (err) {}
-  }
+  if (false) { var _len, args, _key; }
 };
 
 var setupHotReloading = function setupHotReloading() {

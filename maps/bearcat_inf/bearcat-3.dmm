@@ -94,7 +94,7 @@
 	pixel_y = 0
 	},
 /obj/structure/table/woodentable/walnut,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/misc/rag,
 /obj/random/drinkbottle,
 /turf/simulated/floor/wood/walnut,
 /area/ship/scrap)

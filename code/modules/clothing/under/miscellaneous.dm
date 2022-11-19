@@ -770,6 +770,27 @@
 	icon_state = "taj_new_fatigues"
 	item_state = "taj_new_fatigues"
 
+
+/obj/item/clothing/under/medic/paramedic
+    name = "first responder uniform"
+    desc = "Light and bulky paramedic jumpsuit with bright markings. It's too big to fit anyone, but unathi."
+    species_restricted  = list(SPECIES_UNATHI)
+    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
+    icon_state = "unathi_paramedic"
+    item_state = "unathi_paramedic"
+    worn_state = "unathi_paramedic"
+    //rolled_sleeves = 0
+
+/obj/item/clothing/under/unathi_work
+    name = "sturdy uniform"
+    desc = "A large uniform made of sturdy canvas with leather harness for industrial environment. It's too big to fit anyone, but unathi."
+    species_restricted  = list(SPECIES_UNATHI)
+    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
+    icon_state = "unathi_work"
+    item_state = "unathi_work"
+    worn_state = "unathi_work"
+    //rolled_sleeves = 0
+
 /obj/item/clothing/under/inf
 	name = "antiquated skirt"
 	desc = "Some really old fashioned skirt. Presumably a piece of Avalonian craftsmanship."
@@ -1028,6 +1049,33 @@
 	name = "dark victorian suit"
 	icon_state = "victorian_twilight"
 	item_state = "victorian_twilight"
+
+/obj/item/clothing/under/inf/aristo
+	name = "aristo uniform"
+	desc = "Delicately sewn, this suit is magnificently fine and very expensive. Not for just any bourgeois."
+	icon_state = "papaleroy_aristo_suit"
+	item_state = "papaleroy_aristo_suit"
+
+/obj/item/clothing/under/inf/milsim
+	name = "milsim uniform"
+	desc = "Set of milsim navy fatigues which is very common in many of surplus stores."
+	icon_state = "papaleroy_milsim"
+	item_state = "papaleroy_milsim"
+
+/obj/item/clothing/under/inf/rubywhite
+	name = "rubywhite uniform"
+	desc = "Scarlet shirt accompained with white slacks held with suspenders."
+	icon_state = "papaleroy_rubywhite"
+	item_state = "papaleroy_rubywhite"
+	worn_state = "papaleroy_rubywhite"
+	gender_icons = 1
+	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
+
+/obj/item/clothing/under/inf/faln_trousers
+	name = "faln trousers"
+	desc = "These athletic pants are truly a masterpiece as they perfectly fit for any type of figure."
+	icon_state = "papaleroy_faln_trousers"
+	item_state = "papaleroy_faln_trousers"
 
 //Ретро-униформы для сотрудников отделов
 

@@ -699,3 +699,13 @@ var/list/alphabet = list("a","b","c","d","e","f","g","h","i","j","k","l","m","n"
 			var/regex/matcher = entry[1]
 			message = replacetext_char(message, matcher, entry[2])
 	return message
+
+// Rips out paper HTML but tries to keep it semi-readable.
+/proc/paper_html_to_plaintext(paper_text)
+	paper_text = replacetext(paper_text, "<hr>", "-----")
+	paper_text = replacetext(paper_text, "<li>", "- ") // This makes ordered lists turn into unordered but fixing that is too much effort.
+	paper_text = replacetext(paper_text, "</li>", "\n")
+	paper_text = replacetext(paper_text, "<p>", "\n")
+	paper_text = replacetext(paper_text, "<br>", "\n")
+	paper_text = strip_html_properly(paper_text) // Get rid of everything else entirely.
+	return paper_text

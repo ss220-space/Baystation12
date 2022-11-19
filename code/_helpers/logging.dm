@@ -151,7 +151,7 @@ GLOBAL_VAR_INIT(log_end, (ascii2text(13))) // CRLF for all logs
 	log_debug(text)
 
 /proc/log_asset(text)
-	rustg_log_write(GLOB.world_game_log, "ASSET: [text][GLOB.log_end]")
+	rustg_log_write(GLOB.world_game_log, "ASSETS: [text][GLOB.log_end]")
 
 /proc/log_tgui(user_or_client, text)
 	if(!text)
