@@ -57,6 +57,7 @@
 	spawn_cost = 0.5
 	player_cost = 7 // Нынешнее значение основано на количестве игроков в авейке ~bear1ake
 	spawn_weight = 50 // чтобы включить спавн, установить >1 (было 7)
+	template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/snz)
 
 
