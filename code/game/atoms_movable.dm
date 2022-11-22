@@ -37,9 +37,6 @@
 	if(LAZYLEN(movement_handlers) && !ispath(movement_handlers[1]))
 		QDEL_NULL_LIST(movement_handlers)
 
-	if (z_flags & ZM_MIMIC_BELOW)
-		cleanup_zmimic()
-
 	if (bound_overlay)
 		QDEL_NULL(bound_overlay)
 
