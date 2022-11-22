@@ -1324,6 +1324,11 @@
 	dir = 8;
 	thrust_limit = 0.1
 	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8";
+	dir = 0
+	},
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/upper/starboard)
 "db" = (
@@ -1504,6 +1509,11 @@
 "dv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/wood/walnut,
 /area/ship/farfleet/crew/fleet)
 "dw" = (
@@ -4480,6 +4490,7 @@
 /obj/item/paper/turrets{
 	language = "Pan-Slavic"
 	},
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled,
 /area/ship/farfleet/command/snz_exterior_dock)
 "we" = (
@@ -5260,6 +5271,11 @@
 	dir = 8;
 	thrust_limit = 0.1
 	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8";
+	dir = 0
+	},
 /turf/simulated/floor,
 /area/ship/farfleet/maintenance/upper/port)
 "Dr" = (
@@ -5709,6 +5725,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/wood/walnut,
 /area/ship/farfleet/crew/fleet)
 "HH" = (
@@ -6128,6 +6149,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/wood/walnut,
 /area/ship/farfleet/crew/fleet)
 "Lr" = (
@@ -6438,14 +6464,6 @@
 /obj/effect/paint/blue,
 /turf/simulated/wall/r_wall,
 /area/ship/farfleet/maintenance/upper/anomaly)
-"Pz" = (
-/obj/machinery/power/engine/ion{
-	icon_state = "nozzle";
-	dir = 8;
-	thrust_limit = 0.1s
-	},
-/turf/simulated/floor,
-/area/ship/farfleet/maintenance/upper/port)
 "PF" = (
 /obj/item/missile_equipment/thruster,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -18801,7 +18819,7 @@ Mw
 Mw
 Do
 Dx
-Pz
+Do
 Mw
 Mw
 aa

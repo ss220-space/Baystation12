@@ -63,7 +63,7 @@
 /obj/machinery/computer/modular/get_screen_overlay()
 	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
 	if(os)
-		return os.get_screen_overlay()
+		return os.get_screen_overlay(density)
 
 /obj/machinery/computer/modular/get_keyboard_overlay()
 	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
