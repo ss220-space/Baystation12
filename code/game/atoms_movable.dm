@@ -37,6 +37,9 @@
 	if(LAZYLEN(movement_handlers) && !ispath(movement_handlers[1]))
 		QDEL_NULL_LIST(movement_handlers)
 
+	if (z_flags & ZM_MIMIC_BELOW)
+		cleanup_zmimic()
+
 	if (bound_overlay)
 		QDEL_NULL(bound_overlay)
 
@@ -56,7 +59,7 @@
 	..()
 
 /atom/movable/proc/forceMove(atom/destination)
-	if((gc_destroyed && gc_destroyed != GC_CURRENTLY_BEING_QDELETED) && !isnull(destination))
+	if(QDELETED(src) && !QDESTROYING(src) && !isnull(destination))
 		CRASH("Attempted to forceMove a QDELETED [src] out of nullspace!!!")
 	if(loc == destination)
 		return 0
