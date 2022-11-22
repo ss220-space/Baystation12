@@ -4802,8 +4802,7 @@
 "mB" = (
 /obj/machinery/power/engine/ion{
 	icon_state = "nozzle";
-	dir = 8;
-	thrust_limit = s
+	dir = 8
 	},
 /obj/structure/cable{
 	d2 = 8;
