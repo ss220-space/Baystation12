@@ -467,11 +467,6 @@ client/verb/character_setup()
 	if(istype(M))
 		M.OnMouseDrag(src_object, over_object, src_location, over_location, src_control, over_control, params)
 
-	var/datum/click_handler/build_mode/B = M.GetClickHandler()
-	if (istype(B))
-		if(B.current_build_mode && src_control == "mapwindow.map" && src_control == over_control)
-			build_drag(src,B.current_build_mode,src_object,over_object,src_location,over_location,src_control,over_control,params)
-
 /client/MouseUp(object, location, control, params)
 	. = ..()
 	var/mob/living/M = mob
