@@ -1,5 +1,5 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
-	STOP_PROCESSING(SSmobs, src)
+	STOP_PROCESSING_MOB(src)
 	GLOB.dead_mob_list_ -= src
 	GLOB.living_mob_list_ -= src
 	GLOB.player_list -= src
@@ -53,7 +53,7 @@
 	if(ispath(move_intent))
 		move_intent = decls_repository.get_decl(move_intent)
 	set_focus(src)
-	START_PROCESSING(SSmobs, src)
+	START_PROCESSING_MOB(src)
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	if(!client)	return
