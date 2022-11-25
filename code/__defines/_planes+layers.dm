@@ -193,8 +193,13 @@ What is the naming convention for planes or layers?
 //This is difference between planes used for atoms and effects
 #define PLANE_DIFFERENCE              3
 
-/atom
-	plane = DEFAULT_PLANE
+/atom/plane = DEFAULT_PLANE
+
+#define DEFAULT_APPEARANCE_FLAGS (PIXEL_SCALE)
+
+/atom/appearance_flags = DEFAULT_APPEARANCE_FLAGS
+/image/appearance_flags = DEFAULT_APPEARANCE_FLAGS
+/mutable_appearance/appearance_flags = DEFAULT_APPEARANCE_FLAGS //Inherits /image but re docs, subject to change
 
 /image/proc/plating_decal_layerise()
 	plane = DEFAULT_PLANE
