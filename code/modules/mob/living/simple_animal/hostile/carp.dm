@@ -17,7 +17,7 @@
 	pry_time = 10 SECONDS
 	pry_desc = "biting"
 
-	ai_holder_type = /datum/ai_holder/simple_animal/melee/carp
+	ai_holder = /datum/ai_holder/simple_animal/melee/carp
 
 	//Space carp aren't affected by atmos.
 	min_gas = null

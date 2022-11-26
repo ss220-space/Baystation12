@@ -22,7 +22,7 @@
 
 	var/datum/reagents/udder = null
 
-	ai_holder_type = /datum/ai_holder/simple_animal/retaliate/goat
+	ai_holder = /datum/ai_holder/simple_animal/retaliate/goat
 	say_list_type = /datum/say_list/goat
 
 /datum/ai_holder/simple_animal/retaliate/goat/react_to_attack(atom/movable/attacker)
@@ -43,15 +43,16 @@
 	. = ..()
 	if(.)
 		//chance to go crazy and start wacking stuff
-		if(!length(ai_holder?.attackers) && prob(1))
-			var/list/nearby_stuff = hearers(src, ai_holder.vision_range)
-			if (length(nearby_stuff))
-				ai_holder.react_to_attack(pick(nearby_stuff))
+		if (ai_holder)
+			if(!length(ai_holder.attackers) && prob(1))
+				var/list/nearby_stuff = hearers(src, ai_holder.vision_range)
+				if (length(nearby_stuff))
+					ai_holder.react_to_attack(pick(nearby_stuff))
 
-		if(length(ai_holder.attackers) && prob(10))
-			ai_holder.attackers = list()
-			ai_holder.lose_target()
-			src.visible_message("<span class='notice'>\The [src] calms down.</span>")
+			if(length(ai_holder.attackers) && prob(10))
+				ai_holder.attackers = list()
+				ai_holder.lose_target()
+				src.visible_message("<span class='notice'>\The [src] calms down.</span>")
 
 		if(stat == CONSCIOUS)
 			if(udder && prob(5))
@@ -112,7 +113,7 @@
 
 	var/datum/reagents/udder = null
 
-	ai_holder_type = /datum/ai_holder/simple_animal/passive/cow
+	ai_holder = /datum/ai_holder/simple_animal/passive/cow
 	say_list_type = /datum/say_list/cow
 
 /mob/living/simple_animal/friendly/cow/New()
@@ -179,7 +180,7 @@
 
 	var/amount_grown = 0
 
-	ai_holder_type = /datum/ai_holder/simple_animal/passive/chick
+	ai_holder = /datum/ai_holder/simple_animal/passive/chick
 	say_list_type = /datum/say_list/chick
 
 /mob/living/simple_animal/friendly/chick/New()
@@ -222,7 +223,7 @@ var/global/chicken_count = 0
 	var/eggsleft = 0
 	var/body_color
 
-	ai_holder_type = /datum/ai_holder/simple_animal/passive/chicken
+	ai_holder = /datum/ai_holder/simple_animal/passive/chicken
 	say_list_type = /datum/say_list/chicken
 
 /mob/living/simple_animal/friendly/chicken/New()

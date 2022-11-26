@@ -10,7 +10,7 @@
 	var/retribution = 1 //whether or not they will attack us if we attack them like some kinda dick.
 	var/list/protected_mobs  = list() // who under our protection
 
-	ai_holder_type = /datum/ai_holder/simple_animal/melee/commanded
+	ai_holder = /datum/ai_holder/simple_animal/melee/commanded
 
 /datum/ai_holder/simple_animal/melee/commanded/can_attack(atom/movable/the_target, vision_required)
 	var/mob/living/simple_animal/hostile/commanded/H = holder
@@ -80,14 +80,14 @@
 				follow_target()
 			if(COMMANDED_STOP)
 				commanded_stop()
-				
+
 
 //TODO:use AI following behaviour
 /mob/living/simple_animal/hostile/commanded/proc/follow_target()
 	set_AI_busy(TRUE)
 	if(!target_mob)
 		return
-		
+
 	if(target_mob in ai_holder.list_targets())
 		walk_to(src,target_mob,1,move_speed)
 		ai_holder.destination = target_mob.loc
@@ -130,7 +130,7 @@
 						break
 				if("obey")
 					if(obey_command(speaker,text))
-						break				
+						break
 				else
 					misc_command(speaker,text) //for specific commands
 
@@ -228,9 +228,9 @@
 		return TRUE
 
 	var/list/targets = get_targets_by_name(text)
-	if(!targets.len) 
+	if(!targets.len)
 		return FALSE
-		
+
 	for(var/mob/living/carbon/guarded_mob in targets) // only carbon lives need protection
 		if(!(src in guarded_mob.guards))
 			guarded_mob.guards += src
@@ -251,7 +251,7 @@
 	if(speaker != master)
 		return FALSE
 	friends -= weakref(master)
-	
+
 	master = null // I`m alone, again, maybe my name is Hachiko?
 	ai_holder.leader = null
 	walk_to(src,0)
@@ -270,9 +270,9 @@
 	if(targets.len > 1 || !targets.len) //CONFUSED. WHO DO I OBEY?
 		return FALSE
 	master = targets[1]
-	friends |= weakref(master)	
+	friends |= weakref(master)
 	ai_holder.leader = master
-	return TRUE	
+	return TRUE
 
 /mob/living/simple_animal/hostile/commanded/proc/misc_command(var/mob/speaker,var/text)
 	return FALSE
@@ -306,5 +306,3 @@
 		set_AI_busy(FALSE)
 		stance = STANCE_ATTACK
 		allowed_targets |= M
-
-
