@@ -5,6 +5,8 @@
 	GLOB.player_list -= src
 	unset_machine()
 	QDEL_NULL(hud_used)
+	if(istype(ability_master))
+		QDEL_NULL(ability_master)
 	if(istype(skillset))
 		QDEL_NULL(skillset)
 	for(var/obj/item/grab/G in grabbed_by)
@@ -685,8 +687,10 @@
 
 	if(client.holder)
 		if(statpanel("MC"))
-			stat("CPU:","[world.cpu]")
+			stat("CPU:", "[Master.format_color_cpu()]")
+			stat("Map CPU:", "[Master.format_color_cpu_map()]")
 			stat("Instances:","[world.contents.len]")
+			stat("World Time:", "[world.time]")
 			stat(null)
 			if(Master)
 				Master.stat_entry()

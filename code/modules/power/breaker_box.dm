@@ -21,11 +21,6 @@
 	var/skill_req = SKILL_ELECTRICAL
 	var/skill_level_req = SKILL_ADEPT
 
-/obj/machinery/power/breakerbox/Destroy()
-	..()
-	for(var/datum/nano_module/rcon/R in world)
-		R.FindDevices()
-
 /obj/machinery/power/breakerbox/activated
 	icon_state = "bbox_on"
 
