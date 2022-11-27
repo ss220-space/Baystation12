@@ -22,11 +22,11 @@
 		"Mule" = list("nav_merchant_out"), //away_inf/liberia/liberia.dmm shuttle,
 		"Desperado" = list("nav_merc_dock"), //antag_spawn/mercenary/mercenary_inf.dmm shuttle,
 		"Reaper Gunboat" = list("nav_reaper_dock"), //away_inf/sentinel/sentinel.dmm shuttle,
+		"SNZ Speedboat" = list("nav_snz_dock"), //away_inf/farfleet/farfleet.dmm shuttle,
 		"Sol Patrol Shuttle" = list("nav_deck3_patrol"), //away_inf/patrol/patrol.dmm shuttle,
 		"Skrellian Shuttle" = list("nav_deck3_skrellshuttle"), //away_inf/skrellscoutship.dm shuttle,
 		"Skrellian Scout" = list("nav_deck1_skrellscout"), //away_inf/skrellscoutship.dm shuttle,
 		"SRV Venerable Catfish" = list("nav_deck3_catfish"), //away/verne shuttle,
-		"SNZ-250" = list("nav_merc_dock"), //antag_spawn/farfleet/farfleet.dmm shuttle,
 	)
 
 	initial_generic_waypoints = list(

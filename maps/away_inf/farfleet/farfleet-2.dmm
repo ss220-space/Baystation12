@@ -43,7 +43,7 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "af" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -54,7 +54,7 @@
 	},
 /obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "ag" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -75,7 +75,7 @@
 	dir = 4
 	},
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "am" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/structure/cable{
@@ -90,7 +90,7 @@
 	},
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "an" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/cable{
@@ -105,7 +105,7 @@
 	req_access = list("ACCESS_ICCGN")
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "ap" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -129,7 +129,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "aq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable{
@@ -138,7 +138,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "ar" = (
 /obj/machinery/door/window{
 	dir = 4
@@ -156,7 +156,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "as" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -168,7 +168,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "at" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
@@ -212,7 +212,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "ay" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 5
@@ -275,7 +275,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "aH" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/blast/regular/open{
@@ -287,7 +287,7 @@
 /obj/effect/paint/dark_gunmetal,
 /obj/structure/cable,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "aK" = (
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/airless,
@@ -344,7 +344,7 @@
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "aR" = (
 /obj/structure/handrail{
 	dir = 1;
@@ -361,20 +361,20 @@
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "aS" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "aT" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "aV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/item/bedsheet/medical,
@@ -399,7 +399,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "aY" = (
 /obj/structure/table/woodentable/walnut,
 /obj/machinery/photocopier/faxmachine{
@@ -452,7 +452,7 @@
 	d2 = 2
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "bd" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -499,7 +499,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/map_template/snz)
+/area/ship/snz)
 "bi" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -515,7 +515,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "bj" = (
 /obj/structure/coatrack,
 /turf/simulated/floor/wood/walnut,
@@ -530,7 +530,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "bm" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -539,7 +539,7 @@
 	},
 /obj/machinery/computer/shuttle_control/explore/away_farfleet/snz,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "bn" = (
 /obj/structure/fuel_port{
 	pixel_x = -32
@@ -550,7 +550,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "bo" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/paper_bin,
@@ -585,13 +585,13 @@
 	},
 /obj/machinery/access_button/airlock_exterior{
 	frequency = 1380;
-	master_tag = "merc_shuttle";
+	master_tag = "snz_shuttle";
 	pixel_x = 37;
 	pixel_y = -32;
 	req_access = list("ACCESS_ICCGN")
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "bs" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/structure/cable{
@@ -614,7 +614,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "bt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
@@ -626,7 +626,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "bu" = (
 /obj/structure/catwalk,
 /obj/machinery/porta_turret{
@@ -636,7 +636,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "bv" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -674,7 +674,7 @@
 	},
 /obj/structure/cable,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "by" = (
 /obj/machinery/power/terminal{
 	dir = 1;
@@ -687,7 +687,7 @@
 /obj/effect/paint/black,
 /obj/effect/paint/red,
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "bz" = (
 /obj/machinery/computer/ship/navigation/telescreen,
 /obj/effect/paint/dark_gunmetal,
@@ -708,14 +708,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "bD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 6
 	},
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/ocp_wall,
-/area/map_template/snz)
+/area/ship/snz)
 "bG" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
@@ -728,7 +728,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "bH" = (
 /obj/machinery/mech_recharger,
 /mob/living/exosuit/premade/powerloader/old,
@@ -773,7 +773,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "bL" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -797,7 +797,7 @@
 "bN" = (
 /obj/machinery/optable,
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "bO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 6
@@ -806,7 +806,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "bP" = (
 /obj/structure/bed/chair/office{
 	dir = 8
@@ -846,7 +846,7 @@
 /obj/effect/paint/dark_gunmetal,
 /obj/structure/cable,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "bV" = (
 /obj/machinery/atmospherics/binary/pump/high_power/on{
 	target_pressure = 15000
@@ -858,7 +858,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "bW" = (
 /obj/item/gun/projectile/pistol/magnum_pistol,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -913,7 +913,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "cb" = (
 /obj/structure/closet/secure_closet/farfleet/fleet_cpt,
 /turf/simulated/floor/wood/walnut,
@@ -931,7 +931,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "ce" = (
 /obj/item/missile_equipment/thruster/point,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -950,7 +950,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "cg" = (
 /obj/structure/catwalk,
 /obj/machinery/porta_turret{
@@ -964,7 +964,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "ch" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 10
@@ -989,7 +989,7 @@
 /obj/item/storage/box/freezer,
 /obj/machinery/body_scanconsole,
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "cm" = (
 /obj/machinery/bodyscanner{
 	dir = 4;
@@ -1002,12 +1002,12 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "cn" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/structure/sign/iccg,
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "co" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 9
@@ -1029,7 +1029,7 @@
 /obj/effect/paint/dark_gunmetal,
 /obj/structure/cable,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "cu" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/structure/cable{
@@ -1048,7 +1048,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "cx" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
@@ -1080,7 +1080,7 @@
 	},
 /obj/machinery/shipsensors,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "cA" = (
 /obj/machinery/pointdefense{
 	initial_id_tag = "farfleet_pd"
@@ -1109,7 +1109,7 @@
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "cD" = (
 /obj/machinery/atmospherics/unary/cryo_cell,
 /obj/machinery/light{
@@ -1120,7 +1120,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "cE" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1144,7 +1144,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "cI" = (
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 4
@@ -1176,7 +1176,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "cK" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/danger{
@@ -1209,7 +1209,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "cM" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -1227,7 +1227,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "cP" = (
 /obj/machinery/shieldwallgen,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -1261,7 +1261,7 @@
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "cR" = (
 /obj/effect/wallframe_spawn/no_grille,
 /obj/effect/paint/dark_gunmetal,
@@ -1281,7 +1281,7 @@
 	start_pressure = 15000
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "cV" = (
 /obj/structure/bed/chair/shuttle/blue{
 	dir = 4;
@@ -1293,7 +1293,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "cW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -1346,7 +1346,7 @@
 	uncreated_component_parts = list(/obj/item/stock_parts/smes_coil/super_io=1,/obj/item/stock_parts/smes_coil/super_capacity=1)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dc" = (
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/r_wall,
@@ -1364,7 +1364,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "df" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 6
@@ -1380,7 +1380,7 @@
 	req_access = list("ACCESS_ICCGN")
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "di" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 6
@@ -1397,8 +1397,12 @@
 /obj/effect/overmap/visitable/ship/landable/snz,
 /obj/effect/shuttle_landmark/snz/start,
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/airlock_sensor/airlock_interior{
+	pixel_y = -24;
+	id_tag = "snz_shuttle_interior_sensor"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "dk" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
@@ -1411,7 +1415,7 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dl" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 4;
@@ -1422,7 +1426,7 @@
 	icon_state = "bulb_map"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dm" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -1430,7 +1434,7 @@
 	icon_state = "intact"
 	},
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "dn" = (
 /obj/structure/ladder,
 /obj/structure/catwalk,
@@ -1464,7 +1468,7 @@
 /obj/item/device/spaceflare,
 /obj/item/device/spaceflare,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dr" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -1475,7 +1479,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "ds" = (
 /obj/structure/railing/mapped{
 	dir = 4;
@@ -1520,7 +1524,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "dx" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
@@ -1533,7 +1537,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dz" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/machinery/atmospherics/binary/pump/high_power{
@@ -1541,7 +1545,7 @@
 	name = "External to Fuel Storage"
 	},
 /turf/simulated/wall/ocp_wall,
-/area/map_template/snz)
+/area/ship/snz)
 "dA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -1558,7 +1562,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dB" = (
 /obj/effect/floor_decal/corner/darkblue{
 	dir = 8
@@ -1604,7 +1608,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "dF" = (
 /obj/effect/floor_decal/industrial/danger/corner,
 /obj/machinery/light{
@@ -1635,10 +1639,16 @@
 	id_tag = "snz_shuttle";
 	pixel_x = 0;
 	pixel_y = -25;
-	req_access = list("ACCESS_ICCGN")
+	req_access = list("ACCESS_ICCGN");
+	tag_exterior_door = "snz_shuttle_outer";
+	tag_interior_door = "snz_shuttle_inner";
+	tag_exterior_sensor = "snz_shuttle_exterior_sensor";
+	tag_chamber_sensor = "snz_shuttle_sensor";
+	tag_airpump = "snz_shuttle_pump";
+	tag_interior_sensor = "snz_shuttle_interior_sensor"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dI" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1655,14 +1665,14 @@
 	req_access = list("ACCESS_ICCGN")
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "dL" = (
 /obj/structure/bed/chair/shuttle/blue{
 	dir = 1;
 	icon_state = "shuttle_chair_preview"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "dM" = (
 /obj/machinery/atmospherics/unary/tank/air{
 	start_pressure = 8000
@@ -1675,7 +1685,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dO" = (
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/atmospherics/portables_connector{
@@ -1684,7 +1694,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dQ" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/blast/regular/open{
@@ -1703,7 +1713,7 @@
 	icon_state = "map"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "dR" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1747,7 +1757,7 @@
 	icon_state = "intact"
 	},
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "dX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
@@ -1761,12 +1771,12 @@
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "dY" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "dZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -1788,7 +1798,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "ea" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/structure/cable{
@@ -1808,7 +1818,7 @@
 	},
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "eb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable{
@@ -1820,7 +1830,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/maintenance/upper/port)
 "ed" = (
-/obj/machinery/shield_diffuser,
+/obj/machinery/shield_diffuser{
+	id_tag = "snz_shuttle_outer"
+	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
 	icon_state = "map"
@@ -1837,12 +1849,9 @@
 	icon_state = "1-2";
 	pixel_y = 0
 	},
-/obj/machinery/door/airlock/external/glass/bolted/cycling{
-	id_tag = "snz_shuttle_inner";
-	name = "First Deck Port Airlock"
-	},
+/obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "ee" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/blast/regular/open{
@@ -1863,7 +1872,7 @@
 	pixel_y = 0
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "ef" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -1883,7 +1892,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "eg" = (
 /obj/effect/floor_decal/corner/darkblue/half{
 	dir = 1
@@ -1908,7 +1917,7 @@
 	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "ej" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1924,7 +1933,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "el" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1939,7 +1948,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/pipedispenser,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "em" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
@@ -1955,7 +1964,7 @@
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "en" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1982,7 +1991,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "ep" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -2001,7 +2010,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "eq" = (
 /obj/effect/floor_decal/corner/darkblue/half,
 /obj/machinery/light,
@@ -2016,7 +2025,7 @@
 	},
 /obj/effect/paint/black,
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "ev" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -2040,19 +2049,19 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "ey" = (
 /obj/effect/paint/black,
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "eC" = (
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/ocp_wall,
-/area/map_template/snz)
+/area/ship/snz)
 "eD" = (
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "eE" = (
 /obj/machinery/computer/air_control{
 	input_tag = "fuel_in";
@@ -2066,7 +2075,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "eF" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
@@ -2103,7 +2112,7 @@
 /obj/effect/paint/dark_gunmetal,
 /obj/effect/wallframe_spawn/reinforced_phoron/osmium,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "eJ" = (
 /obj/structure/cable{
 	d1 = 32;
@@ -2141,7 +2150,7 @@
 	req_access = list("ACCESS_ICCGN")
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "eL" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 4
@@ -2154,7 +2163,7 @@
 /obj/effect/paint/dark_gunmetal,
 /obj/effect/wallframe_spawn/reinforced_phoron/osmium,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "eM" = (
 /turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
@@ -2185,13 +2194,13 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central6,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "eP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "eQ" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -2207,7 +2216,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "eR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -2232,7 +2241,7 @@
 	},
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/floor/reinforced,
-/area/map_template/snz)
+/area/ship/snz)
 "eU" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -2274,7 +2283,7 @@
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "eY" = (
 /obj/machinery/atmospherics/unary/freezer{
 	dir = 4
@@ -2285,7 +2294,7 @@
 	icon_state = "tube_map"
 	},
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "eZ" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -2300,14 +2309,14 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "fb" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4;
 	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "fg" = (
 /obj/structure/closet/emcloset/full,
 /turf/simulated/floor/reinforced,
@@ -2330,7 +2339,7 @@
 	initial_id_tag = "merc_pd"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "fj" = (
 /obj/effect/floor_decal/industrial/danger/corner,
 /obj/structure/cable{
@@ -2366,7 +2375,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "fn" = (
 /obj/item/missile_equipment/thruster/hunter,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -2380,7 +2389,7 @@
 	req_access = list("ACCESS_ICCGN"))
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "fq" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -2389,12 +2398,11 @@
 	pixel_x = 0
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
-/obj/machinery/door/airlock/external/glass/bolted/cycling{
-	id_tag = "snz_shuttle_inner";
-	name = "First Deck Port Airlock"
+/obj/machinery/door/airlock/external{
+	id_tag = "snz_shuttle_inner"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "fr" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -2413,7 +2421,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "fs" = (
 /turf/simulated/open,
 /area/ship/farfleet/crew/hallway/upper)
@@ -2508,7 +2516,7 @@
 	start_pressure = 15000
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "fJ" = (
 /turf/unsimulated/mask,
 /area/turbolift/farfleet_second)
@@ -2527,10 +2535,10 @@
 	req_access = list("ACCESS_ICCGN")
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "fQ" = (
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "fS" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/effect/paint/dark_gunmetal,
@@ -2544,7 +2552,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "fT" = (
 /obj/structure/bed,
 /obj/effect/floor_decal/borderfloorblack{
@@ -2568,7 +2576,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "fV" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -2583,7 +2591,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "fY" = (
 /obj/effect/floor_decal/industrial/warning/half{
 	icon_state = "warninghalf"
@@ -2611,7 +2619,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "ga" = (
 /obj/structure/sign/double/iccgflag/left{
 	pixel_y = 31
@@ -2630,7 +2638,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "ge" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 6
@@ -2651,7 +2659,7 @@
 /obj/machinery/meter,
 /obj/effect/wallframe_spawn/reinforced_phoron/osmium,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "gj" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 10
@@ -2689,7 +2697,7 @@
 	},
 /obj/machinery/light/spot,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "gn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -2702,7 +2710,7 @@
 /obj/machinery/atmospherics/valve/open,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "gp" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9;
@@ -2714,7 +2722,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/map_template/snz)
+/area/ship/snz)
 "gq" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -2738,7 +2746,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "gt" = (
 /obj/machinery/light{
 	dir = 8;
@@ -2762,7 +2770,7 @@
 	initial_id_tag = "merc_pd"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "gy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2775,7 +2783,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "gz" = (
 /obj/structure/closet/wardrobe/orange,
 /obj/effect/floor_decal/borderfloorblack{
@@ -2812,7 +2820,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "gC" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/binary/pump/high_power/on{
@@ -2820,11 +2828,11 @@
 	target_pressure = 15000
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "gD" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "gE" = (
 /obj/item/missile_equipment/autoarm,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -2847,7 +2855,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "gH" = (
 /obj/structure/decor/random_radio{
 	name = "Radio Substation";
@@ -2874,7 +2882,7 @@
 	icon_state = "bulb1"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "gM" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
@@ -2930,7 +2938,7 @@
 "gY" = (
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "gZ" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/device/flashlight/lamp,
@@ -2962,7 +2970,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "hd" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -2980,16 +2988,16 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "hh" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/floodlight,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/map_template/snz)
+/area/ship/snz)
 "hj" = (
 /obj/effect/paint/hull,
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "hk" = (
 /obj/structure/railing/mapped,
 /obj/structure/railing/mapped{
@@ -3031,7 +3039,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/map_template/snz)
+/area/ship/snz)
 "hn" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -3039,7 +3047,7 @@
 	icon_state = "intact"
 	},
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "ho" = (
 /obj/structure/filingcabinet,
 /obj/effect/floor_decal/borderfloorblack{
@@ -3143,7 +3151,7 @@
 	pixel_x = 0
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "hN" = (
 /obj/machinery/button/blast_door{
 	pixel_y = 24;
@@ -3325,7 +3333,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "kj" = (
 /obj/structure/railing/mapped{
 	dir = 4;
@@ -4934,7 +4942,7 @@
 /obj/item/defibrillator/loaded,
 /obj/item/reagent_containers/spray/sterilizine,
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "Am" = (
 /obj/structure/railing/mapped{
 	dir = 8;
@@ -5099,7 +5107,7 @@
 "BV" = (
 /obj/effect/paint/blue,
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "Cf" = (
 /obj/item/missile_equipment/autoarm,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -5378,7 +5386,7 @@
 	initial_id_tag = "snz_pd"
 	},
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "EG" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/reinforced,
@@ -5983,7 +5991,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/plating,
-/area/map_template/snz)
+/area/ship/snz)
 "Kd" = (
 /obj/machinery/pointdefense{
 	initial_id_tag = "farfleet_pd"
@@ -6520,7 +6528,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "Qq" = (
 /obj/effect/paint/dark_gunmetal,
 /obj/structure/cable{
@@ -7070,7 +7078,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/wall/r_titanium,
-/area/map_template/snz)
+/area/ship/snz)
 "Vf" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -7241,7 +7249,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/snz)
+/area/ship/snz)
 "XA" = (
 /obj/structure/cable{
 	d1 = 1;

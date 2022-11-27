@@ -3659,13 +3659,13 @@
 "gY" = (
 /obj/machinery/button/blast_door{
 	desc = "A remote control-switch for the torpedos launcher door.";
-	id_tag = "patmis_space";
-	name = "OFD Blast Doors Control";
+	id_tag = "patmis_shield";
+	name = "Missile Tube Blast Doors Control";
 	pixel_y = 24;
 	req_access = list("ACCESS_CAVALRY")
 	},
 /obj/machinery/conveyor_switch{
-	id = "bsap"
+	id = "patm"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -3688,6 +3688,9 @@
 "ha" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/ofd)
@@ -3985,30 +3988,24 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "bsa"
+	id = "patm"
 	},
-/obj/structure/plasticflaps/airtight,
 /obj/machinery/door/blast/regular/open{
 	density = 0;
 	dir = 4;
-	id_tag = "patmis_space";
+	id_tag = "patmis_shield";
 	name = "Unknown Compartament Shell Loader";
 	opacity = 0
 	},
+/obj/structure/plasticflaps/airtight,
 /turf/simulated/floor/reinforced,
 /area/ship/patrol/command/ofd)
 "hO" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "bsa"
+	id = "patm"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/ofd)
 "hP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8437,7 +8434,7 @@
 "rt" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "bsa"
+	id = "patm"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/patrol/command/ofd)
@@ -8454,12 +8451,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/patrol/command/bridge)
 "rL" = (
-/obj/machinery/disperser/front{
-	dir = 8
-	},
 /obj/machinery/door/blast/regular{
 	dir = 4;
-	id_tag = "patmis_space";
+	id_tag = "patmis_shield";
 	name = "OFD Compartament Hatch"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -8603,7 +8597,7 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/command/ofd)
 "wk" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
@@ -8655,7 +8649,7 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/storage/bible,
 /obj/machinery/button/mass_driver{
-	id_tag = "patmis_space";
+	id_tag = "patmissile";
 	pixel_x = -32;
 	req_access = list("ACCESS_CAVALRY")
 	},
@@ -8671,8 +8665,8 @@
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/command/lasers)
 "yS" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/obj/structure/missile/impact,
+/obj/structure/missile/antispace,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/command/ofd)
 "zp" = (
@@ -8736,9 +8730,6 @@
 /area/ship/patrol/maintenance/lower)
 "Bz" = (
 /obj/effect/floor_decal/industrial/warning/cee,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/patrol/command/ofd)
-"BI" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/ofd)
 "BQ" = (
@@ -9442,8 +9433,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/ofd)
 "Xg" = (
-/obj/effect/floor_decal/industrial/outline/orange,
 /obj/machinery/light/spot,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/command/ofd)
 "Xj" = (
@@ -14640,7 +14631,7 @@ GD
 hb
 hQ
 iE
-BI
+Az
 yB
 rk
 wM
