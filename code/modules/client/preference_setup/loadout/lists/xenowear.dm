@@ -185,6 +185,13 @@
 	sort_category = "Xenowear"
 	cost = 1
 
+/datum/gear/eyes/sciencegoggles/tajblind
+	display_name = "(Tajara) veil, science "
+	path = /obj/item/clothing/glasses/hud/science/tajblind
+	whitelisted = list(SPECIES_TAJARA)
+	sort_category = "Xenowear"
+	cost = 1
+
 /datum/gear/eyes/security/tajblind
 	display_name = "(Tajara) veil, sleek"
 	path = /obj/item/clothing/glasses/sunglasses/sechud/tajblind
@@ -210,6 +217,13 @@
 	visors["visor type-F (Tajara)"] = /obj/item/clothing/glasses/tajvisor/f
 	visors["visor type-G (Tajara)"] = /obj/item/clothing/glasses/tajvisor/g
 	gear_tweaks += new/datum/gear_tweak/path(visors)
+
+/datum/gear/eyes/sciencegoggles/tajvisor
+	display_name = "(Tajara) visor, science "
+	path = /obj/item/clothing/glasses/hud/science/tajvisor
+	whitelisted = list(SPECIES_TAJARA)
+	sort_category = "Xenowear"
+	cost = 1
 
 /datum/gear/eyes/medical/tajvisor
 	display_name = "(Tajara) visor, medical"
