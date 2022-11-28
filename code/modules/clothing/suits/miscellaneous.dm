@@ -708,18 +708,7 @@
 	item_state = "killer_suit"
 */
 
-/obj/item/clothing/suit/storage/inf/army_overcoat
-	name = "army overcoat"
-	desc = "A greatcoat made of tarp-like material accompained with a vest with some armor padding."
-	icon_state = "army_overcoat"
-	item_state = "army_overcoat"
-	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_BALLISTIC_MINOR,
-		energy = ARMOR_BALLISTIC_MINOR,
-		bomb = ARMOR_BALLISTIC_MINOR,
-	)
+
 
 /obj/item/clothing/suit/storage/toggle/inf
 	name = "fiery jacket"
