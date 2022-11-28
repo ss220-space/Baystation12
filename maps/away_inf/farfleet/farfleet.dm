@@ -32,11 +32,11 @@
 		"nav_farfleet_2",
 		"nav_farfleet_3",
 		"nav_farfleet_4",
-		"nav_dock_snz"
+		"nav_hangar_snz"
 		)
 
 	initial_restricted_waypoints = list(
-	"SNZ-250" = list("nav_dock_snz")
+	"SNZ Speedboat" = list("nav_hangar_snz")
 		)
 
 
