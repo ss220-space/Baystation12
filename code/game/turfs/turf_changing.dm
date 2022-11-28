@@ -45,18 +45,11 @@
 
 	overlays.Cut()
 	underlays.Cut()
-	if(istype(src,/turf/simulated))
-		//Yeah, we're just going to rebuild the whole thing.
-		//Despite this being called a bunch during explosions,
-		//the zone will only really do heavy lifting once.
-		var/turf/simulated/S = src
-		if(S.zone) S.zone.rebuild()
-	if(isopenspace(src)) keep_air = TRUE //INF
 
 	// Run the Destroy() chain.
 	qdel(src)
 
-	var/old_opaque_counter = opaque_counter 
+	var/old_opaque_counter = opaque_counter
 	var/turf/simulated/W = new N(src)
 
 	if (permit_ao)
