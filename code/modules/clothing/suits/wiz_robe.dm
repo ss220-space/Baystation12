@@ -54,7 +54,7 @@
 	light_overlay = "helmet_light_boris"
 	max_pressure_protection = ENG_VOIDSUIT_MAX_PRESSURE
 	siemens_coefficient = 0.8
-	body_parts_covered = HEAD|FACE|EYES|BLOCKHAIR
+	body_parts_covered = HEAD|FACE|EYES|BLOCKHAIR|BLOCKHEADHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/head/wizard/cap
