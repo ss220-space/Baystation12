@@ -8,6 +8,7 @@
 	item_state = "rocket"
 	icon = 'icons/obj/guns/launchers.dmi'
 	w_class = ITEM_SIZE_HUGE
+	bulk = GUN_BULK_RIFLE
 	throw_speed = 2
 	throw_range = 10
 	caliber = CALIBER_ROCKET
@@ -86,6 +87,7 @@
 	icon_state = "rpg18"
 	item_state = "rpg"
 	ammo_type = /obj/item/ammo_casing/rocket/rpg
+
 
 /obj/item/gun/projectile/rocket/oneuse/rpg18/handle_post_fire(mob/user, atom/target)
 	..()

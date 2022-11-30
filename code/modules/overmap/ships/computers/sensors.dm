@@ -14,6 +14,7 @@
 	var/sound_id
 	var/list/last_scan
 
+
 // fancy sprite
 /obj/machinery/computer/ship/sensors/adv
 	icon_keyboard = null
@@ -52,6 +53,13 @@
 			sensors = S
 			break
 
+/obj/machinery/computer/ship/sensors/proc/get_scanner_range()
+	var/broadcast_sensor_range = 0
+
+	broadcast_sensor_range = round(sensors.sensor_range)
+	//message_admins("[sensors.sensor_range], [round(sensors.sensor_range)]") //какого хъуя
+	return broadcast_sensor_range
+
 /obj/machinery/computer/ship/sensors/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	if(!linked)
 		display_reconnect_dialog(user, "sensors")
@@ -78,7 +86,7 @@
 		else
 			data["status"] = "OK"
 		var/list/contacts = list()
-		for(var/obj/effect/overmap/O in view(5,linked))
+		for(var/obj/effect/overmap/O in view(sensors.sensor_range,linked))
 			var/datum/overmap_contact/record
 			if(linked == O)
 				continue
@@ -137,15 +145,19 @@
 			return TOPIC_REFRESH
 
 	if (href_list["scan"])
+		if(sensors.use_power == 0)
+			to_chat(user, SPAN_WARNING("[src] states, 'Sensors offline!'"))
+			return TOPIC_NOACTION
+
 		var/obj/effect/overmap/O = locate(href_list["scan"])
-		if(istype(O) && !QDELETED(O) && (O in view(7,linked)))
+		if(istype(O) && !QDELETED(O) && (O in view(sensors.sensor_range, linked)))
 			playsound(loc, "sound/effects/ping.ogg", 50, 1)
 			LAZYSET(last_scan, "data", O.get_scan_data(user))
 			LAZYSET(last_scan, "location", "[O.x],[O.y]")
 			LAZYSET(last_scan, "name", "[O]")
-			to_chat(user, SPAN_NOTICE("Successfully scanned [O]."))
+			to_chat(user, SPAN_NOTICE("[src] states, 'Successfully scanned [O].'"))
 		else
-			to_chat(user, SPAN_WARNING("Could not get a scan!"))
+			to_chat(user, SPAN_WARNING("[src] states, 'Could not get a scan, target not in range!'"))
 		return TOPIC_HANDLED
 
 	if (href_list["print"])
@@ -166,6 +178,7 @@
 	var/heat_reduction = 1.5 // mitigates this much heat per tick
 	var/heat = 0
 	var/range = 1
+	var/sensor_range = 0
 	idle_power_usage = 5000
 	use_power = 1 //INF. Turned off at roundstart
 
@@ -227,6 +240,7 @@
 	update_use_power(!use_power)
 	queue_icon_update()
 
+
 /obj/machinery/shipsensors/Process()
 	if(use_power) //can't run in non-vacuum
 		if(!in_vacuum())
@@ -251,6 +265,7 @@
 
 /obj/machinery/shipsensors/proc/set_range(nrange)
 	range = nrange
+	sensor_range = round(range,1)
 	change_power_consumption(1500 * (range**2), POWER_USE_IDLE) //Exponential increase, also affects speed of overheating
 
 /obj/machinery/shipsensors/emp_act(severity)

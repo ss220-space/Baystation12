@@ -5,18 +5,27 @@
 	icon_keyboard = "tech_key"
 	icon_screen = "mass_driver"
 	var/display_state = "status"
+	var/handled_sensors_range = 0
+
+
+/obj/machinery/computer/ship/missiles/proc/handle_sensors_range()
+	for(var/obj/machinery/computer/ship/sensors/sensor in linked.linked_computers)
+		handled_sensors_range = sensor.get_scanner_range()
+		//message_admins(handled_sensors_range)
+
 
 /obj/machinery/computer/ship/missiles/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	if(!linked)
 		display_reconnect_dialog(user, "sensors")
 		return
 
+	handle_sensors_range()
 	var/data[0]
 	var/list/contacts_ships = list()
 	var/list/contacts_planets = list()
 	var/list/contacts_missiles = list()
 	var/obj/target_temp
-	for(var/obj/effect/overmap/O in view(7,linked))
+	for(var/obj/effect/overmap/O in view(src.handled_sensors_range, linked))
 		if(linked == O)
 			continue
 		if(!O.scannable)
@@ -75,7 +84,7 @@
 
 	if (href_list["ship_lock"])
 		var/obj/effect/overmap/O = locate(href_list["ship_lock"])
-		if(istype(O) && !QDELETED(O) && (O in view(7,linked)))
+		if(istype(O) && !QDELETED(O) && (O in view(handled_sensors_range, linked)))
 			if(linked.set_target(TARGET_SHIP, O))
 				visible_message(SPAN_NOTICE("[src] states, 'TARGET LOCKED: [O.scanner_name]'"))
 				playsound(loc, "sound/machines/sensors/target_lock.ogg", 30, 1)
@@ -85,7 +94,7 @@
 
 	if (href_list["missile_lock"])
 		var/obj/effect/overmap/O = locate(href_list["missile_lock"])
-		if(istype(O) && !QDELETED(O) && (O in view(7,linked)))
+		if(istype(O) && !QDELETED(O) && (O in view(handled_sensors_range, linked)))
 			if(linked.set_target(TARGET_MISSILE, O))
 				visible_message(SPAN_NOTICE("[src] states, 'MISSILE LOCKED: [O.scanner_name]'"))
 				playsound(loc, "sound/machines/sensors/target_lock.ogg", 30, 1)
@@ -95,7 +104,7 @@
 
 	if (href_list["planet_lock"])
 		var/obj/effect/overmap/O = locate(href_list["planet_lock"])
-		if(istype(O) && !QDELETED(O) && (O in view(7,linked)))
+		if(istype(O) && !QDELETED(O) && (O in view(handled_sensors_range, linked)))
 			if(linked.set_target(TARGET_PLANET, O, linked.get_target(TARGET_PLANET)[2], linked.get_target(TARGET_PLANET)[3]))
 				visible_message(SPAN_NOTICE("[src] states, 'PLANET LOCKED: [O.scanner_name]'"))
 				playsound(loc, "sound/machines/sensors/target_lock.ogg", 30, 1)
@@ -136,10 +145,9 @@
 			linked.set_target(TARGET_POINT, null, linked.get_target(TARGET_POINT)[1], Clamp(input, 1, 40))
 		return TOPIC_REFRESH
 
-
 /obj/machinery/computer/ship/missiles/proc/announce()
 	if(prob(80))
-		for(var/obj/effect/overmap/O in view(7,linked))
+		for(var/obj/effect/overmap/O in view(10,linked))
 			if(linked == O)
 				continue
 			if(!O.scannable)
