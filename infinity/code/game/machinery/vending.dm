@@ -248,8 +248,6 @@
 					/obj/item/clothing/head/that = 2,
 					/obj/item/clothing/under/assistantformal = 2,
 					/obj/item/clothing/under/blackjumpskirt = 2,
-					/obj/item/clothing/under/civilian = 2,
-					/obj/item/clothing/under/civilian/black = 2,
 					/obj/item/clothing/under/gentlesuit = 2,
 					/obj/item/clothing/under/schoolgirl = 2,
 					/obj/item/clothing/under/scratch = 2,
