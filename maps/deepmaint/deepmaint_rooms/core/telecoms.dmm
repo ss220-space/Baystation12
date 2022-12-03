@@ -1,0 +1,873 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/area/map_template/deepmaint)
+"ab" = (
+/turf/simulated/wall/r_wall,
+/area/map_template/deepmaint)
+"ag" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/disk/tech_disk,
+/turf/simulated/floor/blackgrid,
+/area/map_template/deepmaint)
+"ah" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/greengrid,
+/area/map_template/deepmaint)
+"al" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"ap" = (
+/obj/machinery/light,
+/area/map_template/deepmaint)
+"aw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"aB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/retaliate/malf_drone,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"aD" = (
+/obj/machinery/door/airlock/vault/bolted,
+/area/map_template/deepmaint)
+"aE" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/constructable_frame/machine_frame,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"aH" = (
+/obj/machinery/telecomms/relay,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/greengrid,
+/area/map_template/deepmaint)
+"aI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/wall/r_wall,
+/area/map_template/deepmaint)
+"aJ" = (
+/obj/item/remains/human,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/greengrid,
+/area/map_template/deepmaint)
+"aL" = (
+/obj/item/stack/cable_coil/blue,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"aN" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/deepmaint)
+"aO" = (
+/obj/item/stack/cable_coil,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"aR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/deepmaint)
+"aS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"aV" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"aZ" = (
+/turf/simulated/floor/greengrid,
+/area/map_template/deepmaint)
+"ba" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bb" = (
+/obj/item/stack/cable_coil/green,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bd" = (
+/obj/structure/inflatable/door,
+/area/map_template/deepmaint)
+"bg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/greengrid,
+/area/map_template/deepmaint)
+"bh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/loot,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/constructable_frame/machine_frame,
+/turf/simulated/floor/greengrid,
+/area/map_template/deepmaint)
+"bo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bp" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/tech_supply,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"br" = (
+/obj/item/stack/cable_coil/orange,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bv" = (
+/obj/structure/foamedmetal,
+/obj/machinery/door/blast/regular/open,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"bw" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bx" = (
+/obj/structure/foamedmetal,
+/obj/machinery/door/blast/regular/open,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"by" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/retaliate/malf_drone,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"bA" = (
+/obj/machinery/constructable_frame/machine_frame,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bC" = (
+/obj/item/stack/cable_coil/yellow,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bD" = (
+/obj/structure/foamedmetal,
+/obj/machinery/light,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"bG" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/deepmaint)
+"bI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/blackgrid,
+/area/map_template/deepmaint)
+"bJ" = (
+/obj/item/stack/cable_coil/white,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/greengrid,
+/area/map_template/deepmaint)
+"bK" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/greengrid,
+/area/map_template/deepmaint)
+"bN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/tech_loot,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bP" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"bR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/wall/r_wall,
+/area/map_template/deepmaint)
+"bT" = (
+/obj/item/stack/cable_coil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"bV" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"bZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/tech_supply,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"ca" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"cb" = (
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"cd" = (
+/obj/item/remains/xeno,
+/obj/machinery/light,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"ce" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/deepmaint)
+"cf" = (
+/obj/structure/foamedmetal,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"ch" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/deepmaint)
+"ci" = (
+/obj/structure/firedoor_assembly,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bluegrid,
+/area/map_template/deepmaint)
+"cl" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"cr" = (
+/obj/structure/foamedmetal,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"cs" = (
+/obj/machinery/door/blast/regular/open,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"eg" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/deepmaint)
+"lq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/simulated/floor/blackgrid,
+/area/map_template/deepmaint)
+"nu" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"pZ" = (
+/obj/structure/table/reinforced,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"qb" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"ww" = (
+/obj/structure/foamedmetal,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"ya" = (
+/obj/machinery/light,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"BF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/AIcore,
+/area/map_template/deepmaint)
+"CF" = (
+/obj/random/junkfood,
+/area/map_template/deepmaint)
+"Ds" = (
+/obj/machinery/door/airlock/vault/bolted,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"GM" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"Hd" = (
+/turf/simulated/wall/sandstone,
+/area/map_template/deepmaint)
+"HK" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/blackgrid,
+/area/map_template/deepmaint)
+"HW" = (
+/obj/random/junk,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"HZ" = (
+/obj/item/remains/xeno,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"KH" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"Ma" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/blackgrid,
+/area/map_template/deepmaint)
+"PN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/retaliate/malf_drone,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+"RN" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/reinforced,
+/area/map_template/deepmaint)
+
+(1,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+cb
+bV
+cb
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+cr
+bP
+cb
+cb
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(3,1,1) = {"
+aa
+ab
+bo
+bo
+bo
+ab
+aS
+aR
+bP
+bx
+cr
+bP
+bV
+cb
+cb
+cb
+cb
+cb
+cb
+aa
+aa
+"}
+(4,1,1) = {"
+ap
+ab
+bA
+aL
+bo
+ab
+aR
+ca
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+HW
+aa
+aa
+"}
+(5,1,1) = {"
+aa
+ab
+bA
+aO
+bA
+ab
+aS
+aR
+aS
+aS
+aS
+bG
+ab
+bV
+bV
+KH
+nu
+ab
+bP
+aa
+aa
+"}
+(6,1,1) = {"
+aa
+ab
+bo
+aZ
+bo
+ab
+aR
+aS
+al
+cl
+PN
+aR
+Ds
+RN
+bV
+bV
+KH
+Hd
+bP
+aa
+aa
+"}
+(7,1,1) = {"
+aa
+ab
+bo
+bo
+bA
+ab
+aR
+aS
+aS
+aR
+aR
+ca
+ab
+ww
+bV
+HZ
+KH
+Hd
+bP
+aa
+aa
+"}
+(8,1,1) = {"
+aa
+ab
+bo
+bo
+bA
+ab
+ab
+ab
+ab
+bd
+ab
+ab
+ab
+bR
+bR
+bV
+qb
+ab
+HW
+aa
+aa
+"}
+(9,1,1) = {"
+aa
+ab
+aw
+aB
+bo
+bZ
+bo
+bg
+aI
+bp
+aI
+bo
+bN
+aE
+ab
+cb
+bP
+ab
+bV
+aa
+aa
+"}
+(10,1,1) = {"
+aa
+ab
+bo
+bb
+bg
+bo
+ah
+bo
+ci
+bo
+aI
+ag
+bI
+lq
+bR
+cb
+cd
+ab
+cb
+aa
+aa
+"}
+(11,1,1) = {"
+ap
+ab
+aH
+aJ
+bJ
+bg
+bT
+bo
+aI
+bo
+aI
+Ma
+HK
+BF
+bR
+bP
+cb
+cs
+cb
+aa
+aa
+"}
+(12,1,1) = {"
+aa
+ab
+bo
+br
+bK
+bh
+bg
+bh
+aI
+bT
+ci
+bI
+bI
+lq
+bR
+bP
+ya
+ab
+cb
+aa
+aa
+"}
+(13,1,1) = {"
+aa
+ab
+bo
+bo
+aV
+bA
+bo
+bn
+aI
+aV
+aI
+bN
+bN
+ba
+ab
+bV
+cb
+ab
+cb
+aa
+aa
+"}
+(14,1,1) = {"
+aa
+ab
+bl
+bo
+bA
+ab
+ab
+ab
+ab
+bd
+ab
+ab
+ab
+ab
+ab
+bV
+cb
+ab
+HW
+aa
+CF
+"}
+(15,1,1) = {"
+aa
+ab
+bA
+bo
+bo
+ab
+aS
+aS
+aS
+by
+aS
+ca
+ab
+bV
+bV
+HZ
+pZ
+Hd
+bP
+aa
+aa
+"}
+(16,1,1) = {"
+aa
+ab
+bA
+bw
+bA
+ab
+aS
+aS
+aS
+al
+aS
+aS
+aD
+bV
+bV
+RN
+pZ
+Hd
+cb
+aa
+aa
+"}
+(17,1,1) = {"
+aa
+ab
+bA
+bT
+bo
+ab
+aS
+cf
+cf
+cf
+aS
+ca
+ab
+bV
+bV
+pZ
+GM
+ab
+HW
+aa
+aa
+"}
+(18,1,1) = {"
+aa
+ab
+bo
+bC
+bA
+ab
+bP
+bD
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+cb
+aa
+aa
+"}
+(19,1,1) = {"
+ap
+ab
+bA
+bo
+bo
+ab
+bP
+bP
+bv
+cr
+aN
+eg
+ce
+ce
+ch
+ce
+ce
+HW
+cb
+aa
+aa
+"}
+(20,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+bP
+eg
+Hd
+Hd
+Hd
+Hd
+Hd
+aa
+CF
+aa
+aa
+"}
+(21,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+CF
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
