@@ -1,4 +1,4 @@
-// 'Interfaces' are procs that the ai_holder datum uses to communicate its will to the mob its attached.
+// 'Interfaces' are procs that the ai_holderdatum uses to communicate its will to the mob its attached.
 // The reason for using this proc in the middle is to ensure the AI has some form of compatibility with most mob types,
 // since some actions work very differently between mob types (e.g. executing an attack as a simple animal compared to a human).
 // The AI can just call holder.IAttack(target) and the mob is responsible for determining how to actually attack the target.

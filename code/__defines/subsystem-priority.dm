@@ -14,6 +14,7 @@
 #define SS_PRIORITY_TICKER         100 // Gameticker.
 #define SS_PRIORITY_MOB            95  // Mob Life().
 #define SS_PRIORITY_MACHINERY      95  // Machinery + powernet ticks.
+#define SS_PRIORITY_TGUI           95  // TGUI.
 #define SS_PRIORITY_AIR            80  // ZAS processing.
 #define SS_PRIORITY_CHEMISTRY      60  // Multi-tick chemical reactions.
 #define SS_PRIORITY_CHAT           40  // Chat
@@ -26,6 +27,7 @@
 #define SS_PRIORITY_OPEN_SPACE     20  // Open turf updates.
 #define SS_PRIORITY_AIRFLOW        15  // Object movement from ZAS airflow.
 #define SS_PRIORITY_AI             15  // Mob AI
+#define SS_PRIORITY_PRESENCE       10  // z-level player presence testing
 #define SS_PRIORITY_VOTE           10  // Vote management.
 #define SS_PRIORITY_INACTIVITY     10  // Idle kicking.
 #define SS_PRIORITY_SUPPLY         10  // Supply point accumulation.

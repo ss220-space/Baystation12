@@ -212,9 +212,6 @@
 	display_name = "gentlecoat"
 	path = /obj/item/clothing/suit/storage/inf/gentlecoat
 
-/datum/gear/suit/army_overcoat
-	display_name = "army overcoat"
-	path = /obj/item/clothing/suit/storage/inf/army_overcoat
 
 /datum/gear/suit/tailcoat
 	display_name = "tailcoat"

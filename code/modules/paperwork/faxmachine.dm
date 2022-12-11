@@ -1,14 +1,17 @@
 GLOBAL_LIST_EMPTY(allfaxes)
 GLOBAL_LIST_EMPTY(alldepartments)
-
-GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
+GLOBAL_LIST_EMPTY(adminfaxes) //cache for faxes that have been sent to admins
 
 /obj/machinery/photocopier/faxmachine
 	name = "fax machine"
+	desc = "Sent papers and pictures far away! Or to your co-worker's office a few doors down."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "fax"
 	insert_anim = "faxsend"
-	var/send_access = list(list(access_lawyer, access_bridge, access_armory, access_qm))
+	var/send_access = list(list(access_lawyer, access_bridge, access_armory, access_qm, access_heads, access_cent_general))
+
+	var/static/list/admin_departments = list("[GLOB.using_map.boss_name]", "Sol Governmental Authority", "Sol-Gov Job Boards", "Sol-Gov Supply Departament", "FTU Agency")
+
 
 	idle_power_usage = 30
 	active_power_usage = 200
@@ -19,148 +22,132 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 	var/department = "Unknown" // our department
 	var/destination = null // the department we're sending to
 
-	var/static/list/admin_departments
-
-	var/list/send_or_reseive_sounds = list('infinity/sound/SS2/effects/machines/fax1.wav', 'infinity/sound/SS2/effects/machines/fax2.wav')//inf
-
-/obj/machinery/photocopier/faxmachine/Initialize()
-	. = ..()
-
+/obj/machinery/photocopier/faxmachine/New()
 	GLOB.allfaxes += src
-
-	if (!admin_departments)
-		if (length(GLOB.using_map?.map_admin_faxes))
-			admin_departments = GLOB.using_map.map_admin_faxes.Copy()
-		else
-			admin_departments = list("[station_name()] Head Office", "[station_name()] Supply")
-
-	if ( !(("[department]" in GLOB.alldepartments) || ("[department]" in admin_departments)))
+	if(!destination) destination = "[GLOB.using_map.boss_name]"
+	if( !(("[department]" in GLOB.alldepartments) || ("[department]" in admin_departments)) )
 		GLOB.alldepartments |= department
+	..()
 
-	if (!destination)
-		if (length(admin_departments))
-			destination = admin_departments[1]
-		else if (length(GLOB.alldepartments))
-			destination = pick(GLOB.alldepartments)
-
-/obj/machinery/photocopier/faxmachine/attackby(obj/item/O as obj, mob/user as mob)
-	if(istype(O, /obj/item/paper))
-		var/obj/item/paper/P = O
-		if(!P.readable)
-			to_chat(user, SPAN_NOTICE("\The [src] beeps. Error, invalid document detected."))
-			return
-	if(istype(O, /obj/item/card/id))
-		if(!user.unEquip(O, src))
-			return
-		scan = O
-		to_chat(user, "<span class='notice'>You insert \the [O] into \the [src].</span>")
-	else
-		..()
-
-/obj/machinery/photocopier/faxmachine/interface_interact(mob/user)
-	interact(user)
-	return TRUE
-
-/obj/machinery/photocopier/faxmachine/interact(mob/user)
+/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob)
 	user.set_machine(src)
 
-	var/scan_name
+	ui_interact(user)
+
+/**
+ *  Display the NanoUI window for the fax machine.
+ *
+ *  See NanoUI documentation for details.
+ */
+/obj/machinery/photocopier/faxmachine/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+	user.set_machine(src)
+
+	var/list/data = list()
 	if(scan)
-		scan_name = scan.name
+		data["scanName"] = scan.name
 	else
-		scan_name = "--------"
-
-	var/dat = "Confirm Identity: <a href='byond://?src=\ref[src];scan=1'>[scan_name]</a><br>"
-
-	if(authenticated)
-		dat += "<a href='byond://?src=\ref[src];logout=1'>Log Out</a>"
+		data["scanName"] = null
+	data["bossName"] = GLOB.using_map.boss_name
+	data["authenticated"] = authenticated
+	data["copyItem"] = copyitem
+	if(copyitem)
+		data["copyItemName"] = copyitem.name
 	else
-		dat += "<a href='byond://?src=\ref[src];auth=1'>Log In</a>"
+		data["copyItemName"] = null
+	data["cooldown"] = sendcooldown
+	data["destination"] = destination
 
-	dat += "<hr>"
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, "fax.tmpl", src.name, 500, 500)
+		ui.set_initial_data(data)
+		ui.open()
+		ui.set_auto_update(10) //this machine is so unimportant let's not have it update that often.
 
-	if(authenticated)
-		dat += "<b>Logged in to:</b> [GLOB.using_map.boss_name] Quantum Entanglement Network<br><br>"
-
-		if(copyitem)
-			dat += "<a href='byond://?src=\ref[src];remove=1'>Remove Item</a><br><br>"
-
-			if(sendcooldown)
-				dat += "<b>Transmitter arrays realigning. Please stand by. It takes 1 minute.</b><br>"
-
-			else
-
-				dat += "<a href='byond://?src=\ref[src];send=1'>Send</a><br>"
-				dat += "<b>Currently sending:</b> [copyitem.name]<br>"
-				dat += "<b>Sending to:</b> <a href='byond://?src=\ref[src];dept=1'>[destination ? destination : "Nobody"]</a><br>"
-
-		else
-			if(sendcooldown)
-				dat += "Please insert paper to send via secure connection.<br><br>"
-				dat += "<b>Transmitter arrays realigning. Please stand by. It takes 1 minute.</b><br>"
-			else
-				dat += "Please insert paper to send via secure connection.<br><br>"
-
-	else
-		dat += "Proper authentication is required to use this device.<br><br>"
-
-		if(copyitem)
-			dat += "<a href ='byond://?src=\ref[src];remove=1'>Remove Item</a><br>"
-
-	//show_browser(user, dat, "window=copier")
-	var/datum/browser/popup = new(user, "copier", "Fax Machine")
-	popup.set_content(dat)
-	popup.open()
-	onclose(user, "copier")
-
-/obj/machinery/photocopier/faxmachine/OnTopic(mob/user, href_list, state)
+/obj/machinery/photocopier/faxmachine/Topic(href, href_list)
 	if(href_list["send"])
-		if(!sendcooldown)	// INF
-			if(copyitem)
-				if (destination in admin_departments)
-					send_admin_fax(user, destination)
-				else
-					sendfax(destination)
+		if(copyitem)
+			if (destination in admin_departments)
+				send_admin_fax(usr, destination)
+			else
+				sendfax(destination)
 
-				if (sendcooldown)
-					spawn(sendcooldown) // cooldown time
-						sendcooldown = 0
-		else to_chat(user, "You can't do that.")	// INF
-		return TOPIC_REFRESH
+			if (sendcooldown)
+				spawn(sendcooldown) // cooldown time
+					sendcooldown = 0
 
-	if(href_list["remove"])
-		OnRemove(user)
-		return TOPIC_REFRESH
+	else if(href_list["remove"])
+		if(copyitem)
+			if(get_dist(usr, src) >= 2)
+				to_chat(usr, "\The [copyitem] is too far away for you to remove it.")
+				return
+			copyitem.loc = usr.loc
+			usr.put_in_hands(copyitem)
+			to_chat(usr, "<span class='notice'>You take \the [copyitem] out of \the [src].</span>")
+			copyitem = null
 
 	if(href_list["scan"])
 		if (scan)
-			if(ishuman(user))
-				user.put_in_hands(scan)
+			if(ishuman(usr))
+				scan.loc = usr.loc
+				if(!usr.get_active_hand())
+					usr.put_in_hands(scan)
+				scan = null
 			else
-				scan.dropInto(loc)
-			scan = null
+				scan.loc = src.loc
+				scan = null
 		else
-			var/obj/item/I = user.get_active_hand()
-			if (istype(I, /obj/item/card/id) && user.unEquip(I, src))
+			var/obj/item/I = usr.get_active_hand()
+			if (istype(I, /obj/item/card/id) && usr.unEquip(I))
+				I.loc = src
 				scan = I
 		authenticated = 0
-		return TOPIC_REFRESH
 
 	if(href_list["dept"])
-		var/desired_destination = input(user, "Which department?", "Choose a department", "") as null|anything in (GLOB.alldepartments + admin_departments)
-		if(desired_destination && CanInteract(user, state))
-			destination = desired_destination
-		return TOPIC_REFRESH
+		var/lastdestination = destination
+		destination = input(usr, "Which department?", "Choose a department", "") as null|anything in (GLOB.alldepartments + admin_departments)
+		if(!destination) destination = lastdestination
 
 	if(href_list["auth"])
 		if ( (!( authenticated ) && (scan)) )
 			if (has_access(send_access, scan.GetAccess()))
 				authenticated = 1
-		return TOPIC_REFRESH
 
 	if(href_list["logout"])
 		authenticated = 0
-		return TOPIC_REFRESH
+
+	SSnano.update_uis(src)
+
+/obj/machinery/photocopier/faxmachine/attackby(obj/item/O as obj, mob/user as mob)
+	if(istype(O, /obj/item/paper) || istype(O, /obj/item/photo) || istype(O, /obj/item/paper_bundle))
+		if(!copyitem)
+			user.drop_item()
+			copyitem = O
+			O.loc = src
+			to_chat(user, "<span class='notice'>You insert \the [O] into \the [src].</span>")
+			playsound(loc, "sound/machines/click.ogg", 100, 1)
+			flick(insert_anim, src)
+		else
+			to_chat(user, "<span class='notice'>There is already something in \the [src].</span>")
+	else if(istype(O, /obj/item/device/multitool) && panel_open)
+		var/input = sanitize(input(usr, "What Department ID would you like to give this fax machine?", "Multitool-Fax Machine Interface", department))
+		if(!input)
+			to_chat(usr, "No input found. Please hang up and try your call again.")
+			return
+		department = input
+		if( !(("[department]" in GLOB.alldepartments) || ("[department]" in admin_departments)) && !(department == "Unknown"))
+			GLOB.alldepartments |= department
+	else if(isWrench(O))
+		//playsound(loc, O.usesound, 50, 1)
+		anchored = !anchored
+		to_chat(user, "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
+/*
+	else if(default_deconstruction_screwdriver(user, O))
+		return
+	else if(default_deconstruction_crowbar(user, O))
+		return
+*/
+	return
 
 /obj/machinery/photocopier/faxmachine/proc/sendfax(var/destination)
 	if(stat & (BROKEN|NOPOWER))
@@ -169,25 +156,17 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 	use_power_oneoff(200)
 
 	var/success = 0
-	if (destination)
-		for (var/obj/machinery/photocopier/faxmachine/F in GLOB.allfaxes)
-			if (F.department == destination)
-				success = F.recievefax(copyitem)
+	for(var/obj/machinery/photocopier/faxmachine/F in GLOB.allfaxes)
+		if( F.department == destination )
+			success = F.receivefax(copyitem)
 
 	if (success)
 		visible_message("[src] beeps, \"Message transmitted successfully.\"")
-//[INF]
-		log_fax("[key_name(usr)] sends fax to the [destination]")
-		sendcooldown = 600
-		var/obj/item/rcvdcopy = copyitem
-		GLOB.adminfaxes += rcvdcopy
-		var/mob/intercepted = check_for_interception()
-		message_admins(usr, "[uppertext(destination)] FAX[intercepted ? "(Intercepted by [intercepted])" : null]", rcvdcopy, destination, "#006100") //INF
-//[/INF]
+		//sendcooldown = 600
 	else
 		visible_message("[src] beeps, \"Error transmitting message.\"")
 
-/obj/machinery/photocopier/faxmachine/proc/recievefax(var/obj/item/incoming)
+/obj/machinery/photocopier/faxmachine/proc/receivefax(var/obj/item/incoming)
 	if(stat & (BROKEN|NOPOWER))
 		return 0
 
@@ -195,8 +174,8 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 		return 0	//You can't send faxes to "Unknown"
 
 	flick("faxreceive", src)
-	playsound(loc, pick(send_or_reseive_sounds), 50)//inf //was:'	playsound(loc, "sound/machines/dotprinter.ogg", 50, 1)'
-	visible_message("[src] beeps, \"Incomming message.\"")
+	playsound(loc, "sound/effects/printer.ogg", 50, 1)
+
 
 	// give the sprite some time to flick
 	sleep(20)
@@ -216,13 +195,10 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 /obj/machinery/photocopier/faxmachine/proc/send_admin_fax(var/mob/sender, var/destination)
 	if(stat & (BROKEN|NOPOWER))
 		return
-	if(!is_relay_online())//Contact Centcom has a check, Syndie doesn't to allow for Traitor funs.
-		visible_message("[src] beeps, \"No Emergency Bluespace Relay detected. Unable to transmit message.\"")
-		return 1
 
 	use_power_oneoff(200)
 
-	//recieved copies should not use toner since it's being used by admins only.
+	//received copies should not use toner since it's being used by admins only.
 	var/obj/item/rcvdcopy
 	if (istype(copyitem, /obj/item/paper))
 		rcvdcopy = copy(copyitem, 0)
@@ -234,46 +210,71 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 		visible_message("[src] beeps, \"Error transmitting message.\"")
 		return
 
-	rcvdcopy.forceMove(null) //hopefully this shouldn't cause trouble
+	rcvdcopy.loc = null //hopefully this shouldn't cause trouble
 	GLOB.adminfaxes += rcvdcopy
 
-	var/mob/intercepted = check_for_interception()
+	//message badmins that a fax has arrived
+	if (destination == GLOB.using_map.boss_name)
+		message_admins(sender, "[uppertext(GLOB.using_map.boss_short)] FAX", rcvdcopy, "CentComFaxReply", "#006100")
+	else if (destination == "Sol Governmental Authority") // Vorestation Edit
+		message_admins(sender, "SOL GOVERNMENTAL FAX ", rcvdcopy, "SolGovFaxReply", "#1F66A0")
+	else if (destination == "Sol-Gov Supply Departament")
+		message_admins(sender, "[uppertext(GLOB.using_map.boss_short)] SUPPLY FAX", rcvdcopy, "SolGovFaxReply", "#5F4519")
+	else if (destination == "FTU Agency")
+		message_admins(sender, "FTU AGENCY FAX", rcvdcopy, "FtuFaxReply", "#3ec4ad")
+	else
+		message_admins(sender, "[uppertext(destination)] FAX", rcvdcopy, "UNKNOWN")
 
-	message_admins(sender, "[uppertext(destination)] FAX[intercepted ? "(Intercepted by [intercepted])" : null]", rcvdcopy, destination ? destination : "UNKNOWN")
 
-	sendcooldown = 600
+	sendcooldown = 1800
 	sleep(50)
-	for(var/obj/machinery/photocopier/faxmachine/F in GLOB.allfaxes)
-		if(F.department in admin_departments)
-			F.recievefax(rcvdcopy)
-	log_fax("[key_name(sender)] sends admin fax to the [destination]")
 	visible_message("[src] beeps, \"Message transmitted successfully.\"")
 
+// Turns objects into just text.
+/obj/machinery/photocopier/faxmachine/proc/make_summary(obj/item/sent)
+	if(istype(sent, /obj/item/paper))
+		var/obj/item/paper/P = sent
+		return P.info
+	if(istype(sent, /obj/item/paper_bundle))
+		. = ""
+		var/obj/item/paper_bundle/B = sent
+		for(var/i in 1 to B.pages.len)
+			var/obj/item/paper/P = B.pages[i]
+			if(istype(P)) // Photos can show up here too.
+				if(.) // Space out different pages.
+					. += "<br>"
+				. += "PAGE [i] - [P.name]<br>"
+				. += P.info
 
-/obj/machinery/photocopier/faxmachine/proc/message_admins(mob/sender, faxname, obj/item/sent, reply_type)
-	var/msg = "<span class='notice'><b><font color='#006100'>[faxname]: </font>[get_options_bar(sender, 2,1,1)]"
-	msg += "(<A HREF='?_src_=holder;take_ic=\ref[sender]'>TAKE</a>) (<a href='?_src_=holder;FaxReply=\ref[sender];originfax=\ref[src];replyorigin=[reply_type]'>REPLY</a>)</b>: "
+
+/obj/machinery/photocopier/faxmachine/proc/message_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/reply_type, font_colour="#006100")
+	var/msg = "<span class='notice'><b><font color='[font_colour]'>[faxname]: </font>[get_options_bar(sender, 2,1,1)]"
+	msg += "(<a href='?_src_=holder;FaxReply=\ref[sender];originfax=\ref[src];replyorigin=[reply_type]'>REPLY</a>)</b>: "
 	msg += "Receiving '[sent.name]' via secure connection ... <a href='?_src_=holder;AdminFaxView=\ref[sent]'>view message</a></span>"
 
-	GLOB.fax_cache += "*[time_stamp()]*: DESTINATION - [msg]<br>"	// INF
+	GLOB.fax_cache += "*[time_stamp()]*: DESTINATION - [msg]<br>"
 
 	for(var/client/C in GLOB.admins)
 		if(check_rights((R_ADMIN|R_MOD),0,C))
-			to_chat(C, msg)
-			sound_to(C, sound(pick(send_or_reseive_sounds), volume = 50))
+			to_chat(C,msg)
+			//C << 'sound/effects/printer.ogg'
 
-// [INF]
-/obj/machinery/photocopier/faxmachine/AltClick(mob/user)
-	if (scan)
-		if (ishuman(user))
-			user.put_in_hands(scan)
-			to_chat(user, SPAN_NOTICE("You eject \the [scan] from \the [src]."))
-		else
-			scan.dropInto(loc)
-		scan = null
-		authenticated = FALSE
-		return TOPIC_REFRESH
-	else
-		to_chat(user, SPAN_WARNING("There is no card in fax!"))
-		return
-// [/INF]
+	// Webhooks don't parse the HTML on the paper, so we gotta strip them out so it's still readable.
+	var/summary = make_summary(sent)
+	summary = paper_html_to_plaintext(summary)
+
+	log_game("Fax to [lowertext(faxname)] was sent by [key_name(sender)].")
+	log_game(summary)
+
+	var/webhook_length_limit = 1900 // The actual limit is a little higher.
+	if(length(summary) > webhook_length_limit)
+		summary = copytext(summary, 1, webhook_length_limit + 1)
+		summary += "\n\[Закончилось место в факсе\]"
+
+	SSwebhooks.send(
+		WEBHOOK_FAX_SENT,
+		list(
+			"name" = "[faxname] '[sent.name]' sent from [key_name(sender)]",
+			"body" = summary
+		)
+	)

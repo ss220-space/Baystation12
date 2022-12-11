@@ -233,92 +233,123 @@ GLOBAL_LIST_EMPTY(diversion_junctions)
 /obj/machinery/disposal/DefaultTopicState()
 	return GLOB.outside_state
 
+// AI interact with machine
+/obj/machinery/disposal/attack_ai(mob/user as mob)
+	add_hiddenprint(user)
+	tgui_interact(user)
+
 // human interact with machine
 /obj/machinery/disposal/physical_attack_hand(mob/user)
+	if(stat & BROKEN)
+		return
+
+	if(user && user.loc == src)
+		to_chat(user, "<font color='red'>You cannot reach the controls from inside.</font>")
+		return
+
 	// Clumsy folks can only flush it.
-	if(!user.IsAdvancedToolUser(1))
+	if(user.IsAdvancedToolUser(1))
+		tgui_interact(user)
+	else
 		flush = !flush
-		update_icon()
-		return TRUE
+		update()
+	return
+
 
 /obj/machinery/disposal/interface_interact(mob/user)
 	interact(user)
 	return TRUE
 
 // user interaction
-/obj/machinery/disposal/interact(mob/user)
+/obj/machinery/disposal/tgui_interact(mob/user, datum/tgui/ui = null)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "DisposalBin", "Disposal Bin")
+		ui.open()
 
-	src.add_fingerprint(user)
-	if(stat & BROKEN)
-		user.unset_machine()
+/obj/machinery/disposal/tgui_data(mob/user)
+	var/list/data = list()
+	data["isAI"] = isAI(user)
+	data["flushing"] = flush
+	data["mode"] = mode
+	data["pressure"] = round(clamp(100* air_contents.return_pressure() / (SEND_PRESSURE), 0, 100),1)
+	return data
+
+/obj/machinery/disposal/tgui_data(mob/user)
+	var/list/data = list()
+
+	data["isAI"] = isAI(user)
+	data["flushing"] = flush
+	data["mode"] = mode
+	data["pressure"] = round(clamp(100* air_contents.return_pressure() / (SEND_PRESSURE), 0, 100),1)
+
+	return data
+
+/obj/machinery/disposal/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
+	if(..())
 		return
 
-	var/ai = isAI(user)
-	var/dat = "<head><title>Waste Disposal Unit</title></head><body><TT><B>Waste Disposal Unit</B><HR>"
+	if(usr.loc == src)
+		to_chat(usr, "<span class='warning'>You cannot reach the controls from inside.</span>")
+		return TRUE
 
-	if(!ai)  // AI can't pull flush handle
-		if(flush)
-			dat += "Disposal handle: <A href='?src=\ref[src];handle=0'>Disengage</A> <B>Engaged</B>"
-		else
-			dat += "Disposal handle: <B>Disengaged</B> <A href='?src=\ref[src];handle=1'>Engage</A>"
+	if(mode==-1 && action != "eject") // If the mode is -1, only allow ejection
+		to_chat(usr, "<span class='warning'>The disposal units power is disabled.</span>")
+		return
 
-		dat += "<BR><HR><A href='?src=\ref[src];eject=1'>Eject contents</A><HR>"
+	if(stat & BROKEN)
+		return
 
-	if(mode <= 0)
-		dat += "Pump: <B>Off</B> <A href='?src=\ref[src];pump=1'>On</A><BR>"
-	else if(mode == 1)
-		dat += "Pump: <A href='?src=\ref[src];pump=0'>Off</A> <B>On</B> (pressurizing)<BR>"
-	else
-		dat += "Pump: <A href='?src=\ref[src];pump=0'>Off</A> <B>On</B> (idle)<BR>"
+	add_fingerprint(usr)
 
-	var/per = 100* air_contents.return_pressure() / (SEND_PRESSURE)
-
-	dat += "Pressure: [round(per, 1)]%<BR></body>"
-
-
-	user.set_machine(src)
-	show_browser(user, dat, "window=disposal;size=360x170")
-	onclose(user, "disposal")
-
-// handle machine interaction
-
-/obj/machinery/disposal/CanUseTopic(mob/user, state, href_list)
-	if(user.loc == src)
-		to_chat(user, "<span class='warning'>You cannot reach the controls from inside.</span>")
-		return STATUS_CLOSE
-	if(isAI(user) && href_list && (href_list["handle"] || href_list["eject"]))
-		return min(STATUS_UPDATE, ..())
-	if(mode==-1 && href_list && !href_list["eject"]) // only allow ejecting if mode is -1
-		to_chat(user, "<span class='warning'>The disposal units power is disabled.</span>")
-		return min(STATUS_UPDATE, ..())
 	if(flushing)
-		return min(STATUS_UPDATE, ..())
-	return ..()
+		return
 
-/obj/machinery/disposal/OnTopic(user, href_list)
-	if(href_list["close"])
-		close_browser(user, "window=disposal")
-		return TOPIC_HANDLED
-
-	if(href_list["pump"])
-		if(text2num(href_list["pump"]))
+	if(isturf(loc))
+		if(action == "pumpOn")
 			mode = 1
-		else
+			update()
+		if(action == "pumpOff")
 			mode = 0
-		update_icon()
-		. = TOPIC_REFRESH
+			update()
 
-	else if(href_list["handle"])
-		flush = text2num(href_list["handle"])
-		update_icon()
-		. = TOPIC_REFRESH
+		if(action == "engageHandle")
+			flush = 1
+			update()
+		if(action == "disengageHandle")
+			flush = 0
+			update()
 
-	else if(href_list["eject"])
-		eject()
-		. = TOPIC_REFRESH
+		if(action == "eject")
+			eject()
 
-	if(. == TOPIC_REFRESH)
-		interact(user)
+	return TRUE
+
+/obj/machinery/disposal/proc/update()
+	overlays.Cut()
+	if(stat & BROKEN)
+		icon_state = "disposal-broken"
+		mode = 0
+		flush = 0
+		return
+
+	// flush handle
+	if(flush)
+		overlays += image('icons/obj/pipes/disposal.dmi', "dispover-handle")
+
+	// only handle is shown if no power
+	if(stat & NOPOWER || mode == -1)
+		return
+
+	// 	check for items in disposal - occupied light
+	if(contents.len > 0)
+		overlays += image('icons/obj/pipes/disposal.dmi', "dispover-full")
+
+	// charging and ready light
+	if(mode == 1)
+		overlays += image('icons/obj/pipes/disposal.dmi', "dispover-charge")
+	else if(mode == 2)
+		overlays += image('icons/obj/pipes/disposal.dmi', "dispover-ready")
 
 // eject the contents of the disposal unit
 /obj/machinery/disposal/proc/eject()
@@ -566,7 +597,7 @@ GLOBAL_LIST_EMPTY(diversion_junctions)
 	if(!proximity || !istype(A, /turf/simulated/floor) || istype(A, /area/shuttle) || user.incapacitated() || !id_tag)
 		return
 	var/found = 0
-	for(var/obj/structure/disposalpipe/diversion_junction/D in world)
+	for(var/obj/structure/disposalpipe/diversion_junction/D in GLOB.diversion_junctions)
 		if(D.id_tag == src.id_tag)
 			found = 1
 			break

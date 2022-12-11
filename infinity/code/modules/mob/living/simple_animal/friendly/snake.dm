@@ -32,7 +32,7 @@
 	var/list/target_types = list(/mob/living/simple_animal/friendly/mouse, /mob/living/carbon/alien/diona)
 	var/list/consumable_types = list(/mob/living/simple_animal/friendly/mouse)
 
-	ai_holder_type = /datum/ai_holder/simple_animal/retaliate/cooperative/snake
+	ai_holder = /datum/ai_holder/simple_animal/retaliate/cooperative/snake
 	say_list_type = /datum/say_list/snake
 
 /datum/ai_holder/simple_animal/retaliate/cooperative/snake

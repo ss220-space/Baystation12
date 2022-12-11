@@ -491,6 +491,8 @@
 	var/datum/signal/signal = new
 	signal.transmission_method = 2
 
+	// TMP: If mob has no ckey - don't allow to modify its telecomms message, else - sanitize it
+	signal.safe = (M.ckey == null)
 
 	/* --- Try to send a normal subspace broadcast first */
 

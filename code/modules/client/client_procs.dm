@@ -36,17 +36,21 @@
 	#endif
 
 	// asset_cache
+	var/asset_cache_job
 	if(href_list["asset_cache_confirm_arrival"])
-//		to_chat(src, "ASSET JOB [href_list["asset_cache_confirm_arrival"]] ARRIVED.")
-		var/job = text2num(href_list["asset_cache_confirm_arrival"])
-		completed_asset_jobs += job
-		return
+		asset_cache_job = asset_cache_confirm_arrival(href_list["asset_cache_confirm_arrival"])
+		if (!asset_cache_job)
+			return
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
 		to_world_log("Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
 		//qdel(usr)
+		return
+
+	// Tgui Topic middleware
+	if(!tgui_Topic(href_list))
 		return
 
 	//Admin PM
@@ -80,6 +84,15 @@
 
 	if (GLOB.href_logfile)
 		to_file(GLOB.href_logfile, "<small>[time2text(world.timeofday,"hh:mm")] [src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]<br>")
+
+	//byond bug ID:2256651
+	if (asset_cache_job && (asset_cache_job in completed_asset_jobs))
+		to_chat(src, "<span class='danger'>An error has been detected in how your client is receiving resources. Attempting to correct.... (If you keep seeing these messages you might want to close byond and reconnect)</span>")
+		src << browse("...", "window=asset_cache_browser")
+		return
+	if (href_list["asset_cache_preload_data"])
+		asset_cache_preload_data(href_list["asset_cache_preload_data"])
+		return
 
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
@@ -200,6 +213,10 @@
 	load_player_discord(src)
 
 	. = ..()	//calls mob.Login()
+
+	connection_time = world.time
+	connection_realtime = world.realtime
+	connection_timeofday = world.timeofday
 
 	GLOB.using_map.map_info(src)
 
@@ -418,13 +435,11 @@
 		'html/images/foundlogo.png',//inf
 		'html/images/ccalogo.png'//inf
 		)
-	addtimer(CALLBACK(src, .proc/after_send_resources), 1 SECOND)
-
-
-/client/proc/after_send_resources()
-	var/decl/asset_cache/asset_cache = decls_repository.get_decl(/decl/asset_cache)
-	getFilesSlow(src, asset_cache.cache, register_asset = FALSE)
-
+	spawn(10) // Removing this spawn causes all clients to not get verbs.
+		// Load info on what assets the client has
+		show_browser(src, 'code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
+		// Precache the client with all other assets slowly, so as to not block other browse() calls
+		addtimer(CALLBACK(GLOBAL_PROC, /proc/getFilesSlow, src, SSassets.preload, FALSE), 5 SECONDS)
 
 mob/proc/MayRespawn()
 	return 0
