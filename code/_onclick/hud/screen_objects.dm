@@ -49,8 +49,8 @@
 	var/obj/item/owner
 
 /obj/screen/item_action/Destroy()
-	..()
 	owner = null
+	. = ..()
 
 /obj/screen/item_action/Click()
 	if(!usr || !owner)
@@ -419,4 +419,3 @@
 
 /obj/screen/health/Click(var/location, var/control, var/params)
 	usr.Click(usr, params)
-

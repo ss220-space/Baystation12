@@ -25,7 +25,7 @@ Small, little HP, poisonous.
 	natural_weapon = /obj/item/natural_weapon/bite
 	faction = SPECIES_VOX
 
-	ai_holder_type = /datum/ai_holder/hostile/melee/voxslug
+	ai_holder = /datum/ai_holder/hostile/melee/voxslug
 
 /datum/ai_holder/hostile/melee/voxslug/list_targets()
 	. = ..()

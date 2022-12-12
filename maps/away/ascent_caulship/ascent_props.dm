@@ -48,7 +48,7 @@
 	natural_weapon = /obj/item/natural_weapon/bite
 	faction = "kharmaani"
 	var/global/list/friendly_species = list(SPECIES_MANTID_ALATE, SPECIES_MANTID_GYNE, SPECIES_MONARCH_QUEEN, SPECIES_MONARCH_WORKER)
-	ai_holder_type = /datum/ai_holder/simple_animal/retaliate/alate_nymph
+	ai_holder = /datum/ai_holder/simple_animal/retaliate/alate_nymph
 
 /datum/ai_holder/simple_animal/retaliate/alate_nymph/list_targets()
 	. = list()

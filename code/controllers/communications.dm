@@ -424,6 +424,7 @@ var/global/datum/controller/radio/radio_controller
 	var/encryption
 
 	var/frequency = 0
+	var/safe = FALSE
 
 /datum/signal/proc/copy_from(datum/signal/model)
 	source = model.source

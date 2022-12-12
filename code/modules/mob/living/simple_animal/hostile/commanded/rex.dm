@@ -5,15 +5,15 @@
 	icon_state = "lavadog"
 	icon_living = "lavadog"
 	icon_dead = "lavadog_dead"
-	
+
 
 	health = 45
 	maxHealth = 45
 	speed = 8
-	
+
 	density = TRUE
 
-	natural_weapon = /obj/item/natural_weapon/bite 
+	natural_weapon = /obj/item/natural_weapon/bite
 	possible_natural_weapon = list(/obj/item/natural_weapon/bite, /obj/item/natural_weapon/claws)
 	can_escape = TRUE
 
@@ -24,7 +24,7 @@
 	response_disarm = "pushes"
 
 	known_commands = list("stay", "stop", "attack", "follow", "guard", "forget master", "obey", "forget target")
-	ai_holder_type = /datum/ai_holder/simple_animal/melee/commanded
+	ai_holder = /datum/ai_holder/simple_animal/melee/commanded
 
 /mob/living/simple_animal/hostile/commanded/rex/get_natural_weapon()
 	if(natural_weapon)
@@ -43,7 +43,7 @@
 			allowed_targets -= S
 			S.guards += src
 	..()
-	
+
 /mob/living/simple_animal/hostile/commanded/rex/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(istype(O, /obj/item/reagent_containers/food/snacks/meat) && stat != DEAD)
 		if(user != master)
@@ -57,11 +57,11 @@
 				qdel(O)
 				visible_message(SPAN_NOTICE("\The [src] ate [O]"))
 				set_AI_busy(prev_AI_busy)
-				
+
 	else
 		..()
 
-/mob/living/simple_animal/hostile/commanded/rex/attack_hand(mob/living/carbon/human/target)		
+/mob/living/simple_animal/hostile/commanded/rex/attack_hand(mob/living/carbon/human/target)
 	if(target.a_intent != I_HELP && retribution) //assume he wants to hurt us.
 		var/dealt_damage = harm_intent_damage
 		var/harm_verb = response_harm
@@ -87,7 +87,7 @@
 		set_AI_busy(FALSE)
 		ai_holder.react_to_attack(target)
 		return TRUE
-		
+
 
 	else if(target.a_intent == I_HELP)
 		if((target == master) || (weakref(target) in friends))
@@ -99,5 +99,5 @@
 		visible_message(SPAN_WARNING("\The [src] started to growl"))
 		if(prob(10))
 			attack_target(target)
-	
+
 	. = ..()

@@ -185,7 +185,10 @@
 		// Backwards-apply variables onto signal data
 		/* sanitize EVERYTHING. fucking players can't be trusted with SHIT */
 
-		signal.data["message"] 	= interpreter.GetVar("$content")
+		// TMP: If mob has no ckey - don't allow to modify its telecomms message, else - sanitize it
+		if (!signal.safe)
+			signal.data["message"] 	= sanitize(interpreter.GetVar("$content"), MAX_MESSAGE_LEN + 512) // 512 extra symbols
+
 		signal.frequency 		= interpreter.GetVar("$freq")
 
 		var/setname = ""
