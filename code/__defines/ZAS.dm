@@ -71,7 +71,7 @@ var/list/gzn_check = list(NORTH, SOUTH, EAST, WEST, UP, DOWN)
 					} \
 				} \
 				if (CANPASS_PROC) { \
-					ret |= (AIR_BLOCKED * !AM.CanPass(null, B, 0, 0)) | (ZONE_BLOCKED * !AM.CanPass(null, B, 1.5, 1)); \
+					ret |= AM.c_airblock(B); \
 				} \
 				if (CANPASS_NEVER) { \
 					ret = BLOCKED; \
@@ -108,7 +108,7 @@ var/list/gzn_check = list(NORTH, SOUTH, EAST, WEST)
 					} \
 				} \
 				if (CANPASS_PROC) { \
-					ret |= (AIR_BLOCKED * !AM.CanPass(null, B, 0, 0)) | (ZONE_BLOCKED * !AM.CanPass(null, B, 1.5, 1)); \
+					ret |= AM.c_airblock(B); \
 				} \
 				if (CANPASS_NEVER) { \
 					ret = BLOCKED; \
