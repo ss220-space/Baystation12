@@ -42,6 +42,7 @@
 	containertype = /obj/structure/closet/crate/secure
 	containername = "tactical armor crate"
 	access = access_armory
+	security_level = SUPPLY_SECURITY_ELEVATED
 
 /decl/hierarchy/supply_pack/security/blackguards
 	name = "Armor - Arm and leg guards, black"
