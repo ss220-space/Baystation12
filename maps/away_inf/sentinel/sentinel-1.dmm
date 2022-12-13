@@ -3674,7 +3674,6 @@
 	dir = 1;
 	icon_state = "stripe"
 	},
-/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/ofd)
 "gZ" = (
@@ -3682,7 +3681,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/ofd)
 "ha" = (
@@ -3997,13 +3995,19 @@
 	name = "Unknown Compartament Shell Loader";
 	opacity = 0
 	},
-/obj/structure/plasticflaps/airtight,
 /turf/simulated/floor/reinforced,
 /area/ship/patrol/command/ofd)
 "hO" = (
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "patm"
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/window/brigdoor{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/ofd)
@@ -8456,6 +8460,7 @@
 	id_tag = "patmis_shield";
 	name = "OFD Compartament Hatch"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/patrol/command/ofd)
 "rQ" = (
@@ -8632,7 +8637,11 @@
 /turf/simulated/floor/plating,
 /area/ship/reaper)
 "xz" = (
-/obj/machinery/shield_diffuser,
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "patm"
+	},
+/obj/structure/plasticflaps/airtight,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/patrol/command/ofd)
 "ya" = (
@@ -13531,7 +13540,7 @@ aa
 aa
 aa
 aa
-xz
+aa
 aa
 aa
 aa
@@ -14019,7 +14028,7 @@ ty
 qG
 qG
 hM
-rt
+xz
 hM
 qG
 qG
