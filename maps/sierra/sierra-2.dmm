@@ -34482,7 +34482,9 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/game_room)
 "dSv" = (
-/obj/random/date_based/christmas/tree,
+/obj/random/date_based/christmas/tree{
+	pixel_x = 16
+	},
 /turf/simulated/floor/wood/mahogany,
 /area/crew_quarters/lounge_big)
 "dUI" = (
