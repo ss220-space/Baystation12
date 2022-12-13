@@ -2756,7 +2756,7 @@
 	dir = 4
 	},
 /obj/machinery/optable,
-/obj/machinery/light{
+/obj/machinery/light/spot{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue{
@@ -3577,7 +3577,7 @@
 	},
 /obj/machinery/optable,
 /obj/effect/floor_decal/industrial/outline/red,
-/obj/machinery/light{
+/obj/machinery/light/spot{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -6295,7 +6295,7 @@
 /obj/machinery/door/airlock/medical{
 	dir = 4;
 	id_tag = "sierra_surgery1";
-	name = "Infirmary Reception"
+	name = "Operating Room 1"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -41460,21 +41460,24 @@
 	id_tag = "MedbayER";
 	name = "Treatment Center Control";
 	pixel_x = 5;
-	pixel_y = -20
+	pixel_y = -20;
+	req_access = list("ACCESS_MEDICAL_EQUIP")
 	},
 /obj/machinery/button/alternate/door{
 	dir = 1;
 	id_tag = "infimary_staging";
 	name = "Infirmary Staging Control";
 	pixel_x = -6;
-	pixel_y = -20
+	pixel_y = -20;
+	req_access = list("ACCESS_MEDICAL_EQUIP")
 	},
 /obj/machinery/button/alternate/door{
 	dir = 1;
 	id_tag = "MedbayER2";
 	name = "Infirmary Staging way to Treatment";
 	pixel_x = -17;
-	pixel_y = -20
+	pixel_y = -20;
+	req_access = list("ACCESS_MEDICAL_EQUIP")
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/random/date_based/christmas/xmaslights{
