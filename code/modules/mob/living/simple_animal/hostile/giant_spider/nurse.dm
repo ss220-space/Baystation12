@@ -5,9 +5,9 @@
 /mob/living/simple_animal/hostile/giant_spider/nurse
 	desc = "Furry and beige, it makes you shudder to look at it. This one has brilliant green eyes."
 
-	icon_state = "beige"
-	icon_living = "beige"
-	icon_dead = "beige_dead"
+	icon_state = "nurse"
+	icon_living = "nurse"
+	icon_dead = "nurse_dead"
 
 	maxHealth = 40
 	health = 40
@@ -19,7 +19,7 @@
 
 	natural_weapon = /obj/item/natural_weapon/bite/spider/nurse
 
-	ai_holder_type = /datum/ai_holder/simple_animal/melee/nurse_spider
+	ai_holder = /datum/ai_holder/simple_animal/melee/nurse_spider
 
 	var/fed = 0 // Counter for how many egg laying 'charges' the spider has.
 	var/laying_eggs = FALSE	// Only allow one set of eggs to be laid at once.

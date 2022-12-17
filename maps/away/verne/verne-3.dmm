@@ -1048,13 +1048,13 @@
 /turf/simulated/floor/tiled/freezer,
 /area/verne/common/kitchen/fridge)
 "fW" = (
-/obj/machinery/hologram/holopad/longrange/remoteship,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/overmap/visitable/ship/verne,
+/obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/bridge)
 "gd" = (

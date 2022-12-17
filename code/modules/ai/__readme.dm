@@ -8,7 +8,7 @@ should be compatible with most types of mobs which have the needed Interfaces in
 support them.
 
 When designing a new mob, all that is needed to give a mob an AI is to set
-its 'ai_holder_type' variable to the path of the AI that is desired.
+its 'ai_holder' variable to the path of the AI that is desired.
 
 
 [Seperation]
@@ -17,7 +17,7 @@ In previous iterations of AI systems, the AI is generally written into the mob's
 which has some advantages, but often makes the code rigid, and also tied the speed of the AI
 to the mob's own ticker, meaning it could only decide every two seconds.
 
-Instead, this version has the code for the AI held inside an /datum/ai_holder object,
+Instead, this version has the code for the AI held inside an /datum/ai_holderobject,
 which is carried by the mob it controls. This gives some advantages;
 	All /mob/living mobs can potentially have an AI applied to them, and utilize the
 	same base code while adding specialized code on top.
@@ -29,7 +29,7 @@ which is carried by the mob it controls. This gives some advantages;
 
 	Seperating the AI from the mob simplies the mob's code greatly.
 
-	It is more logical to think that a mob is the 'body', where as its ai_holder is
+	It is more logical to think that a mob is the 'body', where as its ai_holderis
 	the 'mind'.
 
 	AIs can be applied or disabled on the fly by instantiating or deleting the
@@ -43,7 +43,7 @@ in the future.
 	callbacks into basic AI actions (moving, attacking) can potentially resolve that.
 
 	It can be difficult to modify AI variables at mob instantiation without an ugly
-	delay, as the ai_holder might not exist yet.
+	delay, as the ai_holdermight not exist yet.
 
 
 [Flow of Processing]
@@ -57,23 +57,23 @@ by a new AI subsystem. The AI subsystem contains a list of all active ai_holder
 objects, which is iterated every tick to process each individual ai_holder
 object attached to a mob.
 
-Each ai_holder actually has two 'tracks' for processing, a 'fast' track
+Each ai_holderactually has two 'tracks' for processing, a 'fast' track
 and a 'slow' track.
 
 The fast track is named handle_tactics(), and is called every 0.5 seconds.
 
 The slow track is named handle_strategicals(), and is called every 2 seconds.
 
-When an ai_holder is iterated on inside the AI subsystem's list, it first
+When an ai_holderis iterated on inside the AI subsystem's list, it first
 calls that ai_holder's handle_tactics(). It will then call that ai_holder's
 handle_strategicals() every fourth tick, effectively doing so every two seconds.
 
 Both functions do different things depending on which 'stance' the
-ai_holder is in. See the Stances section for more information.
+ai_holderis in. See the Stances section for more information.
 
 The fast track is for 'cheap' processing that needs to happen fast, such as
 walking along a path, initiating an attack, or firing a gun. The rate that
-it is called allows for the ai_holder to interact with the world through
+it is called allows for the ai_holderto interact with the world through
 its mob very often, giving a more convincing appearance of intelligence,
 allowing for faster reaction times to certain events, and allowing for
 variable attack speeds that would not be possible when bound to a
@@ -89,29 +89,29 @@ noticable due to the mob appearing to do things inbetween those two seconds.
 The purpose of having two tracks is to allow for 'fast' and 'slow' actions
 to be more easily encapsulated, and ensures that all ai_holders are syncronized
 with each other, as opposed to having individual tick counters inside all of
-the ai_holder instances.  It should be noted that handle_tactics() is always
+the ai_holderinstances.  It should be noted that handle_tactics() is always
 called first, before handle_strategicals() every two seconds.
 
 [Process Skipping]
 
-An ai_holder object can choose to enter a 'busy' state, or a 'sleep' state,
+An ai_holderobject can choose to enter a 'busy' state, or a 'sleep' state,
 in order to avoid processing.
 
-When busy, the AI subsystem will skip over the ai_holder until it is no
+When busy, the AI subsystem will skip over the ai_holderuntil it is no
 longer busy. The busy state is intended to be short-term, and is usually
 toggled by the mob when doing something with a delay, so that the ai_holder
 does not accidentally do something to inturrupt something important, like
 a special attack.
 
 The longer term alternative to the busy state is the sleep state. Unlike
-being busy, an ai_holder set to sleep will remove itself from the
+being busy, an ai_holderset to sleep will remove itself from the
 AI subsystem's list, meaning it will no longer process until something
 else 'wakes' it. This is usually done when the mob dies or a client
 logs into an AI-controlled mob (and the AI is not set to ignore that,
 with the autopilot variable). If the mob is revived, the AI will be
 awakened automatically.
 
-The ai_holder functions, and mob functions that are called by the
+The ai_holderfunctions, and mob functions that are called by the
 ai_holder, should not be sleep()ed, as it will block the AI Subsystem
 from processing the other ai_holders until the sleep() finishes.
 Delays on the mob typically have set waitfor = FALSE, or spawn() is used.
@@ -141,7 +141,7 @@ or movement.
 [Interfaces]
 
 Interfaces are a concept that is used to help bridge the gap between
-the ai_holder, and its mob. Because the (base) ai_holder is explicitly
+the ai_holder, and its mob. Because the (base) ai_holderis explicitly
 designed to not be specific to any type of mob, all that it knows is
 that it is controlling a /mob/living mob. Some mobs work very differently,
 between mob types such as /mob/living/simple_animal, /mob/living/silicon/robot,
@@ -152,7 +152,7 @@ mob itself deal with how to handle a specific task, such as attacking
 something, talking, moving, etc. Interfaces exist to do this.
 
 Interfaces are applied on the mob-side, and are generally specific to
-that mob type. This lets the ai_holder not have to worry about specific
+that mob type. This lets the ai_holdernot have to worry about specific
 implementations and instead just tell the Interface that it wants to attack
 something, or move into a tile. The AI does not need to know if the mob its
 controlling has hands, instead that is the mob's responsibility.
@@ -183,7 +183,7 @@ The say_list datum is applied to the mob itself and not held inside the AI datum
 
 [Subtypes]
 
-Some subtypes of ai_holder are more specialized, but remain compatible with
+Some subtypes of ai_holderare more specialized, but remain compatible with
 most mob types. There are many different subtypes that make the AI act different
 by overriding a function, such as kiting their target, moving up close while
 using ranged attacks, or running away if not cloaked.
@@ -193,7 +193,7 @@ to apply them to a different type of mob will likely result in a lot of bugs
 or ASSERT() failures. The xenobio slime AI is an example of the latter.
 
 To use a specific subtype on a mob, all that is needed is setting the mob's
-ai_holder_type to the subtype desired, and it will create that subtype when
+ai_holder to the subtype desired, and it will create that subtype when
 the mob is initialize()d. Switching to a subtype 'live' will require additional
 effort on the coder.
 

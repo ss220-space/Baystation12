@@ -41,7 +41,14 @@ GLOBAL_DATUM_INIT(tgui_default_state, /datum/tgui_state/default, new)
 		return
 
 	// The AI can interact with anything it can see nearby, or with cameras while wireless control is enabled.
-	if(!control_disabled && can_see(src_object))
+	var/can_see = (src_object in view(client.view, src))
+	if (!can_see)
+		if (is_in_chassis())
+			can_see = cameranet && cameranet.is_turf_visible(get_turf(src_object))
+		else
+			can_see = get_dist(src_object, src) <= client.view
+
+	if(!control_disabled && can_see)
 		return STATUS_INTERACTIVE
 	return STATUS_CLOSE
 

@@ -13,7 +13,7 @@
 	response_disarm = "gently pushes aside"
 	response_harm = "kicks"
 
-	ai_holder_type = /datum/ai_holder/simple_animal/passive/fox
+	ai_holder = /datum/ai_holder/simple_animal/passive/fox
 	say_list_type = /datum/say_list/fox
 
 /datum/ai_holder/simple_animal/passive/fox // Как кошка, только лиса ~bear1ake

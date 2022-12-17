@@ -64,33 +64,33 @@ SUBSYSTEM_DEF(machines)
 /datum/controller/subsystem/machines/fire(resumed, no_mc_tick)
 	var/timer
 	if (!resumed || current_step == SSMACHINES_PIPENETS)
-		timer = TICK_USAGE_REAL
+		timer = TICK_USAGE
 		process_pipenets(resumed, no_mc_tick)
-		cost_pipenets = MC_AVERAGE(cost_pipenets, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
+		cost_pipenets = MC_AVERAGE(cost_pipenets, TICK_DELTA_TO_MS(TICK_USAGE - timer))
 		if (state != SS_RUNNING)
 			return
 		current_step = SSMACHINES_MACHINERY
 		resumed = FALSE
 	if (current_step == SSMACHINES_MACHINERY)
-		timer = TICK_USAGE_REAL
+		timer = TICK_USAGE
 		process_machinery(resumed, no_mc_tick)
-		cost_machinery = MC_AVERAGE(cost_machinery, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
+		cost_machinery = MC_AVERAGE(cost_machinery, TICK_DELTA_TO_MS(TICK_USAGE - timer))
 		if(state != SS_RUNNING)
 			return
 		current_step = SSMACHINES_POWERNETS
 		resumed = FALSE
 	if (current_step == SSMACHINES_POWERNETS)
-		timer = TICK_USAGE_REAL
+		timer = TICK_USAGE
 		process_powernets(resumed, no_mc_tick)
-		cost_powernets = MC_AVERAGE(cost_powernets, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
+		cost_powernets = MC_AVERAGE(cost_powernets, TICK_DELTA_TO_MS(TICK_USAGE - timer))
 		if(state != SS_RUNNING)
 			return
 		current_step = SSMACHINES_POWER_OBJECTS
 		resumed = FALSE
 	if (current_step == SSMACHINES_POWER_OBJECTS)
-		timer = TICK_USAGE_REAL
+		timer = TICK_USAGE
 		process_power_objects(resumed, no_mc_tick)
-		cost_power_objects = MC_AVERAGE(cost_power_objects, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
+		cost_power_objects = MC_AVERAGE(cost_power_objects, TICK_DELTA_TO_MS(TICK_USAGE - timer))
 		if (state != SS_RUNNING)
 			return
 		current_step = SSMACHINES_PIPENETS

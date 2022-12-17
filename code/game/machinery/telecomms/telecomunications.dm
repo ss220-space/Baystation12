@@ -76,6 +76,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 			copy.transmission_method = 2
 			copy.frequency = signal.frequency
 			copy.data = signal.data.Copy()
+			copy.safe = signal.safe // TMP: If mob has no ckey - don't allow to modify its telecomms message, else - sanitize it
 
 			// Keep the "original" signal constant
 			if(!signal.data["original"])
@@ -356,7 +357,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 		The relay is needed in order to send information pass Z levels. It must be linked
 		with a HUB, the only other machine that can send/receive pass Z levels.
 	*/
-		
+
 /obj/machinery/telecomms/relay
 	name = "Telecommunication Relay"
 	icon = 'icons/obj/stationobjs.dmi'
@@ -423,7 +424,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	toggled = 1
 	produces_heat = 0
 	autolinkers = list("c_relay")
-	construct_state = /decl/machine_construction/tcomms/panel_closed/cannot_print //INF 
+	construct_state = /decl/machine_construction/tcomms/panel_closed/cannot_print //INF
 
 //[/INF]
 /*
