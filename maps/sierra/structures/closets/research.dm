@@ -28,8 +28,8 @@
 		/obj/item/clothing/suit/bio_suit/scientist,
 		/obj/item/clothing/head/bio_hood/scientist,
 		/obj/item/clothing/under/suit_jacket/corp/nanotrasen,
-		/obj/item/clothing/suit/storage/toggle/labcoat/science/nanotrasen,
-		/obj/item/clothing/suit/storage/toggle/labcoat/rd/nanotrasen,
+		/obj/item/clothing/suit/storage/toggle/labcoat/science,
+		/obj/item/clothing/suit/storage/toggle/labcoat/rd,
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/science,
 		/obj/item/device/radio/headset/heads/rd,
@@ -58,7 +58,7 @@
 
 /obj/structure/closet/secure_closet/xenoarchaeologist_sierra/WillContain()
 	return list(
-		/obj/item/clothing/suit/storage/toggle/labcoat/science/nanotrasen,
+		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/device/radio/headset/headset_sci,
 		/obj/item/clothing/mask/gas/alt,
 		/obj/item/material/clipboard,
@@ -85,7 +85,7 @@
 
 /obj/structure/closet/secure_closet/scientist_sierra/WillContain()
 	return list(
-		/obj/item/clothing/suit/storage/toggle/labcoat/science/nanotrasen,
+		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/device/radio/headset/headset_sci,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/tank/emergency/oxygen/engi,

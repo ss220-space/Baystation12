@@ -1,3 +1,4 @@
+/*
 /obj/item/storage/backpack/toxins
 	name = "research backpack"
 	desc = "It's a stain-resistant light backpack modeled for use in laboratories and other scientific institutions."
@@ -18,3 +19,4 @@
 	icon = 'maps/sierra/icons/obj/storages.dmi'
 	item_icons = list(slot_back_str = 'maps/sierra/icons/mob/back.dmi')
 	icon_state = "courierbagnat"
+*/

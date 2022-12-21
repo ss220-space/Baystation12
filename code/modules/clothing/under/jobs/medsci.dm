@@ -140,6 +140,7 @@
 	name = "scrubs"
 	desc = "A loose-fitting garment designed to provide minor protection against biohazards."
 	icon_state = "scrubs"
+	item_state = "scrubs"
 	worn_state = "scrubs"
 	gender_icons = 1
 

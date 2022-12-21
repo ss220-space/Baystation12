@@ -21,21 +21,19 @@
 	name = "\improper EXO polo and pants"
 	desc = "A fashionable polo and pair of trousers made from patented biohazard-resistant synthetic fabrics."
 	icon_state = "sciencewhite"
-	item_state = "w_suit"
+	item_state = "sciencewhite"
 	worn_state = "sciencewhite"
 	permeability_coefficient = 0.50
 	armor = list(
 		bio = ARMOR_BIO_MINOR
 		)
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under.dmi')
 	gender_icons = 1
-	starting_accessories = list(/obj/item/clothing/accessory/tunic)
 
 /obj/item/clothing/under/rank/scientist/corporate
 	name = "\improper EXO polo and pants"
 	desc = "A fashionable polo and pair of trousers made from patented biohazard-resistant synthetic fabrics."
 	icon_state = "smock"
-	item_state = "w_suit"
+	item_state = "smock"
 	worn_state = "smock"
 	permeability_coefficient = 0.50
 	armor = list(
@@ -52,14 +50,14 @@
 	name = "\improper EXO polo and pants"
 	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a Expeditionary Corps Organisation higher-up."
 	icon_state = "sciencewhite_exec"
-	item_state = "w_suit"
+	item_state = "sciencewhite_exec"
 	worn_state = "sciencewhite_exec"
-	starting_accessories = list(/obj/item/clothing/accessory/tunic/exec)
 
 /obj/item/clothing/under/rank/scientist/corporate/executive
 	name = "\improper EXO polo and pants"
 	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a Expeditionary Corps Organisation higher-up."
 	icon_state = "smockexec"
+	item_state = "smockexec"
 	worn_state = "smockexec"
 	starting_accessories = list(/obj/item/clothing/accessory/tunic/exec)
 
@@ -77,6 +75,7 @@
 	gender_icons = 1
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_under_resomi.dmi'
 		)
 
 /obj/item/clothing/under/rank/ntpilot
