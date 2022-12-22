@@ -81,8 +81,11 @@
 
 	overlays.Cut()
 	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
+	var/crappy_type_check
+	if(istype(src, /obj/item/modular_computer/telescreen) )
+		crappy_type_check++
 	if(os)
-		overlays += os.get_screen_overlay()
+		overlays += os.get_screen_overlay(crappy_type_check)
 		overlays += os.get_keyboard_overlay()
 
 	if(enabled)
@@ -120,7 +123,7 @@
 
 	if(loud)
 		visible_message("\The [src] shuts down.", range = 1)
-		
+
 	enabled = 0
 	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
 	if(os)
@@ -146,4 +149,3 @@
 /obj/item/modular_computer/get_cell()
 	if(battery_module)
 		return battery_module.get_cell()
-

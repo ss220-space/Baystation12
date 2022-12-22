@@ -68,17 +68,20 @@
 	handle_beam(start, direction)
 	handle_overbeam()
 
-	if (chargetype != OVERMAP_WEAKNESS_DROPPOD)
+	if (chargetype != OVERMAP_WEAKNESS_DROPPOD && chargetype != OVERMAP_WEAKNESS_ODST)
 		qdel(atomcharge)
 
 	//Some moron disregarded the cooldown warning. Let's blow in their face.
 	if(prob(cool_failchance()))
 		explosion(middle,rand(1,2),rand(2,3),rand(3,4))
-	next_shot = coolinterval + world.time
+	if(chargetype == OVERMAP_WEAKNESS_ODST)
+		next_shot = coolinterval * 0.1 + world.time //Cooldown reduced for odst
+	else
+		next_shot = coolinterval + world.time
 
 	//Success, but we missed.
 	if(prob(100 - cal_accuracy()))
-		if(chargetype == OVERMAP_WEAKNESS_DROPPOD)
+		if(chargetype == OVERMAP_WEAKNESS_DROPPOD || chargetype == OVERMAP_WEAKNESS_ODST)
 			atomcharge.forceMove(locate(rand(1,world.maxx),rand(1,world.maxy), GLOB.using_map.get_empty_zlevel())) //Remove it in case it's a droppod.
 		return TRUE
 
@@ -144,6 +147,15 @@
 			to_chat(L, SPAN_DANGER("Your body shakes violently, immense and agonising forces tearing it apart."))
 			L.forceMove(targetturf)
 			L.ex_act(1)
+	if(chargetype == OVERMAP_WEAKNESS_ODST)
+		if(targetturf.density)
+			targetturf.ex_act(1)
+		for(var/atom/A in targetturf)
+			A.ex_act(3)
+		charge.forceMove(targetturf)
+		//The disperser is infact a taxi
+		for(var/mob/living/L in charge)
+			to_chat(L, SPAN_DANGER("Your body shakes violently as the drop pod reaches it's destination."))
 	else
 		charge.fire(targetturf, strength, range)
 		qdel(charge)

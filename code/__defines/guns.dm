@@ -2,7 +2,7 @@
 #define CALIBER_PISTOL 				"10mmP" // INF, было #define CALIBER_PISTOL 			"10mm"
 #define CALIBER_PISTOL_FAST     	"5.7mmP" // INF
 #define CALIBER_PISTOL_SMALL 	    "9mmP" // INF, было #define CALIBER_PISTOL_SMALL 	"7mm"
-#define CALIBER_PISTOL_SMALL_MAGNUM "9mmR" 
+#define CALIBER_PISTOL_SMALL_MAGNUM "9mmR"
 #define CALIBER_PISTOL_MAGNUM 		"12.7mmP" // INF, было #define CALIBER_PISTOL_MAGNUM 	"15mm"
 #define CALIBER_PISTOL_FLECHETTE 	"4mmP" // INF, было #define CALIBER_PISTOL_FLECHETTE "4mm"
 #define CALIBER_PISTOL_BIG		    "11.4mmP"
@@ -19,6 +19,8 @@
 #define CALIBER_GYROJET				"20mmG"
 #define CALIBER_CAPS				"caps"
 #define CALIBER_DART				"darts"
+
+#define CALIBER_ROCKET	"rocket"
 
 #define HOLD_CASINGS	0 //do not do anything after firing. Manual action, like pump shotguns, or guns that want to define custom behaviour
 #define CLEAR_CASINGS	1 //clear chambered so that the next round will be automatically loaded and fired, but don't drop anything on the floor

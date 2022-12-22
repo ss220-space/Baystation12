@@ -41,6 +41,14 @@
 		/obj/item/storage/fancy/egg_box = 4
 	)
 
+/obj/structure/closet/secure_closet/freezer/fridge/empty
+	name = "refrigerator"
+	icon = 'icons/obj/closets/fridge.dmi'
+	icon_state = "freezer"
+	door_anim_squish = 0.22
+	door_anim_angle = 123
+	door_anim_time = 0
+
 /obj/structure/closet/secure_closet/freezer/money
 	name = "secure locker"
 	icon = 'icons/obj/closets/closet.dmi'

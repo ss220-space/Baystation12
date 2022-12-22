@@ -8,6 +8,7 @@ var/global/list/map_sectors = list()
 	icon_state = "start"
 	requires_power = 0
 	base_turf = /turf/unsimulated/map
+	dynamic_lighting = 0
 
 /turf/unsimulated/map
 	icon = 'icons/turf/space.dmi'
@@ -82,3 +83,9 @@ proc/toggle_move_stars(zlevel, direction)
 	var/area/A = get_area(T)
 	var/list/dimensions = A.get_dimensions()
 	return T.x <= TRANSITIONEDGE || T.x >= (dimensions["x"] - TRANSITIONEDGE + 1) || T.y <= TRANSITIONEDGE || T.y >= (dimensions["y"] - TRANSITIONEDGE + 1)
+
+/proc/get_overmap_sector(var/z)
+	if(GLOB.using_map.use_overmap)
+		return map_sectors["[z]"]
+	else
+		return null

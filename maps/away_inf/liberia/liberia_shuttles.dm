@@ -1,8 +1,12 @@
 // Submap shuttles.
 // Mule - Shuttle One, Port Side
 /obj/effect/overmap/visitable/ship/landable/mule
-	name = "Mule"
 	shuttle = "Mule"
+	scanner_name = "Mule"
+	scanner_desc = @{"[i]Registration[/i]: PRIVATE
+[i]Class[/i]: Small Shuttle
+[i]Transponder[/i]: Transmitting (CIV), non-hostile
+[b]Notice[/b]: Small private vessel"}
 	max_speed = 1/(2 SECONDS)
 	burn_delay = 1 SECONDS
 	vessel_mass = 5000

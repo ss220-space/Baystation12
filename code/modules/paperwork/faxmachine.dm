@@ -22,7 +22,9 @@ GLOBAL_LIST_EMPTY(adminfaxes) //cache for faxes that have been sent to admins
 	var/department = "Unknown" // our department
 	var/destination = null // the department we're sending to
 
-/obj/machinery/photocopier/faxmachine/New()
+/obj/machinery/photocopier/faxmachine/Initialize(mapload)
+	. = ..()
+
 	GLOB.allfaxes += src
 	if(!destination) destination = "[GLOB.using_map.boss_name]"
 	if( !(("[department]" in GLOB.alldepartments) || ("[department]" in admin_departments)) )
@@ -174,7 +176,7 @@ GLOBAL_LIST_EMPTY(adminfaxes) //cache for faxes that have been sent to admins
 		return 0	//You can't send faxes to "Unknown"
 
 	flick("faxreceive", src)
-	playsound(loc, "sound/effects/printer.ogg", 50, 1)
+	playsound(loc, "sound/machines/printer.ogg", 50, 1)
 
 
 	// give the sprite some time to flick
@@ -257,7 +259,7 @@ GLOBAL_LIST_EMPTY(adminfaxes) //cache for faxes that have been sent to admins
 	for(var/client/C in GLOB.admins)
 		if(check_rights((R_ADMIN|R_MOD),0,C))
 			to_chat(C,msg)
-			//C << 'sound/effects/printer.ogg'
+			C << 'sound/machines/printer.ogg'
 
 	// Webhooks don't parse the HTML on the paper, so we gotta strip them out so it's still readable.
 	var/summary = make_summary(sent)

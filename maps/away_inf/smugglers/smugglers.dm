@@ -2,8 +2,11 @@
 #include "../../away/mining/mining_areas.dm"
 
 /obj/effect/overmap/visitable/sector/smugglers
-	name = "asteroid station"
-	desc = "A small station built into an asteroid. No radio traffic detected."
+	scanner_name = "Strange Asteroid"
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[i]Class[/i]: Installation
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: A small station built into an asteroid. No radio traffic detected"}
 	icon_state = "object"
 	known = 0
 

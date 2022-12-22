@@ -129,6 +129,7 @@
 
 	#include "../away_inf/bearcat/bearcat.dm"
 	#include "../away_inf/blueriver/blueriver.dm"
+	#include "../away_inf/farfleet/farfleet.dm"
 	#include "../away_inf/liberia/liberia.dm"
 	#include "../away_inf/mining/mining.dm"
 	#include "../away_inf/sentinel/sentinel.dm"

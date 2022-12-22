@@ -1,6 +1,9 @@
 /obj/effect/overmap/visitable/sector/exoplanet/volcanic
-	name = "volcanic exoplanet"
-	desc = "A tectonically unstable planet, extremely rich in minerals."
+	scanner_name = "volcanic exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: D-Class Planetoid
+[i]Habitability[/i]>: Low (High Temperature)
+[b]Notice[/b]>: A tectonically unstable planet, extremely rich in minerals"}
 	color = "#9c2020"
 	planetary_area = /area/exoplanet/volcanic
 	rock_colors = list(COLOR_DARK_GRAY)

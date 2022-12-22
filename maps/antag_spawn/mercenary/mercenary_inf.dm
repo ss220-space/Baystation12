@@ -6,7 +6,7 @@
 /obj/effect/overmap/visitable/merc_base
 	name = "TCV Tersten Tenacity"
 	desc = "Sensor array detects a medium cargo vessel with high structural damage."
-	in_space = 1
+	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	icon_state = "ship"
 	hide_from_reports = TRUE
 	initial_generic_waypoints = list(
@@ -19,11 +19,16 @@
 	has_distress_beacon = "SOS - multiple breaches, possible hostiles"
 
 /obj/effect/overmap/visitable/ship/landable/merc
-	desc = "A military gunship of ICCG design. Scanner detects heavy modification to the framework of the vessel and no designation."
+	desc = "Spacefaring vessel. No IFF detected."
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[i]Class[/i]: UNKNOWN
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: Unregistered vessel"}
 	shuttle = "Desperado"
 	fore_dir = NORTH
 	vessel_size = SHIP_SIZE_SMALL
 	vessel_mass = 14000
+	contact_class = /decl/ship_contact_class/destroyer_escort
 
 /obj/effect/overmap/visitable/ship/landable/merc/New()
 	var/list/desperado_name = list(
@@ -59,7 +64,7 @@
 		"SFV Helios",
 		"SFV Terror"
 	)
-	name = pick(desperado_name)
+	scanner_name = pick(desperado_name)
 	for(var/area/map_template/merc_shuttle/A)
 		A.name = "\improper [name] - [A.name]"
 		GLOB.using_map.area_purity_test_exempt_areas += A.type

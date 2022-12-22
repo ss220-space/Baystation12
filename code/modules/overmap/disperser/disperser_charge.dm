@@ -62,3 +62,12 @@
 
 /obj/structure/ship_munition/disperser_charge/explosive/fire(turf/target, strength, range)
 	explosion(target,max(1,strength * range / 10),strength * range / 7.5,strength * range / 5)
+
+/obj/structure/closet/odst
+	name = "OFD droppod"
+	desc = "A crude droppod allowing the OFD to safely fire itself, with a living creature at a target. Oxygen not included. Designed to fit a single rifleman, but may be used to drop two soldiers in a pinch."
+	icon = 'icons/obj/closets/odst.dmi'
+	icon_state = "odst"
+	door_anim_time = 0
+	storage_capacity = (MOB_MEDIUM * 2)
+	var/chargedesc = "ODST"

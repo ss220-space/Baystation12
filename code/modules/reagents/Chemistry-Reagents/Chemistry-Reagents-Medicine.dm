@@ -810,6 +810,23 @@
 	scent = "fine tobacco smoke"
 	scent_descriptor = SCENT_DESC_FRAGRANCE
 
+
+/datum/reagent/tobacco/bad/soviet
+	name = "Horrible Tobacco"
+	value = 0
+	taste_description = "daydreams of our Homeland"
+	scent = "acrid tobacco smoke"
+	scent_intensity = /decl/scent_intensity/strong
+	scent_descriptor = SCENT_DESC_ODOR
+
+/datum/reagent/tobacco/bad/yava
+	name = "Horrible Tobacco"
+	value = 0
+	taste_description = "simpler times"
+	scent = "acrid tobacco smoke"
+	scent_intensity = /decl/scent_intensity/strong
+	scent_descriptor = SCENT_DESC_ODOR
+
 /datum/reagent/tobacco/bad
 	name = "Terrible Tobacco"
 	taste_description = "acrid smoke"

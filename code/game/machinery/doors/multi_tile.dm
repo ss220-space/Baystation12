@@ -129,6 +129,10 @@
 /obj/machinery/door/airlock/multi_tile/sol
 	door_color = COLOR_BLUE_GRAY
 
+/obj/machinery/door/airlock/multi_tile/terran
+	door_color = COLOR_DARK_BLUE_GRAY
+	stripe_color = COLOR_NT_RED
+
 /obj/machinery/door/airlock/multi_tile/maintenance
 	name = "Maintenance Access"
 	stripe_color = COLOR_AMBER
@@ -191,6 +195,10 @@
 /obj/machinery/door/airlock/multi_tile/glass/sol
 	door_color = COLOR_BLUE_GRAY
 	stripe_color = COLOR_AMBER
+
+/obj/machinery/door/airlock/multi_tile/glass/terran
+	door_color = COLOR_DARK_BLUE_GRAY
+	stripe_color = COLOR_NT_RED
 
 /obj/machinery/door/airlock/multi_tile/glass/freezer
 	door_color = COLOR_WHITE

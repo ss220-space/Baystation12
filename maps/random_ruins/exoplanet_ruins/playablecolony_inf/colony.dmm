@@ -2438,6 +2438,7 @@
 /area/map_template/colony/engineering)
 "eN" = (
 /obj/structure/table/marble,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/lino,
 /area/map_template/colony/messhall)
 "eO" = (
@@ -6418,7 +6419,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/mob/living/simple_animal/cow,
 /turf/simulated/floor/grass,
 /area/map_template/colony/hydroponics)
 "lf" = (
@@ -6519,10 +6519,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/exoplanet/concrete,
 /area/map_template/colony/mineralprocessing)
-"lo" = (
-/mob/living/simple_animal/cow,
-/turf/simulated/floor/grass,
-/area/map_template/colony/hydroponics)
 "lp" = (
 /obj/structure/hygiene/drain,
 /turf/simulated/floor/tiled/techfloor,
@@ -6759,7 +6755,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 2;
 	id_tag = "playablecolonymain_pump";
-	power_rating = 25000;
+	power_rating = 25000
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/colony/airlock)
@@ -7722,7 +7718,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/mob/living/simple_animal/chicken,
 /turf/simulated/floor/grass,
 /area/map_template/colony/hydroponics)
 "nm" = (
@@ -8713,10 +8708,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/exoplanet/concrete,
 /area/template_noop)
-"vt" = (
-/mob/living/simple_animal/chicken,
-/turf/simulated/floor/grass,
-/area/map_template/colony/hydroponics)
 "vJ" = (
 /obj/effect/floor_decal/techfloor{
 	icon_state = "techfloor_edges";
@@ -10172,7 +10163,7 @@ kj
 kj
 nl
 kj
-lo
+kj
 kj
 nl
 kD
@@ -10213,7 +10204,7 @@ kk
 kj
 kj
 kj
-vt
+kj
 kj
 kj
 kD

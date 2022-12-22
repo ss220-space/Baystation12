@@ -1,5 +1,6 @@
 /obj/effect/overmap/visitable/ship/landable/scavver_gantry
 	name = "ITV The Reclaimer"
+	scanner_name = "ITV The Reclaimer"
 	shuttle = "ITV The Reclaimer"
 	desc = "Sensor array detects a small vessel, claiming to be 'ITV The Reclaimer', an 'Armalev Industries Skyfin-E, Exoplanetary Suvival Pod'. Your sensors array describes the vessel exterior as 'irreconcilable' with the exterior of a 'Skyfin-E'"
 	fore_dir = SOUTH
@@ -14,6 +15,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/scavver_gantry/two
 	name = "ITV Vulcan"
+	scanner_name = "ITV Vulcan"
 	shuttle = "ITV Vulcan"
 	desc = "Sensor array detects a tiny vessel, claiming to be 'ITV Vulcan', a utility pod of unknown make."
 	fore_dir = NORTH
@@ -26,6 +28,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/scavver_gantry/three
 	name = "Unmarked shuttle"
+	scanner_name = "Unmarked shuttle"
 	shuttle = "ITV Spiritus"
 	desc = "Sensor array detects a tiny, unmarked vessel."
 	fore_dir = NORTH

@@ -1,9 +1,10 @@
 /obj/effect/overmap/visitable/ship/bearcat
 	name = "FTV Bearcat"
+	scanner_name = "FTV Bearcat"
 	color = "#00ffff"
 	start_x = 4
 	start_y = 4
-	base = 1
+	sector_flags = OVERMAP_SECTOR_KNOWN|OVERMAP_SECTOR_IN_SPACE|OVERMAP_SECTOR_BASE
 	vessel_mass = 60
 	max_speed = 1/(10 SECONDS)
 	burn_delay = 10 SECONDS

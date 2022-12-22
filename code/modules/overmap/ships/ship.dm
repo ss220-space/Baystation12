@@ -10,24 +10,41 @@ var/const/OVERMAP_SPEED_CONSTANT = (1 SECOND)
 		{speed_var = SANITIZE_SPEED((speed_var + v_diff)/(1 + speed_var*v_diff/(max_speed ** 2)))}
 // Uses Lorentzian dynamics to avoid going too fast.
 
+#define SENSOR_COEFFICENT 5
+
 /obj/effect/overmap/visitable/ship
-	name = "generic ship"
-	desc = "Space faring vessel."
+	name = "spacecraft"
+	scanner_name = "spacecraft"
+	desc = "This marker represents a spaceship. Scan it for more information."
+	scanner_desc = "Unknown spacefaring vessel."
 	icon_state = "ship"
+	alpha = 255
+
+	var/contact_icon_state
+	var/class = "spacefaring vessel"
 	var/moving_state = "ship_moving"
+	var/transponder_active = FALSE //do we instantly identify ourselves to any ship?
 	var/list/consoles
+
+	var/sensor_visiblity //chance of showing up on sensors at all
+	var/base_sensor_visibility
+	var/identification_difficulty = 100 //How difficult are we to tick up identification on?
 
 	var/vessel_mass = 10000             // tonnes, arbitrary number, affects acceleration provided by engines
 	var/vessel_size = SHIP_SIZE_LARGE	// arbitrary number, affects how likely are we to evade meteors
 	var/max_speed = 1/(1 SECOND)        // "speed of light" for the ship, in turfs/tick.
 	var/min_speed = 1/(2 MINUTES)       // Below this, we round speed to 0 to avoid math errors.
 	var/max_autopilot = 1 / (20 SECONDS) // The maximum speed any attached helm can try to autopilot at.
+	var/list/linked_computers = list() //Linked computers, used for ease of communication between computers.
+	var/list/known_ships = list() //List of ships known at roundstart - put types here.
 
 	var/list/speed = list(0,0)          // speed in x,y direction
 	var/list/position = list(0,0)       // position within a tile.
 	var/last_burn = 0                   // worldtime when ship last acceleated
 	var/burn_delay = 1 SECOND           // how often ship can do burns
-	var/fore_dir = NORTH                // what dir ship flies towards for purpose of moving stars effect procs
+
+	var/last_combat_roll = 0
+	var/last_combat_turn = 0
 
 	var/list/engines = list()
 	var/engines_state = 0 //global on/off toggle for all engines
@@ -36,17 +53,42 @@ var/const/OVERMAP_SPEED_CONSTANT = (1 SECOND)
 	var/skill_needed = SKILL_ADEPT  //piloting skill needed to steer it without going in random dir
 	var/operator_skill
 
+
+	var/ship_target = null
+	var/planet_target = null
+	var/missile_target
+	var/planet_x = 1
+	var/planet_y = 1
+	var/coord_target_x = 10
+	var/coord_target_y = 10
+
 /obj/effect/overmap/visitable/ship/Initialize()
 	. = ..()
+	contact_icon_state = initial(icon_state)
+	icon_state = "blank"
 	glide_size = world.icon_size
 	min_speed = round(min_speed, SHIP_MOVE_RESOLUTION)
 	max_speed = round(max_speed, SHIP_MOVE_RESOLUTION)
 	SSshuttle.ships += src
 	START_PROCESSING(SSobj, src)
+	base_sensor_visibility = get_base_sensor_visibility()
 
 /obj/effect/overmap/visitable/ship/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	SSshuttle.ships -= src
+
+	for(var/obj/machinery/computer/ship/console in linked_computers)
+		if(console.linked == src)
+			console.linked = null
+	linked_computers.Cut()
+
+	for(var/obj/machinery/computer/ship/sensors/console in SSmachines.machinery)
+		var/datum/overmap_contact/record = console.contact_datums[src]
+		if(record)
+			console.contact_datums[src] = null
+			console.contact_datums -= null
+			qdel(record)
+
 	if(LAZYLEN(consoles))
 		for(var/obj/machinery/computer/ship/machine in consoles)
 			if(machine.linked == src)
@@ -74,8 +116,20 @@ var/const/OVERMAP_SPEED_CONSTANT = (1 SECOND)
 
 /obj/effect/overmap/visitable/ship/get_scan_data(mob/user)
 	. = ..()
+	var/decl/ship_contact_class/class = decls_repository.get_decl(contact_class)
+	. += "<br>Class: [class.class_long], mass [vessel_mass] tons."
 	if(!is_still())
-		. += "<br>Heading: [get_heading_angle()], speed [get_speed() * 1000]"
+		. += {"\n\[i\]Heading\[/i\]: [get_heading_degrees()]\n\[i\]Velocity\[/i\]: [get_speed() * 1000]"}
+	else
+		. += {"\n\[i\]Vessel was stationary at time of scan.\[/i\]\n"}
+
+	var/life = 0
+
+	for(var/mob/living/L in GLOB.living_mob_list_)
+		if(L.z in map_z) //Things inside things we'll consider shielded, otherwise we'd want to use get_z(L)
+			life++
+
+	. += {"\[i\]Life Signs\[/i\]: [life ? life : "None"]"}
 
 //Projected acceleration based on information from engines
 /obj/effect/overmap/visitable/ship/proc/get_acceleration()
@@ -178,15 +232,17 @@ var/const/OVERMAP_SPEED_CONSTANT = (1 SECOND)
 		if(newloc && loc != newloc)
 			Move(newloc)
 			handle_wraparound()
+		update_icon()
+	sensor_visiblity = get_total_sensor_vis()
 
 /obj/effect/overmap/visitable/ship/on_update_icon()
 	pixel_x = position[1] * (world.icon_size/2)
 	pixel_y = position[2] * (world.icon_size/2)
 	if(!is_still())
-		icon_state = moving_state
+		contact_icon_state = moving_state
 		dir = get_heading()
 	else
-		icon_state = initial(icon_state)
+		contact_icon_state = initial(icon_state)
 	for(var/obj/machinery/computer/ship/machine in consoles)
 		if(machine.z in map_z)
 			for(var/weakref/W in machine.viewers)
@@ -267,6 +323,138 @@ var/const/OVERMAP_SPEED_CONSTANT = (1 SECOND)
 
 /obj/effect/overmap/visitable/ship/proc/get_landed_info()
 	return "This ship cannot land."
+
+
+/obj/effect/overmap/visitable/ship/proc/check_target(obj/effect/overmap/target)
+	if(target in view(7, src))
+		return TRUE
+	return FALSE
+
+/obj/effect/overmap/visitable/ship/proc/get_target(var/target_type)
+	if(target_type == TARGET_SHIP)
+		if(ship_target && check_target(ship_target))
+			return ship_target
+
+	if(target_type == TARGET_MISSILE)
+		if(missile_target && check_target(missile_target))
+			return missile_target
+
+	if(target_type == TARGET_POINT)
+		return list(coord_target_x, coord_target_y)
+
+	if(target_type == TARGET_PLANET)
+		if(planet_target && check_target(planet_target))
+			return list(planet_target, planet_x, planet_y)
+		else
+			return list(null, planet_x, planet_y)
+
+	if(target_type == TARGET_PLANETCOORD)
+		return list(planet_x, planet_y)
+
+	return null
+
+/obj/effect/overmap/visitable/ship/proc/set_target(var/target_type, var/obj/effect/overmap/target, var/target_x, var/target_y)
+	if(target_type == TARGET_SHIP)
+		if(target && check_target(target))
+			ship_target = target
+			return TRUE
+
+	if(target_type == TARGET_MISSILE)
+		if(target && check_target(target))
+			missile_target = target
+			return TRUE
+
+	if(target_type == TARGET_POINT)
+		coord_target_x = target_x
+		coord_target_y = target_y
+
+	if(target_type == TARGET_PLANET)
+		if(target && check_target(target))
+			planet_target = target
+			planet_x = target_x
+			planet_y = target_y
+			return TRUE
+		else
+			planet_x = target_x
+			planet_y = target_y
+
+	return FALSE
+
+
+
+obj/effect/overmap/visitable/ship/proc/get_base_sensor_visibility()
+	var/sensor_vis
+
+	sensor_vis = round((vessel_mass/SENSOR_COEFFICENT),1)
+
+	return sensor_vis
+
+/obj/effect/overmap/visitable/ship/proc/get_engine_sensor_increase()
+	var/thrust_calc
+	for(var/datum/ship_engine/E in engines)
+		if(E.is_on())
+			thrust_calc += (E.get_thrust_limit() * 2)
+
+	return min(thrust_calc, 50) //Engines should never increase sensor visibility by more than 50.
+
+/obj/effect/overmap/visitable/ship/proc/get_total_sensor_vis()
+	var/new_sensor_vis = (base_sensor_visibility + get_engine_sensor_increase())
+
+	return min(new_sensor_vis, 100)
+
+// Get heading in degrees (like a compass heading)
+/obj/effect/overmap/visitable/ship/proc/get_heading_degrees()
+	return (Atan2(speed[2], speed[1]) + 360) % 360 // Yes ATAN2(y, x) is correct to get clockwise degrees
+
+/obj/effect/overmap/visitable/ship/get_distress_info()
+	var/turf/T = get_turf(src) // Usually we're on the turf, but sometimes we might be landed or something.
+	var/x_to_use = T?.x || "UNK"
+	var/y_to_use = T?.y || "UNK"
+	return "\[X:[x_to_use], Y:[y_to_use], VEL:[get_speed() * 1000], HDG:[get_heading_degrees()]\]"
+
+/obj/effect/overmap/visitable/ship/proc/can_combat_roll()
+	if(!can_burn())
+		return FALSE
+	var/cooldown = min(vessel_mass / 100, 100) SECONDS
+	if(world.time >= (last_combat_roll + cooldown))
+		return TRUE
+	return FALSE
+
+/obj/effect/overmap/visitable/ship/proc/can_combat_turn()
+	if(!can_burn())
+		return FALSE
+	var/cooldown = min(vessel_mass / 200, 20) SECONDS
+	if(world.time >= (last_combat_turn + cooldown))
+		return TRUE
+	return FALSE
+
+/obj/effect/overmap/visitable/ship/proc/combat_roll(var/new_dir)
+	burn()
+	forceMove(get_step(src, new_dir))
+	for(var/mob/living/L in GLOB.living_mob_list_)
+		if(L.z in map_z)
+			to_chat(L, SPAN_DANGER("<font size=4>The ship rapidly inclines under your feet!</font>"))
+			if(!L.buckled)
+				var/turf/T = get_step_away(get_turf(L), get_step(L, new_dir), 10)
+				L.throw_at(T, 4, 3)
+			shake_camera(L, 2 SECONDS, 10)
+			sound_to(L, sound('sound/effects/combatroll.ogg'))
+	last_combat_roll = world.time
+
+/obj/effect/overmap/visitable/ship/proc/combat_turn(var/new_dir)
+	burn()
+	var/angle = 45
+	if(new_dir == WEST)
+		angle = -45
+	dir = turn(dir, angle)
+	for(var/mob/living/L in GLOB.living_mob_list_)
+		if(L.z in map_z)
+			to_chat(L, SPAN_DANGER("The ship rapidly turns under your feet!"))
+			if(!L.buckled)
+				L.Weaken(3)
+			shake_camera(L, 1 SECOND, 2)
+			sound_to(L, sound('sound/machines/thruster.ogg'))
+	last_combat_turn = world.time
 
 #undef MOVING
 #undef SANITIZE_SPEED

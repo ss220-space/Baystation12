@@ -218,6 +218,14 @@
 	armor_penetration = 35
 	penetration_modifier = 1
 
+/obj/item/projectile/bullet/rifle/ak
+	fire_sound = 'sound/weapons/gunshot/gunshot3.ogg'
+	damage = 25
+	armor_penetration = 20
+	penetration_modifier = 0.9
+	penetrating = 0
+	distance_falloff = 3
+
 /obj/item/projectile/bullet/rifle/shell
 	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
 	damage = 80

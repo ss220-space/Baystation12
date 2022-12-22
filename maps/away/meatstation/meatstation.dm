@@ -1,8 +1,11 @@
 #include "meatstation_areas.dm"
 
 /obj/effect/overmap/visitable/sector/meatstation
-	name = "Unpowered Research Station"
-	desc = "An unpowered research station. A large quantity of nearby debris blocks more detail."
+	scanner_name = "Unpowered Research Station"
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[i]Class[/i]: Installation
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: An unpowered research station. A large quantity of nearby debris blocks more detail"}
 	icon_state = "object"
 	known = 0
 	initial_generic_waypoints = list(
