@@ -1416,7 +1416,7 @@
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "ofd_storagep";
-	name = "OFD Ammunition Storage Shutters"
+	name = "Missile Storage Shutters"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -2125,6 +2125,7 @@
 	},
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper)
 "ei" = (
@@ -4308,13 +4309,13 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/aft)
 "pk" = (
+/obj/machinery/door/firedoor,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "ofd_storagep";
-	name = "OFD Ammunition Storage Shutters"
+	name = "Missile Storage Shutters"
 	},
-/obj/machinery/door/firedoor,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "pl" = (
@@ -4893,7 +4894,7 @@
 /area/ship/patrol/maintenance/upper)
 "Du" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "OFD Ammunition Storage"
+	name = "Missile Storage"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -9805,9 +9806,9 @@ aa
 aa
 aa
 aa
-ab
-ab
-ab
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9926,11 +9927,11 @@ aa
 aa
 aa
 aa
-ab
-ab
-FT
-ab
-ab
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10047,10 +10048,10 @@ aa
 aa
 aa
 aa
-aa
 ab
 ab
-lD
+ab
+ab
 ab
 ab
 aa
@@ -10167,16 +10168,16 @@ aa
 aa
 aa
 aa
-aa
-aa
 ab
 ab
 ab
-lD
+ab
+ab
+FT
 ab
 ab
 ab
-aa
+ab
 aa
 aa
 aa
@@ -10286,8 +10287,8 @@ aa
 aa
 aa
 aa
-ab
-ab
+aa
+aa
 ab
 ab
 ab
@@ -10300,9 +10301,9 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10407,8 +10408,8 @@ aa
 aa
 aa
 aa
-ab
-ab
+aa
+aa
 ab
 ab
 ab
@@ -10423,9 +10424,9 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10528,8 +10529,8 @@ aa
 aa
 aa
 aa
-ab
-ab
+aa
+aa
 ab
 ab
 ab
@@ -10546,9 +10547,9 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10670,7 +10671,7 @@ ab
 ab
 ab
 ab
-ab
+aa
 aa
 aa
 aa
