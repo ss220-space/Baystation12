@@ -132,7 +132,7 @@
 		/obj/item/storage/firstaid/individual/military,
 		/obj/item/clothing/accessory/storage/black_drop,
 		/obj/item/clothing/mask/gas/alt,
-		/obj/item/clothing/under/iccgn/utility
+		/obj/item/clothing/under/iccgn/utility,
 		/obj/item/storage/belt/utility/full,
 		/obj/item/device/multitool,
 		/obj/item/device/multitool/multimeter,
