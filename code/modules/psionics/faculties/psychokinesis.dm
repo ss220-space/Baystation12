@@ -90,3 +90,18 @@
 					machine.attack_hand(user)
 					return TRUE
 	return FALSE
+
+/decl/psionic_power/psychokinesis/net
+	name =            "Psionic Net"
+	cost =            20
+	cooldown =        40
+	min_rank =        PSI_RANK_PARAMOUNT
+	use_description = "Click on or otherwise activate an empty hand while on disarm intent to manifest a psychokinetic net. Throw it to capture your victim."
+	admin_log = FALSE
+
+/decl/psionic_power/psychokinesis/net/invoke(var/mob/living/user, var/mob/living/target)
+	if((target && user != target) || user.a_intent != I_DISARM)
+		return FALSE
+	. = ..()
+	if(.)
+		return new /obj/item/energy_net/psionic(user)

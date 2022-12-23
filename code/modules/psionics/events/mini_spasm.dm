@@ -9,6 +9,8 @@
 		"<b>THE SIGNAL THE SIGNAL THE SIGNAL THE SIGNAL THE</b>"
 		)
 
+	var/alarm_sound = 'sound/misc/foundation_alarm.ogg'
+
 /datum/event/minispasm/announce()
 	priority_announcement.Announce( \
 		"PRIORITY ALERT: SIGMA-[rand(50,80)] PSIONIC SIGNAL LOCAL TRAMISSION DETECTED (97% MATCH, NONVARIANT) \
@@ -16,7 +18,8 @@
 		exposure to active audio transmission equipment including radio headsets and intercoms \
 		for the duration of the signal broadcast.", \
 		"Cuchulain Sensor Array Automated Message" \
-		)
+	)
+	sound_to(world, sound(alarm_sound))
 
 /datum/event/minispasm/start()
 	var/list/victims = list()
@@ -34,7 +37,7 @@
 	set waitfor = 0
 
 	if(iscarbon(victim) && !victim.isSynthetic())
-		var/list/disabilities = list(NEARSIGHTED, EPILEPSY, TOURETTES, NERVOUS)
+		var/list/disabilities = list(NEARSIGHTED, EPILEPSY, NERVOUS)
 		for(var/disability in disabilities)
 			if(victim.disabilities & disability)
 				disabilities -= disability
@@ -56,5 +59,5 @@
 /datum/event/minispasm/end()
 	priority_announcement.Announce( \
 		"PRIORITY ALERT: SIGNAL BROADCAST HAS CEASED. Personnel are cleared to resume use of non-hardened radio transmission equipment. Have a nice day.", \
-		"Cuchulain Sensor Array Automated Message" \
-		)
+		"Cuchulain Sensor Array Automated Message", \
+		new_sound = 'sound/misc/foundation_restore.ogg' )
