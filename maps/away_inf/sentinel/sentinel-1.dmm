@@ -1997,11 +1997,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/lower)
-"dR" = (
-/obj/effect/paint/dark_gunmetal,
-/obj/effect/paint/dark_gunmetal,
-/turf/simulated/wall/r_wall,
-/area/ship/patrol/command/missiles)
 "dS" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -3357,6 +3352,9 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/corner/red,
 /obj/structure/closet/bombcloset,
+/obj/structure/sign/warning/bomb_range{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled,
 /area/ship/patrol/command/missiles)
 "gE" = (
@@ -3595,6 +3593,10 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/missile/antispace,
+/obj/structure/sign/warning/moving_parts{
+	dir = 4;
+	pixel_x = -34
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/command/missiles)
 "ha" = (
@@ -3613,11 +3615,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/paint/dark_gunmetal,
-/turf/simulated/wall/r_wall,
-/area/ship/patrol/command/missiles)
-"he" = (
-/obj/effect/paint/dark_gunmetal,
-/obj/structure/sign/warning/bomb_range,
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/command/missiles)
 "hf" = (
@@ -4573,7 +4570,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/sign/warning/vacuum{
 	dir = 4;
-	pixel_x = -45
+	pixel_x = -34
 	},
 /obj/structure/missile/he,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -8361,11 +8358,6 @@
 /obj/effect/paint/meatstation/lab,
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/command/missiles)
-"rh" = (
-/obj/structure/lattice,
-/obj/effect/paint/meatstation/lab,
-/turf/simulated/wall/r_wall,
-/area/ship/patrol/command/missiles)
 "rs" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -8625,8 +8617,7 @@
 /area/ship/patrol/command/missiles)
 "yr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/sign/warning/moving_parts{
-	dir = 4;
+/obj/structure/sign/warning/bomb_range{
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -8749,6 +8740,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/sign/warning/secure_area{
+	dir = 4;
+	pixel_x = -34
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/missiles)
 "CI" = (
@@ -8779,12 +8774,6 @@
 /obj/structure/sign/warning/hot_exhaust,
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/engine/port)
-"DB" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/effect/paint/meatstation/lab,
-/turf/simulated/wall/r_wall,
-/area/ship/patrol/command/missiles)
 "DJ" = (
 /obj/machinery/conveyor{
 	dir = 8;
@@ -9169,11 +9158,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/missiles)
-"Oo" = (
-/obj/effect/paint/dark_gunmetal,
-/obj/effect/paint/dark_gunmetal,
-/turf/simulated/wall/r_wall,
-/area/ship/patrol/medbay)
 "Op" = (
 /obj/effect/paint/meatstation/lab,
 /obj/structure/cable{
@@ -9612,11 +9596,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
-"ZZ" = (
-/obj/effect/paint/dark_gunmetal,
-/obj/structure/sign/warning/caution,
-/turf/simulated/wall/r_wall,
-/area/ship/patrol/command/missiles)
 
 (1,1,1) = {"
 aa
@@ -13950,7 +13929,7 @@ aa
 eF
 sZ
 rs
-rh
+qG
 gh
 qG
 SV
@@ -14070,7 +14049,7 @@ aa
 aa
 aa
 Xc
-DB
+qG
 gh
 gh
 hM
@@ -14194,8 +14173,8 @@ aa
 qt
 qG
 hM
-dR
-dR
+hM
+hM
 hM
 hN
 hM
@@ -14318,11 +14297,11 @@ hM
 hM
 hM
 hM
-he
+hM
 hO
 hM
 hM
-ZZ
+hM
 hM
 qt
 qG
@@ -14693,7 +14672,7 @@ Vm
 vz
 hM
 jk
-Oo
+jk
 FW
 FW
 aa
@@ -14814,8 +14793,8 @@ xy
 Lv
 XG
 hM
-Oo
-Oo
+jk
+jk
 jk
 FW
 FW
@@ -15172,7 +15151,7 @@ QP
 vR
 vR
 hM
-he
+hM
 hS
 hM
 jm
