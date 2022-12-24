@@ -773,11 +773,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/ninja_dojo/start)
 "cx" = (
-//obj/structure/closet/walllocker/medical/filled{
-	pixel_y = 32
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/ninja_dojo/start)
+/obj/structure/table/woodentable/walnut,
+/obj/item/paper_bin,
+/obj/item/pen/chameleon,
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
 "cy" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4;
@@ -983,6 +983,104 @@
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/floor/plating,
 /area/map_template/ninja_dojo/start)
+"fN" = (
+/obj/item/clothing/suit/storage/toggle/labcoat/foundation,
+/obj/structure/closet/cabinet,
+/obj/item/storage/box/syringes,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
+"gz" = (
+/obj/structure/bed/chair/armchair/brown,
+/obj/effect/landmark{
+	name = "paramountstart"
+	},
+/turf/simulated/floor/carpet/green,
+/area/map_template/ninja_dojo/dojo)
+"kd" = (
+/turf/simulated/floor/carpet/green,
+/area/map_template/ninja_dojo/dojo)
+"nR" = (
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
+/obj/item/book/manual/psionics,
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
+"oW" = (
+/obj/effect/landmark{
+	name = "paramountstart"
+	},
+/turf/simulated/floor/carpet,
+/area/map_template/ninja_dojo/dojo)
+"qb" = (
+/obj/effect/landmark{
+	name = "paramountstart"
+	},
+/turf/simulated/floor/carpet/green,
+/area/map_template/ninja_dojo/dojo)
+"wG" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/purple,
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
+"zd" = (
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
+"CF" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/beach/water/ocean{
+	icon_state = "seashallow"
+	},
+/area/map_template/ninja_dojo/dojo)
+"JW" = (
+/obj/structure/displaycase,
+/obj/item/material/knife/ritual,
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
+"Mu" = (
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 27
+	},
+/obj/item/storage/mirror{
+	dir = 4;
+	icon_state = "mirror";
+	pixel_x = -1;
+	pixel_y = 40
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/ninja_dojo/dojo)
+"NF" = (
+/obj/item/device/flashlight/lamp,
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
+"QW" = (
+/obj/effect/landmark/start{
+	name = "Paramount"
+	},
+/turf/simulated/floor/carpet/green,
+/area/map_template/ninja_dojo/dojo)
+"Ra" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/toy/figure/ninja,
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
+"Yu" = (
+/obj/machinery/psi_meter{
+	req_access = list("ACCESS_SYNDICATE")
+	},
+/turf/simulated/floor/wood/walnut,
+/area/map_template/ninja_dojo/dojo)
 
 (1,1,1) = {"
 aa
@@ -1232,7 +1330,7 @@ bL
 bL
 cq
 cp
-cx
+cF
 cE
 cp
 cp
@@ -1476,7 +1574,7 @@ aD
 aU
 aD
 bt
-bt
+oW
 bt
 bt
 aD
@@ -1633,8 +1731,8 @@ aa
 aa
 ab
 ac
-ac
-ac
+ad
+ad
 ad
 ad
 ad
@@ -1676,9 +1774,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+CF
+CF
 ad
 as
 aB
@@ -1719,9 +1817,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+Mu
+bE
 ad
 at
 aB
@@ -1762,9 +1860,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+bH
+bE
 ad
 au
 aC
@@ -1805,9 +1903,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+ad
+bD
 ad
 ad
 ad
@@ -1848,12 +1946,12 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
-ac
-ac
-ac
+ad
+fN
+aD
+aD
+aD
+aD
 al
 aD
 aD
@@ -1891,13 +1989,13 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-al
+ad
+JW
+aD
+cx
+bs
+aD
+bb
 aD
 aD
 bb
@@ -1934,13 +2032,13 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-al
+ad
+nR
+kd
+gz
+zd
+aD
+bb
 aD
 aD
 bb
@@ -1977,12 +2075,12 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
-ac
-ac
-ac
+ad
+bI
+kd
+kd
+Yu
+aD
 al
 aD
 aD
@@ -2020,9 +2118,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+ad
+bw
 ad
 ad
 ad
@@ -2063,9 +2161,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+Ra
+qb
 ad
 av
 aD
@@ -2106,9 +2204,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+bo
+QW
 ad
 aw
 aE
@@ -2149,9 +2247,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+NF
+wG
 ad
 av
 aD
@@ -2192,9 +2290,9 @@ aa
 aa
 ab
 ac
-ac
-ac
-ac
+ad
+ad
+ad
 ad
 ad
 ad

@@ -212,7 +212,7 @@
 			user.psi.backblast(rand(5,10))
 			return TRUE
 		to_chat(user, SPAN_WARNING("You clear \the [target]'s mind of ailments."))
-		to_chat(target, SPAN_WARNING("Your mind is cleared of ailments."))
+		to_chat(target, SPAN_WARNING("You feel like your mind became more focused. Your mind became empty from any worries and strong feelings. If there was any psychological aligments in your mind, they're gone. At least for now."))
 
 		var/coercion_rank = user.psi.get_rank(PSI_COERCION)
 		if(coercion_rank >= PSI_RANK_GRANDMASTER)
