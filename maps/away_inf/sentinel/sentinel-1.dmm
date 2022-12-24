@@ -3895,7 +3895,6 @@
 	dir = 8;
 	id = "bsap"
 	},
-/obj/structure/plasticflaps/airtight,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
