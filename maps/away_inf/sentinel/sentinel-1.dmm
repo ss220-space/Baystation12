@@ -7186,7 +7186,7 @@
 /obj/effect/floor_decal/industrial/warning/half,
 /obj/machinery/recharger/wallcharger{
 	dir = 8;
-	pixel_x = 24
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/barracks)
