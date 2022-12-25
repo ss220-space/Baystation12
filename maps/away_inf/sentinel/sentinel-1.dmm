@@ -4902,20 +4902,17 @@
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer"
 	},
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "jm" = (
 /obj/machinery/atmospherics/unary/cryo_cell,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "jn" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
@@ -4926,10 +4923,10 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "jq" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "jr" = (
@@ -5192,7 +5189,6 @@
 /area/ship/patrol/command/hangar)
 "jQ" = (
 /obj/structure/table/standard,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -5206,6 +5202,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "jR" = (
@@ -5214,7 +5211,6 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "jS" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
 	},
@@ -5222,6 +5218,7 @@
 	dir = 4;
 	icon_state = "warning"
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "jT" = (
@@ -5254,13 +5251,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /obj/structure/bed/chair/office/comfy/blue{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "jW" = (
@@ -5426,7 +5423,6 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/command/hangar)
 "kn" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/table/standard,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10;
@@ -5438,19 +5434,20 @@
 	dir = 8;
 	icon_state = "tube1"
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "ko" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "kp" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6;
 	icon_state = "warning"
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "kq" = (
@@ -5467,11 +5464,11 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "kr" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "ks" = (
@@ -5688,11 +5685,11 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "kN" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
 	icon_state = "warning"
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "kO" = (
@@ -6181,7 +6178,6 @@
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9;
 	icon_state = "warning"
@@ -6190,19 +6186,20 @@
 	dir = 8;
 	icon_state = "tube1"
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "lK" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5;
-	icon_state = "warning"
-	},
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5;
+	icon_state = "warning"
+	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "lL" = (
@@ -6460,7 +6457,6 @@
 	pixel_y = 3
 	},
 /obj/item/storage/firstaid/adv,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -6469,6 +6465,7 @@
 	pixel_x = -22;
 	req_access = list("ACCESS_CAVALRY")
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "ml" = (
@@ -6757,11 +6754,11 @@
 	pixel_y = 3
 	},
 /obj/item/storage/firstaid/fire,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10;
 	icon_state = "warning"
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "mO" = (
@@ -6771,7 +6768,6 @@
 	pixel_y = 3
 	},
 /obj/item/storage/firstaid/regular,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6;
 	icon_state = "warning"
@@ -6781,6 +6777,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "mP" = (
@@ -8792,7 +8789,6 @@
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/dock)
 "DV" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
 	icon_state = "warning"
@@ -8802,6 +8798,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/medbay)
 "DW" = (
