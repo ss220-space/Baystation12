@@ -5466,7 +5466,7 @@
 /area/verne/engineering/storage)
 "MK" = (
 /obj/machinery/door/airlock/research{
-	name = "Verme Xenoscience Workshop"
+	name = "Verne Xenoscience Workshop"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white/monotile,
