@@ -6,6 +6,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/verne
 	name = "SRV Venerable Catfish"
+	scanner_name = "SRV Venerable Catfish"
 	shuttle = "SRV Venerable Catfish"
 	desc = "An SSE-U17 long range shuttle, broadcasting SCGRV codes and the callsign \"SRV Verne-1 Venerable Catfish\"."
 	fore_dir = NORTH

@@ -137,6 +137,13 @@
 	icon_state = "riflecasing"
 	spent_icon = "riflecasing-spent"
 
+/obj/item/ammo_casing/rifle/ak
+	desc = "A rifle bullet casing."
+	caliber = CALIBER_RIFLE
+	projectile_type = /obj/item/projectile/bullet/rifle/ak
+	icon_state = "riflecasing"
+	spent_icon = "riflecasing-spent"
+
 /obj/item/ammo_casing/shell
 	name = "shell casing"
 	desc = "An antimaterial shell casing."
@@ -167,8 +174,15 @@
 	name = "rocket shell"
 	desc = "A high explosive designed to be fired from a launcher."
 	icon_state = "rocketshell"
-	projectile_type = /obj/item/missile
-	caliber = "rocket"
+	projectile_type = /obj/item/projectile/missile
+	caliber = CALIBER_ROCKET
+
+/obj/item/ammo_casing/rocket/rpg
+	name = "RG-7 shell "
+	desc = "A high explosive designed to be fired from a launcher."
+	icon_state = "rg-7"
+	projectile_type = /obj/item/projectile/missile
+	caliber = CALIBER_ROCKET
 
 /obj/item/ammo_casing/cap
 	name = "cap"

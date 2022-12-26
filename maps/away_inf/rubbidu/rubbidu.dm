@@ -1,7 +1,7 @@
 #include "rubbidu_areas.dm"
 
 /obj/effect/overmap/visitable/ship/rubbidu
-	name = "Ark"
+	scanner_name = "Ark"
 	desc = "A small unknown ship, judging by the structure is made of construction debris."
 	color = "#ffc466"
 	vessel_mass = 6000

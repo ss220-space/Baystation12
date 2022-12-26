@@ -17,6 +17,7 @@
 
 /obj/effect/overmap/visitable/ship/bearcat
 	name = "light freighter"
+	scanner_name = name
 	color = "#00ffff"
 	vessel_mass = 20000
 	max_speed = 1/(10 SECONDS)

@@ -313,7 +313,7 @@
 //Copypasta from beaker code
 /obj/item/reagent_containers/glass/jug
 	name = "jug"
-	desc = "A glass jug. You probably can hold here a compote!"
+	desc = "A glass jug. You probably can hold here a Kompot!"
 	icon = 'icons/obj/kuvshin.dmi'
 	icon_state = "kuvshin"
 	volume = 100

@@ -31,6 +31,7 @@
 //[INF]
 //	#include "../away_inf/adherent_base/adherent_base.dm" //flood system is too slow.
 	#include "../away_inf/blueriver/blueriver.dm"
+	#include "../away_inf/farfleet/farfleet.dm"
 //	#include "../away_inf/gunboat/gunboat.dm" - TORCH, doesn't maintenance (someone want to change it?)
 //	#include "../away_inf/marksman/marksman.dm" - TORCH, doesn't maintenance (someone want to change it?)
 //	#include "../away_inf/sentinel/sentinel.dm" - Не тестируется

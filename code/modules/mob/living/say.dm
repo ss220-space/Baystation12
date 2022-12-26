@@ -18,6 +18,7 @@ var/list/department_radio_keys = list(
 	  ":z" = "Entertainment",".z" = "Entertainment",
 	  ":y" = "Exploration",		".y" = "Exploration",
 	  ":f" = "SCG Patrol",	".f" = "SCG Patrol", //INF
+	  ":q" = "ICGN Ship",	".q" = "ICGN Ship", //INF
 	  ":k" = "Recon",		".k" = "Recon",	//Skrell Recon ship
 	  ":o" = "Response Team",".o" = "Response Team", //ERT
 	  ":j" = "Hailing", ".j" = "Hailing",
@@ -40,6 +41,7 @@ var/list/department_radio_keys = list(
 	  ":Z" = "Entertainment",".Z" = "Entertainment",
 	  ":Y" = "Exploration",		".Y" = "Exploration",
 	  ":F" = "SCG Patrol",	".F" = "SCG Patrol", //INF
+	  ":Q" = "ICGN Ship",	".Q" = "ICGN Ship", //INF
 	  ":K" = "Recon",		".K" = "Recon",	//Skrell Recon ship
 	  ":O" = "Response Team", ".O" = "Response Team",
 	  ":J" = "Hailing", ".J" = "Hailing",
@@ -62,6 +64,7 @@ var/list/department_radio_keys = list(
 	  ":я" = "Entertainment",".я" = "Entertainment",
 	  ":н" = "Exploration",		".н" = "Exploration",
 	  ":а" = "SCG Patrol",	".а" = "SCG Patrol", //INF
+	  ":й" = "ICGN Ship",	".й" = "ICGN Ship", //INF
 	  ":л" = "Recon",		".л" = "Recon",	//Skrell Recon ship
 	  ":щ" = "Response Team", ".щ" = "Response Team",
 	  ":о" = "Hailing", ".о" = "Hailing",
@@ -83,6 +86,7 @@ var/list/department_radio_keys = list(
 	  ":Я" = "Entertainment",".Я" = "Entertainment",
 	  ":Н" = "Exploration",		".Н" = "Exploration",
 	  ":А" = "SCG Patrol",	".А" = "SCG Patrol", //INF
+	  ":Й" = "ICGN Ship",	".Й" = "ICGN Ship", //INF
 	  ":Л" = "Recon",		".Л" = "Recon",	//Skrell Recon ship
 	  ":Щ" = "Response Team", ".Щ" = "Response Team",
 	  ":О" = "Hailing", ".О" = "Hailing",

@@ -3,6 +3,7 @@
 // Lepidopterax - Shuttle Two, Starboard Side
 /obj/effect/overmap/visitable/ship/landable/ascent_inf
 	name = "Trichopterax"
+	scanner_name = "Trichopterax"
 	color = COLOR_PURPLE
 	shuttle = "Trichopterax"
 	moving_state = "ship_moving"

@@ -235,7 +235,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/obj/item/gun/launcher/rocket,
+/obj/item/gun/projectile/rocket,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/specops)

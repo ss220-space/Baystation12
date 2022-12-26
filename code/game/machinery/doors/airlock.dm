@@ -153,6 +153,9 @@ var/list/airlock_overlays = list()
 /obj/machinery/door/airlock/sol
 	door_color = COLOR_BLUE_GRAY
 
+/obj/machinery/door/airlock/terran
+	door_color = COLOR_DARK_BLUE_GRAY
+
 /obj/machinery/door/airlock/civilian
 	stripe_color = COLOR_CIVIE_GREEN
 
@@ -217,6 +220,10 @@ var/list/airlock_overlays = list()
 /obj/machinery/door/airlock/glass/sol
 	door_color = COLOR_BLUE_GRAY
 	stripe_color = COLOR_AMBER
+
+/obj/machinery/door/airlock/glass/terran
+	door_color = COLOR_DARK_BLUE_GRAY
+	stripe_color = COLOR_NT_RED
 
 /obj/machinery/door/airlock/glass/freezer
 	door_color = COLOR_WHITE

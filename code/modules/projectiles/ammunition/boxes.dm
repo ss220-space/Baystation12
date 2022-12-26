@@ -304,6 +304,16 @@
 	max_ammo = 20
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/rifle/ak
+	name = "SkM magazine"
+	icon_state = "7.62x39mm"
+	mag_type = MAGAZINE
+	caliber = CALIBER_RIFLE
+	matter = list(MATERIAL_STEEL = 1800)
+	ammo_type = /obj/item/ammo_casing/rifle/ak
+	max_ammo = 25
+	multiple_sprites = 1
+
 /obj/item/ammo_magazine/mil_rifle
 	name = "assault rifle magazine"
 	icon_state = "bullup"

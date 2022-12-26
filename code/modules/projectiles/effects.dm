@@ -275,3 +275,18 @@
 
 /obj/effect/projectile/incen/impact
 	icon_state = "impact_incen"
+
+//----------------------------
+// psionic beams "GANGWAY"
+//----------------------------
+/obj/effect/projectile/psibeam
+	light_color = COLOR_PURPLE
+
+/obj/effect/projectile/psibeam/tracer
+	icon_state = "beam_psibeam"
+
+/obj/effect/projectile/psibeam/muzzle
+	icon_state = "muzzle_psibeam"
+
+/obj/effect/projectile/psibeam/impact
+	icon_state = "impact_psibeam"

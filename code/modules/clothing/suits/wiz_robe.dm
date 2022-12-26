@@ -42,6 +42,21 @@
 	body_parts_covered = HEAD|FACE|EYES|BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
+/obj/item/clothing/head/wizard/bondrewd_wiz
+	name = "Abyssal Helm"
+	desc = "A strange eyeless helmet, that radiates light from single purple vertical stripe in middle of it ."
+	icon_state = "boris_helmet"
+	item_state = "boris_helmet"
+	item_state_slots = list(
+		slot_l_hand_str = "helmet",
+		slot_r_hand_str = "helmet",
+		)
+	light_overlay = "helmet_light_boris"
+	max_pressure_protection = ENG_VOIDSUIT_MAX_PRESSURE
+	siemens_coefficient = 0.8
+	body_parts_covered = HEAD|FACE|EYES|BLOCKHAIR|BLOCKHEADHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+
 /obj/item/clothing/head/wizard/cap
 	name = "Gentlemans Cap"
 	desc = "A checkered gray flat cap woven together with the rarest of threads."
@@ -103,6 +118,14 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|HANDS|LEGS|FEET
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
 
+/obj/item/clothing/suit/wizrobe/bondrewd
+	name = "Abyssal Suit"
+	desc = "Sealed suit, black as darkest night. Has a white whistle attached to its neck."
+	icon_state = "boris_suit"
+	item_state = "boris_suit"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|HANDS|LEGS|FEET
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
+
 /obj/item/clothing/suit/wizrobe/psypurple
 	name = "purple robes"
 	desc = "Heavy, royal purple robes threaded with psychic amplifiers and weird, bulbous lenses. Do not machine wash."
@@ -141,4 +164,3 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 1.0
-

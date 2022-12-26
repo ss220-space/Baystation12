@@ -119,6 +119,8 @@ var/list/admin_verbs_fun = list(
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
 	/client/proc/cmd_admin_simulate_distant_explosion,
+	/client/proc/reveal_sensor_map,
+	/client/proc/hide_sensor_map,
 	/client/proc/create_dungeon,
 	/datum/admins/proc/ai_hologram_set,
 //[INF],

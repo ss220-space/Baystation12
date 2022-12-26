@@ -19,7 +19,7 @@
 /obj/effect/overmap/visitable/sector/ascent_caulship_ring
 	name = "Ruined Bluespace Jump Ring"
 	desc = "A ruined jumpdrive ring of Ascent design, used to transport individual ships at FTL speeds."
-	in_space = 1
+	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	icon_state = "event"
 	hide_from_reports = TRUE
 

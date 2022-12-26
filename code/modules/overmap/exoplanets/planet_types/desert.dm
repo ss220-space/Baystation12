@@ -1,6 +1,10 @@
 /obj/effect/overmap/visitable/sector/exoplanet/desert
 	name = "desert exoplanet"
-	desc = "An arid exoplanet with sparse biological resources but rich mineral deposits underground."
+	scanner_name = "desert exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: N-Class Planetoid
+[i]Habitability[/i]>: Moderate (High temperature)
+[b]Notice[/b]>: An arid exoplanet with sparse biological resources but rich mineral deposits underground"}
 	color = "#a08444"
 	planetary_area = /area/exoplanet/desert
 	rock_colors = list(COLOR_BEIGE, COLOR_PALE_YELLOW, COLOR_GRAY80, COLOR_BROWN)

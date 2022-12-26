@@ -1,10 +1,14 @@
 #include "yacht_areas.dm"
 
 /obj/effect/overmap/visitable/ship/yacht
-	name = "private yacht"
-	desc = "Sensor array is detecting a small vessel with unknown lifeforms on board"
+	scanner_name = "Private yacht"
+	scanner_desc = @{"[i]Registration[/i]: Aronai Sieyes
+[i]Class[/i]: Small Ship (Low Displacement)
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: Many lifeforms lifesigns detected"}
 	color = "#ffc966"
 	vessel_mass = 3000
+	contact_class = /decl/ship_contact_class/ship
 	max_speed = 1/(2 SECONDS)
 
 	initial_restricted_waypoints = list(
@@ -19,7 +23,7 @@
 	)
 
 /obj/effect/overmap/visitable/ship/yacht/New(nloc, max_x, max_y)
-	name = "IPV [pick("Razorshark", "Aurora", "Lighting", "Pequod", "Anansi")], \a [name]"
+	scanner_name = "IPV [pick("Razorshark", "Aurora", "Lighting", "Pequod", "Anansi")], \a [name]"
 	..()
 
 /datum/map_template/ruin/away_site/yacht

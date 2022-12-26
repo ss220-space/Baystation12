@@ -96,3 +96,36 @@
 								/obj/item/gun/energy/laser/dogan                 = TRADER_THIS_TYPE,
 								/obj/item/gun/projectile/automatic/machine_pistol/usi  = TRADER_THIS_TYPE,
 								/obj/item/clothing/accessory/storage/holster                    = TRADER_ALL)
+
+/datum/trader/terrangunshop
+	name = "Boris"
+	origin = "HelTek Arms Supply"
+	speech = list(TRADER_HAIL_GENERIC    = "Hello, Tovarisch! I am, Boris can provide you any gun in our very-very bolshoi spisok.",
+				TRADER_HAIL_DENY         = "Chto? Net, today i will not sell anything for duraks ilke you.",
+
+				TRADER_TRADE_COMPLETE    = "Spasibo!",
+				TRADER_NO_BLACKLISTED   = "What? Net, i can't buy this now. This shtuka ne lubit nelegal, sorry.",
+				TRADER_NO_GOODS    = "Net-net-net, tolko cash. Sorry.",
+				TRADER_NOT_ENOUGH  = "Hm? A, check tvoi balanse pojaluista. Tam maybe nedostatochno money.",
+				TRADER_HOW_MUCH          = "This thing are heavy. Tyazest' is good. Tyazest' is reliable. And it costs... VALUE.",
+
+				TRADER_COMPLEMENT_FAILURE   = "Chto? Net, ya ne delau discount for talking to me like this.",
+				TRADER_COMPLEMENT_SUCCESS = "Spasibo! Peredaite tovarischam, chto terrantsam skidki!",
+				TRADER_INSULT_GOOD       = "Thank you for... that quality... INSULT... from me!",
+				TRADER_INSULT_BAD        = "Thank you for... that quality... INSULT... from me!",
+				TRADER_INSULT_GOOD       = "Vrode bi prilichniy pokypatel, a govorite like gopnic.",
+				TRADER_INSULT_BAD        = "Ya znau tvoi IP tvoego merchant pad! You are very brave for man in missile range!"
+				)
+	compliment_increase = 0
+	insult_drop = 0
+
+	possible_trading_items = list(/obj/item/gun/projectile/pistol/military/alt            = TRADER_THIS_TYPE,
+								/obj/item/ammo_magazine/pistol/double                     = TRADER_THIS_TYPE,
+								/obj/item/gun/projectile/automatic/iccg_rifle        	  = TRADER_THIS_TYPE,
+								/obj/item/ammo_magazine/rifle 	             			  = TRADER_THIS_TYPE,
+								/obj/item/gun/projectile/automatic/aks74u                 = TRADER_THIS_TYPE,
+								/obj/item/gun/projectile/automatic/akrifle                = TRADER_THIS_TYPE,
+								/obj/item/gun/projectile/automatic/aksu 				  = TRADER_THIS_TYPE,
+								/obj/item/ammo_magazine/rifle/ak						  = TRADER_THIS_TYPE,
+								/obj/item/gun/projectile/rocket/oneuse/rpg18 	    	  = TRADER_THIS_TYPE,
+								/obj/item/clothing/accessory/storage/holster                    = TRADER_ALL)

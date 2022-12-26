@@ -3,7 +3,12 @@
 
 /obj/effect/overmap/visitable/sector/miningstation
 	name = "Orbital Mining Station"
-	desc = "An orbital Mining Station bearing authentication codes from Grayson Mining Industries, sensors show inconsistant lifesigns aboard the station. It is emitting a weak signal on a public frequency, with no other discernible radio traffic."
+	scanner_name = "Orbital Mining Station"
+	scanner_name = "Asteroid Mining Station"
+	scanner_desc = @{"[i]Registration[/i]: Grayson Mining Industries
+[i]Class[/i]: Installation
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: An orbital Mining Station bearing authentication codes from Grayson Mining Industries, sensors show inconsistant lifesigns aboard the station. It is emitting a weak signal on a public frequency, with no other discernible radio traffic."}
 	icon_state = "object"
 	known = 0
 	initial_generic_waypoints = list(
