@@ -2524,7 +2524,8 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/table/steel_reinforced,
 /obj/machinery/photocopier/faxmachine{
-	send_access = list()
+	send_access = list();
+	department = "Sol 5th Fleet Patrol Craft"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -3346,6 +3347,7 @@
 /obj/item/reagent_containers/ivbag/blood/OMinus,
 /obj/item/reagent_containers/ivbag/blood/OMinus,
 /obj/structure/iv_drip,
+/obj/structure/closet/crate/medical,
 /turf/simulated/floor/tiled/white,
 /area/ship/reaper)
 "gD" = (
