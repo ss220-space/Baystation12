@@ -828,7 +828,7 @@
 	},
 /area/bluespaceriver/ground)
 "cD" = (
-/obj/effect/landmark/map_data{
+/obj/effect/landmark/{
 	height = 2
 	},
 /turf/unsimulated/mineral{
