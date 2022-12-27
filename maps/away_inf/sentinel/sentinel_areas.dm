@@ -177,7 +177,7 @@
 	req_access = list(access_away_cavalry)
 
 /area/ship/patrol/maintenance/upper/munition
-	name = "\improper OFD Ammunition Storage"
+	name = "\improper Missile Storage"
 	req_access = list(access_away_cavalry)
 
 /area/ship/patrol/maintenance/upper/waste
@@ -223,15 +223,17 @@
 	icon_state = "purple"
 	req_access = list(access_away_cavalry)
 
-/area/ship/patrol/command/ofd
-	name = "\improper Obstruction Field Disperser"
+/area/ship/patrol/command/missiles
+	name = "\improper Missile Section"
 	icon_state = "yellow"
 	req_access = list(access_away_cavalry)
 
+/*
 /area/ship/patrol/command/lasers
 	name = "\improper Abandoned MRSP platform"
 	icon_state = "yellow"
 	req_access = list(access_away_cavalry)
+*/
 
 
 
