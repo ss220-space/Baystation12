@@ -2002,10 +2002,6 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/obj/structure/hygiene/sink{
-	dir = 4;
-	pixel_x = 22
-	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "aed" = (
@@ -5678,10 +5674,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck Hallway - Grove Branch";
-	dir = 4
-	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
 "akE" = (
@@ -5810,10 +5802,6 @@
 	dir = 2;
 	id_tag = "bar<-cafe";
 	name = "Bar Shutters"
-	},
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Bartenders'";
-	dir = 8
 	},
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -7289,6 +7277,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/random/date_based/christmas/tree{
+	pixel_x = 16;
+	pixel_y = 16
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cafe)
@@ -8891,6 +8883,9 @@
 "aqh" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/machinery/recharger,
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
 /turf/simulated/floor/carpet/orange,
 /area/crew_quarters/cafe)
 "aqi" = (
@@ -13357,7 +13352,7 @@
 	id_tag = "hydro<-bar";
 	name = "Hydroponics Shutters";
 	pixel_x = 24;
-	pixel_y = 6;
+	pixel_y = 1;
 	req_access = list("ACCESS_BAR")
 	},
 /obj/machinery/button/blast_door{
@@ -13365,12 +13360,16 @@
 	id_tag = "bar<-cafe";
 	name = "Bar Shutters";
 	pixel_x = 24;
-	pixel_y = -6;
+	pixel_y = -10;
 	req_access = list("ACCESS_BAR")
 	},
 /obj/machinery/jukebox/old,
 /obj/random/date_based/christmas/xmaslights,
 /obj/machinery/light/led/small,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Bartenders'";
+	dir = 8
+	},
 /turf/simulated/floor/wood/ebony,
 /area/crew_quarters/bar)
 "aya" = (
@@ -34485,7 +34484,9 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/game_room)
 "dSv" = (
-/obj/random/date_based/christmas/tree,
+/obj/random/date_based/christmas/tree{
+	pixel_x = 16
+	},
 /turf/simulated/floor/wood/mahogany,
 /area/crew_quarters/lounge_big)
 "dUI" = (
@@ -35851,7 +35852,7 @@
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -23;
-	pixel_y = 12
+	pixel_y = 10
 	},
 /obj/machinery/disposal/small{
 	dir = 4
@@ -37869,6 +37870,9 @@
 	pixel_y = 2
 	},
 /obj/structure/table/woodentable_reinforced/mahogany,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Cafe - Food Display"
+	},
 /turf/simulated/floor/wood/yew,
 /area/crew_quarters/cafe)
 "nVM" = (
@@ -38163,7 +38167,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/nano)
 "oIG" = (
-/obj/machinery/light{
+/obj/machinery/light/spot{
 	dir = 1
 	},
 /obj/structure/table/woodentable_reinforced/walnut,
@@ -38999,10 +39003,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced/airless,
 /area/space)
-"qMf" = (
-/obj/machinery/status_display,
-/turf/simulated/wall/prepainted,
-/area/maintenance/seconddeck/emergency)
 "qNk" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -41105,8 +41105,12 @@
 /obj/machinery/button/windowtint{
 	dir = 4;
 	id = "cap_windows";
-	pixel_x = -23;
-	pixel_y = 6
+	pixel_x = -21;
+	pixel_y = 5
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Cafe - Piano";
+	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/cafe)
@@ -41582,7 +41586,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/light{
+/obj/machinery/light/spot{
 	dir = 1
 	},
 /obj/structure/reagent_dispensers/water_cooler,
@@ -59351,7 +59355,7 @@ wQu
 wQu
 wQu
 wQu
-qMf
+wQu
 aqh
 pnB
 vzV
