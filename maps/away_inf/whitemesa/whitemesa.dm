@@ -13,10 +13,9 @@
 	start_x = 20
 	start_y = 20
 	initial_generic_waypoints = list(
-		"nav_blueriv_1",
-	)
-	initial_restricted_waypoints = list(
-		"Cometa" = list("nav_blueriver_shuttle"),
+		"nav_whitemesa_shuttle_dock",
+		"nav_mesa_shuttle_start",
+		"nav_mesa_shuttle_transition"
 	)
 
 /obj/effect/overmap/visitable/sector/whitemesa/New(nloc, max_x, max_y)
@@ -27,73 +26,79 @@
 	name = "White Mesa"
 	id = "awaysite_mesa"
 	description = "Half Life inspired underground base"
-	spawn_cost = 1 // WAS 0.5
+	spawn_cost = 0.01 // WAS 0.5
 	prefix = "maps/away_inf/"
 	suffixes = list("whitemesa/white_mesa1.dmm", "whitemesa/white_mesa2.dmm", "whitemesa/white_mesa3.dmm")
-	shuttles_to_initialise = list(/datum/shuttle/autodock/multi/antag/mesa_shuttle)
+	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/mesamule)
 
-/datum/shuttle/autodock/multi/antag/mesa_shuttle
-	name = "Mesa Shuttle"
-	warmup_time = 7
+// Submap shuttles.
+// Mule - Shuttle One, Port Side
+/obj/effect/overmap/visitable/ship/landable/mesamule
+	shuttle = "MesaMule"
+	scanner_name = "Unknown Shuttle"
+	scanner_desc = @{"[i]Registration[/i]: PRIVATE
+[i]Class[/i]: Small Shuttle
+[i]Transponder[/i]: Transmitting (CIV), non-hostile
+[b]Notice[/b]: Small private vessel"}
+	max_speed = 1/(2 SECONDS)
+	burn_delay = 1 SECONDS
+	vessel_mass = 5000
+	fore_dir = WEST
+	skill_needed = SKILL_BASIC
+	vessel_size = SHIP_SIZE_SMALL
+
+/obj/machinery/computer/shuttle_control/explore/mesamule
+	name = "shuttle control console"
+	shuttle_tag = "MesaMule"
+
+/area/white_mesa/mesamule
+	name = "Mesa Mule Area"
+	icon_state = "yellow"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	req_access = list()
+
+/obj/effect/shuttle_landmark/mesamule/start
+	name = "MesaMule Docked"
+	landmark_tag = "nav_mesamule_start"
+	docking_controller = "mesamule_port_dock"
+//	base_area = /area/liberia/DockingHall
+//	movable_flags = MOVABLE_FLAG_EFFECTMOVE
+
+/datum/shuttle/autodock/overmap/mesamule
+	name = "MesaMule"
+	warmup_time = 5
+	current_location = "nav_mesamule_start"
+	range = 2
+	dock_target = "mesamule_port_shuttle_dock"
+	shuttle_area = list(/area/white_mesa/mesamule)
 	defer_initialisation = TRUE
-	destination_tags = list(
-		"nav_whitemesa_shuttle_dock",
-		"nav_mesa_shuttle_start"
-		)
-	shuttle_area = /area/map_template/mesa_shuttle/start
-	dock_target = "rescue_shuttle"
-	current_location = "nav_mesa_shuttle_start"
-	landmark_transition = "nav_mesa_shuttle_transition"
-	home_waypoint = "nav_mesa_shuttle_start"
-	announcer = "Proximity Sensor Array"
-	arrival_message = "Attention, vessel detected entering vessel proximity."
-	departure_message = "Attention, vessel detected leaving vessel proximity."
+	flags = SHUTTLE_FLAGS_PROCESS
+	skill_needed = SKILL_BASIC
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling
-
-/obj/effect/shuttle_landmark/mesa_shuttle/start
-	name = "White Mesa Landing Zone"
-	landmark_tag = "nav_mesa_shuttle_start"
-	docking_controller = "rescue_base"
-	base_turf = /turf/unsimulated/floor/rescue_base
-
-/obj/effect/shuttle_landmark/whitemesa/internim
-	name = "In transit"
-	landmark_tag = "nav_mesa_shuttle_transition"
-
-/obj/effect/shuttle_landmark/whitemesa/dock
-	name = "Sierra Docking Port"
-	landmark_tag = "nav_whitemesa_shuttle_dock"
-	docking_controller = "rescue_shuttle_dock_airlock"
-
-/area/map_template/mesa_shuttle/start
-	name = "\improper Mesa Shuttle Start"
-	icon_state = "shuttlered"
-	req_access = list(access_cent_general)
-	base_turf = /turf/unsimulated/floor/rescue_base
 
 	//////////
 	//TURFS///
 	/////////
 
-/turf/simulated/floor/away_inf/whitemesa/Zen_acid
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_acid
 	name = "Green Acid"
 	desc = "It's unsafe to touch"
 	icon = 'acid.dmi'
 	icon_state = "riverwater_motion"
-	temperature = 233
+	temperature = 293
+	color = "#33ff00"
 
-/turf/simulated/floor/away_inf/whitemesa/Zen/Initialize()
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_acid/Initialize()
 	.=..()
 
 	set_light(0.7, 1, 5, l_color = "#3cff00")
 
-/turf/simulated/floor/away_inf/whitemesa/Zen_floor
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor
 	name = "Xen floor"
 	desc = "Am I really here?"
 	icon = 'xen_turfs.dmi'
 	icon_state = "xen_turf"
-	temperature = 233
-	color = "#23685c"
+	temperature = 293
 
 /turf/unsimulated/wall/away_inf/whitemesa/Zen
 	name = "alien wall"
@@ -102,10 +107,10 @@
 	icon_state = "evilwall_1"
 	opacity = TRUE
 	density = TRUE
-	temperature = 233
+	temperature = 293
 	color = "#3cff00"
 
-/turf/unsimulated/wall/away_inf/blueriver/livingwall/Initialize()
+/turf/unsimulated/wall/away_inf/whitemesa/Zen/Initialize()
 	.=..()
 
 	if(prob(80))

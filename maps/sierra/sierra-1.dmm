@@ -9,10 +9,6 @@
 	},
 /turf/space,
 /area/space)
-"ac" = (
-/obj/effect/shuttle_landmark/sierra/deck1/guppy,
-/turf/space,
-/area/space)
 "ad" = (
 /obj/effect/shuttle_landmark/skipjack/deck1,
 /turf/space,
@@ -21803,12 +21799,10 @@
 "Is" = (
 /turf/space,
 /area/space)
-"It" = (
-/obj/effect/shuttle_landmark/ert/deck1,
-/turf/space,
-/area/space)
 "Iu" = (
 /obj/effect/shuttle_landmark/ert/dock,
+/obj/effect/shuttle_landmark/sierra/deck1/guppy,
+/obj/effect/shuttle_landmark/ert/deck1,
 /turf/space,
 /area/space)
 "Iv" = (
@@ -38651,7 +38645,7 @@ Is
 Is
 Is
 Is
-It
+Is
 Is
 Is
 Is
@@ -52111,7 +52105,7 @@ Is
 Is
 Is
 Is
-ac
+Is
 Is
 Is
 Is

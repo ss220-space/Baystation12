@@ -106,7 +106,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/scrap/command/bridge)
 "ap" = (
-/obj/effect/landmark/{
+/obj/effect/landmark/map_data{
 	height = 2
 	},
 /turf/space,
