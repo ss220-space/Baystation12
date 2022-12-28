@@ -6,10 +6,15 @@
 	maintain_cost = 1
 	icon_state = "psiblade_short"
 
+	item_state_slots = list(
+		slot_l_hand_str = "psiblade",
+		slot_r_hand_str = "psiblade"
+		)
+
 /obj/item/psychic_power/psiblade/master
 	force = 20
 	maintain_cost = 2
-	
+
 /obj/item/psychic_power/psiblade/master/grand
 	force = 30
 	maintain_cost = 3

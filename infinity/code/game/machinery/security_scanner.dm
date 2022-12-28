@@ -33,7 +33,7 @@
 	// Banned items
 	var/list/banned_items = list(/obj/item/gun, /obj/item/melee, /obj/item/grenade)
 	var/list/storage_types = list(/obj/item/storage, /obj/item/clothing/suit/storage, /obj/structure/closet)
-	var/list/whitelisted_items = list(/obj/item/grenade/chem_grenade/cleaner, /obj/item/rig_module/mounted/plasmacutter)
+	var/list/whitelisted_items = list(/obj/item/grenade/chem_grenade/cleaner, /obj/item/rig_module/mounted/plasmacutter, /obj/item/gun/projectile/revolver/foundation)
 
 	var/report_scans = FALSE
 

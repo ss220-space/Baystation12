@@ -344,8 +344,8 @@
 	icon_state = "beam_psibeam"
 	fire_sound='sound/weapons/Laser2.ogg'
 	damage = 20
-	agony = 4
-	eyeblur = 4
+	agony = 6
+	eyeblur = 6
 
 	muzzle_type = /obj/effect/projectile/psibeam/muzzle
 	tracer_type = /obj/effect/projectile/psibeam/tracer
@@ -356,22 +356,22 @@
 	icon_state = "beam_psibeam"
 	fire_sound='sound/weapons/Laser2.ogg'
 	damage = 15
-	agony = 2
-	eyeblur = 2
+	agony = 4
+	eyeblur = 4
 
 /obj/item/projectile/beam/psibeam/large
 	name = "bright psionic beam"
 	icon_state = "beam_psibeam"
 	fire_sound = 'sound/weapons/Laser2.ogg'
 	damage = 25
-	agony = 6
-	eyeblur = 6
+	agony = 8
+	eyeblur = 8
 	life_span = 3
 
 /obj/item/projectile/beam/psibeam/large/on_hit(var/atom/target, var/blocked = 0)
 	..()
 	if(isliving(target))
 		var/mob/living/L = target
-		L.adjust_fire_stacks(rand(1,3))
+		L.adjust_fire_stacks(rand(2,3))
 		if(L.fire_stacks >= 3)
 			L.IgniteMob()
