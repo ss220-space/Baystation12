@@ -17494,7 +17494,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/device/radio/beacon,
 /obj/effect/catwalk_plated,
 /obj/structure/disposalpipe/sortjunction{
 	dir = 4;
@@ -17707,7 +17706,6 @@
 	name = "Monro";
 	will_patrol = 1
 	},
-/obj/item/device/radio/beacon,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -27457,7 +27455,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/item/device/radio/beacon,
 /obj/machinery/light,
 /obj/machinery/computer/guestpass{
 	pixel_y = -32
@@ -27636,9 +27633,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/structure/closet/walllocker/medical/filled{
-	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -39757,14 +39751,6 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
 	},
-/obj/machinery/button/blast_door{
-	dir = 1;
-	id_tag = "misclab";
-	name = "Test Chamber Blast Doors";
-	pixel_x = 6;
-	pixel_y = 25;
-	req_access = list("ACCESS_RESEARCH")
-	},
 /obj/machinery/button/ignition{
 	id_tag = "Xenobio";
 	pixel_x = 7;
@@ -41444,6 +41430,9 @@
 /obj/machinery/air_sensor{
 	id_tag = "testchamber_sensor"
 	},
+/obj/machinery/computer/modular/preset/research{
+	dir = 8
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)
 "qaE" = (
@@ -41818,6 +41807,8 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/machinery/artifact_scanpad,
+/obj/structure/anomaly_container,
 /turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)
 "scp" = (
@@ -43142,6 +43133,14 @@
 	pressure_checks = 2;
 	pressure_checks_default = 2;
 	pump_direction = 0
+	},
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "misclab";
+	name = "Test Chamber Blast Doors";
+	pixel_x = 6;
+	pixel_y = 25;
+	req_access = list("ACCESS_RESEARCH")
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)

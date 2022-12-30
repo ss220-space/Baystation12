@@ -4,7 +4,7 @@
 	id = "planetsite_bunker"
 	description = "Bunch of monoliths surrounding an artifact."
 	suffixes = list("bunker/bunker.dmm")
-	spawn_cost = 1
+	spawn_cost = 2000
 
 /obj/machinery/telecomms/relay/preset/bunker
 	id = "Bunker Relay"

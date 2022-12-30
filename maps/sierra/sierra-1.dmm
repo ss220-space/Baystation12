@@ -1339,15 +1339,6 @@
 "cK" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/thirddeck/fore)
-"cL" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden,
-/obj/item/device/radio/beacon,
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/techfloor,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/hallway/primary/thirddeck/fore)
 "cM" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -5500,9 +5491,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/item/device/radio/beacon/anchored{
-	level = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable/cyan{
@@ -11357,7 +11345,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/device/radio/beacon,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
@@ -11918,7 +11905,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/device/radio/beacon,
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -15072,17 +15058,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/thirddeck/fore)
-"xo" = (
-/obj/item/device/radio/beacon,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
-/area/storage/primary)
 "xp" = (
 /obj/structure/sign/warning/compressed_gas{
 	dir = 8;
@@ -15329,16 +15304,6 @@
 /obj/machinery/status_display/supply_display,
 /turf/simulated/wall/prepainted,
 /area/hallway/primary/thirddeck/central_stairwell)
-"xM" = (
-/obj/item/device/radio/beacon,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/hangar)
 "xN" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -19110,9 +19075,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/item/device/radio/beacon/anchored{
-	level = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -21799,12 +21761,6 @@
 "Is" = (
 /turf/space,
 /area/space)
-"Iu" = (
-/obj/effect/shuttle_landmark/ert/dock,
-/obj/effect/shuttle_landmark/sierra/deck1/guppy,
-/obj/effect/shuttle_landmark/ert/deck1,
-/turf/space,
-/area/space)
 "Iv" = (
 /obj/effect/shuttle_landmark/sierra/deck1/exploration_shuttle,
 /turf/space,
@@ -23669,9 +23625,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/guppy_hangar/start)
 "Ls" = (
-/obj/item/device/radio/beacon/anchored{
-	level = 1
-	},
 /obj/structure/cable/cyan{
 	d1 = 1;
 	d2 = 2;
@@ -26351,6 +26304,17 @@
 /obj/effect/paint/nt_white,
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/airlock)
+"PQ" = (
+/obj/effect/shuttle_landmark/ert/deck1{
+	name = "Docking Point"
+	},
+/obj/effect/shuttle_landmark/mesashuttle/dock,
+/obj/effect/shuttle_landmark/ert/dock,
+/obj/effect/shuttle_landmark/sierra/deck1/guppy{
+	name = "Docking Poin to Sierra"
+	},
+/turf/space,
+/area/space)
 "PR" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/thirddeck/aft)
@@ -41036,7 +41000,7 @@ LV
 Mg
 TZ
 cv
-cL
+cA
 jX
 uA
 Ca
@@ -45888,7 +45852,7 @@ Vy
 zK
 jI
 xb
-xo
+xb
 TQ
 Fb
 Xw
@@ -45921,8 +45885,8 @@ Is
 Is
 Is
 Is
+PQ
 Is
-Iu
 Is
 Is
 Is
@@ -53161,7 +53125,7 @@ VF
 Yr
 VR
 KH
-xM
+KH
 Zr
 Wc
 ZD

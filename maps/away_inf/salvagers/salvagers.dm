@@ -78,7 +78,7 @@
 	description = "A light trader vessel."
 	prefix = "maps/away_inf/"
 	suffixes = list("salvagers/salvagers.dmm")
-	spawn_cost = 0
+	spawn_cost = 2000
 	accessibility_weight = 10
 	template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
 

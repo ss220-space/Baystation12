@@ -13,10 +13,9 @@
 	description = "A Merchant ship." //Описание
 	prefix = "maps/away_inf/" //Префикс
 	suffixes = list("liberia/liberia.dmm") //Суффикс
-	spawn_cost = 0 //Стоимость самой авейки
+	spawn_cost = 2000 //Стоимость самой авейки
 	player_cost = 0 //Стоимость авейки в игроках
-	template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
-	spawn_weight = 50 //HABITABLE SHIPS SPAWN | Шанс спавна. Нельзя ставить 0, иначе подбор авеек сломается. Дробные допускаются, желательно до сотых ~bear1ake
+	spawn_weight = 999 //HABITABLE SHIPS SPAWN | Шанс спавна. Нельзя ставить 0, иначе подбор авеек сломается. Дробные допускаются, желательно до сотых ~bear1ake
 	//Инициализация шаттлов
 	shuttles_to_initialise = list(
 		/datum/shuttle/autodock/overmap/mule

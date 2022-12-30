@@ -304,9 +304,6 @@
 /obj/effect/shuttle_landmark/escape_pod/out/pod4,
 /turf/space,
 /area/space)
-"dB" = (
-/turf/space,
-/area/space)
 "dQ" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 0;
@@ -30475,7 +30472,7 @@ ba
 ba
 ba
 ba
-dB
+ba
 ba
 ba
 ba
