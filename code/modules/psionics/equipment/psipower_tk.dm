@@ -85,7 +85,7 @@
 		else
 			if(!focus.anchored)
 				var/user_rank = owner.psi.get_rank(PSI_PSYCHOKINESIS)
-				focus.throw_at(target, user_rank*1.5, user_rank*2, owner)
+				focus.throw_at(target, user_rank*1.2, user_rank*1.6, owner)
 			sleep(1)
 			sparkle()
 		owner.drop_from_inventory(src)

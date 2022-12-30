@@ -70,6 +70,7 @@
 		/obj/item/clothing/accessory/storage/holster/thigh,
 		/obj/item/clothing/accessory/armorplate/merc,
 		/obj/item/clothing/head/helmet/tactical,
+		/obj/item/clothing/under/iccgn/pt,
 		/obj/item/storage/backpack/satchel/pocketbook
 	)
 
@@ -101,6 +102,7 @@
 		/obj/item/clothing/accessory/storage/holster/thigh,
 		/obj/item/clothing/accessory/armorplate/merc,
 		/obj/item/clothing/head/helmet/tactical,
+		/obj/item/clothing/under/iccgn/pt,
 		/obj/item/storage/backpack/satchel/pocketbook
 	)
 
@@ -116,6 +118,7 @@
 		/obj/item/clothing/mask/gas/alt,
 		/obj/item/combitool,
 		/obj/item/clothing/gloves/thick,
+		/obj/item/clothing/under/iccgn/utility,
 		/obj/item/storage/backpack/satchel/pocketbook/navy
 	)
 
@@ -129,12 +132,14 @@
 		/obj/item/storage/firstaid/individual/military,
 		/obj/item/clothing/accessory/storage/black_drop,
 		/obj/item/clothing/mask/gas/alt,
+		/obj/item/clothing/under/iccgn/utility,
 		/obj/item/storage/belt/utility/full,
 		/obj/item/device/multitool,
 		/obj/item/device/multitool/multimeter,
 		/obj/item/clothing/glasses/welding/superior,
 		/obj/item/clothing/head/hardhat/orange,
 		/obj/item/clothing/suit/storage/hazardvest,
+		/obj/item/clothing/under/iccgn/utility,
 		/obj/item/combitool,
 		/obj/item/storage/backpack/satchel/pocketbook/navy
 	)
@@ -159,6 +164,7 @@
 		/obj/item/clothing/under/rank/medical/scrubs/black,
 		/obj/item/clothing/head/surgery/black,
 		/obj/item/clothing/suit/storage/hazardvest/white,
+		/obj/item/clothing/under/iccgn/utility,
 		/obj/item/storage/backpack/satchel/pocketbook/navy
 	)
 
@@ -180,6 +186,7 @@
 		/obj/item/gun/projectile/pistol/magnum_pistol,
 		/obj/item/combitool,
 		/obj/item/clothing/gloves/wristwatch/gold,
+		/obj/item/clothing/under/iccgn/service_command,
 		/obj/item/storage/backpack/satchel/pocketbook/navy
 	)
 
