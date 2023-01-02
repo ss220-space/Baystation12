@@ -88,9 +88,12 @@
 /decl/hierarchy/outfit/foundation
 	name = "Cuchulain Foundation Agent"
 	glasses =  /obj/item/clothing/glasses/sunglasses
+	gloves =   /obj/item/clothing/accessory_hand/wristwatch
 	uniform =  /obj/item/clothing/under/suit_jacket/charcoal
+	suit =     /obj/item/clothing/suit/storage/toggle/suit/black
 	shoes =    /obj/item/clothing/shoes/black
 	l_hand =   /obj/item/storage/briefcase/foundation
 	l_ear =    /obj/item/device/radio/headset/foundation
 	holster =  /obj/item/clothing/accessory/storage/holster/armpit
+	l_pocket = /obj/item/device/flash/advanced
 	id_slot =  slot_wear_id
