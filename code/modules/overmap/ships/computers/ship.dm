@@ -14,6 +14,7 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 		return
 	if(sector.check_ownership(src))
 		linked = sector
+		sector.linked_computers |= src
 		LAZYSET(linked.consoles, src, TRUE)
 		return 1
 
@@ -66,6 +67,10 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 		user.reset_view(linked)
 	if(user.client)
 		user.client.view = world.view + extra_view
+	if(linked)
+		for(var/obj/machinery/computer/ship/sensors/sensor in linked.linked_computers)
+			sensor.reveal_contacts(user)
+
 	GLOB.moved_event.register(user, src, /obj/machinery/computer/ship/proc/unlook)
 	GLOB.stat_set_event.register(user, src, /obj/machinery/computer/ship/proc/unlook)
 	LAZYDISTINCTADD(viewers, weakref(user))
@@ -74,6 +79,9 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 	user.reset_view(null, FALSE)
 	if(user.client)
 		user.client.view = world.view
+	if(linked)
+		for(var/obj/machinery/computer/ship/sensors/sensor in linked.linked_computers)
+			sensor.hide_contacts(user)
 	GLOB.moved_event.unregister(user, src, /obj/machinery/computer/ship/proc/unlook)
 	GLOB.stat_set_event.unregister(user, src, /obj/machinery/computer/ship/proc/unlook)
 	LAZYREMOVE(viewers, weakref(user))
@@ -104,4 +112,8 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 			var/M = W.resolve()
 			if(M)
 				unlook(M)
+	. = ..()
+
+/obj/machinery/computer/ship/Destroy()
+	linked.linked_computers -= src
 	. = ..()

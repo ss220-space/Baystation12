@@ -1,6 +1,10 @@
 /obj/effect/overmap/visitable/sector/exoplanet/chlorine
 	name = "chlorine exoplanet"
-	desc = "An exoplanet with a chlorine based ecosystem. Large quantities of liquid chlorine are present."
+	scanner_name = "desert exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: N-Class Planetoid
+[i]Habitability[/i]>: LOW (Noxious liquid chlorine)
+[b]Notice[/b]>: An exoplanet with a chlorine based ecosystem. Large quantities of liquid chlorine are present."}
 	color = "#c9df9f"
 	planetary_area = /area/exoplanet/chlorine
 	rock_colors = list(COLOR_GRAY80, COLOR_PALE_GREEN_GRAY, COLOR_PALE_BTL_GREEN)
@@ -9,7 +13,7 @@
 	ruin_tags_blacklist = RUIN_HABITAT|RUIN_WATER
 	surface_color = "#a3b879"
 	water_color = COLOR_BOTTLE_GREEN
-	habitability_distribution = HABITABILITY_IDEAL //HABITABILITY_BAD
+	habitability_distribution = HABITABILITY_BAD
 	has_trees = FALSE
 	flora_diversity = 5
 	fauna_types = list(/mob/living/simple_animal/thinbug, /mob/living/simple_animal/hostile/retaliate/beast/samak/alt, /mob/living/simple_animal/yithian, /mob/living/simple_animal/tindalos, /mob/living/simple_animal/hostile/retaliate/jelly)

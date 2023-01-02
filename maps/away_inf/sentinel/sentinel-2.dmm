@@ -1026,8 +1026,7 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/aft)
 "cm" = (
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/structure/ship_munition/disperser_charge/emp,
+/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
@@ -1038,26 +1037,21 @@
 	pixel_y = 24;
 	req_access = list("access_away_cavalry")
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ship/patrol/maintenance/upper/munition)
-"cn" = (
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/structure/ship_munition/disperser_charge/emp,
+/obj/structure/missile/he,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "co" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/ship_munition/disperser_charge/explosive,
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "cp" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/ship_munition/disperser_charge/explosive,
+/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/missile/he,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "cr" = (
@@ -1422,7 +1416,7 @@
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "ofd_storagep";
-	name = "OFD Ammunition Storage Shutters"
+	name = "Missile Storage Shutters"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -1621,21 +1615,24 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/aft)
 "dh" = (
-/obj/effect/floor_decal/industrial/outline/red,
-/obj/structure/ship_munition/disperser_charge/fire,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
+/obj/structure/table/rack,
+/obj/item/missile_equipment/passenger,
+/obj/item/missile_equipment/passenger,
+/obj/item/missile_equipment/passenger,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "di" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/obj/structure/ship_munition/disperser_charge/mining,
+/obj/effect/floor_decal/industrial/outline/green,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -25;
 	req_access = list("ACCESS_CAVALRY")
 	},
+/obj/structure/missile/diffusive,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "dj" = (
@@ -1809,7 +1806,7 @@
 "dB" = (
 /obj/machinery/recharger/wallcharger{
 	dir = 8;
-	pixel_x = 24
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/crew/brig/emergency_armory)
@@ -2128,6 +2125,7 @@
 	},
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper)
 "ei" = (
@@ -2510,10 +2508,9 @@
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/missile,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/aft)
 "eV" = (
 /obj/structure/cable{
@@ -2913,10 +2910,13 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/aft)
 "fE" = (
-/obj/item/toy/plushie/dakimakura,
 /obj/structure/railing/mapped{
 	dir = 1
 	},
+/obj/structure/table/rack,
+/obj/item/missile_equipment/autoarm,
+/obj/item/missile_equipment/autoarm,
+/obj/item/missile_equipment/autoarm,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/aft)
 "fF" = (
@@ -3612,7 +3612,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/reagent_containers/misc/rag,
 /obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/crew/kitchen)
@@ -4193,15 +4192,13 @@
 	pixel_x = 24;
 	req_access = list("ACCESS_CAVALRY")
 	},
-/obj/structure/railing/mapped{
-	dir = 1
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/aft)
 "mn" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
@@ -4209,8 +4206,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/maintenance/upper/aft)
 "ms" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/ship_munition/disperser_charge/explosive,
+/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
@@ -4305,21 +4301,21 @@
 /area/ship/patrol/maintenance/upper/starboard)
 "oL" = (
 /obj/structure/table/woodentable,
-/obj/item/reagent_containers/misc/rag,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper)
 "oM" = (
 /obj/structure/railing/mapped,
+/obj/item/toy/plushie/dakimakura,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/aft)
 "pk" = (
+/obj/machinery/door/firedoor,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "ofd_storagep";
-	name = "OFD Ammunition Storage Shutters"
+	name = "Missile Storage Shutters"
 	},
-/obj/machinery/door/firedoor,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "pl" = (
@@ -4330,7 +4326,12 @@
 /area/ship/patrol/maintenance/upper/aft)
 "pm" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/plating,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/missile,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/aft)
 "pp" = (
 /obj/machinery/firealarm{
@@ -4370,8 +4371,7 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/port)
 "qG" = (
-/obj/effect/floor_decal/industrial/outline/orange,
-/obj/structure/ship_munition/disperser_charge/mining,
+/obj/effect/floor_decal/industrial/outline/green,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "qJ" = (
@@ -4398,12 +4398,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/maintenance/upper)
-"rx" = (
-/obj/structure/railing/mapped{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/ship/patrol/maintenance/upper/aft)
 "rC" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "wdisposalp"
@@ -4517,12 +4511,12 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/starboard)
 "tE" = (
-/obj/effect/floor_decal/industrial/outline/red,
-/obj/structure/ship_munition/disperser_charge/fire,
+/obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/missile/antispace,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "tL" = (
@@ -4630,6 +4624,10 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/waste)
+"vY" = (
+/obj/structure/lattice,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
 "wv" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -4638,6 +4636,19 @@
 /obj/machinery/cooker/candy,
 /turf/simulated/floor/tiled/white,
 /area/ship/patrol/crew/kitchen)
+"wx" = (
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/obj/item/missile_equipment/payload/emp,
+/obj/item/missile_equipment/payload/emp,
+/obj/item/missile_equipment/payload/emp,
+/obj/item/missile_equipment/payload/explosive,
+/obj/item/missile_equipment/payload/explosive,
+/obj/item/missile_equipment/payload/explosive,
+/turf/simulated/floor/plating,
+/area/ship/patrol/maintenance/upper/aft)
 "wB" = (
 /obj/structure/table/rack,
 /obj/structure/railing/mapped{
@@ -4861,6 +4872,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/port)
+"CA" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/missile/he,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/patrol/maintenance/upper/munition)
 "CW" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
@@ -4878,7 +4894,7 @@
 /area/ship/patrol/maintenance/upper)
 "Du" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "OFD Ammunition Storage"
+	name = "Missile Storage"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -4989,8 +5005,7 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/aft)
 "GS" = (
-/obj/effect/floor_decal/industrial/outline/red,
-/obj/structure/ship_munition/disperser_charge/fire,
+/obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -5059,13 +5074,13 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/port)
 "In" = (
-/obj/random/trash,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/aft)
 "Ix" = (
 /obj/structure/cable{
@@ -5335,6 +5350,13 @@
 /obj/structure/railing/mapped{
 	dir = 1
 	},
+/obj/structure/table/rack,
+/obj/item/missile_equipment/thruster,
+/obj/item/missile_equipment/thruster,
+/obj/item/missile_equipment/thruster,
+/obj/item/missile_equipment/thruster/point,
+/obj/item/missile_equipment/thruster/point,
+/obj/item/missile_equipment/thruster/point,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/aft)
 "PK" = (
@@ -5421,14 +5443,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/airless,
 /area/ship/patrol/maintenance/upper/waste)
-"SX" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating,
-/area/ship/patrol/maintenance/upper/aft)
 "Tm" = (
 /obj/structure/table/rack,
 /obj/structure/railing/mapped,
@@ -9671,7 +9685,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -9792,9 +9806,9 @@ aa
 aa
 aa
 aa
-ab
-ab
-ab
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9913,11 +9927,11 @@ aa
 aa
 aa
 aa
-ab
-ab
-FT
-ab
-ab
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10034,10 +10048,10 @@ aa
 aa
 aa
 aa
-aa
 ab
 ab
-lD
+ab
+ab
 ab
 ab
 aa
@@ -10154,16 +10168,16 @@ aa
 aa
 aa
 aa
-aa
-aa
 ab
 ab
 ab
-lD
+ab
+ab
+FT
 ab
 ab
 ab
-aa
+ab
 aa
 aa
 aa
@@ -10275,8 +10289,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+ab
+ab
 ab
 ab
 ab
@@ -10286,7 +10300,7 @@ ab
 ab
 ab
 ab
-aa
+ab
 aa
 aa
 aa
@@ -10396,9 +10410,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+ab
+ab
+ab
 ab
 ab
 ab
@@ -10408,15 +10422,15 @@ ab
 ab
 ab
 ab
+ab
+ab
+aa
+aa
+aa
+aa
+aa
 aa
 hj
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -10517,10 +10531,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -10530,9 +10544,9 @@ ab
 ab
 ab
 ab
-aa
-aa
-aa
+ab
+ab
+ab
 aa
 aa
 aa
@@ -10637,12 +10651,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -10652,11 +10666,11 @@ ab
 ab
 ab
 ab
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -10762,9 +10776,9 @@ FT
 ab
 ab
 ab
-if
-if
-if
+vY
+vY
+vY
 ab
 ab
 ae
@@ -10884,9 +10898,9 @@ lD
 ab
 ab
 ab
-if
-if
-if
+vY
+vY
+vY
 ab
 ab
 dj
@@ -15896,7 +15910,7 @@ aM
 CW
 Aq
 rJ
-ay
+wx
 ax
 TX
 ad
@@ -16010,7 +16024,7 @@ ab
 ad
 TX
 bJ
-cn
+co
 st
 tE
 bJ
@@ -16132,7 +16146,7 @@ ab
 ad
 TX
 bJ
-co
+CA
 zz
 GS
 bJ
@@ -16383,7 +16397,7 @@ bJ
 Tq
 cj
 eS
-rx
+eS
 pm
 JD
 AF
@@ -16506,7 +16520,7 @@ oM
 xT
 ma
 In
-SX
+In
 dD
 ad
 ab

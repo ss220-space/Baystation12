@@ -17,9 +17,11 @@
 	spawn_weight = 1.3 // INF, было spawn_weight = 0.67
 
 /obj/effect/overmap/visitable/sector/vox_scav_ship
-	name = "small asteroid cluster"
-	desc = "Sensor array detects a small asteroid cluster."
-	in_space = 1
+	scanner_name = "small asteroid cluster"
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[b]Notice[/b]: Sensor array detects a small asteroid cluster."}
+
+	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	icon_state = "meteor4"
 	hide_from_reports = TRUE
 	initial_generic_waypoints = list(
@@ -57,9 +59,12 @@
 	req_access = list(access_voxship)
 
 /obj/effect/overmap/visitable/ship/landable/vox_ship
-	name = "Alien Vessel"
 	shuttle = "Vox Scavenger Ship"
-	desc = "Sensor array detects a medium-sized vessel of irregular shape. Unknown origin."
+	scanner_name = "Alien Vessel"
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[i]Class[/i]: UNKNOWN
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: Sensor array detects a medium-sized vessel of irregular shape. Unknown origin"}
 	color = "#233012"
 	icon_state = "ship"
 	moving_state = "ship_moving"
@@ -93,6 +98,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/vox_scavshuttle
 	name = "Unmarked shuttle"
+	scanner_name = "Unmarked shuttle"
 	shuttle = "Vox Scavenger Shuttle"
 	desc = "Sensor array detects a small, unmarked vessel."
 	fore_dir = WEST

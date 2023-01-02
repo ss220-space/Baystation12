@@ -2,7 +2,11 @@
 
 /obj/effect/overmap/visitable/ship/merchant
 	name = "Merchant vessel"
-	desc = "Sensor array is detecting a small vessel with merchant identifier."
+	scanner_name = "Merchant vessel"
+	scanner_desc = @{"[i]Registration[/i]: FTU #$$#%^#$
+[i]Class[/i]: Small ship
+[i]Transponder[/i]: CIV
+[b]Notice[/b]: Sensor array is detecting a small vessel with merchant identifier"}
 	color = "#ffc966"
 	vessel_mass = 50
 	default_delay = 35 SECONDS

@@ -541,6 +541,14 @@
 	icon_state = "asteroid"
 	},
 /area/map_template/wizard_station)
+"xr" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/psionics,
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "wood"
+	},
+/area/map_template/wizard_station)
 
 (1,1,1) = {"
 aa
@@ -1106,7 +1114,7 @@ as
 as
 as
 as
-bc
+xr
 ab
 aw
 aJ

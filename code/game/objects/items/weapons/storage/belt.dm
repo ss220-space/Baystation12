@@ -211,6 +211,7 @@
 	overlay_flags = BELT_OVERLAY_ITEMS|BELT_OVERLAY_HOLSTER
 	can_hold = list(
 		/obj/item/storage/firstaid/individual/military,
+		/obj/item/storage/firstaid/light,
 		/obj/item/crowbar,
 		/obj/item/grenade,
 		/obj/item/reagent_containers/spray/pepper,
@@ -245,6 +246,8 @@
 	item_state = "basicsecurity"
 	overlay_flags = BELT_OVERLAY_ITEMS
 	can_hold = list(
+		/obj/item/storage/firstaid/individual/military,
+		/obj/item/storage/firstaid/light,
 		/obj/item/crowbar,
 		/obj/item/grenade,
 		/obj/item/reagent_containers/spray/pepper,
@@ -515,6 +518,8 @@
 	storage_slots = 11 //INF WAS 10
 //[INF]
 	can_hold = list(
+		/obj/item/storage/firstaid/individual/military,
+		/obj/item/storage/firstaid/light,
 		/obj/item/grenade,
 		/obj/item/device/flash,
 		/obj/item/handcuffs,
@@ -523,6 +528,8 @@
 		/obj/item/magnetic_ammo,
 		/obj/item/melee/baton,
 		/obj/item/melee/telebaton,
+		/obj/item/flame/lighter,
+		/obj/item/device/flashlight,
 		/obj/item/device/megaphone,
 		/obj/item/reagent_containers/spray/pepper
 		)

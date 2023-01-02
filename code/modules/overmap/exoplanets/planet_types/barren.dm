@@ -1,6 +1,10 @@
 /obj/effect/overmap/visitable/sector/exoplanet/barren
 	name = "barren exoplanet"
-	desc = "An exoplanet that couldn't hold its atmosphere."
+	scanner_name = "barren exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: D-Class Planetoid
+[i]Habitability[/i]>: Low
+[b]Notice[/b]>: An exoplanet that couldn't hold its atmosphere"}
 	color = "#6c6c6c"
 	planetary_area = /area/exoplanet/barren
 	rock_colors = list(COLOR_BEIGE, COLOR_GRAY80, COLOR_BROWN)
@@ -10,7 +14,7 @@
 	features_budget = 6
 	surface_color = "#807d7a"
 	water_color = null
-	habitability_distribution = HABITABILITY_IDEAL // HABITABILITY_BAD
+	habitability_distribution = HABITABILITY_BAD
 	has_trees = FALSE
 
 /obj/effect/overmap/visitable/sector/exoplanet/barren/generate_atmosphere()

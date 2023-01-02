@@ -3,6 +3,7 @@
 //MINING-1 // CLUSTER
 /obj/effect/overmap/visitable/sector/cluster
 	name = "asteroid cluster"
+	scanner_name = "asteroid cluster"
 	desc = "Large group of asteroids. Mineral content detected."
 	icon_state = "sector"
 	initial_generic_waypoints = list(
@@ -74,7 +75,11 @@
 //MINING-2 // SIGNAL
 /obj/effect/overmap/visitable/sector/away
 	name = "faint signal from an asteroid"
-	desc = "Faint signal detected, originating from the human-made structures on the site's surface."
+	scanner_name = "faint signal from an asteroid"
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[i]Class[/i]: UNKNOWN
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: Faint signal detected, originating from the human-made structures on the site's surface"}
 	icon_state = "sector"
 	initial_generic_waypoints = list(
 		"nav_away_1",

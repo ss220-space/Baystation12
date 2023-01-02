@@ -3,6 +3,7 @@
 
 /obj/effect/overmap/visitable/sector/smugglers
 	name = "asteroid station"
+	scanner_name = "asteroid station"
 	desc = "A small station built into an asteroid. No radio traffic detected."
 	icon_state = "object"
 	known = 0

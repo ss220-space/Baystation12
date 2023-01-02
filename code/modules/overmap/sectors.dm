@@ -4,8 +4,7 @@
 /obj/effect/overmap/visitable
 	name = "map object"
 	scannable = TRUE
-
-	var/list/map_z = list()
+	scanner_desc = "!! No Data Available !!"
 
 	var/list/initial_generic_waypoints //store landmark_tag of landmarks that should be added to the actual lists below on init.
 	var/list/initial_restricted_waypoints //For use with non-automatic landmarks (automatic ones add themselves).
@@ -14,15 +13,10 @@
 	var/list/restricted_waypoints = list() //waypoints for specific shuttles
 	var/docking_codes
 
-	var/start_x			//Coordinates for self placing
-	var/start_y			//will use random values if unset
-
-	var/base = 0		//starting sector, counts as station_levels
-	var/in_space = 1	//can be accessed via lucky EVA
-
 	var/hide_from_reports = FALSE
 
 	var/has_distress_beacon
+	var/fore_dir = NORTH
 
 /obj/effect/overmap/visitable/Initialize()
 	. = ..()
@@ -64,9 +58,9 @@
 		map_sectors["[zlevel]"] = src
 
 	GLOB.using_map.player_levels |= map_z
-	if(!in_space)
+	if(!(sector_flags & OVERMAP_SECTOR_IN_SPACE))
 		GLOB.using_map.sealed_levels |= map_z
-	if(base)
+	if(sector_flags & OVERMAP_SECTOR_BASE)
 		GLOB.using_map.station_levels |= map_z
 		GLOB.using_map.contact_levels |= map_z
 		GLOB.using_map.map_levels |= map_z
@@ -128,6 +122,35 @@
 // Because of the way these are spawned, they will potentially have their invisibility adjusted by the turfs they are mapped on
 // prior to being moved to the overmap. This blocks that. Use set_invisibility to adjust invisibility as needed instead.
 /obj/effect/overmap/visitable/sector/hide()
+
+/obj/effect/overmap/visitable/proc/distress(mob/user)
+
+	log_and_message_admins(message ="Overmap panic button hit on z[z] ([scanner_name]) by '[user?.ckey || "Unknown"]'")
+
+	var/distress_message = "Это автоматический сигнал бедствия от радиомаяка, соответствующего стандарту MIL-DTL-93352, передаваемого на частоте [PUB_FREQ*0.1]кГц.  \
+	Этот маяк был запущен с  '[initial(scanner_name)]'. Местоположение передающего устройства: [get_distress_info()]. \
+	Согласно Межпланетной конвенции о космической спасательной деятельности, лица, получившие это сообщение, должны попытаться предпринять попытку спасения, \
+	или передать сообщение тем, кто может это сделать. Это сообщение повторится еще раз через 5 минут. Спасибо за вашу помощь."
+
+
+	priority_announcement.Announce(distress_message, "Automated Distress Signal", new_sound = sound('sound/AI/sos.ogg'), zlevels = GLOB.using_map.player_levels, radio_mode = TRUE)
+
+	var/image/I = image(icon, icon_state = "distress")
+	I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
+	I.appearance_flags = KEEP_APART|RESET_TRANSFORM|RESET_COLOR
+	add_overlay(I)
+
+	addtimer(CALLBACK(src, .proc/distress_update), 5 MINUTES)
+	return TRUE
+
+/obj/effect/overmap/visitable/proc/get_distress_info()
+	return "\[X:[x], Y:[y]\]"
+
+/obj/effect/overmap/visitable/proc/distress_update()
+	var/message = "Это последнее сообщение с маяка бедствия, запущенного '[initial(name)]'. Местоположение передающего устройства: [get_distress_info()]. \
+	Пожалуйста, окажите помощь в соответствии с вашими обязательствами по Межпланетной конвенции о космической спасательной деятельности, или передайте это сообщение той стороне, которая может это сделать."
+
+	priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos.ogg', zlevels = GLOB.using_map.player_levels, radio_mode = TRUE)
 
 /proc/build_overmap()
 	if(!GLOB.using_map.use_overmap)

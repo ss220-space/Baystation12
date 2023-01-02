@@ -2,7 +2,12 @@
 
 /obj/effect/overmap/visitable/sector/mobius_rift
 	name = "unusual asteroid"
-	desc = "Sensors error: ERROR #E0x003141592: recursive stack overflow for CALCULATE_APPROXIMATE_SIZE()."
+	desc = "No IFF detected."
+	scanner_name = "unusual asteroid"
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[i]Class[/i]: UNKNOWN
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: Sensors error: ERROR #E0x003141592: recursive stack overflow for CALCULATE_APPROXIMATE_SIZE()"}
 	icon_state = "object"
 	known = 0
 

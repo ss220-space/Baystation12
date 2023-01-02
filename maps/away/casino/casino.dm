@@ -2,10 +2,16 @@
 #include "../mining/mining_areas.dm"
 
 /obj/effect/overmap/visitable/ship/casino
-	name = "passenger liner"
-	desc = "Sensors detect an undamaged vessel without any signs of activity."
+	name = "spacecraft"
+	desc = "Spacefaring vessel. No IFF detected."
+	scanner_name = "passenger liner"
+	scanner_desc = @{"[i]Registration[/i]: Passenger liner
+[i]Class[/i]: Small ship (Low Displacement)
+[i]Transponder[/i]: Transmitting (CIV), non-hostile
+[b]Notice[/b]: Sensors detect an undamaged vessel without any signs of activity"}
 	color = "#bd6100"
 	vessel_mass = 5000
+	contact_class = /decl/ship_contact_class/ship
 	max_speed = 1/(2 SECONDS)
 	burn_delay = 1 SECOND
 	initial_generic_waypoints = list(
@@ -21,7 +27,7 @@
 	)
 
 /obj/effect/overmap/visitable/ship/casino/New(nloc, max_x, max_y)
-	name = "IPV [pick("Fortuna","Gold Rush","Ebisu","Lucky Paw","Four Leaves")], \a [name]"
+	scanner_name = "IPV [pick("Fortuna","Gold Rush","Ebisu","Lucky Paw","Four Leaves")], \a [name]"
 	..()
 
 /datum/map_template/ruin/away_site/casino

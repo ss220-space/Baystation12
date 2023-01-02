@@ -1,8 +1,9 @@
 #include "derelict_areas.dm"
 
 /obj/effect/overmap/visitable/sector/derelict
-	name = "debris field"
-	desc = "A large field of miscellanious debris."
+	scanner_name = "debris field"
+	scanner_desc = @{"[i]Transponder[/i]: Various faint signals
+[b]Notice[/b]: Warning! Significant field of space debris detected. May be salvagable."}
 	icon_state = "object"
 	known = 0
 

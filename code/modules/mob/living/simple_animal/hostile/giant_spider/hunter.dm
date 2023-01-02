@@ -5,9 +5,9 @@
 /mob/living/simple_animal/hostile/giant_spider/hunter
 	desc = "Furry and black, it makes you shudder to look at it. This one has sparkling purple eyes."
 
-	icon_state = "black"
-	icon_living = "black"
-	icon_dead = "black_dead"
+	icon_state = "hunter"
+	icon_living = "hunter"
+	icon_dead = "hunter_dead"
 
 
 

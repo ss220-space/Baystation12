@@ -5,7 +5,13 @@
 //MINING-1 // CLUSTER
 /obj/effect/overmap/visitable/sector/mining_asteroid
 	name = "large asteroid"
-	desc = "A medium-sized asteroid with a big belt of small one. Old mining facility detected on one of sides, owner - NanoTrasen."
+	desc = "NanoTrasen IFF detected."
+	scanner_name = "Mining outpost"
+	scanner_desc = @{"[i]Registration[/i]: NMS Leveret
+[i]Class[/i]: Installation
+[i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
+[b]Notice[/b]: NanoTrasen mining facility, authorized personnel only"}
+
 	icon_state = "sector"
 	initial_restricted_waypoints = list(
 		"Guppy" = list("nav_mining_8", "nav_mining_hiden"),

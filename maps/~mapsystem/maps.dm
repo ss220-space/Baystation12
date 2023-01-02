@@ -475,12 +475,6 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		else
 			return GetConnectedZlevels(srcz)
 
-/proc/get_overmap_sector(var/z)
-	if(GLOB.using_map.use_overmap)
-		return map_sectors["[z]"]
-	else
-		return null
-
 
 /datum/map/proc/setup_economy()
 	for (var/datum/feed_network/N in news_network)

@@ -1,6 +1,9 @@
 /obj/effect/overmap/visitable/sector/exoplanet/volcanic
-	name = "volcanic exoplanet"
-	desc = "A tectonically unstable planet, extremely rich in minerals."
+	scanner_name = "volcanic exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: D-Class Planetoid
+[i]Habitability[/i]>: Low (High Temperature)
+[b]Notice[/b]>: A tectonically unstable planet, extremely rich in minerals"}
 	color = "#9c2020"
 	planetary_area = /area/exoplanet/volcanic
 	rock_colors = list(COLOR_DARK_GRAY)
@@ -10,7 +13,7 @@
 	ruin_tags_blacklist = RUIN_HABITAT|RUIN_WATER
 	surface_color = "#261e19"
 	water_color = "#c74d00"
-	habitability_distribution = HABITABILITY_IDEAL // HABITABILITY_BAD
+	habitability_distribution = HABITABILITY_BAD
 	has_trees = FALSE
 	flora_diversity = 3
 	fauna_types = list(/mob/living/simple_animal/thinbug, /mob/living/simple_animal/hostile/retaliate/beast/shantak/lava, /mob/living/simple_animal/hostile/retaliate/beast/charbaby)

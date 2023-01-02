@@ -945,15 +945,6 @@
 	glass_name = "Kamikaze"
 	glass_desc = "This must have started as a joke, right? No one is supposed to drink this..."
 
-/datum/reagent/ethanol/kvass
-	name = "Kvass"
-	description = "An alcoholic drink commonly made from bread."
-	taste_description = "vkusnyy kvas, ypa!"
-	color = "#362f22"
-	strength = 30
-
-	glass_name = "kvass"
-	glass_desc = "An alcoholic drink commonly made from bread."
 
 /datum/reagent/ethanol/lager
 	name = "Lager"

@@ -1,6 +1,10 @@
 /obj/effect/overmap/visitable/sector/exoplanet/snow
 	name = "snow exoplanet"
-	desc = "Cold planet with limited plant life."
+	scanner_name = "snow exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: L-Class Planetoid
+[i]Habitability[/i]>: Moderate (Low Temperature)
+[b]Notice[/b]>: Cold planet with limited plant life"}
 	color = "#dcdcdc"
 	planetary_area = /area/exoplanet/snow
 	rock_colors = list(COLOR_DARK_BLUE_GRAY, COLOR_GUNMETAL, COLOR_GRAY80, COLOR_DARK_GRAY)
@@ -8,7 +12,7 @@
 	map_generators = list(/datum/random_map/noise/exoplanet/snow, /datum/random_map/noise/ore/poor)
 	surface_color = "#e8faff"
 	water_color = "#b5dfeb"
-	habitability_distribution = HABITABILITY_IDEAL //list(HABITABILITY_IDEAL = 30, HABITABILITY_OKAY = 50, HABITABILITY_BAD = 10)
+	habitability_distribution = list(HABITABILITY_IDEAL = 30, HABITABILITY_OKAY = 50, HABITABILITY_BAD = 10)
 	has_trees = TRUE
 	flora_diversity = 4
 	fauna_types = list(/mob/living/simple_animal/hostile/retaliate/beast/samak, /mob/living/simple_animal/hostile/retaliate/beast/diyaab, /mob/living/simple_animal/hostile/retaliate/beast/shantak)

@@ -1,6 +1,10 @@
 /obj/effect/overmap/visitable/sector/exoplanet/desert
 	name = "desert exoplanet"
-	desc = "An arid exoplanet with sparse biological resources but rich mineral deposits underground."
+	scanner_name = "desert exoplanet"
+	scanner_desc = @{"[i]Stellar Body[/i]>: UNKNOWN
+[i]Class[/i]>: N-Class Planetoid
+[i]Habitability[/i]>: Moderate (High temperature)
+[b]Notice[/b]>: An arid exoplanet with sparse biological resources but rich mineral deposits underground"}
 	color = "#a08444"
 	planetary_area = /area/exoplanet/desert
 	rock_colors = list(COLOR_BEIGE, COLOR_PALE_YELLOW, COLOR_GRAY80, COLOR_BROWN)
@@ -8,7 +12,7 @@
 	map_generators = list(/datum/random_map/noise/exoplanet/desert, /datum/random_map/noise/ore/rich)
 	surface_color = "#d6cca4"
 	water_color = null
-	habitability_distribution = HABITABILITY_IDEAL //list(HABITABILITY_IDEAL = 30, HABITABILITY_OKAY = 50, HABITABILITY_BAD = 10)
+	habitability_distribution = list(HABITABILITY_IDEAL = 30, HABITABILITY_OKAY = 50, HABITABILITY_BAD = 10)
 	has_trees = FALSE
 	flora_diversity = 4
 	fauna_types = list(/mob/living/simple_animal/thinbug, /mob/living/simple_animal/tindalos, /mob/living/simple_animal/hostile/voxslug, /mob/living/simple_animal/hostile/antlion)
