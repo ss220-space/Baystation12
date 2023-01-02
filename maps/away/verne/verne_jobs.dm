@@ -86,6 +86,7 @@
 	belt = /obj/item/storage/belt/holster/general
 	r_pocket = /obj/item/gun/energy/gun/small
 	l_pocket = /obj/item/crowbar/prybar
+	backpack_contents = list(/obj/item/spacecash/bundle/c1000 = 4, /obj/item/spacecash/bundle/c200 = 1)
 
 /decl/hierarchy/outfit/job/verne/engineer
 	name = VERNE_OUTFIT_JOB_NAME("Engineer")
@@ -94,6 +95,7 @@
 	belt = /obj/item/storage/belt/utility/full
 	r_pocket = /obj/item/device/radio/map_preset/verne
 	l_pocket = /obj/item/crowbar/prybar
+	backpack_contents = list(/obj/item/spacecash/bundle/c1000 = 2, /obj/item/spacecash/bundle/c500 = 1, /obj/item/spacecash/bundle/c200 = 1, /obj/item/spacecash/bundle/c100 = 1)
 
 /decl/hierarchy/outfit/job/verne/engineer/New()
 	..()
@@ -106,6 +108,7 @@
 	uniform = /obj/item/clothing/under/rank/psych/turtleneck
 	suit = /obj/item/clothing/suit/storage/toggle/hoodie/cti
 	shoes = /obj/item/clothing/shoes/black
+	backpack_contents = list(/obj/item/spacecash/bundle/c1000 = 1, /obj/item/spacecash/bundle/c500 = 1)
 
 /obj/effect/submap_landmark/spawnpoint/CTI_pilot
 	name = "CTI Pilot"

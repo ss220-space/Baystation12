@@ -612,6 +612,9 @@
 	dir = 8
 	},
 /obj/item/stack/material/aluminium/fifty,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/hangar)
 "cx" = (

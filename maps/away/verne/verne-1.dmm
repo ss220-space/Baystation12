@@ -1892,6 +1892,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 32
 	},
+/obj/item/paper/verne/combustion,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/thrustgen)
 "qc" = (
@@ -2515,6 +2516,7 @@
 	icon_state = "freezer"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/paper/verne/supermatter,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/smresearch)
 "vQ" = (
@@ -5419,12 +5421,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/verne/engineering/atmospherics)
 "YC" = (
-/obj/effect/paint_stripe/gunmetal,
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/blast/regular{
 	id_tag = "vernechamberwindow";
 	name = "Chamber Window"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/verne/engineering/thrustgen)
 "YM" = (
