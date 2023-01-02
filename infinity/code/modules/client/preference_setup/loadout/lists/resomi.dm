@@ -168,17 +168,17 @@
 
 /datum/gear/clothing/resomi_spes_job_cloak
 	display_name = "(Resomi) accessory cloak selection"
-	path = /obj/item/clothing/under/resomi/morningstar
+	path = /obj/item/clothing/accessory/cloak/resomi/rd
 	sort_category = "Xenowear"
 	whitelisted = list(SPECIES_RESOMI)
 	slot = slot_wear_suit
 
-/datum/gear/uniform/resomi_spes_job_cloak/New()
+/datum/gear/clothing/resomi_spes_job_cloak/New()
 	..()
 	var/resomi = list()
-	resomi["command cloak"] =/obj/item/clothing/accessory/cloak/resomi/hop
-	resomi["medical cloak"] 	= /obj/item/clothing/accessory/cloak/resomi/cmo
-	resomi["science cloak"] 	= /obj/item/clothing/accessory/cloak/resomi/rd
+	resomi["command cloak"] = /obj/item/clothing/accessory/cloak/resomi/hop
+	resomi["medical cloak"] = /obj/item/clothing/accessory/cloak/resomi/cmo
+	resomi["science cloak"] = /obj/item/clothing/accessory/cloak/resomi/rd
 	gear_tweaks += new/datum/gear_tweak/path(resomi)
 
 /datum/gear/shoes/resomi
