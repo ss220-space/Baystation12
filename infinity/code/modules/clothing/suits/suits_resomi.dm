@@ -14,9 +14,50 @@
 	 species_restricted = list(SPECIES_RESOMI)
 
 /obj/item/clothing/suit/storage/toggle/Resomicoat/white
- 	icon_state = "white_resomicoat"
- 	icon_open = "white_resomicoat_open"
- 	icon_closed = "white_resomicoat"
+	icon_state = "white_resomicoat"
+	icon_open = "white_resomicoat_open"
+	icon_closed = "white_resomicoat"
+
+/obj/item/clothing/suit/storage/toggle/resomi_jacket
+	name = "small blue jacket"
+	icon = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+	desc = "A jacket that seems too small to fit a human."
+	icon_state = "sec_dep_jacket"
+	icon_open = "sec_dep_jacket_open"
+	icon_closed = "sec_dep_jacket"
+	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS
+	species_restricted = list(SPECIES_RESOMI)
+
+/obj/item/clothing/suit/storage/toggle/resomi_jacket/med_jacket
+	name = "small medical dep jacket"
+	icon_state = "med_dep_jacket"
+	icon_open = "med_dep_jacket_open"
+	icon_closed = "med_dep_jacket"
+
+/obj/item/clothing/suit/storage/toggle/resomi_jacket/supply_jacket
+	name = "small supply dep jacket"
+	icon_state = "supply_dep_jacket"
+	icon_open = "supply_dep_jacket_open"
+	icon_closed = "supply_dep_jacket"
+
+/obj/item/clothing/suit/storage/toggle/resomi_jacket/sci_jacket
+	name = "small science dep jacket"
+	icon_state = "sci_dep_jacket"
+	icon_open = "sci_dep_jacket_open"
+	icon_closed = "sci_dep_jacket"
+
+/obj/item/clothing/suit/storage/toggle/resomi_jacket/engi_jacket
+	name = "small engineering dep jacket"
+	icon_state = "engi_dep_jacket"
+	icon_open = "engi_dep_jacket_open"
+	icon_closed = "engi_dep_jacket"
+
+/obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen
+	name = "\improper NanoTrasen leather jacket"
+	desc = "A brown leather coat. The NanoTrasen logo is proudly displayed on the back."
+	icon_state = "brown_jacket_nt"
+	icon_open = "brown_jacket_nt_open"
+	icon_closed = "brown_jacket_nt"
 
 /obj/item/clothing/suit/storage/toggle/Resomilabcoat
 	name = "small labcoat"
@@ -796,6 +837,65 @@
 	icon_state = "tesh_hcloak_brg"
 	hoodtype = /obj/item/clothing/head/resomi/resomi_hood/brown_grey
 
+//Winter coat
+/obj/item/clothing/suit/storage/hooded/resomi/wintercoat
+	name = "winter coat"
+	desc = "A heavy jacket made from 'synthetic' animal furs."
+	icon_state = "coatwinter"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
+	min_cold_protection_temperature = ARMOR_MIN_COLD_PROTECTION_TEMPERATURE
+	valid_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA)
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
+	action_button_name = "Toggle Winter Hood"
+	hoodtype = /obj/item/clothing/head/winterhood
+	siemens_coefficient = 0.6
+
+/obj/item/clothing/suit/storage/hooded/resomi/wintercoat/medical
+	name = "medical winter coat"
+	icon_state = "coatmedical"
+	armor = list(
+		bio = ARMOR_BIO_RESISTANT
+		)
+
+/obj/item/clothing/suit/storage/hooded/resomi/wintercoat/security
+	name = "security winter coat"
+	icon_state = "coatsecurity"
+	armor = list(
+		melee = ARMOR_MELEE_KNIVES,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_MINOR,
+		bomb = ARMOR_BOMB_MINOR
+		)
+/obj/item/clothing/suit/storage/hooded/resomi/wintercoat/purple
+	name = "purple winter coat"
+	icon_state = "coatjanitor"
+	armor = list(
+		bomb = ARMOR_BOMB_MINOR
+		)
+
+/obj/item/clothing/suit/storage/hooded/resomi/wintercoat/hydro
+	name = "hydroponics winter coat"
+	icon_state = "coathydro"
+
+/obj/item/clothing/suit/storage/hooded/resomi/wintercoat/bar
+	name = "bartender winter coat"
+	icon_state = "coatbar"
+
+/obj/item/clothing/suit/storage/hooded/resomi/wintercoat/engineering
+	name = "engineering winter coat"
+	icon_state = "coataformal"
+	armor = list(
+		bomb = ARMOR_BOMB_MINOR
+		)
+
+/obj/item/clothing/suit/storage/hooded/resomi/wintercoat/formal
+	name = "formal winter coat"
+	icon_state = "coatsyndie_short"
+
 //The actual hoods
 /obj/item/clothing/head/resomi/resomi_hood/black_orange
 	name = "black and orange cloak hood"
@@ -895,3 +995,25 @@
 /obj/item/clothing/head/resomi/resomi_hood/brown_grey
 	name = "brown and grey cloak hood"
 	icon_state = "tesh_hcloak_brg_hood"
+
+
+
+
+/obj/item/clothing/accessory/cloak/resomi
+	name = "cloak"
+	desc = "A cloak that seems too small to fit a human."
+	icon = 'infinity/icons/obj/clothing/species/resomi/obj_accessories_resomi.dmi'
+	icon_state = "cloak_col"
+	species_restricted = list(SPECIES_RESOMI)
+
+/obj/item/clothing/accessory/cloak/resomi/hop
+	name = "Formal cloak"
+	icon_state = "hopcloak"
+
+/obj/item/clothing/accessory/cloak/resomi/cmo
+	name = "Formal cloak"
+	icon_state = "cmocloak"
+
+/obj/item/clothing/accessory/cloak/resomi/rd
+	name = "Formal cloak"
+	icon_state = "rdcloak"

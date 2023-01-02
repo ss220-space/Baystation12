@@ -18,6 +18,7 @@
 /datum/gear/suit/tajara
 	display_name = "(Tajara) vintage tajaran overcoat"
 	path = /obj/item/clothing/suit/storage/taj_overcoat
+	sort_category = "Xenowear"
 
 /datum/gear/shoes/tajara
 	display_name = "(Tajara) vintage boots"
