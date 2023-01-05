@@ -549,6 +549,7 @@
 	},
 /obj/item/seeds/random,
 /obj/item/seeds/random,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/tiled/monotile,
 /area/verne/common/hydroponics)
 "cp" = (
