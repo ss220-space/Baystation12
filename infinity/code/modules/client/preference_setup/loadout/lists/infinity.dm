@@ -76,7 +76,7 @@
 	var/corpsi = list()
 	corpsi["Major Bill's uniform"]		= /obj/item/clothing/under/mbill
 	corpsi["Aether uniform"]			= /obj/item/clothing/under/aether
-	corpsi["Hephaestus science uniform"]= /obj/item/clothing/under/rank/scientist/heph
+	corpsi["Hephaestus science uniform"]= /obj/item/clothing/under/rank/scientist/corporate/heph
 	corpsi["Hephaestus uniform"]		= /obj/item/clothing/under/hephaestus
 	corpsi["Ward-Takahashi uniform"]	= /obj/item/clothing/under/wardt
 	corpsi["Grayson uniform"]			= /obj/item/clothing/under/grayson

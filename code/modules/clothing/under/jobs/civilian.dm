@@ -23,12 +23,13 @@
 	icon_state = "qm"
 	item_state = "lb_suit"
 	worn_state = "qm"
+	gender_icons = 1
 
 
 /obj/item/clothing/under/rank/cargotech
 	name = "cargo technician's jumpsuit"
 	desc = "Shooooorts! They're comfy and easy to wear!"
-	icon_state = "cargotech"
+	icon_state = "cargo"
 	item_state = "lb_suit"
 	worn_state = "cargo"
 	gender_icons = 1

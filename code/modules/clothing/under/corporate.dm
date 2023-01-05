@@ -20,8 +20,20 @@
 /obj/item/clothing/under/rank/scientist
 	name = "\improper EXO polo and pants"
 	desc = "A fashionable polo and pair of trousers made from patented biohazard-resistant synthetic fabrics."
+	icon_state = "sciencewhite"
+	item_state = "sciencewhite"
+	worn_state = "sciencewhite"
+	permeability_coefficient = 0.50
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
+	gender_icons = 1
+
+/obj/item/clothing/under/rank/scientist/corporate
+	name = "\improper EXO polo and pants"
+	desc = "A fashionable polo and pair of trousers made from patented biohazard-resistant synthetic fabrics."
 	icon_state = "smock"
-	item_state = "w_suit"
+	item_state = "smock"
 	worn_state = "smock"
 	permeability_coefficient = 0.50
 	armor = list(
@@ -37,7 +49,15 @@
 /obj/item/clothing/under/rank/scientist/executive
 	name = "\improper EXO polo and pants"
 	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a Expeditionary Corps Organisation higher-up."
+	icon_state = "sciencewhite_exec"
+	item_state = "sciencewhite_exec"
+	worn_state = "sciencewhite_exec"
+
+/obj/item/clothing/under/rank/scientist/corporate/executive
+	name = "\improper EXO polo and pants"
+	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a Expeditionary Corps Organisation higher-up."
 	icon_state = "smockexec"
+	item_state = "smockexec"
 	worn_state = "smockexec"
 	starting_accessories = list(/obj/item/clothing/accessory/tunic/exec)
 
@@ -48,13 +68,14 @@
 	item_state = "lb_suit"
 	worn_state = "work"
 	armor = list(
-		melee = ARMOR_MELEE_MINOR, 
+		melee = ARMOR_MELEE_MINOR,
 		bio = ARMOR_BIO_MINOR
 		)
 	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_corporate.dmi')
 	gender_icons = 1
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_under_resomi.dmi'
 		)
 
 /obj/item/clothing/under/rank/ntpilot
@@ -89,14 +110,14 @@
 	icon_state = "guard_nt"
 	worn_state = "guard_nt"
 
-/obj/item/clothing/under/rank/scientist/nanotrasen
+/obj/item/clothing/under/rank/scientist/corporate/nanotrasen
 	name = "\improper NanoTrasen polo and pants"
 	desc = "A fashionable polo and pair of trousers belonging to NanoTrasen, a megacorporation primarily concerned with the research of new and dangerous technologies."
 	icon_state = "smock_nt"
 	worn_state = "smock_nt"
 	starting_accessories = list(/obj/item/clothing/accessory/tunic/nanotrasen)
 
-/obj/item/clothing/under/rank/scientist/executive/nanotrasen
+/obj/item/clothing/under/rank/scientist/corporate/executive/nanotrasen
 	name = "\improper NanoTrasen polo and pants"
 	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a NanoTrasen higher-up."
 	icon_state = "smockexec_nt"
@@ -133,14 +154,14 @@
 	icon_state = "guard_heph"
 	worn_state = "guard_heph"
 
-/obj/item/clothing/under/rank/scientist/heph
+/obj/item/clothing/under/rank/scientist/corporate/heph
 	name = "\improper Hephaestus polo and pants"
 	desc = "A fashionable polo and pair of trousers belonging to Hephaestus Industries, a megacorporation primarily concerned with the research and production of weapon systems."
 	icon_state = "smock_heph"
 	worn_state = "smock_heph"
 	starting_accessories = list(/obj/item/clothing/accessory/tunic/heph)
 
-/obj/item/clothing/under/rank/scientist/executive/heph
+/obj/item/clothing/under/rank/scientist/corporate/executive/heph
 	name = "\improper Hephaestus polo and pants"
 	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a Hephaestus Industries higher-up."
 	icon_state = "smockexec_heph"
@@ -170,14 +191,14 @@
 	starting_accessories = list(/obj/item/clothing/accessory/toggleable/corpjacket/heph, /obj/item/clothing/accessory/corptie/heph)
 
 //Zeng-Hu
-/obj/item/clothing/under/rank/scientist/zeng
+/obj/item/clothing/under/rank/scientist/corporate/zeng
 	name = "\improper Zeng-Hu polo and pants"
 	desc = "A fashionable polo and pair of trousers belonging to Zeng-Hu Pharmaceuticals, a megacorporation primarily concerned with the research and production of medical equipment and pharmaceuticals."
 	icon_state = "smock_zeng"
 	worn_state = "smock_zeng"
 	starting_accessories = list(/obj/item/clothing/accessory/tunic/zeng)
 
-/obj/item/clothing/under/rank/scientist/executive/zeng
+/obj/item/clothing/under/rank/scientist/corporate/executive/zeng
 	name = "\improper Zeng-Hu polo and pants"
 	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a Zeng-Hu Pharmaceuticals higher-up."
 	icon_state = "smockexec_zeng"

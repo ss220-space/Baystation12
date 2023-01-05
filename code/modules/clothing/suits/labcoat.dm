@@ -96,9 +96,9 @@
 /obj/item/clothing/suit/storage/toggle/labcoat/science
 	name = "\improper EXO labcoat"
 	desc = "A coat that protects against minor chemical spills. It has a green stripe on the shoulder and green trim on the sleeves, denoting it as a Expeditionary Corps Organisation labcoat."
-	icon_state = "labcoat_TL_open"
-	icon_open = "labcoat_TL_open"
-	icon_closed = "labcoat_TL"
+	icon_state = "labcoat_tox_open"
+	icon_open = "labcoat_tox_open"
+	icon_closed = "labcoat_tox"
 
 /obj/item/clothing/suit/storage/toggle/labcoat/science/ec
 	name = "\improper EC labcoat"

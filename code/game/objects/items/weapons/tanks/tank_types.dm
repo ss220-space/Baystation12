@@ -94,6 +94,9 @@
 	melee_accuracy_bonus = -10
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 	volume = 40 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_belt_resomi.dmi'//inf
+	)
 
 /obj/item/tank/emergency/oxygen
 	name = "emergency oxygen tank"
