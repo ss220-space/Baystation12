@@ -92,6 +92,12 @@
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/table/standard,
+/obj/item/paper_bin{
+	pixel_x = 1;
+	pixel_y = 9
+	},
+/obj/item/folder,
+/obj/item/pen,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/verne/xenosci/workshop)
 "ap" = (
@@ -1255,18 +1261,12 @@
 /area/verne/hangar)
 "eU" = (
 /obj/structure/table/standard,
-/obj/item/paper_bin{
-	pixel_x = 1;
-	pixel_y = 9
-	},
-/obj/item/folder,
-/obj/item/pen,
-/obj/item/storage/toolbox/mechanical,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/window/reinforced,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/cell_charger,
 /obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
@@ -2133,6 +2133,7 @@
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/toolbox/mechanical,
+/obj/random/technology_scanner,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "mq" = (
@@ -2993,12 +2994,13 @@
 "sU" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/evidence,
-/obj/item/crowbar,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/alarm/verne{
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/item/melee/baton/loaded,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "tf" = (
@@ -3736,10 +3738,8 @@
 	dir = 8;
 	pixel_x = 20
 	},
-/obj/machinery/computer/rdconsole/core{
-	req_access = list();
-	dir = 8
-	},
+/obj/structure/table/steel,
+/obj/item/paper/verne/science,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "yE" = (
@@ -3999,11 +3999,6 @@
 /turf/simulated/floor/plating,
 /area/verne/catfish/engineering)
 "Ay" = (
-/obj/structure/table/standard,
-/obj/machinery/cell_charger,
-/obj/item/melee/baton/loaded,
-/obj/item/screwdriver,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -4443,9 +4438,10 @@
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "DP" = (
-/obj/structure/table/steel,
-/obj/random/technology_scanner,
 /obj/machinery/light,
+/obj/machinery/computer/rdconsole/core{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "DT" = (
