@@ -16,7 +16,7 @@
 	moving_state = "ship_moving"
 	max_speed = 1/(2 SECONDS) //same stats as charon
 	burn_delay = 1 SECONDS
-	vessel_mass = 500
+	vessel_mass = 900
 	skill_needed = SKILL_BASIC
 
 /decl/ship_contact_class/srv_shuttle

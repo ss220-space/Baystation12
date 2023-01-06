@@ -23,7 +23,7 @@
 		<i>Transponder</i>: Transmitting (SCI), SCGRV<br>
 		<b>Notice</b>: Sensor array detects a medium-sized research vessel. It is owned by Ceti Institute of Technology and registered as Sol Central Government ship."}
 	contact_class = /decl/ship_contact_class/srv
-	vessel_mass = 20000
+	vessel_mass = 24000
 	known_ships = list(/obj/effect/overmap/visitable/ship/landable/verne)
 	max_speed = 1/(3 SECONDS)
 	burn_delay = 2 SECONDS
