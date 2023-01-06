@@ -3406,7 +3406,6 @@
 "zl" = (
 /obj/random/storage,
 /obj/structure/table/standard,
-/obj/random/cash,
 /obj/machinery/power/apc/verne{
 	dir = 1;
 	pixel_y = 24
@@ -3422,6 +3421,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/b_green/mono,
+/obj/structure/plushie/drone,
 /turf/simulated/floor/tiled/monotile,
 /area/verne/common/room/seven)
 "zm" = (
@@ -5262,7 +5262,6 @@
 	},
 /obj/effect/floor_decal/corner/b_green/full,
 /obj/item/device/radio/headset/map_preset/verne,
-/obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/verne/common/room/five)
 "Pf" = (

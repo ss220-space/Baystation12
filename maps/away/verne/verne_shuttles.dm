@@ -16,13 +16,13 @@
 	moving_state = "ship_moving"
 	max_speed = 1/(2 SECONDS) //same stats as charon
 	burn_delay = 1 SECONDS
-	vessel_mass = 900
+	vessel_mass = 5000
 	skill_needed = SKILL_BASIC
 
 /decl/ship_contact_class/srv_shuttle
 	class_short = "SRV"
 	class_long = "Sol Research Vessel Shuttle"
-	max_ship_mass = 1000
+	max_ship_mass = 6000
 
 /datum/shuttle/autodock/overmap/verne
 	name = "SRV Venerable Catfish"
