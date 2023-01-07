@@ -7,6 +7,7 @@
 // Themes
 import './styles/main.scss';
 import './styles/themes/abductor.scss';
+import './styles/themes/blank-dark.scss';
 import './styles/themes/cardtable.scss';
 import './styles/themes/hackerman.scss';
 import './styles/themes/malfunction.scss';

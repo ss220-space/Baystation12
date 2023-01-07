@@ -1,0 +1,23 @@
+ @use 'sass:color';
+ @use 'sass:meta';
+
+ @use '../base.scss' with (
+   $color-bg-grad-spread: 0%
+ );
+
+ .theme-blank-dark {
+
+  // Blank dark is dark
+   @include meta.load-css('../layouts/TitleBar.scss', $with: ('background-color': #171d1f));
+
+  // Blank dark is blank
+  .Layout__content {
+    background-image: none;
+  }
+
+  // Blank dark has no padding
+  .Window__contentPadding {
+    height: 100%;
+    margin: 0;
+  }
+ }

@@ -1,0 +1,126 @@
+$uplink-window-width: 460px;
+$uplinkBase: #44505e;
+$uplink-padding-y: 48px;
+$uplink-padding-x: 54px;
+$uplink-border-width: 8px;
+
+.UplinkLogin__MainBox {
+  height: 100%;
+  width: 100%;
+  padding: $uplink-padding-y 0;
+  border-collapse: separate;
+
+  border: $uplink-border-width solid;
+  border-bottom-width: 12px;
+
+  border-top-color: lighten($color: $uplinkBase, $amount: 38);
+  border-left-color: lighten($color: $uplinkBase, $amount: 18);
+  border-bottom-color: darken($color: $uplinkBase, $amount: 10);
+  border-right-color: darken($color: $uplinkBase, $amount: 4);
+
+  background-color: $uplinkBase;
+  box-shadow: inset -242px 312px 585px -282px lighten($color: $uplinkBase, $amount: 5);
+}
+
+// ------------ DISPLAY ------------
+
+.UplinkLogin__DisplayBox {
+  margin: 0 $uplink-padding-x;
+  height: 82px;
+
+  border-top: 8px solid #37404b;
+  border-left: 12px solid #3f4955;
+  border-bottom: 8px solid #697a8f;
+  border-right: 12px solid #556373;
+
+  background-color: #0e120f;
+  background-color: #a1e5b0;
+}
+
+
+.UplinkLogin__DisplayFancy {
+  height: 100%;
+  border-collapse: separate;
+
+  box-shadow: inset -1px -1px 5px 3px black, inset 0 2px 3px white;
+  box-shadow: inset -1px -1px 5px 3px #2b402a, inset 0 2px 3px white;
+}
+
+.UplinkLogin__DisplayText {
+  padding: 10px 15px;
+  text-align: right;
+
+  font-size: 42px;
+  font-weight: bold;
+  font-family: monospace;
+
+  color: #1cc448;
+  opacity: .7;
+  text-shadow: 0 0 8px #098109;
+
+  color: #1a1a1a;
+  opacity: .7;
+  text-shadow: 1.5px 1.5px 2px #61926c;
+}
+
+// ------------ KEYPAD ------------
+
+$uplink-keypad-gap-x: 20px;
+$uplink-keypad-gap-y: 18px;
+$uplink-button-height: 64px;
+$uplink-button-width: 60px;
+
+.UplinkLogin__Keypad {
+  $keypad-width: ($uplink-keypad-gap-x * 2) + ($uplink-button-width * 3);
+  $keypad-mx: (($uplink-window-width - $keypad-width) * 0.5) - $uplink-border-width;
+  margin: 0 $keypad-mx;
+}
+
+.UplinkLogin__ButtonGrid {
+  margin-right: -$uplink-keypad-gap-x; // Right elements' padding removal
+}
+
+.UplinkLogin__ButtonRow {
+  padding-right: $uplink-keypad-gap-x;
+}
+
+.UplinkLogin__Button {
+  height: $uplink-button-height;
+  width: $uplink-button-width;
+  padding: 0;
+  margin: $uplink-keypad-gap-y 0;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  // border-collapse: separate;
+  border-radius: 0;
+  cursor: pointer;
+
+  color: rgba(255, 255, 255, .7);
+  background-color: #2a2a2a;
+  box-shadow: 0 0 0 3.2px black;
+
+  &:hover {
+    color: rgba(255, 255, 255, .7);
+    background-color: #303030;
+    background-color: #2a2a2a;
+}
+  &:active, & > *:active {
+    box-shadow: 0 0 0 3.2px black, inset 1px 1px 8px 1px black;
+  }
+}
+
+.UplinkLogin__Button__Image {
+  height: 100%;
+  width: 100%;
+}
+.UplinkLogin__Button__Text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 4px;
+  text-align: center;
+}
