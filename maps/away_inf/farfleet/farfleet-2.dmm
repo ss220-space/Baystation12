@@ -197,7 +197,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/terran{
 	req_access = list("ACCESS_ICCGN_CAPTAIN");
-	name = "Captainы"
+	name = "Captain"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood/walnut,
