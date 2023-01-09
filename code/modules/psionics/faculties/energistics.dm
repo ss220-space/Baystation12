@@ -112,18 +112,3 @@
 			sparks.set_up(3, 0, get_turf(target))
 			sparks.start()
 		return TRUE
-
-/decl/psionic_power/energistics/psijaunter
-	name =            "Psionic Jaunt"
-	cost =            30
-	cooldown =        120
-	min_rank =        PSI_RANK_PARAMOUNT
-	use_description = "Click on or otherwise activate an empty hand while on pull intent to manifest a psyfocus. Use it on radio and bluespace beacons to attune it. Use it in hand to teleport to attuned beacon. Be warned: once dismissed psionic focus lose any attument and need to be attuned again!"
-	admin_log = FALSE
-
-/decl/psionic_power/energistics/psijaunter/invoke(var/mob/living/user, var/mob/living/target)
-	if((target && user != target) || user.a_intent != I_GRAB)
-		return FALSE
-	. = ..()
-	if(.)
-		return new /obj/item/psychic_power/psijaunter(user)

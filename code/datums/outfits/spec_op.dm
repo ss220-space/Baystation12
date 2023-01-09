@@ -91,7 +91,7 @@
 	gloves =   /obj/item/clothing/accessory_hand/wristwatch
 	uniform =  /obj/item/clothing/under/suit_jacket/charcoal
 	suit =     /obj/item/clothing/suit/storage/toggle/suit/black
-	shoes =    /obj/item/clothing/shoes/black
+	shoes =    /obj/item/clothing/shoes/dress
 	l_hand =   /obj/item/storage/briefcase/foundation
 	l_ear =    /obj/item/device/radio/headset/foundation
 	holster =  /obj/item/clothing/accessory/storage/holster/armpit
