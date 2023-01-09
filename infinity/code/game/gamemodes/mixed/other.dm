@@ -63,3 +63,36 @@
 	end_on_antag_death = FALSE
 	antag_tags = list(MODE_TRAITOR, MODE_MALFUNCTION)
 	require_all_templates = TRUE
+
+/datum/game_mode/trmount
+	name = "Traitor & Paramount"
+	round_description = "Traitor and a paramount are about to end your carrier."
+	extended_round_description = "Traitor and a paramount are about to end your carrier."
+	config_tag = "trmount"
+	required_players = 30
+	required_enemies = 4
+	end_on_antag_death = FALSE
+	antag_tags = list(MODE_TRAITOR, MODE_PARAMOUNT)
+	require_all_templates = TRUE
+
+/datum/game_mode/teamtwo
+	name = "Ninja & Paramount"
+	round_description = "Prepare for trouble and make it double."
+	extended_round_description = "Prepare for trouble and make it double."
+	config_tag = "teamtwo"
+	required_players = 30
+	required_enemies = 4
+	end_on_antag_death = FALSE
+	antag_tags = list(MODE_NINJA, MODE_PARAMOUNT)
+	require_all_templates = TRUE
+
+/datum/game_mode/trio
+	name = "Ninja & Paramount & Wizard"
+	round_description = "And another one, and another one."
+	extended_round_description = "And another one, and another one."
+	config_tag = "trio"
+	required_players = 30
+	required_enemies = 4
+	end_on_antag_death = FALSE
+	antag_tags = list(MODE_NINJA, MODE_PARAMOUNT, MODE_WIZARD)
+	require_all_templates = TRUE
