@@ -469,12 +469,15 @@
 /obj/structure/closet/secure_closet/guncabinet/farfleet{
 	name = "Militia Armory"
 	},
-/obj/item/gun/projectile/automatic/aksu,
-/obj/item/gun/projectile/automatic/aksu,
-/obj/item/gun/projectile/automatic/aks74u,
-/obj/item/ammo_magazine/rifle/ak,
-/obj/item/ammo_magazine/rifle/ak,
-/obj/item/ammo_magazine/rifle/ak,
+/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle,
+/obj/item/ammo_magazine/rifle,
+/obj/item/gun/projectile/automatic/mbr,
+/obj/item/gun/projectile/automatic/mr735,
+/obj/item/gun/projectile/automatic/mr735,
 /turf/simulated/floor/tiled/dark,
 /area/ship/farfleet/barracks/armory)
 "bf" = (
