@@ -25,8 +25,14 @@
 	var/pruned = FALSE
 	var/product = /obj/item/blob_tendril
 	var/attack_freq = 5 //see proc/attempt_attack; lower is more often, min 1
+	var/players_count = 0
 
 /obj/effect/blob/New(loc)
+	for(var/mob/M in GLOB.player_list)
+		var/mob_real_name = M.real_name
+		if(get_crewmember_record(sanitize(mob_real_name)) && M.client && M.client.inactivity <= 10 MINUTES)
+			players_count++
+	activity_modify(players_count)
 	health = maxHealth
 	update_icon()
 	return ..(loc)
@@ -64,6 +70,30 @@
 	if(times_fired % attack_freq)
 		return
 	attempt_attack(GLOB.alldirs)
+
+/obj/effect/blob/proc/activity_modify(var/pcount)
+	switch(pcount)
+		if(0 to 5)
+			attack_freq = Ceiling(attack_freq * 2)
+			regen_rate /= 2
+			secondary_core_growth_chance = Ceiling(secondary_core_growth_chance / 2)
+			maxHealth /= 2
+			return
+		if(6 to 10)
+			return
+		if(11 to 15)
+			attack_freq = Ceiling(attack_freq / 2)
+			regen_rate *= 1.5
+			secondary_core_growth_chance *= 2
+			maxHealth *= 1.5
+			return
+		if(16 to INFINITY)
+			attack_freq = 1
+			regen_rate *= 2
+			secondary_core_growth_chance *= 3
+			maxHealth *= 2
+			return
+	return
 
 /obj/effect/blob/proc/take_damage(var/damage)
 	health -= damage
@@ -209,6 +239,7 @@
 	maxHealth = 450
 	damage_min = 30
 	damage_max = 40
+	regen_rate = 3
 	expandType = /obj/effect/blob/shield
 	product = /obj/item/blob_tendril/core
 
@@ -233,27 +264,20 @@ regen() will cover update_icon() for this proc
 		if(75 to INFINITY)
 			brute_resist = 3.5
 			fire_resist = 2
-			attack_freq = 5
-			regen_rate = 2
 			times_to_pulse = 4
 			if(reported_low_damage)
 				report_shield_status("high")
 		if(50 to 74)
 			brute_resist = 2.5
 			fire_resist = 1.5
-			attack_freq = 4
-			regen_rate = 3
 			times_to_pulse = 3
 		if(34 to 49)
 			brute_resist = 1
 			fire_resist = 0.8
-			attack_freq = 3
-			regen_rate = 4
 			times_to_pulse = 2
 		if(-INFINITY to 33)
 			brute_resist = 0.5
 			fire_resist = 0.3
-			regen_rate = 5
 			times_to_pulse = 1
 			if(!reported_low_damage)
 				report_shield_status("low")
