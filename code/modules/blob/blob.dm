@@ -87,7 +87,7 @@
 			secondary_core_growth_chance *= 2
 			maxHealth *= 1.5
 			return
-		if(16 to INFINITY)
+		if(23 to INFINITY)
 			attack_freq = 1
 			regen_rate *= 2
 			secondary_core_growth_chance *= 3
