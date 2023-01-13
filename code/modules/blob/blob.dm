@@ -79,7 +79,7 @@
 			secondary_core_growth_chance = Ceiling(secondary_core_growth_chance / 2)
 			maxHealth /= 2
 			return
-		if(6 to 10)
+		if(6 to 15)
 			return
 		if(11 to 15)
 			attack_freq = Ceiling(attack_freq / 2)
