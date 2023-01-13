@@ -81,7 +81,7 @@
 			return
 		if(6 to 15)
 			return
-		if(11 to 15)
+		if(16 to 22)
 			attack_freq = Ceiling(attack_freq / 2)
 			regen_rate *= 1.5
 			secondary_core_growth_chance *= 2
