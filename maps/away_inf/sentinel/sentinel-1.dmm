@@ -5289,6 +5289,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/uniform_vendor,
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/equipment)
 "ka" = (

@@ -199,6 +199,14 @@
 	title = "Fleet Technician"
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/patrol/engineer
+	branch = /datum/mil_branch/fleet
+	allowed_branches = list(/datum/mil_branch/fleet)
+	allowed_ranks = list(
+		/datum/mil_rank/fleet/e3,
+		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/fleet/e5
+	)
+	department_flag = ENG
 	supervisors = "ensign, lieutenant commander"
 	loadout_allowed = TRUE
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
@@ -221,8 +229,9 @@
 
 /* BRANCH & RANKS
  * =======
+ */
 
-/datum/mil_branch/scgdf
+/*/datum/mil_branch/scgdf
 	name = "Sol Central Government Defence Forces"
 	name_short = "SCGDF"
 	email_domain = "sol.gov"
@@ -259,7 +268,41 @@
 		var/obj/item/card/id/C = H.wear_id
 		if(istype(C))
 			C.assignment = milsubbranch
+
 */
+
+/datum/mil_branch/fleet
+	name = "Fleet"
+	name_short = "SCGF"
+	email_domain = "torch.fleet.mil"
+	rank_types = list(
+		/datum/mil_rank/fleet/e3,
+		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/fleet/e5
+	)
+	spawn_rank_types = list(
+		/datum/mil_rank/fleet/e3,
+		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/fleet/e5
+	)
+
+/datum/mil_rank/fleet/e3
+	name = "Crewman"
+	name_short = "CN"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e3, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 3
+
+/datum/mil_rank/fleet/e4
+	name = "Petty Officer Third Class"
+	name_short = "PO3"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e4, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 4
+
+/datum/mil_rank/fleet/e5
+	name = "Petty Officer Second Class"
+	name_short = "PO2"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e5, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 5
 
 /* OUTFITS
  * =======

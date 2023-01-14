@@ -10,7 +10,8 @@
 		/datum/mil_branch/contractor,
 		/datum/mil_branch/employee,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet
+		/datum/mil_branch/skrell_fleet,
+		/datum/mil_branch/fleet
 	)
 
 	spawn_branch_types = list(
@@ -18,7 +19,8 @@
 		/datum/mil_branch/contractor,
 		/datum/mil_branch/employee,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet
+		/datum/mil_branch/skrell_fleet,
+		/datum/mil_branch/fleet
 	)
 
 /*
@@ -32,35 +34,44 @@
 			/datum/mil_branch/skrell_fleet),
 		/datum/species/machine  = list(
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet),
 		/datum/species/adherent = list(
 			/datum/mil_branch/contractor,
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet),
 		/datum/species/unathi   = list(
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet),
 		/datum/species/skrell   = list(
-			/datum/mil_branch/alien),
+			/datum/mil_branch/alien,
+			/datum/mil_branch/fleet),
 		/datum/species/nabber   = list(
 			/datum/mil_branch/civilian,
 			/datum/mil_branch/employee,
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet),
 		/datum/species/diona    = list(
 			/datum/mil_branch/contractor,
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet),
 		/datum/species/tajaran  = list(
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet),
 		/datum/species/resomi   = list(
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet),
 		/datum/species/vox      = list(
 			/datum/mil_branch/contractor,
 			/datum/mil_branch/employee,
-			/datum/mil_branch/skrell_fleet
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet
 		)
 	)
 

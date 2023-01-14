@@ -105,3 +105,17 @@
 /* MISC
  * ========
  */
+
+/decl/hierarchy/mil_uniform/fleet/eng
+	name = "Fleet engineering"
+	departments = ENG
+
+	under = /obj/item/clothing/under/solgov/utility/fleet/engineering
+	extra = list(
+				/obj/item/clothing/under/solgov/utility/fleet/combat/engineering,
+				/obj/item/clothing/head/beret/solgov/fleet/engineering,
+				/obj/item/clothing/head/ushanka/solgov/fleet,
+				/obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
+				/obj/item/clothing/head/soft/solgov/fleet,
+				/obj/item/clothing/gloves/thick/duty/solgov/eng
+			)
