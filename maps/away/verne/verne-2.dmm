@@ -1407,6 +1407,7 @@
 	pixel_y = 22
 	},
 /obj/machinery/r_n_d/destructive_analyzer,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/workshop)
 "gh" = (
@@ -3516,6 +3517,7 @@
 	dir = 1
 	},
 /obj/machinery/r_n_d/circuit_imprinter,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "wQ" = (
@@ -3764,6 +3766,7 @@
 /obj/machinery/computer/rdconsole/core{
 	req_access = list()
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "yO" = (
@@ -4838,6 +4841,7 @@
 /area/verne/engineering/storage)
 "HI" = (
 /obj/machinery/r_n_d/protolathe,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "HQ" = (
