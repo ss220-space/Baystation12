@@ -25,14 +25,9 @@
 	var/pruned = FALSE
 	var/product = /obj/item/blob_tendril
 	var/attack_freq = 5 //see proc/attempt_attack; lower is more often, min 1
-	var/players_count = 0
 
 /obj/effect/blob/New(loc)
-	for(var/mob/M in GLOB.player_list)
-		var/mob_real_name = M.real_name
-		if(get_crewmember_record(sanitize(mob_real_name)) && M.client && M.client.inactivity <= 10 MINUTES)
-			players_count++
-	activity_modify(players_count)
+	activity_modify(GLOB.active_crew_players)
 	health = maxHealth
 	update_icon()
 	return ..(loc)
