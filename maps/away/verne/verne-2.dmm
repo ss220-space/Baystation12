@@ -217,7 +217,11 @@
 "aV" = (
 /obj/structure/table/steel,
 /obj/structure/window/reinforced,
-/obj/item/device/bot_kit,
+/obj/item/stock_parts/circuitboard/helm,
+/obj/item/stock_parts/circuitboard/sensors,
+/obj/item/stock_parts/circuitboard/shuttle_console/explore,
+/obj/item/stock_parts/circuitboard/engine,
+/obj/item/clothing/glasses/welding,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "aX" = (
@@ -1828,16 +1832,6 @@
 	initial_gas = null
 	},
 /area/verne/engineering/smresearch/control)
-"jt" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/effect/floor_decal/techfloor,
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/verne/engineering/workshop)
 "jB" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/conveyor_switch{
@@ -3738,8 +3732,9 @@
 	dir = 8;
 	pixel_x = 20
 	},
-/obj/structure/table/steel,
-/obj/item/paper/verne/science,
+/obj/structure/bed/chair{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "yE" = (
@@ -3766,12 +3761,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
 "yM" = (
-/obj/structure/table/steel,
-/obj/item/stock_parts/circuitboard/engine,
-/obj/item/stock_parts/circuitboard/shuttle_console/explore,
-/obj/item/stock_parts/circuitboard/sensors,
-/obj/item/stock_parts/circuitboard/helm,
-/obj/item/clothing/glasses/welding,
+/obj/machinery/computer/rdconsole/core{
+	req_access = list()
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "yO" = (
@@ -4439,9 +4431,8 @@
 /area/verne/catfish)
 "DP" = (
 /obj/machinery/light,
-/obj/machinery/computer/rdconsole/core{
-	dir = 1
-	},
+/obj/structure/table/steel,
+/obj/item/paper/verne/science,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "DT" = (
@@ -6745,6 +6736,7 @@
 /obj/structure/table/steel,
 /obj/random/advdevice,
 /obj/structure/window/reinforced,
+/obj/item/device/bot_kit,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "Yu" = (
@@ -15348,7 +15340,7 @@ wM
 ng
 Yc
 HI
-jt
+jc
 DP
 Sd
 KY
