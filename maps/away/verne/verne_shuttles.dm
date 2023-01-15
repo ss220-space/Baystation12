@@ -8,7 +8,9 @@
 	name = "SRV Venerable Catfish"
 	scanner_name = "SRV Venerable Catfish"
 	shuttle = "SRV Venerable Catfish"
-	desc = "An SSE-U17 long range shuttle, broadcasting SCGRV codes and the callsign \"SRV Verne-1 Venerable Catfish\"."
+	scanner_desc = @{"<center><img src = sollogo.png></center><br> <i>Registration</i>: SRV Verne-1 Venerable Catfish, SSE-U17 long range shuttle<br>
+		<i>Transponder</i>: Transmitting (SCI), SCGRV"}
+	contact_class = /decl/ship_contact_class/srv_shuttle
 	fore_dir = NORTH
 	vessel_size = SHIP_SIZE_SMALL
 	moving_state = "ship_moving"
@@ -16,6 +18,11 @@
 	burn_delay = 1 SECONDS
 	vessel_mass = 5000
 	skill_needed = SKILL_BASIC
+
+/decl/ship_contact_class/srv_shuttle
+	class_short = "SRV"
+	class_long = "Sol Research Vessel Shuttle"
+	max_ship_mass = 6000
 
 /datum/shuttle/autodock/overmap/verne
 	name = "SRV Venerable Catfish"

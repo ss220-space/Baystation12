@@ -625,12 +625,13 @@
 "cJ" = (
 /obj/machinery/reagentgrinder,
 /obj/item/reagent_containers/glass/beaker/large,
-/obj/structure/closet/secure_closet/medical_wall{
-	name = "Pill Cabinet";
-	pixel_x = 0;
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/corner/paleblue/mono,
+/obj/structure/closet/walllocker/medical{
+	name = "Pill Cabinet";
+	desc = "It's wall-mounted storage unit for supplies.";
+	pixel_y = 29;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/medical/chem)
 "cM" = (
@@ -2630,6 +2631,7 @@
 /obj/machinery/recharger,
 /obj/effect/floor_decal/corner/b_green/mono,
 /obj/structure/table/standard,
+/obj/item/paper/verne/prefix,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/bridge)
 "sZ" = (
@@ -3404,7 +3406,6 @@
 "zl" = (
 /obj/random/storage,
 /obj/structure/table/standard,
-/obj/random/cash,
 /obj/machinery/power/apc/verne{
 	dir = 1;
 	pixel_y = 24
@@ -3420,6 +3421,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/b_green/mono,
+/obj/structure/plushie/drone,
 /turf/simulated/floor/tiled/monotile,
 /area/verne/common/room/seven)
 "zm" = (
@@ -3839,7 +3841,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/trash/raisins,
+/obj/item/paper/verne/airlocks,
 /turf/simulated/floor/tiled/monotile,
 /area/verne/common/messseating)
 "CG" = (
@@ -4375,6 +4377,8 @@
 /obj/effect/floor_decal/corner/b_green{
 	dir = 6
 	},
+/obj/structure/table/standard,
+/obj/item/paper/verne/turrets,
 /turf/simulated/floor/tiled/white,
 /area/verne/common/cryo)
 "HH" = (
