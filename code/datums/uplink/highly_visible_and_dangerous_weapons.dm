@@ -149,6 +149,13 @@
 	path = /obj/item/storage/secure/briefcase/heavysniper
 	antag_roles = list(MODE_MERCENARY)
 
+/datum/uplink_item/item/visible_weapons/psihelmet
+	name = "Psi-Amplified Combat Helmet"
+	item_cost = 100
+	path = /obj/item/clothing/head/helmet/space/psi_amp/medium
+	desc = "An extremly powerful, illegal psi-amp. Comes installed in heavy combat helmet."
+	antag_roles = list(MODE_MERCENARY)
+
 /datum/uplink_item/item/visible_weapons/psi_amp
 	name = "Cerebroenergetic Psionic Amplifier"
 	item_cost = 60   //inf, was 50

@@ -24,7 +24,7 @@
 
 /datum/gear/uniform/si_exec
 	display_name = "NanoTrasen senior researcher alt uniform"
-	path = /obj/item/clothing/under/rank/scientist/executive/nanotrasen
+	path = /obj/item/clothing/under/rank/scientist/executive
 	allowed_roles = list(/datum/job/senior_scientist)
 
 /datum/gear/uniform/si_overalls

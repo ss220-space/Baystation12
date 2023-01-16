@@ -37,7 +37,7 @@
 	name = "pharmacist's jumpsuit"
 	icon_state = "chemistry"
 	item_state = "w_suit"
-	worn_state = "chemistrywhite"
+	worn_state = "chemistry"
 	gender_icons = 1
 	permeability_coefficient = 0.50
 	armor = list(
@@ -140,6 +140,7 @@
 	name = "scrubs"
 	desc = "A loose-fitting garment designed to provide minor protection against biohazards."
 	icon_state = "scrubs"
+	item_state = "scrubs"
 	worn_state = "scrubs"
 	gender_icons = 1
 

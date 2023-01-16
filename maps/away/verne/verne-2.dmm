@@ -92,6 +92,12 @@
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/table/standard,
+/obj/item/paper_bin{
+	pixel_x = 1;
+	pixel_y = 9
+	},
+/obj/item/folder,
+/obj/item/pen,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/verne/xenosci/workshop)
 "ap" = (
@@ -393,13 +399,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/vending/hydronutrients{
-	categories = 3;
+/obj/machinery/seed_storage/xenobotany{
 	dir = 1;
-	icon_state = "nutri"
+	icon_state = "seeds"
 	},
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
@@ -613,6 +618,9 @@
 	dir = 8
 	},
 /obj/item/stack/material/aluminium/fifty,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/hangar)
 "cx" = (
@@ -1253,18 +1261,12 @@
 /area/verne/hangar)
 "eU" = (
 /obj/structure/table/standard,
-/obj/item/paper_bin{
-	pixel_x = 1;
-	pixel_y = 9
-	},
-/obj/item/folder,
-/obj/item/pen,
-/obj/item/storage/toolbox/mechanical,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/window/reinforced,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/cell_charger,
 /obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
@@ -1400,7 +1402,7 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 22
 	},
-/obj/structure/closet/hydrant,
+/obj/machinery/r_n_d/destructive_analyzer,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/workshop)
 "gh" = (
@@ -1958,11 +1960,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/misc/bucket,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "lh" = (
@@ -2090,6 +2091,9 @@
 	dir = 8
 	},
 /obj/structure/closet/crate/hydroponics/prespawned,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "md" = (
@@ -2102,8 +2106,9 @@
 /area/verne/engineering/workshop)
 "mf" = (
 /obj/structure/table/steel,
-/obj/item/disk/integrated_circuit/upgrade/clone,
+/obj/item/device/integrated_circuit_printer/upgraded,
 /obj/item/disk/integrated_circuit/upgrade/advanced,
+/obj/item/disk/integrated_circuit/upgrade/clone,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "mk" = (
@@ -2126,6 +2131,9 @@
 	},
 /obj/item/storage/toolbox/mechanical,
 /obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/mechanical,
+/obj/random/technology_scanner,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "mq" = (
@@ -2986,12 +2994,13 @@
 "sU" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/evidence,
-/obj/item/crowbar,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/alarm/verne{
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/item/melee/baton/loaded,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "tf" = (
@@ -3509,11 +3518,10 @@
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/external)
 "wM" = (
-/obj/structure/table/steel,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/device/integrated_circuit_printer/upgraded,
+/obj/machinery/r_n_d/circuit_imprinter,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "wQ" = (
@@ -3534,9 +3542,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/seed_extractor,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/vending/hydronutrients{
+	categories = 3;
+	dir = 1;
+	icon_state = "nutri"
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
@@ -3594,13 +3606,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/obj/machinery/seed_storage/xenobotany{
-	dir = 1;
-	icon_state = "seeds"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
+/obj/effect/floor_decal/corner/b_green/diagonal,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "xI" = (
@@ -3728,12 +3734,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/storage)
 "yB" = (
-/obj/structure/table/steel,
-/obj/item/storage/toolbox/mechanical,
 /obj/item/device/radio/intercom/map_preset/verne{
 	dir = 8;
 	pixel_x = 20
 	},
+/obj/structure/table/steel,
+/obj/item/paper/verne/science,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "yE" = (
@@ -3761,6 +3767,10 @@
 /area/verne/catfish)
 "yM" = (
 /obj/structure/table/steel,
+/obj/item/stock_parts/circuitboard/engine,
+/obj/item/stock_parts/circuitboard/shuttle_console/explore,
+/obj/item/stock_parts/circuitboard/sensors,
+/obj/item/stock_parts/circuitboard/helm,
 /obj/item/clothing/glasses/welding,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
@@ -3989,11 +3999,6 @@
 /turf/simulated/floor/plating,
 /area/verne/catfish/engineering)
 "Ay" = (
-/obj/structure/table/standard,
-/obj/machinery/cell_charger,
-/obj/item/melee/baton/loaded,
-/obj/item/screwdriver,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -4433,9 +4438,10 @@
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "DP" = (
-/obj/structure/table/steel,
-/obj/random/technology_scanner,
 /obj/machinery/light,
+/obj/machinery/computer/rdconsole/core{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "DT" = (
@@ -4840,12 +4846,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/storage)
 "HI" = (
-/obj/structure/table/steel,
-/obj/item/storage/toolbox/electrical,
-/obj/item/stock_parts/circuitboard/helm,
-/obj/item/stock_parts/circuitboard/sensors,
-/obj/item/stock_parts/circuitboard/shuttle_console/explore,
-/obj/item/stock_parts/circuitboard/engine,
+/obj/machinery/r_n_d/protolathe,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "HQ" = (
@@ -5401,6 +5402,7 @@
 /area/verne/engineering/external)
 "LZ" = (
 /obj/structure/reagent_dispensers/watertank,
+/obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/reinforced,
 /area/verne/xenosci)
 "Me" = (
@@ -5463,7 +5465,7 @@
 /area/verne/engineering/storage)
 "MK" = (
 /obj/machinery/door/airlock/research{
-	name = "Verme Xenoscience Workshop"
+	name = "Verne Xenoscience Workshop"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white/monotile,
@@ -6874,10 +6876,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/biogenerator,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "ZA" = (

@@ -1007,6 +1007,12 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/button/blast_door{
+	id_tag = "verneblastd3";
+	name = "Verne Protective Blast doors";
+	pixel_x = -7;
+	pixel_y = 25
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/external)
 "fz" = (
@@ -1195,12 +1201,6 @@
 	},
 /turf/space,
 /area/space)
-"it" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/verne/engineering/external)
 "ix" = (
 /obj/effect/catwalk_plated/dark,
 /obj/structure/lattice,
@@ -1875,12 +1875,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/verne/engineering/powergen)
-"pM" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/verne/engineering/external)
 "pS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 10
@@ -1892,6 +1886,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 32
 	},
+/obj/item/paper/verne/combustion,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/thrustgen)
 "qc" = (
@@ -2212,7 +2207,7 @@
 /area/verne/engineering/smresearch)
 "sG" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/atmospherics/binary/passive_gate{
+/obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 4
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -2515,6 +2510,7 @@
 	icon_state = "freezer"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/paper/verne/supermatter,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/smresearch)
 "vQ" = (
@@ -2765,13 +2761,6 @@
 	},
 /turf/space,
 /area/space)
-"xO" = (
-/obj/machinery/atmospherics/binary/passive_gate{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/reinforced/airless,
-/area/verne/engineering/external)
 "xR" = (
 /obj/effect/floor_decal/corner/red/mono,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3288,7 +3277,7 @@
 /area/verne/engineering/external)
 "Dw" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/atmospherics/binary/passive_gate{
+/obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -3426,6 +3415,15 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/space,
 /area/space)
+"EB" = (
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 4;
+	tag_north = 1;
+	tag_south = 2
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/verne/engineering/atmospherics)
 "EE" = (
 /obj/structure/railing/mapped{
 	dir = 8
@@ -4126,9 +4124,8 @@
 /area/verne/engineering/atmospherics)
 "LE" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/verne/engineering/atmospherics)
@@ -4283,6 +4280,7 @@
 	start_pressure = 3000
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/item/paper/verne/atmos,
 /turf/simulated/floor/tiled/techmaint,
 /area/verne/engineering/atmospherics)
 "Mz" = (
@@ -5258,6 +5256,14 @@
 /obj/machinery/light/navigation,
 /turf/space,
 /area/space)
+"Xb" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/verne/engineering/atmospherics)
 "Xe" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -5328,8 +5334,11 @@
 /turf/space,
 /area/space)
 "Xv" = (
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 8
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 3;
+	tag_north = 1;
+	tag_south = 2
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/verne/engineering/atmospherics)
@@ -5419,12 +5428,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/verne/engineering/atmospherics)
 "YC" = (
-/obj/effect/paint_stripe/gunmetal,
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/blast/regular{
 	id_tag = "vernechamberwindow";
 	name = "Chamber Window"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/verne/engineering/thrustgen)
 "YM" = (
@@ -10864,8 +10873,8 @@ qW
 xB
 ZO
 ZO
-it
-it
+Zv
+Zv
 xE
 iI
 qW
@@ -12413,7 +12422,7 @@ Gz
 cI
 cX
 LR
-Xv
+EB
 oe
 Xv
 Bg
@@ -12565,7 +12574,7 @@ nn
 dn
 gv
 Dp
-LE
+Xb
 Lu
 LE
 Mx
@@ -15401,7 +15410,7 @@ qW
 qW
 mf
 od
-xO
+Dw
 Os
 od
 mf
@@ -15425,8 +15434,8 @@ Wt
 xB
 Zv
 Zv
-pM
-pM
+ZO
+ZO
 xE
 qW
 qW

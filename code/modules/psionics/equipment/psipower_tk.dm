@@ -55,8 +55,8 @@
 	if(!target || !user || (isobj(target) && !isturf(target.loc)) || !user.psi || !user.psi.can_use() || !user.psi.spend_power(8))
 		return
 
-	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN * 8)
-	user.psi.set_cooldown(32)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN * 4)
+	user.psi.set_cooldown(16)
 
 	var/user_psi_leech = user.do_psionics_check(5, user)
 	if(user_psi_leech)

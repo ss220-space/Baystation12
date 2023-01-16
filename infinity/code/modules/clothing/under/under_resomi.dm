@@ -136,6 +136,111 @@
 	icon_state = "resomi_greydress"
 	worn_state = "resomi_greydress"
 
+/obj/item/clothing/under/resomi/turtleneck
+	name = "small turtleneck"
+	desc = "A small turtleneck of non-human proportions."
+	icon_state = "cmoturtle"
+
+/obj/item/clothing/under/resomi/turtleneck/medical
+	name = "medical turtleneck"
+	icon_state = "cmoturtle"
+
+/obj/item/clothing/under/resomi/turtleneck/science
+	name = "science turtleneck"
+	icon_state = "turtle_sci"
+
+/obj/item/clothing/under/resomi/turtleneck/science_alt
+	name = "science alt turtleneck"
+	icon_state = "rdturtle"
+
+/obj/item/clothing/under/resomi/turtleneck/blue
+	name = "blue turtleneck"
+	icon_state = "blueturtle"
+
+/obj/item/clothing/under/resomi/turtleneck/hop
+	name = "hop turtleneck"
+	icon_state = "hopturtle"
+
+/obj/item/clothing/under/resomi/turtleneck/sec
+	name = "sec turtleneck"
+	icon_state = "security_medic_turtleneck"
+/obj/item/clothing/under/resomi/morningstar
+	name = "morningstar jumpsuit"
+	icon_state = "morningstar_jumpsuit"
+
+/obj/item/clothing/under/resomi/saints
+	name = "saints jumpsuit"
+	icon_state = "saints_jumpsuit"
+
+/obj/item/clothing/under/resomi/deckers_jumpsuit
+	name = "deckers jumpsuit"
+	icon_state = "deckers_jumpsuit"
+
+/obj/item/clothing/under/resomi/black_suit
+	name = "really black suit"
+	icon_state = "really_black_suit"
+
+/obj/item/clothing/under/resomi/blue_dark_suit
+	name = "dark blue suit"
+	icon_state = "security_black"
+
+/obj/item/clothing/under/resomi/white_suit
+	name = "white suit"
+	icon_state = "security_white"
+
+/obj/item/clothing/under/resomi/blue_suit
+	name = "blue suit"
+	icon_state = "security_blue"
+
+/obj/item/clothing/under/resomi/com
+	name = "com suit"
+	icon_state = "hos_black"
+
+/obj/item/clothing/under/resomi/com_blue
+	name = "com blue suit"
+	icon_state = "warden_black"
+
+/obj/item/clothing/under/resomi/maid
+	name = "maid suit"
+	icon_state = "resomi_maid"
+
+/obj/item/clothing/under/resomi/tactical
+	name = "tactical suit"
+	icon_state = "tactical_suit"
+
+/obj/item/clothing/under/resomi/skirt
+	name = "resomi skirt"
+	icon_state = "skirt"
+
+
+/obj/item/clothing/under/resomi/util
+	name = "util suit"
+	icon_state = "util_gen"
+
+/obj/item/clothing/under/resomi/util/cargo
+	name = "util cargo suit"
+	icon_state = "util_cargo"
+
+/obj/item/clothing/under/resomi/util/eng
+	name = "util engineering suit"
+	icon_state = "util_eng"
+
+/obj/item/clothing/under/resomi/util/com
+	name = "util command suit"
+	icon_state = "util_sec"
+
+/obj/item/clothing/under/resomi/util/med
+	name = "util medical suit"
+	icon_state = "util_med"
+
+/obj/item/clothing/under/resomi/util/sci
+	name = "util science suit"
+	icon_state = "util_sci"
+
+/obj/item/clothing/under/resomi/util/sec
+	name = "util security suit"
+	icon_state = "util_sec_old"
+
 //Undercoat
 
 /obj/item/clothing/under/resomi/undercoat

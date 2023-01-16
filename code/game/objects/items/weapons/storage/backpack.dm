@@ -126,7 +126,7 @@
 /obj/item/storage/backpack/toxins
 	name = "science backpack"
 	desc = "It's a stain-resistant light backpack, modeled for use in laboratories and other scientific settings."
-	icon_state = "ntpack"
+	icon_state = "toxpack" //"ntpack"
 
 /obj/item/storage/backpack/hydroponics
 	name = "hydroponics backpack"
@@ -346,7 +346,7 @@
 /obj/item/storage/backpack/satchel/tox
 	name = "science satchel"
 	desc = "It's a stain-resistant satchel, modeled for use in laboratories and other scientific settings."
-	icon_state = "satchel-nt"
+	icon_state = "satchel-tox" // "satchel-nt"
 
 /obj/item/storage/backpack/satchel/sec
 	name = "security satchel"
@@ -471,7 +471,7 @@
 /obj/item/storage/backpack/messenger/tox
 	name = "science messenger bag"
 	desc = "A small, stain-resistant backpack worn over one shoulder. This one was modeled for use in laboratories and other scientific settings."
-	icon_state = "courierbagnt"
+	icon_state = "courierbagtox" //"courierbagnt"
 
 /obj/item/storage/backpack/messenger/com
 	name = "command messenger bag"

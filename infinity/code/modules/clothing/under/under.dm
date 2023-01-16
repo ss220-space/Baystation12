@@ -27,7 +27,7 @@
 	name = "senior engineer's jumpsuit"
 	icon = 'infinity/icons/obj/clothing/obj_under.dmi'
 	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
-	icon_state = "engine_senior"
+	icon_state = "eng_senior"
 	item_state = "eng_senior"
 	worn_state = "eng_senior"
 
