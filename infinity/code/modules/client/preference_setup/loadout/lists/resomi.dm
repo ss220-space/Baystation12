@@ -68,7 +68,7 @@
 	sort_category = "Xenowear"
 	whitelisted = list(SPECIES_RESOMI)
 
-/datum/gear/suit/resomi_uniform/New()
+/datum/gear/uniform/resomi_uniform/New()
 	..()
 	var/resomi = list()
 	resomi["morningstar jumpsuit"] = /obj/item/clothing/under/resomi/morningstar
@@ -79,8 +79,8 @@
 	resomi["blue suit"] = /obj/item/clothing/under/resomi/blue_suit
 	//resomi["com suit"] = /obj/item/clothing/under/resomi/com
 	resomi["com blue suit"] = /obj/item/clothing/under/resomi/com_blue
-	resomi["tactical suit"] = /obj/item/clothing/under/resomi/maid
-	resomi["maid suit"] = /obj/item/clothing/under/resomi/tactical
+	resomi["tactical suit"] = /obj/item/clothing/under/resomi/tactical
+	resomi["maid suit"] = /obj/item/clothing/under/resomi/maid
 
 	gear_tweaks += new/datum/gear_tweak/path(resomi)
 
