@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(active_crew_players, 0)
+
 /datum/event/blob
 	announceWhen	= 12
 
@@ -13,7 +15,12 @@
 		log_and_message_admins("Blob failed to find a viable turf.")
 		kill()
 		return
-
+	var/active_players = 0
+	for(var/mob/M in GLOB.player_list)
+		var/mob_real_name = M.real_name
+		if(get_crewmember_record(sanitize(mob_real_name)) && M.client && M.client.inactivity <= 10 MINUTES)
+			active_players++;
+	GLOB.active_crew_players = active_players
 	log_and_message_admins("Blob spawned in \the [get_area(T)]", location = T)
 	Blob = new /obj/effect/blob/core(T)
 	for(var/i = 1; i < rand(3, 4), i++)
