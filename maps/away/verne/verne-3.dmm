@@ -1229,7 +1229,9 @@
 	dir = 1;
 	icon_state = "corner_white"
 	},
-/obj/structure/closet/crate/secure/biohazard/alt,
+/obj/structure/closet/crate/secure/biohazard/alt{
+	req_access = list()
+	},
 /obj/machinery/light{
 	dir = 4
 	},
