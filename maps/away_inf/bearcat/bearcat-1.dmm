@@ -1456,7 +1456,6 @@
 	dir = 10;
 	icon_state = "corner_white"
 	},
-/obj/structure/mech_wreckage/powerloader,
 /turf/simulated/floor/tiled/usedup,
 /area/ship/scrap/shuttle/lift)
 "cT" = (
