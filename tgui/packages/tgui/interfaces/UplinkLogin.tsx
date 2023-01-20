@@ -32,8 +32,8 @@ export const UplinkLogin = (_props, context) => {
   const { data } = useBackend<UplinkLoginData>(context);
   return (
     <Window
-      width={460}
-      height={612}
+      width={360}
+      height={520}
       theme="blank-dark">
       <Window.Content>
         <Flex direction="column" className="UplinkLogin__MainBox">

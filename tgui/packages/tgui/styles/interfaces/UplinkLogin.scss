@@ -1,7 +1,7 @@
-$uplink-window-width: 460px;
+$uplink-window-width: 360px;
 $uplinkBase: #44505e;
-$uplink-padding-y: 48px;
-$uplink-padding-x: 54px;
+$uplink-padding-y: 42px;
+$uplink-padding-x: 48px;
 $uplink-border-width: 8px;
 
 .UplinkLogin__MainBox {
@@ -26,7 +26,7 @@ $uplink-border-width: 8px;
 
 .UplinkLogin__DisplayBox {
   margin: 0 $uplink-padding-x;
-  height: 82px;
+  height: 72px;
 
   border-top: 8px solid #37404b;
   border-left: 12px solid #3f4955;
@@ -47,28 +47,24 @@ $uplink-border-width: 8px;
 }
 
 .UplinkLogin__DisplayText {
-  padding: 10px 15px;
+  padding: 7px 15px;
   text-align: right;
 
-  font-size: 42px;
+  font-size: 40px;
   font-weight: bold;
   font-family: monospace;
 
-  color: #1cc448;
-  opacity: .7;
-  text-shadow: 0 0 8px #098109;
-
   color: #1a1a1a;
   opacity: .7;
-  text-shadow: 1.5px 1.5px 2px #61926c;
+  text-shadow: 1px 1px 2px #61926c;
 }
 
 // ------------ KEYPAD ------------
 
 $uplink-keypad-gap-x: 20px;
 $uplink-keypad-gap-y: 18px;
-$uplink-button-height: 64px;
-$uplink-button-width: 60px;
+$uplink-button-height: 54px;
+$uplink-button-width: 52px;
 
 .UplinkLogin__Keypad {
   $keypad-width: ($uplink-keypad-gap-x * 2) + ($uplink-button-width * 3);
@@ -90,7 +86,7 @@ $uplink-button-width: 60px;
   padding: 0;
   margin: $uplink-keypad-gap-y 0;
 
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
 
   // border-collapse: separate;
@@ -140,6 +136,6 @@ $uplink-button-width: 60px;
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 4px;
+  padding-top: 2px;
   text-align: center;
 }
