@@ -33,7 +33,6 @@ $uplink-border-width: 8px;
   border-bottom: 6px solid #697a8f;
   border-right: 10px solid #556373;
 
-  background-color: #0e120f;
   background-color: #a1e5b0;
 }
 
@@ -42,7 +41,6 @@ $uplink-border-width: 8px;
   height: 100%;
   border-collapse: separate;
 
-  box-shadow: inset -1px -1px 5px 3px black, inset 0 2px 3px white;
   box-shadow: inset -1px -1px 5px 3px #2b402a, inset 0 2px 3px white;
 }
 
@@ -89,10 +87,8 @@ $uplink-button-width: 40px;
   font-size: 22px;
   font-weight: bold;
 
-  // border-collapse: separate;
   border-radius: 0;
   cursor: pointer;
-
 
   $bg: #2a2a2a;
   $text: rgba(255, 255, 255, .7);
