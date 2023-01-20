@@ -97,17 +97,36 @@ $uplink-button-width: 60px;
   border-radius: 0;
   cursor: pointer;
 
-  color: rgba(255, 255, 255, .7);
-  background-color: #2a2a2a;
-  box-shadow: 0 0 0 3.2px black;
+
+  $bg: #2a2a2a;
+  $text: rgba(255, 255, 255, .7);
+  $around-shadow: 0 0 6px 1px black, 0 0 0 3.2px #151515;
+  $edges-shadow: inset 3px 2px 6px 0 #444, inset -3px -2px 6px 0 #222;
+  $edges-shadow: inset 3px 2px 6px 0 rgba(255, 255, 255, .13), inset -3px -2px 6px 0 rgba(0, 0, 0, .3);
+  $pressed-shadow: inset 2px 2px 9px 1px black;
+
+  color: $text;
+  background-color: $bg;
+  box-shadow: $around-shadow, $edges-shadow;
 
   &:hover {
-    color: rgba(255, 255, 255, .7);
-    background-color: #303030;
-    background-color: #2a2a2a;
-}
+    color: $text;
+    background-color: $bg;
+  }
   &:active, & > *:active {
-    box-shadow: 0 0 0 3.2px black, inset 1px 1px 8px 1px black;
+    box-shadow: $pressed-shadow, $around-shadow, $edges-shadow;
+  }
+
+  &--E {
+    $bg: #1c8321;
+    background-color: $bg;
+    &:hover { background-color: $bg; }
+  }
+
+  &--C {
+    $bg: #971f1f;
+    background-color: $bg;
+    &:hover { background-color: $bg; }
   }
 }
 
