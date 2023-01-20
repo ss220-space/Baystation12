@@ -17,7 +17,11 @@
 
   // Blank dark has no padding
   .Window__contentPadding {
-    height: 100%;
     margin: 0;
+    // IE8: Calc not supported
+    height: 100%;
+    // 0.01 is needed to make page has no scroll
+    // due to rendering inaccuracies in IE.
+    height: calc(100% - 0.01rem);
   }
  }
