@@ -76,17 +76,17 @@
 			return
 		if(6 to 15)
 			return
-		if(16 to 22)
+		if(16 to 24)
 			attack_freq = Ceiling(attack_freq / 2)
-			regen_rate *= 1.5
+			regen_rate *= 1.2
+			secondary_core_growth_chance *= 1.5
+			maxHealth *= 1.25
+			return
+		if(25 to INFINITY)
+			attack_freq = 1
+			regen_rate *= 1.4
 			secondary_core_growth_chance *= 2
 			maxHealth *= 1.5
-			return
-		if(23 to INFINITY)
-			attack_freq = 1
-			regen_rate *= 2
-			secondary_core_growth_chance *= 3
-			maxHealth *= 2
 			return
 	return
 
