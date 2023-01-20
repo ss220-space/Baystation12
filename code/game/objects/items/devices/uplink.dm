@@ -266,7 +266,7 @@
 				status_message = ""
 				numeric_input = digit
 			else
-				if(length(numeric_input) >= 4)
+				if(length(numeric_input) >= 7)
 					return FALSE
 				else
 					numeric_input += digit
