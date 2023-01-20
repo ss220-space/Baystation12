@@ -1,7 +1,7 @@
-$uplink-window-width: 360px;
+$uplink-window-width: 280px;
 $uplinkBase: #44505e;
-$uplink-padding-y: 42px;
-$uplink-padding-x: 48px;
+$uplink-padding-y: 32px;
+$uplink-padding-x: 36px;
 $uplink-border-width: 8px;
 
 .UplinkLogin__MainBox {
@@ -26,12 +26,12 @@ $uplink-border-width: 8px;
 
 .UplinkLogin__DisplayBox {
   margin: 0 $uplink-padding-x;
-  height: 72px;
+  height: 60px;
 
-  border-top: 8px solid #37404b;
-  border-left: 12px solid #3f4955;
-  border-bottom: 8px solid #697a8f;
-  border-right: 12px solid #556373;
+  border-top: 6px solid #37404b;
+  border-left: 10px solid #3f4955;
+  border-bottom: 6px solid #697a8f;
+  border-right: 10px solid #556373;
 
   background-color: #0e120f;
   background-color: #a1e5b0;
@@ -47,10 +47,10 @@ $uplink-border-width: 8px;
 }
 
 .UplinkLogin__DisplayText {
-  padding: 7px 15px;
+  padding: 6px 14px;
   text-align: right;
 
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
   font-family: monospace;
 
@@ -61,10 +61,10 @@ $uplink-border-width: 8px;
 
 // ------------ KEYPAD ------------
 
-$uplink-keypad-gap-x: 20px;
-$uplink-keypad-gap-y: 18px;
-$uplink-button-height: 54px;
-$uplink-button-width: 52px;
+$uplink-keypad-gap-x: 16px;
+$uplink-keypad-gap-y: 16px;
+$uplink-button-height: 42px;
+$uplink-button-width: 40px;
 
 .UplinkLogin__Keypad {
   $keypad-width: ($uplink-keypad-gap-x * 2) + ($uplink-button-width * 3);
@@ -86,7 +86,7 @@ $uplink-button-width: 52px;
   padding: 0;
   margin: $uplink-keypad-gap-y 0;
 
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
 
   // border-collapse: separate;
@@ -97,9 +97,8 @@ $uplink-button-width: 52px;
   $bg: #2a2a2a;
   $text: rgba(255, 255, 255, .7);
   $around-shadow: 0 0 6px 1px black, 0 0 0 3.2px #151515;
-  $edges-shadow: inset 3px 2px 6px 0 #444, inset -3px -2px 6px 0 #222;
-  $edges-shadow: inset 3px 2px 6px 0 rgba(255, 255, 255, .13), inset -3px -2px 6px 0 rgba(0, 0, 0, .3);
-  $pressed-shadow: inset 2px 2px 9px 1px black;
+  $edges-shadow: inset 2px 1px 4px 0 rgba(255, 255, 255, .13), inset -2px -1px 4px 0 rgba(0, 0, 0, .3);
+  $pressed-shadow: inset 2px 2px 9px 0 black;
 
   color: $text;
   background-color: $bg;
