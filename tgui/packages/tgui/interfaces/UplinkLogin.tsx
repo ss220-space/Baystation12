@@ -26,8 +26,10 @@ const UplinkKeypad = (_props, context) => {
   );
 };
 
+type UplinkLoginData = { message: string };
+
 export const UplinkLogin = (_props, context) => {
-  const { data } = useBackend(context);
+  const { data } = useBackend<UplinkLoginData>(context);
   return (
     <Window
       width={460}
@@ -38,7 +40,7 @@ export const UplinkLogin = (_props, context) => {
           <Flex.Item>
           <Box className="UplinkLogin__DisplayBox">
               <Box className="UplinkLogin__DisplayFancy">
-                <Box className="UplinkLogin__DisplayText">{ "ERROR" }</Box>
+                <Box className="UplinkLogin__DisplayText">{ data.message || '' }</Box>
               </Box>
             </Box>
           </Flex.Item>
