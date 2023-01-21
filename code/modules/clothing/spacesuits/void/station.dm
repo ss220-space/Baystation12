@@ -348,7 +348,7 @@
 	item_state = "secalt_helm"
 	light_overlay = "helmet_light_alt"
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES, //INF WAS ARMOR_MELEE_VERY_HIGH
+		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_PISTOL, //INF WAS ARMOR_BALLISTIC_SMALL
 		laser = ARMOR_LASER_SMALL,
 		bomb = ARMOR_BOMB_PADDED,
@@ -369,7 +369,7 @@
 		)
 //[/INF]
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES, //INF WAS ARMOR_MELEE_VERY_HIGH
+		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_PISTOL, //INF WAS ARMOR_BALLISTIC_SMALL
 		laser = ARMOR_LASER_SMALL,
 		bomb = ARMOR_BOMB_PADDED,
