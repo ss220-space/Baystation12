@@ -294,3 +294,281 @@
 	name = "Spiky Ponytail"
 	icon_state = "hair_ponytail_spiky"
 //[/AURORA]
+
+//[ONYXBAY]
+/datum/sprite_accessory/hair/infinity/square
+	name = "Square"
+	icon_state = "hair_square"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/pigtails_b
+	name = "Pigtails 2"
+	icon_state = "hair_pigtails_b"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/mist
+	name = "Mist"
+	icon_state = "hair_mist"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/maid_b
+	name = "Maid tail"
+	icon_state = "hair_maid_b"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/long_sideparts
+	name = "Long Sideparts"
+	icon_state = "hair_long_sideparts"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/long_braid
+	name = "Long Braid"
+	icon_state = "hair_long_braid"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/long_curls
+	name = "Long Curls"
+	icon_state = "hair_long_curls"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/new_era
+	name = "New Era"
+	icon_state = "hair_new_era"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/cotton_hair
+	name = "Cotton Hair"
+	icon_state = "hair_cotton_hair"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/braided_hair
+	name = "Braided Hair"
+	icon_state = "hair_braided_hair"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/blunt_bangs_curls
+	name = "Blunt Bangs Curls"
+	icon_state = "hair_blunt_bangs_curls"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/blunt_bangs_alt2
+	name = "Blunt Bangs Alt"
+	icon_state = "hair_blunt_bangs_alt2"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/blades_hair
+	name = "Blades Hair"
+	icon_state = "hair_blades"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/alien_h
+	name = "Alien"
+	icon_state = "hair_alien_h"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/blackswordsman
+	name = "Mercenary"
+	icon_state = "hair_blackswordsman"
+
+/datum/sprite_accessory/hair/infinity/business4
+	name = "Business Hair 4"
+	icon_state = "hair_business4"
+
+/datum/sprite_accessory/hair/infinity/bun3
+	name = "Bun 3"
+	icon_state = "hair_bun3"
+
+/datum/sprite_accessory/hair/infinity/asymmbob
+	name = "Asymmetrical Bob"
+	icon_state = "hair_asymmbob"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/birdnest
+	name = "Birdnest"
+	icon_state = "hair_birdnest"
+
+/datum/sprite_accessory/hair/infinity/birdnest2
+	name = "Birdnest 2"
+	icon_state = "hair_birdnest2"
+
+/datum/sprite_accessory/hair/infinity/chop
+	name = "Chop"
+	icon_state = "hair_chop"
+
+/datum/sprite_accessory/hair/infinity/fag
+	name = "Flow Hair"
+	icon_state = "hair_flowhair"
+
+/datum/sprite_accessory/hair/infinity/femcut
+	name = "Cut Hair Alt"
+	icon_state = "hair_femc"
+
+/datum/sprite_accessory/hair/infinity/hamasaki
+	name = "Hamasaki Hair"
+	icon_state = "hair_hamasaki"
+
+/datum/sprite_accessory/hair/infinity/hbangs
+	name = "Combed Hair"
+	icon_state = "hair_hbangs"
+
+/datum/sprite_accessory/hair/infinity/hbangsalt
+	name = "Combed Hair Alt"
+	icon_state = "hair_hbangs_alt"
+
+/datum/sprite_accessory/hair/infinity/highpony
+	name = "High Ponytail"
+	icon_state = "hair_highponytail"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/ladylike
+	name = "Ladylike"
+	icon_state = "hair_ladylike"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/ladylike2
+	name = "Ladylike alt"
+	icon_state = "hair_ladylike2"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/mbraid
+	name = "Medium Braid"
+	icon_state = "hair_mediumbraid"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/messy_bun
+	name = "Messy Bun"
+	icon_state = "hair_messybun"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/pompadour
+	name = "Pompadour"
+	icon_state = "hair_pompadour"
+	gender = MALE
+
+/datum/sprite_accessory/hair/infinity/ramona
+	name = "Ramona"
+	icon_state = "hair_ramona"
+
+/datum/sprite_accessory/hair/infinity/short2
+	name = "Short Hair 2"
+	icon_state = "hair_short2"
+
+/datum/sprite_accessory/hair/infinity/sidepart
+	name = "Sidepart Hair"
+	icon_state = "hair_sidepart"
+
+/datum/sprite_accessory/hair/infinity/smessy
+	name = "Messy Hair"
+	icon_state = "hair_smessy"
+
+/datum/sprite_accessory/hair/infinity/stylo
+	name = "Stylo"
+	icon_state = "hair_stylo"
+
+/datum/sprite_accessory/hair/infinity/spikyponytail
+	name = "Spiky Ponytail"
+	icon_state = "hair_spikyponytail"
+
+/datum/sprite_accessory/hair/infinity/samurai
+	name = "Samurai"
+	icon_state = "hair_samurai"
+
+/datum/sprite_accessory/hair/infinity/unkept
+	name = "Unkept"
+	icon_state = "hair_unkept"
+
+/datum/sprite_accessory/hair/infinity/viking
+	name = "Viking"
+	icon_state = "hair_viking"
+	gender = MALE
+
+/datum/sprite_accessory/hair/infinity/viking2
+	name = "Viking 2"
+	icon_state = "hair_viking2"
+	gender = MALE
+
+/datum/sprite_accessory/hair/infinity/veryshortovereye
+	name = "Overeye Very Short"
+	icon_state = "hair_veryshortovereye"
+
+/datum/sprite_accessory/hair/infinity/veryshortovereyealternate
+	name = "Overeye Very Short 2"
+	icon_state = "hair_veryshortovereyealternate"
+
+/datum/sprite_accessory/hair/infinity/antenna
+	name = "Antenna Hair"
+	icon_state = "hair_antenna"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/infinity/ming_dynasty
+	name = "Ming Dynasty"
+	icon_state = "hair_ming_dynasty"
+
+/datum/sprite_accessory/hair/infinity/qing_dynasty_swtgr
+	name = "Qing Dynasty"
+	icon_state = "hair_qing_dynasty"
+	gender = MALE
+
+/datum/sprite_accessory/hair/infinity/cossack
+	name = "Cossack"
+	icon_state = "hair_cossack"
+	gender = MALE
+
+/datum/sprite_accessory/hair/infinity/cossack2
+	name = "Cossack2"
+	icon_state = "hair_cossack2"
+	gender = MALE
+
+/datum/sprite_accessory/hair/infinity/longstraightponytail
+	name = "Long Straight Ponytail"
+	icon_state = "hair_longstraightponytail"
+
+/datum/sprite_accessory/hair/infinity/monk_tonsure
+	name = "Monk Tonsure"
+	icon_state = "hair_monk_tonsure"
+
+/datum/sprite_accessory/hair/infinity/leon
+	name = "Leon"
+	icon_state = "hair_leon"
+
+/datum/sprite_accessory/hair/infinity/wong
+	name = "Wong"
+	icon_state = "hair_wong"
+
+/datum/sprite_accessory/hair/infinity/dreadtail1
+	name = "Dreadtail 1"
+	icon_state = "hair_dreadtail1"
+
+/datum/sprite_accessory/hair/infinity/dreadtail2
+	name = "Dreadtail 2"
+	icon_state = "hair_dreadtail2"
+
+/datum/sprite_accessory/hair/infinity/backswept
+	name = "Backswept"
+	icon_state = "hair_backswept"
+
+/datum/sprite_accessory/hair/infinity/wolfmane
+	name = "Wolven mane"
+	icon_state = "hair_wolfmane"
+
+/datum/sprite_accessory/hair/infinity/sickboy
+    name = "Sick"
+    icon_state = "hair_sickboy"
+
+/datum/sprite_accessory/hair/infinity/bowie
+    name = "From Mars"
+    icon_state = "hair_bowie"
+
+/datum/sprite_accessory/hair/infinity/undercut_2
+	name = "Undercut Swept Right"
+	icon_state = "hair_undercut2"
+	gender = MALE
+
+/datum/sprite_accessory/hair/infinity/wavyshoulder_down
+	name = "Wavy Shoulder Down"
+	icon_state = "hair_wavyshoulder_down"
+
+/datum/sprite_accessory/hair/infinity/wavyshoulder_up
+	name = "Wavy Shoulder Up"
+	icon_state = "hair_wavyshoulder_up"
+//[ONYXBAY]
