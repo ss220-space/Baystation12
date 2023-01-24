@@ -8196,7 +8196,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "securitshutters";
 	name = "Main Entrance second door";
-	clicksound = list('sound/whitemesa/button1.ogg', 'sound/whitemesa/button2.ogg', 'sound/whitemesa/button3.ogg')
+	clicksound = list('sound/whitemesa/button1.ogg','sound/whitemesa/button2.ogg','sound/whitemesa/button3.ogg')
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/lounge_big{
@@ -13536,6 +13536,9 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
 	},
+/obj/machinery/gateway{
+	dir = 5
+	},
 /turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A"
@@ -15643,6 +15646,9 @@
 	})
 "lbe" = (
 /obj/effect/floor_decal/techfloor/orange{
+	dir = 9
+	},
+/obj/machinery/gateway{
 	dir = 9
 	},
 /turf/simulated/floor/pool,
@@ -22162,6 +22168,9 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
+/obj/machinery/gateway{
+	dir = 8
+	},
 /turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A"
@@ -28453,7 +28462,7 @@
 	requires_power = 0
 	})
 "tYy" = (
-/obj/machinery/nuclearbomb,
+/obj/machinery/gateway/centerstation,
 /turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A"
@@ -30527,6 +30536,9 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
+/obj/machinery/gateway{
+	dir = 4
+	},
 /turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A"
@@ -30980,6 +30992,7 @@
 	})
 "vWM" = (
 /obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/gateway,
 /turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A"
@@ -32917,6 +32930,9 @@
 	})
 "xBp" = (
 /obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/obj/machinery/gateway{
 	dir = 1
 	},
 /turf/simulated/floor/pool,

@@ -25,10 +25,10 @@
 	name = "White Mesa"
 	id = "awaysite_mesa"
 	description = "Half Life inspired underground base"
-	spawn_cost = 1 // WAS 0.5
-	spawn_weight = 99
+	spawn_cost = 2000
+	spawn_weight = 50
 	prefix = "maps/away_inf/"
-	template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
+	//template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
 	suffixes = list("whitemesa/white_mesa1.dmm", "whitemesa/white_mesa2.dmm", "whitemesa/white_mesa3.dmm")
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/mesashuttle)
 
