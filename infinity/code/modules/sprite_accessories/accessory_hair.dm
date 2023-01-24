@@ -374,11 +374,6 @@
 	name = "Bun 3"
 	icon_state = "hair_bun3"
 
-/datum/sprite_accessory/hair/infinity/asymmbob
-	name = "Asymmetrical Bob"
-	icon_state = "hair_asymmbob"
-	gender = FEMALE
-
 /datum/sprite_accessory/hair/infinity/birdnest
 	name = "Birdnest"
 	icon_state = "hair_birdnest"
