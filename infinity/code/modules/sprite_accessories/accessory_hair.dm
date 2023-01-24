@@ -115,10 +115,6 @@
 	name = "Bangs"
 	icon_state = "hair_lbangs"
 
-/datum/sprite_accessory/hair/infinity/longbraid
-	name = "Long braid"
-	icon_state = "hair_long_braid"
-
 /datum/sprite_accessory/hair/infinity/longsidepart
 	name = "Long sidepart"
 	icon_state = "hair_longsidepart"
