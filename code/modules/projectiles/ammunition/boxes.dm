@@ -159,6 +159,14 @@
 /obj/item/ammo_magazine/smg/empty
 	initial_ammo = 0
 
+/obj/item/ammo_magazine/smg/rubber
+	labels = list("rubber")
+	ammo_type = /obj/item/ammo_casing/pistol/rubber
+
+/obj/item/ammo_magazine/smg/practice
+	labels = list("practice")
+	ammo_type = /obj/item/ammo_casing/pistol/practice
+
 /obj/item/ammo_magazine/pistol
 	name = "pistol magazine"
 	icon_state = "pistol_mag"
