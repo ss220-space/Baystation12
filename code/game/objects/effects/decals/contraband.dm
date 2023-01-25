@@ -102,7 +102,7 @@
 		if(give_poster_type)
 			poster_type = give_poster_type
 		else
-			poster_type = pick(subtypesof(/decl/poster))
+			poster_type = pick(subtypesof(/decl/poster) - subtypesof(/decl/poster/nowallspawn))
 	set_poster(poster_type)
 
 	switch (placement_dir)
