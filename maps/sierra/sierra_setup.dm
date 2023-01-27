@@ -14,7 +14,7 @@
 /datum/map/sierra/send_welcome()
 	var/welcome_text = "<center><img src = sierralogo.png /><br /><font size = 3><b>NSV Sierra</b> Показания Сенсоров:</font><hr />"
 	welcome_text += "Отчет сгенерирован [stationdate2text()] в [stationtime2text()]</center><br /><br />"
-	welcome_text += "Текущая система: <b>[system_name()] (Locutus)</b><br />"
+	welcome_text += "Текущая система: <b>[system_name()]</b><br />"
 	welcome_text += "Следующая система для прыжка: <b>[generate_system_name()]</b><br />"
 	welcome_text += "Дней до Солнечной Системы: <b>[rand(15,45)]</b><br />"
 	welcome_text += "Дней с последнего визита в порт: <b>[rand(60,180)]</b><br />"
