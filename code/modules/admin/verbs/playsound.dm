@@ -5,9 +5,9 @@ var/list/sounds_cache = list()
 	set name = "Play Global Sound"
 	if(!check_rights(R_SOUNDS))	return
 	//[INF]
-	// if(!config.admin_midis_allowed)
-	// 	alert("Admin midis currently disabled, ask devs for help.","Sorry, your music isn't allowed now.","")
-	// 	return
+	if(!config.admin_midis_allowed)
+		alert("Admin midis currently disabled, ask devs for help.","Sorry, your music isn't allowed now.","")
+		return
 	//[/INF]
 
 	var/sound/uploaded_sound = sound(S, repeat = 0, wait = 1, channel = GLOB.admin_sound_channel, volume = 100)
