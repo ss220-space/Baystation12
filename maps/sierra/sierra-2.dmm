@@ -2002,9 +2002,6 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/obj/structure/sign/poster/nyc/would_you_plant{
-	pixel_x = 32
-	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "aed" = (
