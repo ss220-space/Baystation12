@@ -12,7 +12,7 @@
 	area_usage_test_exempted_areas = list(
 		/area/ship/ascent_caulship
 	)
-	spawn_cost = 0.5
+	spawn_cost = 4000
 	player_cost = 4 // Нынешнее значение основано на количестве игроков в авейке ~bear1ake
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/ascent)
 

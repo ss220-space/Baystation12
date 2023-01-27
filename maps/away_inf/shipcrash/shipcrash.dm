@@ -18,7 +18,7 @@
 	description = "Grayson mining vessel"
 	prefix = "maps/away_inf/"
 	suffixes = list("shipcrash/shipcrash.dmm")
-	spawn_cost = 1
+	spawn_cost = 4000
 	accessibility_weight = 10
 //	template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED //UNCOMMENT THIS FOR TESTING PURPOSES; MAKES MAP SPAWNING EVERY ROUND
 	area_usage_test_exempted_root_areas = list(/area/shipcrash)
@@ -55,8 +55,3 @@ area
 				name = "Atmospherics"
 			engines
 				name = "Engines"
-
-
-
-
-

@@ -7,7 +7,7 @@
 	id = "awaysite_gantry"
 	description = "Salvage Gantry turned Ship"
 	suffixes = list("scavver/scavver_gantry-1.dmm","scavver/scavver_gantry-2.dmm")
-	spawn_cost = 0.7
+	spawn_cost = 4000
 	player_cost = 4
 	accessibility_weight = 10
 	shuttles_to_initialise = list(

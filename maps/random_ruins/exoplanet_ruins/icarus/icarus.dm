@@ -3,7 +3,7 @@
 	id = "icarus"
 	description = "The crash of the infamous SEV Icarus."
 	suffixes = list("icarus/icarus.dmm")
-	spawn_cost = 1
+	spawn_cost = 4000
 	ruin_tags = RUIN_HUMAN|RUIN_WRECK
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS
 	apc_test_exempt_areas = list(

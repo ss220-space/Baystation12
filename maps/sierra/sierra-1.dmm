@@ -21809,6 +21809,7 @@
 /area/space)
 "Iu" = (
 /obj/effect/shuttle_landmark/ert/dock,
+/obj/effect/shuttle_landmark/mesashuttle/dock,
 /turf/space,
 /area/space)
 "Iv" = (
