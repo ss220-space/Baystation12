@@ -18,7 +18,7 @@
 	id = "awaysite_smugglers"
 	description = "Yarr."
 	suffixes = list("smugglers/smugglers.dmm")
-	spawn_cost = 1
+	spawn_cost = 4000
 	generate_mining_by_z = 1
 	area_usage_test_exempted_root_areas = list(/area/smugglers)
 	apc_test_exempt_areas = list(
