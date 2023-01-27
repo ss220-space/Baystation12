@@ -136,6 +136,7 @@
 	#include "../away_inf/smugglers/smugglers.dm"
 	#include "../away_inf/yacht/yacht.dm"
 	#include "../away_inf/ascent/ascent.dm"
+	#include "../away_inf/whitemesa/whitemesa.dm"
 //	#include "../away_inf/skrellscoutship/skrellscoutship.dm"
 //  #include "../away_inf/tajsc/tajsciship.dm"
 
