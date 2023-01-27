@@ -208,6 +208,13 @@
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
+"akQ" = (
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Forbidden Sector A";
+	requires_power = 0
+	})
 "alm" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/wall/titanium,
@@ -400,13 +407,14 @@
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "aqH" = (
+/obj/effect/floor_decal/corner/white/half{
+	dir = 1
+	},
 /obj/structure/backup_server{
 	anchored = 1;
 	name = "Wikipedia Server";
-	pixel_y = 22
-	},
-/obj/effect/floor_decal/corner/white/half{
-	dir = 1
+	pixel_y = 22;
+	density = 1
 	},
 /turf/simulated/floor/shuttle/white,
 /area/rnd/research{
@@ -505,7 +513,7 @@
 	desc = "An energy shield used to contain the exotic particles emitted by the Bluespace Drive.";
 	name = "Containment Shield"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/unsimulated/wall/alien,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B";
 	requires_power = 0
@@ -855,14 +863,16 @@
 	dir = 4;
 	icon_state = "warning_dust"
 	},
-/obj/item/device/radio/map_preset{
-	pixel_y = 5;
-	pixel_x = 12
-	},
 /obj/machinery/conveyor{
 	id = "mesa conveyor"
 	},
 /obj/structure/closet/crate/secure,
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/nano{
 	requires_power = 0;
@@ -989,6 +999,19 @@
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
+	})
+"aLg" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker";
+	alpha = 0
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/constructionsite/storage{
+	requires_power = 0;
+	name = "White Mesa Lobby Hall"
 	})
 "aMc" = (
 /obj/machinery/light{
@@ -1585,6 +1608,15 @@
 	name = "White Mesa - Ending Zone";
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
+	})
+"bkW" = (
+/obj/item/clothing/under/formal_pants{
+	color = "#2450a7";
+	icon = 'maps/away_inf/whitemesa/BM_SECURITI.dmi'
+	},
+/turf/simulated/mineral,
+/area/centcom/living{
+	name = "Event Backrooms"
 	})
 "blk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2184,6 +2216,15 @@
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
+"bGb" = (
+/obj/item/clothing/suit/armor/pcarrier/medium/security{
+	icon = 'maps/away_inf/whitemesa/BM_SECURITI.dmi';
+	icon_state = "armor"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/centcom/living{
+	name = "Event Backrooms"
+	})
 "bGe" = (
 /obj/structure/table/rack,
 /obj/item/stack/material/steel/fifty,
@@ -2596,7 +2637,9 @@
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "bPE" = (
-/obj/structure/virology/scanner,
+/obj/structure/virology/scanner{
+	density = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/constructionsite/storage{
 	requires_power = 0;
@@ -3074,7 +3117,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -3587,7 +3630,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -3707,7 +3750,8 @@
 	dir = 4
 	},
 /obj/item/device/radio/beacon/anchored{
-	level = 1
+	level = 1;
+	layer = 1
 	},
 /turf/simulated/floor,
 /area/casino/casino_bow{
@@ -4546,6 +4590,9 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -4751,11 +4798,12 @@
 	requires_power = 0
 	})
 "dvi" = (
-/obj/machinery/recharger/wallcharger{
-	dir = 8;
-	pixel_x = 26
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/machinery/light,
+/obj/structure/closet/crate/secure,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
 	requires_power = 0;
@@ -5665,6 +5713,22 @@
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
+"edN" = (
+/obj/item/gun/projectile/shotgun/pump/combat{
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "spas12"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/centcom/living{
+	name = "Event Backrooms"
+	})
+"edV" = (
+/obj/structure/bed/chair/office/comfy/red,
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Forbidden Sector A";
+	requires_power = 0
+	})
 "ees" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
@@ -5675,6 +5739,13 @@
 	name = "White Mesa - Common Sector";
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
+	})
+"eeS" = (
+/mob/living/carbon/human/vox,
+/turf/simulated/floor/tiled/monotile,
+/area/chapel{
+	name = "Forbidden Sector A";
+	requires_power = 0
 	})
 "efc" = (
 /obj/structure/railing/mapped{
@@ -5768,14 +5839,16 @@
 	requires_power = 0
 	})
 "eia" = (
-/obj/effect/floor_decal/ntlogo,
+/obj/effect/floor_decal/ntlogo{
+	icon = 'maps/away_inf/whitemesa/blackmesalogo.dmi';
+	icon_state = "mesa_logo"
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/white_mesa/mesashuttle{
 	requires_power = 0
 	})
 "ekn" = (
-/obj/machinery/porta_turret,
 /obj/machinery/power/apc{
 	name = "west bump";
 	pixel_x = 1;
@@ -6278,12 +6351,6 @@
 	})
 "eEp" = (
 /obj/machinery/door/airlock/multi_tile,
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	invisibility = 101;
-	name = "Blocker";
-	alpha = 0
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/constructionsite/storage{
 	requires_power = 0;
@@ -6465,7 +6532,7 @@
 	name = "White Mesa - Arrival Area"
 	})
 "eIm" = (
-/turf/simulated/floor/reinforced/airless,
+/turf/unsimulated/wall/alien,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B";
 	requires_power = 0
@@ -6781,10 +6848,14 @@
 /turf/simulated/floor/tiled/white,
 /area/map_template/oldlab2/hall)
 "eTf" = (
-/turf/simulated/wall/prepainted,
-/area/chapel{
-	name = "Forbidden Sector A";
-	requires_power = 0
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/lounge_big{
+	name = "White Mesa - Common Sector";
+	requires_power = 0;
+	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "eTj" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -7125,7 +7196,8 @@
 	})
 "fbb" = (
 /obj/item/device/radio/beacon/anchored{
-	level = 1
+	level = 1;
+	layer = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
@@ -7599,7 +7671,9 @@
 	})
 "fss" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/virology/console,
+/obj/structure/virology/console{
+	density = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -7872,7 +7946,9 @@
 	})
 "fDB" = (
 /obj/effect/floor_decal/ntlogo{
-	dir = 8
+	dir = 1;
+	icon = 'maps/away_inf/whitemesa/blackmesalogo.dmi';
+	icon_state = "mesa_logo"
 	},
 /turf/simulated/floor/tiled/asteroid,
 /area/rnd/entry{
@@ -8091,7 +8167,9 @@
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "fKC" = (
-/obj/structure/virology/cryogenics_occupied,
+/obj/structure/virology/cryogenics_occupied{
+	density = 1
+	},
 /obj/structure/window/reinforced/polarized{
 	dir = 8;
 	id = "mesatint1"
@@ -8694,7 +8772,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -8766,13 +8844,15 @@
 /obj/machinery/shieldwallgen{
 	active = 1
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
 	})
 "gmt" = (
-/obj/structure/virology/analyser,
+/obj/structure/virology/analyser{
+	density = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -9544,13 +9624,13 @@
 	alwaysgravity = 1
 	})
 "gOS" = (
-/obj/item/taperoll/medical{
-	apply_tape = 1
+/obj/item/clothing/under/formal_pants{
+	icon = 'maps/away_inf/whitemesa/BM_SECURITI.dmi';
+	icon_state = "uniform"
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/chapel{
-	name = "Forbidden Sector A";
-	requires_power = 0
+/turf/simulated/floor/tiled/techfloor,
+/area/centcom/living{
+	name = "Event Backrooms"
 	})
 "gPp" = (
 /obj/machinery/suit_cycler/science,
@@ -9775,7 +9855,9 @@
 	})
 "gWQ" = (
 /obj/effect/floor_decal/ntlogo{
-	dir = 8
+	dir = 1;
+	icon = 'maps/away_inf/whitemesa/blackmesalogo.dmi';
+	icon_state = "mesa_logo"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
@@ -9933,6 +10015,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/structure/closet/crate/secure,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -10703,7 +10786,8 @@
 /obj/effect/floor_decal/borderfloor/full,
 /obj/structure/bed/sofa/l/black,
 /obj/item/device/radio/beacon/anchored{
-	level = 1
+	level = 1;
+	layer = 1
 	},
 /turf/simulated/floor,
 /area/hallway/primary/seconddeck/fore{
@@ -11091,7 +11175,8 @@
 /obj/effect/floor_decal/borderfloor/full,
 /obj/structure/bed/sofa/l/black,
 /obj/item/device/radio/beacon/anchored{
-	level = 1
+	level = 1;
+	layer = 1
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
@@ -11114,6 +11199,17 @@
 	ambience = 'sound/ambience/signalgear_mesa.wav';
 	forced_ambience = 'sound/ambience/signalgear_mesa.wav';
 	requires_power = 0
+	})
+"hQG" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/closet/crate/secure,
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/lounge_big{
+	name = "White Mesa - Common Sector";
+	requires_power = 0;
+	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "hRv" = (
 /obj/effect/floor_decal/borderfloor/cee,
@@ -12074,7 +12170,7 @@
 	desc = "A remote control-switch for the engine containment doors";
 	id_tag = "entrance1";
 	name = "Main entrance";
-	req_access = list("ACCESS_ICCGN");
+	req_access = null;
 	pixel_x = -6;
 	clicksound = 'sound/whitemesa/blip1.ogg'
 	},
@@ -12767,6 +12863,13 @@
 /obj/item/melee/baton/loaded,
 /obj/item/melee/baton/loaded,
 /obj/item/melee/baton/loaded,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -14062,15 +14165,16 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/machinery/light/led/small/green,
+/obj/structure/closet/crate/secure,
 /obj/item/device/radio/map_preset{
 	pixel_y = 5;
-	pixel_x = 12
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
 	},
 /obj/machinery/conveyor{
-	dir = 6;
 	id = "mesa conveyor"
 	},
-/obj/structure/closet/crate/secure,
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/nano{
 	requires_power = 0;
@@ -14567,6 +14671,17 @@
 /area/white_mesa/mesashuttle{
 	requires_power = 0
 	})
+"jYp" = (
+/mob/living/simple_animal/hostile/bullsquid,
+/obj/item/clothing/head/helmet{
+	pixel_y = -7;
+	pixel_x = -1;
+	icon = 'maps/away_inf/whitemesa/BM_SECURITI.dmi'
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/centcom/living{
+	name = "Event Backrooms"
+	})
 "jYH" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -14615,6 +14730,9 @@
 /obj/item/reagent_containers/ivbag/nanoblood,
 /obj/item/reagent_containers/ivbag/nanoblood,
 /obj/item/reagent_containers/ivbag/nanoblood,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -15082,7 +15200,9 @@
 	})
 "krQ" = (
 /obj/effect/floor_decal/ntlogo{
-	dir = 4
+	dir = 4;
+	icon = 'maps/away_inf/whitemesa/blackmesalogo.dmi';
+	icon_state = "mesa_logo"
 	},
 /turf/simulated/floor/tiled/asteroid,
 /area/rnd/entry{
@@ -15409,7 +15529,9 @@
 	name = "Event Backrooms"
 	})
 "kBA" = (
-/obj/structure/virology/incubator_on,
+/obj/structure/virology/incubator_on{
+	density = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -15760,12 +15882,6 @@
 	dir = 4;
 	icon_state = "console"
 	},
-/obj/machinery/turretid{
-	check_access = 0;
-	req_access = null;
-	pixel_x = -32;
-	locked = 0
-	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -15823,6 +15939,9 @@
 	dir = 5
 	},
 /obj/structure/iv_drip,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -16089,6 +16208,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/structure/closet/crate/secure,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -17653,11 +17773,15 @@
 	requires_power = 0
 	})
 "mhp" = (
-/obj/machinery/suit_storage_unit/standard_unit,
-/turf/simulated/floor/tiled/steel_grid,
-/area/chapel{
-	name = "Forbidden Sector A";
-	requires_power = 0
+/obj/machinery/the_singularitygen{
+	name = "Experimental explosion device";
+	desc = "It's strong enough to destroy anything...";
+	icon = 'maps/away_inf/whitemesa/xenbomb2.dmi';
+	icon_state = "1"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/centcom/living{
+	name = "Event Backrooms"
 	})
 "mhF" = (
 /obj/structure/closet/walllocker/firecloset,
@@ -17699,7 +17823,9 @@
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "mkS" = (
-/obj/structure/virology/iso_on,
+/obj/structure/virology/iso_on{
+	density = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/constructionsite/storage{
 	requires_power = 0;
@@ -18036,7 +18162,7 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 1
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -18160,11 +18286,14 @@
 /turf/simulated/floor/tiled/white,
 /area/map_template/oldlab2/hall)
 "mDG" = (
-/obj/machinery/door/airlock/multi_tile,
-/obj/item/taperoll/research{
-	apply_tape = 1
+/obj/machinery/light/spot{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/structure/battle_data_server{
+	desc = "Impact resistant server rack.";
+	name = "data server"
+	},
+/turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -18266,7 +18395,7 @@
 	})
 "mIm" = (
 /obj/effect/floor_decal/techfloor/orange/corner,
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -19152,13 +19281,13 @@
 /turf/simulated/floor/tiled/white,
 /area/map_template/oldlab2/lab)
 "nlQ" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 10
+/obj/item/clothing/under/formal_pants{
+	color = "#2450a7";
+	icon = 'maps/away_inf/whitemesa/gg-3883.dmi'
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
-/area/chapel{
-	name = "Forbidden Sector A";
-	requires_power = 0
+/turf/simulated/wall/concrete,
+/area/centcom/living{
+	name = "Event Backrooms"
 	})
 "nmf" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -19449,7 +19578,8 @@
 "ntg" = (
 /obj/structure/backup_server{
 	anchored = 1;
-	name = "Wikipedia Server"
+	name = "Wikipedia Server";
+	density = 1
 	},
 /turf/simulated/floor/shuttle/white,
 /area/rnd/research{
@@ -19825,6 +19955,10 @@
 /obj/item/storage/belt/security,
 /obj/item/storage/belt/security,
 /obj/item/storage/belt/security,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
 /turf/simulated/floor/tiled/concrete,
 /area/centcom/living{
 	name = "Event Backrooms"
@@ -19961,6 +20095,120 @@
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 10
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/lounge_big{
@@ -20131,6 +20379,16 @@
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
+"nQI" = (
+/obj/structure/battle_data_server{
+	desc = "Impact resistant server rack.";
+	name = "data server"
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Forbidden Sector A";
+	requires_power = 0
+	})
 "nQM" = (
 /obj/structure/closet/crate/freezer/rations,
 /turf/unsimulated/floor/freezer,
@@ -20225,7 +20483,12 @@
 	requires_power = 0
 	})
 "nWF" = (
-/obj/structure/virology/centrifuge_broken,
+/obj/structure/virology/centrifuge_broken{
+	density = 1
+	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -20285,12 +20548,6 @@
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "nZn" = (
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	invisibility = 101;
-	name = "Blocker";
-	alpha = 0
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/constructionsite/storage{
 	requires_power = 0;
@@ -20426,6 +20683,21 @@
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B";
 	requires_power = 0
+	})
+"oeG" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker";
+	alpha = 0
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/constructionsite/storage{
+	requires_power = 0;
+	name = "White Mesa Lobby Hall"
 	})
 "off" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -21185,6 +21457,19 @@
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
+"oBe" = (
+/obj/machinery/turretid{
+	check_access = 0;
+	req_access = null;
+	pixel_x = -224;
+	locked = 0;
+	pixel_y = -92
+	},
+/turf/simulated/floor/reinforced,
+/area/bridge/nano{
+	requires_power = 0;
+	name = "White Mesa - Arrival Area"
+	})
 "oBk" = (
 /obj/structure/railing/mapped,
 /obj/effect/forcefield{
@@ -21666,6 +21951,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -21739,7 +22027,7 @@
 	desc = "An energy shield used to contain the exotic particles emitted by the Bluespace Drive.";
 	name = "Containment Shield"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/unsimulated/wall/alien,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B";
 	requires_power = 0
@@ -21845,7 +22133,8 @@
 /obj/effect/floor_decal/borderfloor/full,
 /obj/structure/bed/sofa/l/black,
 /obj/item/device/radio/beacon/anchored{
-	level = 1
+	level = 1;
+	layer = 1
 	},
 /turf/simulated/floor,
 /area/chapel{
@@ -22421,7 +22710,9 @@
 	alwaysgravity = 1
 	})
 "plf" = (
-/obj/structure/decor/dominator/green,
+/obj/structure/decor/dominator/green{
+	desc = "You don't know what it does"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/constructionsite/storage{
 	requires_power = 0;
@@ -22706,10 +22997,11 @@
 	requires_power = 0
 	})
 "pxg" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 6
+/obj/machinery/light/spot{
+	dir = 1
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -22887,13 +23179,11 @@
 	requires_power = 0
 	})
 "pGq" = (
-/obj/machinery/porta_turret,
-/turf/unsimulated/floor{
-	icon_state = "asteroidplating"
-	},
-/area/bridge/nano{
-	requires_power = 0;
-	name = "White Mesa - Arrival Area"
+/obj/structure/filingcabinet/filingcabinet,
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Forbidden Sector A";
+	requires_power = 0
 	})
 "pGC" = (
 /obj/machinery/reagentgrinder,
@@ -23512,10 +23802,9 @@
 	name = "Event Backrooms"
 	})
 "qdp" = (
-/obj/item/taperoll/research{
-	apply_tape = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/structure/table/steel_reinforced,
+/obj/item/paper_bin,
+/turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -24241,6 +24530,23 @@
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
+"qBF" = (
+/obj/structure/backup_server{
+	anchored = 1;
+	name = "Wikipedia Server";
+	pixel_y = 22;
+	density = 1
+	},
+/obj/effect/floor_decal/corner/white/half{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle/white,
+/area/rnd/research{
+	name = "Wikipedia servers White Mesa";
+	ambience = 'sound/ambience/signalgear_mesa.wav';
+	forced_ambience = 'sound/ambience/signalgear_mesa.wav';
+	requires_power = 0
+	})
 "qBO" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -24428,7 +24734,9 @@
 	name = "White Mesa Lobby Hall"
 	})
 "qGZ" = (
-/obj/item/gun/projectile/shotgun/pump/combat,
+/obj/item/gun/projectile/shotgun/pump/combat{
+	icon = 'icons/obj/guns/BM_things.dmi'
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/centcom/living{
 	name = "Event Backrooms"
@@ -24934,7 +25242,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/wall_frame/titanium,
 /obj/structure/window/phoronreinforced/full,
 /obj/machinery/meter,
@@ -25381,7 +25688,7 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 4
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -27015,7 +27322,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -27026,6 +27333,15 @@
 	name = "White Mesa - Common Sector";
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
+	})
+"snE" = (
+/mob/living/simple_animal/hostile/vortigaunt_slave,
+/obj/item/gun/projectile/shotgun/pump/combat{
+	icon = 'maps/away_inf/whitemesa/shotguns.dmi'
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/centcom/living{
+	name = "Event Backrooms"
 	})
 "spw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -27148,13 +27464,15 @@
 	requires_power = 0
 	})
 "svH" = (
-/obj/machinery/computer/air_control/supermatter_core{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/old_cargo,
-/area/chapel{
-	name = "Forbidden Sector A";
-	requires_power = 0
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/lounge_big{
+	name = "White Mesa - Common Sector";
+	requires_power = 0;
+	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "swm" = (
 /obj/structure/table/steel_reinforced,
@@ -27760,6 +28078,16 @@
 	name = "Forbidden Sector A";
 	requires_power = 0
 	})
+"sSG" = (
+/obj/item/clothing/head/helmet{
+	pixel_y = -7;
+	pixel_x = -1;
+	icon = 'maps/away_inf/whitemesa/BM_SECURITI.dmi'
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/centcom/living{
+	name = "Event Backrooms"
+	})
 "sTa" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
@@ -27900,7 +28228,7 @@
 	})
 "sZW" = (
 /obj/machinery/light/spot,
-/obj/machinery/suit_storage_unit/standard_unit,
+/obj/machinery/suit_storage_unit/science,
 /turf/simulated/floor/tiled/steel_grid,
 /area/chapel{
 	name = "Forbidden Sector A";
@@ -27963,7 +28291,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/wall_frame/titanium,
 /obj/structure/window/phoronreinforced/full,
 /turf/simulated/floor/plating,
@@ -28085,7 +28412,9 @@
 	})
 "thF" = (
 /obj/effect/floor_decal/ntlogo{
-	dir = 1
+	dir = 8;
+	icon = 'maps/away_inf/whitemesa/blackmesalogo.dmi';
+	icon_state = "mesa_logo"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
@@ -28579,7 +28908,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/ntlogo,
+/obj/effect/floor_decal/ntlogo{
+	icon = 'maps/away_inf/whitemesa/blackmesalogo.dmi';
+	icon_state = "mesa_logo"
+	},
 /turf/simulated/floor/tiled/asteroid,
 /area/rnd/entry{
 	ambience = null;
@@ -29819,7 +30151,7 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 8
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -29887,6 +30219,14 @@
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
+"uvh" = (
+/obj/item/gun/projectile/shotgun/pump/combat,
+/obj/item/gun/projectile/shotgun/pump/combat{
+	icon = 'maps/away_inf/whitemesa/shotguns.dmi';
+	icon_state = "spas12"
+	},
+/turf/simulated/mineral,
+/area/space)
 "uvn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 1;
@@ -30618,7 +30958,7 @@
 	})
 "uTb" = (
 /obj/effect/floor_decal/techfloor/orange,
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -30677,6 +31017,9 @@
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
@@ -30831,11 +31174,11 @@
 	name = "White Mesa - Arrival Area"
 	})
 "vcT" = (
-/obj/machinery/door/airlock/multi_tile,
-/obj/item/taperoll/medical{
-	apply_tape = 1
+/obj/machinery/button/blast_door{
+	id_tag = "Open";
+	pixel_y = -29
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techmaint,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -31233,7 +31576,7 @@
 	desc = "A remote control-switch for the engine containment doors";
 	id_tag = "entrance2";
 	name = "Exit from CPP";
-	req_access = list("ACCESS_ICCGN");
+	req_access = null;
 	pixel_x = -4;
 	pixel_y = 7
 	},
@@ -31421,7 +31764,7 @@
 	requires_power = 0
 	})
 "vBh" = (
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -31483,7 +31826,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Forbidden Sector A";
 	requires_power = 0
@@ -31492,7 +31835,7 @@
 /obj/machinery/light/spot{
 	dir = 1
 	},
-/obj/machinery/suit_storage_unit/explorer,
+/obj/machinery/suit_storage_unit/science,
 /turf/simulated/floor/tiled/steel_grid,
 /area/chapel{
 	name = "Forbidden Sector A";
@@ -31925,7 +32268,9 @@
 	})
 "vQx" = (
 /obj/effect/floor_decal/ntlogo{
-	dir = 4
+	dir = 4;
+	icon = 'maps/away_inf/whitemesa/blackmesalogo.dmi';
+	icon_state = "mesa_logo"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
@@ -32981,7 +33326,9 @@
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/ntlogo{
-	dir = 1
+	dir = 8;
+	icon = 'maps/away_inf/whitemesa/blackmesalogo.dmi';
+	icon_state = "mesa_logo"
 	},
 /turf/simulated/floor/tiled/asteroid,
 /area/rnd/entry{
@@ -33077,7 +33424,7 @@
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "wHS" = (
-/obj/machinery/suit_storage_unit/explorer,
+/obj/machinery/suit_storage_unit/science,
 /turf/simulated/floor/tiled/steel_grid,
 /area/chapel{
 	name = "Forbidden Sector A";
@@ -33358,15 +33705,17 @@
 /obj/structure/railing/mapped,
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/machinery/light/led/small/green,
-/obj/item/device/radio/map_preset{
-	pixel_y = 5;
-	pixel_x = 12
-	},
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "mesa conveyor"
 	},
 /obj/structure/closet/crate/secure,
+/obj/item/device/radio/map_preset{
+	pixel_y = 5;
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/nano{
 	requires_power = 0;
@@ -33675,11 +34024,6 @@
 	dir = 10
 	},
 /obj/structure/table/steel_reinforced,
-/obj/machinery/button/toggle/valve{
-	pixel_x = 5;
-	identifier = null;
-	id_tag = "Open"
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/chapel{
 	name = "Forbidden Sector A";
@@ -34546,6 +34890,9 @@
 /obj/structure/filingcabinet/filingcabinet{
 	pixel_x = 10
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/lounge_big{
 	name = "White Mesa - Common Sector";
@@ -34764,7 +35111,9 @@
 	},
 /obj/item/device/radio/map_preset{
 	pixel_y = 5;
-	pixel_x = 12
+	pixel_x = 12;
+	icon = 'maps/away_inf/whitemesa/BM_things.dmi';
+	icon_state = "radio"
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -34801,6 +35150,17 @@
 	},
 /area/template_noop{
 	alwaysgravity = 1
+	})
+"ydr" = (
+/obj/machinery/chem_master,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/lounge_big{
+	name = "White Mesa - Common Sector";
+	requires_power = 0;
+	req_access = list("ACCESS_CENT_GENERAL")
 	})
 "ydY" = (
 /obj/machinery/mech_recharger,
@@ -39607,7 +39967,7 @@ pUk
 kvQ
 usd
 qKn
-nRN
+mhp
 nRN
 oKX
 kvQ
@@ -39859,8 +40219,8 @@ pUk
 kvQ
 cGl
 rSg
-nRN
-nRN
+gOS
+edN
 nRN
 kvQ
 vTh
@@ -40110,8 +40470,8 @@ kvQ
 pUk
 kvQ
 nRN
-nRN
-nRN
+sSG
+bGb
 kdN
 nRN
 kvQ
@@ -41120,7 +41480,7 @@ pUk
 pUk
 pUk
 pUk
-pUk
+bkW
 pUk
 pUk
 vTh
@@ -41372,7 +41732,7 @@ kvQ
 kvQ
 kvQ
 kvQ
-kvQ
+nlQ
 kvQ
 kvQ
 vTh
@@ -41875,7 +42235,7 @@ pUk
 kvQ
 vjv
 eTs
-jDR
+jYp
 gqd
 hod
 kvQ
@@ -42633,7 +42993,7 @@ vjv
 eTs
 jDR
 gqd
-hod
+snE
 kvQ
 vTh
 vTh
@@ -42887,7 +43247,7 @@ eZT
 gqd
 mNJ
 kvQ
-vTh
+uvh
 vTh
 vTh
 vTh
@@ -43548,8 +43908,8 @@ pnD
 pnD
 pnD
 pnD
-bJa
-iEP
+oeG
+aLg
 pnD
 pnD
 pnD
@@ -46097,7 +46457,7 @@ fov
 sYb
 sYb
 cvw
-aqH
+qBF
 ayb
 ayb
 hQx
@@ -75595,7 +75955,7 @@ bps
 bps
 bps
 bps
-mDG
+wZc
 dTc
 dTc
 dTc
@@ -75847,7 +76207,7 @@ bps
 bps
 bps
 bps
-qdp
+ukt
 dTc
 dTc
 dTc
@@ -77107,11 +77467,11 @@ iqc
 iqc
 iqc
 iqc
-vcT
+wZc
 dTc
 dTc
 dTc
-mDG
+wZc
 hUr
 hUr
 hUr
@@ -77359,11 +77719,11 @@ iqc
 iqc
 iqc
 iqc
-gOS
+ukt
 dTc
 dTc
 dTc
-qdp
+ukt
 hUr
 hUr
 hUr
@@ -78865,7 +79225,7 @@ nof
 hEf
 elI
 qOv
-iqc
+eeS
 hwf
 ajE
 bVH
@@ -80387,7 +80747,7 @@ dTc
 dTc
 dTc
 dTc
-mDG
+wZc
 hUr
 hUr
 hUr
@@ -80639,7 +80999,7 @@ dTc
 dTc
 dTc
 dTc
-qdp
+ukt
 hUr
 hUr
 hUr
@@ -81395,7 +81755,7 @@ dTc
 dTc
 dTc
 dTc
-mDG
+wZc
 mRc
 mVz
 xdG
@@ -81647,7 +82007,7 @@ dTc
 dTc
 dTc
 dTc
-qdp
+ukt
 mRc
 mRc
 mRc
@@ -83150,7 +83510,7 @@ hEf
 nHy
 hUr
 hUr
-hUr
+vcT
 xfQ
 oJl
 dTc
@@ -83159,7 +83519,7 @@ dTc
 dTc
 dTc
 dTc
-mDG
+wZc
 mRc
 mRc
 mRc
@@ -83411,7 +83771,7 @@ dTc
 dTc
 dTc
 dTc
-qdp
+ukt
 mRc
 mVz
 xdG
@@ -84153,7 +84513,7 @@ hEf
 dTc
 dTc
 dTc
-eTf
+hEf
 ibs
 xRA
 tYf
@@ -84673,7 +85033,7 @@ wHS
 mRc
 wHS
 mRc
-mhp
+wHS
 hEf
 nof
 nof
@@ -84772,7 +85132,7 @@ gPG
 mQQ
 kCT
 qxe
-jSm
+ydr
 rpq
 bwY
 mQQ
@@ -85158,9 +85518,9 @@ nof
 nof
 nof
 hEf
-dTc
-dTc
-vFh
+hEf
+hEf
+hEf
 hEf
 hEf
 hEf
@@ -85177,7 +85537,7 @@ wHS
 mRc
 wHS
 mRc
-mhp
+wHS
 hEf
 nof
 nof
@@ -85276,7 +85636,7 @@ gPG
 tYb
 kCT
 fss
-mmu
+svH
 mmu
 cCh
 lJv
@@ -86002,7 +86362,7 @@ smB
 kCT
 jBN
 frV
-ffZ
+hQG
 kCT
 frV
 frV
@@ -86032,7 +86392,7 @@ iGG
 hro
 kCT
 mQQ
-mQQ
+eTf
 mQQ
 xUr
 mQQ
@@ -86058,9 +86418,9 @@ kCT
 kCT
 kCT
 kCT
-rGf
-rGf
-rGf
+kCT
+kCT
+kCT
 sEN
 sEN
 sEN
@@ -86254,7 +86614,7 @@ smB
 kCT
 jBN
 frV
-ffZ
+hQG
 kCT
 vVt
 frV
@@ -86291,7 +86651,7 @@ kBA
 nWF
 gmt
 evA
-mQQ
+eTf
 kCT
 kCT
 kCT
@@ -86310,9 +86670,9 @@ myF
 kCT
 myF
 myF
-rGf
-rGf
-rGf
+kCT
+kCT
+kCT
 sEN
 sEN
 sEN
@@ -86506,7 +86866,7 @@ smB
 kCT
 jBN
 frV
-lVS
+dvi
 kCT
 fNT
 jLD
@@ -86758,7 +87118,7 @@ smB
 kCT
 jBN
 frV
-ffZ
+hQG
 kCT
 kCT
 kCT
@@ -87426,23 +87786,23 @@ nof
 nof
 nof
 hEf
+nQI
 dTc
-dTc
-dTc
+nQI
 hEf
 nof
 hEf
 hEf
 hEf
 vCb
-nlQ
+vyp
 roA
 roA
 roA
 roA
 roA
 vCb
-nlQ
+vyp
 hEf
 hEf
 hEf
@@ -87678,9 +88038,9 @@ nof
 nof
 nof
 hEf
+nQI
 dTc
-dTc
-dTc
+nQI
 hEf
 nof
 hEf
@@ -87688,7 +88048,7 @@ vCb
 cBN
 mxB
 utk
-nlQ
+vyp
 roA
 roA
 roA
@@ -87696,7 +88056,7 @@ vCb
 mxB
 utk
 cBN
-nlQ
+vyp
 hEf
 nof
 nof
@@ -87941,7 +88301,7 @@ vBh
 vBh
 vBh
 utk
-nlQ
+vyp
 roA
 vCb
 mxB
@@ -88193,7 +88553,7 @@ vBh
 gmg
 vBh
 mIm
-pxg
+pyD
 roA
 ghi
 riq
@@ -88201,7 +88561,7 @@ vBh
 gmg
 vBh
 utk
-nlQ
+vyp
 hEf
 nof
 nof
@@ -88434,7 +88794,7 @@ nof
 nof
 nof
 hEf
-dTc
+pGq
 dTc
 jEw
 hEf
@@ -88444,7 +88804,7 @@ riq
 vBh
 vBh
 mIm
-pxg
+pyD
 roA
 roA
 roA
@@ -88453,7 +88813,7 @@ riq
 vBh
 vBh
 mIm
-pxg
+pyD
 hEf
 hEf
 nof
@@ -88688,14 +89048,14 @@ nof
 hEf
 dTc
 dTc
-svH
+dTc
 oJl
 roA
 roA
 ghi
 riq
 mIm
-pxg
+pyD
 vaA
 iOY
 iOY
@@ -88704,7 +89064,7 @@ xRn
 ghi
 riq
 mIm
-pxg
+pyD
 roA
 roA
 hEf
@@ -88938,7 +89298,7 @@ nof
 nof
 nof
 hEf
-deG
+mDG
 dTc
 twg
 oJl
@@ -88946,7 +89306,7 @@ roA
 roA
 roA
 ghi
-pxg
+pyD
 roA
 bSC
 lbe
@@ -88955,7 +89315,7 @@ vyp
 nDN
 roA
 ghi
-pxg
+pyD
 roA
 roA
 roA
@@ -89191,7 +89551,7 @@ nof
 nof
 hEf
 dTc
-dTc
+edV
 kjt
 oJl
 roA
@@ -89442,7 +89802,7 @@ nof
 nof
 nof
 hEf
-dTc
+nQI
 dTc
 kjt
 oJl
@@ -89450,7 +89810,7 @@ roA
 roA
 roA
 vCb
-nlQ
+vyp
 roA
 bSC
 jGJ
@@ -89459,7 +89819,7 @@ pyD
 nDN
 roA
 vCb
-nlQ
+vyp
 roA
 roA
 roA
@@ -89696,14 +90056,14 @@ nof
 hEf
 dTc
 dTc
-kjt
+dTc
 oJl
 roA
 roA
 vCb
 mxB
 utk
-nlQ
+vyp
 gIb
 sUN
 sUN
@@ -89712,7 +90072,7 @@ gEe
 vCb
 mxB
 utk
-nlQ
+vyp
 roA
 roA
 hEf
@@ -89781,7 +90141,7 @@ oMg
 smB
 kCT
 smB
-kIG
+oBe
 ivc
 iRJ
 bdQ
@@ -89946,9 +90306,9 @@ nof
 nof
 nof
 hEf
-deG
-dTc
-dTc
+pxg
+qdp
+akQ
 hEf
 hEf
 vCb
@@ -89956,7 +90316,7 @@ mxB
 vBh
 vBh
 utk
-nlQ
+vyp
 roA
 roA
 roA
@@ -89965,7 +90325,7 @@ mxB
 vBh
 vBh
 utk
-nlQ
+vyp
 hEf
 hEf
 nof
@@ -90209,7 +90569,7 @@ vBh
 gmg
 vBh
 utk
-nlQ
+vyp
 roA
 vCb
 mxB
@@ -90217,7 +90577,7 @@ vBh
 gmg
 vBh
 mIm
-pxg
+pyD
 hEf
 nof
 nof
@@ -90461,7 +90821,7 @@ vBh
 vBh
 vBh
 mIm
-pxg
+pyD
 roA
 ghi
 riq
@@ -90712,7 +91072,7 @@ ghi
 slJ
 riq
 mIm
-pxg
+pyD
 roA
 roA
 roA
@@ -90720,7 +91080,7 @@ ghi
 riq
 mIm
 slJ
-pxg
+pyD
 hEf
 nof
 nof
@@ -90963,14 +91323,14 @@ hEf
 hEf
 hEf
 ghi
-pxg
+pyD
 roA
 roA
 roA
 roA
 roA
 ghi
-pxg
+pyD
 hEf
 hEf
 hEf
@@ -91077,8 +91437,8 @@ sEN
 kCT
 kCT
 sce
-dvi
-dvi
+kNM
+kNM
 eZw
 kCT
 ees
@@ -91288,7 +91648,7 @@ emn
 vSm
 vSm
 rsI
-pGq
+wXa
 oMg
 smB
 smB

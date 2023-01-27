@@ -542,7 +542,7 @@
 
 /obj/structure/xen_crystal/Initialize(mapload)
 	. = ..()
-	var/color_to_set = pick(COLOR_GOLD, COLOR_BLUE, COLOR_RED, LIGHT_COLOR_ORANGE, LIGHT_COLOR_BLUE, LIGHT_COLOR_GREEN)
+	var/color_to_set = pick(COLOR_GOLD, LIGHT_COLOR_ORANGE, LIGHT_COLOR_BLUE, LIGHT_COLOR_GREEN)
 	color = color_to_set
 	light_color = color_to_set
 
@@ -583,34 +583,6 @@
 	density = TRUE
 	anchored = TRUE
 
-/obj/effect/blob/ravaging/xen/xentree
-	name = "Strange tree"
-	desc = "Looks like it alive!"
-	icon = 'maps/away_inf/whitemesa/zen_flora.dmi'
-	icon_state = "zen_angrytree"
-
-/obj/effect/blob/ravaging/xen
-	name = "Vine mass"
-	desc = "A mass of interwoven tendrils. They thrash around haphazardly at anything in reach."
-	maxHealth = 20
-	damage_min = 27
-	damage_max = 36
-	attack_freq = 3
-	light_color = BLOB_COLOR_RAV
-	color = "#db5a03" //Temporary, for until they get a new sprite.
-
-	/obj/effect/blob/shield/xen
-	name = "Strong vine mass"
-	desc = "A pulsating mass of interwoven tendrils. These seem particularly robust, but not quite as active."
-	icon_state = "blob_idle"
-	maxHealth = 120
-	damage_min = 13
-	damage_max = 25
-	attack_freq = 7
-	regen_rate = 4
-	expandType = /obj/effect/blob/ravaging
-	light_color = BLOB_COLOR_SHIELD
-	color = "#963c00"
 
 ///WEEEDS///
 

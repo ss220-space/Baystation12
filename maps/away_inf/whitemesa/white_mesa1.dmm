@@ -11,6 +11,14 @@
 /obj/structure/railing/mapped{
 	dir = 1
 	},
+/obj/structure/decor/statue1{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_light";
+	desc = "Small alien light";
+	name = "xen light";
+	light_color = "#b1a007";
+	light_outer_range = 4
+	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -43,6 +51,20 @@
 	})
 "bv" = (
 /obj/item/storage/firstaid/adv,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"by" = (
+/obj/structure/decor/statue1{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_light";
+	desc = "Small alien light";
+	name = "xen light";
+	light_color = "#b1a007";
+	light_outer_range = 4
+	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -127,6 +149,24 @@
 "fj" = (
 /obj/item/storage/mre,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"fM" = (
+/obj/structure/decor/statue3{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_fungus";
+	desc = "Strange fungus";
+	name = "xen fungus";
+	light_color = "#b1a007";
+	light_inner_range = 0.5;
+	light_max_bright = 0.5;
+	light_outer_range = 4
+	},
+/turf/space{
+	icon_state = "end01"
+	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -335,7 +375,9 @@
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "kW" = (
-/obj/structure/virology/console_broken,
+/obj/structure/virology/console_broken{
+	density = 1
+	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -494,9 +536,10 @@
 /obj/structure/decor/bsc{
 	name = "Small crystal";
 	desc = "It's very hard and deadly stuck to the ground.";
-	light_color = "#0000FF";
-	light_outer_range = 3;
-	light_max_bright = 0.8
+	light_color = "#71ffff";
+	light_outer_range = 5;
+	light_max_bright = 0.8;
+	light_inner_range = 0.5
 	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
@@ -714,6 +757,20 @@
 "wG" = (
 /mob/living/simple_animal/hostile/Headcrab,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"wP" = (
+/obj/structure/decor/statue4{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_grass";
+	name = "alien grass";
+	desc = "It's hard to touch"
+	},
+/turf/space{
+	icon_state = "end01"
+	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -985,6 +1042,19 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Er" = (
+/obj/structure/alien/resin/membrane{
+	icon = 'maps/away_inf/whitemesa/xen_weeds.dmi';
+	icon_state = "Hvy1";
+	color = "#c4230d"
+	},
+/turf/space{
+	icon_state = "end01"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "EI" = (
 /obj/structure/catwalk,
 /obj/structure/inflatable{
@@ -1090,7 +1160,12 @@
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "HR" = (
-/obj/effect/blob/ravaging/xen/xentree,
+/obj/structure/decor/statue2{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_angrytree";
+	desc = "It's moving";
+	name = "xen tree"
+	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -1185,6 +1260,21 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"JS" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/decor/statue4{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_grass";
+	name = "alien grass";
+	desc = "It's hard to touch"
+	},
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "Ka" = (
 /obj/structure/table/steel,
 /obj/item/stack/flag/red,
@@ -1192,6 +1282,22 @@
 /obj/item/stack/flag/red,
 /obj/item/device/scanner/mining,
 /turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Kb" = (
+/obj/structure/alien/resin/membrane{
+	icon = 'maps/away_inf/whitemesa/xen_weeds.dmi';
+	icon_state = "Hvy1";
+	color = "#c4230d"
+	},
+/obj/structure/alien/resin/membrane{
+	icon = 'maps/away_inf/whitemesa/xen_weeds.dmi';
+	icon_state = "Hvy1";
+	color = "#c4230d"
+	},
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -1275,6 +1381,18 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Mi" = (
+/obj/structure/decor/statue4{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_grass";
+	name = "alien grass";
+	desc = "It's hard to touch"
+	},
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "Mp" = (
 /obj/structure/railing/mapped{
 	dir = 1
@@ -1328,7 +1446,11 @@
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "ND" = (
-/obj/structure/foamedmetal,
+/obj/structure/alien/resin/membrane{
+	icon = 'maps/away_inf/whitemesa/xen_weeds.dmi';
+	icon_state = "Hvy1";
+	color = "#c4230d"
+	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -1418,6 +1540,29 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Qe" = (
+/obj/structure/xen_crystal,
+/turf/space{
+	icon_state = "end01"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Qx" = (
+/obj/structure/decor/statue2{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_angrytree";
+	desc = "It's moving";
+	name = "xen tree"
+	},
+/turf/space{
+	icon_state = "end01"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "QG" = (
 /obj/item/modular_computer/laptop,
 /obj/structure/table/steel,
@@ -1493,6 +1638,22 @@
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/effect/gibspawner/human,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Ta" = (
+/obj/structure/decor/statue1{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_light";
+	desc = "Small alien light";
+	name = "xen light";
+	light_color = "#b1a007";
+	light_outer_range = 4
+	},
+/turf/space{
+	icon_state = "end01"
+	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -1684,7 +1845,16 @@
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "XM" = (
-/obj/structure/flora/ausbushes/algae/random,
+/obj/structure/decor/statue3{
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi';
+	icon_state = "zen_fungus";
+	desc = "Strange fungus";
+	name = "xen fungus";
+	light_color = "#b1a007";
+	light_inner_range = 0.5;
+	light_max_bright = 0.5;
+	light_outer_range = 4
+	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -10407,7 +10577,7 @@ dq
 dq
 dq
 IE
-TA
+by
 TA
 rJ
 TA
@@ -11159,10 +11329,10 @@ TA
 TA
 dq
 dq
-TA
-TA
+ND
+ND
 dq
-TA
+by
 TA
 TA
 TA
@@ -11405,13 +11575,13 @@ bN
 bN
 bN
 dq
-TA
+Kb
 dq
 dq
 TA
 dq
 TA
-TA
+ND
 dq
 dq
 dq
@@ -11657,8 +11827,8 @@ bN
 bN
 bN
 dq
-TA
-TA
+ND
+ND
 dq
 TA
 wG
@@ -11910,7 +12080,7 @@ bN
 bN
 dq
 dq
-TA
+ND
 dq
 dq
 dq
@@ -12161,8 +12331,8 @@ bN
 bN
 bN
 dq
-TA
-TA
+ND
+ND
 dq
 bN
 bN
@@ -12661,7 +12831,7 @@ dq
 dq
 TA
 TA
-TA
+XM
 TA
 TA
 IE
@@ -12920,6 +13090,7 @@ TA
 TA
 TA
 TA
+XM
 TA
 TA
 TA
@@ -12929,8 +13100,7 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
 TA
 TA
 dq
@@ -13421,11 +13591,11 @@ TA
 TA
 TA
 TA
+by
 TA
 TA
 TA
-TA
-TA
+HR
 TA
 TA
 TA
@@ -13433,8 +13603,8 @@ TA
 rJ
 TA
 TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 TA
@@ -13666,7 +13836,7 @@ TA
 TA
 TA
 TA
-TA
+XM
 TA
 TA
 TA
@@ -13912,11 +14082,11 @@ TA
 TA
 TA
 TA
+TA
+TA
+TA
+TA
 HR
-TA
-TA
-TA
-TA
 TA
 TA
 TA
@@ -13937,12 +14107,12 @@ TA
 TA
 TA
 TA
-rL
 TA
 TA
 TA
 TA
 TA
+AK
 dq
 dq
 bN
@@ -14171,7 +14341,7 @@ TA
 TA
 TA
 TA
-TA
+AK
 TA
 TA
 TA
@@ -14192,8 +14362,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 dq
@@ -14445,7 +14615,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 dq
@@ -14676,9 +14846,9 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
+Mi
+Mi
+Mi
 TA
 TA
 TA
@@ -14929,8 +15099,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 TA
@@ -14941,11 +15111,11 @@ TA
 oD
 oD
 oD
+TA
+TA
+TA
+TA
 HR
-TA
-TA
-TA
-TA
 TA
 TA
 TA
@@ -15179,16 +15349,14 @@ TA
 TA
 TA
 TA
-TA
-HR
-TA
+by
 TA
 TA
 TA
 TA
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -15202,8 +15370,10 @@ TA
 TA
 TA
 TA
+by
 TA
 TA
+XM
 TA
 TA
 TA
@@ -15442,6 +15612,7 @@ IE
 IE
 TA
 TA
+by
 TA
 TA
 TA
@@ -15460,8 +15631,7 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
 TA
 TA
 TA
@@ -15690,33 +15860,33 @@ TA
 TA
 TA
 IE
+XM
 IE
 IE
+TA
+TA
+TA
+TA
+TA
+TA
+XM
+TA
+TA
 IE
 TA
 TA
 TA
+Mi
 TA
 TA
 TA
 TA
 TA
 TA
-IE
+Mi
+Mi
 TA
 TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-HR
 TA
 dq
 dq
@@ -15957,8 +16127,8 @@ IE
 IE
 TA
 TA
-HR
 TA
+Mi
 TA
 TA
 TA
@@ -16181,7 +16351,7 @@ IE
 TA
 TA
 TA
-TA
+XM
 oD
 TA
 TA
@@ -16200,7 +16370,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 TA
@@ -16215,7 +16385,7 @@ TA
 TA
 TA
 TA
-TA
+by
 TA
 HR
 TA
@@ -16437,7 +16607,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 IE
 TA
@@ -16448,12 +16618,12 @@ TA
 TA
 IE
 wG
+AK
 TA
 TA
 TA
-TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 TA
@@ -16684,7 +16854,7 @@ TA
 TA
 TA
 TA
-HR
+TA
 TA
 TA
 TA
@@ -16705,8 +16875,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 IE
@@ -16724,7 +16894,7 @@ dq
 TA
 TA
 TA
-TA
+AK
 TA
 TA
 TA
@@ -16965,7 +17135,7 @@ TA
 TA
 TA
 TA
-TA
+by
 TA
 dq
 dq
@@ -16979,7 +17149,7 @@ TA
 TA
 TA
 TA
-TA
+XM
 dq
 bN
 bN
@@ -17192,6 +17362,7 @@ TA
 TA
 TA
 TA
+AK
 TA
 TA
 TA
@@ -17207,8 +17378,7 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
 TA
 TA
 TA
@@ -17449,8 +17619,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 TA
@@ -17689,11 +17859,7 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-rL
-TA
+zz
 TA
 TA
 TA
@@ -17703,13 +17869,17 @@ TA
 TA
 TA
 TA
+by
+TA
+Mi
+Mi
+Mi
 TA
 TA
 TA
 TA
 TA
 TA
-HR
 TA
 TA
 TA
@@ -17733,7 +17903,7 @@ dq
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 dq
@@ -17940,6 +18110,7 @@ dq
 TA
 TA
 TA
+Mi
 TA
 TA
 TA
@@ -17954,6 +18125,7 @@ TA
 TA
 TA
 TA
+Mi
 TA
 TA
 TA
@@ -17961,15 +18133,13 @@ TA
 TA
 TA
 TA
+by
 TA
 TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
+zz
 TA
 TA
 dq
@@ -18191,9 +18361,9 @@ bN
 dq
 dq
 TA
-TA
-HR
-TA
+Mi
+rL
+Mi
 TA
 TA
 TA
@@ -18210,6 +18380,7 @@ TA
 TA
 TA
 TA
+XM
 TA
 TA
 TA
@@ -18220,8 +18391,7 @@ TA
 TA
 TA
 TA
-TA
-TA
+XM
 TA
 TA
 dq
@@ -18444,9 +18614,9 @@ bN
 dq
 TA
 TA
+Mi
 TA
-TA
-TA
+zz
 TA
 TA
 TA
@@ -18458,7 +18628,7 @@ TA
 TA
 TA
 TA
-XM
+TA
 TA
 TA
 TA
@@ -18716,11 +18886,11 @@ TA
 TA
 TA
 TA
-HR
 TA
 TA
 TA
 TA
+Mi
 TA
 TA
 TA
@@ -18740,7 +18910,7 @@ bN
 dq
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -18948,7 +19118,7 @@ bN
 dq
 dq
 TA
-TA
+zz
 TA
 TA
 TA
@@ -18957,14 +19127,14 @@ TA
 IE
 TA
 TA
-TA
+XM
 TA
 TA
 TA
 TA
 AK
 TA
-TA
+by
 TA
 TA
 TA
@@ -18995,46 +19165,46 @@ TA
 TA
 TA
 TA
-TA
-TA
-dq
-bN
-dq
-dq
-TA
-TA
-TA
-TA
-TA
-TA
-TA
+HR
 TA
 dq
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
 bN
 dq
 dq
 TA
 TA
 TA
+zz
 TA
 TA
 TA
+TA
+dq
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+dq
+dq
+TA
+TA
+TA
+TA
+TA
+Mi
 TA
 TA
 TA
@@ -19053,7 +19223,7 @@ oD
 oD
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -19212,7 +19382,7 @@ TA
 TA
 TA
 TA
-TA
+AK
 TA
 TA
 TA
@@ -19248,7 +19418,7 @@ TA
 TA
 TA
 TA
-HR
+TA
 dq
 dq
 dq
@@ -19257,7 +19427,7 @@ TA
 rL
 TA
 TA
-rL
+TA
 TA
 TA
 TA
@@ -19286,8 +19456,8 @@ TA
 wG
 TA
 TA
-TA
-TA
+Mi
+Mi
 TA
 oD
 oD
@@ -19454,6 +19624,10 @@ dq
 dq
 TA
 TA
+XM
+TA
+TA
+HR
 TA
 TA
 TA
@@ -19463,50 +19637,46 @@ TA
 TA
 TA
 TA
+AK
 TA
 TA
-rL
+TA
+dq
+bN
+bN
+bN
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+dq
+TA
+TA
 TA
 TA
 TA
 TA
 TA
 dq
-bN
-bN
-bN
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
 dq
 TA
+zz
 TA
-TA
-TA
-TA
-TA
-TA
-dq
-dq
-TA
-TA
-TA
-TA
+zz
 TA
 TA
 vv
@@ -19747,7 +19917,7 @@ bN
 bN
 dq
 TA
-TA
+by
 TA
 TA
 TA
@@ -19785,7 +19955,7 @@ dq
 dq
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -19811,8 +19981,8 @@ oD
 TA
 TA
 TA
-TA
-TA
+AK
+AK
 TA
 TA
 dq
@@ -20007,6 +20177,7 @@ TA
 TA
 dq
 dq
+zz
 TA
 TA
 TA
@@ -20015,7 +20186,6 @@ TA
 TA
 TA
 TA
-rL
 TA
 dq
 bN
@@ -20036,7 +20206,7 @@ bN
 dq
 TA
 TA
-TA
+AK
 TA
 TA
 oD
@@ -20251,7 +20421,7 @@ bN
 bN
 dq
 TA
-TA
+zz
 TA
 TA
 TA
@@ -20267,7 +20437,7 @@ vv
 gp
 TA
 TA
-TA
+zz
 TA
 dq
 bN
@@ -20317,7 +20487,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 dq
@@ -20506,22 +20676,22 @@ TA
 TA
 rJ
 TA
+Mi
+TA
+TA
+dq
+dq
+TA
+zz
+TA
+TA
+TA
+TA
+TA
 TA
 TA
 TA
 dq
-dq
-TA
-rL
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-dq
 bN
 bN
 bN
@@ -20541,7 +20711,7 @@ dq
 TA
 TA
 TA
-TA
+by
 oD
 oD
 oD
@@ -20568,9 +20738,9 @@ oD
 oD
 TA
 TA
+Mi
 TA
-TA
-TA
+Mi
 TA
 dq
 bN
@@ -20758,7 +20928,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 dq
@@ -20803,7 +20973,7 @@ oD
 oD
 oD
 TA
-TA
+by
 oD
 oD
 oD
@@ -21016,13 +21186,13 @@ TA
 dq
 dq
 TA
-TA
+zz
 TA
 rL
 TA
 TA
 TA
-TA
+zz
 TA
 TA
 dq
@@ -21073,7 +21243,7 @@ oD
 oD
 TA
 TA
-TA
+HR
 TA
 TA
 dq
@@ -21258,7 +21428,7 @@ bN
 dq
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -21272,7 +21442,7 @@ TA
 TA
 TA
 TA
-TA
+zz
 TA
 TA
 TA
@@ -21520,7 +21690,7 @@ dq
 bN
 dq
 dq
-TA
+AK
 TA
 TA
 TA
@@ -21546,7 +21716,7 @@ bN
 bN
 dq
 dq
-TA
+Mi
 TA
 oD
 oD
@@ -21775,7 +21945,7 @@ dq
 TA
 TA
 TA
-TA
+Mi
 TA
 rJ
 TA
@@ -21798,7 +21968,7 @@ bN
 bN
 dq
 TA
-TA
+Mi
 TA
 oD
 oD
@@ -22016,7 +22186,7 @@ TA
 TA
 TA
 TA
-TA
+XM
 TA
 TA
 dq
@@ -22027,7 +22197,7 @@ dq
 dq
 TA
 TA
-TA
+Mi
 TA
 TA
 TA
@@ -22081,7 +22251,7 @@ oD
 oD
 oD
 TA
-TA
+by
 TA
 dq
 bN
@@ -22264,7 +22434,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 wG
 TA
 TA
@@ -22279,8 +22449,8 @@ bN
 dq
 dq
 TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 dq
@@ -22512,14 +22682,14 @@ dq
 dq
 TA
 TA
-HR
+TA
+by
 TA
 TA
 TA
 TA
 TA
-TA
-TA
+by
 TA
 TA
 dq
@@ -22748,13 +22918,13 @@ bN
 bN
 bN
 bN
-bN
+Er
 hB
 bN
-bN
-bN
-bN
-bN
+Ta
+Qx
+fM
+wP
 bN
 bN
 bN
@@ -22762,7 +22932,7 @@ bN
 bN
 dq
 TA
-TA
+HR
 TA
 TA
 TA
@@ -23005,7 +23175,7 @@ bN
 bN
 bN
 bN
-bN
+Qe
 bN
 bN
 bN
@@ -23089,8 +23259,8 @@ oD
 oD
 oD
 TA
+Mi
 TA
-HR
 TA
 dq
 bN
@@ -23266,13 +23436,13 @@ bN
 bN
 dq
 TA
-HR
+XM
 TA
 TA
+AK
 TA
-TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 TA
@@ -23286,7 +23456,7 @@ dq
 dq
 TA
 TA
-TA
+AK
 TA
 TA
 TA
@@ -23341,7 +23511,7 @@ oD
 oD
 TA
 TA
-TA
+Mi
 TA
 TA
 dq
@@ -23523,9 +23693,9 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
+Mi
+Mi
+Mi
 TA
 TA
 dq
@@ -23592,7 +23762,7 @@ oD
 oD
 oD
 TA
-TA
+by
 TA
 TA
 TA
@@ -23771,8 +23941,22 @@ bN
 dq
 dq
 TA
+by
 TA
 TA
+TA
+Mi
+TA
+TA
+TA
+TA
+dq
+bN
+bN
+bN
+bN
+dq
+dq
 TA
 TA
 TA
@@ -23785,20 +23969,6 @@ bN
 bN
 bN
 bN
-dq
-dq
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-dq
-bN
-bN
-bN
-bN
 bN
 bN
 bN
@@ -23812,7 +23982,7 @@ bN
 bN
 dq
 TA
-TA
+by
 oD
 oD
 oD
@@ -24071,7 +24241,7 @@ oD
 oD
 oD
 kF
-NK
+JS
 kF
 oD
 Ce
@@ -24096,7 +24266,7 @@ oD
 oD
 oD
 oD
-TA
+HR
 TA
 TA
 TA
@@ -24276,7 +24446,7 @@ bN
 dq
 dq
 TA
-TA
+HR
 TA
 TA
 TA
@@ -24295,7 +24465,7 @@ TA
 TA
 TA
 TA
-TA
+zz
 TA
 dq
 bN
@@ -24527,9 +24697,9 @@ bN
 bN
 bN
 dq
-TA
-TA
-TA
+IE
+IE
+IE
 TA
 TA
 TA
@@ -24780,9 +24950,9 @@ bN
 bN
 dq
 dq
-TA
-TA
-TA
+ND
+IE
+IE
 TA
 TA
 TA
@@ -25032,11 +25202,11 @@ bN
 bN
 bN
 dq
-TA
-ND
-wG
 ND
 ND
+Wo
+IE
+IE
 dq
 dq
 bN
@@ -25296,7 +25466,7 @@ bN
 dq
 dq
 TA
-TA
+zz
 TA
 lF
 TA
@@ -25610,7 +25780,7 @@ oD
 oD
 oD
 TA
-TA
+Mi
 TA
 TA
 dq
@@ -25788,7 +25958,7 @@ bN
 bN
 dq
 dq
-ND
+IE
 ND
 ND
 ND
@@ -25803,7 +25973,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 dq
 bN
@@ -25863,7 +26033,7 @@ oD
 oD
 TA
 TA
-TA
+Mi
 TA
 dq
 bN
@@ -26039,17 +26209,17 @@ bN
 bN
 bN
 dq
-TA
-TA
-ND
-ND
-TA
+IE
+IE
+IE
+IE
+IE
 dq
 bN
 bN
 dq
 TA
-HR
+TA
 TA
 TA
 TA
@@ -26115,7 +26285,7 @@ oD
 oD
 TA
 TA
-TA
+Mi
 TA
 dq
 bN
@@ -26292,10 +26462,10 @@ bN
 bN
 dq
 TA
+IE
 TA
 TA
-TA
-TA
+IE
 dq
 bN
 dq
@@ -26303,7 +26473,7 @@ dq
 TA
 TA
 TA
-TA
+Mi
 TA
 IE
 TA
@@ -26330,7 +26500,7 @@ rL
 TA
 TA
 TA
-TA
+by
 TA
 ZD
 oD
@@ -26365,7 +26535,7 @@ oD
 oD
 oD
 oD
-TA
+Mi
 TA
 TA
 TA
@@ -26544,7 +26714,7 @@ bN
 dq
 dq
 TA
-TA
+by
 TA
 TA
 TA
@@ -26617,7 +26787,7 @@ oD
 oD
 oD
 TA
-TA
+Mi
 TA
 TA
 TA
@@ -26796,14 +26966,14 @@ dq
 dq
 TA
 TA
-TA
+XM
 TA
 TA
 TA
 TA
 dq
 TA
-TA
+AK
 TA
 TA
 TA
@@ -26827,12 +26997,12 @@ bN
 bN
 dq
 dq
-TA
 TA
 TA
 TA
 TA
 HR
+TA
 TA
 TA
 dq
@@ -26870,7 +27040,7 @@ oD
 oD
 TA
 TA
-TA
+AK
 TA
 TA
 dq
@@ -27080,7 +27250,7 @@ dq
 dq
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -27346,7 +27516,7 @@ oD
 oD
 oD
 oD
-TA
+HR
 oD
 oD
 oD
@@ -27545,60 +27715,60 @@ dq
 dq
 TA
 TA
-TA
-TA
-TA
-TA
-TA
-IE
-IE
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-IE
-TA
-TA
-dq
-dq
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-dq
-dq
-TA
-TA
-TA
-TA
-TA
-TA
-dq
-dq
-dq
-dq
-dq
-oD
-oD
-oD
-oD
-oD
-oD
-oD
 HR
+TA
+TA
+TA
+TA
+IE
+IE
+TA
+TA
+TA
+TA
+TA
+by
+TA
+TA
+TA
+TA
+IE
+TA
+TA
+dq
+dq
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+dq
+dq
+TA
+TA
+TA
+TA
+TA
+TA
+dq
+dq
+dq
+dq
+dq
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+TA
 TA
 oD
 oD
@@ -27799,14 +27969,14 @@ TA
 TA
 TA
 TA
-TA
+by
 TA
 TA
 TA
 IE
 sF
 TA
-TA
+by
 TA
 TA
 TA
@@ -27834,7 +28004,7 @@ dq
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 TA
@@ -27878,7 +28048,7 @@ oD
 TA
 TA
 TA
-TA
+HR
 TA
 dq
 bN
@@ -28047,6 +28217,7 @@ dq
 TA
 TA
 TA
+by
 TA
 TA
 TA
@@ -28055,10 +28226,9 @@ TA
 TA
 TA
 TA
+IE
+IE
 TA
-TA
-TA
-HR
 TA
 TA
 TA
@@ -28086,9 +28256,9 @@ TA
 TA
 TA
 TA
+Mi
 TA
-TA
-TA
+XM
 dq
 dq
 dq
@@ -28128,7 +28298,7 @@ oD
 oD
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -28561,13 +28731,13 @@ TA
 TA
 TA
 TA
+Mi
 TA
 TA
 TA
 TA
 TA
-TA
-TA
+XM
 Bn
 Bn
 kW
@@ -28586,7 +28756,7 @@ bN
 bN
 dq
 TA
-TA
+XM
 TA
 TA
 TA
@@ -28599,7 +28769,7 @@ dq
 dq
 dq
 TA
-TA
+XM
 TA
 TA
 oD
@@ -28631,7 +28801,7 @@ oD
 oD
 oD
 TA
-HR
+Mi
 TA
 TA
 TA
@@ -28801,7 +28971,7 @@ TA
 TA
 TA
 TA
-TA
+XM
 TA
 TA
 TA
@@ -28813,8 +28983,8 @@ hm
 xo
 TA
 TA
-TA
-TA
+Mi
+Mi
 TA
 Rv
 TA
@@ -28840,17 +29010,17 @@ dq
 TA
 TA
 TA
+HR
 TA
 TA
 TA
-TA
 dq
 dq
 dq
 dq
 dq
 dq
-TA
+Mi
 TA
 TA
 oD
@@ -28884,7 +29054,7 @@ oD
 oD
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -29051,7 +29221,7 @@ dq
 TA
 TA
 TA
-HR
+IE
 TA
 TA
 TA
@@ -29090,7 +29260,7 @@ bN
 bN
 dq
 TA
-TA
+by
 TA
 TA
 TA
@@ -29303,7 +29473,7 @@ dq
 TA
 TA
 TA
-TA
+IE
 TA
 TA
 TA
@@ -29346,7 +29516,7 @@ TA
 TA
 TA
 TA
-TA
+by
 dq
 dq
 dq
@@ -29386,7 +29556,7 @@ oD
 oD
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -29553,10 +29723,10 @@ bN
 bN
 dq
 TA
+HR
 TA
-TA
-TA
-TA
+IE
+IE
 TA
 hm
 hm
@@ -29808,7 +29978,7 @@ TA
 TA
 TA
 TA
-TA
+IE
 TA
 hm
 TA
@@ -29817,13 +29987,13 @@ Jq
 TA
 SN
 TA
-TA
+Mi
 TA
 TA
 hm
 TA
 TA
-TA
+by
 TA
 TA
 Bn
@@ -29861,7 +30031,7 @@ dq
 dq
 TA
 TA
-TA
+by
 TA
 TA
 oD
@@ -30059,7 +30229,7 @@ dq
 TA
 TA
 TA
-TA
+by
 TA
 TA
 hm
@@ -30098,28 +30268,28 @@ bN
 dq
 TA
 TA
-TA
-TA
-TA
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-TA
-TA
 HR
+TA
+TA
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+TA
+TA
+TA
 TA
 TA
 oD
 TA
-TA
+by
 TA
 oD
 oD
@@ -30326,7 +30496,7 @@ hm
 hm
 TA
 TA
-TA
+XM
 TA
 TA
 TA
@@ -30334,7 +30504,7 @@ Bn
 Bn
 Bn
 Oj
-TA
+by
 TA
 TA
 dq
@@ -30365,11 +30535,11 @@ dq
 dq
 dq
 TA
+Mi
 TA
 TA
 TA
-TA
-TA
+AK
 TA
 TA
 TA
@@ -30572,7 +30742,7 @@ hm
 hm
 TA
 TA
-TA
+Mi
 hm
 hm
 TA
@@ -30815,7 +30985,7 @@ dq
 TA
 rL
 TA
-TA
+by
 TA
 TA
 TA
@@ -30830,8 +31000,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 TA
@@ -30869,7 +31039,7 @@ dq
 dq
 dq
 TA
-TA
+by
 TA
 TA
 TA
@@ -30877,7 +31047,7 @@ TA
 TA
 oD
 TA
-TA
+XM
 TA
 oD
 oD
@@ -31069,7 +31239,7 @@ TA
 TA
 TA
 TA
-TA
+AK
 TA
 TA
 TA
@@ -31083,7 +31253,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 vC
@@ -31105,26 +31275,26 @@ bN
 dq
 TA
 TA
+XM
+TA
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
 TA
 TA
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
-dq
 TA
 TA
-TA
-TA
-TA
+HR
 TA
 TA
 oD
@@ -31374,16 +31544,7 @@ dq
 dq
 TA
 TA
-TA
-TA
-TA
-TA
-oD
-oD
-oD
-oD
-oD
-oD
+by
 TA
 TA
 TA
@@ -31392,11 +31553,20 @@ oD
 oD
 oD
 oD
+oD
+TA
+TA
+TA
+oD
+oD
+oD
+oD
+oD
 TA
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -31571,12 +31741,12 @@ dq
 TA
 TA
 TA
+Mi
+Mi
 TA
 TA
 TA
-TA
-TA
-TA
+by
 TA
 TA
 TA
@@ -31607,7 +31777,7 @@ bN
 bN
 dq
 dq
-TA
+AK
 TA
 TA
 TA
@@ -31824,7 +31994,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 TA
@@ -31843,7 +32013,7 @@ IE
 TA
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -31874,10 +32044,10 @@ dq
 dq
 dq
 TA
+XM
 TA
 TA
-TA
-TA
+Mi
 TA
 TA
 oD
@@ -31896,12 +32066,12 @@ TA
 TA
 TA
 TA
+by
 TA
 TA
 TA
-TA
-TA
-TA
+Mi
+Mi
 TA
 TA
 TA
@@ -32073,6 +32243,14 @@ dq
 dq
 TA
 TA
+TA
+TA
+TA
+TA
+Mi
+TA
+TA
+TA
 HR
 TA
 TA
@@ -32082,14 +32260,6 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
 IE
 IE
 IE
@@ -32098,7 +32268,7 @@ TA
 TA
 TA
 TA
-TA
+AK
 TA
 TA
 TA
@@ -32129,7 +32299,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 TA
@@ -32152,7 +32322,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 TA
@@ -32323,7 +32493,7 @@ bN
 dq
 dq
 TA
-TA
+HR
 TA
 TA
 TA
@@ -32336,35 +32506,35 @@ TA
 TA
 TA
 TA
+by
 TA
+TA
+XM
+TA
+TA
+TA
+IE
+IE
+IE
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+dq
+dq
+dq
+dq
 TA
 TA
 TA
 TA
 HR
 TA
-IE
-IE
-IE
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-dq
-dq
-dq
-dq
-TA
-TA
-TA
-TA
-TA
-TA
 TA
 TA
 dq
@@ -32394,6 +32564,7 @@ oD
 oD
 TA
 TA
+XM
 TA
 TA
 TA
@@ -32405,8 +32576,7 @@ TA
 TA
 TA
 TA
-TA
-TA
+AK
 TA
 dq
 dq
@@ -32600,7 +32770,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -32615,7 +32785,7 @@ TA
 TA
 TA
 TA
-HR
+TA
 TA
 TA
 TA
@@ -32627,17 +32797,17 @@ TA
 TA
 TA
 TA
+Mi
+Mi
+Mi
+Mi
 TA
 TA
 TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
-TA
+by
 TA
 oD
 oD
@@ -32649,9 +32819,9 @@ TA
 TA
 TA
 TA
+by
 TA
-TA
-TA
+AK
 TA
 wG
 TA
@@ -32828,7 +32998,7 @@ dq
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 TA
@@ -32855,7 +33025,7 @@ dq
 dq
 dq
 TA
-TA
+XM
 TA
 TA
 TA
@@ -32867,7 +33037,7 @@ TA
 TA
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -32877,6 +33047,7 @@ TA
 TA
 TA
 TA
+by
 TA
 TA
 TA
@@ -32885,8 +33056,7 @@ TA
 TA
 TA
 TA
-TA
-TA
+HR
 TA
 TA
 TA
@@ -32906,7 +33076,7 @@ TA
 TA
 TA
 TA
-TA
+by
 TA
 TA
 TA
@@ -33079,7 +33249,7 @@ TA
 TA
 TA
 wG
-HR
+TA
 TA
 TA
 TA
@@ -33132,7 +33302,7 @@ TA
 TA
 TA
 TA
-TA
+IE
 TA
 TA
 TA
@@ -33336,7 +33506,7 @@ TA
 TA
 xg
 TA
-TA
+HR
 TA
 TA
 dq
@@ -33368,25 +33538,25 @@ IE
 TA
 IE
 IE
+XM
 TA
 TA
 TA
 TA
 TA
 TA
+AK
 TA
 TA
 TA
+IE
+TA
+IE
 TA
 TA
 TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
+IE
+IE
 TA
 TA
 TA
@@ -33404,12 +33574,12 @@ TA
 TA
 TA
 TA
+Mi
+Mi
 TA
 TA
 TA
-TA
-TA
-TA
+HR
 TA
 TA
 TA
@@ -33588,64 +33758,65 @@ TA
 TA
 TA
 TA
-HR
-TA
-dq
-dq
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-dq
-dq
-TA
-TA
-TA
-TA
-TA
-HR
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-HR
-TA
-TA
 TA
 TA
 dq
 dq
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+dq
+dq
+TA
+by
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+IE
+IE
+TA
+TA
+IE
+TA
+IE
+TA
+TA
+TA
+dq
+dq
 dq
 TA
 TA
+XM
 TA
 TA
 TA
@@ -33656,8 +33827,7 @@ TA
 TA
 TA
 TA
-TA
-TA
+Mi
 TA
 TA
 TA
@@ -33876,13 +34046,13 @@ TA
 TA
 TA
 TA
+by
 TA
 TA
 TA
 TA
 TA
-HR
-TA
+IE
 TA
 TA
 TA
@@ -33902,17 +34072,17 @@ TA
 TA
 TA
 TA
+HR
 TA
 TA
 TA
 TA
+Mi
+Mi
 TA
 TA
 TA
-TA
-TA
-TA
-TA
+Mi
 TA
 TA
 dq
@@ -34089,7 +34259,7 @@ TA
 TA
 TA
 TA
-TA
+XM
 TA
 TA
 TA
@@ -34125,6 +34295,7 @@ TA
 TA
 TA
 TA
+HR
 TA
 TA
 TA
@@ -34132,14 +34303,13 @@ TA
 TA
 TA
 TA
+by
 TA
 TA
 TA
+by
 TA
-TA
-TA
-TA
-TA
+by
 TA
 dq
 dq
@@ -34160,7 +34330,7 @@ TA
 TA
 TA
 TA
-TA
+Mi
 TA
 TA
 TA
