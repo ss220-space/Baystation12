@@ -1777,6 +1777,10 @@
 	pixel_y = -6
 	},
 /obj/structure/bed/chair/office/dark{
+	dir = 4;
+	icon_state = "officechair_dark"
+	},
+/obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -1797,6 +1801,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/crew/brig/emergency_armory)
 "dA" = (
+/turf/simulated/floor/tiled/dark,
+/area/ship/patrol/crew/brig/emergency_armory)
+"dB" = (
+/obj/machinery/recharger/wallcharger{
+	dir = 8;
+	pixel_x = 22
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/crew/brig/emergency_armory)
 "dD" = (
@@ -2442,7 +2453,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/recharger,
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/crew/brig/emergency_armory)
 "eN" = (
@@ -2458,7 +2468,6 @@
 /obj/item/melee/telebaton,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/melee/telebaton,
-/obj/machinery/recharger,
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/crew/brig/emergency_armory)
 "eO" = (
@@ -15286,9 +15295,9 @@ xY
 cj
 TX
 df
-dA
+dB
 eb
-dA
+dB
 eQ
 TX
 rJ

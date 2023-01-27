@@ -18,7 +18,7 @@
  	id = "white_star"
  	prefix = "maps/away_inf/"
  	suffixes = list("white_star/white_star.dmm")
- 	spawn_cost = 1000
+ 	spawn_cost = 4000
 
 /*obj/effect/overmap/ship/white_star_alt
 	name = "Unidentified ship"
