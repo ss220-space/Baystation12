@@ -25,10 +25,10 @@
 	name = "White Mesa"
 	id = "awaysite_mesa"
 	description = "Half Life inspired underground base"
-	spawn_cost = 2000
-	spawn_weight = 50
+	spawn_cost = 1
+	spawn_weight = 1
 	prefix = "maps/away_inf/"
-	//template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
+	template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
 	suffixes = list("whitemesa/white_mesa1.dmm", "whitemesa/white_mesa2.dmm", "whitemesa/white_mesa3.dmm")
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/mesashuttle)
 
@@ -88,7 +88,7 @@
 
 /turf/simulated/floor/exoplanet/lava_mesa
 	name = "Green Acid"
-	icon = 'acid.dmi'
+	icon = 'maps/away_inf/whitemesa/acid.dmi'
 	icon_state = "riverwater_motion"
 	movement_delay = 1
 	dirt_color = COLOR_GRAY20
@@ -143,7 +143,7 @@
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_acid
 	name = "Green Acid"
 	desc = "It's unsafe to touch"
-	icon = 'acid.dmi'
+	icon = 'maps/away_inf/whitemesa/acid.dmi'
 	icon_state = "riverwater_motion"
 	temperature = 293
 	color = "#33ff00"
@@ -154,16 +154,17 @@
 	set_light(0.7, 1, 5, l_color = "#3cff00")
 
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor
-	name = "Xen floor"
+	name = "Alien floor"
 	desc = "Am I really here?"
-	icon = 'xen_turfs.dmi'
+	icon = 'maps/away_inf/whitemesa/xen_turfs.dmi'
 	icon_state = "xen_turf"
 	temperature = 293
+	color = "#af6324"
 
 /turf/unsimulated/wall/away_inf/whitemesa/Zen
 	name = "alien wall"
 	desc = "You feel a sense of dread from just looking at this wall. Its surface seems to be constantly moving, as if it were breathing."
-	icon = 'riverturfs.dmi'
+	icon = 'maps/away_inf/whitemesa/riverturfs.dmi'
 	icon_state = "evilwall_1"
 	opacity = TRUE
 	density = TRUE
@@ -428,7 +429,7 @@
 /obj/machinery/artifact/gg3883
 	name = "Yellow crystal"
 	desc = "This is a strange alien crystal. It looks heavy, fragile and emits weak light"
-	icon = 'gg-3883.dmi'
+	icon = 'maps/away_inf/whitemesa/gg-3883.dmi'
 	icon_state = "CrystalGG"
 	my_effect = null
 	icon_num = 12
@@ -436,15 +437,7 @@
 /obj/structure/decor/antimassspectrometer
 	name = "Anti-Mass Spectrometer"
 	desc = "This is a giant science devise. There is a crystall in the "
-	icon = 'Anti-Mass Spectrometer.dmi'
-	icon_state = "Spectrometer"
-	anchored = TRUE
-	pixel_x = -32
-
-/obj/structure/decor/antimassspectrometer
-	name = "Anti-Mass Spectrometer"
-	desc = "This is a giant science devise. There is a crystall in the "
-	icon = 'Anti-Mass Spectrometer.dmi'
+	icon = 'maps/away_inf/whitemesa/Spectrometer.dmi'
 	icon_state = "Spectrometer"
 	anchored = TRUE
 	pixel_x = -32
@@ -452,7 +445,7 @@
 /obj/structure/decor/antimassspectrometer/effect0
 	name = "Tear in reality"
 	desc = ""
-	icon = 'Portals.dmi'
+	icon = 'maps/away_inf/whitemesa/Portals.dmi'
 	icon_state = "portal"
 	anchored = TRUE
 	color = "#1ac41a"
@@ -460,7 +453,7 @@
 /obj/structure/decor/antimassspectrometer/effect1
 	name = "Energy Beam"
 	desc = ""
-	icon = 'beam.dmi'
+	icon = 'maps/away_inf/whitemesa/beam.dmi'
 	icon_state = "sm_arc_supercharged"
 	anchored = TRUE
 	color = "#dad60e"
@@ -468,7 +461,7 @@
 /obj/structure/decor/antimassspectrometer/effect2
 	name = "Energy net"
 	desc = ""
-	icon = 'beam.dmi'
+	icon = 'maps/away_inf/whitemesa/beam.dmi'
 	icon_state = "red_lightning"
 	anchored = TRUE
 	color = "#0eda29"
@@ -476,17 +469,24 @@
 /obj/structure/decor/antimassspectrometer/effect3
 	name = "Something is wrong"
 	desc = ""
-	icon = 'cme_effect.dmi'
+	icon = 'maps/away_inf/whitemesa/cme_effect.dmi'
 	icon_state = "cme_effect"
 	anchored = TRUE
 	color = "#0eda29"
+
+/obj/structure/decor/bluespacedriveeffect
+	name = "Stability Core"
+	desc = ""
+	icon = 'maps/away_inf/whitemesa/bluespacedrive.dmi'
+	icon_state = "bsd_c_1"
+	anchored = TRUE
 
 //XEN PORTAL FOR HOSTILE MOBS//
 
 /obj/effect/xenportal
 	name = "Xenportal"
 	desc = "Small tear to another universe."
-	icon = 'portals.dmi'
+	icon = 'maps/away_inf/whitemesa/Portals.dmi'
 	icon_state = "portal"
 	color = "#0eda29"
 	density = TRUE
@@ -529,7 +529,7 @@
 /obj/structure/xen_crystal
 	name = "Alien crystal"
 	desc = "Glowing crystal. Looks like you can take some parts of it. "
-	icon = 'plants.dmi'
+	icon = 'maps/away_inf/whitemesa/plants.dmi'
 	icon_state = "crystal"
 	light_inner_range = 0.5
 	light_outer_range = 4
@@ -567,7 +567,7 @@
 /obj/item/xen_crystal
 	name = "Alien crystal"
 	desc = "Small piece of an alien glowing crystal"
-	icon = 'plants.dmi'
+	icon = 'maps/away_inf/whitemesa/plants.dmi'
 	icon_state = "crystal_grenade"
 	w_class = ITEM_SIZE_TINY
 	light_inner_range = 0.5
@@ -575,17 +575,54 @@
 	light_max_bright = 0.5
 	light_color = "#d3d014"
 
+/obj/structure/headcrabnest
+	name = "Nasty nest"
+	desc = ""
+	icon = 'icons/mob/mob_headcrab.dmi'
+	icon_state = "headcrab_nest"
+	density = TRUE
+	anchored = TRUE
+
+/obj/effect/blob/ravaging/xen/xentree
+	name = "Strange tree"
+	desc = "Looks like it alive!"
+	icon = 'maps/away_inf/whitemesa/zen_flora.dmi'
+	icon_state = "zen_angrytree"
+
+/obj/effect/blob/ravaging/xen
+	name = "Vine mass"
+	desc = "A mass of interwoven tendrils. They thrash around haphazardly at anything in reach."
+	maxHealth = 20
+	damage_min = 27
+	damage_max = 36
+	attack_freq = 3
+	light_color = BLOB_COLOR_RAV
+	color = "#db5a03" //Temporary, for until they get a new sprite.
+
+	/obj/effect/blob/shield/xen
+	name = "Strong vine mass"
+	desc = "A pulsating mass of interwoven tendrils. These seem particularly robust, but not quite as active."
+	icon_state = "blob_idle"
+	maxHealth = 120
+	damage_min = 13
+	damage_max = 25
+	attack_freq = 7
+	regen_rate = 4
+	expandType = /obj/effect/blob/ravaging
+	light_color = BLOB_COLOR_SHIELD
+	color = "#963c00"
+
 ///WEEEDS///
 
-/obj/structure/xenweeds
+/obj/structure/xenfloorweeds
 	name = "xen weeds"
 	desc = "A thick vine-like surface covers the floor."
 	color = "#c4230d"
-	icon = 'xen_weeds.dmi'
+	icon = 'maps/away_inf/whitemesa/xen_weeds.dmi'
 	icon_state = "Hvy1"
 
 
-/obj/structure/xenweeds/Initialize()
+/obj/structure/xenfloorweeds/Initialize()
 	.=..()
 
 	if(prob(80))
@@ -597,7 +634,7 @@
 	name = "Small puddle"
 	desc = "Even when you look on it, you already feel better."
 	icon = 'icons/obj/watercloset.dmi'
-	icon_state = "puddle"
+	icon_state = "puddle-splash"
 	color = "#71ffff"
 	anchored = TRUE
 	light_inner_range = 0.5
@@ -606,11 +643,6 @@
 	light_color = "#71ffff"
 	/// How much do we heal the current person?
 	var/heal_amount = 2
-
-/obj/structure/healingpuddle/attack_hand(var/mob/M)
-	icon_state = "puddle-splash"
-	..()
-	icon_state = "puddle"
 
 /obj/structure/healingpuddle/Initialize()
 	. = ..()

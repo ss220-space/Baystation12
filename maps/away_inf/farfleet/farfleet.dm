@@ -54,7 +54,7 @@
 	description = "Proect-2880 Gagarin-Class Farfleet Reconnaissance Craft."
 	prefix = "maps/away_inf/"
 	suffixes = list("farfleet/farfleet-1.dmm", "farfleet/farfleet-2.dmm")
-	spawn_cost = 0.5
+	spawn_cost = 4000
 	player_cost = 7 // Нынешнее значение основано на количестве игроков в авейке ~bear1ake
 	spawn_weight = 1 // Спавн включён
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/snz)

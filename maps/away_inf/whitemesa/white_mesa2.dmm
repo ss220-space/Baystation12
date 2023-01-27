@@ -21,6 +21,17 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"ay" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "aG" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -36,6 +47,17 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"aL" = (
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "lam3";
+	pixel_y = -29
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "br" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -43,6 +65,40 @@
 /turf/simulated/floor/shuttle/black,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"bu" = (
+/obj/machinery/computer/air_control/supermatter_core{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"bz" = (
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker";
+	alpha = 0
+	},
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"bC" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "ck" = (
@@ -88,11 +144,47 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"cY" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"df" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped,
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"dM" = (
+/turf/simulated/wall/concrete,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "dO" = (
 /turf/simulated/floor/reinforced,
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
+	requires_power = 0
+	})
+"dZ" = (
+/obj/machinery/computer/modular/preset/aislot/research{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "ef" = (
@@ -105,6 +197,22 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"fj" = (
+/obj/effect/floor_decal/techfloor/corner,
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"gm" = (
+/obj/structure/closet/walllocker/medical/filled{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "gD" = (
@@ -137,6 +245,17 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"gQ" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Bluespace Drive";
+	req_access = newlist();
+	secured_wires = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "hl" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8;
@@ -156,6 +275,23 @@
 /turf/simulated/mineral,
 /area/casino{
 	name = "Down levels of White Mesa"
+	})
+"hK" = (
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"ib" = (
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
 	})
 "il" = (
 /obj/structure/sign/warning/science/mass_spectrometry,
@@ -190,6 +326,23 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"iW" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Toilet";
+	secured_wires = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"iZ" = (
+/obj/machinery/light/spot,
+/turf/simulated/floor/tiled/asteroid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "jo" = (
 /obj/structure/bed/chair/office/comfy/red{
 	dir = 8
@@ -197,6 +350,15 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"jw" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 10
+	},
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "jF" = (
@@ -222,11 +384,29 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"kL" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "kX" = (
 /obj/structure/bed/chair/office/comfy/red,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"lc" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "ln" = (
@@ -241,6 +421,13 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"lS" = (
+/obj/machinery/light/spot,
+/turf/simulated/floor/tiled/steel_grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "mv" = (
 /obj/structure/railing/mapped{
 	dir = 8
@@ -249,6 +436,28 @@
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
+	requires_power = 0
+	})
+"my" = (
+/obj/effect/floor_decal/borderfloor/full,
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"mM" = (
+/obj/structure/table/standard,
+/obj/random/soap,
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"ny" = (
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "nF" = (
@@ -277,6 +486,32 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"ou" = (
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "lam";
+	pixel_y = -29
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"oA" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"oG" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "pp" = (
 /obj/structure/disposalpipe/broken,
 /obj/structure/disposalpipe/broken{
@@ -286,6 +521,38 @@
 /turf/simulated/floor,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"px" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"qi" = (
+/obj/effect/floor_decal/borderfloor/cee{
+	dir = 1
+	},
+/obj/machinery/tele_pad{
+	name = "Tram ride";
+	alpha = 0
+	},
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"qy" = (
+/obj/effect/floor_decal/borderfloor/full,
+/obj/structure/bed/sofa/r/black{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "rg" = (
@@ -394,6 +661,28 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"tS" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"tX" = (
+/obj/effect/floor_decal/borderfloor/full,
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/machinery/light/xenon{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "uM" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -421,6 +710,15 @@
 /turf/simulated/floor,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"vY" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 5
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "wf" = (
@@ -465,6 +763,15 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"xe" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "xl" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -489,6 +796,17 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"xX" = (
+/obj/structure/hygiene/sink{
+	dir = 4;
+	pixel_y = -1;
+	pixel_x = 20
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "ye" = (
 /turf/unsimulated/floor/tile,
 /area/casino{
@@ -509,6 +827,29 @@
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
+	requires_power = 0
+	})
+"ys" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker";
+	alpha = 0
+	},
+/obj/machinery/computer/teleporter{
+	pixel_y = 1;
+	dir = 4;
+	name = "Monorail Console";
+	alpha = 1
+	},
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "yz" = (
@@ -556,6 +897,19 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"yZ" = (
+/obj/machinery/door/airlock/highsecurity,
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"zf" = (
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "Al" = (
 /obj/structure/railing/mapped,
 /obj/structure/railing/mapped{
@@ -565,6 +919,13 @@
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
+	requires_power = 0
+	})
+"Ax" = (
+/obj/effect/floor_decal/borderfloor/cee,
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "AA" = (
@@ -593,6 +954,16 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"AK" = (
+/obj/effect/floor_decal/borderfloor/full,
+/obj/structure/bed/sofa/l/black{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "AN" = (
 /turf/unsimulated/mineral,
 /area/casino{
@@ -618,6 +989,15 @@
 	requires_power = 0;
 	req_access = list("ACCESS_CENT_GENERAL")
 	})
+"Bw" = (
+/obj/machinery/door/blast/multi_tile/three_tile_ver{
+	id_tag = "Open"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "BP" = (
 /obj/structure/railing/mapped,
 /obj/structure/railing/mapped{
@@ -627,6 +1007,41 @@
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
+	requires_power = 0
+	})
+"Cb" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Ce" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Ck" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "Cl" = (
@@ -640,12 +1055,48 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"Cs" = (
+/obj/machinery/light/spot,
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Cz" = (
+/turf/simulated/floor/tiled/asteroid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "CC" = (
 /obj/machinery/self_destruct,
 /obj/effect/decal/warning_stripes,
 /turf/simulated/floor/shuttle/darkred,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"CQ" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker";
+	alpha = 0
+	},
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"CV" = (
+/turf/simulated/floor/tiled/freezer,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "DD" = (
@@ -659,6 +1110,28 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"DL" = (
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker";
+	alpha = 0
+	},
+/obj/machinery/computer/teleporter{
+	pixel_y = 1;
+	dir = 4;
+	name = "Monorail Console";
+	alpha = 1
+	},
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "DP" = (
 /obj/machinery/button/blast_door{
 	id_tag = "nuce_door";
@@ -670,11 +1143,30 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"DV" = (
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "Eu" = (
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"Ex" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Toilet";
+	secured_wires = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "EO" = (
@@ -693,6 +1185,36 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"FG" = (
+/obj/machinery/bluespacedrive{
+	icon = 'maps/away_inf/whitemesa/bluespacedrive.dmi';
+	icon_state = "bsd_core_broken";
+	pixel_y = -30;
+	pixel_x = -32
+	},
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"FT" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Gp" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 10
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "Gv" = (
 /obj/structure/railing/mapped{
 	dir = 4
@@ -704,6 +1226,16 @@
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
+	requires_power = 0
+	})
+"GB" = (
+/obj/structure/sign/warning/secure_area{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "GL" = (
@@ -718,11 +1250,82 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"GV" = (
+/obj/machinery/door/airlock/multi_tile{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Hw" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped,
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Hx" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"HP" = (
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 4
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "HR" = (
 /obj/structure/decor/bsb_on,
 /turf/simulated/floor/shuttle/black,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"HS" = (
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "lam2";
+	pixel_y = -29
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Ix" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"IC" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "IE" = (
@@ -777,6 +1380,24 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"Jx" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/hygiene/toilet,
+/obj/item/taperoll/bog{
+	pixel_x = -12;
+	pixel_y = -10
+	},
+/obj/machinery/newscaster{
+	pixel_x = -26;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "JA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -796,6 +1417,35 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"KP" = (
+/obj/effect/floor_decal/borderfloor/cee{
+	dir = 1
+	},
+/obj/machinery/tele_pad{
+	name = "Tram ride";
+	alpha = 0
+	},
+/obj/structure/bed/sofa/l/black{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"KW" = (
+/turf/simulated/mineral,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Ld" = (
+/obj/machinery/door/airlock/highsecurity,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "LL" = (
 /obj/machinery/computer/modular/preset/engineering{
 	dir = 1
@@ -803,6 +1453,49 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"LU" = (
+/obj/structure/wall_frame,
+/obj/effect/wallframe_spawn/reinforced/bare/no_grille,
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Mc" = (
+/turf/simulated/wall/r_wall/prepainted{
+	paint_color = "#9a9c8c"
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Mr" = (
+/obj/structure/hygiene/toilet,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/taperoll/bog{
+	pixel_x = -12;
+	pixel_y = -10
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"ML" = (
+/obj/structure/closet/radiation,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/turf/simulated/floor/tiled/steel_grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "Ng" = (
@@ -832,6 +1525,19 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"Oe" = (
+/obj/effect/floor_decal/techfloor/orange,
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Oh" = (
+/turf/simulated/wall/elevator,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "OI" = (
 /turf/simulated/wall/titanium,
 /area/meatstation/lab{
@@ -859,6 +1565,45 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"Pf" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Py" = (
+/obj/effect/floor_decal/borderfloor/full,
+/obj/structure/bed/sofa/l/black,
+/obj/item/device/radio/beacon/anchored{
+	level = 1
+	},
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"PF" = (
+/obj/machinery/door/airlock/highsecurity/bolted{
+	id_tag = "BSD_airlock";
+	name = "Containment Chamber"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"PG" = (
+/obj/effect/floor_decal/techfloor/orange,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "PI" = (
 /obj/machinery/door/blast/regular{
 	dir = 4;
@@ -868,6 +1613,29 @@
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
+	requires_power = 0
+	})
+"PK" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"PO" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 5
+	},
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "PW" = (
@@ -898,6 +1666,25 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"Qm" = (
+/obj/effect/wallframe_spawn/reinforced/prepainted,
+/obj/machinery/door/blast/shutters{
+	id_tag = "lam2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"QH" = (
+/obj/machinery/computer/fusion{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "QR" = (
 /obj/structure/railing/mapped,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -914,6 +1701,12 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"Rl" = (
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "Ro" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -921,6 +1714,22 @@
 /turf/simulated/floor/shuttle/black,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"Rt" = (
+/obj/effect/floor_decal/borderfloor/cee{
+	dir = 1
+	},
+/obj/machinery/tele_pad{
+	name = "Tram ride";
+	alpha = 0
+	},
+/obj/structure/bed/sofa/r/black{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "Rz" = (
@@ -933,6 +1742,20 @@
 	},
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"RI" = (
+/obj/effect/floor_decal/borderfloor/full,
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/structure/bed/sofa/r/black,
+/obj/machinery/light/xenon{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "Sh" = (
@@ -960,6 +1783,15 @@
 /area/hydroponics{
 	name = "Monorail Shaft"
 	})
+"Th" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "Tm" = (
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /turf/simulated/floor/tiled/techmaint,
@@ -968,16 +1800,55 @@
 	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
+"Tp" = (
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "TT" = (
 /turf/simulated/mineral,
 /area/casino{
 	name = "Down levels of White Mesa"
+	})
+"Ur" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
 	})
 "Ut" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"UV" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 9
+	},
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"UZ" = (
+/turf/simulated/wall/prepainted,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Vb" = (
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "Vd" = (
@@ -987,6 +1858,15 @@
 /turf/simulated/floor/shuttle/black,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"Vt" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
+	},
+/turf/simulated/floor/pool,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "VD" = (
@@ -1004,6 +1884,28 @@
 /area/hydroponics{
 	name = "Monorail Shaft"
 	})
+"Wc" = (
+/obj/structure/wall_frame,
+/obj/effect/wallframe_spawn/reinforced/bare/no_grille,
+/obj/machinery/tele_projector{
+	alpha = 0
+	},
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Wd" = (
+/obj/effect/wallframe_spawn/reinforced/prepainted,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "Wi" = (
 /turf/simulated/mineral,
 /area/casino/casino_bow{
@@ -1015,12 +1917,39 @@
 /area/casino{
 	name = "Down levels of White Mesa"
 	})
+"Wv" = (
+/obj/structure/catwalk,
+/obj/structure/catwalk,
+/turf/simulated/floor/ice{
+	name = "space";
+	base_desc = "Don't look down";
+	icon_state = null
+	},
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"WK" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
 "Xe" = (
 /turf/simulated/floor/exoplanet/lava_mesa{
 	color = "#3cff00"
 	},
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
+"Xh" = (
+/turf/simulated/floor/tiled/steel_grid,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "Xm" = (
@@ -1072,6 +2001,31 @@
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
+	requires_power = 0
+	})
+"Ya" = (
+/obj/effect/floor_decal/techfloor/orange/corner,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Yi" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 9
+	},
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
+	requires_power = 0
+	})
+"Yr" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/chapel{
+	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "Zq" = (
@@ -30695,46 +31649,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+KW
 TT
 TT
 TT
@@ -30947,46 +31901,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+KW
 TT
 TT
 TT
@@ -31199,46 +32153,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+bz
+bz
+bz
+bz
+bz
+bz
+bz
+bz
+bz
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+KW
 TT
 TT
 TT
@@ -31451,46 +32405,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+bz
+Oh
+LU
+LU
+Oh
+LU
+LU
+Oh
+bz
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+KW
 TT
 TT
 TT
@@ -31703,46 +32657,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+bz
+LU
+Ax
+my
+tX
+my
+qi
+Wc
+DL
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+KW
 TT
 TT
 TT
@@ -31955,46 +32909,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+CQ
+LU
+Ax
+qy
+Py
+my
+Rt
+Wc
+ys
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+Pf
+KW
 TT
 TT
 TT
@@ -32207,46 +33161,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+bz
+LU
+Ax
+AK
+RI
+my
+KP
+Wc
+DL
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+KW
 TT
 TT
 TT
@@ -32459,46 +33413,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+bz
+Oh
+ib
+LU
+Oh
+LU
+LU
+Oh
+bz
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+KW
 TT
 TT
 TT
@@ -32711,46 +33665,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+bz
+Cb
+ay
+ay
+Hw
+bz
+bz
+bz
+bz
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+KW
 TT
 TT
 TT
@@ -32963,46 +33917,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+bz
+PK
+Wv
+Wv
+df
+bz
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+hK
+KW
 TT
 TT
 TT
@@ -33215,46 +34169,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+Mc
+Mc
+oG
+GV
+Mc
+Mc
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+dM
+KW
 TT
 TT
 TT
@@ -33467,46 +34421,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -33719,46 +34673,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+px
+Cz
+Cz
+iZ
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -33971,46 +34925,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -34223,46 +35177,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -34475,46 +35429,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -34727,46 +35681,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Mc
+Mc
+Mc
+Mc
+px
+Cz
+Cz
+iZ
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -34979,46 +35933,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Xh
+Xh
+ou
+Mc
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -35231,46 +36185,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+bC
+Xh
+Xh
+Qm
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -35483,46 +36437,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Xh
+Xh
+Xh
+Qm
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -35735,46 +36689,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Xh
+Xh
+Xh
+Qm
+Cz
+Cz
+Cz
+iZ
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -35987,46 +36941,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+bC
+Xh
+Xh
+Qm
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -36239,46 +37193,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Xh
+Xh
+HS
+Mc
+Cz
+Cz
+Cz
+Cz
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -36491,46 +37445,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+oG
+oG
+Bw
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -36743,46 +37697,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+UZ
+Jx
+CV
+iW
+Yr
+mM
+mM
+Mc
+Vb
+Vb
+Vb
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -36995,46 +37949,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Cs
+Mc
+Mc
+Mc
+Mc
+Vb
+Vb
+Vb
+Ex
+Vb
+Vb
+Vb
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -37247,46 +38201,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+Mc
+Mc
+Mc
+gm
+Vb
+Vb
+Mc
+Vb
+Vb
+Cs
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -37499,46 +38453,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+Mr
+CV
+iW
+kL
+xX
+xX
+Mc
+Vb
+Vb
+Vb
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -37751,46 +38705,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Cs
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Vb
+Vb
+Vb
+Mc
+ML
+Xh
+ML
+Xh
+ML
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -38003,46 +38957,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Cs
+Mc
+Vb
+Yr
+Vb
+Vb
+Vb
+Yr
+Vb
+Vb
+Vb
+Vb
+Mc
+bC
+Xh
+Xh
+Xh
+lS
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -38255,46 +39209,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Ld
+Vb
+Vb
+Vb
+Vb
+Vb
+Vb
+Vb
+Vb
+Vb
+Vb
+gQ
+Xh
+Xh
+Xh
+Xh
+Xh
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -38507,46 +39461,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+Vb
+kL
+Vb
+Vb
+Vb
+kL
+Vb
+Vb
+Vb
+Vb
+Mc
+bC
+Xh
+Xh
+Xh
+lS
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -38759,46 +39713,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Cs
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Vb
+Vb
+Cs
+Mc
+ML
+Xh
+ML
+Xh
+ML
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -39011,46 +39965,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -39263,46 +40217,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+yZ
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+GB
+Vb
+GB
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -39515,46 +40469,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Ce
+Vb
+Vb
+Mc
+KW
+KW
+KW
+KW
+KW
+Mc
+Mc
+Mc
+PF
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -39767,46 +40721,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+KW
+KW
+KW
+Mc
+Mc
+Mc
+Rl
+Rl
+Rl
+Rl
+Rl
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -40019,46 +40973,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+KW
+Mc
+Mc
+Mc
+Yi
+Gp
+Rl
+Rl
+Rl
+Rl
+Rl
+Yi
+Gp
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -40271,46 +41225,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+KW
+Mc
+Yi
+lc
+DV
+Tp
+Gp
+Rl
+Rl
+Rl
+Yi
+DV
+Tp
+lc
+Gp
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -40523,46 +41477,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Ce
+Vb
+Vb
+Mc
+Mc
+Mc
+WK
+zf
+zf
+zf
+Tp
+Gp
+Rl
+Yi
+DV
+zf
+zf
+zf
+PG
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -40775,46 +41729,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+Vb
+Mc
+Mc
+Yi
+DV
+zf
+zf
+zf
+Ya
+Th
+Rl
+vY
+HP
+zf
+zf
+zf
+Tp
+Gp
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -41027,46 +41981,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+aL
+Mc
+Mc
+vY
+HP
+zf
+zf
+Ya
+Th
+Rl
+Rl
+Rl
+vY
+HP
+zf
+zf
+Ya
+Th
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -41279,46 +42233,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+bu
+Wd
+Rl
+Rl
+vY
+HP
+Ya
+Th
+fj
+Hx
+Hx
+Hx
+oA
+vY
+HP
+Ya
+Th
+Rl
+Rl
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -41531,46 +42485,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Ce
+Vb
+QH
+Wd
+Rl
+Rl
+Rl
+vY
+Th
+Rl
+ny
+UV
+Ck
+jw
+tS
+Rl
+vY
+Th
+Rl
+Rl
+Rl
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -41783,46 +42737,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+dZ
+Wd
+Rl
+Rl
+Rl
+Rl
+Rl
+Rl
+ny
+cY
+FG
+Oe
+tS
+Rl
+Rl
+Rl
+Rl
+Rl
+Rl
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -42035,46 +42989,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+dZ
+Wd
+Rl
+Rl
+Rl
+Yi
+Gp
+Rl
+ny
+PO
+FT
+Vt
+tS
+Rl
+Yi
+Gp
+Rl
+Rl
+Rl
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -42287,46 +43241,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Vb
+Vb
+dZ
+Wd
+Rl
+Rl
+Yi
+DV
+Tp
+Gp
+Ix
+IC
+IC
+IC
+Ur
+Yi
+DV
+Tp
+Gp
+Rl
+Rl
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -42539,46 +43493,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Ce
+Vb
+Vb
+Mc
+Mc
+Yi
+DV
+zf
+zf
+Tp
+Gp
+Rl
+Rl
+Rl
+Yi
+DV
+zf
+zf
+Tp
+Gp
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -42791,46 +43745,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+vY
+HP
+zf
+zf
+zf
+Tp
+Gp
+Rl
+Yi
+DV
+zf
+zf
+zf
+Ya
+Th
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -43043,46 +43997,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Mc
+WK
+zf
+zf
+zf
+Ya
+Th
+Rl
+vY
+HP
+zf
+zf
+zf
+PG
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -43295,46 +44249,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+vY
+xe
+HP
+Ya
+Th
+Rl
+Rl
+Rl
+vY
+HP
+Ya
+xe
+Th
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -43547,46 +44501,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Mc
+Mc
+vY
+Th
+Rl
+Rl
+Rl
+Rl
+Rl
+vY
+Th
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -43799,46 +44753,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Mc
+Mc
+Rl
+Rl
+Rl
+Rl
+Rl
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -44051,46 +45005,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT
@@ -44303,46 +45257,46 @@ TT
 TT
 TT
 TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
-TT
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
+KW
 TT
 TT
 TT

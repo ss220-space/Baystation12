@@ -1,9 +1,24 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aj" = (
+/obj/structure/table/steel,
+/obj/item/device/scanner/xenobio,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "aZ" = (
 /obj/structure/railing/mapped{
 	dir = 1
 	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"bd" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -34,7 +49,9 @@
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "bN" = (
-/turf/space,
+/turf/space{
+	icon_state = "end01"
+	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -61,6 +78,13 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"dj" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "dq" = (
 /turf/unsimulated/wall/away_inf/whitemesa/Zen,
 /area/casino/casino_crew_bathroom{
@@ -71,6 +95,13 @@
 /obj/machinery/light/spot,
 /mob/living/simple_animal/hostile/vortigaunt_slave,
 /turf/simulated/floor/tiled/techfloor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"dL" = (
+/obj/item/storage/toolbox,
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -109,7 +140,16 @@
 	})
 "gl" = (
 /obj/structure/alien/resin/wall,
-/turf/space,
+/turf/space{
+	icon_state = "end01"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"gp" = (
+/obj/structure/xen_crystal,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -141,7 +181,16 @@
 	})
 "hB" = (
 /obj/structure/alien/resin/membrane,
-/turf/space,
+/turf/space{
+	icon_state = "end01"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"hF" = (
+/obj/structure/closet/crate/secure/phoron,
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -217,6 +266,53 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"iL" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/captain{
+	name = "experimental laser gun";
+	desc = "A rare weapon"
+	},
+/obj/item/gun/energy/captain{
+	name = "experimental laser gun";
+	desc = "A rare weapon"
+	},
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"jo" = (
+/obj/item/device/scanner/health,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"jr" = (
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/exoplanet/lava_mesa{
+	color = "#3cff00"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"kt" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "kF" = (
 /obj/structure/railing/mapped{
 	dir = 8
@@ -257,16 +353,24 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"lF" = (
+/obj/item/pickaxe/xeno/five_pick,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "mm" = (
 /obj/structure/alien/resin,
-/turf/space,
+/turf/space{
+	icon_state = "end01"
+	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "ni" = (
-/obj/structure/table,
-/obj/machinery/recharger,
+/obj/structure/table/steel,
 /turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -277,6 +381,17 @@
 	anchored = 1
 	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"ns" = (
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/structure/table/rack,
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -293,6 +408,7 @@
 /obj/machinery/door/window/brigdoor/northleft{
 	dir = 4
 	},
+/obj/structure/xenfloorweeds,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -317,7 +433,9 @@
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "pC" = (
-/turf/space,
+/turf/space{
+	icon_state = "end01"
+	},
 /area/space)
 "qd" = (
 /obj/structure/grille,
@@ -331,9 +449,40 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"qm" = (
+/obj/structure/stasis_cage,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "qr" = (
 /turf/simulated/wall/concrete,
 /area/space)
+"qu" = (
+/obj/structure/inflatable/door{
+	color = "#556B2F";
+	opacity = 1
+	},
+/turf/simulated/floor/exoplanet/lava_mesa{
+	color = "#3cff00"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"qR" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "rv" = (
 /obj/random/trash,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
@@ -370,9 +519,47 @@
 /area/hydroponics{
 	name = "Monorail Shaft"
 	})
+"se" = (
+/obj/structure/closet/crate/secure/biohazard{
+	req_access = list(list("ACCESS_RESEARCH","ACCESS_EXPLORER"))
+	},
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"sF" = (
+/obj/structure/xenfloorweeds,
+/obj/structure/xenfloorweeds,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "sU" = (
 /obj/structure/dispenser/oxygen,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"tj" = (
+/obj/structure/table/steel,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/random/powercell,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"tE" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -397,6 +584,24 @@
 /obj/item/trash/tastybread,
 /obj/structure/railing/mapped,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"uO" = (
+/obj/machinery/floodlight,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8";
+	dir = 8
+	},
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -465,6 +670,13 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"vv" = (
+/obj/item/xen_crystal,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "vz" = (
 /obj/structure/catwalk,
 /obj/structure/closet/crate/freezer,
@@ -488,8 +700,26 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"ws" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "wG" = (
 /mob/living/simple_animal/hostile/Headcrab,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"xg" = (
+/obj/structure/headcrabnest,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -521,6 +751,20 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"xT" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/lava_mesa{
+	color = "#3cff00"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "yk" = (
 /obj/machinery/computer/modular/preset/command,
 /turf/simulated/floor/tiled/techfloor,
@@ -539,6 +783,13 @@
 /obj/structure/decor/bsc_dust{
 	color = "#ffb300"
 	},
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"zI" = (
+/obj/structure/healingpuddle,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -589,11 +840,35 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"AJ" = (
+/obj/structure/table/steel,
+/obj/item/device/scanner/reagent,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "AK" = (
 /obj/structure/flora/ausbushes/fernybush{
 	color = "#ffb300"
 	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Bf" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/inflatable{
+	color = "#556B2F";
+	opacity = 1
+	},
+/turf/simulated/floor/exoplanet/lava_mesa{
+	color = "#3cff00"
+	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -604,6 +879,14 @@
 	opacity = 1
 	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Br" = (
+/obj/structure/table/steel,
+/obj/item/device/scanner/health,
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -631,14 +914,9 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
-"BU" = (
-/obj/structure/railing/mapped{
-	dir = 4
-	},
-/obj/structure/mech_wreckage/powerloader,
-/turf/simulated/floor/exoplanet/lava_mesa{
-	color = "#3cff00"
-	},
+"Cc" = (
+/obj/item/pickaxe/xeno/one_pick,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -707,12 +985,37 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"EI" = (
+/obj/structure/catwalk,
+/obj/structure/inflatable{
+	color = "#556B2F";
+	opacity = 1
+	},
+/turf/simulated/floor/exoplanet/lava_mesa{
+	color = "#3cff00"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"ET" = (
+/obj/machinery/recharge_station,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "EZ" = (
 /turf/simulated/wall/prepainted{
-	icon = 'riverturfs.dmi';
+	icon = 'maps/away_inf/whitemesa/riverturfs.dmi';
 	icon_state = "evilwall_1";
 	name = "Weak wall";
-	desc = "With a little bit of force..."
+	desc = "With a little bit of force...";
+	color = "#e67428"
 	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -738,15 +1041,37 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Fz" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8";
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"FI" = (
+/obj/item/device/scanner/gas,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "FN" = (
-/obj/structure/table,
+/obj/structure/table/steel,
+/obj/item/device/scanner/plant,
 /turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "FT" = (
-/turf/space,
+/turf/space{
+	icon_state = "end01"
+	},
 /area/hydroponics{
 	name = "Monorail Shaft"
 	})
@@ -756,11 +1081,26 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"HG" = (
+/obj/structure/table/steel,
+/obj/item/modular_computer/laptop,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"HR" = (
+/obj/effect/blob/ravaging/xen/xentree,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "Ih" = (
 /turf/simulated/floor/plating,
 /area/space)
 "IE" = (
-/obj/structure/alien/resin/membrane,
+/obj/structure/xenfloorweeds,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -822,11 +1162,36 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Jr" = (
+/obj/structure/table/rack,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "JF" = (
 /obj/machinery/light/spot{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Ka" = (
+/obj/structure/table/steel,
+/obj/item/stack/flag/red,
+/obj/item/stack/flag/red,
+/obj/item/stack/flag/red,
+/obj/item/device/scanner/mining,
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -841,6 +1206,19 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"KM" = (
+/obj/structure/catwalk,
+/obj/structure/inflatable/door{
+	color = "#556B2F";
+	opacity = 1
+	},
+/turf/simulated/floor/exoplanet/lava_mesa{
+	color = "#3cff00"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "KX" = (
 /obj/item/storage/box,
 /obj/item/device/flashlight/flare/glowstick/orange,
@@ -851,6 +1229,18 @@
 /obj/item/device/flashlight/flare/glowstick/orange,
 /obj/structure/catwalk,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Lg" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/item/wrench,
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -929,9 +1319,31 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Nd" = (
+/obj/structure/table/steel,
+/obj/machinery/microscope,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "ND" = (
 /obj/structure/foamedmetal,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"NE" = (
+/obj/structure/decor/antimassspectrometer/effect3{
+	layer = 5;
+	name = "Portal";
+	icon = 'maps/away_inf/whitemesa/energy_ball.dmi';
+	icon_state = "energy_ball"
+	},
+/turf/space{
+	icon_state = "end01"
+	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -969,6 +1381,22 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Pt" = (
+/obj/structure/table/steel,
+/obj/item/storage/toolbox/electrical,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Pu" = (
+/obj/item/barrier,
+/obj/item/barrier,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "PQ" = (
 /obj/item/stack/flag/green,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
@@ -979,6 +1407,10 @@
 "Qc" = (
 /obj/structure/decor/comm_tower,
 /obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/exoplanet/lava_mesa{
 	color = "#3cff00"
 	},
@@ -987,8 +1419,8 @@
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
 "QG" = (
-/obj/structure/table,
 /obj/item/modular_computer/laptop,
+/obj/structure/table/steel,
 /turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -996,6 +1428,13 @@
 	})
 "QN" = (
 /obj/effect/gibspawner/human,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/item/clothing/suit/space/void/excavation/thekekman666,
+/obj/item/clothing/head/helmet/space/void/excavation/thekekman666,
 /turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
@@ -1068,6 +1507,13 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Ty" = (
+/obj/machinery/suspension_gen,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "TA" = (
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
 /area/casino/casino_crew_bathroom{
@@ -1088,6 +1534,20 @@
 	icon_state = "0-4"
 	},
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"UO" = (
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/exoplanet/lava_mesa{
+	color = "#3cff00"
+	},
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -1122,6 +1582,14 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"VE" = (
+/obj/structure/table/steel,
+/obj/item/storage/firstaid/adv,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "Wm" = (
 /obj/structure/grille,
 /obj/structure/cable/yellow,
@@ -1130,9 +1598,40 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Wo" = (
+/mob/living/simple_animal/hostile/Headcrab,
+/obj/structure/xenfloorweeds,
+/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "WE" = (
 /obj/item/storage/backpack/messenger/explorer,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"WJ" = (
+/obj/structure/table/rack,
+/obj/item/pickaxe{
+	pixel_x = 5
+	},
+/obj/item/pickaxe{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/shovel{
+	pixel_x = -5
+	},
+/obj/item/shovel{
+	pixel_x = -5
+	},
+/obj/item/shovel{
+	pixel_x = -5
+	},
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -1163,6 +1662,13 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
+"Xm" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
 "Xo" = (
 /obj/structure/grille/broken,
 /turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
@@ -1184,12 +1690,9 @@
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
 	})
-"XP" = (
-/obj/structure/decor/green_egg{
-	name = "mysterious egg";
-	desc = "A strange slimy goopy egg. Look closer and you see that something is moving inside."
-	},
-/turf/unsimulated/floor/away_inf/whitemesa/Zen_floor,
+"XW" = (
+/obj/item/device/t_scanner,
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -1201,6 +1704,30 @@
 /turf/simulated/floor/exoplanet/lava_mesa{
 	color = "#3cff00"
 	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Yo" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/exoplanet/lava_mesa{
+	color = "#3cff00"
+	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"Yx" = (
+/obj/structure/inflatable/door{
+	color = "#556B2F";
+	opacity = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -1221,6 +1748,17 @@
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"YT" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger{
+	name = "experimental recharger"
+	},
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg');
+	requires_power = 0
 	})
 "Zr" = (
 /obj/structure/grille,
@@ -1243,6 +1781,23 @@
 /turf/simulated/floor/exoplanet/lava_mesa{
 	color = "#3cff00"
 	},
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"ZH" = (
+/obj/structure/anomaly_container,
+/turf/simulated/floor/plating,
+/area/casino/casino_crew_bathroom{
+	name = "Xen World";
+	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
+	})
+"ZZ" = (
+/obj/structure/table/rack,
+/obj/item/storage/mre/menu2,
+/obj/item/storage/mre/menu2,
+/obj/item/storage/mre/menu2,
+/turf/simulated/floor/plating,
 /area/casino/casino_crew_bathroom{
 	name = "Xen World";
 	ambience = list('sound/whitemesa/xenambient1.ogg','sound/whitemesa/xenambient2.ogg','sound/whitemesa/xenambient3.ogg','sound/whitemesa/xenambient4.ogg')
@@ -9851,10 +10406,10 @@ bN
 dq
 dq
 dq
+IE
 TA
 TA
-TA
-TA
+rJ
 TA
 dq
 dq
@@ -10101,9 +10656,9 @@ bN
 bN
 bN
 dq
-TA
-TA
-TA
+IE
+IE
+IE
 TA
 TA
 Jq
@@ -10353,13 +10908,13 @@ dq
 dq
 dq
 dq
-TA
+IE
 dq
+IE
 TA
 TA
-TA
-TA
-TA
+zI
+rJ
 TA
 TA
 dq
@@ -10862,7 +11417,7 @@ dq
 dq
 TA
 TA
-TA
+gp
 TA
 dq
 dq
@@ -11606,8 +12161,8 @@ bN
 bN
 bN
 dq
-IE
-IE
+TA
+TA
 dq
 bN
 bN
@@ -12109,10 +12664,10 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
+IE
+IE
+IE
+IE
 dq
 dq
 TA
@@ -13357,7 +13912,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -13859,7 +14414,7 @@ dq
 TA
 TA
 TA
-TA
+gp
 TA
 TA
 rJ
@@ -13883,7 +14438,7 @@ TA
 Xs
 oD
 oD
-TA
+HR
 TA
 TA
 TA
@@ -14386,7 +14941,7 @@ TA
 oD
 oD
 oD
-TA
+HR
 TA
 TA
 TA
@@ -14625,7 +15180,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -14865,8 +15420,8 @@ bN
 dq
 TA
 TA
-TA
-TA
+IE
+IE
 TA
 TA
 TA
@@ -14882,9 +15437,9 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
+IE
+IE
+IE
 TA
 TA
 TA
@@ -15118,7 +15673,7 @@ dq
 TA
 TA
 TA
-TA
+IE
 TA
 TA
 oD
@@ -15134,6 +15689,20 @@ TA
 TA
 TA
 TA
+IE
+IE
+IE
+IE
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+IE
 TA
 TA
 TA
@@ -15147,21 +15716,7 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
+HR
 TA
 dq
 dq
@@ -15370,8 +15925,8 @@ dq
 dq
 TA
 TA
-TA
-TA
+IE
+IE
 TA
 TA
 oD
@@ -15385,6 +15940,10 @@ TA
 TA
 TA
 TA
+IE
+IE
+IE
+IE
 TA
 TA
 TA
@@ -15393,16 +15952,12 @@ TA
 TA
 TA
 TA
+IE
+IE
+IE
 TA
 TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
+HR
 TA
 TA
 TA
@@ -15622,7 +16177,7 @@ bN
 dq
 TA
 TA
-TA
+IE
 TA
 TA
 TA
@@ -15638,6 +16193,8 @@ TA
 TA
 TA
 TA
+IE
+IE
 TA
 TA
 TA
@@ -15648,6 +16205,9 @@ TA
 TA
 TA
 TA
+IE
+IE
+IE
 TA
 TA
 TA
@@ -15657,12 +16217,7 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
-TA
-TA
+HR
 TA
 TA
 TA
@@ -15874,6 +16429,7 @@ dq
 dq
 TA
 TA
+IE
 TA
 TA
 TA
@@ -15883,15 +16439,14 @@ TA
 TA
 TA
 TA
+IE
 TA
 TA
 TA
 TA
 TA
 TA
-TA
-TA
-TA
+IE
 wG
 TA
 TA
@@ -15902,8 +16457,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+IE
+IE
 TA
 TA
 TA
@@ -16129,6 +16684,16 @@ TA
 TA
 TA
 TA
+HR
+TA
+TA
+TA
+TA
+TA
+TA
+IE
+IE
+IE
 TA
 TA
 TA
@@ -16144,17 +16709,7 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
+IE
 TA
 TA
 TA
@@ -16389,7 +16944,7 @@ TA
 TA
 TA
 TA
-wG
+Wo
 TA
 TA
 TA
@@ -17154,7 +17709,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -17637,13 +18192,13 @@ dq
 dq
 TA
 TA
+HR
 TA
 TA
 TA
 TA
 TA
-TA
-TA
+IE
 TA
 TA
 TA
@@ -17895,7 +18450,7 @@ TA
 TA
 TA
 TA
-TA
+IE
 TA
 TA
 TA
@@ -18146,6 +18701,8 @@ TA
 TA
 TA
 TA
+IE
+IE
 TA
 TA
 TA
@@ -18159,9 +18716,7 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
+HR
 TA
 TA
 TA
@@ -18399,7 +18954,7 @@ TA
 TA
 TA
 TA
-TA
+IE
 TA
 TA
 TA
@@ -18693,7 +19248,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 dq
 dq
 dq
@@ -18954,7 +19509,7 @@ TA
 TA
 TA
 TA
-TA
+vv
 TA
 TA
 TA
@@ -19204,7 +19759,7 @@ TA
 rL
 TA
 TA
-TA
+gp
 TA
 TA
 TA
@@ -19707,9 +20262,9 @@ dq
 TA
 TA
 TA
-rJ
-TA
-TA
+gp
+vv
+gp
 TA
 TA
 TA
@@ -20713,7 +21268,7 @@ dq
 dq
 dq
 TA
-rJ
+TA
 TA
 TA
 TA
@@ -21053,7 +21608,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -21262,10 +21817,10 @@ oD
 oD
 oD
 oD
-Ce
+Jd
 ZD
 ZD
-Yc
+Mp
 oD
 oD
 oD
@@ -21305,8 +21860,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+dq
+dq
 TA
 TA
 TA
@@ -21513,12 +22068,12 @@ iK
 iK
 iK
 iK
-iK
 Fj
-ZD
-ZD
+EI
+KM
+qu
+EI
 IS
-iK
 oD
 oD
 oD
@@ -21558,7 +22113,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -21756,7 +22311,7 @@ oD
 oD
 oD
 oD
-BU
+iK
 iK
 iK
 Fj
@@ -21766,10 +22321,10 @@ ZD
 ZD
 ZD
 ZD
+KM
 ZD
 ZD
-ZD
-ZD
+KM
 ZD
 Yc
 oD
@@ -21810,8 +22365,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+dq
+dq
 TA
 TA
 TA
@@ -21957,7 +22512,7 @@ dq
 dq
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -22063,7 +22618,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -22266,11 +22821,11 @@ YS
 YS
 YS
 YS
-IF
-IF
+hF
+Lg
 YS
-IF
-IF
+ni
+Pu
 IF
 IF
 YS
@@ -22315,7 +22870,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -22507,9 +23062,9 @@ oD
 oD
 oD
 oD
-oD
-oD
-oD
+iK
+iK
+Lp
 oD
 Ce
 ZD
@@ -22519,9 +23074,9 @@ IF
 IF
 IF
 IF
-IF
+kt
 YS
-IF
+Pt
 IF
 IF
 IF
@@ -22535,7 +23090,7 @@ oD
 oD
 TA
 TA
-TA
+HR
 TA
 dq
 bN
@@ -22567,7 +23122,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -22711,7 +23266,7 @@ bN
 bN
 dq
 TA
-TA
+HR
 TA
 TA
 TA
@@ -22754,29 +23309,29 @@ bN
 dq
 dq
 TA
-oD
-oD
-oD
-oD
-oD
 oD
 oD
 oD
 oD
 Ce
+pj
+pj
+pj
+IS
+Jd
 ZD
 YS
 IF
-FN
+VE
 QG
 IF
 IF
-IF
+kt
 YS
+dj
 IF
 IF
-IF
-IF
+Ka
 YS
 ZD
 Mp
@@ -22819,7 +23374,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -23000,7 +23555,7 @@ bN
 bN
 bN
 bN
-bN
+NE
 bN
 bN
 dq
@@ -23010,25 +23565,25 @@ oD
 oD
 oD
 oD
-oD
-oD
-oD
-oD
-oD
 Ce
+pj
+pj
+pj
+ZD
+ZD
 ZD
 YS
 IF
-FN
+Br
 ni
 IF
 IF
-IF
+kt
 gJ
 IF
 IF
 IF
-IF
+WJ
 YS
 ZD
 ZD
@@ -23071,7 +23626,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -23262,23 +23817,23 @@ oD
 oD
 oD
 oD
-oD
-oD
-oD
-oD
-oD
-Ce
+gX
+pj
+pj
+pj
+xT
+DF
 ZD
 YS
 IF
 FN
-FN
-IF
-IF
-IF
+aj
+tE
+ws
+uO
 YS
 IF
-IF
+Nd
 YS
 YS
 YS
@@ -23323,7 +23878,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -23446,7 +24001,7 @@ TA
 pj
 pj
 pj
-TA
+FI
 fj
 Bn
 dq
@@ -23515,9 +24070,9 @@ oD
 oD
 oD
 oD
-oD
-oD
-oD
+kF
+NK
+kF
 oD
 Ce
 ZD
@@ -23525,15 +24080,15 @@ YS
 IF
 IF
 IF
+kt
 IF
-IF
-IF
+ET
 YS
 IF
-IF
+AJ
 YS
-IF
-FN
+ZH
+dj
 YS
 Te
 Yc
@@ -23575,7 +24130,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -23777,7 +24332,7 @@ YS
 YS
 YS
 YS
-gJ
+Yx
 YS
 YS
 YS
@@ -23827,7 +24382,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -24027,17 +24582,17 @@ Ce
 ZD
 ZD
 YS
+dj
+tj
+kt
 IF
-IF
+YS
+Xm
 IF
 IF
 YS
 IF
-IF
-IF
-YS
-IF
-IF
+iL
 YS
 ZD
 Yc
@@ -24079,7 +24634,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -24279,9 +24834,9 @@ oD
 DF
 ZD
 YS
-FN
+HG
 IF
-IF
+kt
 IF
 YS
 YS
@@ -24289,7 +24844,7 @@ gJ
 YS
 YS
 IF
-IF
+ns
 YS
 ZD
 Yc
@@ -24331,7 +24886,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -24490,7 +25045,7 @@ bN
 dq
 dq
 TA
-TA
+Cc
 TA
 EZ
 EZ
@@ -24522,7 +25077,7 @@ oD
 oD
 oD
 oD
-oD
+Yo
 oD
 oD
 oD
@@ -24532,16 +25087,16 @@ oD
 oD
 oD
 Aj
-IF
+XW
 QN
 IF
 YS
+Xm
 IF
 IF
 IF
-FN
 IF
-IF
+ZZ
 YS
 ZD
 Yc
@@ -24583,7 +25138,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -24743,7 +25298,7 @@ dq
 TA
 TA
 TA
-TA
+lF
 TA
 EZ
 EZ
@@ -24783,17 +25338,17 @@ oD
 oD
 oD
 oD
+dL
 IF
-IF
-IF
+kt
 IF
 gJ
 IF
 IF
+qm
+se
 IF
-IF
-IF
-IF
+Jr
 YS
 ZD
 Yc
@@ -24835,7 +25390,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -25030,22 +25585,22 @@ oD
 oD
 oD
 ZD
-ZD
-ZD
-ZD
-ZD
-oD
-IF
-Aj
-IF
-IF
+UO
+jr
+jr
+jr
+jr
+ws
+qR
+Fz
+dj
 YS
+dj
 IF
 IF
 IF
 IF
-IF
-IF
+Xm
 YS
 ZD
 Yc
@@ -25086,8 +25641,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+dq
+dq
 TA
 TA
 TA
@@ -25287,16 +25842,16 @@ ZD
 Ce
 ZD
 YS
-FN
-IF
+bd
+Pu
 IF
 IF
 YS
-FN
-IF
-IF
-IF
-FN
+bd
+YT
+VE
+Ty
+ZH
 zS
 YS
 ZD
@@ -25338,7 +25893,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -25494,7 +26049,7 @@ bN
 bN
 dq
 TA
-TA
+HR
 TA
 TA
 TA
@@ -25533,9 +26088,9 @@ oD
 oD
 oD
 oD
+oD
 ZD
-ZD
-ZD
+oD
 Ce
 ZD
 YS
@@ -25590,7 +26145,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -25750,7 +26305,7 @@ TA
 TA
 TA
 TA
-TA
+IE
 TA
 TA
 dq
@@ -25792,10 +26347,10 @@ Ce
 ZD
 ZD
 ZD
+KM
 ZD
 ZD
-ZD
-ZD
+KM
 ZD
 ZD
 ZD
@@ -25842,7 +26397,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -26001,75 +26556,75 @@ TA
 TA
 TA
 TA
-TA
+IE
 TA
 TA
 dq
-dq
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-dq
-dq
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-TA
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-kF
-kF
-kF
-DF
-ZD
-ZD
-zR
-kF
-kF
-kF
-kF
-kF
-kF
-kF
-kF
-oD
-oD
-oD
-oD
-oD
-TA
-TA
-TA
-TA
-TA
 dq
 bN
 bN
 bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+dq
+dq
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+TA
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+kF
+kF
+kF
+Bf
+KM
+KM
+EI
+xT
+kF
+kF
+kF
+kF
+kF
+kF
+kF
+oD
+oD
+oD
+oD
+oD
+TA
+TA
+TA
+TA
+TA
+dq
+bN
+bN
+bN
 dq
 TA
 TA
@@ -26094,7 +26649,7 @@ TA
 TA
 TA
 TA
-TA
+dq
 TA
 TA
 TA
@@ -26252,35 +26807,35 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
-dq
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-bN
-dq
-dq
-TA
-TA
-TA
-TA
-TA
-TA
+IE
+IE
 TA
 TA
 dq
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+bN
+dq
+dq
+TA
+TA
+TA
+TA
+TA
+HR
+TA
+TA
+dq
 oD
 oD
 oD
@@ -26296,10 +26851,10 @@ oD
 oD
 oD
 oD
-Ce
+DF
 ZD
 ZD
-Yc
+zR
 oD
 oD
 oD
@@ -26345,8 +26900,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+dq
+dq
 TA
 TA
 TA
@@ -26504,9 +27059,9 @@ TA
 TA
 TA
 TA
+IE
+IE
 TA
-TA
-bN
 dq
 dq
 bN
@@ -26755,8 +27310,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+IE
+IE
 TA
 TA
 dq
@@ -26995,6 +27550,8 @@ TA
 TA
 TA
 TA
+IE
+IE
 TA
 TA
 TA
@@ -27005,9 +27562,7 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
+IE
 TA
 TA
 dq
@@ -27043,7 +27598,7 @@ oD
 oD
 oD
 oD
-TA
+HR
 TA
 oD
 oD
@@ -27053,7 +27608,7 @@ oD
 oD
 oD
 Ce
-ZD
+oD
 ZD
 Yc
 oD
@@ -27248,8 +27803,8 @@ TA
 TA
 TA
 TA
-TA
-TA
+IE
+sF
 TA
 TA
 TA
@@ -27503,7 +28058,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -28062,7 +28617,7 @@ TA
 oD
 Ce
 ZD
-ZD
+oD
 Yc
 oD
 oD
@@ -28076,7 +28631,7 @@ oD
 oD
 oD
 TA
-TA
+HR
 TA
 TA
 TA
@@ -28320,7 +28875,7 @@ oD
 oD
 oD
 oD
-TA
+HR
 TA
 np
 TA
@@ -28496,15 +29051,15 @@ dq
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA
 TA
 hm
 hm
-TA
-TA
+IE
+IE
 TA
 hm
 hm
@@ -28560,7 +29115,7 @@ ZD
 ZD
 ZD
 ZD
-ZD
+oD
 ZD
 pj
 pj
@@ -29528,7 +30083,7 @@ TA
 if
 TA
 TA
-TA
+jo
 KX
 dq
 bN
@@ -29559,7 +30114,7 @@ dq
 dq
 TA
 TA
-TA
+HR
 TA
 TA
 oD
@@ -31027,9 +31582,9 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
+IE
+IE
+IE
 TA
 TA
 TA
@@ -31280,11 +31835,11 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
-TA
+IE
+IE
+IE
+IE
+IE
 TA
 TA
 TA
@@ -31518,6 +32073,7 @@ dq
 dq
 TA
 TA
+HR
 TA
 TA
 TA
@@ -31534,10 +32090,9 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
+IE
+IE
+IE
 TA
 TA
 TA
@@ -31786,11 +32341,11 @@ TA
 TA
 TA
 TA
+HR
 TA
-TA
-TA
-TA
-TA
+IE
+IE
+IE
 TA
 TA
 TA
@@ -32051,7 +32606,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 dq
 dq
@@ -32060,7 +32615,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA
@@ -32306,7 +32861,7 @@ TA
 TA
 TA
 TA
-TA
+IE
 TA
 TA
 TA
@@ -32523,9 +33078,9 @@ dq
 TA
 TA
 TA
+wG
+HR
 TA
-TA
-XP
 TA
 TA
 TA
@@ -32556,10 +33111,10 @@ TA
 TA
 TA
 TA
-TA
-TA
-TA
-TA
+IE
+IE
+IE
+IE
 TA
 TA
 TA
@@ -32773,13 +33328,13 @@ dq
 TA
 TA
 TA
+xg
 TA
 TA
 TA
 TA
 TA
-TA
-TA
+xg
 TA
 TA
 TA
@@ -32809,10 +33364,10 @@ TA
 TA
 TA
 TA
+IE
 TA
-TA
-TA
-TA
+IE
+IE
 TA
 TA
 TA
@@ -33033,7 +33588,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 dq
 dq
@@ -33063,6 +33618,7 @@ TA
 TA
 TA
 TA
+HR
 TA
 TA
 TA
@@ -33080,8 +33636,7 @@ TA
 TA
 TA
 TA
-TA
-TA
+HR
 TA
 TA
 TA
@@ -33279,7 +33834,7 @@ TA
 TA
 TA
 TA
-TA
+wG
 TA
 TA
 TA
@@ -33326,7 +33881,7 @@ TA
 TA
 TA
 TA
-TA
+HR
 TA
 TA
 TA

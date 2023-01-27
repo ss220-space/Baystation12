@@ -25,7 +25,7 @@
 	id = "awaysite_yach"
 	description = "Tiny movable ship with spiders."
 	suffixes = list("yacht/yacht.dmm")
-	spawn_cost = 10
+	spawn_cost = 4000
 	area_usage_test_exempted_root_areas = list(/area/yacht)
 
 /obj/effect/shuttle_landmark/nav_yacht/nav1
