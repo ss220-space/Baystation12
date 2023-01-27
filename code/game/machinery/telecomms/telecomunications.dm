@@ -76,7 +76,6 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 			copy.transmission_method = 2
 			copy.frequency = signal.frequency
 			copy.data = signal.data.Copy()
-			copy.safe = signal.safe // TMP: If mob has no ckey - don't allow to modify its telecomms message, else - sanitize it
 
 			// Keep the "original" signal constant
 			if(!signal.data["original"])
