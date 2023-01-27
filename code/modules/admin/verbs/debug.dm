@@ -249,6 +249,8 @@
 	log_and_message_admins("assumed direct control of [M].")
 	var/mob/adminmob = src.mob
 	M.ckey = src.ckey
+	M.teleop = null
+	adminmob.teleop = null
 	if(isghost(adminmob))
 		qdel(adminmob)
 	SSstatistics.add_field_details("admin_verb","ADC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

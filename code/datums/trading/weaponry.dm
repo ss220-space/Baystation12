@@ -123,9 +123,9 @@
 								/obj/item/ammo_magazine/pistol/double                     = TRADER_THIS_TYPE,
 								/obj/item/gun/projectile/automatic/iccg_rifle        	  = TRADER_THIS_TYPE,
 								/obj/item/ammo_magazine/rifle 	             			  = TRADER_THIS_TYPE,
-								/obj/item/gun/projectile/automatic/aks74u                 = TRADER_THIS_TYPE,
+								/obj/item/gun/projectile/automatic/mr735                 = TRADER_THIS_TYPE,
 								/obj/item/gun/projectile/automatic/akrifle                = TRADER_THIS_TYPE,
-								/obj/item/gun/projectile/automatic/aksu 				  = TRADER_THIS_TYPE,
+								/obj/item/gun/projectile/automatic/mbr 				  = TRADER_THIS_TYPE,
 								/obj/item/ammo_magazine/rifle/ak						  = TRADER_THIS_TYPE,
 								/obj/item/gun/projectile/rocket/oneuse/rpg18 	    	  = TRADER_THIS_TYPE,
 								/obj/item/clothing/accessory/storage/holster                    = TRADER_ALL)

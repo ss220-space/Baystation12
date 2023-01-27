@@ -20698,6 +20698,9 @@
 /obj/structure/closet/walllocker/shipping_wall/filled{
 	pixel_y = 30
 	},
+/obj/structure/sign/poster/nyc/unusual_gas{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/development)
 "aIq" = (

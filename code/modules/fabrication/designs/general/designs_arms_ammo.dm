@@ -29,6 +29,10 @@
 	name = "ammunition (SMG rubber) top mounted"
 	path = /obj/item/ammo_magazine/smg_top/rubber
 
+/datum/fabricator_recipe/arms_ammo/hidden/magazine_merc_smg_rubber
+	name = "ammunition (SMG rubber)"
+	path = /obj/item/ammo_magazine/smg/rubber
+
 /datum/fabricator_recipe/arms_ammo/hidden/flamethrower
 	path = /obj/item/flamethrower/full
 

@@ -19,11 +19,12 @@
 /obj/effect/overmap/visitable/ship/verne
 	name = "SRV Verne"
 	scanner_name = "SRV Verne"
-	scanner_desc = @{"[i]Registration[/i]: SRV Verne
-[i]Class[/i]: Research ship
-[i]Transponder[/i]: Transmitting (CIV)
-[b]Notice[/b]: Sensor array detects a large vessel, identifying itself as 'SRV Verne"}
+	scanner_desc = @{"<center><img src = sollogo.png></center><br> <i>Registration</i>: Sol Research Vessel Verne<br>
+		<i>Transponder</i>: Transmitting (SCI), SCGRV<br>
+		<b>Notice</b>: Sensor array detects a medium-sized research vessel. It is owned by Ceti Institute of Technology and registered as Sol Central Government ship."}
+	contact_class = /decl/ship_contact_class/srv
 	vessel_mass = 10000
+	known_ships = list(/obj/effect/overmap/visitable/ship/landable/verne)
 	max_speed = 1/(3 SECONDS)
 	burn_delay = 2 SECONDS
 	fore_dir = NORTH
@@ -35,6 +36,11 @@
 		"nav_verne_2",
 		"nav_verne_3",
 	)
+
+/decl/ship_contact_class/srv
+	class_short = "SRV"
+	class_long = "Sol Research Vessel"
+	max_ship_mass = 12000
 
 /datum/map_template/ruin/away_site/verne
 	name = "Active University Ship"
@@ -275,14 +281,7 @@
 		If you feel any nearby sites are of value, you have my permission to divert to them.<BR>\
 		Given our tenuous staffing, it comes with my highest recommendations that you are aware of any other active vessels in your system if they are amenable to working with you or to assist you if required. <BR>\
 		I firmly request you do not touch the Supermatter Testing facilities, as I have scheduled later classes to awake to perform their studies using the stock we have remaining.<BR>\
-		Our supplies remain at acceptable levels at this time, but I will permit barter or trading if required.\
+		Our supplies remain at acceptable levels at this time, but I will permit barter or trading if required. \
 		Do not sell the resources your fellow students will require.<BR>\
 		I await your results.<BR>\
 		Dr. Andre Richardson"
-
-/obj/item/paper/verne/supermatter
-	name = "handwritten note"
-	info = "Хей, я конечно понимаю что вам может быть любопытно, даже <i>ОЧЕНЬ</i> любопытно это все, но пожалуйста, оставьте наши дорогие осколки в покое, если вы не имеете представления как тут все должно работать. Нам не нужны случайные взрывы.<BR>\
-		<h3>И я напомню, если кто-то забыл, что суперматерия не питает наше судно! Найдите ядерный реактор, если вам нужен свет!</h3><BR>\
-		С уважением,<BR>\
-		<i>Реакторная команда Евфрат</i>"

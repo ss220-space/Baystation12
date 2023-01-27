@@ -92,6 +92,12 @@
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/table/standard,
+/obj/item/paper_bin{
+	pixel_x = 1;
+	pixel_y = 9
+	},
+/obj/item/folder,
+/obj/item/pen,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/verne/xenosci/workshop)
 "ap" = (
@@ -211,7 +217,11 @@
 "aV" = (
 /obj/structure/table/steel,
 /obj/structure/window/reinforced,
-/obj/item/device/bot_kit,
+/obj/item/stock_parts/circuitboard/helm,
+/obj/item/stock_parts/circuitboard/sensors,
+/obj/item/stock_parts/circuitboard/shuttle_console/explore,
+/obj/item/stock_parts/circuitboard/engine,
+/obj/item/clothing/glasses/welding,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "aX" = (
@@ -1255,18 +1265,12 @@
 /area/verne/hangar)
 "eU" = (
 /obj/structure/table/standard,
-/obj/item/paper_bin{
-	pixel_x = 1;
-	pixel_y = 9
-	},
-/obj/item/folder,
-/obj/item/pen,
-/obj/item/storage/toolbox/mechanical,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/window/reinforced,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/cell_charger,
 /obj/item/reagent_containers/misc/bucket,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
@@ -1403,6 +1407,7 @@
 	pixel_y = 22
 	},
 /obj/machinery/r_n_d/destructive_analyzer,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/verne/engineering/workshop)
 "gh" = (
@@ -1828,16 +1833,6 @@
 	initial_gas = null
 	},
 /area/verne/engineering/smresearch/control)
-"jt" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/effect/floor_decal/techfloor,
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/verne/engineering/workshop)
 "jB" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/conveyor_switch{
@@ -2133,6 +2128,7 @@
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/toolbox/mechanical,
+/obj/random/technology_scanner,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "mq" = (
@@ -2993,12 +2989,13 @@
 "sU" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/evidence,
-/obj/item/crowbar,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/alarm/verne{
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/item/melee/baton/loaded,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "tf" = (
@@ -3520,6 +3517,7 @@
 	dir = 1
 	},
 /obj/machinery/r_n_d/circuit_imprinter,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "wQ" = (
@@ -3736,9 +3734,8 @@
 	dir = 8;
 	pixel_x = 20
 	},
-/obj/machinery/computer/rdconsole/core{
-	req_access = list();
-	dir = 8
+/obj/structure/bed/chair{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
@@ -3766,12 +3763,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
 "yM" = (
-/obj/structure/table/steel,
-/obj/item/stock_parts/circuitboard/engine,
-/obj/item/stock_parts/circuitboard/shuttle_console/explore,
-/obj/item/stock_parts/circuitboard/sensors,
-/obj/item/stock_parts/circuitboard/helm,
-/obj/item/clothing/glasses/welding,
+/obj/machinery/computer/rdconsole/core{
+	req_access = list()
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "yO" = (
@@ -3999,11 +3994,6 @@
 /turf/simulated/floor/plating,
 /area/verne/catfish/engineering)
 "Ay" = (
-/obj/structure/table/standard,
-/obj/machinery/cell_charger,
-/obj/item/melee/baton/loaded,
-/obj/item/screwdriver,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -4443,9 +4433,9 @@
 /turf/simulated/floor/tiled/white,
 /area/verne/catfish)
 "DP" = (
-/obj/structure/table/steel,
-/obj/random/technology_scanner,
 /obj/machinery/light,
+/obj/structure/table/steel,
+/obj/item/paper/verne/science,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "DT" = (
@@ -4851,6 +4841,7 @@
 /area/verne/engineering/storage)
 "HI" = (
 /obj/machinery/r_n_d/protolathe,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "HQ" = (
@@ -6749,6 +6740,7 @@
 /obj/structure/table/steel,
 /obj/random/advdevice,
 /obj/structure/window/reinforced,
+/obj/item/device/bot_kit,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/engineering/workshop)
 "Yu" = (
@@ -15352,7 +15344,7 @@ wM
 ng
 Yc
 HI
-jt
+jc
 DP
 Sd
 KY

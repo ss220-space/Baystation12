@@ -159,12 +159,12 @@
 			return TRUE
 		user.visible_message("<span class='danger'><i>\The [user] seizes the head of \the [target] in both hands...</i></span>")
 		to_chat(user, "<span class='warning'>You plunge your mentality into that of \the [target]...</span>")
-		to_chat(target, "<span class='danger'>Your mind is invaded by the presence of \the [user]! They are trying to make you a slave!</span>")
+		to_chat(target, "<span class='danger'><font size='4'>Your mind is invaded by the presence of \the [user]! They are trying to make you a slave!</font></span>")
 		if(!do_after(user, target.stat == CONSCIOUS ? 80 : 40, target))
 			user.psi.backblast(rand(10,25))
 			return TRUE
-		to_chat(user, "<span class='danger'>You sear through \the [target]'s neurons, reshaping as you see fit and leaving them subservient to your will!</span>")
-		to_chat(target, "<span class='danger'>Your defenses have eroded away and \the [user] has made you their mindslave.</span>")
+		to_chat(user, "<span class='danger'><font size='4'>You sear through \the [target]'s neurons, reshaping as you see fit and leaving them subservient to your will!</font></span>")
+		to_chat(target, "<span class='danger'><font size='4'>Your defenses have eroded away and \the [user] has made you their mindslave.</font></span>")
 		GLOB.thralls.add_antagonist(target.mind, new_controller = user)
 		return TRUE
 
