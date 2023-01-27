@@ -112,8 +112,13 @@
 		if(ispath(item, /obj/item/reagent_containers/food/drinks/glass2) && !ispath(item, /obj/item/reagent_containers/food/drinks/glass2/fitnessflask))
 			var/obj/item/reagent_containers/food/drinks/glass2/G = item
 			icon_state = initial(G.base_icon)
+		if (ispath(item, /obj/item/reagent_containers/syringe))
+			var/obj/item/reagent_containers/syringe/S = item
+			icon_state = initial(S.item_state)
 		if(ispath(item, /obj/item/reagent_containers/hypospray/autoinjector))
 			icon_state += "0"
+		if(ispath(item, /obj/item/soap))
+			icon_state = "soap-oval"
 
 		var/icon/I
 

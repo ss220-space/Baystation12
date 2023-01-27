@@ -248,8 +248,6 @@
 					/obj/item/clothing/head/that = 2,
 					/obj/item/clothing/under/assistantformal = 2,
 					/obj/item/clothing/under/blackjumpskirt = 2,
-					/obj/item/clothing/under/civilian = 2,
-					/obj/item/clothing/under/civilian/black = 2,
 					/obj/item/clothing/under/gentlesuit = 2,
 					/obj/item/clothing/under/schoolgirl = 2,
 					/obj/item/clothing/under/scratch = 2,
@@ -263,25 +261,3 @@
 					/obj/item/clothing/under/stripper/mankini = 1)
 
 	contraband = list()
-
-/obj/machinery/vending/engivend
-	products = list(
-		/obj/item/device/flashlight = 3,
-		/obj/item/device/multitool = 3,
-		/obj/item/device/multitool/multimeter = 3,
-		/obj/item/device/geiger = 3,
-		/obj/item/device/scanner/gas = 3,
-		/obj/item/device/t_scanner = 3,
-		/obj/item/device/cable_painter = 2,
-		/obj/item/rpd = 2,
-		/obj/item/clamp = 4,
-		/obj/item/tape_roll = 6,
-		/obj/item/device/paint_sprayer = 2,
-		/obj/item/grenade/chem_grenade/metalfoam = 5
-	)
-	contraband = list(/obj/item/cell/potato = 5)
-	premium = list(
-		/obj/item/combitool = 1,
-		/obj/item/wrench/power = 1,
-		/obj/item/wirecutters/power = 1
-	)
