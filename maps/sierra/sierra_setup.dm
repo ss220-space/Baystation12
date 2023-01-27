@@ -14,12 +14,12 @@
 /datum/map/sierra/send_welcome()
 	var/welcome_text = "<center><img src = sierralogo.png /><br /><font size = 3><b>NSV Sierra</b> Показания Сенсоров:</font><hr />"
 	welcome_text += "Отчет сгенерирован [stationdate2text()] в [stationtime2text()]</center><br /><br />"
-	welcome_text += "Текущая система: <b>[system_name()]</b><br />"
-	welcome_text += "Следующая система для прыжка: <b>[generate_system_name()]</b><br />"
-	welcome_text += "Дней до Солнечной Системы: <b>[rand(15,45)]</b><br />"
+	welcome_text += "Текущая система: <b>[system_name()] (Locutus)</b><br />"
+	welcome_text += "Следующая система для прыжка: <b>N/A</b><br />"
+	welcome_text += "Дней до Солнечной Системы: <b>180</b><br />"
 	welcome_text += "Дней с последнего визита в порт: <b>[rand(60,180)]</b><br />"
 	welcome_text += "Результаты сканирования показали следующие потенциальные объекты для исследования:<br />"
-
+	welcome_text += "<br><b>Обнаружен зашифрованный сигнал с сигнатурой NanoTrasen из центра сектора</b><br>"
 	var/list/space_things = list()
 	var/obj/effect/overmap/sierra = map_sectors["1"]
 	for(var/zlevel in map_sectors)
@@ -59,4 +59,4 @@
 	welcome_text += "<hr>"
 
 	post_comm_message("NSV Sierra Sensor Readings", welcome_text)
-	minor_announcement.Announce(message = "Сканирование сектора завершено. Информация передана в базу данных консолей связи.")
+	minor_announcement.Announce(message = "Сканирование сектора завершено. Информация передана в базу данных консолей связи. Командному отделу обратить внимание на поступающий сигнал.")
