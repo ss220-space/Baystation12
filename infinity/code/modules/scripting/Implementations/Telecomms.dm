@@ -185,7 +185,7 @@
 		// Backwards-apply variables onto signal data
 		/* sanitize EVERYTHING. fucking players can't be trusted with SHIT */
 
-		signal.data["message"] 	= sanitize_html(interpreter.GetVar("$content"), MAX_MESSAGE_LEN + 512) // 512 extra symbols
+		signal.data["message"] 	= sanitize_html(interpreter.GetVar("$content")) // 512 extra symbols
 		signal.frequency 		= interpreter.GetVar("$freq")
 
 		var/setname = ""
@@ -244,7 +244,7 @@ datum/signal
 		if(!job)
 			job = "?"
 
-		message = sanitize(message, 500)
+		message = sanitize_html(message)
 
 		newsign.data["mob"] = null
 		newsign.data["mobtype"] = /mob/living/carbon/human
