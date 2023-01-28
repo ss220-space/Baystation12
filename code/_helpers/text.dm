@@ -243,10 +243,10 @@ var/list/html_allowed_attrs = list(
 // Don't use it if you don't know what you're doing
 /proc/sanitize_html(var/t)
 	var/static/regex/RegexReplaceHTML = new(@"<(/?)([^> ]*)([^>]*)>", "ig")
-	t = RegexReplaceHTML.Replace(t, /proc/html_replace)
+	t =  regex_replace_char(RegexReplaceHTML, t, /proc/html_replace)
 
 	for (var/w in html_attr_blacklist)
-		t = replacetext(t, w, "a")
+		t = replacetext_char(t, w, "a")
 
 	return t
 
@@ -255,7 +255,7 @@ var/list/html_allowed_attrs = list(
 		tag = "span"
 
 	var/static/regex/RegexAttrs = new("(\\l+)( *= *\[\"\\'])", "ig")
-	attrs = RegexAttrs.Replace(attrs, /proc/attrs_replace)
+	attrs = regex_replace_char(RegexAttrs, attrs, /proc/attrs_replace)
 
 	return "<[slash][tag][attrs]>"
 
