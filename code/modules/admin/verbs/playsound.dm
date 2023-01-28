@@ -9,9 +9,8 @@ var/list/sounds_cache = list()
 		alert("Admin midis currently disabled, ask devs for help.","Sorry, your music isn't allowed now.","")
 		return
 	//[/INF]
-	var/vol = input("Select a volume for the sound", "Volume") as null|anything in list(100, 75, 50, 25, 5)
 
-	var/sound/uploaded_sound = sound(S, repeat = 0, wait = 1, channel = GLOB.admin_sound_channel, volume = vol)
+	var/sound/uploaded_sound = sound(S, repeat = 0, wait = 1, channel = GLOB.admin_sound_channel, volume = 100)
 	uploaded_sound.priority = 250
 
 	sounds_cache += S
@@ -37,7 +36,9 @@ var/list/sounds_cache = list()
 		if (choice == "Play")
 			break
 
-	if(alert("Song: [S].\nVolume: [vol]%.", "Confirmation request" ,"Play", "Cancel") == "Cancel")
+	var/zlevel = input("Where will we play?") in list("My Z-Level", "Station", "World")
+
+	if(alert("Song: [S].\nVolume: [uploaded_sound.volume]%.\nZ-levels: [zlevel]", "Confirmation request" ,"Play", "Cancel") == "Cancel")
 		return
 
 	// [inf]
@@ -48,9 +49,22 @@ var/list/sounds_cache = list()
 	// [/inf]
 
 	log_and_message_admins("played sound [S]")
+
 	for(var/mob/M in GLOB.player_list)
 		if((M.get_preference_value(/datum/client_preference/play_admin_midis) == GLOB.PREF_YES) || override)
-			sound_to(M, uploaded_sound)
+			switch(zlevel)
+				if ("World")
+					sound_to(M, uploaded_sound)
+
+				if ("Station")
+					if (M.z in GLOB.using_map.station_levels)
+						sound_to(M, uploaded_sound)
+
+				if ("My Z-Level")
+					var/user_z = get_z(usr)
+					if (!user_z) return to_chat(usr, SPAN_DANGER("Invalid Z-Level!"))
+					if (M.z == user_z)
+						sound_to(M, uploaded_sound)
 
 	SSstatistics.add_field_details("admin_verb","PGS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 

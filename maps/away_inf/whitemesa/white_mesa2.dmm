@@ -48,11 +48,8 @@
 	requires_power = 0
 	})
 "aL" = (
-/obj/machinery/button/blast_door{
-	dir = 1;
-	id_tag = "lam3";
-	pixel_y = -29
-	},
+/obj/structure/table/steel_reinforced,
+/obj/item/paper_bin,
 /turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
@@ -65,15 +62,6 @@
 /turf/simulated/floor/shuttle/black,
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
-	requires_power = 0
-	})
-"bu" = (
-/obj/machinery/computer/air_control/supermatter_core{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_cargo,
-/area/chapel{
-	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "bz" = (
@@ -401,10 +389,8 @@
 	requires_power = 0
 	})
 "lc" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/obj/structure/bed/chair/office/comfy/red,
+/turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -426,16 +412,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
-	requires_power = 0
-	})
-"mv" = (
-/obj/structure/railing/mapped{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/meatstation/lab{
-	ambience = null;
-	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
 "my" = (
@@ -479,7 +455,10 @@
 	requires_power = 0
 	})
 "ol" = (
-/obj/structure/decor/antimassspectrometer,
+/obj/structure/decor/antimassspectrometer{
+	pixel_y = -6;
+	layer = 2.1
+	},
 /turf/simulated/floor/reinforced,
 /area/meatstation/lab{
 	ambience = null;
@@ -487,12 +466,8 @@
 	requires_power = 0
 	})
 "ou" = (
-/obj/machinery/button/blast_door{
-	dir = 1;
-	id_tag = "lam";
-	pixel_y = -29
-	},
-/turf/simulated/floor/tiled/steel_grid,
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -661,6 +636,13 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
+"tL" = (
+/obj/machinery/pipedispenser/disposal,
+/turf/simulated/floor/shuttle/black,
+/area/casino/casino_bow{
+	name = "White Mesa - Sector B Downside";
+	requires_power = 0
+	})
 "tS" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -712,15 +694,6 @@
 	name = "White Mesa - Sector B Downside";
 	requires_power = 0
 	})
-"vY" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 5
-	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
-/area/chapel{
-	name = "Sector Z Bluespace Research";
-	requires_power = 0
-	})
 "wf" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped,
@@ -761,15 +734,6 @@
 	},
 /area/casino/casino_bow{
 	name = "White Mesa - Sector B Downside";
-	requires_power = 0
-	})
-"xe" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 4
-	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
-/area/chapel{
-	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
 "xl" = (
@@ -890,7 +854,9 @@
 	requires_power = 0
 	})
 "yT" = (
-/obj/structure/catwalk,
+/obj/structure/catwalk{
+	density = 1
+	},
 /obj/structure/virology/console_broken,
 /turf/simulated/floor,
 /area/casino/casino_bow{
@@ -905,20 +871,9 @@
 	requires_power = 0
 	})
 "zf" = (
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
-	requires_power = 0
-	})
-"Al" = (
-/obj/structure/railing/mapped,
-/obj/structure/railing/mapped{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/meatstation/lab{
-	ambience = null;
-	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
 "Ax" = (
@@ -970,12 +925,7 @@
 	name = "Down levels of White Mesa"
 	})
 "Ba" = (
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/obj/structure/railing/mapped{
-	dir = 8
-	},
+/obj/structure/stairs/west,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/meatstation/lab{
 	ambience = null;
@@ -996,17 +946,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
-	requires_power = 0
-	})
-"BP" = (
-/obj/structure/railing/mapped,
-/obj/structure/railing/mapped{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/meatstation/lab{
-	ambience = null;
-	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
 "Cb" = (
@@ -1147,7 +1086,7 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 1
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -1188,9 +1127,13 @@
 "FG" = (
 /obj/machinery/bluespacedrive{
 	icon = 'maps/away_inf/whitemesa/bluespacedrive.dmi';
-	icon_state = "bsd_core_broken";
+	icon_state = "bsd_on";
 	pixel_y = -30;
 	pixel_x = -32
+	},
+/obj/structure/decor/bluespacedriveeffect{
+	pixel_x = -32;
+	pixel_y = -30
 	},
 /turf/simulated/floor/pool,
 /area/chapel{
@@ -1206,19 +1149,7 @@
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
 	})
-"Gp" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 10
-	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
-/area/chapel{
-	name = "Sector Z Bluespace Research";
-	requires_power = 0
-	})
 "Gv" = (
-/obj/structure/railing/mapped{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -1287,7 +1218,7 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 4
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -1302,7 +1233,7 @@
 "HS" = (
 /obj/machinery/button/blast_door{
 	dir = 1;
-	id_tag = "lam2";
+	id_tag = "Open";
 	pixel_y = -29
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1333,19 +1264,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
-/area/meatstation/lab{
-	ambience = null;
-	name = "White Mesa Lab level 1";
-	requires_power = 0
-	})
-"IM" = (
-/obj/structure/railing/mapped{
-	dir = 4
-	},
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
 /area/meatstation/lab{
 	ambience = null;
 	name = "White Mesa Lab level 1";
@@ -1580,7 +1498,8 @@
 /obj/effect/floor_decal/borderfloor/full,
 /obj/structure/bed/sofa/l/black,
 /obj/item/device/radio/beacon/anchored{
-	level = 1
+	level = 1;
+	layer = 1
 	},
 /turf/simulated/floor,
 /area/chapel{
@@ -1593,13 +1512,6 @@
 	name = "Containment Chamber"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/chapel{
-	name = "Sector Z Bluespace Research";
-	requires_power = 0
-	})
-"PG" = (
-/obj/effect/floor_decal/techfloor/orange,
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -1677,20 +1589,10 @@
 	requires_power = 0
 	})
 "QH" = (
-/obj/machinery/computer/fusion{
-	dir = 1
-	},
+/obj/structure/filingcabinet/filingcabinet,
 /turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
-	requires_power = 0
-	})
-"QR" = (
-/obj/structure/railing/mapped,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/meatstation/lab{
-	ambience = null;
-	name = "White Mesa Lab level 1";
 	requires_power = 0
 	})
 "Ri" = (
@@ -1784,10 +1686,11 @@
 	name = "Monorail Shaft"
 	})
 "Th" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 6
+/obj/structure/battle_data_server{
+	desc = "Impact resistant server rack.";
+	name = "data server"
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -1804,7 +1707,7 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 8
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -1840,7 +1743,14 @@
 	requires_power = 0
 	})
 "UZ" = (
-/turf/simulated/wall/prepainted,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/obj/structure/battle_data_server{
+	desc = "Impact resistant server rack.";
+	name = "data server"
+	},
+/turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -1930,10 +1840,11 @@
 	requires_power = 0
 	})
 "WK" = (
-/obj/effect/floor_decal/techfloor/orange{
+/obj/machinery/light/spot{
 	dir = 1
 	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/old_cargo,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -2005,16 +1916,7 @@
 	})
 "Ya" = (
 /obj/effect/floor_decal/techfloor/orange/corner,
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
-/area/chapel{
-	name = "Sector Z Bluespace Research";
-	requires_power = 0
-	})
-"Yi" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 9
-	},
-/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/turf/simulated/floor/pool,
 /area/chapel{
 	name = "Sector Z Bluespace Research";
 	requires_power = 0
@@ -17528,7 +17430,7 @@ ef
 iV
 iV
 iV
-iV
+tL
 ef
 tF
 Xe
@@ -21796,7 +21698,7 @@ Xe
 Xe
 ef
 aG
-Nu
+Xx
 eY
 Xx
 rg
@@ -35952,7 +35854,7 @@ KW
 Mc
 Xh
 Xh
-ou
+Xh
 Mc
 Cz
 Cz
@@ -37711,7 +37613,7 @@ Mc
 Vb
 Vb
 Vb
-UZ
+Mc
 Jx
 CV
 iW
@@ -37905,12 +37807,12 @@ OI
 OI
 OI
 XZ
-XZ
-XZ
-XZ
-XZ
-XZ
-XZ
+OI
+OI
+OI
+OI
+OI
+OI
 TT
 TT
 TT
@@ -37962,7 +37864,7 @@ KW
 Mc
 Vb
 Vb
-Cs
+Vb
 Mc
 Mc
 Mc
@@ -38158,11 +38060,11 @@ XZ
 XZ
 XZ
 OI
+EO
+EO
+Ba
+Ba
 OI
-OI
-OI
-OI
-XZ
 TT
 TT
 TT
@@ -38410,11 +38312,11 @@ OI
 OI
 OI
 OI
-Ba
-mv
-BP
+EO
+EO
+EO
+EO
 OI
-XZ
 TT
 TT
 TT
@@ -38664,9 +38566,9 @@ dO
 dO
 EO
 EO
-QR
+EO
+EO
 OI
-XZ
 TT
 TT
 TT
@@ -38716,9 +38618,9 @@ KW
 KW
 KW
 Mc
-Vb
-Vb
-Cs
+Mc
+Mc
+Mc
 Mc
 Mc
 Mc
@@ -38914,11 +38816,11 @@ OI
 OI
 OI
 OI
-IM
+EO
 Gv
-Al
+EO
+Gv
 OI
-XZ
 TT
 TT
 TT
@@ -39170,7 +39072,7 @@ OI
 OI
 OI
 OI
-XZ
+OI
 TT
 TT
 TT
@@ -40984,23 +40886,23 @@ KW
 KW
 KW
 Mc
+Th
 Vb
-Vb
-Vb
+Th
 Mc
 KW
 Mc
 Mc
 Mc
-Yi
-Gp
+UV
+jw
 Rl
 Rl
 Rl
 Rl
 Rl
-Yi
-Gp
+UV
+jw
 Mc
 Mc
 Mc
@@ -41236,25 +41138,25 @@ KW
 KW
 KW
 Mc
+Th
 Vb
-Vb
-Vb
+Th
 Mc
 KW
 Mc
-Yi
-lc
+UV
+Ck
 DV
 Tp
-Gp
+jw
 Rl
 Rl
 Rl
-Yi
+UV
 DV
 Tp
-lc
-Gp
+Ck
+jw
 Mc
 KW
 KW
@@ -41494,19 +41396,19 @@ Vb
 Mc
 Mc
 Mc
-WK
+cY
 zf
 zf
 zf
 Tp
-Gp
+jw
 Rl
-Yi
+UV
 DV
 zf
 zf
 zf
-PG
+Oe
 Mc
 Mc
 KW
@@ -41745,21 +41647,21 @@ Vb
 Vb
 Mc
 Mc
-Yi
+UV
 DV
 zf
 zf
 zf
 Ya
-Th
+Vt
 Rl
-vY
+PO
 HP
 zf
 zf
 zf
 Tp
-Gp
+jw
 Mc
 KW
 KW
@@ -41992,26 +41894,26 @@ KW
 KW
 KW
 Mc
+QH
 Vb
 Vb
-aL
 Mc
 Mc
-vY
+PO
 HP
 zf
 zf
 Ya
-Th
+Vt
 Rl
 Rl
 Rl
-vY
+PO
 HP
 zf
 zf
 Ya
-Th
+Vt
 Mc
 Mc
 KW
@@ -42246,23 +42148,23 @@ KW
 Mc
 Vb
 Vb
-bu
+Vb
 Wd
 Rl
 Rl
-vY
+PO
 HP
 Ya
-Th
+Vt
 fj
 Hx
 Hx
 Hx
 oA
-vY
+PO
 HP
 Ya
-Th
+Vt
 Rl
 Rl
 Mc
@@ -42496,15 +42398,15 @@ KW
 KW
 KW
 Mc
-Ce
+UZ
 Vb
-QH
+dZ
 Wd
 Rl
 Rl
 Rl
-vY
-Th
+PO
+Vt
 Rl
 ny
 UV
@@ -42512,8 +42414,8 @@ Ck
 jw
 tS
 Rl
-vY
-Th
+PO
+Vt
 Rl
 Rl
 Rl
@@ -42749,7 +42651,7 @@ KW
 KW
 Mc
 Vb
-Vb
+lc
 dZ
 Wd
 Rl
@@ -43000,15 +42902,15 @@ KW
 KW
 KW
 Mc
-Vb
+Th
 Vb
 dZ
 Wd
 Rl
 Rl
 Rl
-Yi
-Gp
+UV
+jw
 Rl
 ny
 PO
@@ -43016,8 +42918,8 @@ FT
 Vt
 tS
 Rl
-Yi
-Gp
+UV
+jw
 Rl
 Rl
 Rl
@@ -43254,23 +43156,23 @@ KW
 Mc
 Vb
 Vb
-dZ
+Vb
 Wd
 Rl
 Rl
-Yi
+UV
 DV
 Tp
-Gp
+jw
 Ix
 IC
 IC
 IC
 Ur
-Yi
+UV
 DV
 Tp
-Gp
+jw
 Rl
 Rl
 Mc
@@ -43504,26 +43406,26 @@ KW
 KW
 KW
 Mc
-Ce
-Vb
-Vb
+WK
+aL
+ou
 Mc
 Mc
-Yi
+UV
 DV
 zf
 zf
 Tp
-Gp
+jw
 Rl
 Rl
 Rl
-Yi
+UV
 DV
 zf
 zf
 Tp
-Gp
+jw
 Mc
 Mc
 KW
@@ -43761,21 +43663,21 @@ Mc
 Mc
 Mc
 Mc
-vY
+PO
 HP
 zf
 zf
 zf
 Tp
-Gp
+jw
 Rl
-Yi
+UV
 DV
 zf
 zf
 zf
 Ya
-Th
+Vt
 Mc
 KW
 KW
@@ -44014,19 +43916,19 @@ KW
 KW
 Mc
 Mc
-WK
+cY
 zf
 zf
 zf
 Ya
-Th
+Vt
 Rl
-vY
+PO
 HP
 zf
 zf
 zf
-PG
+Oe
 Mc
 Mc
 KW
@@ -44266,19 +44168,19 @@ KW
 KW
 KW
 Mc
-vY
-xe
+PO
+FT
 HP
 Ya
-Th
+Vt
 Rl
 Rl
 Rl
-vY
+PO
 HP
 Ya
-xe
-Th
+FT
+Vt
 Mc
 KW
 KW
@@ -44520,15 +44422,15 @@ KW
 Mc
 Mc
 Mc
-vY
-Th
+PO
+Vt
 Rl
 Rl
 Rl
 Rl
 Rl
-vY
-Th
+PO
+Vt
 Mc
 Mc
 Mc

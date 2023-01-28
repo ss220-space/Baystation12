@@ -194,8 +194,8 @@
 	response_disarm = "gently pushes aside the"
 	response_harm = "hits the"
 	speed = 1
-	maxHealth = 20
-	health = 20
+	maxHealth = 90
+	health = 90
 
 	harm_intent_damage = 8
 	natural_weapon = /obj/item/natural_weapon/bite
@@ -256,8 +256,8 @@
 	response_disarm = "gently pushes aside the"
 	response_harm = "hits the"
 	speed = 1
-	maxHealth = 50
-	health = 50
+	maxHealth = 180
+	health = 180
 
 	harm_intent_damage = 8
 	natural_weapon = /obj/item/natural_weapon/bite
@@ -302,7 +302,7 @@
 		zombie_color = pick(icon_sets)
 	icon_state = "[zombie_color]"
 	icon_living = "[zombie_color]"
-	icon_dead = "[zombie_color]_dead"
+	icon_dead = "zombie_dead"
 
 /mob/living/simple_animal/hostile/bullsquid
 	name = "bullsquid"
@@ -314,8 +314,8 @@
 	turns_per_move = 3
 	speed = 0
 	faction = "mesa"
-	maxHealth = 30
-	health = 30
+	maxHealth = 140
+	health = 140
 	natural_weapon = /obj/item/natural_weapon/bite/bullsquid
 	mob_size = MOB_SMALL
 	meat_amount = 2
@@ -335,7 +335,7 @@
 	armor_penetration = 2
 
 /obj/item/projectile/squidvenom
-	damage = 10
+	damage = 15
 	damage_type = BURN
 	agony = 10
 	armor_penetration = 5
@@ -356,8 +356,8 @@
 	icon_living = "houndeye"
 	icon_dead = "houndeye_dead"
 	speed = 2
-	maxHealth = 45
-	health = 45
+	maxHealth = 120
+	health = 120
 	faction = "mesa"
 	natural_weapon = /obj/item/natural_weapon/bite/houndeye
 	meat_amount = 2
@@ -367,8 +367,24 @@
 	name = "sonic attacks"
 	attack_verb = list("shock waves")
 	hitsound = 'sound/whitemesa/sonicattack.ogg'
-	force = 20
+	force = 25
 	sharp = TRUE
+
+/mob/living/simple_animal/construct/behemoth/xenGonarch
+	name = "Gonarch"
+	real_name = "Gonarch"
+	desc = "Final phase of the Headcrab's life-cycle."
+	icon = 'maps/away_inf/whitemesa/hcmother.dmi'
+	icon_state = "gonarch"
+	icon_living = "gonarch"
+	movement_shake_radius = 3
+	movement_cooldown = 10
+	faction = "mesa"
+	movement_sound = 'sound/whitemesa/gonarchstep.ogg'
+	maxHealth = 1750
+	health = 1750
+	bleed_colour = "#331111"
+	supernatural = 0
 
 //
 
@@ -380,8 +396,8 @@
 	icon_living = "vortigaunt_slave"
 	icon_dead = "vortigaunt_dead"
 	speed = 5
-	maxHealth = 40
-	health = 40
+	maxHealth = 140
+	health = 140
 	faction = "mesa"
 	natural_weapon = /obj/item/natural_weapon/vortigaunt
 	meat_amount = 0
@@ -392,14 +408,14 @@
 	projectiletype = /obj/item/projectile/beam/vortigaunt
 
 /obj/item/natural_weapon/vortigaunt
-	force = 17
+	force = 27
 	attack_verb = list("slammed")
 
 //projectile
 
 /obj/item/projectile/beam/vortigaunt
 	name = "Green energy beam"
-	damage = 20
+	damage = 25
 	agony = 10
 	armor_penetration = 5
 
@@ -626,4 +642,37 @@
 		playsound(src, 'sound/whitemesa/healingpuddle.ogg', 3, 0, 0, 0.8)
 
 
-///////////////////////////////////////////////////////////////////////
+/////////////////CLOTHES////////////////////////////////////////////
+
+/obj/item/clothing/suit/armor/pcarrier/xen
+	name = "white mesa plate carrier"
+	desc = "A lightweight dark plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
+	icon_state = "mesaarmor"
+
+/obj/item/clothing/head/helmet/xen
+	name = "white mesa security helmet"
+	desc = "A helmet with 'SECURITY' printed on the back in yellow lettering."
+	icon_state = "mesahelmet"
+
+/////////HEALING///////////
+
+/obj/structure/mesafirstaid
+	name = "first aid kit"
+	desc = "Even when you look on it, you already feel better."
+	icon = 'maps/away_inf/whitemesa/loviaptechky.dmi'
+	icon_state = "medkit"
+	/// How much do we heal the current person?
+	var/heal_amount = 2
+
+/obj/structure/mesafirstaid/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/structure/mesafirstaid/Process()
+	for(var/mob/living/iterating_mob in loc)
+		iterating_mob.heal_overall_damage(50, 50)
+		playsound(src, 'sound/whitemesa/smallmedkit_mesa.ogg', 3, 0, 0, 0.8)
+		qdel(src)
+
+
+///////////TRAM RIDE/////////
