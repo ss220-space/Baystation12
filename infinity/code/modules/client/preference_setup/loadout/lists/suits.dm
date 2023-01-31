@@ -32,6 +32,6 @@
 	path = /obj/item/clothing/suit/storage/militarynew
 
 /datum/gear/suit/curatorjacket
-	display_name = "brown drip jacket"
+	display_name = "brown curator jacket"
 	path = /obj/item/clothing/suit/storage/curatorjacket
 
