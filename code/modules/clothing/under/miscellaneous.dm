@@ -925,8 +925,11 @@
 /obj/item/clothing/under/inf/biker
 	name = "biker"
 	desc = "For when you craving for some dead meat."
+	icon = 'infinity/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
 	icon_state = "biker"
 	item_state = "biker"
+	worn_state = "biker"
 
 /obj/item/clothing/under/inf/formalvest
 	name = "formal vest"

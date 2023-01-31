@@ -124,3 +124,84 @@
 	icon_state = "snakeskin"
 	item_state = "snakeskin"
 	body_parts_covered = UPPER_TORSO|ARMS
+
+
+/obj/item/clothing/suit/storage/bombernew
+	name = "bomber jacket"
+	desc = "Aviators not included."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "bombernew"
+	item_state = "bombernew"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/curatorjacket
+	name = "brown curator jacket"
+	desc = "A thick jacket with a rubbery, water-resistant shell."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "curatorjacket"
+	item_state = "curatorjacket"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/leathernew
+	name = "leather black jacket"
+	desc = "Pompadour not included."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "leathernew"
+	item_state = "leathernew"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/lettermanr
+	name = "red letterman jacket"
+	desc = "A letterman jacket in a sick red color. Radical."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "lettermanr"
+	item_state = "lettermanr"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/lettermans
+	name = "blood-red sport letterman jacket"
+	desc = "Oddly, this jacket seems to have a large S on the back..."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "lettermans"
+	item_state = "lettermans"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/lettermanb
+	name = "brown letterman jacket"
+	desc = "A classic brown letterman jacket. Looks pretty hot and heavy."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "lettermanb"
+	item_state = "lettermanb"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/bikernew
+	name = "biker jacket"
+	desc = "You think I'm not even worth a single dollar, but I feel like a millionare."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "bikernew"
+	item_state = "bikernew"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/militarynew
+	name = "green jacket"
+	desc = "A canvas jacket. Feels sturdy, yet comfortable."
+	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
+	icon_state = "militarynew"
+	item_state = "militarynew"
+	body_parts_covered = UPPER_TORSO|ARMS
