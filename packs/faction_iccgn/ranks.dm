@@ -80,41 +80,41 @@
 
 /obj/item/clothing/accessory/iccgn_rank/marine/officer/o4
 	icon_state = "MO4"
-	name = "ranks (O-4 captain)"
-	desc = "Insignia denoting the rank of Captain."
+	name = "ranks (O-4 captain-leutnant)"
+	desc = "Insignia denoting the rank of Captain-leutnant."
 
 /obj/item/clothing/accessory/iccgn_rank/marine/officer/o5
 	icon_state = "MO5"
-	name = "ranks (O-5 major)"
-	desc = "Insignia denoting the rank of Major."
+	name = "ranks (O-5 captain of the third rank)"
+	desc = "Insignia denoting the rank of captain of the third rank."
 
 /obj/item/clothing/accessory/iccgn_rank/marine/flag
 	icon_state = "MO6"
 	overlay_state = "armyrank_command"
-	name = "ranks (O-7 lieutenant colonel)"
-	desc = "Insignia denoting the rank of Lieutenant Colonel."
+	name = "ranks (O-6 captain of the second rank)"
+	desc = "Insignia denoting the rank of Captain of the second rank."
 	icon_state = "armyrank_command"
 
 /obj/item/clothing/accessory/iccgn_rank/marine/flag/o7
 	icon_state = "MO7"
-	name = "ranks (O-8 colonel)"
-	desc = "Insignia denoting the rank of Colonel."
+	name = "ranks (O-7 captain of the first rankonel)"
+	desc = "Insignia denoting the rank of Captain of the first rank."
 
 /obj/item/clothing/accessory/iccgn_rank/marine/flag/o8
 	icon_state = "MO8"
-	name = "ranks (O-8 major general)"
-	desc = "Insignia denoting the rank of Major General."
+	name = "ranks (O-8 rear admiral)"
+	desc = "Insignia denoting the rank of Rear Admiral."
 
 /obj/item/clothing/accessory/iccgn_rank/marine/flag/o9
 	icon_state = "MO9"
-	name = "ranks (O-9 lieutenant general)"
-	desc = "Insignia denoting the rank of Lieutenant General."
+	name = "ranks (O-9 vice admiral)"
+	desc = "Insignia denoting the rank of Vice Admiral."
 
 /obj/item/clothing/accessory/iccgn_rank/marine/flag/o10
 	icon_state = "MO10"
-	name = "ranks (O-10 colonel general)"
-	desc = "Insignia denoting the rank of Colonel General."
+	name = "ranks (O-10 admiral)"
+	desc = "Insignia denoting the rank of Admiral."
 /obj/item/clothing/accessory/iccgn_rank/marine/flag/o10
 	icon_state = "MO11"
-	name = "ranks (O-10 general of the fleet)"
-	desc = "Insignia denoting the rank of General of the fleet."
+	name = "ranks (O-10 admiral of the fleet)"
+	desc = "Insignia denoting the rank of Admiral of the Fleet."

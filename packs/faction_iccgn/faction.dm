@@ -119,49 +119,49 @@
 	sort_order = 18
 
 /datum/mil_rank/iccgn/o4
-	name = "Captain"
-	name_short = "Cpt"
+	name = "Captain-leutnant"
+	name_short = "CptLt"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o4)
 	sort_order = 19
 
 /datum/mil_rank/iccgn/o5
-	name = "Major"
-	name_short = "Mjr"
+	name = "Captain of the third rank"
+	name_short = "Cpt3"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o5)
 	sort_order = 20
 
 /datum/mil_rank/iccgn/o6
-	name = "Lieutenant Colonel"
-	name_short = "LtCol"
+	name = "Captain of the second rank"
+	name_short = "Cpt2"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag)
 	sort_order = 21
 
 /datum/mil_rank/iccgn/o7
-	name = "Colonel"
-	name_short = "Col"
+	name = "Captain of the first rank"
+	name_short = "Cpt1"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o7)
 	sort_order = 22
 
 /datum/mil_rank/iccgn/o8
-	name = "Major General"
-	name_short = "MGen"
+	name = "Rear Admiral"
+	name_short = "RAdm"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o8)
 	sort_order = 23
 
 /datum/mil_rank/iccgn/o9
-	name = "Lieutenant General"
-	name_short = "LtGen"
+	name = "Vice Admiral"
+	name_short = "VAdm"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o9)
 	sort_order = 24
 
 /datum/mil_rank/iccgn/o10
-	name = "Colonel General"
-	name_short = "ColGen"
+	name = "Admiral"
+	name_short = "Adm"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o10)
 	sort_order = 25
 
 /datum/mil_rank/iccgn/o11
-	name = "General of the fleet"
-	name_short = "GenF"
+	name = "Admiral of the Fleet"
+	name_short = "FADM"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o10)
 	sort_order = 26
