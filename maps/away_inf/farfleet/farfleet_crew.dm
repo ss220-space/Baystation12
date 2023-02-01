@@ -113,8 +113,7 @@
 	allowed_branches = list(/datum/mil_branch/iccgn)
 	allowed_ranks = list(
 		/datum/mil_rank/iccgn/e1,
-		/datum/mil_rank/iccgn/e2,
-		/datum/mil_rank/iccgn/e3
+		/datum/mil_rank/iccgn/e2
 	)
 	branch = null
 	rank = null
@@ -145,7 +144,10 @@
 					 SKILL_EVA = SKILL_BASIC)
 
 	allowed_ranks = list(
-		/datum/mil_rank/iccgn/e8
+		/datum/mil_rank/iccgn/e3,
+		/datum/mil_rank/iccgn/e4,
+		/datum/mil_rank/iccgn/e5,
+		/datum/mil_rank/iccgn/e6
 	)
 
 	access = list(access_away_iccgn, access_away_iccgn_droptroops, access_away_iccgn_sergeant, access_engine_equip)
@@ -173,9 +175,8 @@
 					 SKILL_EVA = SKILL_BASIC)
 
 	allowed_ranks = list(
-		/datum/mil_rank/iccgn/o3,
-		/datum/mil_rank/iccgn/o3_alt,
-		/datum/mil_rank/iccgn/o4
+		/datum/mil_rank/iccgn/o4,
+		/datum/mil_rank/iccgn/o5
 	)
 
 	access = list(access_away_iccgn, access_away_iccgn_droptroops, access_away_iccgn_sergeant, access_away_iccgn_captain, access_engine_equip)
@@ -203,7 +204,8 @@
 
 	allowed_ranks = list(
 		/datum/mil_rank/iccgn/o1,
-		/datum/mil_rank/iccgn/o2
+		/datum/mil_rank/iccgn/o2,
+		/datum/mil_rank/iccgn/o3
 	)
 
 	access = list(access_away_iccgn, access_engine_equip)
@@ -234,7 +236,8 @@
 					 SKILL_DEVICES = SKILL_BASIC)
 
 	allowed_ranks = list(
-		/datum/mil_rank/iccgn/e7
+		/datum/mil_rank/iccgn/e7,
+		/datum/mil_rank/iccgn/e8
 	)
 
 	access = list(access_away_iccgn, access_engine_equip)

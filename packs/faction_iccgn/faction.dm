@@ -18,15 +18,6 @@
 		/datum/mil_rank/iccgn/e6,
 		/datum/mil_rank/iccgn/e7,
 		/datum/mil_rank/iccgn/e8,
-		/datum/mil_rank/iccgn/e8_alt,
-		/datum/mil_rank/iccgn/e9,
-		/datum/mil_rank/iccgn/e9_alt,
-		/datum/mil_rank/iccgn/e9_alt2,
-		/datum/mil_rank/iccgn/w1,
-		/datum/mil_rank/iccgn/w2,
-		/datum/mil_rank/iccgn/w3,
-		/datum/mil_rank/iccgn/w4,
-		/datum/mil_rank/iccgn/w5,
 		/datum/mil_rank/iccgn/o1,
 		/datum/mil_rank/iccgn/o2,
 		/datum/mil_rank/iccgn/o3,
@@ -36,7 +27,8 @@
 		/datum/mil_rank/iccgn/o7,
 		/datum/mil_rank/iccgn/o8,
 		/datum/mil_rank/iccgn/o9,
-		/datum/mil_rank/iccgn/o10
+		/datum/mil_rank/iccgn/o10,
+		/datum/mil_rank/iccgn/o11
 	)
 
 	spawn_rank_types = list(
@@ -48,15 +40,11 @@
 		/datum/mil_rank/iccgn/e6,
 		/datum/mil_rank/iccgn/e7,
 		/datum/mil_rank/iccgn/e8,
-		/datum/mil_rank/iccgn/e8_alt,
-		/datum/mil_rank/iccgn/e9,
-		/datum/mil_rank/iccgn/e9_alt,
 		/datum/mil_rank/iccgn/o1,
 		/datum/mil_rank/iccgn/o2,
 		/datum/mil_rank/iccgn/o3,
 		/datum/mil_rank/iccgn/o4,
 		/datum/mil_rank/iccgn/o5,
-		/datum/mil_rank/iccgn/o6
 	)
 
 
@@ -71,26 +59,26 @@
 	sort_order = 1
 
 /datum/mil_rank/iccgn/e2
-	name = "Private First Class"
-	name_short = "PFC"
+	name = "Corporal"
+	name_short = "Cpl"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e2)
 	sort_order = 2
 
 /datum/mil_rank/iccgn/e3
-	name = "Lance Corporal"
-	name_short = "LCpl"
+	name = "Junior Sergeant"
+	name_short = "JrSgt"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e3)
 	sort_order = 3
 
 /datum/mil_rank/iccgn/e4
-	name = "Corporal"
-	name_short = "Cpl"
+	name = "Sergeant"
+	name_short = "Sgt"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e4)
 	sort_order = 4
 
 /datum/mil_rank/iccgn/e5
-	name = "Sergeant"
-	name_short = "Sgt"
+	name = "Senior Sergeant"
+	name_short = "SrSgt"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e5)
 	sort_order = 5
 
@@ -101,140 +89,79 @@
 	sort_order = 6
 
 /datum/mil_rank/iccgn/e7
-	name = "Gunnery Sergeant"
-	name_short = "GySgt"
+	name = "Michman"
+	name_short = "Mmn"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e7)
 	sort_order = 7
 
 /datum/mil_rank/iccgn/e8
-	name = "Master Sergeant"
-	name_short = "MSgt"
+	name = "Senior Michman"
+	name_short = "SrMmn"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e8)
 	sort_order = 8
 
-/datum/mil_rank/iccgn/e8_alt
-	name = "First Sergeant"
-	name_short = "1stSg"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e8_alt)
-	sort_order = 8
-
-/datum/mil_rank/iccgn/e9
-	name = "Master Gunnery Sergeant"
-	name_short = "MGySgt"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e9)
-	sort_order = 9
-
-/datum/mil_rank/iccgn/e9_alt
-	name = "Sergeant Major"
-	name_short = "SgtMaj"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e9_alt)
-	sort_order = 9
-
-/datum/mil_rank/iccgn/e9_alt2
-	name = "Sergeant Major of the Marine Corps"
-	name_short = "SMMC"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e9_alt2)
-	sort_order = 9
-
-/datum/mil_rank/iccgn/w1
-	name = "Warrant Officer"
-	name_short = "WO"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/warrant_officer/w1)
-	sort_order = 11
-
-/datum/mil_rank/iccgn/w2
-	name = "Second Warrant Officer"
-	name_short = "SWO"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/warrant_officer/w2)
-	sort_order = 12
-
-/datum/mil_rank/iccgn/w3
-	name = "First Warrant Officer"
-	name_short = "FWO"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/warrant_officer/w3)
-	sort_order = 13
-
-/datum/mil_rank/iccgn/w4
-	name = "Major Warrant Officer"
-	name_short = "MWO"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/warrant_officer/w4)
-	sort_order = 14
-
-/datum/mil_rank/iccgn/w5
-	name = "General Warrant Officer"
-	name_short = "GWO"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/warrant_officer/w5)
-	sort_order = 15
-
 /datum/mil_rank/iccgn/o1
-	name = "Second Lieutenant"
-	name_short = "2ndLt"
+	name = "Junior Lieutenant"
+	name_short = "jrLt"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer)
 	sort_order = 16
 
 /datum/mil_rank/iccgn/o2
-	name = "First Lieutenant"
-	name_short = "1stLt"
+	name = "Lieutenant"
+	name_short = "Lt"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o2)
 	sort_order = 17
 
 /datum/mil_rank/iccgn/o3
-	name = "Captain"
-	name_short = "CPT"
+	name = "Senior Lieutenant"
+	name_short = "SrLt"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o3)
 	sort_order = 18
 
-// Specially, to avoid two "Capt" on-board.
-/datum/mil_rank/iccgn/o3_alt
-	name = "Marine Captain"
-	name_short = "M-CPT"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o3_alt)
+/datum/mil_rank/iccgn/o4
+	name = "Captain"
+	name_short = "Cpt"
+	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o4)
 	sort_order = 19
 
-/datum/mil_rank/iccgn/o3_alt2
-	name = "Specialist Captain"
-	name_short = "SP-CPT"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o3_alt2)
+/datum/mil_rank/iccgn/o5
+	name = "Major"
+	name_short = "Mjr"
+	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o5)
 	sort_order = 20
 
-/datum/mil_rank/iccgn/o4
-	name = "Major"
-	name_short = "Maj"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o4)
-	sort_order = 21
-
-/datum/mil_rank/iccgn/o5
+/datum/mil_rank/iccgn/o6
 	name = "Lieutenant Colonel"
 	name_short = "LtCol"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o5)
-	sort_order = 22
-
-/datum/mil_rank/iccgn/o6
-	name = "Colonel"
-	name_short = "Col"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/officer/o6)
-	sort_order = 23
+	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag)
+	sort_order = 21
 
 /datum/mil_rank/iccgn/o7
-	name = "Brigadier General"
-	name_short = "BGen"
-	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag)
-	sort_order = 24
+	name = "Colonel"
+	name_short = "Col"
+	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o7)
+	sort_order = 22
 
 /datum/mil_rank/iccgn/o8
 	name = "Major General"
 	name_short = "MGen"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o8)
-	sort_order = 25
+	sort_order = 23
 
 /datum/mil_rank/iccgn/o9
 	name = "Lieutenant General"
 	name_short = "LtGen"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o9)
-	sort_order = 26
+	sort_order = 24
 
 /datum/mil_rank/iccgn/o10
-	name = "General"
-	name_short = "Gen"
+	name = "Colonel General"
+	name_short = "ColGen"
 	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o10)
-	sort_order = 27
+	sort_order = 25
+
+/datum/mil_rank/iccgn/o11
+	name = "General of the fleet"
+	name_short = "GenF"
+	accessory = list(/obj/item/clothing/accessory/iccgn_rank/marine/flag/o10)
+	sort_order = 26
