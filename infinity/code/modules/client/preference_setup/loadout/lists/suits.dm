@@ -8,11 +8,11 @@
 	path = /obj/item/clothing/suit/storage/bombernew
 
 /datum/gear/suit/leathernew
-	display_name = "leather new jacket"
+	display_name = "black jacket"
 	path = /obj/item/clothing/suit/storage/leathernew
 
 /datum/gear/suit/bikernew
-	display_name = "biker new jacket"
+	display_name = "biker jacket"
 	path = /obj/item/clothing/suit/storage/bikernew
 
 /datum/gear/suit/lettermanb
@@ -24,7 +24,7 @@
 	path = /obj/item/clothing/suit/storage/lettermanr
 
 /datum/gear/suit/lettermans
-	display_name = "blood-red sport letterman jacket"
+	display_name = "really red letterman jacket"
 	path = /obj/item/clothing/suit/storage/lettermans
 
 /datum/gear/suit/militarynew
@@ -32,6 +32,6 @@
 	path = /obj/item/clothing/suit/storage/militarynew
 
 /datum/gear/suit/curatorjacket
-	display_name = "brown curator jacket"
+	display_name = "brown jacket"
 	path = /obj/item/clothing/suit/storage/curatorjacket
 

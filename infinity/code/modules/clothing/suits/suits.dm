@@ -137,8 +137,8 @@
 	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/storage/curatorjacket
-	name = "brown curator jacket"
-	desc = "A thick jacket with a rubbery, water-resistant shell."
+	name = "brown jacket"
+	desc = "A thick jacket with a water-resistant shell."
 	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(
 		slot_wear_suit_str = 'infinity/icons/mob/onmob/onmob_suit.dmi')
@@ -147,7 +147,7 @@
 	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/storage/leathernew
-	name = "leather black jacket"
+	name = "black jacket"
 	desc = "Pompadour not included."
 	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(
@@ -167,7 +167,7 @@
 	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/storage/lettermans
-	name = "blood-red sport letterman jacket"
+	name = "really red letterman jacket"
 	desc = "Oddly, this jacket seems to have a large S on the back..."
 	icon = 'infinity/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(
