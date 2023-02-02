@@ -1230,6 +1230,9 @@
 /obj/structure/table/standard,
 /obj/item/music_tape/custom,
 /obj/machinery/recharger,
+/obj/structure/sign/poster/nyc/krotovuha{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/ship/farfleet/crew/kitchen)
 "dh" = (

@@ -32,12 +32,12 @@
 
 /obj/item/storage/belt/holster/security/tactical/troops/New()
 	..()
-	new /obj/item/ammo_magazine/smg_top(src)
-	new /obj/item/ammo_magazine/smg_top(src)
-	new /obj/item/ammo_magazine/smg_top(src)
-	new /obj/item/ammo_magazine/smg_top(src)
-	new /obj/item/ammo_magazine/smg_top(src)
-	new /obj/item/ammo_magazine/smg_top(src)
+	new /obj/item/ammo_magazine/smg(src)
+	new /obj/item/ammo_magazine/smg(src)
+	new /obj/item/ammo_magazine/smg(src)
+	new /obj/item/ammo_magazine/smg(src)
+	new /obj/item/ammo_magazine/smg(src)
+	new /obj/item/ammo_magazine/smg(src)
 	new /obj/item/gun/projectile/pistol/sec(src)
 	new /obj/item/ammo_magazine/pistol(src)
 
