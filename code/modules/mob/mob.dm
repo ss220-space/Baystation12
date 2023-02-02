@@ -1,3 +1,6 @@
+/mob/living
+	var/canpullnow = TRUE
+
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
 	STOP_PROCESSING_MOB(src)
 	GLOB.dead_mob_list_ -= src
@@ -539,28 +542,36 @@
 			pullin.icon_state = "pull0"
 
 /mob/proc/start_pulling(var/atom/movable/AM)
-
 	if ( !AM || !usr || src==AM || !isturf(src.loc) )	//if there's no person pulling OR the person is pulling themself OR the object being pulled is inside something: abort!
-		return
+		return FALSE
 
 	if (AM.anchored)
 		to_chat(src, "<span class='warning'>It won't budge!</span>")
-		return
+		return FALSE
 
 	var/mob/M = AM
 	if(ismob(AM))
-
 		if(!can_pull_mobs || !can_pull_size)
 			to_chat(src, "<span class='warning'>It won't budge!</span>")
-			return
+			return FALSE
 
 		if((mob_size < M.mob_size) && (can_pull_mobs != MOB_PULL_LARGER))
 			to_chat(src, "<span class='warning'>It won't budge!</span>")
-			return
+			return FALSE
 
 		if((mob_size == M.mob_size) && (can_pull_mobs == MOB_PULL_SMALLER))
 			to_chat(src, "<span class='warning'>It won't budge!</span>")
-			return
+			return FALSE
+
+		// no more pulling of grabbed peoples. That was SUS. And yea, AmShegar go home!
+		var/grabtype
+		for(var/obj/item/grab/grabbedby as anything in M.grabbed_by)
+			if(grabbedby.assailant == src)
+				break
+			grabtype = grabbedby.current_grab.state_name
+			if(!(src.skill_check(SKILL_COMBAT, SKILL_ADEPT) && src.get_skill_value(SKILL_COMBAT)>=grabbedby.assailant.get_skill_value(SKILL_COMBAT) && prob(src.get_skill_value(SKILL_HAULING)*10)) && (NORM_NECK == grabtype || NORM_KILL == grabtype))
+				to_chat(src, SPAN_WARNING("Someone is holding him tight!"))
+				return FALSE
 
 		// If your size is larger than theirs and you have some
 		// kind of mob pull value AT ALL, you will be able to pull
@@ -575,14 +586,14 @@
 		var/obj/I = AM
 		if(!can_pull_size || can_pull_size < I.w_class)
 			to_chat(src, "<span class='warning'>It won't budge!</span>")
-			return
+			return FALSE
 
 	if(pulling)
 		var/pulling_old = pulling
 		stop_pulling()
 		// Are we pulling the same thing twice? Just stop pulling.
 		if(pulling_old == AM)
-			return
+			return TRUE
 
 	src.pulling = AM
 	AM.pulledby = src
@@ -628,6 +639,17 @@
 	if(ismob(AM))
 		var/mob/pulled = AM
 		pulled.inertia_dir = 0
+	return TRUE
+
+/mob/living/start_pulling(atom/movable/AM)
+	if(src.canpullnow)
+		. = ..()
+		if(!.)
+			canpullnow = FALSE
+			addtimer(CALLBACK(src, .proc/reset_pull_timer), 1 SECOND, TIMER_NO_HASH_WAIT)
+
+/mob/living/proc/reset_pull_timer()
+	canpullnow = TRUE
 
 /mob/proc/can_use_hands()
 	return
