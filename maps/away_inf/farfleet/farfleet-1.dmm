@@ -4716,6 +4716,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/item/reagent_containers/chem_disp_cartridge/boron,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/farfleet/engineering/fussion/control)
 "my" = (
@@ -4739,7 +4740,7 @@
 	use_power = 1;
 	frequency = 1442
 	},
-/turf/simulated/floor/reinforced/carbon_dioxide,
+/turf/simulated/floor/reinforced/hydrogen,
 /area/ship/farfleet/engineering/atmospherics)
 "mC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
