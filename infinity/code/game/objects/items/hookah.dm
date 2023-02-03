@@ -312,7 +312,6 @@
 	opacity = FALSE
 
 /obj/effect/hookah_smoke/proc/qdel_after()
-	sleep(30)
 	qdel(src)
 /obj/item/tube
 	name = "Hookah tube"
@@ -408,26 +407,17 @@
 	var/turf/T = get_turf(src)
 	if(T)
 		var/datum/gas_mixture/environment = T.return_air()
-		if(ishuman(loc))
-			var/mob/living/carbon/human/C = loc
-			if (src == C.wear_mask && C.internal)
-				environment = C.internal.return_air()
 		if(environment.get_by_flag(XGM_GAS_OXIDIZER) < parent.gas_consumption)
 			parent.extinguish()
 		else
-			var/datum/gas_mixture/produced = new
 			environment.remove_by_flag(XGM_GAS_OXIDIZER, parent.gas_consumption)
-			produced.adjust_gas(GAS_CO2, 0.5*parent.gas_consumption,0)
-			produced.adjust_gas(GAS_SMOKE, 1, 0)
-			produced.temperature = T20C+60
-			environment.merge(produced)
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/effect/hookah_smoke/smoke = new(H.loc)
 		if(prob(60))
 			step(smoke, H.dir)
-		addtimer(CALLBACK(smoke, /obj/effect/hookah_smoke/proc/qdel_after), 0, TIMER_NO_HASH_WAIT)
+		addtimer(CALLBACK(smoke, /obj/effect/hookah_smoke/proc/qdel_after), 3 SECONDS, TIMER_NO_HASH_WAIT)
 
 /obj/item/coal
 	name = "Coal"
@@ -439,6 +429,14 @@
 	var/volume = 500
 
 // code/datums/supplypacks/galley.dm
+/decl/hierarchy/supply_pack/galley/hookah
+	name = "Bar - Hookah"
+	contains = list(
+		/obj/item/hookah,
+		/obj/item/storage/box/large/coal = 2
+	)
+	cost = 20
+	containername = "Hookah crate"
 
 /obj/item/storage/box/large/coal
 	name = "coal for hookah"
