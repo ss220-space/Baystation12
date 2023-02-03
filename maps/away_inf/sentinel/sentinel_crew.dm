@@ -200,13 +200,13 @@
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/patrol/engineer
 	branch = /datum/mil_branch/fleet
+	//rank = /datum/mil_rank/fleet/e5
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5
+		/datum/mil_rank/fleet/e5,
+		/datum/mil_rank/fleet/e6
 	)
-	department_flag = ENG
 	supervisors = "ensign, lieutenant commander"
 	loadout_allowed = TRUE
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
@@ -231,66 +231,35 @@
  * =======
  */
 
-/*/datum/mil_branch/scgdf
-	name = "Sol Central Government Defence Forces"
-	name_short = "SCGDF"
-	email_domain = "sol.gov"
-
-	rank_types = list(/datum/mil_rank/skrell_fleet)
-	spawn_rank_types = list(/datum/mil_rank/skrell_fleet)
-
-/datum/mil_rank/skrell_fleet
-	name = "NULL"
-
-/datum/job/submap/sentinel_crew/equip(var/mob/living/carbon/human/H, var/alt_title, var/datum/mil_branch/branch, var/datum/mil_rank/grade)
-	. = ..(H, alt_title, branch, grade)
-
-	var/milbranches = list(
-		"Malish-Katish" = list(
-			"Mero'ta-Ketish",
-			"Toglo'i-Ketish"
-		),
-		"Kanin-Katish" = list(
-			"Xiqarr-Ketish",
-			"Mero'tol-Ketish",
-			"Goxo'i-Ketish"
-		),
-		"Raskinta-Katish" = list(
-			"Me'kerr-Ketish",
-			"Qi'kerr-Ketish",
-			"Me'xoal-Ketish"
-		)
-	)
-
-	var/milbranch = input(H, "What was your branch before SOCOM?", "SCGDF Branch") as null|anything in milbranches
-	if(milbranch)
-		var/milsubbranch = input(H, "What is your assignment now?", "SCGDF Assignment") as null|anything in milbranches[milbranch]
-		var/obj/item/card/id/C = H.wear_id
-		if(istype(C))
-			C.assignment = milsubbranch
-
-*/
-
 /datum/mil_branch/fleet
 	name = "Fleet"
 	name_short = "SCGF"
 	email_domain = "torch.fleet.mil"
 	rank_types = list(
-		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5
+		/datum/mil_rank/fleet/e5,
+		/datum/mil_rank/fleet/e6
 	)
 	spawn_rank_types = list(
-		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5
+		/datum/mil_rank/fleet/e5,
+		/datum/mil_rank/fleet/e6,
+		/datum/mil_rank/fleet/o1,
+		/datum/mil_rank/fleet/o2,
+		/datum/mil_rank/fleet/o3,
+		/datum/mil_rank/fleet/o4,
+		/datum/mil_rank/fleet/o6,
+		/datum/mil_rank/fleet/o7,
+		/datum/mil_rank/fleet/o8
 	)
 
-/datum/mil_rank/fleet/e3
-	name = "Crewman"
-	name_short = "CN"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e3, /obj/item/clothing/accessory/solgov/specialty/enlisted)
-	sort_order = 3
+/datum/mil_rank/grade()
+	. = ..()
+	if(!sort_order)
+		return ""
+	if(sort_order <= 10)
+		return "E[sort_order]"
+	return "O[sort_order - 10]"
 
 /datum/mil_rank/fleet/e4
 	name = "Petty Officer Third Class"
@@ -303,6 +272,54 @@
 	name_short = "PO2"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e5, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 5
+
+/datum/mil_rank/fleet/e6
+	name = "Petty Officer First Class"
+	name_short = "PO1"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e6, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 6
+
+/datum/mil_rank/fleet/o1
+	name = "Ensign"
+	name_short = "ENS"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 11
+
+/datum/mil_rank/fleet/o2
+	name = "Sub-lieutenant"
+	name_short = "SLT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o2, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 12
+
+/datum/mil_rank/fleet/o3
+	name = "Lieutenant"
+	name_short = "LT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o3, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 13
+
+/datum/mil_rank/fleet/o4
+	name = "Lieutenant Commander"
+	name_short = "LCDR"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o4, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 14
+
+/datum/mil_rank/fleet/o6
+	name = "Captain"
+	name_short = "CAPT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o6, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 16
+
+/datum/mil_rank/fleet/o7
+	name = "Commodore"
+	name_short = "CDRE"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 17
+
+/datum/mil_rank/fleet/o8
+	name = "Rear Admiral"
+	name_short = "RADM"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o8, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 18
 
 /* OUTFITS
  * =======
