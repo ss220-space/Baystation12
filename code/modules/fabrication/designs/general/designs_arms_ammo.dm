@@ -17,6 +17,10 @@
 	path = /obj/item/material/hatchet/machete/steel
 	hidden = TRUE
 
+/datum/fabricator_recipe/arms_ammo/hidden/shotgun_drum
+	name = "12g drum magazine (empty)"
+	path = /obj/item/ammo_magazine/c12m/empty
+
 /datum/fabricator_recipe/arms_ammo/hidden/shotgun
 	name = "ammunition (shotgun, beanbag)"
 	path = /obj/item/ammo_casing/shotgun/beanbag
