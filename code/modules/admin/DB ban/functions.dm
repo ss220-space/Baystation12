@@ -49,7 +49,7 @@ datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = 
 	_DB_ban_record(src.owner.ckey, src.owner.computer_id, src.owner.address, bantype, banned_mob, duration, reason, job, rounds, banckey, banip, bancid)
 
 //Either pass the mob you wish to ban in the 'banned_mob' attribute, or the banckey, banip and bancid variables. If both are passed, the mob takes priority! If a mob is not passed, banckey is the minimum that needs to be passed! banip and bancid are optional.
-/proc/_DB_ban_record(var/a_ckey, var/a_computerid, var/a_ip, var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/job = "", var/rounds = 0, var/banckey = null, var/banip = null, var/bancid = null)
+/proc/_DB_ban_record(var/a_ckey, var/a_computerid, var/a_ip, var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/role = "", var/rounds = 0, var/banckey = null, var/banip = null, var/bancid = null)
 
 	if(usr)
 		if(!check_rights(R_MOD,0) && !check_rights(R_BAN))	return
@@ -58,42 +58,61 @@ datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = 
 	if(!dbcon.IsConnected())
 		return 0
 
-//	var/serverip = "[world.internet_address]:[world.port]" //inf was used for sql by bay, we don't use this var
+	var/server_ip = world.internet_address
+	var/server_port = world.port
 	var/bantype_pass = 0
 	var/bantype_str
+	var/applies_to_admins = 1
 	switch(bantype)
 		if(BANTYPE_PERMA)
 			bantype_str = "PERMABAN"
-			duration = -1
+			role = "Server"
+			duration = null
 			bantype_pass = 1
 		if(BANTYPE_TEMP)
 			bantype_str = "TEMPBAN"
+			role = "Server"
 			bantype_pass = 1
 		if(BANTYPE_JOB_PERMA)
 			bantype_str = "JOB_PERMABAN"
-			duration = -1
+			duration = null
 			bantype_pass = 1
 		if(BANTYPE_JOB_TEMP)
 			bantype_str = "JOB_TEMPBAN"
 			bantype_pass = 1
+		if(BANTYPE_APPEARANCE)
+			bantype_str = "APPEARANCE_BAN"
+			bantype_pass = 1
+			role = "Appearance"
+		if(BANTYPE_ADMIN_PERMA)
+			bantype_str = "ADMIN_PERMABAN"
+			role = "Server"
+			duration = null
+			bantype_pass = 1
+			applies_to_admins = 1
+		if(BANTYPE_ADMIN_TEMP)
+			bantype_str = "ADMIN_TEMPBAN"
+			role = "Server"
+			bantype_pass = 1
+			applies_to_admins = 1
 
 	if( !bantype_pass ) return 0
 	if( !istext(reason) ) return 0
-	if( !isnum(duration) ) return 0
 
 	var/ckey
 	var/computerid
 	var/ip
 
-	if(ismob(banned_mob))
-		ckey = LAST_CKEY(banned_mob)
-		computerid = banned_mob.computer_id
-		ip = banned_mob.lastKnownIP
+	if(ismob(banned_mob) && banned_mob.ckey)
+		ckey = banned_mob.ckey
 		if(banned_mob.client)
 			computerid = banned_mob.client.computer_id
 			ip = banned_mob.client.address
-		if (bantype == BANTYPE_PERMA || bantype == BANTYPE_TEMP)
-			banned_mob.ckey = null
+		else
+			if(banned_mob.lastKnownIP)
+				ip = banned_mob.lastKnownIP
+			if(banned_mob.computer_id)
+				computerid = banned_mob.computer_id
 	else if(banckey)
 		ckey = ckey(banckey)
 		computerid = bancid
@@ -102,6 +121,12 @@ datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = 
 			if (M.ckey == ckey)
 				M.ckey = null
 				break
+	else if(ismob(banned_mob))
+		message_admins("<font color='red'>[a_ckey] attempted to add a ban based on a ckey-less mob, with no ckey provided. Report this bug.")
+		return
+	else
+		message_admins("<font color='red'>[a_ckey] attempted to add a ban based on a non-existent mob, with no ckey provided. Report this bug.")
+		return
 
 	var/who
 	for(var/client/C in GLOB.clients)
@@ -127,7 +152,10 @@ datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = 
 		ip = "0.0.0.0"
 //[/INF]
 
-	var/sql = "INSERT INTO [sqlfdbkdbutil].ban (`bantime`,`serverip`,`bantype`,`reason`,`job`,`duration`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`) VALUES (Now(), '[world.internet_address]:[world.port]','[bantype_str]', '[reason]', '[job]', [(duration)?"[duration]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, '[ckey]', '[computerid]', '[ip]', '[a_ckey]', '[a_computerid]', '[a_ip]', '[who]', '[adminwho]')"
+	var/sql = {"
+		INSERT INTO [sqlfdbkdbutil].ban (`id`,`bantime`,`server_ip`,`server_port`,`role`,`reason`,`round_id`,`expiration_time`, `applies_to_admins`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`,`edits`,`server`)
+		VALUES (null, Now(), '[server_ip]', '[server_port]', '[role]', '[reason]', null, [duration ? "Now() + INTERVAL [duration] MINUTE" : "null"], '[applies_to_admins]', '[ckey]', '[computerid]', '[ip]', '[a_ckey]', '[a_computerid]', '[a_ip]', '[who]', '[adminwho]', '', '[sqlbansservername]')
+	"}
 	var/DBQuery/query_insert = dbcon.NewQuery(sql)
 	query_insert.Execute()
 	var/setter = a_ckey
@@ -145,24 +173,31 @@ datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = 
 			to_world_ban(bantype, get_key(usr), banned_key, reason_public, duration)
 	//[/INF]
 
-	message_admins("[setter] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([minutes_to_readable(duration)])":""] with the reason: \"[reason]\" to the ban database.",1)
+	message_admins("[setter] has added a [bantype_str] for [ckey] [(role)?"([role])":""] [(duration > 0)?"([minutes_to_readable(duration)])":""] with the reason: \"[reason]\" to the ban database.",1)
 	return 1
 
 
 
-datum/admins/proc/DB_ban_unban(var/ckey, var/bantype, var/job = "")
+datum/admins/proc/DB_ban_unban(var/ckey, var/bantype, var/role = "")
 
 	if(!check_rights(R_BAN))	return
 
+	if(!sqlbansmodifyfrom.len)
+		to_chat(usr, "<span class='boldannounce'>This server not allowed to edit any bans!</span>")
+		return
+
 	var/bantype_str
+	var/applies_to_admins = 0
 	if(bantype)
 		var/bantype_pass = 0
 		switch(bantype)
 			if(BANTYPE_PERMA)
 				bantype_str = "PERMABAN"
+				role = "Server"
 				bantype_pass = 1
 			if(BANTYPE_TEMP)
 				bantype_str = "TEMPBAN"
+				role = "Server"
 				bantype_pass = 1
 			if(BANTYPE_JOB_PERMA)
 				bantype_str = "JOB_PERMABAN"
@@ -170,21 +205,32 @@ datum/admins/proc/DB_ban_unban(var/ckey, var/bantype, var/job = "")
 			if(BANTYPE_JOB_TEMP)
 				bantype_str = "JOB_TEMPBAN"
 				bantype_pass = 1
+			if(BANTYPE_APPEARANCE)
+				bantype_str = "APPEARANCE_BAN"
+				role = "Appearance"
+				bantype_pass = 1
+			if(BANTYPE_ADMIN_PERMA)
+				bantype_str = "ADMIN_PERMABAN"
+				role = "Server"
+				bantype_pass = 1
+				applies_to_admins = 1
+			if(BANTYPE_ADMIN_TEMP)
+				bantype_str = "ADMIN_TEMPBAN"
+				role = "Server"
+				bantype_pass = 1
+				applies_to_admins = 1
 			if(BANTYPE_ANY_FULLBAN)
 				bantype_str = "ANY"
 				bantype_pass = 1
-
 		if( !bantype_pass ) return
 
-	var/bantype_sql
+	var/sql = "SELECT id FROM [sqlfdbkdbutil].ban WHERE ckey='[ckey]' AND (unbanned_datetime is null) AND (server IN ('[jointext(sqlbansmodifyfrom, "','")]'))"
 	if(bantype_str == "ANY")
-		bantype_sql = "(bantype = 'PERMABAN' OR (bantype = 'TEMPBAN' AND expiration_time > Now() ) )"
+		sql += " AND (isnull(expiration_time) OR expiration_time > Now())"
 	else
-		bantype_sql = "bantype = '[bantype_str]'"
-
-	var/sql = "SELECT id FROM [sqlfdbkdbutil].ban WHERE ckey = '[ckey]' AND [bantype_sql] AND (unbanned is null OR unbanned = false)"
-	if(job)
-		sql += " AND job = '[job]'"
+		sql += " AND applies_to_admins = [applies_to_admins]"
+		if(role)
+			sql += " AND role='[role]'"
 
 	establish_db_connection()
 	if(!dbcon.IsConnected())
@@ -223,17 +269,21 @@ datum/admins/proc/DB_ban_edit(var/banid = null, var/param = null)
 		to_chat(usr, "Cancelled")
 		return
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT ckey, duration, reason FROM [sqlfdbkdbutil].ban WHERE id = [banid]")
+	if(!sqlbansmodifyfrom.len)
+		to_chat(usr, "<span class='boldannounce'>This server not allowed to edit any bans!</span>")
+		return
+
+	var/DBQuery/query = dbcon.NewQuery("SELECT ckey, expiration_time, reason FROM [sqlfdbkdbutil].ban WHERE id=[banid] AND (server IN ('[jointext(sqlbansmodifyfrom, "','")]'))")
 	query.Execute()
 
 	var/eckey = usr.ckey	//Editing admin ckey
 	var/pckey				//(banned) Player ckey
-	var/duration			//Old duration
+	var/expiration_time			//Old expiration time
 	var/reason				//Old reason
 
 	if(query.NextRow())
 		pckey = query.item[1]
-		duration = query.item[2]
+		expiration_time = query.item[2]
 		reason = query.item[3]
 	else
 		to_chat(usr, "Invalid ban id. Contact the database admin")
@@ -257,15 +307,15 @@ datum/admins/proc/DB_ban_edit(var/banid = null, var/param = null)
 			to_world_ban("EDIT", get_key(usr), pckey, reason = "[reason]@#*$#@[value]")	// INF
 		if("duration")
 			if(!value)
-				value = input("Insert the new duration (in minutes) for [pckey]'s ban", "New Duration", "[duration]", null) as null|num
+				value = input("Insert the new duration (in minutes) for [pckey]'s ban", "New Duration", "1440", null) as null|num
 				if(!isnum(value) || !value)
 					to_chat(usr, "Cancelled")
 					return
 
-			var/DBQuery/update_query = dbcon.NewQuery("UPDATE [sqlfdbkdbutil].ban SET duration = [value], edits = CONCAT(edits,'- [eckey] changed ban duration from [duration] to [value]<br>'), expiration_time = DATE_ADD(bantime, INTERVAL [value] MINUTE) WHERE id = [banid]")
-			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s duration from [duration] to [value]",1)
+			var/DBQuery/update_query = dbcon.NewQuery("UPDATE [sqlfdbkdbutil].ban SET edits = CONCAT(edits,'- [eckey] changed ban duration from [expiration_time] to [value]<br>'), expiration_time = DATE_ADD(bantime, INTERVAL [value] MINUTE) WHERE id = [banid]")
+			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s duration from [expiration_time] to [value]",1)
 			update_query.Execute()
-			to_world_ban("EDIT", get_key(usr), pckey, duration = "[duration] - [value]")	// INF
+			to_world_ban("EDIT", get_key(usr), pckey, duration = "[expiration_time] - [value]")	// INF
 		if("unban")
 			if(alert("Unban [pckey]?", "Unban?", "Yes", "No") == "Yes")
 				DB_ban_unban_by_id(banid)
@@ -282,11 +332,15 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 
 	if(!check_rights(R_BAN))	return
 
-	var/sql = "SELECT ckey FROM [sqlfdbkdbutil].ban WHERE id = [id]"
-
 	establish_db_connection()
 	if(!dbcon.IsConnected())
 		return
+
+	if(!sqlbansmodifyfrom.len)
+		to_chat(usr, "<span class='boldannounce'>This server not allowed to edit any bans!</span>")
+		return
+
+	var/sql = "SELECT ckey FROM [sqlfdbkdbutil].ban WHERE id = [id] AND (server IN ('[jointext(sqlbansmodifyfrom, "','")]'))"
 
 	var/ban_number = 0 //failsafe
 
@@ -312,7 +366,7 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 	var/unban_computerid = src.owner:computer_id
 	var/unban_ip = src.owner:address
 
-	var/sql_update = "UPDATE [sqlfdbkdbutil].ban SET unbanned = 1, unbanned_datetime = Now(), unbanned_ckey = '[unban_ckey]', unbanned_computerid = '[unban_computerid]', unbanned_ip = '[unban_ip]' WHERE id = [id]"
+	var/sql_update = "UPDATE [sqlfdbkdbutil].ban SET unbanned_datetime = Now(), unbanned_ckey = '[unban_ckey]', unbanned_computerid = '[unban_computerid]', unbanned_ip = '[unban_ip]' WHERE id = [id]"
 	message_admins("[key_name_admin(usr)] has lifted [pckey]'s ban.",1)
 
 	var/DBQuery/query_update = dbcon.NewQuery(sql_update)
@@ -341,6 +395,10 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 		to_chat(usr, "<span class='warning'>Failed to establish database connection</span>")
 		return
 
+	if(!sqlbansreadfrom.len)
+		to_chat(usr, "<span class='boldannounce'>This server not allowed to display any bans!</span>")
+		return
+
 	var/output = "<div align='center'><table width='90%'><tr>"
 
 	output += "<td width='35%' align='center'>"
@@ -358,6 +416,8 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 	output += "<option value='[BANTYPE_TEMP]'>TEMPBAN</option>"
 	output += "<option value='[BANTYPE_JOB_PERMA]'>JOB PERMABAN</option>"
 	output += "<option value='[BANTYPE_JOB_TEMP]'>JOB TEMPBAN</option>"
+	output += "<option value='[BANTYPE_ADMIN_PERMA]'>ADMIN PERMABAN</option>"
+	output += "<option value='[BANTYPE_ADMIN_TEMP]'>ADMIN TEMPBAN</option>"
 	output += "</select></td>"
 	output += "<td width='50%' align='right'><b>Ckey:</b> <input type='text' name='dbbanaddckey'></td></tr>"
 	output += "<tr><td width='50%' align='right'><b>IP:</b> <input type='text' name='dbbanaddip'></td>"
@@ -397,6 +457,8 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 	output += "<option value='[BANTYPE_TEMP]'>TEMPBAN</option>"
 	output += "<option value='[BANTYPE_JOB_PERMA]'>JOB PERMABAN</option>"
 	output += "<option value='[BANTYPE_JOB_TEMP]'>JOB TEMPBAN</option>"
+	output += "<option value='[BANTYPE_ADMIN_PERMA]'>ADMIN PERMABAN</option>"
+	output += "<option value='[BANTYPE_ADMIN_TEMP]'>ADMIN TEMPBAN</option>"
 	output += "</select></td></tr></table>"
 	output += "<br><input type='submit' value='search'><br>"
 	output += "<input type='checkbox' value='[match]' name='dbmatch' [match? "checked=\"1\"" : null]> Match(min. 3 characters to search by key or ip, and 7 to search by cid)<br>"
@@ -455,19 +517,23 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 					cidsearch  = "AND computerid LIKE '[playercid]%' "
 
 			if(dbbantype)
-				bantypesearch = "AND bantype = "
-
 				switch(dbbantype)
 					if(BANTYPE_TEMP)
-						bantypesearch += "'TEMPBAN' "
+						bantypesearch = "AND expiration_time != null AND applies_to_admins = 0 AND role = 'Server'"
 					if(BANTYPE_JOB_PERMA)
-						bantypesearch += "'JOB_PERMABAN' "
+						bantypesearch = "AND expiration_time = null AND applies_to_admins = 0 AND role != 'Server' AND role != 'Appearance'"
 					if(BANTYPE_JOB_TEMP)
-						bantypesearch += "'JOB_TEMPBAN' "
+						bantypesearch = "AND expiration_time != null AND applies_to_admins = 0 AND role != 'Server' AND role != 'Appearance'"
+					if(BANTYPE_ADMIN_PERMA)
+						bantypesearch = "AND expiration_time = null AND applies_to_admins = 0 AND role = 'Server'"
+					if(BANTYPE_ADMIN_TEMP)
+						bantypesearch = "AND expiration_time != null AND applies_to_admins = 1 AND role = 'Server'"
 					else
-						bantypesearch += "'PERMABAN' "
+						bantypesearch = "AND expiration_time = null AND applies_to_admins = 0 AND role = 'Server'"
 
-			var/DBQuery/select_query = dbcon.NewQuery("SELECT id, bantime, bantype, reason, job, duration, expiration_time, ckey, a_ckey, unbanned, unbanned_ckey, unbanned_datetime, edits, ip, computerid FROM [sqlfdbkdbutil].ban WHERE 1 [playersearch] [adminsearch] [ipsearch] [cidsearch] [bantypesearch] ORDER BY bantime DESC LIMIT 100")
+			var/DBQuery/select_query = dbcon.NewQuery({"
+			SELECT id, bantime, reason, role, expiration_time, ckey, a_ckey, unbanned_ckey, unbanned_datetime, edits, ip, computerid, applies_to_admins, server
+			FROM [sqlfdbkdbutil].ban WHERE (server IN ('[jointext(sqlbansreadfrom, "','")]')) [playersearch] [adminsearch] [ipsearch] [cidsearch] [bantypesearch] ORDER BY bantime DESC LIMIT 100"})
 			select_query.Execute()
 
 			var/now = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss") // MUST BE the same format as SQL gives us the dates in, and MUST be least to most specific (i.e. year, month, day not day, month, year)
@@ -475,56 +541,57 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 			while(select_query.NextRow())
 				var/banid = select_query.item[1]
 				var/bantime = select_query.item[2]
-				var/bantype  = select_query.item[3]
-				var/reason = select_query.item[4]
-				var/job = select_query.item[5]
-				var/duration = select_query.item[6]
-				var/expiration = select_query.item[7]
-				var/ckey = select_query.item[8]
-				var/ackey = select_query.item[9]
-				var/unbanned = select_query.item[10]
-				var/unbanckey = select_query.item[11]
-				var/unbantime = select_query.item[12]
-				var/edits = select_query.item[13]
-				var/ip = select_query.item[14]
-				var/cid = select_query.item[15]
+				var/reason = select_query.item[3]
+				var/role = select_query.item[4]
+				var/expiration = select_query.item[5]
+				var/ckey = select_query.item[6]
+				var/ackey = select_query.item[7]
+				var/unbanckey = select_query.item[8]
+				var/unbantime = select_query.item[9]
+				var/edits = select_query.item[10]
+				var/ip = select_query.item[11]
+				var/cid = select_query.item[12]
+				var/applies_to_admins = select_query.item[13]
+				var/server_name = select_query.item[14]
 
-				// true if this ban has expired
-				var/auto = (bantype in list("TEMPBAN", "JOB_TEMPBAN")) && now > expiration // oh how I love ISO 8601 (ish) date strings
-
+				var/can_edit = sqlbansmodifyfrom.Find(server_name)
 				var/lcolor = blcolor
 				var/dcolor = bdcolor
-				if(unbanned)
+				if(unbantime)
 					lcolor = ulcolor
 					dcolor = udcolor
-				else if(auto)
-					lcolor = alcolor
-					dcolor = adcolor
 
+				var/list/ban_titles = list()
+				if (applies_to_admins)
+					ban_titles.Add("ADMIN")
+
+				ban_titles.Add(isnull(expiration) ? "PERMABAN" : "TEMPBAN")
+
+				if(role == "Appearance")
+					ban_titles.Add("APPEARANCEBAN")
+				else if (role != "Server")
+					ban_titles.Add("JOBBAN")
+
+				var/ban_title_text = ban_titles.Join(" ")
 				var/typedesc =""
-				switch(bantype)
-					if("PERMABAN")
-						typedesc = "<font color='red'><b>PERMABAN</b></font>"
-					if("TEMPBAN")
-						typedesc = "<b>TEMPBAN</b><br><font size='2'>([minutes_to_readable(duration)]) [(unbanned || auto) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=duration;dbbanid=[banid]\">Edit</a>)"]<br>Expires [expiration]</font>"
-					if("JOB_PERMABAN")
-						typedesc = "<b>JOBBAN</b><br><font size='2'>([job])</font>"
-					if("JOB_TEMPBAN")
-						typedesc = "<b>TEMP JOBBAN</b><br><font size='2'>([job])<br>([minutes_to_readable(duration)]<br>Expires [expiration]</font>"
+				if (isnull(expiration))
+					typedesc = "<font color='red'><b>[ban_title_text]</b></font>"
+				else
+					typedesc = "<b>[ban_title_text]</b><br><font size='2'>[role]<br>[(unbantime || !can_edit) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=duration;dbbanid=[banid]\">Edit</a>)"]<br>Expires [expiration]</font>"
 
 				output += "<tr bgcolor='[dcolor]'>"
 				output += "<td align='center'>[typedesc]</td>"
 				output += "<td align='center'><b>[ckey]</b></td>"
 				output += "<td align='center'>[bantime]</td>"
 				output += "<td align='center'><b>[ackey]</b></td>"
-				output += "<td align='center'>[(unbanned || auto) ? "" : "<b><a href=\"byond://?src=\ref[src];dbbanedit=unban;dbbanid=[banid]\">Unban</a></b>"]</td>"
+				output += "<td align='center'>[(unbantime || !can_edit) ? "" : "<b><a href=\"byond://?src=\ref[src];dbbanedit=unban;dbbanid=[banid]\">Unban</a></b>"]</td>"
 				output += "</tr>"
 				output += "<tr bgcolor='[dcolor]'>"
 				output += "<td align='center' colspan='2' bgcolor=''><b>IP:</b> [ip]</td>"
 				output += "<td align='center' colspan='3' bgcolor=''><b>CIP:</b> [cid]</td>"
 				output += "</tr>"
 				output += "<tr bgcolor='[lcolor]'>"
-				output += "<td align='center' colspan='5'><b>Reason: [(unbanned || auto) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=reason;dbbanid=[banid]\">Edit</a>)"]</b> <cite>\"[reason]\"</cite></td>"
+				output += "<td align='center' colspan='5'><b>Reason: [(unbantime || !can_edit) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=reason;dbbanid=[banid]\">Edit</a>)"]</b> <cite>\"[reason]\"</cite></td>"
 				output += "</tr>"
 				if(edits)
 					output += "<tr bgcolor='[dcolor]'>"
@@ -533,11 +600,11 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 					output += "<tr bgcolor='[lcolor]'>"
 					output += "<td align='center' colspan='5'><font size='2'>[edits]</font></td>"
 					output += "</tr>"
-				if(unbanned)
+				if(unbantime)
 					output += "<tr bgcolor='[dcolor]'>"
 					output += "<td align='center' colspan='5' bgcolor=''><b>UNBANNED by admin [unbanckey] on [unbantime]</b></td>"
 					output += "</tr>"
-				else if(auto)
+				else if(expiration && now > expiration)
 					output += "<tr bgcolor='[dcolor]'>"
 					output += "<td align='center' colspan='5' bgcolor=''><b>EXPIRED at [expiration]</b></td>"
 					output += "</tr>"

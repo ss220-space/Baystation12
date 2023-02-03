@@ -13,10 +13,6 @@
 		return list("reason"="concurrent connection attempts", "desc"="You are attempting to connect too fast. Try again.")
 	key_cache[key] = REALTIMEOFDAY + 10 //This proc shouldn't be runtiming. But if it does, then the expiry time will cover it to ensure genuine connection attempts don't get trapped in limbo.
 
-	if(ckey(key) in admin_datums)
-		key_cache[key] = 0
-		return ..()
-
 	if (text2num(computer_id) == 2147483647) //this cid causes stickybans to go haywire
 		log_adminwarn("Failed Login (invalid cid): [key] [address]-[computer_id]")
 		key_cache[key] = 0
@@ -35,6 +31,13 @@
 	if (C && ckeytext == C.ckey && address == C.address && computer_id == C.computer_id)
 		key_cache[key] = 0
 		return
+
+	var/admin = 0
+
+	if(ckeytext in admin_datums)
+		var/datum/admins/A = admin_datums[ckeytext]
+		if(A && (A.rights & R_ADMIN))
+			admin = 1
 
 	if(config.ban_legacy_system)
 
@@ -74,10 +77,19 @@
 			failedcid = 0
 			cidquery = " OR computerid = '[computer_id]' "
 
+		var/applyfrom_query = ""
+		var/applyglobal_query = ""
+
+		if(sqlbansapplyfrom.len)
+			applyfrom_query = "OR server IN ('[jointext(sqlbansapplyfrom, "','")]')"
+
+		if(sqlbansapplyglobal)
+			applyglobal_query = "OR is_global = '1'"
+
 		var/DBQuery/query = dbcon.NewQuery({"
-		SELECT ckey, a_ckey, reason, expiration_time, duration, bantime, bantype FROM [sqlfdbkdbutil].ban
-		WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'PERMABAN' OR bantype = 'ADMIN_PERMABAN'
-		OR ((bantype = 'TEMPBAN' OR bantype = 'ADMIN_TEMPBAN') AND expiration_time > Now())) AND isnull(unbanned)"})
+		SELECT ckey, a_ckey, reason, expiration_time, bantime, applies_to_admins FROM [sqlfdbkdbutil].ban
+		WHERE (ckey='[ckeytext]' [ipquery] [cidquery]) AND (0 [applyfrom_query] [applyglobal_query]) AND role = 'Server' AND (isnull(expiration_time) OR (expiration_time > Now())) AND isnull(unbanned_datetime)"})
+
 
 		query.Execute()
 
@@ -85,19 +97,36 @@
 			var/pckey = query.item[1]
 			var/ackey = query.item[2]
 			var/reason = query.item[3]
-			var/expiration = query.item[4]
-			var/duration = query.item[5]
-			var/bantime = query.item[6]
-			var/bantype = query.item[7]
+			var/expiration_time = query.item[4]
+			var/bantime = query.item[5]
+			var/applies_to_admins = query.item[6]
 
-			var/expires = ""
-			if(text2num(duration) > 0)
-				expires = " The ban is for [minutes_to_readable(duration)] and expires on [expiration] (server time)."
+			if(applies_to_admins)
+				//admin bans MUST match on ckey to prevent cid-spoofing attacks
+				//	as well as dynamic ip abuse
+				if(pckey != ckeytext)
+					continue
+			if(admin)
+				if(applies_to_admins)
+					log_admin("The admin [key] is admin banned, and has been disallowed access")
+					message_admins("<span class='adminnotice'>The admin [key] is admin banned, and has been disallowed access</span>")
+				else
+					log_admin("The admin [key] has been allowed to bypass a matching ban on [pckey]")
+					message_admins("<span class='adminnotice'>The admin [key] has been allowed to bypass a matching ban on [pckey]</span>")
+					to_chat(C,"<span class='adminnotice'>You have been allowed to bypass a matching ban on [pckey].</span>")
+					continue
+
+			var/expires
+
+			if(!isnull(expiration_time))
+				expires = " The ban expires on [expiration_time] (server time)."
+			else
+				expires = " This ban does not expire automatically and must be appealed."
 
 			var/desc = "\nReason: You, or another user of this computer or connection ([pckey]) is banned from playing here. The ban reason is:\n[reason]\nThis ban was applied by [ackey] on [bantime], [expires]"
 
 			key_cache[key] = 0
-			. = list("reason"="[bantype]", "desc"="[desc]")
+			. = list("reason"="[reason]", "desc"="[desc]")
 
 		if (failedcid)
 			message_admins("[key] has logged in with a blank computer id in the ban check.")

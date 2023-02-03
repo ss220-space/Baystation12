@@ -61,23 +61,23 @@ var/jobban_keylist[0]		//to store the keys & ranks
 			jobban_loadbanfile()
 			return
 
-		//Job permabans
-		var/DBQuery/query = dbcon.NewQuery("SELECT ckey, job FROM [sqlfdbkdbutil].ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)")
+		var/applyfrom_query = ""
+		var/applyglobal_query = ""
+
+		if(sqlbansapplyfrom.len)
+			applyfrom_query = "OR server IN ('[jointext(sqlbansapplyfrom, "','")]')"
+
+		if(sqlbansapplyglobal)
+			applyglobal_query = "OR is_global = '1'"
+
+		//Job bans
+		var/DBQuery/query = dbcon.NewQuery("SELECT ckey, role FROM [sqlfdbkdbutil].ban WHERE role != 'Server' AND role != 'Appearance' AND (0 [applyfrom_query] [applyglobal_query]) AND isnull(unbanned_datetime) AND (isnull(expiration_time) OR expiration_time > Now())")
+
 		query.Execute()
 
 		while(query.NextRow())
 			var/ckey = query.item[1]
 			var/job = query.item[2]
-
-			jobban_keylist.Add("[ckey] - [job]")
-
-		//Job tempbans
-		var/DBQuery/query1 = dbcon.NewQuery("SELECT ckey, job FROM [sqlfdbkdbutil].ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()")
-		query1.Execute()
-
-		while(query1.NextRow())
-			var/ckey = query1.item[1]
-			var/job = query1.item[2]
 
 			jobban_keylist.Add("[ckey] - [job]")
 

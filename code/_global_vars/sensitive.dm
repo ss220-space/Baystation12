@@ -15,5 +15,11 @@ GLOBAL_REAL_VAR(sqlfdbkdbutil) = "test"
 GLOBAL_REAL_VAR(sqlfdbklogin) = "root"
 GLOBAL_REAL_VAR(sqlfdbkpass)  = ""
 
+GLOBAL_REAL_VAR(sqlbansservername) = "unkn"
+GLOBAL_REAL_VAR(list/sqlbansapplyfrom) = list()
+GLOBAL_REAL_VAR(list/sqlbansreadfrom) = list()
+GLOBAL_REAL_VAR(list/sqlbansmodifyfrom) = list()
+GLOBAL_REAL_VAR(sqlbansapplyglobal) = FALSE
+
 var/DBConnection/dbcon = new()
 var/DBConnection/dbcon_old = new()
