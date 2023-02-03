@@ -318,7 +318,7 @@
 /decl/hierarchy/outfit/job/iccgn/iccgn_sergeant
 	name = ICCGN_OUTFIT_JOB_NAME("Droptroops Sergeant")
 	head = /obj/item/clothing/head/iccgn/beret
-	uniform = /obj/item/clothing/under/iccgn/sergant
+	uniform = /obj/item/clothing/under/iccgn/pt
 	id_types = list(/obj/item/card/id/awayiccgn/droptroops/sergeant)
 	belt = /obj/item/storage/belt/holster/security/tactical/farfleet
 	gloves = /obj/item/clothing/gloves/thick/combat/marine
@@ -333,7 +333,7 @@
 /decl/hierarchy/outfit/job/iccgn/iccgn_medic
 	name = ICCGN_OUTFIT_JOB_NAME("Doctor")
 	head = /obj/item/clothing/head/iccgn/service
-	uniform = /obj/item/clothing/under/iccgn/medic
+	uniform = /obj/item/clothing/under/iccgn/utility
 	belt = /obj/item/storage/belt/medical/emt
 	gloves = /obj/item/clothing/gloves/latex/nitrile
 
