@@ -1,10 +1,10 @@
 /obj/item/clothing/accessory/iccgn_rank
 	name = "base rank insignia, ICCGN"
 	desc = "You should not see this."
-	icon = 'packs/faction_iccgn/obj_accessories_lordania.dmi'
+	icon = 'packs/faction_iccgn/obj_accessories_iccgn.dmi'
 	accessory_icons = list(
-		slot_w_uniform_str = 'packs/faction_iccgn/onmob_accessories_lordania.dmi',
-		slot_wear_suit_str = 'packs/faction_iccgn/onmob_accessories_lordania.dmi'
+		slot_w_uniform_str = 'packs/faction_iccgn/onmob_accessories_iccgn.dmi',
+		slot_wear_suit_str = 'packs/faction_iccgn/onmob_accessories_iccgn.dmi'
 	)
 	icon_state = "error"
 	overlay_state = "error"

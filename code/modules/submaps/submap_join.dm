@@ -71,7 +71,10 @@
 		var/mob/living/carbon/human/user_human
 		if(ishuman(character))
 			user_human = character
-			if(job.branch && mil_branches)
+			if(user_human.client.prefs.branches[job.title])
+				user_human.char_branch = mil_branches.get_branch(user_human.client.prefs.branches[job.title])
+				user_human.char_rank = mil_branches.get_rank(user_human.client.prefs.branches[job.title], user_human.client.prefs.ranks[job.title])
+			else if (job.branch && mil_branches)
 				user_human.char_branch = mil_branches.get_branch(job.branch)
 				user_human.char_rank =   mil_branches.get_rank(job.branch, job.rank)
 

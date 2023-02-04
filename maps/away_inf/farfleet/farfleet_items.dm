@@ -65,17 +65,7 @@
 		/obj/item/clothing/accessory/iccgn_patch/ordnance
 	)
 
-/obj/item/clothing/under/iccgn/medic
-	starting_accessories = list(
-		/obj/item/clothing/accessory/iccgn_patch/ordnance
-	)
-
 /obj/item/clothing/under/iccgn/pt
-	starting_accessories = list(
-		/obj/item/clothing/accessory/iccgn_patch/pioneer
-	)
-
-/obj/item/clothing/under/iccgn/sergant
 	starting_accessories = list(
 		/obj/item/clothing/accessory/iccgn_patch/pioneer
 	)
