@@ -411,7 +411,7 @@
 	head = /obj/item/clothing/head/solgov/dress/fleet/command
 	uniform = /obj/item/clothing/under/solgov/service/fleet
 	belt = /obj/item/storage/belt/holster/general/away_solpatrol
-	shoes = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/dress
 	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol
 	r_pocket = /obj/item/card/id/syndicate
 	id_types = list(/obj/item/card/id/centcom/NtPass/station)
