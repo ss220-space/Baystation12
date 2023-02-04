@@ -200,8 +200,8 @@
 	access = access_security
 
 /decl/hierarchy/supply_pack/security/pdwammo
-	name = "Ammunition - SMG top mounted"
-	contains = list(/obj/item/ammo_magazine/smg_top = 4)
+	name = "Ammunition - SMG"
+	contains = list(/obj/item/ammo_magazine/smg = 4)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "SMG ammunition crate"
@@ -209,16 +209,16 @@
 	security_level = SUPPLY_SECURITY_HIGH
 
 /decl/hierarchy/supply_pack/security/pdwammorubber
-	name = "Ammunition - SMG top mounted rubber"
-	contains = list(/obj/item/ammo_magazine/smg_top/rubber = 4)
+	name = "Ammunition - SMG rubber"
+	contains = list(/obj/item/ammo_magazine/smg/rubber = 4)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "SMG rubber ammunition crate"
 	access = access_security
 
 /decl/hierarchy/supply_pack/security/pdwammopractice
-	name = "Ammunition - SMG top mounted practice"
-	contains = list(/obj/item/ammo_magazine/smg_top/practice = 8)
+	name = "Ammunition - SMG practice"
+	contains = list(/obj/item/ammo_magazine/smg/practice = 8)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "SMG practice ammunition crate"

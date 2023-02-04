@@ -109,6 +109,15 @@
 					 SKILL_HAULING = SKILL_BASIC,
 					 SKILL_MEDICAL = SKILL_BASIC,
 					 SKILL_EVA = SKILL_BASIC)
+
+	allowed_branches = list(/datum/mil_branch/iccgn)
+	allowed_ranks = list(
+		/datum/mil_rank/iccgn/e1,
+		/datum/mil_rank/iccgn/e2
+	)
+	branch = null
+	rank = null
+
 	access = list(access_away_iccgn, access_away_iccgn_droptroops, access_engine_equip)
 	//required_role = list("Sub-Lieutenant", "Ensign")
 
@@ -133,6 +142,14 @@
 					 SKILL_MEDICAL = SKILL_BASIC,
 					 SKILL_PILOT = SKILL_ADEPT,
 					 SKILL_EVA = SKILL_BASIC)
+
+	allowed_ranks = list(
+		/datum/mil_rank/iccgn/e3,
+		/datum/mil_rank/iccgn/e4,
+		/datum/mil_rank/iccgn/e5,
+		/datum/mil_rank/iccgn/e6
+	)
+
 	access = list(access_away_iccgn, access_away_iccgn_droptroops, access_away_iccgn_sergeant, access_engine_equip)
 	//required_role = list("Sub-Lieutenant", "Ensign")
 
@@ -156,6 +173,12 @@
 					 SKILL_MEDICAL = SKILL_BASIC,
 					 SKILL_PILOT = SKILL_ADEPT,
 					 SKILL_EVA = SKILL_BASIC)
+
+	allowed_ranks = list(
+		/datum/mil_rank/iccgn/o4,
+		/datum/mil_rank/iccgn/o5
+	)
+
 	access = list(access_away_iccgn, access_away_iccgn_droptroops, access_away_iccgn_sergeant, access_away_iccgn_captain, access_engine_equip)
 	//required_role = null
 
@@ -178,6 +201,13 @@
 					 SKILL_ANATOMY = SKILL_BASIC,
 					 SKILL_CHEMISTRY = SKILL_BASIC,
 					 SKILL_EVA = SKILL_BASIC)
+
+	allowed_ranks = list(
+		/datum/mil_rank/iccgn/o1,
+		/datum/mil_rank/iccgn/o2,
+		/datum/mil_rank/iccgn/o3
+	)
+
 	access = list(access_away_iccgn, access_engine_equip)
 
 /datum/job/submap/away_iccgn_farfleet/iccgn_gunner
@@ -204,6 +234,12 @@
 					 SKILL_ATMOS  = SKILL_BASIC,
 					 SKILL_ENGINES = SKILL_ADEPT,
 					 SKILL_DEVICES = SKILL_BASIC)
+
+	allowed_ranks = list(
+		/datum/mil_rank/iccgn/e7,
+		/datum/mil_rank/iccgn/e8
+	)
+
 	access = list(access_away_iccgn, access_engine_equip)
 
 

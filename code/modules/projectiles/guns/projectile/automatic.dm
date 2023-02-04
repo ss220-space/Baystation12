@@ -85,7 +85,7 @@
 	safety_icon = "safety"
 	force = 10
 	caliber = CALIBER_PISTOL
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT|SLOT_BACK
 	magazine_type = /obj/item/ammo_magazine/smg
 	allowed_magazines = /obj/item/ammo_magazine/smg
@@ -511,21 +511,20 @@
 		icon_state = "ak12-empty"
 		wielded_item_state = "ak12-wielded-empty"
 
-
-/obj/item/gun/projectile/automatic/aksu
-	name = "\improper SkM-44(u)"
-	desc = "A cheap redesign of an already cheap rifle. Supplied without folding stock for easy storage, accuracy of this modification is rather questionable"
-	icon = 'icons/obj/guns/48x32guns.dmi'
-	icon_state = "aks"
-	item_state = null
+/obj/item/gun/projectile/automatic/mr735
+	name = "MR-735"
+	desc = "A cheap rifle for close quarters combat. Has an auto-firing mode and large calibre. HelTek MR-735 is a standart equipment of ICCG Space-assault Forces, designed without folding stock for easy storage and for gunfire in confined spaces. Possesses autofire and is perfect for the ship's crew."
+	icon = 'icons/obj/guns/mr735.dmi'
+	icon_state = "nostockrifle"
+	item_state = "mr735nostockrifle"
 	force = 10
 	caliber = CALIBER_RIFLE
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/rifle/ak
-	allowed_magazines = /obj/item/ammo_magazine/rifle/ak
-	wielded_item_state = "aksu-wielded"
+	magazine_type = /obj/item/ammo_magazine/rifle
+	allowed_magazines = /obj/item/ammo_magazine/rifle
+	wielded_item_state = "mbr735nostockrifle_wielded"
 	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
 
@@ -536,45 +535,42 @@
 		list(mode_name="full auto",      burst=1,    fire_delay=1.7,    burst_delay=1.3,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(1.3, 1.5, 1.7, 1.9, 2.2), autofire_enabled=1)
 		)
 
-/obj/item/gun/projectile/automatic/aksu/update_icon()
+/obj/item/gun/projectile/automatic/mr735/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "aks"
-		wielded_item_state = "aks-wielded"
+		icon_state = "nostockrifle"
+		wielded_item_state = "mr735nostockrifle_wielded"
 	else
-		icon_state = "aks-empty"
-		wielded_item_state = "aks-wielded-empty"
+		icon_state = "nostockrifle_empty"
+		wielded_item_state = "mr735nostockrifle_wielded_empty"
 
 
-/obj/item/gun/projectile/automatic/aks74u
-	name = "\improper SkM-34(u)"
-	desc = "An obsolete model of the SkM-44(u). Supplied without folding buttstock for easy storage, the forend is made of bakelite."
-	icon = 'icons/obj/guns/48x32guns.dmi'
-	icon_state = "aks74u"
-	item_state = null
+/obj/item/gun/projectile/automatic/mbr
+	name = "MBR"
+	desc = "A shabby bullpup carbine. Despite its size, it looks a little uncomfortable, but it is robust. HelTek MBR is a standart equipment of ICCG Space-assault Forces, designed in a bullpup layout. Possesses autofire and is perfect for the ship's crew."
+	icon = 'icons/obj/guns/mbr.dmi'
+	icon_state = "malyatko"
+	item_state = "mbrmalyatko"
 	force = 10
 	caliber = CALIBER_RIFLE
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/rifle/ak
-	allowed_magazines = /obj/item/ammo_magazine/rifle/ak
-	wielded_item_state = "ak12-wielded"
+	magazine_type = /obj/item/ammo_magazine/rifle
+	allowed_magazines = /obj/item/ammo_magazine/rifle
+	wielded_item_state = "mbrmalyatko_wielded"
 	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
 
-	//Assault rifle, burst fire degrades quicker than SMG, worse one-handing penalty, slightly increased move delay
 	firemodes = list(
 		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=8,  burst_accuracy=null,                dispersion=null),
 		list(mode_name="2-round bursts", burst=2,    fire_delay=null, one_hand_penalty=9,  burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="full auto",      burst=1,    fire_delay=1.7,    burst_delay=1.3,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(1.3, 1.5, 1.7, 1.9, 2.2), autofire_enabled=1)
 		)
 
-/obj/item/gun/projectile/automatic/aks74u/update_icon()
+/obj/item/gun/projectile/automatic/mbr/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "aks74u"
-		wielded_item_state = "aks74u-wielded"
+		icon_state = "malyatko"
 	else
-		icon_state = "aks74u-empty"
-		wielded_item_state = "aks74u-wielded-empty"
+		icon_state = "malyatko_empty"

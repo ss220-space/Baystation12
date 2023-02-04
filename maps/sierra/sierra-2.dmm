@@ -1001,6 +1001,12 @@
 /obj/item/storage/candle_box/scented,
 /obj/item/storage/candle_box,
 /obj/item/storage/candle_box,
+/obj/item/storage/box/large/coal,
+/obj/item/storage/box/large/coal,
+/obj/item/storage/box/large/coal,
+/obj/item/storage/box/large/coal,
+/obj/item/hookah,
+/obj/item/hookah,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galley/backroom)
 "abW" = (
@@ -2001,6 +2007,9 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
+	},
+/obj/structure/sign/poster/nyc/would_you_plant{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
@@ -27025,9 +27034,10 @@
 	pixel_x = 24
 	},
 /obj/structure/closet/cabinet,
-/obj/random/drinkbottle,
-/obj/random/mre/dessert,
-/obj/random/single/lighter,
+/obj/item/hookah,
+/obj/item/coal,
+/obj/item/coal,
+/obj/item/coal,
 /turf/simulated/floor/wood/walnut,
 /area/vacant/gambling)
 "aWB" = (

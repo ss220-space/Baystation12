@@ -1520,13 +1520,14 @@ GLOBAL_LIST_EMPTY(vending_products)
 					/obj/item/device/cable_painter = 2,
 					/obj/item/rpd = 2,
 					/obj/item/clamp = 4,
-					/obj/item/tape_roll = 6
+					/obj/item/tape_roll = 6,
+					/obj/item/device/paint_sprayer = 2,
+					/obj/item/grenade/chem_grenade/metalfoam = 5,
+					/obj/item/sealgen_case = 3
 					)
 
 	contraband = list(
-					  /obj/item/beartrap = 2,
-					  /obj/item/rcd = 1,
-					  /obj/item/rcd_ammo = 5
+					  /obj/item/cell/potato = 5
 					  )
 
 	premium = list(

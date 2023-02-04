@@ -37,7 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.onunload = () => socket && socket.close();
 }
 
-const subscribe = fn => subscribers.push(fn);
+export const subscribe = fn => subscribers.push(fn);
 
 /**
  * A json serializer which handles circular references and other junk.
@@ -91,7 +91,7 @@ const serializeObject = obj => {
   return json;
 };
 
-const sendMessage = msg => {
+export const sendMessage = msg => {
   if (process.env.NODE_ENV !== 'production') {
     const json = serializeObject(msg);
     // Send message using WebSocket
@@ -119,7 +119,7 @@ const sendMessage = msg => {
   }
 };
 
-const sendLogEntry = (level, ns, ...args) => {
+export const sendLogEntry = (level, ns, ...args) => {
   if (process.env.NODE_ENV !== 'production') {
     try {
       sendMessage({
@@ -135,7 +135,7 @@ const sendLogEntry = (level, ns, ...args) => {
   }
 };
 
-const setupHotReloading = () => {
+export const setupHotReloading = () => {
   if (process.env.NODE_ENV !== 'production'
       && process.env.WEBPACK_HMR_ENABLED
       && window.WebSocket) {
@@ -167,11 +167,4 @@ const setupHotReloading = () => {
       });
     }
   }
-};
-
-module.exports = {
-  subscribe,
-  sendMessage,
-  sendLogEntry,
-  setupHotReloading,
 };

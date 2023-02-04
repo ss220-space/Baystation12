@@ -119,9 +119,9 @@ var/const/OVERMAP_SPEED_CONSTANT = (1 SECOND)
 	var/decl/ship_contact_class/class = decls_repository.get_decl(contact_class)
 	. += "<br>Class: [class.class_long], mass [vessel_mass] tons."
 	if(!is_still())
-		. += {"\n\[i\]Heading\[/i\]: [get_heading_degrees()]\n\[i\]Velocity\[/i\]: [get_speed() * 1000]"}
+		. += {"\n<i>Heading</i>: [get_heading_degrees()]\n<i>Velocity</i>: [get_speed() * 1000]"}
 	else
-		. += {"\n\[i\]Vessel was stationary at time of scan.\[/i\]\n"}
+		. += {"\n<i>Vessel was stationary at time of scan.</i>\n"}
 
 	var/life = 0
 
@@ -129,7 +129,7 @@ var/const/OVERMAP_SPEED_CONSTANT = (1 SECOND)
 		if(L.z in map_z) //Things inside things we'll consider shielded, otherwise we'd want to use get_z(L)
 			life++
 
-	. += {"\[i\]Life Signs\[/i\]: [life ? life : "None"]"}
+	. += {"<i>Life Signs</i>: [life ? life : "None"]"}
 
 //Projected acceleration based on information from engines
 /obj/effect/overmap/visitable/ship/proc/get_acceleration()
