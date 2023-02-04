@@ -57,7 +57,6 @@
 /obj/item/clothing/under/solgov/utility/fleet/officer/pilot1/away_solpatrol
 	starting_accessories = list(
 		/obj/item/clothing/accessory/solgov/specialty/pilot,
-		/obj/item/clothing/accessory/solgov/rank/fleet/officer,
 		/obj/item/clothing/accessory/solgov/fleet_patch/fifth
 	)
 
@@ -65,7 +64,6 @@
 	starting_accessories = list(
 		/obj/item/clothing/accessory/solgov/department/command/fleet,
 		/obj/item/clothing/accessory/solgov/specialty/pilot,
-		/obj/item/clothing/accessory/solgov/rank/fleet/officer/o4,
 		/obj/item/clothing/accessory/solgov/fleet_patch/fifth
 	)
 
@@ -78,28 +76,31 @@
 /obj/item/clothing/under/solgov/utility/fleet/medical/away_solpatrol
 	starting_accessories = list(
 		/obj/item/clothing/accessory/solgov/department/medical/fleet,
-		/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e4,
 		/obj/item/clothing/accessory/solgov/fleet_patch/fifth
 	)
 
 /obj/item/clothing/under/solgov/utility/fleet/away_solpatrol
 	starting_accessories = list(
 		/obj/item/clothing/accessory/solgov/department/command/fleet,
-		/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e4,
 		/obj/item/clothing/accessory/solgov/fleet_patch/fifth
 	)
 
-/obj/item/clothing/under/solgov/utility/army/urban/away_solpatrol
-	starting_accessories = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e5)
-
-/obj/item/clothing/under/solgov/utility/army/urban/away_solpatrol/captain
-	starting_accessories = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o3)
+/obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol
+	starting_accessories = list(
+		/obj/item/clothing/accessory/solgov/rank/fleet/officer/o6,
+		/obj/item/clothing/accessory/solgov/specialty/officer
+	)
 
 /obj/item/storage/belt/holster/security/tactical/away_solpatrol/New()
 	..()
 	new /obj/item/gun/projectile/pistol/military(src)
 	new /obj/item/ammo_magazine/pistol/double(src)
 	new /obj/item/ammo_magazine/pistol/double(src)
+
+/obj/item/storage/belt/holster/general/away_solpatrol/New()
+	..()
+	new /obj/item/modular_computer/tablet/preset/custom_loadout/advanced(src)
+	new /obj/item/gun/projectile/revolver/medium(src)
 
 /* MISC
  * ========
