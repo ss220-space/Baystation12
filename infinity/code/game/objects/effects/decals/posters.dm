@@ -508,7 +508,7 @@
 	judge you for wiping your pants and dancing drunk.\" The tag at the bottom \
 	of the poster indicates that the poster is sponsored by Grayson Manufactories - HRM"
 
-/decl/poster/nyc/good_old_times
+/decl/poster/nyc_good_old_times
 	// by Скавен-крыс
 	icon_state = "goodoldtimes"
 	name = "Good Old Times"
