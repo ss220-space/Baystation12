@@ -262,11 +262,13 @@
 	vend_delay = 15
 	req_access = list(access_away_cavalry)
 	products = list(/obj/item/clothing/head/beret/solgov/fleet/branch/fifth = 5,
-					/obj/item/clothing/head/solgov/utility/fleet = 5,
+					/obj/item/clothing/head/soft/solgov/fleet = 5,
+					/obj/item/clothing/head/ushanka/solgov/fleet = 5,
 					/obj/item/clothing/under/solgov/utility/fleet = 5,
 					/obj/item/clothing/under/solgov/utility/fleet/combat = 5,
 					/obj/item/clothing/under/solgov/service/fleet = 5,
 					/obj/item/clothing/under/solgov/pt/fleet = 5,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet = 5,
 					/obj/item/clothing/shoes/dutyboots = 5,
 					/obj/item/clothing/shoes/dress = 5,
 					/obj/item/clothing/shoes/black = 5,

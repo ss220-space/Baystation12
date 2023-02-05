@@ -102,6 +102,10 @@
 	new /obj/item/modular_computer/tablet/preset/custom_loadout/advanced(src)
 	new /obj/item/gun/projectile/revolver/medium(src)
 
+/obj/item/clothing/accessory/armband/bluegold/away_solpatrol
+	name = "SCG armband"
+	desc = "An armband, worn by the crew to display which country they represent. This one is blue and gold."
+	icon_state = "solblue"
 /* MISC
  * ========
  */
