@@ -490,6 +490,29 @@
 	from Grayson Manufactories Ltd. encourages you to pick up a pickaxe and start \
 	mining! \"We mining all, even space!\""
 
+/decl/poster/nyc/forge
+	// by Скавен-крыс
+	icon_state = "forge"
+	name = "Forge"
+	desc = "In the poster you see many shuttles and ships flying into the unknown of space. \"Many ships and shuttles \
+	go to different corners of the galaxy in search of resources, and the miners on them \
+	forge their own destiny, for it is in their hands!\" \
+	A small tag at the bottom indicates that this poster is sponsored by Grayson Manufactories - HRM"
+
+/decl/poster/nyc/space_dwarf
+	// by Скавен-крыс
+	icon_state = "spacedwarf"
+	name = "Space Dwarf"
+	desc = "This poster shows a bearded man with a mug of beer. \"After your shift at the mine, \
+	it's always a good idea to go to the bar and refresh yourself with a cold mug of beer. After all, no one will  \
+	judge you for wiping your pants and dancing drunk.\" The tag at the bottom \
+	of the poster indicates that the poster is sponsored by Grayson Manufactories - HRM"
+
+/decl/poster/nyc/good_old_times
+	// by Скавен-крыс
+	icon_state = "goodoldtimes"
+	name = "Good Old Times"
+	desc = "A poster with a character from the old days, no one remembers his name, but they usually talk about him in a good way"
 
 /decl/poster/nyc/tersten_ranger
 	// by Wastelander41
