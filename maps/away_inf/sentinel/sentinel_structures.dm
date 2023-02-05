@@ -231,11 +231,11 @@
 	name = "urban attire closet"
 	closet_appearance = /decl/closet_appearance/tactical
 
-/obj/structure/closet/wardrobe/patrol/army/WillContain()
+/obj/structure/closet/wardrobe/patrol/urban/WillContain()
 	return list(
 	/obj/item/clothing/under/solgov/utility/army/urban  = 3,
 	/obj/item/clothing/head/solgov/utility/army/urban = 3,
-	/obj/item/clothing/shoes/tactical = 3,
+	/obj/item/clothing/shoes/dutyboots = 3,
 	/obj/item/clothing/gloves/thick/combat/marine = 3
 	)
 
