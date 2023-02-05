@@ -490,7 +490,7 @@
 	from Grayson Manufactories Ltd. encourages you to pick up a pickaxe and start \
 	mining! \"We mining all, even space!\""
 
-/decl/poster/nyc/forge
+/decl/poster/nyc_forge
 	// by Скавен-крыс
 	icon_state = "forge"
 	name = "Forge"
