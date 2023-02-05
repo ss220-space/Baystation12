@@ -499,7 +499,7 @@
 	forge their own destiny, for it is in their hands!\" \
 	A small tag at the bottom indicates that this poster is sponsored by Grayson Manufactories - HRM"
 
-/decl/poster/nyc/space_dwarf
+/decl/poster/nyc_space_dwarf
 	// by Скавен-крыс
 	icon_state = "spacedwarf"
 	name = "Space Dwarf"
