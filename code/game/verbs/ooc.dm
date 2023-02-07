@@ -124,24 +124,24 @@
 				log_game("GOONCHAT: [key_name(src)] Failed to fix their goonchat window after recreating the chatOutput and forcing a load()")
 
 	else
-		C.force_white_theme()
+		force_white_theme()
 		winset(C, "output", "is-visible=true;is-disabled=false")
 		winset(C, "browseroutput", "is-visible=false")
-		C.chatOutput.loaded = FALSE
-		C.chatOutput.start()
+		chatOutput.loaded = FALSE
+		chatOutput.start()
 
 		var/action = alert(src, "First attempt\nIs your chat fixed?", "", "YES", "NO")
 		if (action == "YES")
 			log_game("GOONCHAT: [key_name(src)] Fix2 fixed chat in one step")
 		else
-			C.force_white_theme()
+			force_white_theme()
 			winset(C, "output", "is-visible=true;is-disabled=false")
 			winset(C, "browseroutput", "is-visible=false")
 
 			sleep(1 SECOND)
 
-			C.chatOutput.loaded = FALSE
-			C.chatOutput.start()
+			chatOutput.loaded = FALSE
+			chatOutput.start()
 
 			action = alert(src, "Second attempt\nIs your chat fixed?", "", "YES", "NO")
 
