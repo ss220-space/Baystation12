@@ -125,8 +125,8 @@
 
 	else
 		force_white_theme()
-		winset(C, "output", "is-visible=true;is-disabled=false")
-		winset(C, "browseroutput", "is-visible=false")
+		winset(src, "output", "is-visible=true;is-disabled=false")
+		winset(src, "browseroutput", "is-visible=false")
 		chatOutput.loaded = FALSE
 		chatOutput.start()
 
@@ -135,8 +135,8 @@
 			log_game("GOONCHAT: [key_name(src)] Fix2 fixed chat in one step")
 		else
 			force_white_theme()
-			winset(C, "output", "is-visible=true;is-disabled=false")
-			winset(C, "browseroutput", "is-visible=false")
+			winset(src, "output", "is-visible=true;is-disabled=false")
+			winset(src, "browseroutput", "is-visible=false")
 
 			sleep(1 SECOND)
 
