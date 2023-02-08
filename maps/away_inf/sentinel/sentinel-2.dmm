@@ -1620,9 +1620,9 @@
 	dir = 8
 	},
 /obj/structure/table/rack,
-/obj/item/missile_equipment/passenger,
-/obj/item/missile_equipment/passenger,
-/obj/item/missile_equipment/passenger,
+/obj/item/missile_equipment/payload/antimissile,
+/obj/item/missile_equipment/payload/antimissile,
+/obj/item/missile_equipment/payload/antimissile,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "di" = (
