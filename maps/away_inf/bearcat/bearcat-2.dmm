@@ -165,7 +165,6 @@
 "av" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/hologram/holopad/longrange/remoteship,
 /turf/simulated/floor/tiled/dark/usedup,
 /area/ship/scrap/command/bridge)
 "aw" = (
@@ -325,6 +324,9 @@
 /obj/item/storage/backpack/dufflebag/syndie,
 /obj/item/storage/box/ammo/shotgunshells,
 /obj/item/handcuffs,
+/obj/structure/panic_button{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/ship/scrap/command/captain)
 "aL" = (
@@ -2832,9 +2834,6 @@
 /obj/structure/cable,
 /obj/machinery/light_switch{
 	pixel_x = -25
-	},
-/obj/structure/closet/medical_wall/filled{
-	pixel_y = -32
 	},
 /obj/item/tape_roll,
 /obj/item/retractor,
