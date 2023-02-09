@@ -1,5 +1,5 @@
 /datum/map/sierra
-	lobby_screens = list('infinity/title_screens/infinity-2020.png')
+	lobby_screens = list('infinity/title_screens/locutus.png')
 	lobby_tracks = list(
 		/decl/audio/track/codebrain,
 		/decl/audio/track/gneiss,
