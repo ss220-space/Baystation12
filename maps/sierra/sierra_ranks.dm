@@ -1,6 +1,6 @@
 /datum/job/submap
 	branch = /datum/mil_branch/civilian
-	rank =   /datum/mil_rank/civ/civ
+	rank = /datum/mil_rank/civ/civ
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 
@@ -11,7 +11,9 @@
 		/datum/mil_branch/employee,
 		/datum/mil_branch/alien,
 		/datum/mil_branch/skrell_fleet,
-		/datum/mil_branch/iccgn
+		/datum/mil_branch/iccgn,
+		/datum/mil_branch/fleet,
+		/datum/mil_branch/army
 	)
 
 	spawn_branch_types = list(
@@ -20,7 +22,9 @@
 		/datum/mil_branch/employee,
 		/datum/mil_branch/alien,
 		/datum/mil_branch/skrell_fleet,
-		/datum/mil_branch/iccgn
+		/datum/mil_branch/iccgn,
+		/datum/mil_branch/fleet,
+		/datum/mil_branch/army
 	)
 
 /*
@@ -34,35 +38,53 @@
 			/datum/mil_branch/skrell_fleet),
 		/datum/species/machine  = list(
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army),
 		/datum/species/adherent = list(
 			/datum/mil_branch/contractor,
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army),
 		/datum/species/unathi   = list(
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army),
 		/datum/species/skrell   = list(
-			/datum/mil_branch/alien),
+			/datum/mil_branch/alien,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army),
 		/datum/species/nabber   = list(
 			/datum/mil_branch/civilian,
 			/datum/mil_branch/employee,
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army),
 		/datum/species/diona    = list(
 			/datum/mil_branch/contractor,
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army),
 		/datum/species/tajaran  = list(
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army),
 		/datum/species/resomi   = list(
 			/datum/mil_branch/alien,
-			/datum/mil_branch/skrell_fleet),
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army),
 		/datum/species/vox      = list(
 			/datum/mil_branch/contractor,
 			/datum/mil_branch/employee,
-			/datum/mil_branch/skrell_fleet
+			/datum/mil_branch/skrell_fleet,
+			/datum/mil_branch/fleet,
+			/datum/mil_branch/army
 		)
 	)
 

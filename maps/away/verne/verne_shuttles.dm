@@ -8,7 +8,9 @@
 	name = "SRV Venerable Catfish"
 	scanner_name = "SRV Venerable Catfish"
 	shuttle = "SRV Venerable Catfish"
-	scanner_desc = @{"<center><img src = sollogo.png></center><br> <i>Registration</i>: SRV Verne-1 Venerable Catfish, SSE-U17 long range shuttle<br>
+	scanner_desc = @{"
+		<center><img src = sollogo.png></center><br> 
+		<i>Registration</i>: SRV Verne-1 Venerable Catfish, SSE-U17 long range shuttle<br>
 		<i>Transponder</i>: Transmitting (SCI), SCGRV"}
 	contact_class = /decl/ship_contact_class/srv_shuttle
 	fore_dir = NORTH
@@ -21,7 +23,7 @@
 
 /decl/ship_contact_class/srv_shuttle
 	class_short = "SRV"
-	class_long = "Sol Research Vessel Shuttle"
+	class_long = "Research Shuttle"
 	max_ship_mass = 6000
 
 /datum/shuttle/autodock/overmap/verne

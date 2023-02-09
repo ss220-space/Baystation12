@@ -1572,12 +1572,15 @@
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/crew/brig/office)
 "dc" = (
-/obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id_tag = "parmory";
 	name = "Armory Shutters"
+	},
+/obj/structure/wall_frame/prepainted,
+/obj/structure/table/wallf{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/crew/brig/emergency_armory)
@@ -2012,6 +2015,10 @@
 "ea" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/clothing/accessory/armband/bluegold/away_solpatrol,
+/obj/item/clothing/accessory/armband/bluegold/away_solpatrol,
+/obj/item/clothing/accessory/armband/bluegold/away_solpatrol,
+/obj/item/clothing/accessory/armband/bluegold/away_solpatrol,
 /obj/item/clothing/accessory/storage/holster/thigh,
 /obj/item/clothing/accessory/storage/holster/thigh,
 /obj/item/clothing/accessory/storage/holster/thigh,
