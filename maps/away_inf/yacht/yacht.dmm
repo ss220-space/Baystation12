@@ -150,6 +150,9 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/structure/panic_button{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood/walnut,
 /area/yacht/bridge)
 "at" = (

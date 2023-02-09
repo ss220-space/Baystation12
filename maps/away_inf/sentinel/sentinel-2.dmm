@@ -1620,9 +1620,10 @@
 	dir = 8
 	},
 /obj/structure/table/rack,
-/obj/item/missile_equipment/passenger,
-/obj/item/missile_equipment/passenger,
-/obj/item/missile_equipment/passenger,
+/obj/item/missile_equipment/thruster/planet,
+/obj/item/missile_equipment/thruster/planet,
+/obj/item/missile_equipment/thruster/hunter,
+/obj/item/missile_equipment/thruster/hunter,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/upper/munition)
 "di" = (
@@ -2905,6 +2906,11 @@
 	dir = 1
 	},
 /obj/structure/table/rack,
+/obj/item/missile_equipment/autoarm,
+/obj/item/missile_equipment/autoarm,
+/obj/item/missile_equipment/autoarm,
+/obj/item/missile_equipment/autoarm,
+/obj/item/missile_equipment/autoarm,
 /obj/item/missile_equipment/autoarm,
 /obj/item/missile_equipment/autoarm,
 /obj/item/missile_equipment/autoarm,
@@ -4296,7 +4302,7 @@
 /area/ship/patrol/maintenance/upper)
 "oM" = (
 /obj/structure/railing/mapped,
-/obj/item/toy/plushie/dakimakura,
+/obj/structure/plushie/drone,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/upper/aft)
 "pk" = (
@@ -4635,6 +4641,8 @@
 /obj/item/missile_equipment/payload/emp,
 /obj/item/missile_equipment/payload/emp,
 /obj/item/missile_equipment/payload/emp,
+/obj/item/missile_equipment/payload/emp,
+/obj/item/missile_equipment/payload/explosive,
 /obj/item/missile_equipment/payload/explosive,
 /obj/item/missile_equipment/payload/explosive,
 /obj/item/missile_equipment/payload/explosive,
