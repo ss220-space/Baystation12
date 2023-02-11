@@ -16,11 +16,11 @@
 
 /obj/structure/closet/secure_closet/guncabinet/patrol/assault/WillContain()
 	return list(
-		/obj/item/ammo_magazine/uni46x30mm = 15,
-		/obj/item/gun/projectile/automatic/invider = 3,
+		/obj/item/ammo_magazine/uni46x30mm = 8,
+		/obj/item/gun/projectile/automatic/invider = 1,
 		/obj/item/gun/projectile/shotgun/magazine = 1,
 		/obj/item/clothing/accessory/storage/bandolier = 1,
-		/obj/item/ammo_magazine/c12m = 6,
+		/obj/item/ammo_magazine/c12m = 8,
 		/obj/item/ammo_magazine/c12m/buckshot = 4,
 		/obj/item/ammo_magazine/c12m/shock = 4
 	)
@@ -30,8 +30,8 @@
 		/obj/item/ammo_magazine/c12755 = 8,
         /obj/item/gun/projectile/automatic/amrcarabine = 1,
         /obj/item/clothing/accessory/storage/bandolier = 1,
-        /obj/item/gun/projectile/automatic/bullpup_rifle = 2,
-        /obj/item/ammo_magazine/mil_rifle = 10,
+        /obj/item/gun/projectile/automatic/bullpup_rifle = 1,
+        /obj/item/ammo_magazine/mil_rifle = 8,
         /obj/item/gun/projectile/pistol/military = 3
 	)
 
