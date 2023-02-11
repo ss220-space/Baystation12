@@ -88,6 +88,10 @@
 	name = "ammunition (SMG, top mounted)"
 	path = /obj/item/ammo_magazine/smg_top
 
+/datum/fabricator_recipe/arms_ammo/hidden/magazine_smg_military
+	name = "ammunition (SMG, military)"
+	path = /obj/item/ammo_magazine/uni46x30mm
+
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_arifle
 	name = "ammunition (rifle magazine)"
 	path = /obj/item/ammo_magazine/rifle
