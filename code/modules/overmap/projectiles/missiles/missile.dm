@@ -75,7 +75,7 @@
 // Move to the overmap until we encounter a new z
 /obj/structure/missile/touch_map_edge()
 
-	addtimer(CALLBACK(src, .proc/expire), lifetime)
+	addtimer(CALLBACK(src, .proc/expire), lifetime, TIMER_NO_HASH_WAIT)
 
 	//Missile destroyed if it fails to hit something
 	if(entered_away)
