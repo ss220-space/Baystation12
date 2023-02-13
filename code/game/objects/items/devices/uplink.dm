@@ -215,6 +215,7 @@
 // Includes normal radio uplink, multitool uplink,
 // implant uplink (not the implant tool) and a preset headset uplink.
 /obj/item/device/radio/uplink
+	name = "frequency decipher"
 	icon_state = "frequency_decipher"
 	var/status_message = ""
 	var/numeric_input = ""
