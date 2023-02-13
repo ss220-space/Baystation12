@@ -23494,11 +23494,16 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/meeting_room)
 "aPL" = (
-/obj/machinery/alarm{
+/obj/machinery/computer/modular/preset/command{
+	dir = 8;
+	icon_state = "console"
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = 24
 	},
-/turf/simulated/wall/prepainted,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/meeting_room)
 "aPM" = (
 /obj/structure/girder,
@@ -33186,14 +33191,11 @@
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/corner/black/mono,
 /obj/item/folder,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/bridge/meeting_room)
-"bhZ" = (
-/obj/item/device/radio/intercom{
+/obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 24
 	},
-/turf/simulated/wall/prepainted,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/meeting_room)
 "bia" = (
 /obj/effect/floor_decal/corner/darkblue/mono,
@@ -51878,7 +51880,7 @@ aoj
 aLp
 asy
 azF
-asy
+aPL
 bhY
 bjc
 aka
@@ -52080,8 +52082,8 @@ aoj
 aoj
 aoj
 aoj
-bhZ
-aPL
+aoj
+aoj
 aoj
 aKj
 aQQ
