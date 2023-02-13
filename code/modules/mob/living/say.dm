@@ -203,7 +203,7 @@ proc/get_radio_key_from_channel(var/channel)
 	message = html_decode(message)
 
 	var/end_char = copytext_char(message, length_char(message), length_char(message) + 1) // INF Localiztion
-	if(!(end_char in list(".", "?", "!", "-", "~", ":")))
+	if(!(end_char in list(".", "?", "!", "-", "~", ":", "\"")))
 		message += "."
 
 	message = html_encode(message)
@@ -267,6 +267,7 @@ proc/get_radio_key_from_channel(var/channel)
 	message = handle_autohiss(message, speaking)
 	message = format_say_message(message)
 	message = process_chat_markup(message)
+	message = say_emphasis(message)
 
 	if(speaking && !speaking.can_be_spoken_properly_by(src))
 		message = speaking.muddle(message)

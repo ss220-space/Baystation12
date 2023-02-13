@@ -5,9 +5,9 @@
 	name = "submachine gun guncabinet"
 
 /obj/structure/closet/secure_closet/guncabinet/sierra_armory/smg/WillContain()
-	return list(/obj/item/gun/projectile/automatic/sec_smg = 2,
-				/obj/item/ammo_magazine/smg_top/rubber = 4,
-				/obj/item/ammo_magazine/smg_top = 4)
+	return list(/obj/item/gun/projectile/automatic/merc_smg = 2,
+				/obj/item/ammo_magazine/smg/rubber = 4,
+				/obj/item/ammo_magazine/smg = 4)
 
 /obj/structure/closet/secure_closet/guncabinet/sierra_armory/shotgun
 	name = "shotgun guncabinet"

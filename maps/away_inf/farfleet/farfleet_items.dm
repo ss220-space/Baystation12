@@ -57,24 +57,16 @@
 
 /obj/item/clothing/under/iccgn/service_command
 	starting_accessories = list(
-		/obj/item/clothing/accessory/iccgn_rank/of6,
 		/obj/item/clothing/accessory/iccgn_patch/ordnance
-	)
-
-/obj/item/clothing/under/iccgn/service
-	starting_accessories = list(
-		/obj/item/clothing/accessory/iccgn_rank/or3
 	)
 
 /obj/item/clothing/under/iccgn/utility
 	starting_accessories = list(
-		/obj/item/clothing/accessory/iccgn_rank/or3,
 		/obj/item/clothing/accessory/iccgn_patch/ordnance
 	)
 
 /obj/item/clothing/under/iccgn/pt
 	starting_accessories = list(
-		/obj/item/clothing/accessory/iccgn_rank/or3,
 		/obj/item/clothing/accessory/iccgn_patch/pioneer
 	)
 

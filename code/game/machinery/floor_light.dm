@@ -25,6 +25,7 @@ var/list/floor_light_cache = list()
 
 /obj/machinery/floor_light/attackby(var/obj/item/W, var/mob/user)
 	if(isScrewdriver(W))
+		playsound(src.loc, 'sound/items/Screwdriver.ogg', 75, 1)
 		anchored = !anchored
 		if(use_power)
 			update_use_power(POWER_USE_OFF)
@@ -71,6 +72,7 @@ var/list/floor_light_cache = list()
 			visible_message("<span class='danger'>\The [user] attacks \the [src]!</span>")
 			playsound(src.loc, 'sound/effects/Glasshit.ogg', 75, 1)
 			if(isnull(damaged)) damaged = 0
+			update_icon()
 		return TRUE
 
 /obj/machinery/floor_light/interface_interact(var/mob/user)

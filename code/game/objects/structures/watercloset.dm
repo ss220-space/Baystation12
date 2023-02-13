@@ -425,11 +425,13 @@
 	thing.update_icon()
 
 /obj/structure/hygiene/sink/attack_hand(var/mob/user)
+	var/target_part = "hands"
 	if (ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		var/target_zone = H.zone_sel.selecting
 		if((target_zone == BP_HEAD) && (H.organs_by_name[BP_HEAD]))
+			target_part = "face"
 			var/obj/item/organ/external/head/HD = H.organs_by_name[BP_HEAD]
 			if(HD.forehead_graffiti)
 				graffiti = 1
@@ -450,9 +452,9 @@
 		return
 
 	if(graffiti)
-		to_chat(usr, "<span class='notice'>You start removing your graffiti and washing your hands.</span>")
+		to_chat(usr, "<span class='notice'>You start removing your graffiti and washing your [target_part].</span>")
 	else
-		to_chat(usr, "<span class='notice'>You start washing your hands.</span>")
+		to_chat(usr, "<span class='notice'>You start washing your [target_part].</span>")
 
 	playsound(loc, 'sound/effects/sink_long.ogg', 75, 1)
 
@@ -466,9 +468,9 @@
 	if(ishuman(user))
 		user:update_inv_gloves()
 	if(graffiti)
-		user.visible_message("<span class='notice'>[user] washes their hands and head using \the [src].</span>")
+		user.visible_message("<span class='notice'>[user] washes their [target_part] and forehead using \the [src].</span>")
 	else
-		user.visible_message("<span class='notice'>[user] washes their hands using \the [src].</span>")
+		user.visible_message("<span class='notice'>[user] washes their [target_part] using \the [src].</span>")
 
 	if(graffiti)
 		var/mob/living/carbon/human/H = user

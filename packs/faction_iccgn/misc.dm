@@ -6,25 +6,25 @@
 /obj/item/storage/box/large/iccgn_ranks
 	name = "rank box, ICCGN"
 	startswith = list(
-		/obj/item/clothing/accessory/iccgn_rank/or1,
-		/obj/item/clothing/accessory/iccgn_rank/or3,
-		/obj/item/clothing/accessory/iccgn_rank/or4,
-		/obj/item/clothing/accessory/iccgn_rank/or5,
-		/obj/item/clothing/accessory/iccgn_rank/or6,
-		/obj/item/clothing/accessory/iccgn_rank/or7,
-		/obj/item/clothing/accessory/iccgn_rank/or8,
-		/obj/item/clothing/accessory/iccgn_rank/or9,
-		/obj/item/clothing/accessory/iccgn_rank/or9_alt,
-		/obj/item/clothing/accessory/iccgn_rank/of1,
-		/obj/item/clothing/accessory/iccgn_rank/of2,
-		/obj/item/clothing/accessory/iccgn_rank/of3,
-		/obj/item/clothing/accessory/iccgn_rank/of4,
-		/obj/item/clothing/accessory/iccgn_rank/of5,
-		/obj/item/clothing/accessory/iccgn_rank/of6,
-		/obj/item/clothing/accessory/iccgn_rank/of7,
-		/obj/item/clothing/accessory/iccgn_rank/of8,
-		/obj/item/clothing/accessory/iccgn_rank/of9,
-		/obj/item/clothing/accessory/iccgn_rank/of9_alt
+		/obj/item/clothing/accessory/iccgn_rank/marine,
+		/obj/item/clothing/accessory/iccgn_rank/marine/enlisted,
+		/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e2,
+		/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e3,
+		/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e4,
+		/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e5,
+		/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e6,
+		/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e7,
+		/obj/item/clothing/accessory/iccgn_rank/marine/enlisted/e8,
+		/obj/item/clothing/accessory/iccgn_rank/marine/officer,
+		/obj/item/clothing/accessory/iccgn_rank/marine/officer/o2,
+		/obj/item/clothing/accessory/iccgn_rank/marine/officer/o3,
+		/obj/item/clothing/accessory/iccgn_rank/marine/officer/o4,
+		/obj/item/clothing/accessory/iccgn_rank/marine/officer/o5,
+		/obj/item/clothing/accessory/iccgn_rank/marine/flag,
+		/obj/item/clothing/accessory/iccgn_rank/marine/flag/o7,
+		/obj/item/clothing/accessory/iccgn_rank/marine/flag/o8,
+		/obj/item/clothing/accessory/iccgn_rank/marine/flag/o9,
+		/obj/item/clothing/accessory/iccgn_rank/marine/flag/o10
 	)
 
 

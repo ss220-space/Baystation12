@@ -256,12 +256,7 @@
 		new/obj/item/sealgen_case(get_turf(src))
 	qdel(src)
 
-//Vending & cargo
-
-/obj/machinery/vending/engivend/Initialize()
-	products[/obj/item/sealgen_case] = 3
-	. = ..()
-
+// Cargo
 /decl/hierarchy/supply_pack/machinery/sealgen
 	name = "Machinery - SFG Crate"
 	containername = "sealing field generator crate"

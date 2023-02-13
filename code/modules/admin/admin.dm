@@ -1469,6 +1469,7 @@ var/global/floorIsLava = 0
 	log_admin("[key_name(usr)] stuffed [frommob.ckey] into [tomob.name].")
 	SSstatistics.add_field_details("admin_verb","CGD")
 	tomob.ckey = frommob.ckey
+	tomob.teleop = null
 	qdel(frommob)
 	return 1
 
