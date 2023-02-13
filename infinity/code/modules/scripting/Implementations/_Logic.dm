@@ -110,7 +110,7 @@
 		else
 			if(istext(haystack))
 				if(length(haystack) >= end && start > 0)
-					return findtext(haystack, needle, start, end)
+					return findtext_char(haystack, needle, start, end)
 
 // Clone of copytext()
 /proc/docopytext(var/string, var/start = 1, var/end = 0)
@@ -121,8 +121,11 @@
 // Clone of length()
 /proc/smartlength(var/container)
 	if(container)
-		if(istype(container, /list) || istext(container))
+		if(istype(container, /list))
 			return length(container)
+		else
+			if(istext(container))
+				return length_char(container)
 
 // BY DONKIE~
 // String stuff
@@ -250,13 +253,13 @@ proc/n_inrange(var/num, var/min=-1, var/max=1)
 /proc/string_replacetext(var/haystack,var/a,var/b)
 	if(istext(haystack)&&istext(a)&&istext(b))
 		var/i = 1
-		var/lenh=length(haystack)
-		var/lena=length(a)
+		var/lenh=length_char(haystack)
+		var/lena=length_char(a)
 		//var/lenb=length(b)
 		var/count = 0
 		var/list/dat = list()
 		while (i < lenh)
-			var/found = findtext(haystack, a, i, 0)
+			var/found = findtext_char(haystack, a, i, 0)
 			//log_misc("findtext([haystack], [a], [i], 0)=[found]")
 			if (found == 0) // Not found
 				break
@@ -272,7 +275,7 @@ proc/n_inrange(var/num, var/min=-1, var/max=1)
 		if (count == 0)
 			return haystack
 		//var/nlen = lenh + ((lenb - lena) * count)
-		var/buf = copytext(haystack,1,dat[1]) // Prefill
+		var/buf = copytext_char(haystack,1,dat[1]) // Prefill
 		var/lastReadPos = 0
 		for (i = 1, i <= count, i++)
 			var/precopy = dat[i] - lastReadPos-1
@@ -280,12 +283,12 @@ proc/n_inrange(var/num, var/min=-1, var/max=1)
 			//fixed (char* dest = target, src = source)
 			//CharCopy (dest + targetIndex, src + sourceIndex, count);
 			//CharCopy (dest + curPos, source + lastReadPos, precopy);
-			buf+=copytext(haystack,lastReadPos,precopy)
+			buf+=copytext_char(haystack,lastReadPos,precopy)
 			log_misc("buf+=copytext([haystack],[lastReadPos],[precopy])")
 			log_misc("[buf]")
 			lastReadPos = dat[i] + lena
 			//CharCopy (dest + curPos, replace, newValue.length);
 			buf+=b
 			log_misc("[buf]")
-		buf+=copytext(haystack,lastReadPos, 0)
+		buf+=copytext_char(haystack,lastReadPos, 0)
 		return buf

@@ -136,6 +136,7 @@
 	else
 		return
 	message = process_chat_markup(message)
+	message = say_emphasis(message)
 
 
 	//do not show NPC animal emotes to ghosts, it turns into hellscape
