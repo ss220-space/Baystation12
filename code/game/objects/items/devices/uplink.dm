@@ -217,7 +217,7 @@
 /obj/item/device/radio/uplink
 	var/status_message = ""
 	var/numeric_input = ""
-	var/access_code = "0000"
+	var/access_code = "00000"
 
 /obj/item/device/radio/uplink/New(var/loc, var/owner, var/amount)
 	..()
@@ -226,7 +226,7 @@
 
 /obj/item/device/radio/uplink/Initialize()
 	. = ..()
-	access_code = num2text(rand(1000, 9999))
+	access_code = num2text(rand(10000, 99999))
 
 /obj/item/device/radio/uplink/attack_self(mob/user as mob)
 	tgui_interact(user)
