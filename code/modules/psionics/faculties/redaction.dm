@@ -82,11 +82,12 @@
 				to_chat(user, SPAN_NOTICE("You extend a tendril of psychokinetic-redactive power and carefully tease \the [removing] free of \the [E]."))
 				return TRUE
 
-		if(redaction_rank >= PSI_RANK_OPERANT)
+		if(redaction_rank >= PSI_RANK_MASTER)
 			if(E.status & ORGAN_ARTERY_CUT)
 				to_chat(user, SPAN_NOTICE("You painstakingly mend the torn veins in \the [E], stemming the internal bleeding."))
 				E.status &= ~ORGAN_ARTERY_CUT
 				return TRUE
+		else if(redaction_rank >= PSI_RANK_OPERANT)
 			if(E.status & ORGAN_TENDON_CUT)
 				to_chat(user, SPAN_NOTICE("You interleave and repair the severed tendon in \the [E]."))
 				E.status &= ~ORGAN_TENDON_CUT
@@ -99,14 +100,11 @@
 
 		for(var/datum/wound/W in E.wounds)
 			if(W.bleeding())
-				if(redaction_rank >= PSI_RANK_OPERANT || W.wound_damage() < 30)
-					to_chat(user, SPAN_NOTICE("You knit together severed veins and broken flesh, stemming the bleeding."))
-					W.bleed_timer = 0
-					W.clamped = TRUE
-					E.status &= ~ORGAN_BLEEDING
-					return TRUE
-				else
-					to_chat(user, SPAN_NOTICE("This [W.desc] is beyond your power to heal."))
+				to_chat(user, SPAN_NOTICE("You knit together severed veins and broken flesh, stemming the bleeding."))
+				W.bleed_timer = 0
+				W.clamped = TRUE
+				E.status &= ~ORGAN_BLEEDING
+				return TRUE
 
 		if(redaction_rank >= PSI_RANK_GRANDMASTER)
 			for(var/obj/item/organ/internal/I in E.internal_organs)
