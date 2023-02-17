@@ -1,0 +1,136 @@
+$uplink-window-width: 280px;
+$uplinkBase: #44505e;
+$uplink-padding-y: 32px;
+$uplink-padding-x: 36px;
+$uplink-border-width: 8px;
+
+.UplinkLogin__MainBox {
+  height: 100%;
+  width: 100%;
+  padding: $uplink-padding-y 0;
+  border-collapse: separate;
+
+  border: $uplink-border-width solid;
+  border-bottom-width: 12px;
+
+  border-top-color: lighten($color: $uplinkBase, $amount: 38);
+  border-left-color: lighten($color: $uplinkBase, $amount: 18);
+  border-bottom-color: darken($color: $uplinkBase, $amount: 10);
+  border-right-color: darken($color: $uplinkBase, $amount: 4);
+
+  background-color: $uplinkBase;
+  box-shadow: inset -242px 312px 585px -282px lighten($color: $uplinkBase, $amount: 5);
+}
+
+// ------------ DISPLAY ------------
+
+.UplinkLogin__DisplayBox {
+  margin: 0 $uplink-padding-x;
+  height: 60px;
+
+  border-top: 6px solid #37404b;
+  border-left: 10px solid #3f4955;
+  border-bottom: 6px solid #697a8f;
+  border-right: 10px solid #556373;
+
+  background-color: #a1e5b0;
+}
+
+
+.UplinkLogin__DisplayFancy {
+  height: 100%;
+  border-collapse: separate;
+
+  box-shadow: inset -1px -1px 5px 3px #2b402a, inset 0 2px 3px white;
+}
+
+.UplinkLogin__DisplayText {
+  padding: 6px 14px;
+  text-align: right;
+
+  font-size: 32px;
+  font-weight: bold;
+  font-family: monospace;
+
+  color: #1a1a1a;
+  opacity: .7;
+  text-shadow: 1px 1px 2px #61926c;
+}
+
+// ------------ KEYPAD ------------
+
+$uplink-keypad-gap-x: 16px;
+$uplink-keypad-gap-y: 16px;
+$uplink-button-height: 42px;
+$uplink-button-width: 40px;
+
+.UplinkLogin__Keypad {
+  $keypad-width: ($uplink-keypad-gap-x * 2) + ($uplink-button-width * 3);
+  $keypad-mx: (($uplink-window-width - $keypad-width) * 0.5) - $uplink-border-width;
+  margin: 0 $keypad-mx;
+}
+
+.UplinkLogin__ButtonGrid {
+  margin-right: -$uplink-keypad-gap-x; // Right elements' padding removal
+}
+
+.UplinkLogin__ButtonRow {
+  padding-right: $uplink-keypad-gap-x;
+}
+
+.UplinkLogin__Button {
+  height: $uplink-button-height;
+  width: $uplink-button-width;
+  padding: 0;
+  margin: $uplink-keypad-gap-y 0;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  border-radius: 0;
+  cursor: pointer;
+
+  $bg: #2a2a2a;
+  $text: rgba(255, 255, 255, .7);
+  $around-shadow: 0 0 6px 1px black, 0 0 0 3.2px #151515;
+  $edges-shadow: inset 2px 1px 4px 0 rgba(255, 255, 255, .13), inset -2px -1px 4px 0 rgba(0, 0, 0, .3);
+  $pressed-shadow: inset 2px 2px 9px 0 black;
+
+  color: $text;
+  background-color: $bg;
+  box-shadow: $around-shadow, $edges-shadow;
+
+  &:hover {
+    color: $text;
+    background-color: $bg;
+  }
+  &:active, & > *:active {
+    box-shadow: $pressed-shadow, $around-shadow, $edges-shadow;
+  }
+
+  &--E {
+    $bg: #1c8321;
+    background-color: $bg;
+    &:hover { background-color: $bg; }
+  }
+
+  &--C {
+    $bg: #971f1f;
+    background-color: $bg;
+    &:hover { background-color: $bg; }
+  }
+}
+
+.UplinkLogin__Button__Image {
+  height: 100%;
+  width: 100%;
+}
+.UplinkLogin__Button__Text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 2px;
+  text-align: center;
+}
