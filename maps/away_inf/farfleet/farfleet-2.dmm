@@ -185,7 +185,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/crew/hallway/upper)
 "av" = (
 /obj/machinery/door/firedoor,
@@ -474,7 +474,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/barracks)
 "be" = (
 /obj/structure/closet/secure_closet/guncabinet/farfleet{
@@ -760,7 +760,7 @@
 	id_tag = "anomaly-iccg";
 	name = "Storage"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/maintenance/upper/anomaly)
 "bJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -905,7 +905,7 @@
 /obj/effect/floor_decal/industrial/warning/half{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/crew/hallway/upper)
 "ca" = (
 /obj/structure/bed/chair/shuttle/blue{
@@ -1340,7 +1340,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/crew/hallway/upper)
 "cZ" = (
 /obj/machinery/power/engine/ion{
@@ -1598,7 +1598,7 @@
 	dir = 9
 	},
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/maintenance/upper/anomaly)
 "dD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1772,7 +1772,7 @@
 /obj/effect/floor_decal/industrial/warning/half{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/crew/hallway/upper)
 "dW" = (
 /obj/effect/paint/dark_gunmetal,
@@ -2295,7 +2295,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/maintenance/upper/anomaly)
 "eX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -2632,7 +2632,7 @@
 /obj/machinery/door/firedoor{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/crew/hallway/upper)
 "fZ" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -4307,7 +4307,7 @@
 /obj/machinery/door/airlock/multi_tile/terran{
 	name = "Armory"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/crew/hallway/upper)
 "uA" = (
 /obj/structure/railing/mapped,
@@ -4358,7 +4358,7 @@
 	icon_state = "pdoor0";
 	id_tag = "hangar-iccg"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/command/snz_exterior_dock)
 "uI" = (
 /obj/effect/floor_decal/industrial/danger{
@@ -5618,7 +5618,7 @@
 /obj/machinery/door/airlock/glass/terran{
 	name = "Storage"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/farfleet/maintenance/upper/anomaly)
 "FV" = (
 /obj/machinery/chem_master/condimaster{
@@ -5670,7 +5670,7 @@
 /obj/machinery/door/airlock/multi_tile/terran{
 	name = "Hangar"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/command/snz_exterior_dock)
 "Gj" = (
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -5760,7 +5760,7 @@
 /obj/effect/floor_decal/industrial/warning/half{
 	icon_state = "warninghalf"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/ship/farfleet/command/snz_exterior_dock)
 "GY" = (
 /obj/item/missile_equipment/payload/antimissile,

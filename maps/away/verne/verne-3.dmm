@@ -2468,6 +2468,9 @@
 	dir = 9
 	},
 /obj/machinery/light/spot,
+/obj/structure/panic_button{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/verne/bridge)
 "rR" = (

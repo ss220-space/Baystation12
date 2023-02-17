@@ -231,6 +231,8 @@ var/list/admin_verbs_debug = list(
 	/client/proc/ping_webhook,
 	/client/proc/reload_webhooks,
 	/client/proc/debug_airlocks_id,
+	/client/proc/timer_log,
+	/client/proc/debug_timers,
 //[/INF],
 	)
 

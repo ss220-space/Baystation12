@@ -216,7 +216,8 @@
 	var/volume_multiplier = 1
 	sprite_sheets = list(
 		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_ears_resomi.dmi',
-		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/ears.dmi'
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/ears.dmi',
+		SPECIES_SKRELL = 'icons/mob/onmob/Skrell/ears.dmi'
 		)
 
 /obj/item/clothing/ears/update_clothing_icon()
