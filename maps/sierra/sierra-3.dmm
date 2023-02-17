@@ -6627,7 +6627,7 @@
 /obj/item/device/tape,
 /obj/item/device/tape,
 /obj/item/device/tape,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/adjutants)
 "alG" = (
 /obj/structure/table/steel_reinforced,
@@ -6636,7 +6636,7 @@
 /obj/structure/filingcabinet/wallcabinet{
 	pixel_y = 30
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/adjutants)
 "alH" = (
 /obj/structure/table/steel_reinforced,
@@ -6651,7 +6651,7 @@
 	pixel_x = 24
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/adjutants)
 "alI" = (
 /obj/structure/cable/green{
@@ -9314,7 +9314,7 @@
 	},
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/item/gun/energy/gun/small/secure,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/adjutants)
 "apv" = (
 /obj/structure/cable/green{
@@ -9346,7 +9346,7 @@
 	dir = 1
 	},
 /obj/item/gun/energy/gun/small/secure,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/adjutants)
 "apx" = (
 /obj/structure/cable/green{
@@ -10926,7 +10926,7 @@
 /obj/effect/floor_decal/corner/darkblue/mono,
 /obj/machinery/light/small,
 /obj/item/gun/energy/gun/small/secure,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/adjutants)
 "asn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
