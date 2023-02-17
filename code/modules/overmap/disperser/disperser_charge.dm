@@ -59,7 +59,7 @@
 	chargedesc = "EMS"
 
 /obj/structure/ship_munition/disperser_charge/emp/fire(turf/target, strength, range, shield_active_EM, shield_active_KTC)
-	if(shield_active_EM && shield_active_KTC)
+	if(shield_active_EM)
 		return
 	empulse(target, strength * range / 3, strength * range)
 
@@ -77,7 +77,7 @@
 	chargedesc = "BERGBAU"
 
 /obj/structure/ship_munition/disperser_charge/mining/fire(turf/target, strength, range, shield_active_EM, shield_active_KTC)
-	if(shield_active_EM && shield_active_KTC)
+	if(shield_active_KTC)
 		return
 	var/list/victims = range(range * 3, target)
 	for(var/turf/simulated/mineral/M in victims)
@@ -100,7 +100,7 @@
 	chargedesc = "HES"
 
 /obj/structure/ship_munition/disperser_charge/explosive/fire(turf/target, strength, range, shield_active_EM, shield_active_KTC)
-	if(shield_active_EM && shield_active_KTC)
+	if(shield_active_KTC)
 		return
 	explosion(target,max(1,strength * range / 10),strength * range / 7.5,strength * range / 5)
 
