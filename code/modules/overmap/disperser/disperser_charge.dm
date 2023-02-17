@@ -32,8 +32,9 @@
 	if(shield_active_EM && shield_active_KTC)
 		return
 	for(var/turf/T in range(range * 1.5, target))
-		var/obj/effect/fake_fire/napalm/disperserf = new(T)
+		var/obj/effect/fake_fire/napalm/disperserf
 		disperserf.lifetime = strength * 5 SECONDS
+		disperserf = new(T)
 
 /obj/effect/fake_fire/bluespace
 	name = "bluespace fire"
