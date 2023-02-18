@@ -31,21 +31,21 @@
 /obj/structure/ship_munition/disperser_charge/fire/military/fire(turf/target, strength, range, shield_active_EM, shield_active_KTC)
 	if(shield_active_EM && shield_active_KTC)
 		return
-	for(var/turf/T in range(range * 1.5, target))
-		var/obj/effect/fake_fire/napalm/disperserf
-		disperserf.lifetime = strength * 5 SECONDS
-		disperserf = new(T)
+	var/datum/reagent/napalm/napalm_liquid = new /datum/reagent/napalm
+	napalm_liquid.volume = 5 * strength
+	for(var/atom/A in view(range, target))
+		if(ismob(A))
+			napalm_liquid.touch_mob(A, 10 * strength)
+		if(isturf(A))
+			napalm_liquid.touch_turf(A, TRUE)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+	s.set_up(3, 1, target)
+	addtimer(CALLBACK(s, /datum/effect/effect/system/proc/start), 0.1 SECONDS)
 
 /obj/effect/fake_fire/bluespace
 	name = "bluespace fire"
 	color = COLOR_BLUE
 	pressure = 1500
-
-/obj/effect/fake_fire/napalm
-	name = "napalm"
-	color = COLOR_SUN
-	pressure = 5000
-	firelevel = 25
 
 /obj/structure/ship_munition/disperser_charge/emp
 	name = "EM2-QUASAR charge"
