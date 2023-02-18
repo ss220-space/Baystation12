@@ -177,7 +177,7 @@
 	req_access = list(access_away_cavalry)
 
 /area/ship/patrol/maintenance/upper/munition
-	name = "\improper Missile Storage"
+	name = "\improper Ammunition Storage"
 	req_access = list(access_away_cavalry)
 
 /area/ship/patrol/maintenance/upper/waste
@@ -223,8 +223,8 @@
 	icon_state = "purple"
 	req_access = list(access_away_cavalry)
 
-/area/ship/patrol/command/missiles
-	name = "\improper Missile Section"
+/area/ship/patrol/command/cannon
+	name = "\improper Impulse Cannon"
 	icon_state = "yellow"
 	req_access = list(access_away_cavalry)
 
