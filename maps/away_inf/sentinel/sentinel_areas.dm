@@ -77,9 +77,9 @@
 	req_access = list(access_away_cavalry)
 
 /area/ship/patrol/crew/brig/emergency_armory
-	name = "\improper Emergency Armory"
+	name = "Emergency Armory"
 	icon_state = "locker"
-	req_access = list(access_away_cavalry, access_away_cavalry_commander)
+	req_access = list(access_away_cavalry, access_away_cavalry_fleet_armory)
 
 /area/ship/patrol/engineering/hallway
 	name = "\improper Engineering Hallway"
