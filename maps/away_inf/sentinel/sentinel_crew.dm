@@ -41,47 +41,11 @@
  */
 
 /var/const/access_away_cavalry = "ACCESS_CAVALRY"
+/var/const/access_away_cavalry_fleet_armory = "ACCESS_CAVALRY_EMERG_ARMORY"
 /var/const/access_away_cavalry_ops = "ACCESS_CAVALRY_OPS"
+/var/const/access_away_cavalry_pilot = "ACCESS_CAVALRY_PILOT"
 /var/const/access_away_cavalry_captain = "ACCESS_CAVALRY_CAPTAIN"
 /var/const/access_away_cavalry_commander = "ACCESS_CAVALRY_COMMANDER"
-
-/datum/access/access_away_cavalry_patrol
-	id = access_away_cavalry
-	desc = "SPS Main"
-	region = ACCESS_REGION_NONE
-
-/datum/access/access_away_cavalry_ops
-	id = access_away_cavalry_ops
-	desc = "SPS Army"
-	region = ACCESS_REGION_NONE
-
-/datum/access/access_away_cavalry_captain
-	id = access_away_cavalry_captain
-	desc = "SPS Captain"
-	region = ACCESS_REGION_NONE
-
-/datum/access/access_away_patrol_commander
-	id = access_away_cavalry_commander
-	desc = "SPS Commander"
-	region = ACCESS_REGION_NONE
-
-/obj/item/card/id/awaycavalry/fleet
-	color = COLOR_GRAY40
-	detail_color = "#447ab1"
-	access = list(access_away_cavalry)
-
-/obj/item/card/id/awaycavalry/ops
-	color = "#b10309c2"
-	detail_color = "#000000"
-	access = list(access_away_cavalry, access_away_cavalry_ops)
-
-/obj/item/card/id/awaycavalry/ops/captain
-	access = list(access_away_cavalry, access_away_cavalry_ops, access_away_cavalry_captain)
-	extra_details = list("goldstripe")
-
-/obj/item/card/id/awaycavalry/fleet/commander
-	access = list(access_away_cavalry, access_away_cavalry_ops, access_away_cavalry_commander)
-	extra_details = list("goldstripe")
 
 /* JOBS
  * =======
@@ -111,7 +75,6 @@
 					 SKILL_HAULING = SKILL_BASIC,
 					 SKILL_MEDICAL = SKILL_BASIC,
 					 SKILL_EVA = SKILL_BASIC)
-	access = list(access_away_cavalry, access_away_cavalry_ops)
 
 /datum/job/submap/patrol/captain
 	title = "Army SCGSO Leader"
@@ -137,7 +100,6 @@
 					 SKILL_HAULING = SKILL_BASIC,
 					 SKILL_MEDICAL = SKILL_BASIC,
 					 SKILL_EVA = SKILL_BASIC)
-	access = list(access_away_cavalry, access_away_cavalry_ops, access_away_cavalry_captain)
 
 /datum/job/submap/patrol/commander
 	title = "Fleet Commander"
@@ -161,7 +123,6 @@
 					 SKILL_MEDICAL = SKILL_BASIC,
 					 SKILL_PILOT = SKILL_ADEPT,
 					 SKILL_EVA = SKILL_BASIC)
-	access = list(access_away_cavalry, access_away_cavalry_ops, access_away_cavalry_commander)
 
 /datum/job/submap/patrol/pilot1
 	title = "Fleet Pilot"
@@ -185,7 +146,6 @@
 					 SKILL_MEDICAL = SKILL_BASIC,
 					 SKILL_PILOT = SKILL_ADEPT,
 					 SKILL_EVA = SKILL_BASIC)
-	access = list(access_away_cavalry)
 
 /datum/job/submap/patrol/surgeon
 	title = "Fleet Corpsman"
@@ -200,10 +160,10 @@
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
 	Являясь одним из членов экипажа патрульного корабля 5-го флота ЦПСС, ваша задача состоит в медицинской поддержке экипажа. \
 	\
-	Хоть вы и являетесь офицером, в ваши обязанности НЕ входит командование экипажем - это всего лишь показатель вашего профессионализма в медицинской сфере. \
-	\
 	 Вам крайне нежелательно приближаться к кораблям и станциям с опозновательными знаками без разрешения от командования группировкой. \
-	 Исключением являются те ситуации, когда вы терпите бедствие или на вашем судне аварийная ситуация."
+	 Исключением являются те ситуации, когда вы терпите бедствие или на вашем судне аварийная ситуация.<br>\
+	\
+	 Хоть вы и являетесь офицером, в ваши обязанности НЕ входит командование экипажем - это всего лишь показатель вашего профессионализма в медицинской сфере."
 	min_skill = list(SKILL_COMBAT  = SKILL_BASIC,
 					 SKILL_WEAPONS = SKILL_BASIC,
 					 SKILL_HAULING = SKILL_ADEPT,
@@ -211,7 +171,6 @@
 					 SKILL_ANATOMY = SKILL_BASIC,
 					 SKILL_CHEMISTRY = SKILL_BASIC,
 					 SKILL_EVA = SKILL_BASIC)
-	access = list(access_away_cavalry)
 
 /datum/job/submap/patrol/engineer
 	title = "Fleet Technician"
@@ -238,7 +197,6 @@
 					 SKILL_ATMOS  = SKILL_BASIC,
 					 SKILL_ENGINES = SKILL_ADEPT,
 					 SKILL_DEVICES = SKILL_BASIC)
-	access = list(access_away_cavalry)
 
 
 /* BRANCH & RANKS
@@ -404,6 +362,7 @@
 	head = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/officer/pilot1/away_solpatrol
 	belt = /obj/item/storage/belt/holster/security/tactical/away_solpatrol
+	id_types = list(/obj/item/card/id/awaycavalry/fleet/pilot)
 	gloves = /obj/item/clothing/gloves/thick/duty/rivalgloves
 
 /decl/hierarchy/outfit/job/patrol/fleet_command
