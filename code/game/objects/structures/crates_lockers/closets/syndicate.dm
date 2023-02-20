@@ -59,6 +59,7 @@
 	new /obj/item/modular_computer/pda/syndicate(src)
 	var/obj/item/device/radio/uplink/U = new(src)
 	U.hidden_uplink.uses = 40
+	U.desc += " A sticker is glued on the back with the inscription \"Code: " + U.access_code + "\"."
 	return
 
 /obj/structure/closet/syndicate/resources/

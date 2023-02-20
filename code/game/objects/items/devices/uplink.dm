@@ -291,14 +291,16 @@
 /obj/item/device/uplink/contained/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/uistate = GLOB.contained_state)
 	return ..()
 
+/obj/item/device/radio/uplink/nuclear/attack_self(mob/user as mob)
+	if(hidden_uplink)
+		hidden_uplink.trigger(user)
+
 /obj/item/device/radio/uplink/nuclear/pickup(mob/user)
 	..()
-	var/firstuser
-	if(!firstuser)
-		for(var/obj/item/device/uplink/U in contents)
+	for(var/obj/item/device/uplink/U in contents)
+		if(!U.uplink_owner)
 			U.uplink_owner = user
 			U.uses = TEAM_TELECRYSTAL_AMOUNT
-		firstuser = 1
 
 /obj/item/device/radio/uplink/empty/pickup(mob/user)
 	..()
