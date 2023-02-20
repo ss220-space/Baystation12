@@ -71,7 +71,7 @@ GLOBAL_DATUM_INIT(mercs, /datum/antagonist/mercenary, new)
 
 // [INF] This is our merc equipment on spawn ~ SidVeld
 	if(player.mind == leader)
-		var/obj/item/device/radio/uplink/U = new(get_turf(player), player.mind, TEAM_TELECRYSTAL_AMOUNT)
+		var/obj/item/device/radio/uplink/nuclear/U = new(get_turf(player), player.mind, TEAM_TELECRYSTAL_AMOUNT)
 		player.put_in_hands(U)
 		var/obj/item/clothing/head/beret/leader = new(get_turf(player))
 		player.equip_to_slot_or_del(leader, slot_head)
@@ -80,7 +80,7 @@ GLOBAL_DATUM_INIT(mercs, /datum/antagonist/mercenary, new)
 		var/obj/machinery/nuclearbomb/nuke = locate(/obj/machinery/nuclearbomb/station) in SSmachines.machinery
 		player.StoreMemory("<b>Код для активации устройства самоуничтожения [GLOB.using_map.full_name]:</b> [nuke.r_code]", /decl/memory_options/system)
 	else
-		var/obj/item/device/radio/uplink/U = new(get_turf(player), player.mind, 0)
+		var/obj/item/device/radio/uplink/nuclear/U = new(get_turf(player), player.mind, 0)
 		player.put_in_hands(U)
 		var/obj/item/paper/roles_nuclear/paper = new(get_turf(player))
 		player.put_in_hands(paper)
