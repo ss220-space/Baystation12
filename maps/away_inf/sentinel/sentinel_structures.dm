@@ -10,7 +10,6 @@
 	return list(
 		/obj/item/gun/energy/ionrifle/small  = 1,
 		/obj/item/gun/energy/plasmastun = 1,
-		/obj/item/gun/energy/laser = 3,
 		/obj/item/gun/energy/sniperrifle = 1
 	)
 

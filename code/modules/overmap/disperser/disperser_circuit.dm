@@ -3,6 +3,11 @@
 	build_path = /obj/machinery/computer/ship/disperser
 	origin_tech = list(TECH_ENGINEERING = 2, TECH_COMBAT = 2, TECH_BLUESPACE = 2)
 
+/obj/item/stock_parts/circuitboard/disperser/military
+	name = T_BOARD("impulse cannon control")
+	build_path = /obj/machinery/computer/ship/disperser/military
+	origin_tech = list(TECH_ENGINEERING = 7, TECH_COMBAT = 7, TECH_BLUESPACE = 7)
+
 /obj/item/stock_parts/circuitboard/disperserfront
 	name = T_BOARD("obstruction field disperser beam generator")
 	build_path = /obj/machinery/disperser/front
