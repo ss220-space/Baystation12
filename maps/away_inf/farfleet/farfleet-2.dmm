@@ -1396,7 +1396,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
 "dg" = (
 /obj/machinery/pointdefense_control{
@@ -2207,7 +2207,7 @@
 	id_tag = "mws-iccg";
 	name = "Missile Warehouse"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse)
 "eO" = (
 /obj/machinery/power/terminal{
@@ -2704,7 +2704,7 @@
 	id_tag = "mwn-iccg";
 	name = "Missile Warehouse"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
 "gl" = (
 /obj/structure/table/steel,
@@ -3481,7 +3481,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse)
 "ll" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -3809,7 +3809,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse)
 "pw" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -4374,7 +4374,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse)
 "uP" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -5406,7 +5406,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
 "Eo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7396,7 +7396,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/ship/farfleet/crew/warehouse/starboard)
 "XG" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
