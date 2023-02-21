@@ -49,11 +49,11 @@
 	dir = 9;
 	icon_state = "warning"
 	},
+/obj/structure/catwalk,
 /obj/item/device/radio/intercom{
 	dir = 4;
-	pixel_x = -35
+	pixel_x = -22
 	},
-/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/ship/patrol/dock)
 "an" = (
@@ -1674,19 +1674,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/light,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/item/device/radio/intercom{
-	dir = 1;
-	pixel_y = -22
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6;
 	icon_state = "warning"
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = -28
 	},
 /turf/simulated/floor/tiled,
 /area/ship/patrol/dock)
@@ -4716,7 +4715,7 @@
 	},
 /obj/item/device/radio/intercom{
 	dir = 1;
-	pixel_y = -22
+	pixel_y = -28
 	},
 /turf/simulated/floor/tiled,
 /area/ship/patrol/crew/hallway/lower)
@@ -9459,6 +9458,15 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/engine/starboard)
+"SG" = (
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled,
+/area/ship/patrol/dock)
 "SM" = (
 /obj/structure/lattice,
 /obj/structure/cable{
@@ -17659,7 +17667,7 @@ au
 aQ
 bn
 bS
-cB
+SG
 cB
 wN
 ex
