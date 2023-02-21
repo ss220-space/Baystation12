@@ -32,5 +32,5 @@
 	name = "lift (lower deck)"
 	lift_floor_label = "Deck 2"
 	lift_floor_name = "Utility Deck"
-	lift_announce_str = "Arriving at Utility Deck: Мостик. Ангар. Атмосферный отсек. Реактор R-UST. Личное снаряжение. Отсек EVA. Секция Пехоты. Ракетный отсек. Медбей."
+	lift_announce_str = "Arriving at Utility Deck: Мостик. Ангар. Атмосферный отсек. Реактор R-UST. Личное снаряжение. Отсек EVA. Секция Пехоты. Импульсное орудие. Медбей."
 	base_turf = /turf/simulated/floor
