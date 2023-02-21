@@ -8666,6 +8666,11 @@
 "wO" = (
 /obj/effect/floor_decal/industrial/outline/orange,
 /obj/structure/ship_munition/disperser_charge/fire/military,
+/obj/structure/sign/warning/nosmoking_1{
+	dir = 4;
+	pixel_x = -34;
+	pixel_y = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/command/cannon)
 "xr" = (
@@ -9499,11 +9504,6 @@
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/engineering/fussion/control)
 "Vf" = (
-/obj/structure/sign/warning/nosmoking_1{
-	dir = 4;
-	pixel_x = -34;
-	pixel_y = 1
-	},
 /obj/machinery/light{
 	dir = 8
 	},
