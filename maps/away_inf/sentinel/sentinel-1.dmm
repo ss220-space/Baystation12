@@ -2759,7 +2759,6 @@
 	},
 /obj/structure/table/steel_reinforced,
 /obj/item/folder/blue,
-/obj/item/folder/blue,
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
@@ -8453,9 +8452,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/conveyor_switch{
 	id = "bsap";
-	name = "missile loader switch";
-	pixel_y = 8;
-	pixel_x = 10
+	name = "loading conveyor switch"
 	},
 /obj/machinery/light{
 	dir = 8
@@ -9785,6 +9782,14 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/patrol/command/bridge)
+"Zv" = (
+/obj/effect/paint/dark_gunmetal,
+/obj/machinery/conveyor_switch{
+	id = "bsap";
+	name = "loading conveyor switch"
+	},
+/turf/simulated/wall/r_wall,
+/area/ship/patrol/command/cannon)
 "ZG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -15237,7 +15242,7 @@ eb
 Ct
 MF
 Hl
-hM
+Zv
 hT
 hM
 jl
