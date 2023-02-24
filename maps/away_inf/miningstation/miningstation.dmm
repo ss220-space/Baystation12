@@ -7395,7 +7395,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/miningstation/bathroom)
 "qr" = (
-/obj/effect/shuttle_landmark/nav_miningstation/exterior,
+/obj/effect/shuttle_landmark/nav_miningstation/exterior2,
 /turf/space,
 /area/space)
 "qs" = (
@@ -8005,7 +8005,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/miningstation/prep2)
 "Iv" = (
-/obj/effect/shuttle_landmark/nav_miningstation/hangar,
+/obj/effect/shuttle_landmark/nav_miningstation/hangar2,
 /turf/simulated/floor/plating,
 /area/miningstation/hangar)
 "ID" = (
@@ -8082,6 +8082,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/miningstation/operationshall)
+"NN" = (
+/obj/effect/shuttle_landmark/nav_miningstation/hangar1,
+/turf/simulated/floor/plating,
+/area/miningstation/hangar)
 "Oa" = (
 /obj/machinery/cryopod{
 	dir = 2
@@ -8130,6 +8134,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/miningstation/cryo)
+"Qi" = (
+/obj/effect/shuttle_landmark/nav_miningstation/exterior1,
+/turf/space,
+/area/space)
 "QB" = (
 /obj/effect/overmap/visitable/sector/miningstation,
 /turf/space,
@@ -11879,7 +11887,7 @@ aa
 aa
 aa
 aa
-aa
+qr
 aa
 aa
 aa
@@ -17586,7 +17594,7 @@ aw
 aw
 aw
 aw
-aw
+NN
 aw
 aw
 aw
@@ -18195,7 +18203,7 @@ aw
 aw
 aw
 aw
-Iv
+aw
 aw
 aw
 aw
@@ -19415,7 +19423,7 @@ aw
 aw
 aw
 aw
-aw
+Iv
 aw
 aw
 aw
@@ -25627,7 +25635,7 @@ aa
 aa
 aa
 aa
-aa
+Qi
 aa
 aa
 aa
@@ -25776,7 +25784,7 @@ aa
 aa
 aa
 aa
-qr
+aa
 aa
 aa
 aa
