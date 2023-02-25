@@ -5,15 +5,17 @@
 	name = "Orbital Mining Station"
 	scanner_name = "Orbital Mining Station"
 	scanner_name = "Asteroid Mining Station"
-	scanner_desc = @{"[i]Registration[/i]: Grayson Mining Industries
-[i]Class[/i]: Installation
-[i]Transponder[/i]: None Detected
-[b]Notice[/b]: An orbital Mining Station bearing authentication codes from Grayson Mining Industries, sensors show inconsistant lifesigns aboard the station. It is emitting a weak signal on a public frequency, with no other discernible radio traffic."}
+	scanner_desc = @{"<i>Registration</i>: Grayson Mining Industries<br>
+<i>Class</i>: Installation<br>
+<i>Transponder</i>: None Detected<br>
+<b>Notice</b>: An orbital Mining Station bearing authentication codes from Grayson Mining Industries, sensors show inconsistant lifesigns aboard the station. It is emitting a weak signal on a public frequency, with no other discernible radio traffic."}
 	icon_state = "object"
 	known = 0
 	initial_generic_waypoints = list(
-		"nav_miningstation_hangar",
-		"nav_miningstation_exterior",
+		"nav_miningstation_hangar1",
+		"nav_miningstation_hangar2",
+		"nav_miningstation_exterior1",
+		"nav_miningstation_exterior2",
 	)
 
 /datum/map_template/ruin/away_site/miningstation
@@ -25,15 +27,25 @@
 	spawn_cost = 1
 	area_usage_test_exempted_root_areas = list(/area/miningstation)
 
-/obj/effect/shuttle_landmark/nav_miningstation/hangar
-	name = "Hangar"
-	landmark_tag = "nav_miningstation_hangar"
+/obj/effect/shuttle_landmark/nav_miningstation/hangar1
+	name = "Hangar Landing Zone A"
+	landmark_tag = "nav_miningstation_hangar1"
 	base_area = /area/miningstation/hangar
 	base_turf = /turf/simulated/floor/plating
 
-/obj/effect/shuttle_landmark/nav_miningstation/exterior
-	name = "Near the orbital station"
-	landmark_tag = "nav_miningstation_exterior"
+/obj/effect/shuttle_landmark/nav_miningstation/hangar2
+	name = "Hangar Landing Zone B"
+	landmark_tag = "nav_miningstation_hangar2"
+	base_area = /area/miningstation/hangar
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/nav_miningstation/exterior1
+	name = "North-East of the orbital station"
+	landmark_tag = "nav_miningstation_exterior1"
+
+/obj/effect/shuttle_landmark/nav_miningstation/exterior2
+	name = "South-West of the orbital station"
+	landmark_tag = "nav_miningstation_exterior2"
 
 
 ///////////////////////////////////crew
