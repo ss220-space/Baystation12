@@ -407,7 +407,8 @@
 "aY" = (
 /obj/structure/table/woodentable/walnut,
 /obj/machinery/photocopier/faxmachine{
-	department = "Farfleet Recon Ship"
+	department = "Farfleet Recon Ship";
+	send_access = list("ACCESS_ICCGN_CAPTAIN")
 	},
 /obj/effect/floor_decal/carpet/blue2{
 	dir = 1
