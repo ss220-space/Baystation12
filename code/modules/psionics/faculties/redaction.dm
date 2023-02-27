@@ -39,7 +39,7 @@
 
 /decl/psionic_power/redaction/mend
 	name =            "Mend"
-	cost =            7
+	cost =            15
 	cooldown =        35
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
@@ -54,11 +54,11 @@
 
 		if(!E || E.is_stump())
 			to_chat(user, SPAN_WARNING("They are missing that limb."))
-			return TRUE
+			return FALSE
 
 		if(BP_IS_ROBOTIC(E))
 			to_chat(user, SPAN_WARNING("That limb is prosthetic."))
-			return TRUE
+			return FALSE
 
 		user.visible_message(SPAN_NOTICE("<i>\The [user] rests a hand on \the [target]'s [E.name]...</i>"))
 		to_chat(target, SPAN_NOTICE("A healing warmth suffuses you."))
@@ -87,6 +87,7 @@
 				to_chat(user, SPAN_NOTICE("You painstakingly mend the torn veins in \the [E], stemming the internal bleeding."))
 				E.status &= ~ORGAN_ARTERY_CUT
 				return TRUE
+		else if(redaction_rank >= PSI_RANK_OPERANT)
 			if(E.status & ORGAN_TENDON_CUT)
 				to_chat(user, SPAN_NOTICE("You interleave and repair the severed tendon in \the [E]."))
 				E.status &= ~ORGAN_TENDON_CUT
@@ -99,14 +100,11 @@
 
 		for(var/datum/wound/W in E.wounds)
 			if(W.bleeding())
-				if(redaction_rank >= PSI_RANK_MASTER || W.wound_damage() < 30)
-					to_chat(user, SPAN_NOTICE("You knit together severed veins and broken flesh, stemming the bleeding."))
-					W.bleed_timer = 0
-					W.clamped = TRUE
-					E.status &= ~ORGAN_BLEEDING
-					return TRUE
-				else
-					to_chat(user, SPAN_NOTICE("This [W.desc] is beyond your power to heal."))
+				to_chat(user, SPAN_NOTICE("You knit together severed veins and broken flesh, stemming the bleeding."))
+				W.bleed_timer = 0
+				W.clamped = TRUE
+				E.status &= ~ORGAN_BLEEDING
+				return TRUE
 
 		if(redaction_rank >= PSI_RANK_GRANDMASTER)
 			for(var/obj/item/organ/internal/I in E.internal_organs)
