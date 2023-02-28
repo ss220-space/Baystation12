@@ -2259,6 +2259,9 @@
 	dir = 4
 	},
 /obj/structure/table/steel,
+/obj/structure/panic_button{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cockpit)
 "en" = (
@@ -27974,9 +27977,6 @@
 "SF" = (
 /obj/structure/table/standard,
 /obj/machinery/light/small,
-/obj/item/music_tape/custom{
-	randpixel = 0
-	},
 /obj/item/paper/travelvisa{
 	desc = "A flimsy piece of laminated cardboard issued by the Sol Central Government. It's look's damaged"
 	},
@@ -31036,6 +31036,9 @@
 /obj/machinery/cell_charger,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/paint/dark_gunmetal,
+/obj/structure/panic_button{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/guppy_hangar/start)
 "YZ" = (

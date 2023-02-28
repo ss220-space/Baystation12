@@ -86,6 +86,8 @@ GLOBAL_LIST_INIT(default_uplink_source_priority, list(
 
 /decl/uplink_source/unit/setup_uplink_source(var/mob/M, var/amount)
 	var/obj/item/device/radio/uplink/U = new(M, M.mind, round(amount * 1.3))
+	to_chat(M, "<span class='notice'>A portable object teleportation relay has been installed in your [U.name]. Just enter password [U.access_code] to unlock its hidden features.</span>")
+	M.StoreMemory("<B>Password:</B> [U.access_code] ([U.name]).", /decl/memory_options/system)
 	put_on_mob(M, U, "\A [U]")
 
 /decl/uplink_source/telecrystals

@@ -10,7 +10,6 @@
 	return list(
 		/obj/item/gun/energy/ionrifle/small  = 1,
 		/obj/item/gun/energy/plasmastun = 1,
-		/obj/item/gun/energy/laser = 3,
 		/obj/item/gun/energy/sniperrifle = 1
 	)
 
@@ -107,21 +106,20 @@
 	)
 
 /obj/structure/closet/secure_closet/patrol/fleet
-	name = "fleet cabinet"
+	name = "fleet pilot cabinet"
 	closet_appearance = /decl/closet_appearance/secure_closet/sol
 	req_access = list(access_away_cavalry)
 
 /obj/structure/closet/secure_closet/patrol/fleet/WillContain()
 	return list(
 		/obj/item/storage/firstaid/individual/military,
-		/obj/item/clothing/accessory/storage/black_drop,
-		/obj/item/clothing/mask/gas/alt,
-		/obj/item/clothing/under/solgov/utility/fleet/polopants,
-		/obj/item/clothing/head/beret/solgov/fleet/branch/fifth,
-		/obj/item/clothing/head/beret/solgov/fleet,
+		/obj/item/clothing/mask/gas,
 		/obj/item/combitool,
-		/obj/item/clothing/gloves/thick,
-		/obj/item/storage/backpack/satchel/pocketbook/navy
+		/obj/item/clothing/under/solgov/utility/fleet/polopants/command,
+		/obj/item/clothing/head/solgov/dress/fleet,
+		/obj/item/clothing/head/beret/solgov/fleet/command,
+		/obj/item/clothing/accessory/solgov/department/command/fleet,
+		/obj/item/clothing/suit/storage/solgov/service/fleet/officer
 	)
 
 /obj/structure/closet/secure_closet/patrol/fleet/engi
@@ -132,11 +130,7 @@
 /obj/structure/closet/secure_closet/patrol/fleet/engi/WillContain()
 	return list(
 		/obj/item/storage/firstaid/individual/military,
-		/obj/item/clothing/accessory/storage/black_drop,
-		/obj/item/clothing/mask/gas/alt,
-		/obj/item/clothing/under/solgov/utility/fleet/polopants,
-		/obj/item/clothing/head/beret/solgov/fleet/branch/fifth,
-		/obj/item/clothing/head/beret/solgov/fleet,
+		/obj/item/clothing/mask/gas,
 		/obj/item/storage/belt/utility/full,
 		/obj/item/device/multitool,
 		/obj/item/device/multitool/multimeter,
@@ -145,7 +139,10 @@
 		/obj/item/clothing/suit/storage/hazardvest,
 		/obj/item/combitool,
 		/obj/item/clothing/head/beret/solgov/fleet/engineering,
-		/obj/item/storage/backpack/satchel/pocketbook/navy
+		/obj/item/clothing/head/solgov/dress/fleet/garrison,
+		/obj/item/clothing/under/solgov/utility/fleet/polopants,
+		/obj/item/clothing/accessory/solgov/department/engineering/fleet,
+		/obj/item/clothing/suit/storage/solgov/service/fleet
 	)
 
 /obj/structure/closet/secure_closet/patrol/fleet/med
@@ -156,11 +153,7 @@
 /obj/structure/closet/secure_closet/patrol/fleet/med/WillContain()
 	return list(
 		/obj/item/storage/firstaid/individual/military,
-		/obj/item/clothing/accessory/storage/black_drop,
-		/obj/item/clothing/mask/gas/alt,
-		/obj/item/clothing/under/solgov/utility/fleet/polopants,
-		/obj/item/clothing/head/beret/solgov/fleet/branch/fifth,
-		/obj/item/clothing/head/beret/solgov/fleet,
+		/obj/item/clothing/mask/gas,
 		/obj/item/storage/belt/medical,
 		/obj/item/clothing/head/beret/solgov/fleet/medical,
 		/obj/item/storage/firstaid/adv,
@@ -172,11 +165,14 @@
 		/obj/item/clothing/under/rank/medical/scrubs/black,
 		/obj/item/clothing/head/surgery/black,
 		/obj/item/clothing/suit/storage/hazardvest/white,
-		/obj/item/storage/backpack/satchel/pocketbook/navy
+		/obj/item/clothing/head/solgov/dress/fleet,
+		/obj/item/clothing/under/solgov/utility/fleet/polopants/command,
+		/obj/item/clothing/accessory/solgov/department/medical/fleet,
+		/obj/item/clothing/suit/storage/solgov/service/fleet/officer
 	)
 
 /obj/structure/closet/secure_closet/patrol/fleet_com
-	name = "fleet cabinet"
+	name = "fleet commander cabinet"
 	closet_appearance = /decl/closet_appearance/secure_closet/sol
 	req_access = list(access_away_cavalry, access_away_cavalry_commander)
 
@@ -186,18 +182,18 @@
 		/obj/item/storage/firstaid/individual/military,
 		/obj/item/device/megaphone,
 		/obj/item/clothing/accessory/armor/tag/solgov/com,
-		/obj/item/clothing/accessory/storage/black_drop,
-		/obj/item/clothing/mask/gas/alt,
+		/obj/item/clothing/mask/gas,
 		/obj/item/storage/fancy/cigar,
 		/obj/item/storage/fancy/cigarettes/case,
 		/obj/item/flame/lighter/zippo/gunmetal,
-		/obj/item/clothing/head/beret/solgov/fleet/branch/fifth,
 		/obj/item/clothing/head/beret/solgov/fleet/command,
 		/obj/item/clothing/under/solgov/utility/fleet/polopants/command,
 		/obj/item/gun/projectile/revolver/medium,
 		/obj/item/combitool,
 		/obj/item/clothing/gloves/wristwatch/gold,
-		/obj/item/storage/backpack/satchel/pocketbook/navy
+		/obj/item/clothing/head/solgov/dress/fleet,
+		/obj/item/clothing/accessory/solgov/department/command/fleet,
+		/obj/item/clothing/suit/storage/solgov/service/fleet/officer
 	)
 
 
@@ -230,6 +226,18 @@
 	/obj/item/clothing/gloves/thick/combat = 3
 	)
 
+/obj/structure/closet/wardrobe/patrol/urban
+	name = "urban attire closet"
+	closet_appearance = /decl/closet_appearance/tactical
+
+/obj/structure/closet/wardrobe/patrol/urban/WillContain()
+	return list(
+	/obj/item/clothing/under/solgov/utility/army/urban  = 3,
+	/obj/item/clothing/head/solgov/utility/army/urban = 3,
+	/obj/item/clothing/shoes/dutyboots = 3,
+	/obj/item/clothing/gloves/thick/combat/marine = 3
+	)
+
 	////////
 	//MISC//
 	////////
@@ -243,6 +251,32 @@
 /obj/machinery/door/airlock/autoname/marine
 	req_access = list(access_away_cavalry)
 
+/obj/machinery/vending/away_solpatrol_uniform
+	name = "Fleet uniform dispenser"
+	desc = "A specialized vending machine with nice and fresh navy-blue clothing inside. For military personnel only."
+	icon = 'icons/obj/vending.dmi'
+	icon_state = "uniform_fleet"
+	icon_deny = "uniform_fleet-deny"
+	icon_vend = "uniform_fleet-vend"
+	vend_delay = 15
+	req_access = list(access_away_cavalry)
+	products = list(/obj/item/clothing/head/beret/solgov/fleet/branch/fifth = 5,
+					/obj/item/clothing/head/soft/solgov/fleet = 5,
+					/obj/item/clothing/head/ushanka/solgov/fleet = 5,
+					/obj/item/clothing/under/solgov/utility/fleet = 5,
+					/obj/item/clothing/under/solgov/utility/fleet/combat = 5,
+					/obj/item/clothing/under/solgov/service/fleet = 5,
+					/obj/item/clothing/under/solgov/pt/fleet = 5,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet = 5,
+					/obj/item/clothing/shoes/dutyboots = 5,
+					/obj/item/clothing/shoes/dress = 5,
+					/obj/item/clothing/shoes/black = 5,
+					/obj/item/clothing/gloves/thick = 5,
+					/obj/item/storage/belt/holster/security = 5,
+					/obj/item/storage/backpack/satchel/pocketbook/navy = 5,
+					/obj/item/clothing/accessory/storage/black_drop = 5,
+					/obj/item/clothing/accessory/solgov/fleet_patch/fifth = 5,
+					)
 /* Voidsuit Storage Unit
  * ====
  */

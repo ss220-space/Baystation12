@@ -17,10 +17,12 @@
 
 /obj/effect/overmap/visitable/ship/landable/reaper
 	scanner_name = "Reaper-G"
-	scanner_desc = @{"[i]Registration[/i]: SCG Shuttle
-[i]Class[/i]: Shuttle
-[i]Transponder[/i]: Transmitting (MIL), SCG
-[b]Notice[/b]: A heavily modified military gunboat of particular design. More of the dropship now, scanner detects heavy alteration to the hull of the vessel and no designation"}
+	scanner_desc = @{"
+		<center><img src = FleetLogo.png><br>
+		<i>Registration</i>: SCGDF Shuttle<br>
+		<i>Class</i>: Shuttle<br>
+		<i>Transponder</i>: Transmitting (MIL), SCG<br>
+		<b>Notice</b>: A heavily modified military gunboat of particular design. More of the dropship now, scanner detects heavy alteration to the hull of the vessel and no designation"}
 	shuttle = "Reaper Gunboat"
 	fore_dir = WEST
 	color = "#000000"

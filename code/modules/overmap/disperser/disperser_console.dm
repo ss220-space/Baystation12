@@ -25,7 +25,12 @@
 	var/range = 1 //range of the explosion
 	var/strength = 1 //strength of the explosion
 	var/next_shot = 0 //round time where the next shot can start from
-	var/const/coolinterval = 2 MINUTES //time to wait between safe shots in deciseconds
+	var/coolinterval = 2 MINUTES //time to wait between safe shots in deciseconds
+
+/obj/machinery/computer/ship/disperser/military
+	name = "impulse cannon control"
+	caldigit = 2
+	coolinterval = 30 SECONDS
 
 /obj/machinery/computer/ship/disperser/Initialize()
 	. = ..()

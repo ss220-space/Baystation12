@@ -462,6 +462,7 @@
 	accuracy = 1
 	scope_zoom = 0
 	scoped_accuracy = 0
+	bulk = GUN_BULK_RIFLE
 	wielded_item_state = "semistrip-wielded"
 
 	firemodes = list(
@@ -490,6 +491,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/rifle/ak
 	allowed_magazines = /obj/item/ammo_magazine/rifle/ak
+	bulk = GUN_BULK_RIFLE
 	wielded_item_state = "ak12-wielded"
 	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
@@ -513,7 +515,7 @@
 
 /obj/item/gun/projectile/automatic/mr735
 	name = "MR-735"
-	desc = "A cheap rifle for close quarters combat. Has an auto-firing mode and large calibre. HelTek MR-735 is a standart equipment of ICCG Space-assault Forces, designed without folding stock for easy storage and for gunfire in confined spaces. Possesses autofire and is perfect for the ship's crew."
+	desc = "A cheap rifle for close quarters combat, with an auto-firing mode available. HelTek MR-735 is a standard rifle for ICCG Space-assault Forces, designed without a stock for easier storage and combat in closed spaces. Perfect weapon for some ship's crew."
 	icon = 'icons/obj/guns/mr735.dmi'
 	icon_state = "nostockrifle"
 	item_state = "mr735nostockrifle"
@@ -524,6 +526,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/rifle
 	allowed_magazines = /obj/item/ammo_magazine/rifle
+	bulk = GUN_BULK_RIFLE
 	wielded_item_state = "mbr735nostockrifle_wielded"
 	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
@@ -558,6 +561,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/rifle
 	allowed_magazines = /obj/item/ammo_magazine/rifle
+	bulk = GUN_BULK_RIFLE + 1
 	wielded_item_state = "mbrmalyatko_wielded"
 	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
