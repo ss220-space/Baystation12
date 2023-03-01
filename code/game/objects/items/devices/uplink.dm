@@ -214,15 +214,64 @@
 //
 // Includes normal radio uplink, multitool uplink,
 // implant uplink (not the implant tool) and a preset headset uplink.
+/obj/item/device/radio/uplink
+	var/status_message = ""
+	var/numeric_input = ""
+	var/access_code = "00000"
 
 /obj/item/device/radio/uplink/New(var/loc, var/owner, var/amount)
 	..()
 	hidden_uplink = new(src, owner, amount)
-	icon_state = "radio"
+	name = "frequency decipher"
+	icon_state = "frequency_decipher"
+
+/obj/item/device/radio/uplink/Initialize()
+	. = ..()
+	access_code = num2text(rand(10000, 99999))
 
 /obj/item/device/radio/uplink/attack_self(mob/user as mob)
-	if(hidden_uplink)
-		hidden_uplink.trigger(user)
+	tgui_interact(user)
+
+/obj/item/device/radio/uplink/tgui_interact(mob/user, var/datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if (!ui)
+		ui = new(user, src, "UplinkLogin", name)
+		ui.open()
+
+/obj/item/device/radio/uplink/tgui_data(mob/user)
+	var/list/data = list()
+	data["message"] = status_message || numeric_input
+	return data
+
+/obj/item/device/radio/uplink/tgui_act(action, list/params)
+	UI_ACT_CHECK
+	if (action != "keypad") return FALSE
+
+	var/digit = params["digit"]
+	switch(digit)
+		if ("C")
+			if (status_message)
+				status_message = ""
+				numeric_input = ""
+			else
+				numeric_input = copytext(numeric_input, 1, -1)
+		if ("E")
+			if (numeric_input == access_code)
+				status_message = "SUCCESS"
+				if(hidden_uplink)
+					hidden_uplink.trigger(usr)
+			else
+				status_message = "ERROR"
+		if ("0","1","2","3","4","5","6","7","8","9")
+			if (status_message)
+				status_message = ""
+				numeric_input = digit
+			else
+				if(length(numeric_input) >= 7)
+					return FALSE
+				else
+					numeric_input += digit
+	return TRUE
 
 /obj/item/device/multitool/uplink/New(var/loc, var/owner)
 	..()
@@ -242,14 +291,16 @@
 /obj/item/device/uplink/contained/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/uistate = GLOB.contained_state)
 	return ..()
 
+/obj/item/device/radio/uplink/nuclear/attack_self(mob/user as mob)
+	if(hidden_uplink)
+		hidden_uplink.trigger(user)
+
 /obj/item/device/radio/uplink/nuclear/pickup(mob/user)
 	..()
-	var/firstuser
-	if(!firstuser)
-		for(var/obj/item/device/uplink/U in contents)
+	for(var/obj/item/device/uplink/U in contents)
+		if(!U.uplink_owner)
 			U.uplink_owner = user
 			U.uses = TEAM_TELECRYSTAL_AMOUNT
-		firstuser = 1
 
 /obj/item/device/radio/uplink/empty/pickup(mob/user)
 	..()

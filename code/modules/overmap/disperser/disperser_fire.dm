@@ -157,7 +157,15 @@
 		for(var/mob/living/L in charge)
 			to_chat(L, SPAN_DANGER("Your body shakes violently as the drop pod reaches it's destination."))
 	else
-		charge.fire(targetturf, strength, range)
+		var/shield_active_EM = FALSE
+		var/shield_active_KTC = FALSE
+		for(var/obj/machinery/power/shield_generator/S in SSmachines.machinery)
+			if(S.z in finaltarget.map_z)
+				if(S.running == SHIELD_RUNNING && S.check_flag(MODEFLAG_EM))
+					shield_active_EM = TRUE
+				if(S.running == SHIELD_RUNNING && S.check_flag(MODEFLAG_HYPERKINETIC))
+					shield_active_KTC = TRUE
+		charge.fire(targetturf, strength, range, shield_active_EM, shield_active_KTC)
 		qdel(charge)
 
 /obj/machinery/computer/ship/disperser/proc/handle_beam(turf/start, direction)
