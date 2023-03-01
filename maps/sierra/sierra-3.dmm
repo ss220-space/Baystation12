@@ -10976,6 +10976,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/item/tank/jetpack/carbondioxide,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/sierra/suits)
 "asw" = (
@@ -13600,9 +13601,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/window/brigdoor/westleft{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/iaa)
 "ayw" = (
@@ -13615,9 +13613,9 @@
 	},
 /obj/structure/holoplant,
 /obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/black/border,
+/obj/effect/floor_decal/corner/darkblue/border,
 /obj/effect/floor_decal/borderfloorblack/corner2,
-/obj/effect/floor_decal/corner/black/bordercorner2,
+/obj/effect/floor_decal/corner/darkblue/bordercorner2,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/iaa)
 "ayx" = (
@@ -13682,11 +13680,11 @@
 	},
 /obj/structure/holoplant,
 /obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/black/border,
+/obj/effect/floor_decal/corner/darkblue/border,
 /obj/effect/floor_decal/borderfloorblack/corner2{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/black/bordercorner2{
+/obj/effect/floor_decal/corner/darkblue/bordercorner2{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
@@ -19291,7 +19289,7 @@
 	name = "Security Entry Airlock";
 	pixel_x = 5;
 	pixel_y = 22;
-	req_access = list("ACCESS_WARDEN")
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/machinery/button/alternate/door{
 	desc = "A remote control-switch for the office door.";
@@ -19299,7 +19297,7 @@
 	name = "Security Exit Airlock";
 	pixel_x = -5;
 	pixel_y = 22;
-	req_access = list("ACCESS_WARDEN")
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -20353,7 +20351,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "visiting_room_windows_shutters";
 	name = "Brig's visiting room shutters";
-	req_access = list("ACCESS_WARDEN");
+	req_access = list("ACCESS_SECURITY");
 	pixel_y = -6;
 	pixel_x = 21;
 	dir = 8
@@ -21467,7 +21465,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "security_permabrig_fitst_cell_shutters";
 	name = "1st Cell Shutters";
-	req_access = list("ACCESS_WARDEN");
+	req_access = list("ACCESS_SECURITY");
 	pixel_x = 21;
 	dir = 8
 	},
@@ -21475,7 +21473,8 @@
 	dir = 8;
 	pixel_x = 22;
 	pixel_y = -9;
-	id_tag = "security_first_cell_flash"
+	id_tag = "security_first_cell_flash";
+	req_access = list("ACCESS_SECURITY")
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/brig{
@@ -22602,7 +22601,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "security_permabrig_fitst_cell_shutters";
 	name = "1st Cell Shutters";
-	req_access = list("ACCESS_WARDEN");
+	req_access = list("ACCESS_SECURITY");
 	pixel_y = 18;
 	pixel_x = -21;
 	dir = 4
@@ -22621,7 +22620,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "security_permabrig_lobby_shutters";
 	name = "Desk Shutters";
-	req_access = list("ACCESS_WARDEN");
+	req_access = list("ACCESS_SECURITY");
 	pixel_y = -2;
 	pixel_x = -28;
 	dir = 4
@@ -22629,7 +22628,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "security_permabrig_second_cell_shutters";
 	name = "2nd Cell Shutters";
-	req_access = list("ACCESS_WARDEN");
+	req_access = list("ACCESS_SECURITY");
 	pixel_y = 6;
 	pixel_x = -21;
 	dir = 4
@@ -22637,7 +22636,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "security_permabrig_third_cell_shutters";
 	name = "3d Cell Shutters";
-	req_access = list("ACCESS_WARDEN");
+	req_access = list("ACCESS_SECURITY");
 	pixel_y = -6;
 	pixel_x = -21;
 	dir = 4
@@ -22647,7 +22646,8 @@
 	name = "Chamber Flasher";
 	pixel_x = -28;
 	pixel_y = 10;
-	dir = 4
+	dir = 4;
+	req_access = list("ACCESS_SECURITY")
 	},
 /obj/random/date_based/christmas/xmaslights,
 /turf/simulated/floor/tiled/steel_grid,
@@ -23539,6 +23539,7 @@
 /obj/item/lipstick/random,
 /obj/item/lipstick/random,
 /obj/item/clothing/under/schoolgirl,
+/obj/item/music_tape,
 /obj/random/cash,
 /obj/item/storage/toolbox/mechanical,
 /obj/random/cash,
@@ -24517,7 +24518,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/turret_protected/ai_upload)
+/area/security/sierra/equipment)
 "aNo" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -24617,7 +24618,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/turret_protected/ai_upload)
+/area/security/sierra/equipment)
 "aNu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -25868,7 +25869,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "security_permabrig_second_cell_shutters";
 	name = "2nd Cell Shutters";
-	req_access = list("ACCESS_WARDEN");
+	req_access = list("ACCESS_SECURITY");
 	pixel_x = 21;
 	dir = 8
 	},
@@ -25876,7 +25877,8 @@
 	dir = 8;
 	pixel_x = 22;
 	pixel_y = -9;
-	id_tag = "security_second_cell_flash"
+	id_tag = "security_second_cell_flash";
+	req_access = list("ACCESS_SECURITY")
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/brig{
@@ -27079,15 +27081,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/hos)
 "aQK" = (
-/obj/structure/closet/white_sierra,
-/obj/item/storage/box/gloves,
-/obj/item/storage/box/evidence,
-/obj/item/storage/box/syringes,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/light,
+/obj/machinery/computer/modular/preset/security{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/security/sierra/forensic/lab)
 "aQL" = (
@@ -27105,6 +27104,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/bordercorner2{
 	dir = 6
+	},
+/obj/structure/closet/secure_closet/white_sierra{
+	name = "secure evidence locker"
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/sierra/forensic/lab)
@@ -30099,7 +30101,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "security_permabrig_third_cell_shutters";
 	name = "3d Cell Shutters";
-	req_access = list("ACCESS_WARDEN");
+	req_access = list("ACCESS_SECURITY");
 	pixel_x = 21;
 	dir = 8
 	},
@@ -30107,7 +30109,8 @@
 	dir = 8;
 	pixel_x = 22;
 	pixel_y = -9;
-	id_tag = "security_third_cell_flash"
+	id_tag = "security_third_cell_flash";
+	req_access = list("ACCESS_SECURITY")
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/brig{
@@ -31942,10 +31945,8 @@
 	req_access = list("ACCESS_SECURITY")
 	})
 "aZb" = (
-/obj/machinery/vending/hydronutrients{
-	dir = 1;
-	products = list(/obj/item/reagent_containers/glass/bottle/eznutrient=6,/obj/item/reagent_containers/glass/bottle/left4zed=0,/obj/item/reagent_containers/glass/bottle/robustharvest=3,/obj/item/plantspray/pests=20,/obj/item/reagent_containers/syringe=0,/obj/item/storage/plants=5);
-	name = "\improper NutriMax - Prison Edition"
+/obj/machinery/vending/hydronutrients/prison{
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
@@ -38346,17 +38347,10 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/infirmreception)
 "fVv" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
+/turf/simulated/wall/prepainted{
+	can_open = 1
 	},
-/obj/structure/closet/walllocker{
-	pixel_x = 24
-	},
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/security/sierra/armory)
+/area/maintenance/firstdeck/centralport)
 "fWJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/highsecurity{
@@ -42316,6 +42310,9 @@
 /obj/structure/closet/walllocker{
 	pixel_x = 24
 	},
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/sierra/armory)
 "qUG" = (
@@ -43197,11 +43194,14 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/white_sierra{
-	name = "secure evidence locker"
-	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/closet/white_sierra,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/storage/box/syringes,
+/obj/item/storage/box/evidence,
+/obj/item/storage/box/gloves,
 /turf/simulated/floor/tiled/white,
 /area/security/sierra/forensic/lab)
 "tDr" = (
@@ -54935,7 +54935,7 @@ sDx
 alK
 alK
 qPC
-fVv
+aTU
 aTU
 aGb
 avo
@@ -57189,7 +57189,7 @@ baa
 bcI
 beB
 bfD
-ban
+fVv
 bgP
 bcI
 aaa
