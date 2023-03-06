@@ -162,7 +162,8 @@
 		/obj/item/device/tape/random = 3,
 		/obj/item/device/camera,
 		/obj/item/toy/therapy_blue,
-		/obj/item/storage/belt/general
+		/obj/item/storage/belt/general,
+		/obj/item/implanter/psi = 5
 	)
 
 /obj/structure/closet/secure_closet/virology
