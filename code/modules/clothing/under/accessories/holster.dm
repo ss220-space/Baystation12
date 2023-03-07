@@ -72,6 +72,16 @@
 	icon_state = "holster_hip"
 	body_location = LOWER_TORSO
 
+/obj/item/clothing/accessory/storage/holster/katana
+	name = "katana holster"
+	desc = "Katana sheath made of magnolia wood and varnishes to protect against moisture."
+	icon_state = "holster_katana"
+	overlay_state = "katana"
+	can_holster = list(/obj/item/material/sword/katana)
+	sound_in = 'sound/effects/holster/sheathin.ogg'
+	sound_out = 'sound/effects/holster/sheathout.ogg'
+	body_location = LOWER_TORSO
+
 /obj/item/clothing/accessory/storage/holster/thigh
 	name = "thigh holster"
 	desc = "A drop leg holster made of a durable synthetic fiber."
