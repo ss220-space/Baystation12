@@ -61,6 +61,7 @@
 	desc = "A katana of a once legendary swordsman..."
 	icon_state = "muramasa"
 	item_state = "muramasa"
+	furniture_icon = "muramasa_handle"
 	var/ability_cooldown = 30 SECONDS
 	var/ability_prepare = 1.5 SECOND
 	var/next_use = 0
