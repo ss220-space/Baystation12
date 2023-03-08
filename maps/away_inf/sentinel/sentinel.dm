@@ -15,8 +15,8 @@
 	scanner_name = "Multipurpose Patrol Craft"
 	scanner_desc = @{"
 		<center><img src = FleetLogo.png><br>
-		<i>Registration</i>: SCGDF Multipurpose Patrol Craft
-		<i>Transponder</i>: Transmitting (MIL), SCG
+		<i>Registration</i>: SCGDF Multipurpose Patrol Craft<br>
+		<i>Transponder</i>: Transmitting (MIL), SCG<br>
 		<b>Notice</b>: Nagashino-class Multipurpose Patrol Craft. Fine example of human fleet brilliant technologies with 5th Fleet designation and massive heat footprint."}
 	contact_class = /decl/ship_contact_class/nagashino
 	color = "#990000"
