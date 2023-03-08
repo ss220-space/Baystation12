@@ -62,6 +62,7 @@
 	icon_state = "muramasa"
 	item_state = "muramasa"
 	var/ability_cooldown = 30 SECONDS
+	var/ability_prepare = 1.5 SECOND
 	var/next_use = 0
 	var/next_attack_use = 0
 	var/ability_active = FALSE
@@ -71,7 +72,7 @@
 	if(!antag.is_antagonist(user.mind))
 		return
 
-	if(user.incapacitated(INCAPACITATION_DISABLED) || user.buckled || user.pinned.len || /obj/item/grab in user.contents)
+	if(user.incapacitated(INCAPACITATION_DISABLED) || user.buckled || user.pinned.len)
 		to_chat(user, SPAN_WARNING("You cannot use it in your current state."))
 		return
 
@@ -93,27 +94,27 @@
 
 	if(!istype(H.loc, /turf))
 		to_chat(H, SPAN_WARNING("You cannot use this ability out of your current location"))
-		return 0
+		return
 
 	if(!target_turf)
 		to_chat(H, SPAN_WARNING("No valid target found"))
-		return 0
+		return
 
 	if(target_turf.density)
 		to_chat(H, SPAN_WARNING("You cannot move into solid walls."))
-		return 0
+		return
 
 	if(target_turf.contains_dense_objects())
 		to_chat(H, SPAN_WARNING("You cannot move to a location with solid objects."))
-		return 0
+		return
 
 	if(target_turf.z != H.z || get_dist(target_turf, get_turf(H)) > world.view)
-		to_chat(H,  SPAN_WARNING("You cannot teleport to such a distant object."))
-		return 0
+		to_chat(H,  SPAN_WARNING("You cannot move to such a distant object."))
+		return
 
 	user.visible_message(SPAN_WARNING("You can see how [user] is preparing for a lunge!"))
 
-	if(do_after(user, 1.5 SECONDS))
+	if(do_after(user, ability_prepare))
 		for(var/mob/living/mob in moblist)
 			playsound(mob,'sound/weapons/katana_swipe.ogg', 20, 1)
 			mob.stunned = 1
@@ -150,6 +151,10 @@
 		var/list/moblist = list()
 
 		if(!target_turf)
+			return
+
+		if(/obj/item/grab in user.contents)
+			to_chat(user,  SPAN_WARNING("You cannot use it while grab."))
 			return
 
 		for(var/turf/T in getline(user, target_turf))
