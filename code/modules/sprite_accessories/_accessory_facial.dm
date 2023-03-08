@@ -140,3 +140,71 @@
 /datum/sprite_accessory/facial_hair/lumberjack
 	name = "Lumberjack"
 	icon_state = "facial_lumberjack"
+
+/datum/sprite_accessory/facial_hair/anchor
+	name = "Anchor Beard"
+	icon_state = "facial_anchor"
+
+/datum/sprite_accessory/facial_hair/bandholz
+	name = "Bandholz Beard"
+	icon_state = "facial_bandholz"
+
+/datum/sprite_accessory/facial_hair/balbo
+	name = "Balbo"
+	icon_state = "facial_balbo"
+
+/datum/sprite_accessory/facial_hair/bigbeard
+	name = "Big Beard"
+	icon_state = "facial_bigbeard"
+
+/datum/sprite_accessory/facial_hair/bikerdouble
+	name = "Biker Double"
+	icon_state = "facial_bikerdouble"
+
+/datum/sprite_accessory/facial_hair/bikergoatee
+	name = "Biker Goatee"
+	icon_state = "facial_bikergoatee"
+
+/datum/sprite_accessory/facial_hair/justbiker
+	name = "Biker"
+	icon_state = "facial_justbiker"
+
+/datum/sprite_accessory/facial_hair/brush
+	name = "Brush"
+	icon_state = "facial_brush"
+
+/datum/sprite_accessory/facial_hair/fishing
+	name = "Fishing Hook"
+	icon_state = "facial_fishing"
+
+/datum/sprite_accessory/facial_hair/patch
+	name = "Goat Patch"
+	icon_state = "facial_patch"
+
+/datum/sprite_accessory/facial_hair/lumberjackshort
+	name = "Lumberjack Short"
+	icon_state = "facial_lumberjackshort"
+
+/datum/sprite_accessory/facial_hair/bigmutton
+	name = "Mutton Chops and Moustache Big"
+	icon_state = "facial_bigmutton"
+
+/datum/sprite_accessory/facial_hair/shortmutton
+	name = "Mutton Chops and Moustache Short"
+	icon_state = "facial_shortmutton"
+
+/datum/sprite_accessory/facial_hair/oldman
+	name = "Old Man"
+	icon_state = "facial_oldman"
+
+/datum/sprite_accessory/facial_hair/prospector
+	name = "Prospector"
+	icon_state = "facial_prospector"
+
+/datum/sprite_accessory/facial_hair/square
+	name = "Square Beard"
+	icon_state = "facial_square"
+
+/datum/sprite_accessory/facial_hair/watson2
+	name = "Watson Mustache 2"
+	icon_state = "facial_watson2"
