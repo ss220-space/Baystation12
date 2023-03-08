@@ -55,8 +55,8 @@
 	prefix = "maps/away_inf/"
 	suffixes = list("farfleet/farfleet-1.dmm", "farfleet/farfleet-2.dmm")
 	spawn_cost = 0.5
-	player_cost = 7 // Нынешнее значение основано на количестве игроков в авейке ~bear1ake
-	spawn_weight = 1 // Спавн включён
+	player_cost = 50 // Нынешнее значение основано на количестве игроков в авейке ~bear1ake
+	spawn_weight = 10 // Спавн выключен до ввода на оффбее
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/snz)
 
 
