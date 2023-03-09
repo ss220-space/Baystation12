@@ -20412,6 +20412,7 @@
 	})
 "aHP" = (
 /obj/structure/table/woodentable_reinforced/ebony,
+/obj/item/reagent_containers/food/snacks/grown/apple,
 /turf/simulated/floor/carpet/red,
 /area/crew_quarters/heads/office/hos)
 "aHQ" = (
@@ -31947,14 +31948,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/lounge/upper)
-"aYX" = (
-/obj/machinery/suit_storage_unit/security/alt,
-/obj/machinery/camera/network/security{
-	c_tag = "Security - Suits Storage";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/security/sierra/suits)
 "aYY" = (
 /obj/machinery/door/blast/shutters{
 	dir = 4;
@@ -37091,6 +37084,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/locker)
+"bXG" = (
+/obj/machinery/suit_storage_unit/security/alt,
+/obj/machinery/camera/network/security{
+	c_tag = "Security - Suits Storage";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/security/sierra/suits)
 "bYa" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -54196,7 +54197,7 @@ awQ
 amT
 apM
 apM
-aYX
+bXG
 apM
 atV
 avu
