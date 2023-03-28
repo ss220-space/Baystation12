@@ -57,6 +57,7 @@
 		return
 	container.finish_bulk_removal()
 	visible_message("\The [user] empties \the [src].", range = 5)
+	return TRUE
 
 /obj/item/clothing/accessory/storage/pockets
 	name = "pockets"
