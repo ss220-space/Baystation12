@@ -68,7 +68,7 @@
 		if (target)	// NECK SNAP TIME
 			var/turf/spot
 			var/turf/behind_target = get_step(target.loc, turn(target.dir, 180))
-			if(isfloor(behind_target) && get_dist(behind_target, loc) <= 7 && not_turf_contains_dense_objects(behind_target))
+			if(isturf(behind_target) && get_dist(behind_target, loc) <= 7 && not_turf_contains_dense_objects(behind_target))
 				spot = behind_target
 			else
 				var/list/directions = shuffle(GLOB.cardinal.Copy())
@@ -76,7 +76,7 @@
 					var/turf/T = get_step(target, D)
 					if(turf_contains_dense_objects(T))
 						continue
-					if(isfloor(T) && get_dist(T, loc) <= 7)
+					if(isturf(T) && get_dist(T, loc) <= 7)
 						spot = T
 						break
 			if(!spot)
@@ -268,7 +268,7 @@
 	icon = 'infinity/icons/obj/statue_cage.dmi'
 	icon_state = "2"
 	layer = MOB_LAYER + 0.05
-	plane = MOB_PLANE
+	plane = DEFAULT_PLANE
 	name = "cage"
 	desc = "An elongated cage with an unusual lever below."
 	density = TRUE
