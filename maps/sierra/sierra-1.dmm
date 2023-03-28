@@ -833,10 +833,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/closet/emcloset{
-	anchored = 1;
-	name = "anchored emergency closet"
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/thirddeck/fore)
 "bR" = (
@@ -19893,17 +19889,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/deckofficer)
-"Fu" = (
-/obj/structure/closet/emcloset{
-	anchored = 1;
-	name = "anchored emergency closet"
-	},
-/obj/effect/floor_decal/corner/lightgrey/mono,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj,
-/obj,
-/turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/thirddeck/fore)
 "Fv" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -44675,7 +44660,7 @@ Is
 Is
 Is
 fB
-Fu
+kp
 KJ
 Lu
 uM

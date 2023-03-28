@@ -47,8 +47,8 @@
 /decl/emote/audible/clap
 	emote_sound = 'infinity/sound/voice/clap.ogg'
 
-/decl/emote/audible/chuckle/resomi
-	emote_sound = 'infinity/sound/voice/resomicougha.ogg'
+/decl/emote/audible/sneeze/resomi
+	emote_sound = 'infinity/sound/voice/resomisneeze.ogg'
 	sounded_species = null
 
 /decl/emote/audible/cough
@@ -60,7 +60,7 @@
 	SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_EROSAN, SPECIES_TAJARA, SPECIES_RESOMI, SPECIES_VOX, SPECIES_SKRELL)
 
 /decl/emote/audible/cough/resomi
-	emote_sound = 'infinity/sound/voice/resomicoughb.ogg'
+	emote_sound = 'infinity/sound/voice/resomicough.ogg'
 	sounded_species = null
 
 /decl/emote/audible/cry
@@ -85,7 +85,7 @@
 	sounded_species = SOUNDED_SPECIES
 
 /decl/emote/audible/laugh/resomi
-	emote_sound = 'infinity/sound/voice/resomicougha.ogg'
+	emote_sound = 'infinity/sound/voice/resomilaugh.ogg'
 	sounded_species = null
 
 /decl/emote/audible/giggle
@@ -102,7 +102,7 @@
 	sounded_species = SOUNDED_SPECIES
 
 /decl/emote/audible/scream/resomi
-	emote_sound = 'infinity/sound/voice/resomisneeze.ogg'
+	emote_sound = 'infinity/sound/voice/resomiscream.ogg'
 	sounded_species = null
 
 /decl/emote/audible/scream/monkey

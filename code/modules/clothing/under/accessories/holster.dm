@@ -18,14 +18,14 @@
 /obj/item/clothing/accessory/storage/holster/attackby(obj/item/W as obj, mob/user as mob)
 	var/datum/extension/holster/H = get_extension(src, /datum/extension/holster)
 	if(H.holster(W, user))
-		return
+		return TRUE
 	else
 		. = ..(W, user)
 
 /obj/item/clothing/accessory/storage/holster/attack_hand(mob/user as mob)
 	var/datum/extension/holster/H = get_extension(src, /datum/extension/holster)
 	if(H.unholster(user))
-		return
+		return TRUE
 	. = ..(user)
 
 /obj/item/clothing/accessory/storage/holster/examine(mob/user)
@@ -71,6 +71,31 @@
 	desc = "A handgun holster slung low on the hip, draw pardner!"
 	icon_state = "holster_hip"
 	body_location = LOWER_TORSO
+
+/obj/item/clothing/accessory/storage/holster/katana
+	name = "katana holster"
+	desc = "Katana sheath made of magnolia wood and varnishes to protect against moisture."
+	icon_state = "holster_katana"
+	overlay_state = "katana"
+	can_holster = list(/obj/item/material/sword/katana)
+	sound_in = 'sound/effects/holster/sheathin.ogg'
+	sound_out = 'sound/effects/holster/sheathout.ogg'
+	body_location = LOWER_TORSO
+
+/obj/item/clothing/accessory/storage/holster/katana/attackby(obj/item/W, mob/user)
+	. = ..()
+	if(.)
+		icon_state = initial(icon_state) + "_occupied"
+
+/obj/item/clothing/accessory/storage/holster/katana/attack_hand(mob/user)
+	. = ..()
+	if(.)
+		icon_state = initial(icon_state)
+
+/obj/item/clothing/accessory/storage/holster/katana/attack_self(mob/user)
+	. = ..()
+	if(.)
+		icon_state = initial(icon_state)
 
 /obj/item/clothing/accessory/storage/holster/thigh
 	name = "thigh holster"
