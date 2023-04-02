@@ -113,8 +113,8 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4
+		/datum/mil_rank/fleet/o4,
+		/datum/mil_rank/fleet/o3
 	)
 	supervisors = "Command of the Battle Group Bravo of the 5th fleet, SCGDF"
 	loadout_allowed = TRUE
@@ -138,8 +138,8 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/fleet/o2
+		/datum/mil_rank/fleet/o2,
+		/datum/mil_rank/fleet/o1
 	)
 	supervisors = "Fleet Commander"
 	loadout_allowed = TRUE
@@ -190,9 +190,9 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/fleet/e6,
 		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e6
+		/datum/mil_rank/fleet/e4
 	)
 	supervisors = "Fleet Pilot, Fleet Commander"
 	loadout_allowed = TRUE
@@ -345,7 +345,7 @@
 /datum/mil_rank/army/o1
 	name = "Second Lieutenant"
 	name_short = "2LT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o1, /obj/item/clothing/accessory/solgov/specialty/officer)
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 11
 
 /datum/mil_rank/army/o2
