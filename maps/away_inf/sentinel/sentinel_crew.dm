@@ -59,7 +59,8 @@
 	allowed_branches = list(/datum/mil_branch/army)
 	allowed_ranks = list(
 		/datum/mil_rank/army/e5,
-		/datum/mil_rank/army/e4
+		/datum/mil_rank/army/e4,
+		/datum/mil_rank/army/e3_alt
 	)
 	supervisors = "Army SCGSO Leader"
 	loadout_allowed = TRUE
@@ -86,8 +87,7 @@
 	allowed_branches = list(/datum/mil_branch/army)
 	allowed_ranks = list(
 		/datum/mil_rank/army/o3,
-		/datum/mil_rank/army/o2,
-		/datum/mil_rank/army/o1
+		/datum/mil_rank/army/o2
 	)
 	supervisors = "Fleet Commander, Command of the Battle Group Bravo of the 5th fleet, SCGDF"
 	loadout_allowed = TRUE
@@ -316,19 +316,26 @@
 	name_short = "SCGA"
 	email_domain = "army.mil"
 	rank_types = list(
+		/datum/mil_rank/army/e3_alt,
 		/datum/mil_rank/army/e4,
 		/datum/mil_rank/army/e5,
-		/datum/mil_rank/army/o1,
 		/datum/mil_rank/army/o2,
 		/datum/mil_rank/army/o3
 	)
 	spawn_rank_types = list(
+		/datum/mil_rank/army/e3_alt,
 		/datum/mil_rank/army/e4,
 		/datum/mil_rank/army/e5,
-		/datum/mil_rank/army/o1,
 		/datum/mil_rank/army/o2,
 		/datum/mil_rank/army/o3
 	)
+
+
+/datum/mil_rank/army/e3_alt
+	name = "Specialist"
+	name_short = "SPT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e3_alt, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 3
 
 /datum/mil_rank/army/e4
 	name = "Corporal"
@@ -341,12 +348,6 @@
 	name_short = "SGT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e5, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 5
-
-/datum/mil_rank/army/o1
-	name = "Second Lieutenant"
-	name_short = "2LT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer, /obj/item/clothing/accessory/solgov/specialty/officer)
-	sort_order = 11
 
 /datum/mil_rank/army/o2
 	name = "First Lieutenant"
