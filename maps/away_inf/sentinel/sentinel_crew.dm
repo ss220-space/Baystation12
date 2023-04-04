@@ -60,7 +60,7 @@
 	allowed_ranks = list(
 		/datum/mil_rank/army/e5,
 		/datum/mil_rank/army/e4,
-		/datum/mil_rank/army/e3_alt
+		/datum/mil_rank/army/e4_alt
 	)
 	supervisors = "Army SCGSO Leader"
 	loadout_allowed = TRUE
@@ -316,14 +316,14 @@
 	name_short = "SCGA"
 	email_domain = "army.mil"
 	rank_types = list(
-		/datum/mil_rank/army/e3_alt,
+		/datum/mil_rank/army/e4_alt,
 		/datum/mil_rank/army/e4,
 		/datum/mil_rank/army/e5,
 		/datum/mil_rank/army/o2,
 		/datum/mil_rank/army/o3
 	)
 	spawn_rank_types = list(
-		/datum/mil_rank/army/e3_alt,
+		/datum/mil_rank/army/e4_alt,
 		/datum/mil_rank/army/e4,
 		/datum/mil_rank/army/e5,
 		/datum/mil_rank/army/o2,
@@ -331,11 +331,11 @@
 	)
 
 
-/datum/mil_rank/army/e3_alt
+/datum/mil_rank/army/e4_alt
 	name = "Specialist"
 	name_short = "SPT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e3_alt, /obj/item/clothing/accessory/solgov/specialty/enlisted)
-	sort_order = 3
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 4
 
 /datum/mil_rank/army/e4
 	name = "Corporal"
