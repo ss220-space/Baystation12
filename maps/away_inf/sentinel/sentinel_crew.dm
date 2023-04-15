@@ -56,10 +56,13 @@
 	total_positions = 2
 	outfit_type = /decl/hierarchy/outfit/job/patrol/army_ops
 	branch = /datum/mil_branch/army
-	rank = /datum/mil_rank/army/e5
 	allowed_branches = list(/datum/mil_branch/army)
-	allowed_ranks = list(/datum/mil_rank/army/e5)
-	supervisors = "Army Captain"
+	allowed_ranks = list(
+		/datum/mil_rank/army/e5,
+		/datum/mil_rank/army/e4,
+		/datum/mil_rank/army/e4_alt
+	)
+	supervisors = "Army SCGSO Leader"
 	loadout_allowed = TRUE
 	is_semi_antagonist = TRUE
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
@@ -81,10 +84,12 @@
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/patrol/captain
 	branch = /datum/mil_branch/army
-	rank = /datum/mil_rank/army/o3
 	allowed_branches = list(/datum/mil_branch/army)
-	allowed_ranks = list(/datum/mil_rank/army/o3)
-	supervisors = "Lieutenant Commander, Command of the Battle Group Bravo of the 5th fleet, SCGDF"
+	allowed_ranks = list(
+		/datum/mil_rank/army/o3,
+		/datum/mil_rank/army/o2
+	)
+	supervisors = "Fleet Commander, Command of the Battle Group Bravo of the 5th fleet, SCGDF"
 	loadout_allowed = TRUE
 	is_semi_antagonist = TRUE
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
@@ -106,9 +111,11 @@
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/patrol/commander
 	branch = /datum/mil_branch/fleet
-	rank = /datum/mil_rank/fleet/o4
 	allowed_branches = list(/datum/mil_branch/fleet)
-	allowed_ranks = list(/datum/mil_rank/fleet/o4)
+	allowed_ranks = list(
+		/datum/mil_rank/fleet/o4,
+		/datum/mil_rank/fleet/o3
+	)
 	supervisors = "Command of the Battle Group Bravo of the 5th fleet, SCGDF"
 	loadout_allowed = TRUE
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
@@ -129,10 +136,12 @@
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/patrol/pilot1
 	branch = /datum/mil_branch/fleet
-	rank = /datum/mil_rank/fleet/o2
 	allowed_branches = list(/datum/mil_branch/fleet)
-	allowed_ranks = list(/datum/mil_rank/fleet/o2)
-	supervisors = "Lieutenant Commander"
+	allowed_ranks = list(
+		/datum/mil_rank/fleet/o2,
+		/datum/mil_rank/fleet/o1
+	)
+	supervisors = "Fleet Commander"
 	loadout_allowed = TRUE
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
 	Являясь одним из членов экипажа патрульного корабля 5-го флота ЦПСС, ваша задача состоит в пилотировании и руководством экипажа. \
@@ -152,10 +161,12 @@
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/patrol/surgeon
 	branch = /datum/mil_branch/fleet
-	rank = /datum/mil_rank/fleet/o1
 	allowed_branches = list(/datum/mil_branch/fleet)
-	allowed_ranks = list(/datum/mil_rank/fleet/o1)
-	supervisors = "Sub-Lieutenant, Lieutenant Commander"
+	allowed_ranks = list(
+		/datum/mil_rank/fleet/o1,
+		/datum/mil_rank/fleet/o2
+	)
+	supervisors = "Fleet Pilot, Fleet Commander"
 	loadout_allowed = TRUE
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
 	Являясь одним из членов экипажа патрульного корабля 5-го флота ЦПСС, ваша задача состоит в медицинской поддержке экипажа. \
@@ -163,7 +174,7 @@
 	 Вам крайне нежелательно приближаться к кораблям и станциям с опозновательными знаками без разрешения от командования группировкой. \
 	 Исключением являются те ситуации, когда вы терпите бедствие или на вашем судне аварийная ситуация.<br>\
 	\
-	 Хоть вы и являетесь офицером, в ваши обязанности НЕ входит командование экипажем - это всего лишь показатель вашего профессионализма в медицинской сфере."
+	<b>Хоть вы и являетесь офицером, в ваши обязанности НЕ входит командование экипажем - это всего лишь показатель вашего профессионализма в медицинской сфере!</b>"
 	min_skill = list(SKILL_COMBAT  = SKILL_BASIC,
 					 SKILL_WEAPONS = SKILL_BASIC,
 					 SKILL_HAULING = SKILL_ADEPT,
@@ -177,10 +188,13 @@
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/patrol/engineer
 	branch = /datum/mil_branch/fleet
-	rank = /datum/mil_rank/fleet/e6
 	allowed_branches = list(/datum/mil_branch/fleet)
-	allowed_ranks = list(/datum/mil_rank/fleet/e6)
-	supervisors = "Sub-Lieutenant, Lieutenant Commander"
+	allowed_ranks = list(
+		/datum/mil_rank/fleet/e6,
+		/datum/mil_rank/fleet/e5,
+		/datum/mil_rank/fleet/e4
+	)
+	supervisors = "Fleet Pilot, Fleet Commander"
 	loadout_allowed = TRUE
 	info = "Вы просыпаетесь и выходите из криосна, ощущая прохладный воздух на своём лице, а также лёгкую тошноту. \
 	Являясь одним из членов экипажа патрульного корабля 5-го флота ЦПСС, ваша задача состоит в поддержании работоспособности судна и экипировки экипажа. \
@@ -208,22 +222,25 @@
 	name_short = "SCGF"
 	email_domain = "fleet.mil"
 	rank_types = list(
+		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/fleet/e5,
 		/datum/mil_rank/fleet/e6,
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
+		/datum/mil_rank/fleet/o3,
 		/datum/mil_rank/fleet/o4,
 		/datum/mil_rank/fleet/o6,
 		/datum/mil_rank/fleet/o7,
 		/datum/mil_rank/fleet/o8
 	)
 	spawn_rank_types = list(
+		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/fleet/e5,
 		/datum/mil_rank/fleet/e6,
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o6,
-		/datum/mil_rank/fleet/o7,
-		/datum/mil_rank/fleet/o8
+		/datum/mil_rank/fleet/o3,
+		/datum/mil_rank/fleet/o4
 	)
 
 /datum/mil_rank/grade()
@@ -233,6 +250,18 @@
 	if(sort_order <= 10)
 		return "E[sort_order]"
 	return "O[sort_order - 10]"
+
+/datum/mil_rank/fleet/e4
+	name = "Petty Officer Third Class"
+	name_short = "PO3"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e4, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 4
+
+/datum/mil_rank/fleet/e5
+	name = "Petty Officer Second Class"
+	name_short = "PO2"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e5, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 5
 
 /datum/mil_rank/fleet/e6
 	name = "Petty Officer First Class"
@@ -251,6 +280,12 @@
 	name_short = "SLT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o2, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 12
+
+/datum/mil_rank/fleet/o3
+	name = "Lieutenant"
+	name_short = "LT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o3, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 13
 
 /datum/mil_rank/fleet/o4
 	name = "Lieutenant Commander"
@@ -281,19 +316,44 @@
 	name_short = "SCGA"
 	email_domain = "army.mil"
 	rank_types = list(
+		/datum/mil_rank/army/e4_alt,
+		/datum/mil_rank/army/e4,
 		/datum/mil_rank/army/e5,
+		/datum/mil_rank/army/o2,
 		/datum/mil_rank/army/o3
 	)
 	spawn_rank_types = list(
+		/datum/mil_rank/army/e4_alt,
+		/datum/mil_rank/army/e4,
 		/datum/mil_rank/army/e5,
+		/datum/mil_rank/army/o2,
 		/datum/mil_rank/army/o3
 	)
+
+
+/datum/mil_rank/army/e4_alt
+	name = "Specialist"
+	name_short = "SPT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 4
+
+/datum/mil_rank/army/e4
+	name = "Corporal"
+	name_short = "CPL"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4, /obj/item/clothing/accessory/solgov/specialty/enlisted)
+	sort_order = 4
 
 /datum/mil_rank/army/e5
 	name = "Sergeant"
 	name_short = "SGT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e5, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 5
+
+/datum/mil_rank/army/o2
+	name = "First Lieutenant"
+	name_short = "1LT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o2, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 12
 
 /datum/mil_rank/army/o3
 	name = "Captain"
@@ -350,7 +410,7 @@
 	gloves = /obj/item/clothing/gloves/latex/nitrile
 
 /decl/hierarchy/outfit/job/patrol/commander
-	name = PATROL_OUTFIT_JOB_NAME("Lieutenant Commander")
+	name = PATROL_OUTFIT_JOB_NAME("Commander")
 	head = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/officer/command/commander/away_solpatrol
 	belt = /obj/item/storage/belt/holster/security/tactical/away_solpatrol
@@ -358,7 +418,7 @@
 	gloves = /obj/item/clothing/gloves/thick/duty/solgov/cmd
 
 /decl/hierarchy/outfit/job/patrol/pilot1
-	name = PATROL_OUTFIT_JOB_NAME("Sub-Lieutenant")
+	name = PATROL_OUTFIT_JOB_NAME("Pilot")
 	head = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/officer/pilot1/away_solpatrol
 	belt = /obj/item/storage/belt/holster/security/tactical/away_solpatrol

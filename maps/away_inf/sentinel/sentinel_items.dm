@@ -115,6 +115,11 @@
 	name = "SCG armband"
 	desc = "An armband, worn by the crew to display which country they represent. This one is blue and gold."
 	icon_state = "solblue"
+
+/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt
+	name = "ranks (E-4 specialist)"
+	desc = "Insignia denoting the rank of Specialist."
+
 /* MISC
  * ========
  */
