@@ -38,6 +38,16 @@
 	prescription = 5
 	body_parts_covered = EYES
 
+/obj/item/clothing/glasses/hud/janitor/prescription/tajblind
+	name = "janiHUD veil"
+	desc = "An classic Ahdominian made veil that allows the user to see while obscuring their eyes. This one has installed janiHUD."
+	item_icons = list(slot_glasses_str = 'infinity/icons/mob/onmob/onmob_eyes.dmi')
+	icon = 'infinity/icons/obj/clothing/obj_eyes.dmi'
+	icon_state = "tajblind_jani"
+	item_state = "tajblind_jani"
+	off_state = "tajblind_jani"
+	body_parts_covered = EYES
+
 /obj/item/clothing/glasses/meson/prescription/tajblind
 	name = "industrial veil"
 	desc = "An classic Ahdominian made veil that allows the user to see while obscuring their eyes. This one has installed mesons."
@@ -77,6 +87,17 @@
 	item_state = "tajvisor_sec"
 	prescription = 5
 	body_parts_covered = EYES
+
+/obj/item/clothing/glasses/hud/janitor/prescription/tajvisor
+	name = "janiHUD visor"
+	desc = "An classic Ahdominian made visor that allows the user to see while obscuring their eyes. This one has installed janiHUD."
+	item_icons = list(slot_glasses_str = 'infinity/icons/mob/onmob/onmob_eyes.dmi')
+	icon = 'infinity/icons/obj/clothing/obj_eyes.dmi'
+	icon_state = "tajvisor_jani"
+	item_state = "tajvisor_jani"
+	off_state = "tajvisor_jani"
+	body_parts_covered = EYES
+
 
 /obj/item/clothing/glasses/meson/prescription/tajvisor
 	name = "industrial visor"
