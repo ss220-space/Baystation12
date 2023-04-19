@@ -185,6 +185,13 @@
 	sort_category = "Xenowear"
 	cost = 1
 
+/datum/gear/eyes/janiHUD/tajblind
+	display_name = "(Tajara) veil, janiHUD"
+	path = /obj/item/clothing/glasses/hud/janitor/prescription/tajblind
+	whitelisted = list(SPECIES_TAJARA)
+	sort_category = "Xenowear"
+	cost = 1
+
 /datum/gear/eyes/sciencegoggles/tajblind
 	display_name = "(Tajara) veil, science "
 	path = /obj/item/clothing/glasses/hud/science/tajblind
@@ -242,6 +249,13 @@
 /datum/gear/eyes/meson/tajvisor
 	display_name = "(Tajara) visor, industrial"
 	path = /obj/item/clothing/glasses/meson/prescription/tajvisor
+	whitelisted = list(SPECIES_TAJARA)
+	sort_category = "Xenowear"
+	cost = 1
+
+/datum/gear/eyes/janiHUD/tajvisor
+	display_name = "(Tajara) visor, janiHUD"
+	path = /obj/item/clothing/glasses/hud/janitor/prescription/tajvisor
 	whitelisted = list(SPECIES_TAJARA)
 	sort_category = "Xenowear"
 	cost = 1
