@@ -252,6 +252,7 @@
 	whitelisted = list(SPECIES_TAJARA)
 	sort_category = "Xenowear"
 	cost = 1
+
 /datum/gear/eyes/janiHUD/tajvisor
 	display_name = "(Tajara) visor, janiHUD"
 	path = /obj/item/clothing/glasses/hud/janitor/prescription/tajvisor

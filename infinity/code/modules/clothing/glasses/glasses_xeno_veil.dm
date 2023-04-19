@@ -98,7 +98,6 @@
 	off_state = "tajvisor_jani"
 	body_parts_covered = EYES
 
-
 /obj/item/clothing/glasses/meson/prescription/tajvisor
 	name = "industrial visor"
 	desc = "A modern Ahdominian made visor that allows the user to see while obscuring their eyes. This one has installed mesons."
