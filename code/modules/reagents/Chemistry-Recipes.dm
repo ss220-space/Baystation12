@@ -1095,7 +1095,7 @@
 		var/obj/bork_drink = new chosen(get_turf(holder.my_atom))
 		if(!bork_drink)
 			continue
-			
+
 		if(prob(50))
 			for(var/j in 1 to rand(1,3))
 				step(bork_drink, pick(NORTH, SOUTH, EAST, WEST))
@@ -3239,3 +3239,12 @@
 	catalysts = list(
 		/datum/reagent/enzyme = 1
 	)
+
+/datum/chemical_reaction/varenka
+	name = "Varenka"
+	result = /datum/reagent/nutriment/condensedmilkboiled
+	required_reagents = list(/datum/reagent/nutriment/condensedmilk = 1)
+	result_amount = 1
+	minimum_temperature = 90 CELSIUS
+	maximum_temperature = 120 CELSIUS
+	mix_message = "The solution thickens."

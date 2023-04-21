@@ -509,3 +509,21 @@
 	color = "#efede8"
 	taste_mult = 2
 	protein_amount = 0.7
+
+/datum/reagent/nutriment/condensedmilk
+	name = "condensed milk"
+	description = "The miracle of Terra's food industry — super-saturated compressed milk."
+	taste_description = "extraordinary sweetness"
+	nutriment_factor = 5
+	taste_mult = 2
+	reagent_state = LIQUID
+	color = "#F4CBA8"
+
+/datum/reagent/nutriment/condensedmilkboiled
+	name = "boiled condensed milk"
+	description = "The miracle of Terra's food industry — super-saturated compressed milk that's been boiled."
+	taste_description = "extraordinary thicc sweetness"
+	nutriment_factor = 6
+	taste_mult = 2
+	reagent_state = LIQUID
+	color = "#AC6527"

@@ -1799,6 +1799,11 @@ GLOBAL_LIST_EMPTY(vending_products)
 				  /obj/item/reagent_containers/food/snacks/pistachios = 50,
 				  )
 
+	premium = list(
+				  /obj/item/reagent_containers/food/snacks/canned/sgushenka = 3,
+				  /obj/item/reagent_containers/food/snacks/canned/varenka = 1,
+				  )
+
 	contraband = list(
 					  /obj/item/reagent_containers/food/snacks/canned/caviar/true = 1
 					  )
