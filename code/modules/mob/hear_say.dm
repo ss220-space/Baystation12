@@ -50,6 +50,16 @@
 		var/mob/living/carbon/human/H = speaker
 		speaker_name = H.GetVoice()
 
+	if(istype(src, /mob/living/carbon))
+		var/mob/living/carbon/C = src
+		var/mob/fake_speaker = C.get_fake_appearance(speaker)
+		if(fake_speaker)
+			if(istype(fake_speaker, /mob/living/carbon/human))
+				var/mob/living/carbon/human/H = fake_speaker
+				speaker_name = H.GetVoice()
+			else
+				speaker_name = fake_speaker.name
+
 	if(italics)
 		message = "<i>[message]</i>"
 
@@ -120,15 +130,15 @@
 	if(!(language && (language.flags & INNATE))) // skip understanding checks for INNATE languages
 		if(!say_understands(speaker,language))
 			if(istype(speaker,/mob/living/simple_animal))
-				var/mob/living/M = speaker
-				var/datum/say_list/S = M.say_list
-				if(S && S.speak && S.speak.len)
-					message = pick(S.speak)
-				else
-					return
+				var/understand_animals = FALSE
+				if(istype(src, /mob/living/carbon))
+					var/mob/living/carbon/C = src
+					understand_animals = C.is_hallucinating() && prob(15)
+				if(!understand_animals)
+					message = stars(message)
 			else
 				if(language)
-					message = language.scramble(message, languages)
+					message = language.scramble(message)
 				else
 					message = stars(message)
 
