@@ -17,3 +17,4 @@
 		"lawful", "suit of law", "sequestrator", "et al", "et", "ex", "quid", "bono",	"quo", "pro", "ad"
 	)
 	shorthand = "LGS"
+	has_written_form = TRUE
