@@ -1,6 +1,12 @@
 /datum/sprite_accessory/marking/booster
 	species_allowed = list(SPECIES_HUMAN)
-	subspecies_allowed = list(SPECIES_HUMAN)
+	subspecies_allowed = list(
+		SPECIES_HUMAN,
+		SPECIES_VATGROWN,
+		SPECIES_SPACER,
+		SPECIES_TRITONIAN,
+		SPECIES_GRAVWORLDER
+	)
 	icon = 'icons/mob/human_races/species/human/subspecies/booster_mods.dmi'
 
 /datum/sprite_accessory/marking/booster/ears
