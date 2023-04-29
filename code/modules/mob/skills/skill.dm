@@ -93,7 +93,7 @@ GLOBAL_LIST_EMPTY(skills)
 	if(level == SKILL_PROF)
 		if(ishuman(mob))
 			var/mob/living/carbon/human/H = mob
-			if(istype(H.species, /datum/species/human))
+			if(!istype(H.species, /datum/species/vox) && !istype(H.species, /datum/species/mantid))
 				H.add_language(LANGUAGE_LEGALESE)
 /decl/hierarchy/skill/organizational/finance
 	ID = "finance"
