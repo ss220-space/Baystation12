@@ -3255,6 +3255,7 @@
 	center_of_mass = "x=15;y=9"
 	eat_sound = 'sound/items/drink.ogg'
 	bitesize = 8
+
 /obj/item/reagent_containers/food/snacks/canned/sgushenka/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/nutriment/condensedmilk, 28)
