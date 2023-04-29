@@ -7,10 +7,10 @@
 		return
 
 	if(dbcon && dbcon.IsConnected())
-	/*	if(!check_rights(R_DEBUG,0))
-			alert("The database is already connected! (Only those with +debug can force a reconnection)", "The database is already connected!")
+		if(!check_rights(R_DEBUG, FALSE) || !check_rights(R_ADMIN, FALSE))
+			to_chat(usr, SPAN_WARNING("The database is already connected! (Only those with +DEBUG or +ADMIN can force a reconnection)"))
 			return
-	*/
+
 		var/reconnect = alert("The database is already connected! If you *KNOW* that this is incorrect, you can force a reconnection", "The database is already connected!", "Force Reconnect", "Cancel")
 		if(reconnect != "Force Reconnect")
 			return
