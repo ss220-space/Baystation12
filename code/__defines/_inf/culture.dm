@@ -28,6 +28,7 @@
 //#define CULTURE_RESOMI_SAVEEL     		"Saveel, Sav"
 #define CULTURE_RESOMI_REFUGEE 			"Imperial refugee"
 #define CULTURE_RESOMI_NEWGENERATION	"New generation"
+#define CULTURE_RESOMI_SKRELL       "Skrellian Adoptive"
 #define CULTURE_RESOMI_LOSTCOLONYRICH  "A native of a thriving lost colony"
 #define CULTURE_RESOMI_LOSTCOLONYPOOR  "A native of a impoverished lost colony"
 
@@ -41,6 +42,7 @@
 #define HOME_SYSTEM_RESOMI_LOST_COLONY      "Unknown independent colony"
 #define HOME_SYSTEM_RESOMI_REFUGEE_COLONY   "Unknown Independent Refugee Colony"
 #define HOME_SYSTEM_RESOMI_HOMELESS 		"None"
+#define HOME_SYSTEM_RESOMI_QERRBALAK     "Qerrbalak"
 //#define HOME_SYSTEM_RESOMI_IMPER_COLONY  "Unknown Imperial colony"
 
 #define RELIGION_RESOMI_CHOSEN    "Faith of the Chosen"
