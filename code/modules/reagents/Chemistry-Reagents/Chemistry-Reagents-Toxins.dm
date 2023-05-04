@@ -76,6 +76,19 @@
 	target_organ = BP_BRAIN
 	strength = 10
 
+/datum/reagent/toxin/yeosvenom
+	name = "Yeosa'Unathi Venom"
+	description = "A non-lethal toxin produced by Yeosa'Unathi"
+	taste_description = "absolutely vile"
+	color = "#91d895"
+	target_organ = BP_LIVER
+	strength = 1
+
+/datum/reagent/toxin/yeosvenom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(prob(volume*10))
+		M.confused = max(M.confused, 10)
+	..()
+
 /datum/reagent/toxin/venom
 	name = "Spider Venom"
 	description = "A deadly necrotic toxin produced by giant spiders to disable their prey."
