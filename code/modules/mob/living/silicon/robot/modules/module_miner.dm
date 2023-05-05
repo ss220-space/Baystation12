@@ -15,6 +15,7 @@
 		"Basic" = "Miner_old",
 		"Advanced Droid" = "droid-miner",
 		"Treadhead" = "Miner",
+		"Default" = "robotMine"
 	)
 	supported_upgrades = list(
 		/obj/item/borg/upgrade/jetpack

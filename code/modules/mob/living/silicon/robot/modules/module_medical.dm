@@ -100,6 +100,7 @@
 		"Standard" = "surgeon",
 		"Advanced Droid" = "droid-medical",
 		"Needles" = "medicalrobot",
+		"Default" = "robotMedi"
 	)
 	equipment = list(
 		/obj/item/crowbar,
