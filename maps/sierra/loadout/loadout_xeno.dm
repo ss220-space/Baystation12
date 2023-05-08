@@ -5,7 +5,7 @@
 	path = /obj/item/passport/xeno/unathi
 	sort_category = "Xenowear"
 	flags = 0
-	whitelisted = list(SPECIES_UNATHI)
+	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
 	custom_setup_proc = /obj/item/passport/proc/set_info
 	cost = 0
 
@@ -83,13 +83,13 @@
 // Vox clothing
 
 /datum/gear/mask/gas/vox
-	allowed_roles = list(/datum/job/submap/merchant, /datum/job/submap/merchant_trainee, /*/datum/job/stowaway*/)
+	whitelisted = list(SPECIES_VOX)
 
 /datum/gear/gloves/vox
-	allowed_roles = list(/datum/job/submap/merchant, /datum/job/submap/merchant_trainee, /*/datum/job/stowaway*/)
+	whitelisted = list(SPECIES_VOX)
 
 /datum/gear/uniform/vox_cloth
-	allowed_roles = list(/datum/job/submap/merchant, /datum/job/submap/merchant_trainee, /*/datum/job/stowaway*/)
+	whitelisted = list(SPECIES_VOX)
 
 /datum/gear/uniform/vox_robe
-	allowed_roles = list(/datum/job/submap/merchant, /datum/job/submap/merchant_trainee, /*/datum/job/stowaway*/)
+	whitelisted = list(SPECIES_VOX)

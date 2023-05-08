@@ -10,6 +10,7 @@
 //Human misc
 #define LANGUAGE_GUTTER         "Gutter"
 #define LANGUAGE_SPACER         "Spacer"
+#define LANGUAGE_LEGALESE       "Legalese"
 
 //Alien
 #define LANGUAGE_EAL               "Encoded Audio Language"

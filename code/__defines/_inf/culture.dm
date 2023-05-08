@@ -43,6 +43,7 @@
 #define HOME_SYSTEM_RESOMI_REFUGEE_COLONY   "Unknown Independent Refugee Colony"
 #define HOME_SYSTEM_RESOMI_HOMELESS 		"None"
 #define HOME_SYSTEM_RESOMI_RESOBALAK    "Skrellian Empire"
+
 //#define HOME_SYSTEM_RESOMI_IMPER_COLONY  "Unknown Imperial colony"
 
 #define RELIGION_RESOMI_CHOSEN    "Faith of the Chosen"

@@ -121,6 +121,7 @@ decl/cultural_info/location/eremus
 	economic_power =
 	secondary_langs = list(LANGUAGE_SPACER, LANGUAGE_SIGN) |!| I think you understand why this is a "mistake".*/
 
+
 decl/cultural_info/location/resobalak
 	name = HOME_SYSTEM_RESOMI_RESOBALAK
 	description = "Со времени первой крупной волны резоми-беженцев, осевших у скреллов, успело смениться уже три поколения, и вы - представитель резоми, родившихся на территории Скреллианской Империи. \

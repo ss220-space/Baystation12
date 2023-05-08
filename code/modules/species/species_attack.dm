@@ -173,11 +173,24 @@
 	return BURN
 
 /datum/unarmed_attack/bite/venom
+	var/poison_per_bite = 8
+	var/poison_type = /datum/reagent/toxin/yeosvenom
 	attack_verb = list("bit", "sank their fangs into")
 	attack_sound = 'sound/weapons/bite.ogg'
-	damage = 5
-	delay = 120
 	attack_name = "venomous bite"
+	damage = 1
+	delay = 30
+/datum/unarmed_attack/bite/venom/apply_effects(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/armour,var/attack_damage,var/zone)
+	..()
+	if(istype(src) && target && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		var/obj/item/clothing/suit/space/S = H.get_covering_equipped_item_by_zone(zone)
+		if(istype(S) && !length(S.breaches))
+			return
+		if(target.reagents)
+			target.reagents.add_reagent(src.poison_type, rand(0.875 * src.poison_per_bite, src.poison_per_bite))
+			if(prob(src.poison_per_bite))
+				to_chat(H, SPAN_WARNING("You feel a tiny prick."))
 
 /datum/unarmed_attack/bite/venom/get_damage_type()
-	return TOX
+	return BRUTE

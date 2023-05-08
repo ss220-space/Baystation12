@@ -18,7 +18,6 @@
 		LANGUAGE_HUMAN_EURO,
 		LANGUAGE_SPACER,
 		LANGUAGE_MANTID_VOCAL,
-		LANGUAGE_MANTID_NONVOCAL
 	)
 
 /decl/cultural_info/culture/skrell/caste_malish
