@@ -238,6 +238,7 @@
 /obj/item/gun/energy/darkmatter,
 /obj/item/gun/energy/sonic,
 /obj/item/gun/launcher/alien/spikethrower,
+/obj/item/gun/launcher/alien/spikethrower,
 /obj/item/gun/launcher/alien/slugsling,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)

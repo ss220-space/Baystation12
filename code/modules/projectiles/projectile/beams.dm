@@ -287,7 +287,7 @@
 /obj/item/projectile/beam/darkmatter
 	name = "dark matter bolt"
 	icon_state = "darkb"
-	damage = 40
+	damage = 25
 	armor_penetration = 35
 	damage_type = BRUTE
 	muzzle_type = /obj/effect/projectile/darkmatter/muzzle
@@ -299,7 +299,8 @@
 	icon_state = "darkt"
 	damage_flags = 0
 	sharp = FALSE
-	agony = 40
+	agony = 70
+	eyeblur = 6
 	damage_type = STUN
 	muzzle_type = /obj/effect/projectile/stun/darkmatter/muzzle
 	tracer_type = /obj/effect/projectile/stun/darkmatter/tracer
