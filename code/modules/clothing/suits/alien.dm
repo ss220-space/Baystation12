@@ -94,4 +94,4 @@
 
 	/obj/item/clothing/suit/armor/vox_scrap/New()
 		..()
-		slowdown_per_slot[slot_wear_suit] = 4
+		slowdown_per_slot[slot_wear_suit] = 3
