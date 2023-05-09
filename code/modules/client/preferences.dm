@@ -43,6 +43,7 @@ datum/preferences
 
 	var/datum/category_collection/player_setup_collection/player_setup
 	var/datum/browser/panel
+	var/character_slots_count = 0
 
 /datum/preferences/New(client/C)
 	if(istype(C))
@@ -216,6 +217,18 @@ datum/preferences
 		if (href_list["details"])
 			return 1
 		open_setup_window(usr) // INF, у нас имеются некоторые проблемы с браузером. Без костыля не обойтись ~bear1ake
+	else if(href_list["changeslot_next"])
+		character_slots_count+=10
+		if(character_slots_count >= config.character_slots)
+			character_slots_count = 0
+		open_load_dialog(usr, href_list["details"])
+		return 1
+	else if(href_list["changeslot_prev"])
+		character_slots_count-=10
+		if(character_slots_count < 0)
+			character_slots_count = config.character_slots - config.character_slots % 10
+		open_load_dialog(usr, href_list["details"])
+		return 1
 	else if(href_list["resetslot"])
 		if(real_name != input("Это действие удалит содержимое слота - персонажа. Введите имя персонажа, чтобы подтвердить."))
 			return 0
@@ -393,11 +406,16 @@ datum/preferences
 	dat += "<tt><center>"
 
 	dat += "<b>Выберите слот для загрузки</b><hr>"
-	for(var/i=1, i<= config.character_slots, i++)
-		var/name = (slot_names && slot_names[get_slot_key(i)]) || "Персонаж[i]"
-		if(i==default_slot)
+	for(var/i=1, i<= 10, i++)
+		var/name = (slot_names && slot_names[get_slot_key(i + character_slots_count)]) || "Персонаж [i + character_slots_count]"
+		if((i + character_slots_count) == default_slot)
 			name = "<b>[name]</b>"
-		dat += "<a href='?src=\ref[src];changeslot=[i];[details?"details=1":""]'>[name]</a><br>"
+		if(i + character_slots_count <= config.character_slots)
+			dat += "<a href='?src=\ref[src];changeslot=[i + character_slots_count];[details?"details=1":""]'>[name]</a><br>"
+	if(config.character_slots>10)
+		dat += "<br><a href='?src=\ref[src];changeslot_prev=1'> <b>\<</b> </a>"
+		dat += " <b>[character_slots_count + 1]</b> - <b>[character_slots_count + 10]</b> "
+		dat += "<a href='?src=\ref[src];changeslot_next=1'> <b>\></b> </a><br>"
 
 	dat += "<hr>"
 	dat += "</center></tt>"

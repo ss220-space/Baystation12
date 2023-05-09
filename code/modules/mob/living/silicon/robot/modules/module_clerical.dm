@@ -19,7 +19,8 @@
 		"Kent" = "toiletbot",
 		"Bro" = "Brobot",
 		"Rich" = "maximillion",
-		"Default" = "Service2",
+		"Basic" = "Service2",
+		"Default" = "robotServ"
 	)
 	equipment = list(
 		/obj/item/device/flash,
@@ -83,7 +84,8 @@
 		"Kent" =     "toiletbot",
 		"Bro" =      "Brobot",
 		"Rich" =     "maximillion",
-		"Default" =  "Service2",
+		"Basic" =  "Service2",
+		"Default" = "robotCler"
 	)
 	equipment = list(
 		/obj/item/device/flash,

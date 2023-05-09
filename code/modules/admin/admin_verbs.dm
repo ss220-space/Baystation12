@@ -91,6 +91,7 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/sendFax,
 	/client/proc/check_fax_history,
 	/client/proc/reestablish_db_connection,
+	/client/proc/reestablish_db_connection_old,
 	/client/proc/cmd_admin_notarget
 )
 var/list/admin_verbs_ban = list(
@@ -227,7 +228,6 @@ var/list/admin_verbs_debug = list(
 	/client/proc/watched_variables,
 	/client/proc/secrets,
 	/client/proc/debug_global_variables,
-	/client/proc/reestablish_db_connection_old,
 	/client/proc/ping_webhook,
 	/client/proc/reload_webhooks,
 	/client/proc/debug_airlocks_id,
