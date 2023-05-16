@@ -3268,22 +3268,23 @@
 		return
 
 /obj/item/reagent_containers/food/snacks/canned/sgushenka/attackby(obj/item/W, mob/user)
-	if(is_sharp(W) && sealed)
-		playsound(loc,'sound/effects/canopenlong.ogg', 32)
-		if(do_after(user, 3 SECONDS, src))
-			to_chat(user, "<span class='notice'>You unseal \the [src] with a crack of metal.</span>")
-			unseal()
-		else
-			var/mob/living/carbon/H = user
-			var/obj/item/organ/external/temp = H.organs_by_name[BP_L_HAND]
-			if (H.hand)
-				temp = H.organs_by_name[BP_R_HAND]
+	if(!is_sharp(W) || !sealed)
+		return
+	playsound(loc,'sound/effects/canopenlong.ogg', 32)
+	if(do_after(user, 3 SECONDS, src))
+		to_chat(user, "<span class='notice'>You unseal \the [src] with a crack of metal.</span>")
+		unseal()
+	else
+		var/mob/living/carbon/H = user
+		var/obj/item/organ/external/temp = H.organs_by_name[BP_L_HAND]
+		if (H.hand)
+			temp = H.organs_by_name[BP_R_HAND]
 
-			temp.take_general_damage(rand(8,24))
-			H.visible_message(
-				"<span class='danger'>\The [user] cuts himself with \the [W]!</span>",
-				"<span class='notice'>You cut yourself with \the [W]!</span>"
-				)
+		temp.take_general_damage(rand(8,24))
+		H.visible_message(
+			"<span class='danger'>\The [user] cuts himself with \the [W]!</span>",
+			"<span class='notice'>You cut yourself with \the [W]!</span>"
+			)
 
 /obj/item/reagent_containers/food/snacks/canned/varenka
 	name = "varenka"
@@ -3294,6 +3295,7 @@
 	volume = 40
 	center_of_mass = "x=15;y=9"
 	bitesize = 8
+
 /obj/item/reagent_containers/food/snacks/canned/varenka/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/nutriment/condensedmilkboiled, 28)
@@ -3306,22 +3308,23 @@
 		return
 
 /obj/item/reagent_containers/food/snacks/canned/varenka/attackby(obj/item/W, mob/user)
-	if(is_sharp(W) && sealed)
-		playsound(loc,'sound/effects/canopenlong.ogg', 32)
-		if(do_after(user, 3 SECONDS, src))
-			to_chat(user, "<span class='notice'>You unseal \the [src] with a crack of metal.</span>")
-			unseal()
-		else
-			var/mob/living/carbon/H = user
-			var/obj/item/organ/external/temp = H.organs_by_name[BP_L_HAND]
-			if (H.hand)
-				temp = H.organs_by_name[BP_R_HAND]
+	if(!is_sharp(W) || !sealed)
+		return
+	playsound(loc,'sound/effects/canopenlong.ogg', 32)
+	if(do_after(user, 3 SECONDS, src))
+		to_chat(user, "<span class='notice'>You unseal \the [src] with a crack of metal.</span>")
+		unseal()
+	else
+		var/mob/living/carbon/H = user
+		var/obj/item/organ/external/temp = H.organs_by_name[BP_L_HAND]
+		if (H.hand)
+			temp = H.organs_by_name[BP_R_HAND]
 
-			temp.take_general_damage(rand(8,24))
-			H.visible_message(
-				"<span class='danger'>\The [user] cuts off himself with \the [W]!</span>",
-				"<span class='notice'>You cut yourself with \the [W]!</span>"
-				)
+		temp.take_general_damage(rand(8,24))
+		H.visible_message(
+			"<span class='danger'>\The [user] cuts off himself with \the [W]!</span>",
+			"<span class='notice'>You cut yourself with \the [W]!</span>"
+			)
 
 /obj/item/reagent_containers/food/snacks/sosjerky
 	name = "beef jerky"
