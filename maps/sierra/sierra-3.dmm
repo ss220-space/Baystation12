@@ -7654,7 +7654,6 @@
 /obj/item/aiModule/paladin,
 /obj/item/aiModule/robocop,
 /obj/item/aiModule/solgov_aggressive,
-/obj/item/aiModule/nanotrasen,
 /obj/item/aiModule/freeformcore,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -7678,6 +7677,7 @@
 	name = "Core Modules";
 	req_access = list("ACCESS_CAPTAIN")
 	},
+/obj/item/aiModule/solgov,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/turret_protected/ai_upload)
 "anm" = (
@@ -11215,7 +11215,6 @@
 "asP" = (
 /obj/structure/table/rack,
 /obj/item/aiModule/reset,
-/obj/item/aiModule/solgov,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
@@ -11234,6 +11233,7 @@
 	dir = 8;
 	name = "AI Maintenance"
 	},
+/obj/item/aiModule/nanotrasen,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/turret_protected/ai_upload)
 "asU" = (
@@ -27240,13 +27240,16 @@
 	req_access = list("ACCESS_SECURITY")
 	})
 "aQS" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/fore_stairwell)
+/area/security/prison{
+	req_access = list("ACCESS_SECURITY")
+	})
 "aQT" = (
 /obj/structure/table/marble,
 /obj/structure/window/reinforced{
@@ -31401,20 +31404,11 @@
 	req_access = list("ACCESS_SECURITY")
 	})
 "aXT" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/effect/paint_stripe/red,
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id_tag = "security_lockdown";
-	name = "Security Department Lockdown"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/security/brig{
+/obj/structure/bed/chair/padded/green,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/security/prison{
 	req_access = list("ACCESS_SECURITY")
 	})
 "aXU" = (
@@ -42948,23 +42942,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
-"sgC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/security/prison{
-	req_access = list("ACCESS_SECURITY")
-	})
 "sjk" = (
-/obj/structure/bed/chair/padded/green,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
-/area/security/prison{
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/effect/paint_stripe/red,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id_tag = "security_lockdown";
+	name = "Security Department Lockdown"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/security/brig{
 	req_access = list("ACCESS_SECURITY")
 	})
 "sjt" = (
@@ -44434,6 +44426,14 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/heads/office/hop/cobed)
+"wDp" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/fore_stairwell)
 "wDR" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -56439,7 +56439,7 @@ aKK
 aSC
 aWH
 aWH
-aXT
+sjk
 aKP
 aWH
 aNN
@@ -57645,8 +57645,8 @@ aJv
 aJe
 aMq
 aNT
-sgC
-sjk
+aQS
+aXT
 aQR
 aSI
 aXX
@@ -58642,7 +58642,7 @@ gaO
 mgp
 mgp
 aul
-aQS
+wDp
 axg
 lNl
 azQ
