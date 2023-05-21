@@ -1,6 +1,6 @@
 /obj/item/organ/internal/voicebox/nabber
 	name = "vocal synthesiser"
-	assists_languages = list(LANGUAGE_HUMAN_RUSSIAN, LANGUAGE_GUTTER, LANGUAGE_HUMAN_EURO, LANGUAGE_EAL, LANGUAGE_CHANGELING_GLOBAL)
+	assists_languages = list(LANGUAGE_HUMAN_RUSSIAN, LANGUAGE_GUTTER, LANGUAGE_HUMAN_EURO, LANGUAGE_EAL, LANGUAGE_CHANGELING_GLOBAL, LANGUAGE_SPACER)
 
 /obj/item/organ/internal/voicebox/nabber/ascent
 	name = "mantid vocal synthesiser"
