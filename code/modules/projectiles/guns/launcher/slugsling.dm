@@ -51,7 +51,7 @@
 	ammo_type = /obj/item/slugegg
 	max_ammo = 2
 	ammo = 2
-	ammo_gen_time = 600
+	ammo_gen_time = 150
 	var/mode = "Impact"
 
 /obj/item/gun/launcher/alien/slugsling/consume_next_projectile()

@@ -195,6 +195,7 @@
 	fire_sound = 'sound/effects/basscannon.ogg'
 	damage = 5
 	armor_penetration = 40
+	life_span = 6
 	damage_type = BRUTE
 	vacuum_traversal = 0
 	penetration_modifier = 0.2
@@ -212,7 +213,7 @@
 	agony = 70
 
 /obj/item/projectile/energy/plasmastun/sonic/strong
-	damage = 20
+	damage = 35
 	penetrating = 1
 
 /obj/item/projectile/energy/darkmatter
@@ -220,5 +221,5 @@
 	icon_state = "dark_pellet"
 	fire_sound = 'sound/weapons/eLuger.ogg'
 	damage = 10
-	armor_penetration = 35
+	armor_penetration = 40
 	damage_type = BRUTE
