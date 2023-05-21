@@ -1101,6 +1101,7 @@
 "dL" = (
 /obj/structure/table/rack,
 /obj/item/gun/launcher/alien/spikethrower,
+/obj/item/gun/launcher/alien/spikethrower,
 /obj/item/gun/energy/sonic,
 /obj/item/gun/energy/darkmatter,
 /turf/simulated/floor/tiled/techmaint/vox,
