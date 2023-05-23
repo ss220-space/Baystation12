@@ -67,3 +67,9 @@
 	desc = "A polished cutlass issued to chief petty officers of the fleet."
 	icon_state = "pettyofficersword"
 	item_state = "pettyofficersword"
+
+/obj/item/material/sword/replica/officersword/executor
+	name = "executor"
+	desc = "Sharpened, first-class captain's saber with \"Executor\" engraved on the blade. \"If the argument doesn't work, then it steps in.\""
+	icon_state = "armyofficersword"
+	item_state = "armyofficersword"
