@@ -31,7 +31,8 @@
 	burn_delay = 2 SECONDS
 	fore_dir = NORTH
 	initial_restricted_waypoints = list(
-			"SRV Venerable Catfish" = list("nav_hangar_verne", "nav_verne_4")
+			"SRV Venerable Catfish" = list("nav_hangar_verne", "nav_verne_4"),
+			"Mule" = list("nav_verne_mule")
 	)
 	initial_generic_waypoints = list(
 		"nav_verne_1",
