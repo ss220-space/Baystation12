@@ -213,6 +213,18 @@
 	_output_on = TRUE
 	_fully_charged = TRUE
 
+/obj/item/taperoll/research/verne
+	name = "CTI research tape"
+	desc = "A roll of research tape used to block off working areas from the public."
+	tape_type = /obj/item/tape/research/verne
+	color = COLOR_BOTTLE_GREEN
+
+/obj/item/tape/research/verne
+	name = "CTI research tape"
+	desc = "A length of research tape. Better not cross it. This one is green and has Ceti Technical Institute labels printed on it"
+	req_access = list(access_verne)
+	color = COLOR_BOTTLE_GREEN
+
 /obj/item/paper/verne
 	name = "power usage"
 	info = "Verne Pilots and Engineers, remember to turn off the thrusters when you're done with maneuvers.\

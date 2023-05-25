@@ -196,6 +196,10 @@
 /obj/effect/wallframe_spawn/reinforced/polarized/prepainted
 	name = "polarized wall frame window spawner - prepainted"
 
+/obj/effect/wallframe_spawn/reinforced/polarized/prepainted/verne
+	name = "reinforced polarized verne hull wall frame window spawner"
+	frame_path = /obj/structure/wall_frame/hull/verne
+
 /obj/effect/wallframe_spawn/reinforced/polarized/titanium
 	name = "polarized wall frame window spawner - titanium"
 	frame_path = /obj/structure/wall_frame/titanium
