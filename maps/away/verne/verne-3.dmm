@@ -978,11 +978,13 @@
 /area/verne/medical)
 "fd" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/hull/verne,
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id_tag = "verneblast";
 	name = "Verne Protective Blast Doors"
+	},
+/obj/effect/wallframe_spawn/reinforced/polarized/prepainted/verne{
+	id = "eight_space"
 	},
 /turf/simulated/floor/plating,
 /area/verne/common/room/eight)
@@ -1061,13 +1063,13 @@
 /area/verne/bridge)
 "gd" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "professor_space"
-	},
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id_tag = "verneblast";
 	name = "Verne Protective Blast Doors"
+	},
+/obj/effect/wallframe_spawn/reinforced/polarized/prepainted/verne{
+	id = "professor_space"
 	},
 /turf/simulated/floor/plating,
 /area/verne/common/professor)
@@ -1319,11 +1321,13 @@
 /area/verne/bridge/access)
 "hL" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/hull/verne,
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id_tag = "verneblast";
 	name = "Verne Protective Blast Doors"
+	},
+/obj/effect/wallframe_spawn/reinforced/polarized/prepainted/verne{
+	id = "seven_space"
 	},
 /turf/simulated/floor/plating,
 /area/verne/common/room/seven)
@@ -2777,11 +2781,13 @@
 /area/verne/common/messseating)
 "uh" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/hull/verne,
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id_tag = "verneblast";
 	name = "Verne Protective Blast Doors"
+	},
+/obj/effect/wallframe_spawn/reinforced/polarized/prepainted/verne{
+	id = "six_space"
 	},
 /turf/simulated/floor/plating,
 /area/verne/common/room/six)
@@ -3952,7 +3958,7 @@
 /area/verne/common/room/four)
 "Dr" = (
 /obj/machinery/door/firedoor,
-/obj/effect/wallframe_spawn/reinforced/polarized{
+/obj/effect/wallframe_spawn/reinforced/polarized/prepainted/verne{
 	id = "professor_space2"
 	},
 /turf/simulated/floor/plating,

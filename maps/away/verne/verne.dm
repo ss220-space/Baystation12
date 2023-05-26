@@ -31,7 +31,8 @@
 	burn_delay = 2 SECONDS
 	fore_dir = NORTH
 	initial_restricted_waypoints = list(
-			"SRV Venerable Catfish" = list("nav_hangar_verne", "nav_verne_4")
+			"SRV Venerable Catfish" = list("nav_hangar_verne", "nav_verne_4"),
+			"Mule" = list("nav_verne_mule")
 	)
 	initial_generic_waypoints = list(
 		"nav_verne_1",
@@ -211,6 +212,18 @@
 	_input_on = TRUE
 	_output_on = TRUE
 	_fully_charged = TRUE
+
+/obj/item/taperoll/research/verne
+	name = "CTI research tape"
+	desc = "A roll of research tape used to block off working areas from the public."
+	tape_type = /obj/item/tape/research/verne
+	color = COLOR_BOTTLE_GREEN
+
+/obj/item/tape/research/verne
+	name = "CTI research tape"
+	desc = "A length of research tape. Better not cross it. This one is green and has Ceti Technical Institute labels printed on it"
+	req_access = list(access_verne)
+	color = COLOR_BOTTLE_GREEN
 
 /obj/item/paper/verne
 	name = "power usage"
