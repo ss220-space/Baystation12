@@ -53,7 +53,7 @@
 	landmark_tag = "nav_verne_1"
 
 /obj/effect/shuttle_landmark/nav_verne/nav2
-	name = "CTI Research Vessel Deck 2 Starboard"
+	name = "CTI Research Vessel Deck 2 Fore Starboard"
 	landmark_tag = "nav_verne_2"
 
 /obj/effect/shuttle_landmark/nav_verne/nav3
@@ -67,6 +67,10 @@
 /obj/effect/shuttle_landmark/nav_verne/torch
 	name = "SEV Torch Venerable Catfish Dock"
 	landmark_tag = "nav_verne_5"
+
+/obj/effect/shuttle_landmark/nav_verne/mule
+	name = "CTI Research Vessel FTV Mule Spot"
+	landmark_tag = "nav_verne_mule"
 
 /obj/effect/shuttle_landmark/nav_verne/sierra
 	name = "NSV Sierra Venerable Catfish Dock"

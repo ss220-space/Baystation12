@@ -3212,6 +3212,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
 "uV" = (
@@ -4006,6 +4010,10 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
+	},
+/obj/structure/railing/mapped,
+/obj/structure/railing/mapped{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish)
@@ -5786,6 +5794,10 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/verne/engineering/external)
+"Qy" = (
+/obj/effect/shuttle_landmark/nav_verne/mule,
+/turf/space,
+/area/space)
 "Qz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -6170,6 +6182,7 @@
 "Ub" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/toolcloset/excavation/awaysite,
+/obj/item/clothing/mask/gas/alt,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "Ud" = (
@@ -6678,6 +6691,7 @@
 	pixel_x = -22
 	},
 /obj/structure/closet/toolcloset/excavation/awaysite,
+/obj/item/clothing/mask/gas/alt,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/workshop)
 "Xv" = (
@@ -6730,6 +6744,8 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/item/taperoll/research/verne,
+/obj/item/taperoll/research/verne,
 /turf/simulated/floor/tiled/white/monotile,
 /area/verne/xenosci/equipment)
 "XR" = (
@@ -11399,7 +11415,7 @@ Ql
 Ql
 Ql
 Ql
-Ql
+Qy
 Ql
 Ql
 Ql
@@ -19264,55 +19280,55 @@ Ql
 Ql
 Ql
 Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
-Ql
 ES
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
 Ql
 Ql
 Ql
