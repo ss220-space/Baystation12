@@ -3284,6 +3284,7 @@
 /obj/structure/table/rack,
 /obj/item/device/suit_cooling_unit,
 /obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit/miniature,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},

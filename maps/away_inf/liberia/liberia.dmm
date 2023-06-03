@@ -2937,6 +2937,7 @@
 	},
 /obj/item/clothing/gloves/insulated/black,
 /obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit/miniature,
 /obj/item/stack/material/aluminium/ten,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8

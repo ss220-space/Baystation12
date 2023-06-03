@@ -69,7 +69,7 @@
 	if(!istype(H))
 		return 0
 
-	return (H.back == src) || (H.s_store == src)
+	return (H.back == src) || (H.s_store == src) || (H.belt == src)
 
 /obj/item/device/suit_cooling_unit/proc/turn_on()
 	if(!cell)
@@ -178,3 +178,70 @@
 
 	if (cell)
 		to_chat(user, "The charge meter reads [round(cell.percent())]%.")
+
+
+/obj/item/device/suit_cooling_unit/miniature
+	name = "miniature cooling device"
+	desc = "Minituarized heat sink that can be hooked up to a space suit's existing temperature controls to cool down the suit's internals. Weaker than it's bigger counterpart."
+	w_class = ITEM_SIZE_SMALL
+	icon = 'icons/obj/suitcooler.dmi'
+	icon_state = "miniaturesuitcooler0"
+	max_cooling = 6
+	charge_consumption = 3.5
+	slot_flags = SLOT_BELT
+	matter = list(MATERIAL_ALUMINIUM = 10000, MATERIAL_GLASS = 3000)
+
+/obj/item/device/suit_cooling_unit/miniature/on_update_icon()
+	overlays.Cut()
+	if (cover_open)
+		if (cell)
+			icon_state = "miniaturesuitcooler1"
+		else
+			icon_state = "miniaturesuitcooler2"
+		return
+
+	icon_state = "miniaturesuitcooler0"
+
+	if(!cell || !on)
+		return
+
+	switch(round(cell.percent()))
+		if(86 to INFINITY)
+			overlays.Add("minibattery-0")
+		if(69 to 85)
+			overlays.Add("minibattery-1")
+		if(52 to 68)
+			overlays.Add("minibattery-2")
+		if(35 to 51)
+			overlays.Add("minibattery-3")
+		if(18 to 34)
+			overlays.Add("minibattery-4")
+		if(-INFINITY to 17)
+			overlays.Add("minibattery-5")
+
+
+/obj/item/device/suit_cooling_unit/miniature/Process()
+	if (!on || !cell)
+		return
+
+	if (!is_in_slot())
+		return
+
+	var/mob/living/carbon/human/H = loc
+	if ((H.pressure_alert == -1) || (H.pressure_alert == -2))
+		return
+
+	var/temp_adj = min(H.bodytemperature - thermostat, max_cooling)
+
+	if (temp_adj < 0.5)	//only cools, doesn't heat, also we don't need extreme precision
+		return
+
+	var/charge_usage = (temp_adj/max_cooling)*charge_consumption
+
+	H.bodytemperature -= temp_adj
+
+	cell.use(charge_usage * CELLRATE)
+	update_icon()
+
+	if(cell.charge <= 0)
+		turn_off(1)
