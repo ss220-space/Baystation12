@@ -17,6 +17,10 @@
 	path = /obj/item/material/hatchet/machete/steel
 	hidden = TRUE
 
+/datum/fabricator_recipe/arms_ammo/hidden/shotgun_drum
+	name = "12g drum magazine (empty)"
+	path = /obj/item/ammo_magazine/c12m/empty
+
 /datum/fabricator_recipe/arms_ammo/hidden/shotgun
 	name = "ammunition (shotgun, beanbag)"
 	path = /obj/item/ammo_casing/shotgun/beanbag
@@ -83,6 +87,10 @@
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_smg_topmounted
 	name = "ammunition (SMG, top mounted)"
 	path = /obj/item/ammo_magazine/smg_top
+
+/datum/fabricator_recipe/arms_ammo/hidden/magazine_smg_military
+	name = "ammunition (SMG, military)"
+	path = /obj/item/ammo_magazine/uni46x30mm
 
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_arifle
 	name = "ammunition (rifle magazine)"
