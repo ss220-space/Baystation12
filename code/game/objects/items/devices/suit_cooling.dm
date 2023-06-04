@@ -186,10 +186,11 @@
 	w_class = ITEM_SIZE_SMALL
 	icon = 'icons/obj/suitcooler.dmi'
 	icon_state = "miniaturesuitcooler0"
+	item_state = "coolingbelt"
 	max_cooling = 6
-	charge_consumption = 3.5
+	charge_consumption = 2.4 KILOWATTS
 	slot_flags = SLOT_BELT
-	matter = list(MATERIAL_ALUMINIUM = 10000, MATERIAL_GLASS = 3000)
+	matter = list(MATERIAL_STEEL = 10000, MATERIAL_ALUMINIUM = 5000, MATERIAL_GLASS = 3000)
 
 /obj/item/device/suit_cooling_unit/miniature/on_update_icon()
 	overlays.Cut()

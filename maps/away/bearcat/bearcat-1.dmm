@@ -2230,7 +2230,6 @@
 	},
 /obj/item/device/suit_cooling_unit,
 /obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit/miniature,
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/eva)
 "el" = (
