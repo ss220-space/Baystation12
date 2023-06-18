@@ -7,7 +7,6 @@ export const Tank = (props, context) => {
 
   const {
     connected,
-    showToggle = true,
     maskConnected,
     tankPressure,
     releasePressure,
@@ -17,26 +16,9 @@ export const Tank = (props, context) => {
   } = data;
 
   return (
-    <Window width={400} height={320} resizable>
+    <Window width={400} height={135}>
       <Window.Content>
-        <Section
-          title="Status"
-          buttons={
-            !!showToggle && (
-              <Button
-                icon={connected ? 'air-freshener' : 'lock-open'}
-                selected={connected}
-                disabled={!maskConnected}
-                content="Mask Release Valve"
-                onClick={() => act('toggle')}
-              />
-            )
-          }>
-          <LabeledList>
-            <LabeledList.Item label="Mask Connected">{maskConnected ? 'Yes' : 'No'}</LabeledList.Item>
-          </LabeledList>
-        </Section>
-        <Section>
+        <Section title="Status">
           <LabeledList>
             <LabeledList.Item label="Pressure">
               <ProgressBar
@@ -46,7 +28,7 @@ export const Tank = (props, context) => {
                   average: [0.15, 0.35],
                   bad: [-Infinity, 0.15],
                 }}>
-                {data.tankPressure + ' kPa'}
+                {tankPressure + ' kPa'}
               </ProgressBar>
             </LabeledList.Item>
             <LabeledList.Item label="Pressure Regulator">
@@ -90,6 +72,13 @@ export const Tank = (props, context) => {
                     pressure: 'reset',
                   })
                 }
+              />
+              <Button
+                icon={connected ? 'toggle-on' : 'toggle-off'}
+                content=""
+                disabled={!maskConnected}
+                selected={connected ? 'selected' : null}
+                onClick={() => act('toogle')}
               />
             </LabeledList.Item>
           </LabeledList>
