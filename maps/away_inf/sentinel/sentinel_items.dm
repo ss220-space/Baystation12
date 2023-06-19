@@ -29,7 +29,7 @@
 /obj/item/card/id/awaycavalry/fleet/commander
 	desc = "An identification card issued to SolGov crewmembers aboard the Sol Patrol Craft."
 	icon_state = "base"
-	access = list(access_away_cavalry, access_away_cavalry_ops, access_away_cavalry_pilot, access_away_cavalry_fleet_armory, access_away_cavalry_commander) //TODO: беды с доступами
+	access = list(access_away_cavalry, access_away_cavalry_ops, access_away_cavalry_pilot, access_away_cavalry_fleet_armory, access_away_cavalry_commander)
 	extra_details = list("goldstripe")
 
 /* RADIOHEADS
@@ -94,7 +94,19 @@
 		/obj/item/clothing/accessory/solgov/fleet_patch/fifth
 	)
 
-/obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol
+/obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/bridge_officer
+	starting_accessories = list(
+		/obj/item/clothing/accessory/solgov/rank/fleet/officer/o2,
+		/obj/item/clothing/accessory/solgov/specialty/officer
+	)
+
+/obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/comms_officer
+	starting_accessories = list(
+		/obj/item/clothing/accessory/solgov/rank/fleet/officer/o4,
+		/obj/item/clothing/accessory/solgov/specialty/officer
+	)
+
+/obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/commanding_officer
 	starting_accessories = list(
 		/obj/item/clothing/accessory/solgov/rank/fleet/officer/o6,
 		/obj/item/clothing/accessory/solgov/specialty/officer

@@ -395,6 +395,18 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/specops)
+"abQ" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/darkblue/three_quarters{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "abZ" = (
 /obj/item/mech_equipment/mounted_system/extinguisher,
 /obj/item/mech_equipment/mounted_system/rcd,
@@ -1066,6 +1078,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/administration/centcom)
+"agA" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 1
+	},
+/obj/structure/sign/fifthfleet{
+	pixel_y = -32
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "agE" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/effect/paint/hull,
@@ -1758,6 +1785,18 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/shuttle/administration/centcom)
+"aks" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor,
+/obj/structure/railing/mapped,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "akD" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -5061,6 +5100,14 @@
 	icon_state = "white"
 	},
 /area/tdome/tdomeobserve)
+"aDz" = (
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker"
+	},
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "aDS" = (
 /obj/effect/landmark{
 	name = "ActorSpawn"
@@ -5358,7 +5405,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes = 10, /obj/item/storage/box/matches = 10, /obj/item/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
+	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/unsimulated/floor/plating,
 /area/acting/backstage)
@@ -5470,6 +5517,17 @@
 	},
 /turf/simulated/floor/holofloor/tiled/stone,
 /area/holodeck/source_temple)
+"aHR" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Bridge";
+	req_access = newlist()
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "aHY" = (
 /obj/structure/table/woodentable_reinforced/ebony/walnut,
 /obj/item/hookah,
@@ -5527,6 +5585,28 @@
 /obj/machinery/light/spot,
 /turf/simulated/floor/tiled,
 /area/acting/stage)
+"aMY" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 5
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -25;
+	dir = 1
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/book/manual/solgov_law,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
+"aOs" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "aOv" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -5544,6 +5624,13 @@
 	color = "#78523b"
 	},
 /area/centcom/holding)
+"aPs" = (
+/obj/effect/floor_decal/corner/darkblue/three_quarters,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "aQf" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/holofloor/wood,
@@ -8060,6 +8147,18 @@
 	icon_state = "dark"
 	},
 /area/tdome/tdome2)
+"bmc" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/effect/floor_decal/scglogo{
+	icon_state = "bottom-right"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "bmy" = (
 /obj/machinery/telecomms/bus/preset_cent,
 /obj/effect/floor_decal/borderfloorblack{
@@ -8085,6 +8184,12 @@
 /obj/item/gun/energy/laser,
 /turf/unsimulated/floor/techfloor,
 /area/centcom)
+"boX" = (
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "bpK" = (
 /obj/machinery/smartfridge/chemistry,
 /turf/unsimulated/floor{
@@ -8117,6 +8222,16 @@
 	icon_state = "white"
 	},
 /area/centcom/holding)
+"bsJ" = (
+/obj/effect/floor_decal/borderfloorblack/corner,
+/obj/effect/floor_decal/corner/darkblue/three_quarters{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "btu" = (
 /obj/effect/floor_decal/corner/black/diagonal{
 	dir = 8
@@ -8138,6 +8253,17 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
+"buq" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/machinery/vending/cola{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "buu" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -8157,6 +8283,17 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom)
+"bvt" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/structure/flora/pottedplant/deskleaf{
+	desc = "A tiny waxy leafed plant specimen. It has 'Green's replacement' scribbled into the pot."
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "bwJ" = (
 /obj/structure/wall_frame/prepainted,
 /obj/structure/table/reinforced,
@@ -8203,6 +8340,18 @@
 /obj/effect/floor_decal/techfloor/corner,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/holding)
+"bCb" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/effect/floor_decal/scglogo{
+	icon_state = "top-right"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "bDa" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -8212,6 +8361,15 @@
 	icon_state = "steel"
 	},
 /area/centcom)
+"bEc" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/item/documents/scg/blue,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "bEj" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -8244,6 +8402,13 @@
 	name = "carpet"
 	},
 /area/centcom/holding)
+"bFh" = (
+/obj/effect/floor_decal/borderfloorblack/corner,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "bGM" = (
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -8381,6 +8546,16 @@
 	icon_state = "white"
 	},
 /area/tdome/testing)
+"cfn" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/darkblue,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "cgR" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1;
@@ -8390,6 +8565,19 @@
 /obj/effect/paint_stripe/red,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/transport1/centcom)
+"chH" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 9
+	},
+/obj/machinery/computer/modular/preset/engineering{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/centcom/scgfleet)
 "cjY" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -8436,6 +8624,26 @@
 	icon_state = "desert1"
 	},
 /area/centcom/living)
+"cqA" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "crG" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/structure/sign/poster{
@@ -8636,6 +8844,15 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"cQy" = (
+/obj/effect/floor_decal/scglogo{
+	icon_state = "center-left"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "cQL" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
 /obj/structure/table/steel_reinforced,
@@ -8896,6 +9113,18 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom)
+"dhf" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "dhn" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -8906,6 +9135,10 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"dhy" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/r_wall/prepainted,
+/area/centcom/scgfleet)
 "djr" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
 /obj/structure/bed/chair/rounded/blue{
@@ -9021,12 +9254,38 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/specops)
+"dzx" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/darkblue/three_quarters,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "dAo" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/structure/disposalpipe/segment,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/control)
+"dCb" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 5
+	},
+/obj/structure/sign/double/solgovflag/right{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/machinery/papershredder,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "dCm" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/corner/white/diagonal{
@@ -9223,6 +9482,30 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/holding)
+"dXl" = (
+/obj/machinery/computer/guestpass{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
+"dXo" = (
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 10
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "dYX" = (
 /obj/structure/bed/sofa/l/brown,
 /turf/unsimulated/floor{
@@ -9386,6 +9669,15 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"ejL" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/item/documents/scg/red,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "ekk" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 4
@@ -9448,6 +9740,24 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
+"enM" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/structure/noticeboard{
+	pixel_y = 32
+	},
+/obj/machinery/requests_console{
+	announcementConsole = 1;
+	department = "CO's Desk";
+	departmentType = 5;
+	name = "CO Request Console";
+	pixel_x = -30;
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "enU" = (
 /obj/effect/forcefield{
 	desc = "You can't get in. Heh.";
@@ -9468,6 +9778,15 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
+"esj" = (
+/obj/machinery/computer/modular/preset/command,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "esG" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/item/hookah,
@@ -9577,6 +9896,20 @@
 	icon = 'icons/turf/flooring/grass.dmi'
 	},
 /area/centcom)
+"ezH" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 4
+	},
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "eAl" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
 /obj/effect/floor_decal/plaque{
@@ -9793,6 +10126,29 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/control)
+"eZe" = (
+/obj/item/modular_computer/telescreen/preset/generic{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
+"eZQ" = (
+/obj/machinery/hologram/holopad/adminpad,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "fak" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/item/reagent_containers/food/snacks/baguette,
@@ -9970,6 +10326,12 @@
 	icon_state = "dark"
 	},
 /area/tdome/tdome1)
+"frz" = (
+/obj/effect/floor_decal/corner/darkblue/border{
+	dir = 1
+	},
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "ftf" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -10092,6 +10454,15 @@
 /obj/effect/shuttle_landmark/ferry/start,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/transport1/centcom)
+"fCk" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/item/folder/blue,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "fCn" = (
 /obj/structure/table/rack/dark,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -10200,6 +10571,22 @@
 	name = "carpet"
 	},
 /area/centcom/creed)
+"fNk" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_y = -28
+	},
+/obj/effect/floor_decal/corner/darkblue/three_quarters{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "fOj" = (
 /obj/effect/decal/cleanable/filth,
 /turf/unsimulated/floor{
@@ -10341,6 +10728,14 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/control)
+"gdM" = (
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "geB" = (
 /obj/random/trash,
 /obj/effect/floor_decal/techfloor,
@@ -10368,6 +10763,17 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"gkq" = (
+/obj/effect/floor_decal/corner/darkblue/border{
+	dir = 1
+	},
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker"
+	},
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "gmy" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/fountain{
@@ -10456,6 +10862,13 @@
 	icon_state = "white"
 	},
 /area/centcom/specops)
+"guO" = (
+/obj/effect/floor_decal/scglogo,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "gvY" = (
 /obj/effect/forcefield{
 	desc = "You can't get in. Heh.";
@@ -10683,6 +11096,16 @@
 	icon_state = "dark"
 	},
 /area/centcom)
+"gLz" = (
+/obj/structure/bed/chair/comfy/captain{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "gMN" = (
 /obj/structure/bed/chair/wood/wings/walnut{
 	dir = 1
@@ -10712,6 +11135,23 @@
 /obj/effect/decal/cleanable/filth,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/specops)
+"gQi" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 1
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -25;
+	dir = 1
+	},
+/obj/structure/table/steel_reinforced,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "gRv" = (
 /obj/machinery/chemical_dispenser/full,
 /turf/unsimulated/floor{
@@ -10960,6 +11400,15 @@
 	icon_state = "white"
 	},
 /area/centcom/specops)
+"hoL" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "hqe" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -11006,6 +11455,17 @@
 	name = "carpet"
 	},
 /area/centcom/holding)
+"hvB" = (
+/obj/machinery/computer/modular/preset/security{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "hxb" = (
 /obj/effect/decal/cleanable/filth,
 /turf/unsimulated/floor{
@@ -11029,6 +11489,10 @@
 	name = "linoleum"
 	},
 /area/centcom/holding)
+"hyL" = (
+/obj/effect/floor_decal/corner/darkblue/border,
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "hAV" = (
 /obj/machinery/status_display,
 /turf/simulated/wall/r_wall/prepainted,
@@ -11064,6 +11528,20 @@
 /obj/item/stack/material/wood/ebony/twentyfive,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/holding)
+"hFr" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "hGr" = (
 /mob/living/bot/secbot/beepsky,
 /obj/structure/disposalpipe/segment{
@@ -11086,6 +11564,24 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
+"hHV" = (
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 9
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
+"hIf" = (
+/obj/effect/floor_decal/scglogo{
+	icon_state = "top-left"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "hIx" = (
 /mob/living/simple_animal/friendly/cat/fluff/Runtime{
 	name = "Kaz"
@@ -11130,6 +11626,17 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"hMi" = (
+/obj/machinery/computer/modular/preset/sysadmin{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "hNt" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -11544,6 +12051,15 @@
 	icon_state = "desert1"
 	},
 /area/centcom/living)
+"iCv" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/machinery/vending/sol,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "iCL" = (
 /obj/machinery/camera/network/thunder{
 	c_tag = "Thunderdome Arena Left";
@@ -11560,6 +12076,17 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/shuttle/transport1/centcom)
+"iFZ" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -21
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "iIw" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -11661,6 +12188,21 @@
 	icon_state = "white"
 	},
 /area/tdome/testing)
+"iRz" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner_techfloor_grid,
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "iRC" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -11734,6 +12276,15 @@
 	name = "carpet"
 	},
 /area/centcom)
+"jai" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "jaZ" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -11743,6 +12294,17 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"jba" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/machinery/newscaster{
+	pixel_x = -28
+	},
+/obj/item/storage/toolbox/mechanical,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "jbF" = (
 /obj/machinery/computer/operating,
 /obj/machinery/vending/wallmed1{
@@ -11788,6 +12350,20 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"jfV" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 10
+	},
+/obj/structure/closet/hydrant,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "jhz" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -11876,6 +12452,16 @@
 	color = "#78523b"
 	},
 /area/centcom/holding)
+"jmz" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 5
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "jmN" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
 /obj/structure/disposalpipe/segment{
@@ -11916,6 +12502,18 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/holding)
+"jrf" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "jrL" = (
 /obj/structure/flora/pottedplant/large,
 /obj/effect/floor_decal/corner/black/mono,
@@ -11931,6 +12529,15 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/holding)
+"jsm" = (
+/obj/effect/floor_decal/scglogo{
+	icon_state = "bottom-center"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "jtB" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -11991,6 +12598,15 @@
 	icon_state = "beach"
 	},
 /area/centcom/living)
+"jBG" = (
+/obj/effect/floor_decal/corner/darkblue/border,
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker"
+	},
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "jCk" = (
 /obj/structure/closet/secure_closet/bar_sierra{
 	anchored = 1
@@ -12490,6 +13106,18 @@
 /obj/item/clothing/mask/gas/alt,
 /turf/unsimulated/floor/techfloor,
 /area/centcom)
+"kxs" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/darkblue,
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "kyV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12510,8 +13138,8 @@
 /area/tdome/testing)
 "kAI" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
-/obj/machinery/hologram/holopad/longrange,
 /obj/structure/disposalpipe/junction/yjunction,
+/obj/machinery/hologram/holopad/adminpad,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/control)
 "kAO" = (
@@ -12543,6 +13171,13 @@
 	icon = 'icons/turf/flooring/grass.dmi'
 	},
 /area/centcom)
+"kFu" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "kFF" = (
 /obj/structure/table/rack/dark,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -12577,6 +13212,23 @@
 /obj/item/ammo_casing/rocket,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/specops)
+"kHR" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 4
+	},
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "kIv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12825,6 +13477,26 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/holding)
+"kRN" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "kSb" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -13091,6 +13763,21 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"lnf" = (
+/obj/structure/sign/directions/bridge{
+	pixel_y = 28
+	},
+/obj/effect/floor_decal/corner/darkblue/three_quarters{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "lnC" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -13117,6 +13804,19 @@
 	icon_state = "steel"
 	},
 /area/centcom)
+"lpN" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "lqr" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
 /obj/effect/floor_decal/borderfloorblack{
@@ -13153,6 +13853,17 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/holding)
+"ltn" = (
+/obj/machinery/computer/station_alert/security{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "luu" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -13259,6 +13970,16 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
+"lDR" = (
+/obj/structure/bed/chair/comfy/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "lEb" = (
 /obj/structure/railing/mapped{
 	dir = 1
@@ -13371,6 +14092,18 @@
 /obj/effect/floor_decal/corner/red/border,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/specops)
+"lPj" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/effect/floor_decal/scglogo{
+	icon_state = "center-right"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "lQe" = (
 /obj/machinery/vending/boozeomat,
 /obj/effect/floor_decal/carpet{
@@ -13406,6 +14139,18 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"lWg" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/darkblue/three_quarters{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "lWO" = (
 /obj/effect/decal/cleanable/filth,
 /obj/structure/disposalpipe/segment{
@@ -13451,7 +14196,10 @@
 /obj/machinery/door/airlock/centcom{
 	dir = 8
 	},
-/turf/space,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "steel"
+	},
 /area/centcom/living)
 "mhW" = (
 /obj/effect/floor_decal/borderfloor{
@@ -13558,6 +14306,17 @@
 	icon_state = "white"
 	},
 /area/centcom/holding)
+"mGn" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker"
+	},
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "mIH" = (
 /obj/structure/table/rack/dark,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -13805,6 +14564,18 @@
 /obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor/techfloor,
 /area/centcom)
+"nbg" = (
+/obj/item/modular_computer/telescreen/preset/generic{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/darkblue/three_quarters{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "ncF" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/borderfloorblack{
@@ -13821,6 +14592,23 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/holding)
+"ndS" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 5
+	},
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	name = "Emergency NanoMed";
+	pixel_y = -29
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/book/manual/military_law,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "nev" = (
 /obj/structure/table/rack/dark,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -13854,6 +14642,18 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"nje" = (
+/obj/item/modular_computer/telescreen/preset/generic{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/darkblue/three_quarters{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "njl" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -13946,6 +14746,24 @@
 	icon = 'icons/turf/flooring/grass.dmi'
 	},
 /area/centcom)
+"npS" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 1
+	},
+/obj/structure/sign/double/solgovflag/left{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/machinery/photocopier,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "nrd" = (
 /obj/structure/flora/ausbushes/genericbush,
 /turf/unsimulated/floor/grass{
@@ -13980,6 +14798,19 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/specops)
+"nvb" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/darkblue,
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "nvv" = (
 /obj/effect/decal/cleanable/filth,
 /turf/unsimulated/floor{
@@ -14091,6 +14922,16 @@
 	icon_state = "steel"
 	},
 /area/centcom)
+"nEY" = (
+/obj/structure/bed/chair/comfy/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "nHU" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/effect/paint/dark_gunmetal{
@@ -14130,6 +14971,18 @@
 	icon_state = "white"
 	},
 /area/centcom)
+"nOW" = (
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 6
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "nOX" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -14387,6 +15240,9 @@
 	color = "#78523b"
 	},
 /area/centcom/holding)
+"ooo" = (
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "ooK" = (
 /obj/machinery/door/airlock/glass/science,
 /turf/unsimulated/floor{
@@ -14420,6 +15276,37 @@
 "opB" = (
 /turf/simulated/wall/walnut,
 /area/centcom/living)
+"orA" = (
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/machinery/requests_console{
+	announcementConsole = 1;
+	department = "Bridge";
+	departmentType = 5;
+	name = "Bridge RC";
+	pixel_x = 30;
+	pixel_y = 0
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
+"oue" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "ovw" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
 /obj/effect/floor_decal/borderfloorblack{
@@ -14467,6 +15354,11 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/specops)
+"oxX" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint/black,
+/turf/unsimulated/floor/plating,
+/area/centcom/scgfleet)
 "oyp" = (
 /obj/effect/floor_decal/corner/black/diagonal{
 	dir = 8
@@ -14532,6 +15424,15 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/control)
+"oCc" = (
+/obj/effect/floor_decal/scglogo{
+	icon_state = "top-center"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "oCf" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -14605,6 +15506,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/transport1/centcom)
+"oHb" = (
+/obj/machinery/computer/modular/preset/supply_public{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "oKl" = (
 /obj/structure/table/rack/dark,
 /obj/effect/floor_decal/techfloor,
@@ -14997,6 +15909,22 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/holding)
+"prk" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 10
+	},
+/obj/machinery/firealarm{
+	dir = 2;
+	pixel_y = 24
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "prM" = (
 /obj/structure/closet,
 /obj/item/storage/box/syringes,
@@ -15059,6 +15987,14 @@
 	icon_state = "steel"
 	},
 /area/centcom)
+"pwM" = (
+/obj/structure/bed/chair/comfy/blue,
+/obj/effect/floor_decal/corner/black/mono,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "pxq" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Long Term Wardrobe"
@@ -15109,6 +16045,15 @@
 /obj/effect/paint_stripe/nt_red,
 /turf/simulated/wall/r_titanium,
 /area/supply/dock)
+"pBv" = (
+/obj/machinery/computer/modular/preset/dock,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "pCq" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/structure/disposalpipe/segment{
@@ -15120,6 +16065,17 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/control)
+"pCu" = (
+/obj/machinery/computer/robotics{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "pCP" = (
 /obj/effect/floor_decal/corner/paleblue/three_quarters{
 	dir = 4
@@ -15167,6 +16123,23 @@
 	icon_state = "steel"
 	},
 /area/centcom)
+"pKx" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 8
+	},
+/obj/structure/reagent_dispensers/water_cooler,
+/obj/structure/sign/warning/smoking{
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "pKT" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -15215,6 +16188,15 @@
 	icon_state = "steel"
 	},
 /area/centcom)
+"pPb" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker"
+	},
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "pPZ" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/effect/paint/dark_gunmetal{
@@ -15256,6 +16238,18 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom)
+"pUd" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 6
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "pUK" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -15343,6 +16337,19 @@
 	},
 /turf/space,
 /area/centcom/specops)
+"pWn" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 9
+	},
+/obj/structure/bed/chair/comfy/blue,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "pWW" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -15682,6 +16689,10 @@
 /obj/item/stack/tile/carpetblue3/fifty,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/holding)
+"qvR" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall/prepainted,
+/area/centcom/scgfleet)
 "qws" = (
 /obj/structure/table/marble,
 /obj/item/material/kitchen/rollingpin,
@@ -15853,6 +16864,14 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"qMW" = (
+/obj/structure/disposaloutlet,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/structure/lattice,
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "qNa" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -15934,6 +16953,9 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"qVF" = (
+/turf/unsimulated/floor/plating,
+/area/space)
 "qWc" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/purple/border,
@@ -15958,6 +16980,14 @@
 	icon_state = "steel"
 	},
 /area/centcom)
+"qZz" = (
+/obj/structure/railing/mapped,
+/obj/effect/floor_decal/industrial/warning,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "qZB" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/reagent_containers/food/drinks/golden_cup,
@@ -15969,6 +16999,19 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom)
+"rbA" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/pen,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "rbD" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
@@ -16005,6 +17048,9 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/specops)
+"rdS" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/centcom/scgfleet)
 "rfc" = (
 /obj/structure/flora/pottedplant/minitree,
 /obj/effect/floor_decal/corner/black/mono,
@@ -16039,6 +17085,23 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/holding)
+"rfH" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 10
+	},
+/obj/structure/sign/double/solgovflag/left{
+	pixel_y = 32
+	},
+/obj/structure/filingcabinet/chestdrawer,
+/obj/item/folder/blue,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "rgh" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/item/reagent_containers/food/drinks/bottle/cola,
@@ -16346,6 +17409,23 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
+"rHp" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 8
+	},
+/obj/structure/sign/double/solgovflag/right{
+	pixel_y = 32
+	},
+/obj/structure/filingcabinet/chestdrawer,
+/obj/item/folder/blue,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "rJD" = (
 /obj/effect/floor_decal/corner/darkblue/diagonal,
 /obj/structure/bed/chair/rounded/blue{
@@ -16447,6 +17527,15 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/control)
+"rSU" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/machinery/photocopier/faxmachine/centcomm,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "rUd" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -16551,6 +17640,10 @@
 	icon_state = "white"
 	},
 /area/centcom/holding)
+"ses" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "sgo" = (
 /obj/effect/forcefield{
 	desc = "You can't get in. Heh.";
@@ -16564,6 +17657,23 @@
 /obj/effect/paint_stripe/nt_red,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/transport1/centcom)
+"shn" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -28;
+	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "sih" = (
 /obj/machinery/bodyscanner,
 /obj/effect/floor_decal/corner/paleblue{
@@ -16583,6 +17693,17 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/holding)
+"siw" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "siD" = (
 /obj/machinery/door/airlock/medical{
 	autoset_access = 0;
@@ -16645,6 +17766,14 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
+"smn" = (
+/turf/unsimulated/wall{
+	desc = "A secure airlock. Doesn't look like you can get through easily.";
+	icon = 'icons/obj/doors/centcomm/door.dmi';
+	icon_state = "closed";
+	name = "Facility Access"
+	},
+/area/centcom/scgfleet)
 "snj" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
@@ -16689,6 +17818,15 @@
 	color = "#78523b"
 	},
 /area/centcom/living)
+"sqG" = (
+/obj/effect/floor_decal/scglogo{
+	icon_state = "bottom-left"
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "sso" = (
 /obj/structure/flora/pottedplant/stoutbush,
 /obj/effect/floor_decal/borderfloor{
@@ -16761,6 +17899,18 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"sCd" = (
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "sCi" = (
 /obj/structure/table/rack,
 /turf/unsimulated/floor{
@@ -16910,6 +18060,11 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom)
+"sPO" = (
+/obj/machinery/light/navigation/delay2,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "sQa" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -17056,6 +18211,20 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"taz" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "tbG" = (
 /obj/effect/floor_decal/carpet,
 /obj/effect/floor_decal/carpet{
@@ -17873,6 +19042,13 @@
 	icon_state = "white"
 	},
 /area/tdome/testing)
+"urY" = (
+/obj/effect/floor_decal/corner/black/mono,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "utU" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/disposalpipe/segment,
@@ -17933,6 +19109,31 @@
 	icon_state = "white"
 	},
 /area/centcom/holding)
+"uzc" = (
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_y = 29
+	},
+/obj/effect/floor_decal/corner/darkblue,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
+"uzF" = (
+/obj/structure/bed/chair/comfy/blue,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "uBf" = (
 /turf/unsimulated/floor/techfloor{
 	icon_state = "dark";
@@ -18062,6 +19263,20 @@
 	},
 /turf/simulated/floor/holofloor/space,
 /area/centcom)
+"uNi" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/machinery/computer/modular/preset/command{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "uNn" = (
 /obj/machinery/door/airlock/civilian{
 	dir = 4;
@@ -18109,6 +19324,18 @@
 /obj/effect/decal/cleanable/filth,
 /turf/unsimulated/floor/techfloor,
 /area/centcom)
+"uXa" = (
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 6
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "uYy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -18286,6 +19513,16 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/holding)
+"vxy" = (
+/obj/machinery/computer/station_alert/all{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "vyh" = (
 /obj/machinery/conveyor{
 	id = "cc_sort";
@@ -18349,6 +19586,20 @@
 /obj/structure/bed/chair/comfy/blue,
 /turf/unsimulated/floor/techfloor,
 /area/centcom/control)
+"vCo" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 1
+	},
+/obj/structure/closet/hydrant,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "vCr" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/effect/floor_decal/corner/black/diagonal{
@@ -18437,6 +19688,25 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
+"vHh" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 1
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/sign/warning/smoking{
+	pixel_x = 0;
+	pixel_y = -26
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "vHn" = (
 /obj/machinery/organ_printer/flesh/mapped,
 /obj/effect/floor_decal/floordetail/edgedrain{
@@ -18503,6 +19773,10 @@
 	icon_state = "white"
 	},
 /area/centcom/holding)
+"vMG" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/unsimulated/floor/reinforced,
+/area/space)
 "vNh" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/floor_decal/borderfloorblack{
@@ -18696,6 +19970,26 @@
 	icon_state = "white"
 	},
 /area/tdome/testing)
+"wuH" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/machinery/vending/cigarette,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
+"wvd" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/machinery/vending/coffee{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "wvt" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -18722,6 +20016,13 @@
 	icon_state = "white"
 	},
 /area/centcom)
+"wyG" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "wyL" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -18735,6 +20036,16 @@
 	},
 /turf/simulated/floor,
 /area/tdome/testing/engineering/unpowered)
+"wzD" = (
+/obj/machinery/computer/modular/preset/engineering{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "wzS" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -19015,6 +20326,15 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"wOT" = (
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 5
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "wPU" = (
 /obj/structure/lattice,
 /obj/structure/disposaloutlet{
@@ -19065,6 +20385,13 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"wWc" = (
+/obj/effect/floor_decal/borderfloorblack,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "wWl" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/corner/white/diagonal{
@@ -19243,6 +20570,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/supply/dock)
+"xka" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/item/device/radio/phone,
+/turf/unsimulated/floor/techfloor{
+	icon_state = "monotiledark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "xkm" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/floor_decal/borderfloorblack{
@@ -19298,6 +20634,18 @@
 	},
 /turf/unsimulated/floor/techfloor,
 /area/centcom/control)
+"xpY" = (
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "xsp" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/structure/sign/poster{
@@ -19308,6 +20656,15 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/control)
+"xtG" = (
+/obj/effect/floor_decal/corner/darkblue/three_quarters{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "xuz" = (
 /obj/effect/floor_decal/carpet/purple,
 /turf/unsimulated/floor{
@@ -19347,6 +20704,21 @@
 	icon_state = "white"
 	},
 /area/centcom)
+"xDY" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/darkblue{
+	dir = 8
+	},
+/obj/structure/sign/fifthfleet{
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "xFw" = (
 /obj/machinery/door/blast/shutters{
 	dir = 4;
@@ -19427,6 +20799,16 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	},
 /area/centcom/specops)
+"xUD" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/machinery/newscaster{
+	pixel_x = -28
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "xVf" = (
 /obj/structure/sign/nanotrasen{
 	dir = 8
@@ -19471,6 +20853,15 @@
 /obj/effect/paint_stripe/nt_red,
 /turf/simulated/wall/r_titanium,
 /area/supply/dock)
+"xZO" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "yaC" = (
 /obj/structure/table/glass,
 /obj/item/storage/box/syringes,
@@ -46188,31 +47579,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+vMG
+vMG
+vMG
+vMG
+vMG
+vMG
+vMG
+vMG
+vMG
+vMG
+vMG
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -46390,31 +47781,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -46592,31 +47983,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -46794,31 +48185,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -46996,31 +48387,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -47198,31 +48589,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -47400,31 +48791,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+ooo
+ooo
+ooo
+ooo
+sPO
+ooo
+ooo
+ooo
+ooo
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -47602,31 +48993,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -47804,31 +49195,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+sPO
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+sPO
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -48006,31 +49397,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+hyL
+ooo
+ooo
+aDz
+aDz
+aDz
+aDz
+aDz
+aDz
+aDz
+ooo
+ooo
+frz
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -48208,31 +49599,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ses
+qVF
+aOs
+ooo
+jBG
+aDz
+aDz
+rdS
+oxX
+oxX
+oxX
+oxX
+oxX
+rdS
+aDz
+aDz
+gkq
+ooo
+ses
+qVF
+aOs
+ooo
+ooo
 aab
 aab
 aab
@@ -48410,31 +49801,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+aDz
+pPb
+gdM
+mGn
+aDz
+rdS
+oxX
+oxX
+rdS
+cfn
+pUd
+pUd
+pUd
+jrf
+rdS
+oxX
+oxX
+rdS
+aDz
+pPb
+gdM
+mGn
+aDz
+aDz
 aab
 aab
 aab
@@ -48612,31 +50003,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aDz
+rdS
+rdS
+rdS
+rdS
+rdS
+rdS
+nvb
+nOW
+nOW
+abQ
+hIf
+cQy
+sqG
+lWg
+pUd
+nOW
+shn
+rdS
+rdS
+rdS
+rdS
+rdS
+rdS
+aDz
 aab
 aab
 aab
@@ -48814,31 +50205,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aDz
+rdS
+iCv
+iFZ
+jba
+buq
+rdS
+lnf
+boX
+boX
+boX
+oCc
+guO
+jsm
+boX
+boX
+boX
+fNk
+rdS
+wuH
+xUD
+iFZ
+wvd
+rdS
+aDz
 aab
 aab
 aab
@@ -49016,31 +50407,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aDz
+smn
+kFu
+kFu
+oue
+kFu
+aHR
+boX
+wyG
+lpN
+lpN
+bCb
+lPj
+bmc
+lpN
+lpN
+xZO
+boX
+aHR
+kFu
+oue
+kFu
+kFu
+smn
+aDz
 aab
 aab
 aab
@@ -49218,31 +50609,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aDz
+rdS
+rdS
+rdS
+rdS
+rdS
+rdS
+dzx
+qZz
+pCu
+ejL
+hvB
+rbA
+ltn
+bvt
+hMi
+xpY
+bsJ
+rdS
+rdS
+rdS
+rdS
+rdS
+rdS
+aDz
 aab
 aab
 aab
@@ -49420,31 +50811,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+aDz
+ooo
+ooo
+ooo
+rdS
+kxs
+abQ
+qZz
+nEY
+urY
+nEY
+urY
+nEY
+urY
+nEY
+xpY
+lWg
+pUd
+ezH
+rdS
+aDz
+aDz
+aDz
+aDz
 aab
 aab
 aab
@@ -49622,31 +51013,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+aDz
+rdS
+rdS
+rdS
+jfV
+boX
+qZz
+rdS
+urY
+urY
+urY
+urY
+urY
+rdS
+xpY
+boX
+bsJ
+vCo
+rdS
+aDz
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -49824,31 +51215,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+aDz
+rdS
+uzc
+pUd
+abQ
+boX
+qZz
+iRz
+kRN
+urY
+urY
+urY
+cqA
+kHR
+xpY
+boX
+aMY
+rdS
+rdS
+aDz
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -50026,31 +51417,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+aDz
+rdS
+dXl
+uzF
+vxy
+boX
+qZz
+aks
+bEc
+xka
+urY
+xka
+fCk
+hFr
+xpY
+boX
+ndS
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -50228,31 +51619,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+aDz
+rdS
+eZe
+uzF
+wzD
+boX
+qZz
+aks
+pBv
+lDR
+urY
+pwM
+oHb
+hFr
+xpY
+bsJ
+gQi
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -50430,31 +51821,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+aDz
+dhy
+orA
+pWn
+chH
+dzx
+boX
+sCd
+rdS
+uNi
+dhf
+uNi
+rdS
+sCd
+boX
+jmz
+rdS
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -50632,31 +52023,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+aDz
+rdS
+rdS
+rdS
+rdS
+prk
+boX
+boX
+rdS
+enM
+gLz
+siw
+rdS
+boX
+boX
+taz
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -50834,31 +52225,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ooo
+aDz
+aDz
+aDz
+rdS
+pKx
+dzx
+boX
+esj
+lDR
+urY
+urY
+urY
+boX
+bsJ
+vHh
+qvR
+qMW
+aDz
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -51036,31 +52427,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ooo
+ooo
+ooo
+aDz
+rdS
+rdS
+rfH
+boX
+rSU
+rbA
+urY
+urY
+urY
+boX
+dCb
+rdS
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -51238,31 +52629,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+aDz
+rdS
+rHp
+dzx
+urY
+xtG
+hHV
+aPs
+urY
+bsJ
+npS
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -51440,31 +52831,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+aDz
+rdS
+rdS
+xDY
+jai
+wOT
+eZQ
+dXo
+bFh
+agA
+rdS
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -51642,31 +53033,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+aDz
+rdS
+rdS
+hoL
+nje
+uXa
+nbg
+wWc
+rdS
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -51844,31 +53235,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+aDz
+rdS
+dhy
+rdS
+rdS
+rdS
+dhy
+rdS
+aDz
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab
@@ -52046,31 +53437,31 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+aDz
+aDz
+aDz
+aDz
+aDz
+aDz
+aDz
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
+ooo
 aab
 aab
 aab

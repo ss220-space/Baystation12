@@ -32,6 +32,10 @@
 
 /area/centcom/test
 	name = "Centcom Testing Facility"
+
+area/centcom/scgfleet
+	name = "SFV Stinger, Antietam-class Destroyer - Bridge"
+
 /*
 /area/centcom/evac
 	name = "Centcom Emergency Shuttle"
