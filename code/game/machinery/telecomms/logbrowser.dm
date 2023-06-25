@@ -21,176 +21,115 @@
 	req_access = list(access_tcomsat)
 
 /obj/machinery/computer/telecomms/server/interface_interact(mob/user)
-	interact(user)
+	tgui_interact(user)
 	return TRUE
 
-/obj/machinery/computer/telecomms/server/interact(mob/user)
-	user.set_machine(src)
-	var/list/dat = list()
-	dat += "<TITLE>Telecommunication Server Monitor</TITLE><center><b>Telecommunications Server Monitor</b></center>"
+/obj/machinery/computer/telecomms/server/tgui_interact(mob/user, var/datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if (!ui)
+		ui = new(user, src, "ServerMonitor", name)
+		ui.open()
+
+/obj/machinery/computer/telecomms/server/tgui_data(mob/user)
+
+	var/list/data = list()
+	data["screen"] = screen
+	data["error"] = temp
+	data["network"] = network
 
 	switch(screen)
-
-
-		// --- Main Menu ---
-
 		if(0)
-			dat += "<br>[temp]<br>"
-			dat += "<br>Current Network: <a href='?src=\ref[src];network=1'>[network]</a><br>"
-			if(servers.len)
-				dat += "<br>Detected Telecommunication Servers:<ul>"
-				for(var/obj/machinery/telecomms/T in servers)
-					dat += "<li><a href='?src=\ref[src];viewserver=[T.id]'>\ref[T] [T.name]</a> ([T.id])</li>"
-				dat += "</ul>"
-				dat += "<br><a href='?src=\ref[src];operation=release'>\[Flush Buffer\]</a>"
-
-			else
-				dat += "<br>No servers detected. Scan for servers: <a href='?src=\ref[src];operation=scan'>\[Scan\]</a>"
-
-
-		// --- Viewing Server ---
+			var/list/found_servers = list()
+			for (var/obj/machinery/telecomms/server/server in servers)
+				found_servers += list(list("ref"=REF(server), "name"=server.name, "id"=server.id))
+			data["servers"] = found_servers
 
 		if(1)
-			dat += "<br>[temp]<br>"
-			dat += "<center><a href='?src=\ref[src];operation=mainmenu'>\[Main Menu\]</a>     <a href='?src=\ref[src];operation=refresh'>\[Refresh\]</a></center>"
-			dat += "<br>Current Network: [network]"
-			dat += "<br>Selected Server: [SelectedServer.id]"
+			var/list/server_out = list()
+			server_out["name"] = SelectedServer.name
+			server_out["id"] = SelectedServer.id
+			server_out["traffic"] = SelectedServer.totaltraffic
+			// Get the messages on this server
+			var/list/packets = list()
+			for(var/datum/comm_log_entry/packet in SelectedServer.log_entries)
+				var/list/packet_out = list()
 
-			if(SelectedServer.totaltraffic >= 1024)
-				dat += "<br>Total recorded traffic: [round(SelectedServer.totaltraffic / 1024)] Terrabytes<br><br>"
-			else
-				dat += "<br>Total recorded traffic: [SelectedServer.totaltraffic] Gigabytes<br><br>"
+				packet_out["name"] = packet.name
+				packet_out["race"] = packet.parameters["race"]
+				packet_out["language"] = packet.parameters["language"]
+				packet_out["time"] = packet.parameters["messagetime"]
+				packet_out["ref"] = REF(packet)
+				packet_out["job"] = packet.parameters["job"]
 
-			dat += "Stored Logs: <ol>"
-
-			var/i = 0
-			for(var/datum/comm_log_entry/C in SelectedServer.log_entries)
-				i++
-
-
-				// If the log is a speech file
-				if(C.input_type == "Speech File")
-
-					dat += "<li><font color = #008f00>[C.name]</font>  <font color = #ff0000><a href='?src=\ref[src];delete=[i]'>\[X\]</a></font><br>"
-
-					// -- Determine race of orator --
-
-					var/race = C.parameters["race"]			   // The actual race of the mob
-					var/language = C.parameters["language"] // The language spoken, or null/""
-					var/time = C.parameters["messagetime"] //inf
-
-
-					// -- If the orator is a human, or universal translate is active, OR mob has universal speech on --
-
-					if(universal_translate || C.parameters["uspeech"] || C.parameters["intelligible"])
-						dat += "<u><font color = #18743e>Data type</font></u>: [C.input_type]<br>"
-						dat += "<u><font color = #18743e>Message Receiving Time</font></u>: [time]<br>" //inf
-						dat += "<u><font color = #18743e>Source</font></u>: [C.parameters["name"]] (Job: [C.parameters["job"]])<br>"
-						dat += "<u><font color = #18743e>Class</font></u>: [race]<br>"
-						dat += "<u><font color = #18743e>Contents</font></u>: \"[C.parameters["message"]]\"<br>"
-						if(language)
-							dat += "<u><font color = #18743e>Language</font></u>: [language]<br/>"
-
-					// -- Orator is not human and universal translate not active --
-
-					else
-						dat += "<u><font color = #18743e>Data type</font></u>: Audio File<br>"
-						dat += "<u><font color = #18743e>Source</font></u>: <i>Unidentifiable</i><br>"
-						dat += "<u><font color = #18743e>Class</font></u>: [race]<br>"
-						dat += "<u><font color = #18743e>Contents</font></u>: <i>Unintelligble</i><br>"
-
-					dat += "</li><br>"
-
-				else if(C.input_type == "Execution Error")
-
-					dat += "<li><font color = #990000>[C.name]</font>  <font color = #ff0000><a href='?src=\ref[src];delete=[i]'>\[X\]</a></font><br>"
-					dat += "<u><font color = #787700>Output</font></u>: \"[C.parameters["message"]]\"<br>"
-					dat += "</li><br>"
+				if(universal_translate || packet.parameters["uspeech"] || packet.parameters["intelligible"])
+					packet_out["source"] = packet.parameters["name"]
+					packet_out["type"] = packet.input_type
+					packet_out["message"] = packet.parameters["message"]
+				else
+					packet_out["type"] = "Audio File"
+					packet_out["source"] = "Unidentifiable"
+					packet_out["message"] = "Unintelligble"
+				packets += list(packet_out)
+			server_out["packets"] = packets
+			data["server"] = server_out
+	return data
 
 
-			dat += "</ol>"
-
-
-	var/datum/browser/popup = new(user, "comm_monitor", "Telecommunications Monitor", 575, 400)
-	popup.set_content(JOINTEXT(dat))
-	popup.open()
+/obj/machinery/computer/telecomms/server/tgui_act(action, list/params)
+	. = ..()
+	if(.)
+		return
 
 	temp = ""
-	return
+	.= TRUE
 
-
-/obj/machinery/computer/telecomms/server/OnTopic(mob/user, list/href_list, datum/topic_state/state)
-	if(href_list["viewserver"])
-		screen = 1
-		for(var/obj/machinery/telecomms/T in servers)
-			if(T.id == href_list["viewserver"])
-				SelectedServer = T
-				break
-
-	if(href_list["operation"])
-		switch(href_list["operation"])
-
-			if("release")
-				servers = list()
-				screen = 0
-
-			if("mainmenu")
-				screen = 0
-
-			if("scan")
-				if(servers.len > 0)
-					temp = "<font color = #d70b00>- FAILED: CANNOT PROBE WHEN BUFFER FULL -</font>"
-
-				else
-					for(var/obj/machinery/telecomms/server/T in range(25, src))
-						if(T.network == network)
-							servers.Add(T)
-
-					if(!servers.len)
-						temp = "<font color = #d70b00>- FAILED: UNABLE TO LOCATE SERVERS IN \[[network]\] -</font>"
-					else
-						temp = "<font color = #336699>- [servers.len] SERVERS PROBED & BUFFERED -</font>"
-
-					screen = 0
-
-	if(href_list["delete"])
-
-		if(!src.allowed(usr) && !emagged)
-			to_chat(usr, "<span class='warning'>ACCESS DENIED.</span>")
+	switch(action)
+		if("delete_packet")
+			var/datum/comm_log_entry/packet = locate(params["ref"])
+			if(!(packet in SelectedServer.log_entries))
+				temp = "OPERATION FAILED: PACKET NOT FOUND."
+				return
+			if(!src.allowed(usr))
+				temp = "OPERATION FAILED: ACCESS DENIED."
+				return
+			SelectedServer.log_entries.Remove(packet)
+			temp = "SUCCESSFULLY DELETED [packet.name]."
+			qdel(packet)
 			return
 
-		if(SelectedServer)
-			var/key = text2num(href_list["delete"])
-			if(!is_valid_index(key, SelectedServer.log_entries))
-				return TOPIC_REFRESH
-			var/datum/comm_log_entry/D = SelectedServer.log_entries[key]
-			if(!D)
-				return TOPIC_REFRESH
-
-			temp = "<font color = #336699>- DELETED ENTRY: [D.name] -</font>"
-
-			SelectedServer.log_entries.Remove(D)
-			qdel(D)
-
-		else
-			temp = "<font color = #d70b00>- FAILED: NO SELECTED MACHINE -</font>"
-
-	if(href_list["network"])
-
-		var/newnet = input(usr, "Which network do you want to view?", "Comm Monitor", network) as null|text
-
-		if(newnet && ((usr in range(1, src) || issilicon(usr))))
-			if(length(newnet) > 15)
-				temp = "<font color = #d70b00>- FAILED: NETWORK TAG STRING TOO LENGHTLY -</font>"
-
+		if("return_home")
+			screen = 0
+			return
+		if("scan_network")
+			if(servers.len > 0)
+				temp = "FAILED: CANNOT PROBE WHEN BUFFER FULL"
 			else
+				network = params["network_id"]
+				for(var/obj/machinery/telecomms/server/T in range(25, src))
+					if(T.network == network)
+						servers.Add(T)
 
-				network = newnet
+				if(!servers.len)
+					temp = "FAILED: UNABLE TO LOCATE SERVERS IN \[[network]\]"
+				else
+					temp = "[servers.len] SERVERS PROBED & BUFFERED"
+
 				screen = 0
-				servers = list()
-				temp = "<font color = #336699>- NEW NETWORK TAG SET IN ADDRESS \[[network]\] -</font>"
+			return
+		if("clear_buffer")
+			servers = list()
+			network = ""
+			screen = 0
+			return
+		if("view_server")
+			SelectedServer = locate(params["server"])
+			if(!SelectedServer)
+				temp = "OPERATION FAILED: UNABLE TO LOCATE SERVER."
+				return
+			screen = 1
+			return
 
-	updateUsrDialog()
+	return
 
 /obj/machinery/computer/telecomms/server/emag_act(var/remaining_charges, var/mob/user)
 	if(!emagged)
