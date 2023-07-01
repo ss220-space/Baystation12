@@ -320,7 +320,6 @@ update_flag
 			holding.dropInto(loc)
 			holding = null
 			update_icon()
-			.= TRUE
 		if("pressure")
 			var/new_pressure = text2num(params["pressure"])
 			release_pressure = round(clamp(new_pressure, ONE_ATMOSPHERE/10, 10*ONE_ATMOSPHERE), 0.005)
@@ -340,7 +339,6 @@ update_flag
 			icon_state = colors[label]
 			SetName("\improper Canister: [label]")
 			update_icon()
-			.= TRUE
 
 	return TRUE
 
