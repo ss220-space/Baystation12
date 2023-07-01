@@ -293,6 +293,7 @@ update_flag
 	data["releasePressure"] = round(release_pressure ? release_pressure : 0)
 	data["minReleasePressure"] = round(ONE_ATMOSPHERE/10)
 	data["maxReleasePressure"] = round(10*ONE_ATMOSPHERE)
+	data["defaultReleasePressure"] = initial(release_pressure)
 	data["valveOpen"] = valve_open
 	data["hasHoldingTank"] = !!holding
 	if (holding)
