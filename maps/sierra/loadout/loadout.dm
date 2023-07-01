@@ -2,7 +2,7 @@
 	display_name = "PetCube X"
 	description = "Just add a water!"
 	path = /obj/item/reagent_containers/food/snacks/monkeycube
-	required_donate_level = 4
+	required_donate_level = 3
 	cost = 0 // Управлением решено убрать обычную цену с донатерских вещей ~bear1ake
 
 /datum/gear/pet_cube/New()
@@ -19,7 +19,7 @@
 	display_name = "exotic pet"
 	description = "Not common pet"
 	path = /obj/item/holder
-	required_donate_level = 5
+	required_donate_level = 4
 	price = 20 // Не входит в стандартный набор, так что пусть стоит кое-чего
 	cost = 0
 
@@ -39,7 +39,7 @@
 	display_name = "light armored plate carrier"
 	description = "With additional light armor plate"
 	path = /obj/item/clothing/suit/armor/pcarrier/light
-	required_donate_level = 2
+	required_donate_level = 1
 	price = 50 // Хоть и слабая, но всё же защита. Она должна быть достаточно дорогой
 	cost = 0
 
@@ -47,7 +47,7 @@
 	display_name = "music player"
 	description = "With custom tape"
 	path = /obj/item/music_player
-	required_donate_level = 3
+	required_donate_level = 2
 	cost = 0
 
 /datum/gear/pmp_w_tape/New()
@@ -63,7 +63,7 @@
 	display_name = "boombox"
 	description = "With custom tape"
 	path = /obj/item/music_player/boombox/custom_tape
-	required_donate_level = 5
+	required_donate_level = 4
 	price = 25 // Не входит в стандартный набор и является так-то убийственной штукой
 	cost = 0
 
@@ -157,7 +157,7 @@
 	display_name = "costume bags - premium"
 	description = "time for some premium fashion"
 	path = /obj/item/clothingbag/costume
-	required_donate_level = 4
+	required_donate_level = 3
 	cost = 0
 	price = 10
 
@@ -172,7 +172,7 @@
 	display_name = "clown costume"
 	description = "Admit it, you invested so much money just for one clown costume."
 	path = /obj/item/clothingbag/costume/clown
-	required_donate_level = 5
+	required_donate_level = 4
 	cost = 0
 	price = 25  // I don't want to see clown parade ~ SidVeld
 
@@ -219,6 +219,6 @@
 	display_name = "replica katana"
 	description = "Ah, I see you're a man of culture as well."
 	path = /obj/item/material/sword/katana/replica
-	required_donate_level = 2
+	required_donate_level = 1
 	cost = 0
 	price = 5
