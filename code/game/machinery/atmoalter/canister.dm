@@ -301,10 +301,7 @@ update_flag
 	return data
 
 /obj/machinery/portable_atmospherics/canister/tgui_act(action, list/params)
-	. = ..()
-	if(.)
-		return
-
+	UI_ACT_CHECK
 
 	switch(action)
 		if("valve")
