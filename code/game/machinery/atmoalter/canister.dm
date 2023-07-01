@@ -322,11 +322,8 @@ update_flag
 			update_icon()
 			.= TRUE
 		if("pressure")
-			var/diff = text2num(params["pressure"])
-			if(diff > 0)
-				release_pressure = min(10*ONE_ATMOSPHERE, release_pressure+diff)
-			else
-				release_pressure = max(ONE_ATMOSPHERE/10, release_pressure+diff)
+			var/new_pressure = text2num(params["pressure"])
+			release_pressure = round(clamp(new_pressure, ONE_ATMOSPHERE/10, 10*ONE_ATMOSPHERE), 0.005)
 		if("relabel")
 			var/list/colors = list(\
 				"\[N2O\]" = "redws", \
