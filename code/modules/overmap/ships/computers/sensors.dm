@@ -127,9 +127,7 @@
 
 
 /obj/machinery/computer/ship/sensors/tgui_act(action, list/params)
-	. = ..()
-	if(.)
-		return
+	UI_ACT_CHECK
 
 	.=TRUE
 
