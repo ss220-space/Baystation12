@@ -54,9 +54,7 @@
 	return data
 
 /obj/machinery/computer/telecomms/monitor/tgui_act(action, params)
-	. = ..()
-	if(.)
-		return .
+	UI_ACT_CHECK
 
 	temp = ""
 
