@@ -164,7 +164,8 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 
 /obj/machinery/computer/ship/helm/tgui_act(action, list/params)
 	. = ..()
-	UI_ACT_CHECK
+	if(.)
+		return
 
 	.=TRUE
 	add_fingerprint(usr)

@@ -37,7 +37,6 @@
 	return data
 
 /obj/machinery/computer/shuttle_control/tgui_act(action, list/params)
-	UI_ACT_CHECK
 	handle_topic_href(SSshuttle.shuttles[shuttle_tag], action, params)
 
 
@@ -110,6 +109,9 @@
 
 
 /obj/machinery/computer/shuttle_control/proc/handle_topic_href(var/datum/shuttle/autodock/shuttle, action, list/params)
+	if(.)
+		return
+
 	.=TRUE
 
 	switch(action)
