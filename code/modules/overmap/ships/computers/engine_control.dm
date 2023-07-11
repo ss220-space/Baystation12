@@ -52,7 +52,9 @@
 	return data
 
 /obj/machinery/computer/ship/engines/tgui_act(action, list/params)
-	UI_ACT_CHECK
+	. = ..()
+	if(.)
+		return
 
 	.=TRUE
 	add_fingerprint(usr)
