@@ -5,7 +5,7 @@ GLOBAL_DATUM_INIT(paramounts, /datum/antagonist/paramount, new)
 	role_text = "Paramount"
 	role_text_plural = "Paramounts"
 	landmark_id = "paramountstart"
-	welcome_text = "<span class='info'>Некогда вы были одним из лучших умов своей культуры, теперь доведенный до безумия шептанием воющей тьмы и наделенный психическими дарованиями, которые находятся за гранью понимания. Теперь же вы лишь одинокий странник, который нашёл пристанище у молчаливого мечника. Встретитесь ли в с ним сегодня или нет, не важно. У вас свои цели. Используя свой С-Е пси-усилитель и ваши извращенные знания псионики, продвигайте свои интересы в мире людей.</span>"
+	welcome_text = "<span class='info'>Некогда вы были одним из лучших умов своей культуры, теперь доведенный до безумия шептанием воющей тьмы и наделенный психическими дарованиями, которые находятся за гранью понимания. У вас свои цели. Используя свой С-Е пси-усилитель и ваши извращенные знания псионики, продвигайте свои интересы в мире людей.</span>"
 	flags = ANTAG_OVERRIDE_JOB | ANTAG_OVERRIDE_MOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_RANDSPAWN | ANTAG_SET_APPEARANCE
 	antaghud_indicator = "hudwizard"
 	initial_spawn_req = 1
@@ -15,7 +15,7 @@ GLOBAL_DATUM_INIT(paramounts, /datum/antagonist/paramount, new)
 	min_player_age = 18
 	id_type = /obj/item/card/id/syndicate
 	faction = "paramount"
-	base_to_load = /datum/map_template/ruin/antag_spawn/ninja
+	base_to_load = /datum/map_template/ruin/antag_spawn/paramount
 
 /datum/antagonist/paramount/equip(var/mob/living/carbon/human/player)
 
