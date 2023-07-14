@@ -286,8 +286,7 @@ GLOBAL_LIST_EMPTY(diversion_junctions)
 	return data
 
 /obj/machinery/disposal/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
-	if(..())
-		return
+	UI_ACT_CHECK
 
 	if(usr.loc == src)
 		to_chat(usr, "<span class='warning'>You cannot reach the controls from inside.</span>")

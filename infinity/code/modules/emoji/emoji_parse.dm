@@ -22,8 +22,7 @@ GLOBAL_VAR_INIT(emojis, 'infinity/icons/emoji.dmi')
 
 /proc/emoji_parse_by_user(msg, client/C)
 	. = msg
-	var/list/client_packet = SSexdata.GetDataByKey(DATASTORE_DONATORS, ckey(C.key))
-	if(islist(client_packet) || !config.donaters_only_emoji)
+	if(C.DonateData.level > 0 || !config.donaters_only_emoji)
 		. = emoji_parse(.)
 
 /proc/emoji_parse(text)

@@ -16,6 +16,6 @@
 			"}
 		dat += "</table>"
 
-		var/datum/browser/popup = new(usr, "donatedata", "Donations' Info of [DonateData.key]", 200 + 10 * length(DonateData.key), 50 * length(L))
+		var/datum/browser/popup = new(usr, "donatedata", "Donations' Info of [DonateData.ckey]", 200 + 10 * length(DonateData.ckey), 50 * length(L))
 		popup.set_content(dat)
 		popup.open()

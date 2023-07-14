@@ -228,10 +228,7 @@
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o6,
-		/datum/mil_rank/fleet/o7,
-		/datum/mil_rank/fleet/o8
+		/datum/mil_rank/fleet/o4
 	)
 	spawn_rank_types = list(
 		/datum/mil_rank/fleet/e4,
@@ -292,24 +289,6 @@
 	name_short = "LCDR"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o4, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 14
-
-/datum/mil_rank/fleet/o6
-	name = "Captain"
-	name_short = "CAPT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o6, /obj/item/clothing/accessory/solgov/specialty/officer)
-	sort_order = 16
-
-/datum/mil_rank/fleet/o7
-	name = "Commodore"
-	name_short = "CDRE"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag, /obj/item/clothing/accessory/solgov/specialty/officer)
-	sort_order = 17
-
-/datum/mil_rank/fleet/o8
-	name = "Rear Admiral"
-	name_short = "RADM"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o8, /obj/item/clothing/accessory/solgov/specialty/officer)
-	sort_order = 18
 
 /datum/mil_branch/army
 	name = "SCG Army"
@@ -425,16 +404,43 @@
 	id_types = list(/obj/item/card/id/awaycavalry/fleet/pilot)
 	gloves = /obj/item/clothing/gloves/thick/duty/rivalgloves
 
-/decl/hierarchy/outfit/job/patrol/fleet_command
-	name = PATROL_OUTFIT_JOB_NAME("Senior Officer")
+/decl/hierarchy/outfit/job/patrol/centcom/bridge_officer
+	name = PATROL_OUTFIT_JOB_NAME("Bridge Officer")
+	head = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
+	l_ear = /obj/item/device/radio/headset/headset_com/alt
+	uniform = /obj/item/clothing/under/solgov/service/fleet
+	belt = /obj/item/storage/belt/holster/general/away_solpatrol
+	shoes = /obj/item/clothing/shoes/dress
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/bridge_officer
+	r_pocket = /obj/item/card/id/syndicate
+	l_pocket = /obj/item/clothing/accessory/solgov/rank/fleet/officer
+	id_types = list(/obj/item/card/id/centcom/NtPass/station)
+	id_pda_assignment = "5th Fleet Bridge Officer"
+
+/decl/hierarchy/outfit/job/patrol/centcom/comms_officer
+	name = PATROL_OUTFIT_JOB_NAME("Communications Officer")
+	head = /obj/item/clothing/head/solgov/dress/fleet
+	l_ear = /obj/item/device/radio/headset/headset_com/alt
+	uniform = /obj/item/clothing/under/solgov/service/fleet
+	belt = /obj/item/storage/belt/holster/general/away_solpatrol
+	shoes = /obj/item/clothing/shoes/dress
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/comms_officer
+	r_pocket = /obj/item/card/id/syndicate
+	l_pocket = /obj/item/clothing/head/beret/solgov/fleet/command
+	id_types = list(/obj/item/card/id/centcom/NtPass/station)
+	id_pda_assignment = "5th Fleet Communications Officer"
+
+/decl/hierarchy/outfit/job/patrol/centcom/commanding_officer
+	name = PATROL_OUTFIT_JOB_NAME("Commanding Officer")
 	head = /obj/item/clothing/head/solgov/dress/fleet/command
 	uniform = /obj/item/clothing/under/solgov/service/fleet
 	belt = /obj/item/storage/belt/holster/general/away_solpatrol
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/commanding_officer
 	r_pocket = /obj/item/card/id/syndicate
+	l_pocket = /obj/item/clothing/accessory/solgov/rank/fleet/flag
 	id_types = list(/obj/item/card/id/centcom/NtPass/station)
-	id_pda_assignment = "5th Fleet Senior Officer"
+	id_pda_assignment = "5th Fleet Commanding Officer"
 
 #undef PATROL_OUTFIT_JOB_NAME
 #undef WEBHOOK_SUBMAP_LOADED_SOL
