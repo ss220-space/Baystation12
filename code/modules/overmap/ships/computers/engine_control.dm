@@ -30,6 +30,7 @@
 	var/data = list()
 	var/mob/living/silicon/silicon = user
 	data["viewing_silicon"] = ismachinerestricted(silicon)
+	data["linked"] = linked
 	data["global_state"] = linked.engines_state
 	data["global_limit"] = round(linked.thrust_limit*100)
 	var/total_thrust = 0
@@ -79,6 +80,12 @@
 			var/limit = params["new_limit"]
 			if(istype(E))
 				E.set_thrust_limit(limit)
+			return TOPIC_REFRESH
+		if("sync")
+			sync_linked(usr)
+
+			if(!linked)
+				to_chat(usr,"<span class='warning'>No shuttles near.</span>")
 			return TOPIC_REFRESH
 		if("limit")
 			var/datum/ship_engine/E = locate(params["ref"])

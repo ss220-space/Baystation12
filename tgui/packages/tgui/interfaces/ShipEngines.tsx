@@ -6,6 +6,7 @@ import { Window } from '../layouts';
 
 type Data = {
   viewing_silicon: BooleanLike;
+  linked: BooleanLike;
   global_state: string;
   global_limit: number;
   engines: Engine[];
@@ -65,72 +66,78 @@ const GeneralInfo = (props, context) => {
 
 export const ShipEngines = (props, context) => {
   const { act, data } = useBackend<Data>(context);
-  const { engines, viewing_silicon } = data;
+  const { linked, engines, viewing_silicon } = data;
   return (
     <Window width={370} height={600} resizable>
       <Window.Content scrollable>
         <Stack vertical fill>
           <Stack.Item>{viewing_silicon === 1 && <NoticeBox>{'AI SYSTEM DETECTED!'}</NoticeBox>}</Stack.Item>
-          <Stack.Item>
-            <GeneralInfo />
-            <Divider />
-            {engines.map((engine, i) => (
-              <Collapsible
-                title={
-                  <Box inline>
-                    Engine #{i + 1} | Thrust: <AnimatedNumber value={engine.eng_thrust} /> | Limit:{' '}
-                    <AnimatedNumber value={engine.eng_thrust_limiter} format={(val) => val + '%'} />
-                  </Box>
-                }>
-                <Section>
-                  <LabeledList>
-                    <LabeledList.Item label="Type">
-                      <Flex justify="space-between" direction="row">
-                        {engine.eng_type}
+          {linked ? (
+            <Stack.Item>
+              <GeneralInfo />
+              <Divider />
+              {engines?.map((engine, i) => (
+                <Collapsible
+                  title={
+                    <Box inline>
+                      Engine #{i + 1} | Thrust: <AnimatedNumber value={engine.eng_thrust} /> | Limit:{' '}
+                      <AnimatedNumber value={engine.eng_thrust_limiter} format={(val) => val + '%'} />
+                    </Box>
+                  }>
+                  <Section>
+                    <LabeledList>
+                      <LabeledList.Item label="Type">
+                        <Flex justify="space-between" direction="row">
+                          {engine.eng_type}
+                          <Button
+                            fluid
+                            disabled={viewing_silicon === 1}
+                            iconSpin={engine.eng_on === -1}
+                            color={engine.eng_on === -1 ? 'purple' : null}
+                            selected={engine.eng_on === 1}
+                            icon="power-off"
+                            onClick={() => act('toggle', { ref: engine.eng_reference })}
+                          />
+                        </Flex>
+                      </LabeledList.Item>
+                      <LabeledList.Item label="Status">
+                        <p style={{ 'color': engine.eng_on ? (engine.eng_on === 1 ? 'green' : 'average') : 'red' }}>
+                          {engine.eng_on ? (engine.eng_on === 1 ? 'Online' : 'Booting') : 'Offline'}
+                        </p>
+                        <div dangerouslySetInnerHTML={{ __html: engine.eng_status }} />
+                      </LabeledList.Item>
+                      <LabeledList.Item label="Current Thrust">{engine.eng_thrust}</LabeledList.Item>
+                      <LabeledList.Item label="Volume Limit">
                         <Button
-                          fluid
-                          disabled={viewing_silicon === 1}
-                          iconSpin={engine.eng_on === -1}
-                          color={engine.eng_on === -1 ? 'purple' : null}
-                          selected={engine.eng_on === 1}
-                          icon="power-off"
-                          onClick={() => act('toggle', { ref: engine.eng_reference })}
+                          icon="angle-double-left"
+                          onClick={() => act('limit', { adjust: -0.1, ref: engine.eng_reference })}
+                          disabled={engine.eng_thrust_limiter < 10 || viewing_silicon === 1}
                         />
-                      </Flex>
-                    </LabeledList.Item>
-                    <LabeledList.Item label="Status">
-                      <p style={{ 'color': engine.eng_on ? (engine.eng_on === 1 ? 'green' : 'average') : 'red' }}>
-                        {engine.eng_on ? (engine.eng_on === 1 ? 'Online' : 'Booting') : 'Offline'}
-                      </p>
-                      <div dangerouslySetInnerHTML={{ __html: engine.eng_status }} />
-                    </LabeledList.Item>
-                    <LabeledList.Item label="Current Thrust">{engine.eng_thrust}</LabeledList.Item>
-                    <LabeledList.Item label="Volume Limit">
-                      <Button
-                        icon="angle-double-left"
-                        onClick={() => act('limit', { adjust: -0.1, ref: engine.eng_reference })}
-                        disabled={engine.eng_thrust_limiter < 10 || viewing_silicon === 1}
-                      />
-                      <NumberInput
-                        width="22px"
-                        step={1}
-                        stepPixelSize={1}
-                        minValue={0}
-                        maxValue={100}
-                        value={engine.eng_thrust_limiter}
-                        onDrag={(e, value) => act('set_limit', { new_limit: value / 100, ref: engine.eng_reference })}
-                      />
-                      <Button
-                        icon="angle-double-right"
-                        onClick={() => act('limit', { adjust: 0.1, ref: engine.eng_reference })}
-                        disabled={engine.eng_thrust_limiter > 90 || viewing_silicon === 1}
-                      />
-                    </LabeledList.Item>
-                  </LabeledList>
-                </Section>
-              </Collapsible>
-            ))}
-          </Stack.Item>
+                        <NumberInput
+                          width="22px"
+                          step={1}
+                          stepPixelSize={1}
+                          minValue={0}
+                          maxValue={100}
+                          value={engine.eng_thrust_limiter}
+                          onDrag={(e, value) => act('set_limit', { new_limit: value / 100, ref: engine.eng_reference })}
+                        />
+                        <Button
+                          icon="angle-double-right"
+                          onClick={() => act('limit', { adjust: 0.1, ref: engine.eng_reference })}
+                          disabled={engine.eng_thrust_limiter > 90 || viewing_silicon === 1}
+                        />
+                      </LabeledList.Item>
+                    </LabeledList>
+                  </Section>
+                </Collapsible>
+              ))}
+            </Stack.Item>
+          ) : (
+            <Stack.Item>
+              <Button width="100%" content="Find Shuttle" icon="search" onCLick={() => act('sync')} />
+            </Stack.Item>
+          )}
         </Stack>
       </Window.Content>
     </Window>
