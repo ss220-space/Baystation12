@@ -163,7 +163,6 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 		return data
 
 /obj/machinery/computer/ship/helm/tgui_act(action, list/params)
-	. = ..()
 	UI_ACT_CHECK
 
 	.=TRUE
