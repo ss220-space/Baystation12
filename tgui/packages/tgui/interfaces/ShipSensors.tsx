@@ -9,6 +9,7 @@ type Data = {
   range: number;
   viewing: BooleanLike;
   viewing_silicon: BooleanLike;
+  linked: BooleanLike;
   status: string;
   heat: number;
   critical_heat: number;
@@ -137,25 +138,33 @@ const ScanData = (props, context) => {
 
 export const ShipSensors = (props, context) => {
   const { act, data } = useBackend<Data>(context);
-  const { sensors, viewing_silicon } = data;
+  const { linked, sensors, viewing_silicon } = data;
   return (
     <Window width={380} height={600}>
       <Window.Content>
         <Stack fill vertical>
-          <Stack.Item>{viewing_silicon === 1 && <NoticeBox>{'AI SYSTEM DETECTED!'}</NoticeBox>}</Stack.Item>
-          <Stack.Item>
-            {sensors ? (
-              <>
-                <Status />
-                <Contacts />
-                <ScanData />
-              </>
-            ) : (
-              <Section title="Status: MISSING SENSORS">
-                <Button content="Link sensors" onClick={() => act('link')} />
-              </Section>
-            )}
-          </Stack.Item>
+          {linked ? (
+            <>
+              <Stack.Item>{viewing_silicon === 1 && <NoticeBox>{'AI SYSTEM DETECTED!'}</NoticeBox>}</Stack.Item>
+              <Stack.Item>
+                {sensors ? (
+                  <>
+                    <Status />
+                    <Contacts />
+                    <ScanData />
+                  </>
+                ) : (
+                  <Section title="Status: MISSING SENSORS">
+                    <Button content="Link sensors" onClick={() => act('link')} />
+                  </Section>
+                )}
+              </Stack.Item>
+            </>
+          ) : (
+            <Stack.Item>
+              <Button width="100%" content="Find Shuttle" icon="search" onCLick={() => act('sync')} />
+            </Stack.Item>
+          )}
         </Stack>
       </Window.Content>
     </Window>

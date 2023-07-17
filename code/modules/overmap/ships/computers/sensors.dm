@@ -66,18 +66,14 @@
 	return TRUE
 
 /obj/machinery/computer/ship/sensors/tgui_interact(mob/user, datum/tgui/ui)
-	if(!linked)
-		display_reconnect_dialog(user, "sensors")
-		return
-
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "ShipSensors", "[linked.name] Sensors Control") // 420, 530
+		ui = new(user, src, "ShipSensors", "Sensors Control") // 420, 530
 		ui.open()
 
 /obj/machinery/computer/ship/sensors/tgui_data(mob/user)
 	var/data = list()
-
+	data["linked"] = linked
 	data["sensors"] = !!sensors
 	data["viewing"] = viewing_overmap(user)
 	var/mob/living/silicon/silicon = user
@@ -127,9 +123,7 @@
 
 
 /obj/machinery/computer/ship/sensors/tgui_act(action, list/params)
-	. = ..()
-	if(.)
-		return
+	UI_ACT_CHECK
 
 	.=TRUE
 
@@ -164,6 +158,12 @@
 			playsound(loc, "sound/machines/dotprinter.ogg", 30, 1)
 			new/obj/item/paper/(get_turf(src), last_scan["data"], "paper (Sensor Scan - [last_scan["name"]])")
 			return
+		if("sync")
+			sync_linked(usr)
+
+			if(!linked)
+				to_chat(usr,"<span class='warning'>No shuttles near.</span>")
+			return TOPIC_REFRESH
 
 /obj/machinery/shipsensors
 	name = "sensors suite"

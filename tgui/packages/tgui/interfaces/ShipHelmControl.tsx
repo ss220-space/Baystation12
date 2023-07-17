@@ -332,28 +332,36 @@ const NavigationData = (props, context) => {
 
 export const ShipHelmControl = (props, context) => {
   const { act, data } = useBackend<Data>(context);
-  const { viewing_silicon } = data;
+  const { linked, viewing_silicon } = data;
   return (
     <Window width={590} height={600}>
       <Window.Content>
         <Stack vertical fill>
-          <Stack.Item>{viewing_silicon === 1 && <NoticeBox>{'AI SYSTEM DETECTED!'}</NoticeBox>}</Stack.Item>
-          <Stack.Item height={'200px'}>
-            <Stack fill>
-              <Stack.Item width={'220px'}>
-                <FlightData />
+          {linked ? (
+            <>
+              <Stack.Item>{viewing_silicon === 1 && <NoticeBox>{'AI SYSTEM DETECTED!'}</NoticeBox>}</Stack.Item>
+              <Stack.Item height={'200px'}>
+                <Stack fill>
+                  <Stack.Item width={'220px'}>
+                    <FlightData />
+                  </Stack.Item>
+                  <Stack.Item width={'160px'}>
+                    <ManualControl />
+                  </Stack.Item>
+                  <Stack.Item width={'190px'}>
+                    <Autopilot />
+                  </Stack.Item>
+                </Stack>
               </Stack.Item>
-              <Stack.Item width={'160px'}>
-                <ManualControl />
+              <Stack.Item grow>
+                <NavigationData />
               </Stack.Item>
-              <Stack.Item width={'190px'}>
-                <Autopilot />
-              </Stack.Item>
-            </Stack>
-          </Stack.Item>
-          <Stack.Item grow>
-            <NavigationData />
-          </Stack.Item>
+            </>
+          ) : (
+            <Stack.Item>
+              <Button width="100%" content="Find Shuttle" icon="search" onCLick={() => act('sync')} />
+            </Stack.Item>
+          )}
         </Stack>
       </Window.Content>
     </Window>
