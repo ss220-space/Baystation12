@@ -110,8 +110,6 @@
 
 
 /obj/machinery/computer/shuttle_control/proc/handle_topic_href(var/datum/shuttle/autodock/shuttle, action, list/params)
-	UI_ACT_CHECK
-
 	.=TRUE
 
 	switch(action)
