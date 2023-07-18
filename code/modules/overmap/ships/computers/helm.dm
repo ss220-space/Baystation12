@@ -110,7 +110,6 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 
 /obj/machinery/computer/ship/helm/tgui_data(var/mob/user)
 	var/data = list()
-	data["linked"] = linked
 
 	if(linked)
 		var/turf/T = get_turf(linked)
@@ -118,7 +117,7 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 
 		var/mob/living/silicon/silicon = user
 		data["viewing_silicon"] = ismachinerestricted(silicon)
-
+		data["linked"] = linked
 		data["sector"] = current_sector ? current_sector.name : "Deep Space"
 		data["sector_info"] = current_sector ? current_sector.desc : "Not Available"
 		data["landed"] = linked.get_landed_info()
@@ -163,9 +162,7 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 		return data
 
 /obj/machinery/computer/ship/helm/tgui_act(action, list/params)
-	. = ..()
-	if(.)
-		return
+	UI_ACT_CHECK
 
 	.=TRUE
 	add_fingerprint(usr)
@@ -235,6 +232,9 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 			var/newy = input("Input new destiniation y coordinate", "Coordinate input", dy) as num|null
 			if (newy)
 				dy = Clamp(newy, 1, world.maxy)
+		if("sync")
+			sync_linked(usr)
+			return TOPIC_REFRESH
 
 /obj/machinery/computer/ship/helm/unlook(mob/user)
 	. = ..()
@@ -307,20 +307,12 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 	return TRUE
 
 /obj/machinery/computer/ship/navigation/tgui_interact(mob/user, datum/tgui/ui)
-	if(!linked)
-		display_reconnect_dialog(user, "sensors")
-		return
-
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "ShipNavigation") // 420, 530
+		ui = new(user, src, "ShipNavigation")
 		ui.open()
 
 /obj/machinery/computer/ship/navigation/tgui_data(mob/user)
-	if(!linked)
-		display_reconnect_dialog(user, "Navigation")
-		return
-
 	var/data = list()
 
 
@@ -329,7 +321,7 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 
 	var/mob/living/silicon/silicon = user
 	data["viewing_silicon"] = ismachinerestricted(silicon)
-
+	data["linked"] = linked
 	data["sector"] = current_sector ? current_sector.name : "Deep Space"
 	data["sector_info"] = current_sector ? current_sector.desc : "Not Available"
 	data["s_x"] = linked.x
@@ -357,6 +349,9 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 		if ("viewing")
 			viewing_overmap(usr) ? unlook(usr) : look(usr)
 			return
+		if("sync")
+			sync_linked(usr)
+			return TOPIC_REFRESH
 
 /obj/machinery/computer/ship/navigation/telescreen	//little hacky but it's only used on one ship so it should be okay
 	icon_state = "tele_nav"
