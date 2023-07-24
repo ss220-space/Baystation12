@@ -38,7 +38,8 @@
 
 /obj/machinery/computer/shuttle_control/tgui_act(action, list/params)
 	UI_ACT_CHECK
-	handle_topic_href(SSshuttle.shuttles[shuttle_tag], action, params)
+	return handle_topic_href(SSshuttle.shuttles[shuttle_tag], action, params)
+
 
 
 /* Наследуемые методы классовых консолей */
@@ -110,30 +111,31 @@
 
 
 /obj/machinery/computer/shuttle_control/proc/handle_topic_href(var/datum/shuttle/autodock/shuttle, action, list/params)
-	.=TRUE
+	if (!shuttle)
+		return
 
 	switch(action)
 		if("move")
 			if(can_move(shuttle, usr))
 				shuttle.launch(src)
-				return TOPIC_REFRESH
-			return TOPIC_HANDLED
+				return TRUE
+			return FALSE
 
 		if("force")
 			if(can_move(shuttle, usr))
 				shuttle.force_launch(src)
-				return TOPIC_REFRESH
-			return TOPIC_HANDLED
+				return TRUE
+			return FALSE
 
 		if("cancel")
 			shuttle.cancel_launch(src)
-			return TOPIC_REFRESH
+			return TRUE
 
 		if("set_codes")
 			var/newcode = input("Input new docking codes", "Docking codes", shuttle.docking_codes) as text|null
 			if (newcode)
 				shuttle.set_docking_codes(uppertext(newcode))
-			return TOPIC_REFRESH
+			return TRUE
 
 // This is a subset of the actual checks; contains those that give messages to the user.
 /obj/machinery/computer/shuttle_control/proc/can_move(var/datum/shuttle/autodock/shuttle, var/user)
