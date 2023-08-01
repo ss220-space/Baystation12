@@ -253,6 +253,8 @@ var/list/global/tank_gauge_cache = list()
 		proxyassembly.assembly.attack_self(user)
 
 /obj/item/tank/tgui_act(action, list/params)
+	UI_ACT_CHECK
+
 	.= TOPIC_REFRESH
 
 	switch(action)
@@ -265,7 +267,7 @@ var/list/global/tank_gauge_cache = list()
 				distribute_pressure = 0
 			else
 				var/cp = text2num(params["pressure"])
-				distribute_pressure += cp
+				distribute_pressure = cp
 			distribute_pressure = min(max(round(distribute_pressure), 0), TANK_MAX_RELEASE_PRESSURE)
 			return TOPIC_REFRESH
 		if("toogle")

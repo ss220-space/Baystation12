@@ -50,8 +50,7 @@
 	return data
 
 /obj/machinery/photocopier/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
-	if(..())
-		return TRUE
+	UI_ACT_CHECK
 
 	switch(action)
 		if("make_copy")

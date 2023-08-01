@@ -14,7 +14,7 @@
 			prefs.ooccolor = "#" + nooc_color
 
 /client/proc/on_exdata_load()
-	return ..()
+	return
 
 /datum/preferences/load_preferences()
 	. = ..()

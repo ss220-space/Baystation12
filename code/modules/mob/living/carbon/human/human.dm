@@ -127,7 +127,7 @@ GLOBAL_LIST_EMPTY(compatable_genomes_owners)
 		var/obj/item/organ/internal/cell/potato = internal_organs_by_name[BP_CELL]
 		if(potato && potato.cell)
 			stat("Battery charge:", "[potato.get_charge()]/[potato.cell.maxcharge]")
-
+			stat("Operating temperature:", "[round(bodytemperature-T0C)]&deg;C")
 		if(back && istype(back,/obj/item/rig))
 			var/obj/item/rig/suit = back
 			var/cell_status = "ERROR"

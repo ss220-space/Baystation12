@@ -65,9 +65,7 @@
 	return data
 
 /obj/machinery/computer/telecomms/traffic/tgui_act(action, list/params)
-	. = ..()
-	if(.)
-		return
+	UI_ACT_CHECK
 
 	temp = ""
 	.= TRUE

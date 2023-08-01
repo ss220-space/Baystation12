@@ -60,111 +60,104 @@
 	//message_admins("[sensors.sensor_range], [round(sensors.sensor_range)]") //какого хъуя
 	return broadcast_sensor_range
 
-/obj/machinery/computer/ship/sensors/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
-	if(!linked)
-		display_reconnect_dialog(user, "sensors")
-		return
 
-	var/data[0]
+/obj/machinery/computer/ship/sensors/interface_interact(mob/user)
+	tgui_interact(user)
+	return TRUE
 
+/obj/machinery/computer/ship/sensors/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "ShipSensors", "Sensors Control")
+		ui.open()
+
+/obj/machinery/computer/ship/sensors/tgui_data(mob/user)
+	var/data = list()
+	data["linked"] = linked
+	data["sensors"] = !!sensors
 	data["viewing"] = viewing_overmap(user)
 	var/mob/living/silicon/silicon = user
 	data["viewing_silicon"] = ismachinerestricted(silicon)
-	if(sensors)
-		data["on"] = sensors.use_power
-		data["range"] = sensors.range
-		data["health"] = sensors.health
-		data["max_health"] = sensors.max_health
-		data["heat"] = sensors.heat
-		data["critical_heat"] = sensors.critical_heat
-		if(sensors.health == 0)
-			data["status"] = "DESTROYED"
-		else if(!sensors.powered())
-			data["status"] = "NO POWER"
-		else if(!sensors.in_vacuum())
-			data["status"] = "VACUUM SEAL BROKEN"
-		else
-			data["status"] = "OK"
-		var/list/contacts = list()
-		for(var/obj/effect/overmap/O in view(sensors.sensor_range,linked))
-			var/datum/overmap_contact/record
-			if(linked == O)
-				continue
-			if(!O.scannable)
-				continue
-			var/bearing = round(90 - Atan2(O.x - linked.x, O.y - linked.y),5)
-			if(bearing < 0)
-				bearing += 360
-			for(var/key in contact_datums)
-				record = contact_datums[O]
-			if(record)
-				if(!record.identified)
-					continue
-			contacts.Add(list(list("name"=O.scanner_name, "color"= O.color, "ref"="\ref[O]", "bearing"=bearing)))
-		if(contacts.len)
-			data["contacts"] = contacts
-		data["last_scan"] = last_scan
+	data["on"] = sensors.use_power
+	data["range"] = sensors.range
+	data["heat"] = sensors.heat
+	data["health"] = sensors.health
+	data["max_health"] = sensors.max_health
+	data["critical_heat"] = sensors.critical_heat
+	if(sensors.health == 0)
+		data["status"] = "DESTROYED"
+	else if(!sensors.powered())
+		data["status"] = "NO POWER"
+	else if(!sensors.in_vacuum())
+		data["status"] = "VACUUM SEAL BROKEN"
 	else
-		data["status"] = "MISSING"
-		data["range"] = "N/A"
-		data["on"] = 0
+		data["status"] = "OK"
+		//Temperature progressbar message
+	if (sensors.heat < (sensors.critical_heat * 0.5))
+		data["temp_mes"] = "Temperature low"
+	else if (sensors.heat < (sensors.critical_heat * 0.75))
+		data["temp_mes"] = "Sensor temperature high!"
+	else
+		data["temp_mes"] = "TEMPERATURE CRITICAL!"
 
-	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
-	if (!ui)
-		ui = new(user, src, ui_key, "shipsensors.tmpl", "[linked.scanner_name] Sensors Control", 420, 530, src)
-		ui.set_initial_data(data)
-		ui.open()
-		ui.set_auto_update(1)
+	var/list/contacts = list()
+	for(var/obj/effect/overmap/O in view(sensors.sensor_range,linked))
+		var/datum/overmap_contact/record
+		if(linked == O)
+			continue
+		if(!O.scannable)
+			continue
+		var/bearing = round(90 - Atan2(O.x - linked.x, O.y - linked.y),5)
+		if(bearing < 0)
+			bearing += 360
+		for(var/key in contact_datums)
+			record = contact_datums[O]
+		if(record)
+			if(!record.identified)
+				continue
+		contacts.Add(list(list("name"=O.scanner_name, "color"= O.color, "ref"="\ref[O]", "bearing"=bearing)))
+		data["contacts"] = contacts
 
-/obj/machinery/computer/ship/sensors/OnTopic(var/mob/user, var/list/href_list, state)
-	if(..())
-		return TOPIC_HANDLED
+	data["last_scan"] = last_scan
+	return data
 
-	if (!linked)
-		return TOPIC_NOACTION
 
-	if (href_list["viewing"])
-		if(user)
-			viewing_overmap(user) ? unlook(user) : look(user)
-		return TOPIC_REFRESH
+/obj/machinery/computer/ship/sensors/tgui_act(action, list/params)
+	UI_ACT_CHECK
 
-	if (href_list["link"])
-		find_sensors()
-		return TOPIC_REFRESH
+	.=TRUE
 
-	if(sensors)
-		if (href_list["range"])
-			var/nrange = input("Set new sensors range", "Sensor range", sensors.range) as num|null
-			if(!CanInteract(user,state))
-				return TOPIC_NOACTION
-			if (nrange)
-				sensors.set_range(Clamp(nrange, 1, world.view))
-			return TOPIC_REFRESH
-		if (href_list["toggle"])
+	switch(action)
+		if("viewing")
+			viewing_overmap(usr) ? unlook(usr) : look(usr)
+			return
+		if ("link")
+			find_sensors()
+			return
+		if ("range")
+			sensors.set_range(Clamp(params["range"], 1, world.view))
+			return
+		if ("toggle")
 			sensors.toggle()
-			return TOPIC_REFRESH
-
-	if (href_list["scan"])
-		if(sensors.use_power == 0)
-			to_chat(user, SPAN_WARNING("[src] states, 'Sensors offline!'"))
-			return TOPIC_NOACTION
-
-		var/obj/effect/overmap/O = locate(href_list["scan"])
-		if(istype(O) && !QDELETED(O) && (O in view(sensors.sensor_range, linked)))
-			playsound(loc, "sound/effects/ping.ogg", 50, 1)
-			LAZYSET(last_scan, "data", O.get_scan_data(user))
-			LAZYSET(last_scan, "location", "[O.x],[O.y]")
-			LAZYSET(last_scan, "name", "[O]")
-			to_chat(user, SPAN_NOTICE("[src] states, 'Successfully scanned [O].'"))
-		else
-			to_chat(user, SPAN_WARNING("[src] states, 'Could not get a scan, target not in range!'"))
-		return TOPIC_HANDLED
-
-	if (href_list["print"])
-		playsound(loc, "sound/machines/dotprinter.ogg", 30, 1)
-		new/obj/item/paper/(get_turf(src), last_scan["data"], "paper (Sensor Scan - [last_scan["name"]])")
-		return TOPIC_HANDLED
-
+			return
+		if ("scan")
+			if(sensors.use_power == 0)
+				to_chat(usr, SPAN_WARNING("[src] states, 'Sensors offline!'"))
+				return
+			var/obj/effect/overmap/O = locate(params["ref"])
+			if(istype(O) && !QDELETED(O) && (O in view(sensors.sensor_range, linked)))
+				playsound(loc, "sound/effects/ping.ogg", 50, 1)
+				LAZYSET(last_scan, "data", O.get_scan_data(usr))
+				LAZYSET(last_scan, "location", "[O.x], [O.y]")
+				LAZYSET(last_scan, "name", "[O]")
+				to_chat(usr, SPAN_NOTICE("[src] states, 'Successfully scanned [O].'"))
+			else
+				to_chat(usr, SPAN_WARNING("[src] states, 'Could not get a scan, target not in range!'"))
+			return
+		if ("print")
+			playsound(loc, "sound/machines/dotprinter.ogg", 30, 1)
+			new/obj/item/paper/(get_turf(src), last_scan["data"], "paper (Sensor Scan - [last_scan["name"]])")
+			return
 
 /obj/machinery/shipsensors
 	name = "sensors suite"

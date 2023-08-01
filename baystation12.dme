@@ -3995,6 +3995,7 @@
 #include "maps\antag_spawn\mercenary\mercenary_inf.dm"
 #include "maps\antag_spawn\ninja\ninja_inf.dm"
 #include "maps\antag_spawn\wizard\wizard_inf.dm"
+#include "maps\antag_spawn\paramount\paramount.dm"
 #include "maps\away\away_sites.dm"
 #include "maps\away_sites_testing\away_sites_testing_define.dm"
 #include "maps\bearcat_inf\bearcat_define.dm"
