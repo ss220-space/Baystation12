@@ -253,8 +253,6 @@ var/list/global/tank_gauge_cache = list()
 		proxyassembly.assembly.attack_self(user)
 
 /obj/item/tank/tgui_act(action, list/params)
-	UI_ACT_CHECK
-
 	.= TOPIC_REFRESH
 
 	switch(action)

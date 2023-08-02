@@ -2,7 +2,8 @@
 	name = "Crew monitor"
 
 /datum/tgui_module/crew_monitor/tgui_act(action, params)
-	UI_ACT_CHECK
+	if(..())
+		return TRUE
 
 	var/turf/T = get_turf(tgui_host())
 	if(!T || !(T.z in GLOB.using_map.player_levels))

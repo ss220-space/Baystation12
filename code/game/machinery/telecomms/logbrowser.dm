@@ -76,7 +76,9 @@
 
 
 /obj/machinery/computer/telecomms/server/tgui_act(action, list/params)
-	UI_ACT_CHECK
+	. = ..()
+	if(.)
+		return
 
 	temp = ""
 	.= TRUE
