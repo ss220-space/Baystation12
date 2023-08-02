@@ -74,7 +74,7 @@ export const ShipEngines = (props, context) => {
           <Stack.Item>
             <GeneralInfo />
             <Divider />
-            {engines?.length && engines.map((engine, i) => (
+            {engines.map((engine, i) => (
               <Collapsible
                 title={
                   <Box inline>
