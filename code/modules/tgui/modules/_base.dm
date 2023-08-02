@@ -19,6 +19,3 @@ Code is pretty much ripped verbatim from nano modules, but with un-needed stuff 
 /datum/tgui_module/tgui_close(mob/user)
 	if(host)
 		host.tgui_close(user)
-
-/datum/tgui_module/proc/check_eye(mob/user)
-	return -1

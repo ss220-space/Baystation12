@@ -9,7 +9,7 @@
 	scanner_name = "SRV Venerable Catfish"
 	shuttle = "SRV Venerable Catfish"
 	scanner_desc = @{"
-		<center><img src = sollogo.png></center><br>
+		<center><img src = sollogo.png></center><br> 
 		<i>Registration</i>: SRV Verne-1 Venerable Catfish, SSE-U17 long range shuttle<br>
 		<i>Transponder</i>: Transmitting (SCI), SCGRV"}
 	contact_class = /decl/ship_contact_class/srv_shuttle
@@ -86,7 +86,7 @@
 /obj/machinery/computer/shuttle_control/lift/verne
 	name = "cargo lift controls"
 	shuttle_tag = "Verne Lift"
-	ui_template = "ShuttleControleConsoleLift"
+	ui_template = "shuttle_control_console_lift.tmpl"
 	icon_state = "tiny"
 	icon_keyboard = "tiny_keyboard"
 	icon_screen = "lift"

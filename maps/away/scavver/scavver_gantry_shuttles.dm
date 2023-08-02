@@ -189,7 +189,7 @@
 /obj/machinery/computer/shuttle_control/lift/gantry
 	name = "cargo lift controls"
 	shuttle_tag = "Gantry Lift"
-	ui_template = "ShuttleControleConsoleLift"
+	ui_template = "shuttle_control_console_lift.tmpl"
 	icon_state = "tiny"
 	icon_keyboard = "tiny_keyboard"
 	icon_screen = "lift"

@@ -17,16 +17,16 @@
 /obj/machinery/computer/shuttle_control/lift/cargo
 	name = "cargo lift controls"
 	shuttle_tag = "Primary Cargo Lift"
-	ui_template = "ShuttleControlConsoleLift"
+	ui_template = "shuttle_control_console_lift.tmpl"
 	icon_state = "tiny"
 	icon_keyboard = "tiny_keyboard"
 	icon_screen = "lift"
 	density = FALSE
 
-/robotics
+/obj/machinery/computer/shuttle_control/lift/robotics
 	name = "robotics lift controls"
 	shuttle_tag = "Robotics Lift"
-	ui_template = "ShuttleControlConsoleLift"
+	ui_template = "shuttle_control_console_lift.tmpl"
 	icon_state = "tiny"
 	icon_keyboard = "tiny_keyboard"
 	icon_screen = "lift"
@@ -35,7 +35,7 @@
 /obj/machinery/computer/shuttle_control/lift/medical
 	name = "medical lift controls"
 	shuttle_tag = "Medical Lift"
-	ui_template = "ShuttleControlConsoleLift"
+	ui_template = "shuttle_control_console_lift.tmpl"
 	icon_state = "tiny"
 	icon_keyboard = "tiny_keyboard"
 	icon_screen = "lift"
