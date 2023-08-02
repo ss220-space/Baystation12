@@ -15,8 +15,7 @@ export const Canister = (props, context) => {
     minReleasePressure,
     maxReleasePressure,
     valveOpen,
-    holdingTank,
-    hasHoldingTank,
+    holding,
   } = data;
   return (
     <Window width={360} height={242} resizable>
@@ -89,7 +88,7 @@ export const Canister = (props, context) => {
                 width="50px"
                 lineHeight={2}
                 fontSize="11px"
-                color={valveOpen ? (hasHoldingTank ? 'caution' : 'danger') : null}
+                color={valveOpen ? (holding ? 'caution' : 'danger') : null}
                 content={valveOpen ? 'Open' : 'Closed'}
                 onClick={() => act('valve')}
               />
@@ -105,19 +104,19 @@ export const Canister = (props, context) => {
         <Section
           title="Holding Tank"
           buttons={
-            !!hasHoldingTank && (
+            !!holding && (
               <Button icon="eject" color={valveOpen && 'danger'} content="Eject" onClick={() => act('eject')} />
             )
           }>
-          {!!hasHoldingTank && (
+          {!!holding && (
             <LabeledList>
-              <LabeledList.Item label="Label">{holdingTank.name}</LabeledList.Item>
+              <LabeledList.Item label="Label">{holding.name}</LabeledList.Item>
               <LabeledList.Item label="Pressure">
-                <AnimatedNumber value={holdingTank.pressure} /> kPa
+                <AnimatedNumber value={holding.pressure} /> kPa
               </LabeledList.Item>
             </LabeledList>
           )}
-          {!hasHoldingTank && <Box color="average">No Holding Tank</Box>}
+          {!holding && <Box color="average">No Holding Tank</Box>}
         </Section>
       </Window.Content>
     </Window>

@@ -1,7 +1,8 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
-#define MAIN_SCREEN 0
-#define VIEW_SERVER_SCREEN 1
-#define CODE_REDACTOR_SCREEN 2
+
+
+
+
 
 /obj/machinery/computer/telecomms/traffic
 	name = "Telecommunications Traffic Control"
@@ -9,144 +10,232 @@
 
 	req_access = list(access_tcomsat)
 
-	var/screen = MAIN_SCREEN			// the screen number:
+	var/screen = 0				// the screen number:
 	var/list/servers = list()	// the servers located by the computer
-	var/list/viewingcode = list()
-	var/obj/machinery/telecomms/server/SelectedServer
-
 	var/mob/editingcode
 	var/mob/lasteditor
+	var/list/viewingcode = list()
+	var/obj/machinery/telecomms/server/SelectedServer
 
 	var/network = "NULL"		// the network to probe
 	var/temp = ""				// temporary feedback messages
 
 	var/storedcode = ""			// code stored
 
-	var/list/compileerrors
+
+/obj/machinery/computer/telecomms/traffic/proc/update_ide()
+
+		// loop if there's someone manning the keyboard
+	while(editingcode)
+		if(!editingcode.client)
+			editingcode = null
+			break
+
+		// For the typer, the input is enabled. Buffer the typed text
+		if(editingcode)
+			storedcode = "[winget(editingcode, "tcscode", "text")]"
+		if(editingcode) // double if's to work around a runtime error
+			winset(editingcode, "tcscode", "is-disabled=false")
+
+		// If the player's not manning the keyboard anymore, adjust everything
+		if( (!(editingcode in range(1, src)) && !issilicon(editingcode)) || (editingcode.machine != src && !issilicon(editingcode)))
+			if(editingcode)
+				winshow(editingcode, "Telecomms IDE", 0) // hide the window!
+			editingcode = null
+			break
+
+		// For other people viewing the typer type code, the input is disabled and they can only view the code
+		// (this is put in place so that there's not any magical shenanigans with 50 people inputting different code all at once)
+
+		if(length(viewingcode))
+			// This piece of code is very important - it escapes quotation marks so string aren't cut off by the input element
+			var/showcode = replacetext(storedcode, "\\\"", "\\\\\"")
+			showcode = replacetext(storedcode, "\"", "\\\"")
+
+			for(var/mob/M in viewingcode)
+
+				if( (M.machine == src && (M in view(1, src)) ) || issilicon(M))
+					winset(M, "tcscode", "is-disabled=true")
+					winset(M, "tcscode", "text=\"[showcode]\"")
+				else
+					viewingcode.Remove(M)
+					winshow(M, "Telecomms IDE", 0) // hide the window!
+
+		sleep(5)
+
+	if(length(viewingcode) > 0)
+		editingcode = pick(viewingcode)
+		viewingcode.Remove(editingcode)
+		update_ide()
 
 /obj/machinery/computer/telecomms/traffic/attack_hand(mob/user as mob)
 	. = ..()
-	tgui_interact(user)
+	interact(user)
 /obj/machinery/computer/telecomms/traffic/attack_ai(mob/user as mob)
 	. = ..()
-	tgui_interact(user)
+	interact(user)
 
-/obj/machinery/computer/telecomms/traffic/tgui_interact(mob/user, var/datum/tgui/ui)
-	ui = SStgui.try_update_ui(user, src, ui)
-	if (!ui)
-		ui = new(user, src, "TrafficControl", name)
-		ui.open()
-
-/obj/machinery/computer/telecomms/traffic/tgui_data(mob/user)
+/obj/machinery/computer/telecomms/traffic/interact(mob/user as mob)
 	if(stat & (BROKEN|NOPOWER))
 		return
 	user.set_machine(src)
-
-	var/data = list()
-	data["screen"] = screen
-	data["error"] = temp
-	data["network"] = network
+	var/dat = "<TITLE>Telecommunication Traffic Control</TITLE><center><b>Telecommunications Traffic Control</b></center>"
 
 	switch(screen)
-		if(MAIN_SCREEN)
-			var/list/found_servers = list()
-			for (var/obj/machinery/telecomms/server/server in servers)
-				found_servers += list(list("ref"=REF(server), "name"=server.name, "id"=server.id))
-			data["servers"] = found_servers
-		if(VIEW_SERVER_SCREEN)
-			data["serverName"] = SelectedServer.id
-			data["signalEx"] = SelectedServer.autoruncode
-		if(CODE_REDACTOR_SCREEN)
-			data["codeText"] = storedcode
-			var/list/errors = list()
-			for(var/scriptError/e in compileerrors)
-				errors += e.message
-			data["errors"] = errors
-	return data
 
-/obj/machinery/computer/telecomms/traffic/tgui_act(action, list/params)
-	. = ..()
-	if(.)
-		return
+
+	  // --- Main Menu ---
+
+		if(0)
+			dat += "<br>[temp]<br>"
+			dat += "<br>Current Network: <a href='?src=\ref[src];network=1'>[network]</a><br>"
+			if(servers.len)
+				dat += "<br>Detected Telecommunication Servers:<ul>"
+				for(var/obj/machinery/telecomms/T in servers)
+					dat += "<li><a href='?src=\ref[src];viewserver=[T.id]'>\ref[T] [T.name]</a> ([T.id])</li>"
+				dat += "</ul>"
+				dat += "<br><a href='?src=\ref[src];operation=release'>\[Flush Buffer\]</a>"
+
+			else
+				dat += "<br>No servers detected. Scan for servers: <a href='?src=\ref[src];operation=scan'>\[Scan\]</a>"
+
+
+	  // --- Viewing Server ---
+
+		if(1)
+			dat += "<br>[temp]<br>"
+			dat += "<center><a href='?src=\ref[src];operation=mainmenu'>\[Main Menu\]</a>     <a href='?src=\ref[src];operation=refresh'>\[Refresh\]</a></center>"
+			dat += "<br>Current Network: [network]"
+			dat += "<br>Selected Server: [SelectedServer.id]<br><br>"
+			dat += "<br><a href='?src=\ref[src];operation=editcode'>\[Edit Code\]</a>"
+			dat += "<br>Signal Execution: "
+			if(SelectedServer.autoruncode)
+				dat += "<a href='?src=\ref[src];operation=togglerun'>ALWAYS</a>"
+			else
+				dat += "<a href='?src=\ref[src];operation=togglerun'>NEVER</a>"
+
+
+	show_browser(user, dat, "window=traffic_control;size=575x400")
+	onclose(user, "server_control")
 
 	temp = ""
-	.= TRUE
+	return
+
+
+/obj/machinery/computer/telecomms/traffic/Topic(href, href_list)
+	if(..())
+		return
 
 	usr.set_machine(src)
 	if(!src.allowed(usr) && !emagged)
 		to_chat(usr, "<span class='warning'>ACCESS DENIED.</span>")
 		return
 
-	switch(action)
-		if("view_server")
-			SelectedServer = locate(params["server"])
-			if(!SelectedServer)
-				temp = "OPERATION FAILED: UNABLE TO LOCATE SERVER."
-				return
-			screen = VIEW_SERVER_SCREEN
-			return
-		if("clear_buffer")
-			servers = list()
-			network = ""
-			screen = MAIN_SCREEN
-			return
-		if("scan_network")
-			if(servers.len > 0)
-				temp = "FAILED: CANNOT PROBE WHEN BUFFER FULL"
-			else
-				network = params["network_id"]
-				for(var/obj/machinery/telecomms/server/T in range(25, src))
-					if(T.network == network)
-						servers.Add(T)
+	if(href_list["viewserver"])
+		screen = 1
+		for(var/obj/machinery/telecomms/T in servers)
+			if(T.id == href_list["viewserver"])
+				SelectedServer = T
+				break
 
-				if(!servers.len)
-					temp = "FAILED: UNABLE TO LOCATE SERVERS IN \[[network]\]"
+	if(href_list["operation"])
+		switch(href_list["operation"])
+
+			if("release")
+				servers = list()
+				screen = 0
+
+			if("mainmenu")
+				screen = 0
+
+			if("scan")
+				if(servers.len > 0)
+					temp = "<font color = #d70b00>- FAILED: CANNOT PROBE WHEN BUFFER FULL -</font>"
+
 				else
-					temp = "[servers.len] SERVERS PROBED & BUFFERED"
+					for(var/obj/machinery/telecomms/server/T in range(25, src))
+						if(T.network == network)
+							servers.Add(T)
 
-				screen = MAIN_SCREEN
-			return
-		if("return_home")
-			screen = MAIN_SCREEN
-			return
-		if("toggle_run")
-			SelectedServer.autoruncode = !(SelectedServer.autoruncode)
-			return
-		if("open_editor")
-			screen = CODE_REDACTOR_SCREEN
-			return
-		if("close")
-			screen = VIEW_SERVER_SCREEN
-			return
-		if("compile")
-			compileerrors = SelectedServer.Compiler.Compile(params["rawcode"])
-			storedcode = params["rawcode"]
-			return
-		if("purge")
-			SelectedServer.memory = list()
-			temp = "SERVER MEMORY CLEARED!"
-			return
-		if("apply")
-			SelectedServer.setcode(params["rawcode"])
-			temp = "SUCCESSFULLY UPLOADED CODE TO THE SERVER!"
-			screen = VIEW_SERVER_SCREEN
-			return
-		if("execute")
-			var/datum/signal/signal = new()
-			signal.data["message"] = ""
-			if(SelectedServer.freq_listening.len > 0)
-				signal.frequency = SelectedServer.freq_listening[1]
+					if(!servers.len)
+						temp = "<font color = #d70b00>- FAILED: UNABLE TO LOCATE SERVERS IN \[[network]\] -</font>"
+					else
+						temp = "<font color = #336699>- [servers.len] SERVERS PROBED & BUFFERED -</font>"
+
+					screen = 0
+
+			if("editcode")
+				if(editingcode == usr) return
+				if(usr in viewingcode) return
+
+				if(!editingcode)
+					lasteditor = usr
+					editingcode = usr
+					winshow(editingcode, "TelecommsIDE") // show the IDE
+					winset(editingcode, "tcscode", "is-disabled=false")
+					winset(editingcode, "tcscode", "text=\"\"")
+					var/showcode = replacetext(storedcode, "\\\"", "\\\\\"")
+					showcode = replacetext(storedcode, "\"", "\\\"")
+					winset(editingcode, "tcscode", "text=\"[showcode]\"")
+					spawn()
+						update_ide()
+
+				else
+					viewingcode.Add(usr)
+					winshow(usr, "TelecommsIDE") // show the IDE
+					winset(usr, "tcscode", "is-disabled=true")
+					winset(editingcode, "tcscode", "text=\"\"")
+					var/showcode = replacetext(storedcode, "\"", "\\\"")
+					winset(usr, "tcscode", "text=\"[showcode]\"")
+
+			if("togglerun")
+				SelectedServer.autoruncode = !(SelectedServer.autoruncode)
+
+	if(href_list["network"])
+		var/newnet = input(usr, "Which network do you want to view?", "Comm Monitor", network) as null|text
+
+		if(newnet && ((usr in range(1, src) || issilicon(usr))))
+			if(length(newnet) > 15)
+				temp = "<font color = #d70b00>- FAILED: NETWORK TAG STRING TOO LENGHTLY -</font>"
+
 			else
-				signal.frequency = PUB_FREQ
-			signal.data["name"] = ""
-			signal.data["job"] = ""
-			signal.data["reject"] = 0
-			signal.data["server"] = SelectedServer
 
-			SelectedServer.Compiler.Run(signal)
-			temp = "SUCCESSFULLY EXECUTED CODE!"
-			return
-	return
+				network = newnet
+				screen = 0
+				servers = list()
+				temp = "<font color = #336699>- NEW NETWORK TAG SET IN ADDRESS \[[network]\] -</font>"
+
+	updateUsrDialog()
+
+/*/obj/machinery/computer/telecomms/traffic/attackby(var/obj/item/D as obj, var/mob/user as mob)
+	if(isScrewdriver(D))
+		playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
+		if(do_after(user, 20, src))
+			if (src.stat & BROKEN)
+				to_chat(user, "<span class='notice'>The broken glass falls out.</span>")
+				var/obj/machinery/constructable_frame/computerframe/deconstruct/A = new frame_type(loc)
+				new /obj/item/material/shard( src.loc )
+				var/obj/item/stock_parts/circuitboard/comm_traffic/M = new /obj/item/stock_parts/circuitboard/comm_traffic( A )
+				for (var/obj/C in src)
+					C.dropInto(loc)
+				A.circuit = M
+				A.state = 3
+				A.icon_state = "3"
+				A.anchored = TRUE
+				qdel(src)
+			else
+				to_chat(user, "<span class='notice'>You disconnect the monitor.</span>")
+				var/obj/machinery/constructable_frame/computerframe/deconstruct/A = new frame_type(loc)
+				var/obj/item/stock_parts/circuitboard/comm_traffic/M = new /obj/item/stock_parts/circuitboard/comm_traffic( A )
+				for (var/obj/C in src)
+					C.dropInto(loc)
+				A.circuit = M
+				A.state = 4
+				A.icon_state = "4"
+				A.anchored = TRUE
+				qdel(src)
+	src.updateUsrDialog()
+	return*/
 
 /obj/machinery/computer/telecomms/traffic/emag_act(var/remaining_charges, var/mob/user)
 	if(!emagged)
@@ -155,7 +244,3 @@
 		to_chat(user, "<span class='notice'>You you disable the security protocols</span>")
 		src.updateUsrDialog()
 		return 1
-
-
-#undef MAIN_SCREEN
-#undef VIEW_SERVER_SCREEN
