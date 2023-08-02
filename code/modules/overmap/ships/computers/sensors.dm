@@ -66,14 +66,18 @@
 	return TRUE
 
 /obj/machinery/computer/ship/sensors/tgui_interact(mob/user, datum/tgui/ui)
+	if(!linked)
+		display_reconnect_dialog(user, "sensors")
+		return
+
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "ShipSensors", "Sensors Control")
+		ui = new(user, src, "ShipSensors", "[linked.name] Sensors Control") // 420, 530
 		ui.open()
 
 /obj/machinery/computer/ship/sensors/tgui_data(mob/user)
 	var/data = list()
-	data["linked"] = linked
+
 	data["sensors"] = !!sensors
 	data["viewing"] = viewing_overmap(user)
 	var/mob/living/silicon/silicon = user

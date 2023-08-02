@@ -131,33 +131,14 @@ obj/machinery/computer/ship/disperser/proc/is_valid_setup()
 	var/obj/structure/closet/C = locate() in get_turf(back)
 	return C
 
-/obj/machinery/computer/ship/disperser/interface_interact(mob/user)
-	tgui_interact(user)
-	return TRUE
-
-/obj/machinery/computer/ship/disperser/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
+/obj/machinery/computer/ship/disperser/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = TRUE)
 	if(!linked)
 		display_reconnect_dialog(user, "disperser synchronization")
 		return
-	ui = SStgui.try_update_ui(user, src, ui)
-	if(!ui)
-		ui = new(user, src, "OFDControl", "[linked.name] OFD control") // 400, 550
-		ui.open()
 
-/obj/machinery/computer/ship/disperser/tgui_data(mob/user)
-	var/list/data = list()
-	data["faillink"] = FALSE
-	data["calibration"] = null
-	data["overmapdir"] = null
-	data["cal_accuracy"] = 0
-	data["strength"] = 0
-	data["range"] = 0
-	data["next_shot"] = -1
-	data["nopower"] = TRUE
-	data["skill"] = FALSE
-	data["chargeload"] = null
+	var/data[0]
 
-	if(!link_parts())
+	if (!link_parts())
 		data["faillink"] = TRUE
 	else
 		data["calibration"] = calibration
@@ -169,10 +150,10 @@ obj/machinery/computer/ship/disperser/proc/is_valid_setup()
 		data["nopower"] = !data["faillink"] && (!front.powered() || !middle.powered() || !back.powered())
 		data["skill"] = user.get_skill_value(core_skill) > skill_offset
 
-		var/charge = "UNKNOWN ERROR"
+		var/charge = SPAN_BOLD("UNKNOWN ERROR")
 		switch(get_charge_type())
 			if(OVERMAP_WEAKNESS_NONE)
-				charge = "ERROR: No valid charge detected."
+				charge = "[SPAN_BOLD("ERROR")]: No valid charge detected."
 			if(OVERMAP_WEAKNESS_DROPPOD)
 				charge = "HERMES"
 			else
@@ -180,52 +161,48 @@ obj/machinery/computer/ship/disperser/proc/is_valid_setup()
 				charge = B.chargedesc
 		data["chargeload"] = charge
 
-	return data;
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, "disperser.tmpl", "[linked.name] obstruction field disperser control", 400, 550)
+		ui.set_initial_data(data)
+		ui.open()
+		ui.set_auto_update(1)
 
-/obj/machinery/computer/ship/disperser/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
+/obj/machinery/computer/ship/disperser/OnTopic(mob/user, list/href_list, state)
 	. = ..()
-	UI_ACT_CHECK
+	if(.)
+		return
 
 	if(!linked)
 		return TOPIC_HANDLED
 
-	switch(action)
-		if("choose")
-			overmapdir = sanitize_integer(text2num(params["dir"]), 0, 9, 0)
-			reset_calibration()
-			. = TRUE
+	if (href_list["choose"])
+		overmapdir = sanitize_integer(text2num(href_list["choose"]), 0, 9, 0)
+		reset_calibration()
 
-		if("calibration")
-			var/input = input("0-9", "disperser calibration", 0) as num|null
-			if(!isnull(input)) //can be zero so we explicitly check for null
-				var/calnum = sanitize_integer(text2num(params["calibration"]), 0, caldigit)//sanitiiiiize
-				calibration[calnum + 1] = sanitize_integer(input, 0, 9, 0)//must add 1 because js indexes from 0
-			. = TRUE
+	if(href_list["calibration"])
+		var/input = input("0-9", "disperser calibration", 0) as num|null
+		if(!isnull(input)) //can be zero so we explicitly check for null
+			var/calnum = sanitize_integer(text2num(href_list["calibration"]), 0, caldigit)//sanitiiiiize
+			calibration[calnum + 1] = sanitize_integer(input, 0, 9, 0)//must add 1 because nanoui indexes from 0
 
-		if("skill_calibration")
-			for(var/i = 1 to min(caldigit, usr.get_skill_value(core_skill) - skill_offset))
-				calibration[i] = calexpected[i]
-			. = TRUE
+	if(href_list["skill_calibration"])
+		for(var/i = 1 to min(caldigit, user.get_skill_value(core_skill) - skill_offset))
+			calibration[i] = calexpected[i]
 
-		if("strength")
-			var/input = input("1-5", "disperser strength", 1) as num|null
-			if(input && tgui_status(usr, state) == STATUS_INTERACTIVE)
-				strength = sanitize_integer(input, 1, 5, 1)
-				middle.idle_power_usage = strength * range * 100
-			. = TRUE
+	if(href_list["strength"])
+		var/input = input("1-5", "disperser strength", 1) as num|null
+		if(input && CanInteract(user, state))
+			strength = sanitize_integer(input, 1, 5, 1)
+			middle.idle_power_usage = strength * range * 100
 
-		if("range")
-			var/input = input("1-5", "disperser radius", 1) as num|null
-			if(input && tgui_status(usr, state) == STATUS_INTERACTIVE)
-				range = sanitize_integer(input, 1, 5, 1)
-				middle.idle_power_usage = strength * range * 100
-			. = TRUE
+	if(href_list["range"])
+		var/input = input("1-5", "disperser radius", 1) as num|null
+		if(input && CanInteract(user, state))
+			range = sanitize_integer(input, 1, 5, 1)
+			middle.idle_power_usage = strength * range * 100
 
-		if("fire")
-			fire(usr)
-			. = TRUE
-
-	if(. && !issilicon(usr))
-		playsound(src, "terminal_type", 50, 1)
+	if(href_list["fire"])
+		fire(user)
 
 	return TOPIC_REFRESH

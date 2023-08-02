@@ -30,7 +30,6 @@
 	var/data = list()
 	var/mob/living/silicon/silicon = user
 	data["viewing_silicon"] = ismachinerestricted(silicon)
-	data["linked"] = linked
 	data["global_state"] = linked.engines_state
 	data["global_limit"] = round(linked.thrust_limit*100)
 	var/total_thrust = 0
@@ -53,7 +52,9 @@
 	return data
 
 /obj/machinery/computer/ship/engines/tgui_act(action, list/params)
-	UI_ACT_CHECK
+	. = ..()
+	if(.)
+		return
 
 	.=TRUE
 	add_fingerprint(usr)
@@ -92,9 +93,6 @@
 			var/datum/ship_engine/E = locate(params["ref"])
 			if(istype(E))
 				E.toggle()
-			return TOPIC_REFRESH
-		if("sync")
-			sync_linked(usr)
 			return TOPIC_REFRESH
 
 	return TOPIC_NOACTION
