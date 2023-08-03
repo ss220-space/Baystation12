@@ -63,7 +63,7 @@
 		/datum/job/iaa, /datum/job/adjutant,
 		/datum/job/exploration_leader, /datum/job/explorer, /datum/job/explorer_pilot, /datum/job/explorer_medic, /datum/job/explorer_engineer,
 		/datum/job/senior_engineer, /datum/job/engineer, /datum/job/infsys, /datum/job/engineer_trainee,
-		/datum/job/warden, /datum/job/detective, /datum/job/officer, /datum/job/security_assistant,
+		/datum/job/warden, /datum/job/detective, /datum/job/officer,
 		/datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_trainee, /datum/job/chemist,
 		/datum/job/qm, /datum/job/cargo_tech,  /datum/job/cargo_assistant, /datum/job/mining,
 		/datum/job/janitor, /datum/job/chef, /datum/job/bartender,
@@ -73,7 +73,7 @@
 		/datum/job/submap/bearcat_captain, /datum/job/submap/bearcat_crewman,
 		/datum/job/submap/CTI_pilot, /datum/job/submap/CTI_engineer,
 		/datum/job/submap/colonist, /datum/job/submap/colonist2,
-		/obj/effect/submap_landmark/spawnpoint/away_patrol/surgeon, /obj/effect/submap_landmark/spawnpoint/away_patrol/engineer,
+		/datum/job/submap/patrol/surgeon, /datum/job/submap/patrol/engineer,
 		/datum/job/submap/yachtman)
 
 /decl/cultural_info/culture/ipc/third/privt
