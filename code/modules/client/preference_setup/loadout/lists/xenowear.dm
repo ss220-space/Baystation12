@@ -31,11 +31,6 @@
 	path = /obj/item/clothing/under/medic/paramedic
 	cost = 1
 	slot = slot_w_uniform
-/datum/gear/suit/unathi/unathi_work
-	display_name = "(Unathi) sturdy uniform"
-	path = /obj/item/clothing/under/unathi_work
-	cost = 1
-	slot = slot_w_uniform
 /datum/gear/suit/unathi/security_cap
 	display_name = "(Unathi) big security cap"
 	path = /obj/item/clothing/head/cap/sec
@@ -47,17 +42,6 @@
 	path = /obj/item/clothing/head/cap/desert
 	cost = 1
 	slot = slot_head
-
-/datum/gear/suit/unathi/desert_shoes
-	display_name = "(Unathi) large duty boots"
-	path = /obj/item/clothing/shoes/desert
-	cost = 1
-	slot = slot_shoes
-/datum/gear/suit/unathi/security_shoes
-	display_name = "(Unathi) security shoes"
-	path = /obj/item/clothing/shoes/security
-	cost = 1
-	slot = slot_shoes
 
 /datum/gear/suit/unathi/footwraps
 	display_name = "(Unathi) big footwraps"

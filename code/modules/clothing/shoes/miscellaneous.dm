@@ -120,46 +120,6 @@
 	can_add_hidden_item = FALSE
 	can_add_cuffs = FALSE
 
-/obj/item/clothing/shoes/security
-	desc = "A sturdy pair of unathi jackboots. Designed to stomp your opponents more brutally. This ones also provide a bit more protection than regular unathi boots as if unathi ever needed that. They are too big to fit anyone, but unathi."
-	name = "large jackboots"
-	icon_state = "unathi_jackboots"
-	item_state = "unathi_jackboots"
-	species_restricted  = list(SPECIES_UNATHI)
-	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
-		rad = ARMOR_RAD_MINOR
-	)
-	siemens_coefficient = 0.7
-	gas_transfer_coefficient = 0.90
-	permeability_coefficient = 0.50
-	body_parts_covered = FEET
-	heat_protection = FEET
-	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
-	max_pressure_protection = FIRESUIT_MAX_PRESSURE
-
-/obj/item/clothing/shoes/desert
-	desc = "A sturdy pair of unathi boots. Designed to keep moisture and dust out. Unathi travellers use them to traverse Salt Swamps and Diamond Peaks and keep their paws undamaged, but they are quite uncomfortable to wear. They are too big to fit anyone, but unathi."
-	name = "large duty boots"
-	icon_state = "unathi_desertboots"
-	item_state = "unathi_desertboots"
-	species_restricted  = list(SPECIES_UNATHI)
-	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
-		rad = ARMOR_RAD_MINOR
-	)
-	siemens_coefficient = 0.7
-	gas_transfer_coefficient = 0.90
-	permeability_coefficient = 0.50
-	body_parts_covered = FEET
-	heat_protection = FEET
-	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
-	max_pressure_protection = FIRESUIT_MAX_PRESSURE
-
 /obj/item/clothing/shoes/unathi/footwraps
 	name = "big footwraps"
 	desc = "A large roll of treated canvas used to protect paws."

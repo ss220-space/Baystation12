@@ -785,16 +785,6 @@
     worn_state = "unathi_paramedic"
     //rolled_sleeves = 0
 
-/obj/item/clothing/under/unathi_work
-    name = "sturdy uniform"
-    desc = "A large uniform made of sturdy canvas with leather harness for industrial environment. It's too big to fit anyone, but unathi."
-    species_restricted  = list(SPECIES_UNATHI)
-    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
-    icon_state = "unathi_work"
-    item_state = "unathi_work"
-    worn_state = "unathi_work"
-    //rolled_sleeves = 0
-
 /obj/item/clothing/under/inf
 	name = "antiquated skirt"
 	desc = "Some really old fashioned skirt. Presumably a piece of Avalonian craftsmanship."
