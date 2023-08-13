@@ -1,3 +1,4 @@
+/*
 /datum/sprite_accessory/hair/una
 	name = "Demon Horns"
 	icon = 'icons/mob/human_races/species/unathi/hair.dmi'
@@ -29,7 +30,7 @@
 /datum/sprite_accessory/hair/una/curveup
 	name = "Upward Curved Horns"
 	icon_state = "curved_up"
-
+*/
 //// Unathi Tatoos
 
 /datum/sprite_accessory/marking/unathi
