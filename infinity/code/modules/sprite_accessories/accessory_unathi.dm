@@ -1,85 +1,99 @@
 /datum/sprite_accessory/hair/una
-	name = "Horns"
-	icon = 'icons/mob/human_races/species/unathi/hair_infinity.dmi'
-	icon_state = "horns"
+	name = "Demon Horns"
+	icon = 'icons/mob/human_races/species/unathi/hair.dmi'
+	icon_state = "demon_horn"
 	blend = ICON_MULTIPLY
 	species_allowed = list(SPECIES_UNATHI)
 
-/datum/sprite_accessory/hair/una/hood
-	name = "Cobra Hood"
-	icon_state = "cobrahood"
 
 /datum/sprite_accessory/hair/una/spines_long
-	name = "Spines Long"
-	icon_state = "spines_long"
+	name = "Long Unathi Spines"
+	icon_state = "soghun_longspines"
+
 
 /datum/sprite_accessory/hair/una/spines_short
-	name = "Spines Short"
-	icon_state = "spines_short"
+	name = "Short Unathi Spines"
+	icon_state = "soghun_shortspines"
 
-/datum/sprite_accessory/hair/una/frills_aqua
-	name = "Frills Aqua"
-	icon_state = "frills_aqua"
 
 /datum/sprite_accessory/hair/una/frills_long
-	name = "Frills Long"
-	icon_state = "frills_long"
+	name = "Long Unathi Frills"
+	icon_state = "soghun_longfrills"
+
+
+/datum/sprite_accessory/hair/una/frills_medium
+	name = "Unathi Frills"
+	icon_state = "frills"
+
+
+/datum/sprite_accessory/hair/una/frills_water
+	name = "Aquatic Frills"
+	icon_state = "aquatic_frills"
+
 
 /datum/sprite_accessory/hair/una/frills_short
-	name = "Frills Short"
-	icon_state = "frills_short"
+	name = "Short Unathi Frills"
+	icon_state = "soghun_shortfrills"
 
-/datum/sprite_accessory/hair/una/sidefrills
-	name = "Frills Side"
-	icon_state = "frills_side"
 
-/datum/sprite_accessory/hair/una/bighorns
-	name = "Horns Big"
-	icon_state = "horns_big"
+/datum/sprite_accessory/hair/una/horns
+	name = "Unathi Horns"
+	icon_state = "soghun_horns"
 
-/datum/sprite_accessory/hair/una/demon
-	name = "Horns Demonic"
-	icon_state = "horns_demon"
 
-/datum/sprite_accessory/hair/una/swept
-	name = "Horns Swept"
-	icon_state = "horns_swept"
+/datum/sprite_accessory/hair/una/swept_horn
+	name = "Swept Horns"
+	icon_state = "swept_horn"
 
-/datum/sprite_accessory/hair/una/smallhorns
-	name = "Horns Small"
-	icon_state = "horns_small"
 
-/datum/sprite_accessory/hair/una/shorthorns
-	name = "Horns Short"
-	icon_state = "horns_short"
+/datum/sprite_accessory/hair/una/ram_horn
+	name = "Ram Horns"
+	icon_state = "ram_horn"
 
-/datum/sprite_accessory/hair/una/curledhorns
-	name = "Horns Curled"
-	icon_state = "horns_curled"
 
-/datum/sprite_accessory/hair/una/ramhorns
-	name = "Horns Ram"
-	icon_state = "horns_ram"
+/datum/sprite_accessory/hair/una/fin_hawk
+	name = "Fin Hawk"
+	icon_state = "fin_hawk"
 
-/datum/sprite_accessory/hair/una/ramhornsthick
-	name = "Horns Ram Thick"
-	icon_state = "horns_ram_thick"
 
-/datum/sprite_accessory/hair/una/ramhornsbig
-	name = "Horns Ram Big"
-	icon_state = "horns_ram_big"
+/datum/sprite_accessory/hair/una/exotic
+	name = "Exotic Frills"
+	icon_state = "big_frills"
 
-/datum/sprite_accessory/hair/una/doublehorns
-	name = "Horns Double"
-	icon_state = "horns_double"
 
-/datum/sprite_accessory/hair/una/spinedfrillslong
-	name = "Spined Long Frills"
-	icon_state = "spined_long_frills"
+/datum/sprite_accessory/hair/una/curvedown
+	name = "Downward Curved Horns"
+	icon_state = "curved_down"
 
-/datum/sprite_accessory/hair/una/spinedfrillsshort
-	name = "Spined Short Frills"
-	icon_state = "spined_short_frills"
+
+/datum/sprite_accessory/hair/una/curveup
+	name = "Upward Curved Horns"
+	icon_state = "curved_up"
+
+
+/datum/sprite_accessory/hair/una/sam
+	name = "Inwardly Curved Horns"
+	icon_state = "samurai"
+
+
+/datum/sprite_accessory/hair/una/imp
+	name = "Regal Horns"
+	icon_state = "imperial"
+
+
+/datum/sprite_accessory/hair/una/spikes_norm
+	name = "Head Spikes"
+	icon_state = "head_spikes"
+
+
+/datum/sprite_accessory/hair/una/spikes_thicc
+	name = "Thick Head Spikes"
+	icon_state = "overgrown_head_spikes"
+
+
+/datum/sprite_accessory/hair/una/quad
+	name = "Four Horns"
+	icon_state = "double_horns"
 
 // FACIAL
 
