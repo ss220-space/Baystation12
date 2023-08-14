@@ -18,7 +18,7 @@
 
 /datum/sprite_accessory/hair/una/frills_long
 	name = "Long Unathi Frills"
-	icon_state = "soghun_longfrills"
+	icon_state = "spined_long_frills"
 
 
 /datum/sprite_accessory/hair/una/frills_medium
@@ -33,7 +33,7 @@
 
 /datum/sprite_accessory/hair/una/frills_short
 	name = "Short Unathi Frills"
-	icon_state = "soghun_shortfrills"
+	icon_state = "spined_short_frills"
 
 
 /datum/sprite_accessory/hair/una/horns
