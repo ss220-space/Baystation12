@@ -170,10 +170,10 @@ What is the naming convention for planes or layers?
 	#define LIGHTING_LAYER         1
 	#define ABOVE_LIGHTING_LAYER   2
 
-#define EFFECTS_ABOVE_LIGHTING_PLANE   2 // For glowy eyes, laser beams, etc. that shouldn't be affected by darkness
+#define EFFECTS_ABOVE_LIGHTING_PLANE   3 // For glowy eyes, laser beams, etc. that shouldn't be affected by darkness
 	#define EYE_GLOW_LAYER         0.5
 	#define BEAM_PROJECTILE_LAYER  2
-	#define SUPERMATTER_WALL_LAYER 2
+	#define SUPERMATTER_WALL_LAYER 3
 
 #define FULLSCREEN_PLANE                4 // for fullscreen overlays that do not cover the hud.
 
