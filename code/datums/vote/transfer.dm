@@ -1,27 +1,23 @@
 #define CHOICE_TRANSFER "Initiate crew transfer"
-#define CHOICE_EXTEND "Extend the round" /*([config.vote_autotransfer_interval / 600] minutes)"*/
+#define CHOICE_EXTEND "Extend the round ([config.vote_autotransfer_interval / 600] minutes)"
 #define CHOICE_ADD_ANTAG "Add antagonist"
 
 /datum/vote/transfer
 	name = "transfer"
 	question = "End the shift?"
-	var/next_vote = 121 MINUTE // 120 minute in game + 1 minute in lobby
-	var/allow_vote_transfer = TRUE
 
 /datum/vote/transfer/can_run(mob/creator, automatic)
 	if(!(. = ..()))
 		return
 	if(!evacuation_controller || !evacuation_controller.should_call_autotransfer_vote())
 		return FALSE
-	if(!automatic && !allow_vote_transfer && !isadmin(creator)) /*&& !config.allow_vote_restart*/
+	if(!automatic && !config.allow_vote_restart && !isadmin(creator))
 		return FALSE // Admins and autovotes bypass the config setting.
 	if(check_rights(R_INVESTIGATE, 0, creator))
 		return //Mods bypass further checks.
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 	if (!automatic && security_state.current_security_level_is_same_or_higher_than(security_state.high_security_level))
 		to_chat(creator, "The current alert status is too high to call for a crew transfer!")
-		return FALSE
-	if(next_vote > world.time)
 		return FALSE
 	if(GAME_STATE <= RUNLEVEL_SETUP)
 		to_chat(creator, "The crew transfer button has been disabled!")
@@ -53,13 +49,11 @@
 
 /datum/vote/transfer/report_result()
 	if(..())
-		next_vote = start_time + (config.vote_autotransfer_interval / 600)
 		return 1
 	if(result[1] == CHOICE_TRANSFER)
 		init_autotransfer()
 	else if(result[1] == CHOICE_ADD_ANTAG)
 		SSvote.queued_auto_vote = /datum/vote/add_antagonist
-		next_vote = start_time + (config.vote_autotransfer_interval / 600)
 
 /datum/vote/transfer/mob_not_participating(mob/user)
 	if((. = ..()))
@@ -68,11 +62,11 @@
 		return !isliving(user) || ismouse(user) || is_drone(user)
 
 /datum/vote/transfer/check_toggle()
-	return allow_vote_transfer ? "Allowed" : "Disallowed"
+	return config.allow_vote_restart ? "Allowed" : "Disallowed"
 
 /datum/vote/transfer/toggle(mob/user)
 	if(isadmin(user))
-		allow_vote_transfer = !allow_vote_transfer
+		config.allow_vote_restart = !config.allow_vote_restart
 
 #undef CHOICE_TRANSFER
 #undef CHOICE_EXTEND
