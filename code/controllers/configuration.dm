@@ -37,6 +37,7 @@ var/list/gamemode_cache = list()
 	var/allow_vote_restart = 0 			// allow votes to restart
 	var/ert_admin_call_only = 0
 	var/allow_vote_mode = 0				// allow votes to change mode
+	var/allow_vote_manual_transfer = 0	// allow votes to transfer manually
 	var/allow_admin_jump = 1			// allows admin jumping
 	var/allow_admin_spawning = 1		// allows admin item spawning
 	var/allow_admin_rev = 1				// allows admin revives
@@ -44,6 +45,7 @@ var/list/gamemode_cache = list()
 	var/vote_period = 600				// length of voting period (deciseconds, default 1 minute)
 	var/vote_autotransfer_initial = 120 MINUTES // Length of time before the first autotransfer vote is called
 	var/vote_autotransfer_interval = 30 MINUTES // length of time before next sequential autotransfer vote
+	var/vote_manual_transfer_initial = 120 MINUTES // Length of time before the first manual transfer vote could be called
 	var/vote_autogamemode_timeleft = 100 //Length of time before round start when autogamemode vote is called (in seconds, default 100).
 	var/vote_no_default = 0				// vote does not default to nochange/norestart (tbi)
 	var/vote_no_dead = 0				// dead people can't vote (tbi)
@@ -388,6 +390,9 @@ var/list/gamemode_cache = list()
 				if ("allow_vote_mode")
 					config.allow_vote_mode = 1
 
+				if ("allow_vote_manual_transfer")
+					config.allow_vote_manual_transfer = 1
+
 				if ("allow_admin_jump")
 					config.allow_admin_jump = 1
 
@@ -431,6 +436,9 @@ var/list/gamemode_cache = list()
 						config.vote_autotransfer_interval = text2num(value) MINUTES
 					else
 						log_misc("Invalid vote_autotransfer_interval: [value]")
+
+				if ("vote_manual_transfer_initial")
+					config.vote_manual_transfer_initial = text2num(value) MINUTES
 
 				if ("vote_autogamemode_timeleft")
 					config.vote_autogamemode_timeleft = text2num(value)
