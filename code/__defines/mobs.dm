@@ -202,6 +202,7 @@
 #define BP_PLASMA   "plasma vessel"
 #define BP_APPENDIX "appendix"
 #define BP_CELL     "cell"
+#define BP_COOLING  "cooling system"
 #define BP_HIVE     "hive node"
 #define BP_LARVA    "alien larva" //INF
 #define BP_MIMIC    "mimic sac" //INF

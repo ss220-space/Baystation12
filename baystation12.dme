@@ -2628,6 +2628,7 @@
 #include "code\modules\organs\internal\_internal.dm"
 #include "code\modules\organs\internal\appendix.dm"
 #include "code\modules\organs\internal\brain.dm"
+#include "code\modules\organs\internal\cooling_system.dm"
 #include "code\modules\organs\internal\eyes.dm"
 #include "code\modules\organs\internal\heart.dm"
 #include "code\modules\organs\internal\kidneys.dm"
