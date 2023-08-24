@@ -142,7 +142,7 @@ var/list/ghost_traps
 	list_as_special_role = TRUE
 
 /datum/ghosttrap/positronic/welcome_candidate(mob/target)
-	to_chat(target, SPAN_BOLD("You are a positronic brain, activated on [station_name()]."))
+	to_chat(target, SPAN_BOLD("You are a robo brain, activated on [station_name()]."))
 	to_chat(target, "As a newborn synthetic intelligence, you answer to everyone, including the AI.")
 	to_chat(target, "Remember, the purpose of your existence is to learn and serve the one who activated you.")
 	to_chat(target, "Use say [target.get_language_prefix()]b to speak to other artificial intelligences.\n")

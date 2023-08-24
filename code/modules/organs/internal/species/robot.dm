@@ -1,9 +1,9 @@
-	//Decided to separate borg and IPC brains. Too many string for borg brains, so they'll keep name positronic brain in code for less debugging, but not in lore.
-/obj/item/organ/internal/ipcbrain
-	name = "IPC brain"
-	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves."
-	icon = 'icons/obj/assemblies.dmi'
-	icon_state = "posibrain"
+//Decided to separate borg and IPC brains. Too many string for borg brains, so they'll keep name positronic brain in code for less debugging, but not in lore.
+/obj/item/organ/internal/posibrain
+	name = "borg brain"
+	desc = "Round sphere, 5 inches in diameter, plated. Wires leading from it."
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "brain-prosthetic"
 	organ_tag = BP_POSIBRAIN
 	parent_organ = BP_CHEST
 	status = ORGAN_ROBOTIC
@@ -13,32 +13,31 @@
 	throwforce = 1.0
 	throw_speed = 3
 	throw_range = 5
-	origin_tech = list(TECH_ENGINEERING = 6, TECH_MATERIAL = 4, TECH_BLUESPACE = 2, TECH_DATA = 6)
+	origin_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2,  TECH_DATA = 3)
 	attack_verb = list("attacked", "slapped", "whacked")
 	max_damage = 90
 	min_bruised_damage = 30
 	min_broken_damage = 60
 	relative_size = 60
-	var/mob/living/silicon/sil_brainmob/ipc/brainmob = null
+
+	var/mob/living/silicon/sil_brainmob/borg/brainmob = null
+
+	var/searching = TIMER_ID_NULL
+	var/last_search = 0
+
 	req_access = list(access_robotics)
 
-	var/list/shackled_verbs = list(
-		/obj/item/organ/internal/posibrain/proc/show_laws_brain,
-		/obj/item/organ/internal/posibrain/proc/brain_checklaws
-		)
-	var/shackle = 0
 
-/obj/item/organ/internal/ipcbrain/New(var/mob/living/carbon/H)
+/obj/item/organ/internal/posibrain/New(var/mob/living/carbon/H)
 	..()
 	if(!brainmob && H)
 		init(H)
 	robotize()
-	unshackle()
 	update_icon()
 	if (!is_processing)
 		START_PROCESSING(SSobj, src)
 
-/obj/item/organ/internal/ipcbrain/proc/init(var/mob/living/carbon/H)
+/obj/item/organ/internal/posibrain/proc/init(var/mob/living/carbon/H)
 	brainmob = new(src)
 
 	if(istype(H))
@@ -47,11 +46,11 @@
 		brainmob.dna = H.dna.Clone()
 		brainmob.add_language(LANGUAGE_EAL)
 
-/obj/item/organ/internal/ipcbrain/Destroy()
+/obj/item/organ/internal/posibrain/Destroy()
 	QDEL_NULL(brainmob)
 	return ..()
 
-/obj/item/organ/internal/ipcbrain/attack_self(mob/user)
+/obj/item/organ/internal/posibrain/attack_self(mob/user)
 	if (!user.IsAdvancedToolUser())
 		return
 	if (user.skill_check(SKILL_DEVICES, SKILL_ADEPT))
@@ -61,8 +60,80 @@
 		if (damage)
 			to_chat(user, SPAN_WARNING("\The [src] is damaged and requires repair first."))
 			return
+		if (searching != TIMER_ID_NULL)
+			visible_message("\The [user] flicks the activation switch on \the [src]. The lights go dark.", range = 3)
+			cancel_search()
+			return
+		start_search(user)
+	else
+		if ((status & ORGAN_DEAD) || !brainmob || damage || (searching != TIMER_ID_NULL))
+			to_chat(user, SPAN_WARNING("\The [src] doesn't respond to your pokes and prods."))
+			return
+		start_search(user)
 
-/obj/item/organ/internal/ipcbrain/examine(mob/user, distance)
+/obj/item/organ/internal/posibrain/proc/start_search(mob/user)
+	if (!brainmob)
+		return
+	if (user)
+		if ((world.time - last_search) < (30 SECONDS))
+			to_chat(user, SPAN_WARNING("\The [src] doesn't react; wait a few seconds before trying again."))
+			return
+		last_search = world.time
+		if (brainmob && brainmob.key)
+			var/murder = alert(user, "\The [src] already has a mind! Are you sure? This is probably murder.", "Commit Robocide?", "Yes", "No")
+			if (murder == "No")
+				return
+		visible_message("\The [user] flicks the activation switch on \the [src].", range = 3)
+	var/has_mind = brainmob && brainmob.key && brainmob.mind
+	var/protected = has_mind && brainmob.mind.special_role
+	if (has_mind)
+		var/actor = user ? "\The [user]" : "Your brain"
+		var/sneaky = protected ? "However, you are beyond such things." : "This might be the end!"
+		to_chat(brainmob, SPAN_WARNING("[actor] is trying to overwrite you! [sneaky]"))
+	if (!protected)
+		var/datum/ghosttrap/T = get_ghost_trap("positronic brain")
+		T.request_player(brainmob, "Someone is requesting a personality for a borg brain.", 60 SECONDS)
+	searching = addtimer(CALLBACK(src, .proc/cancel_search), 60 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
+	icon_state = "brain-prosthetic-searching"
+
+/obj/item/organ/internal/posibrain/proc/cancel_search()
+	visible_message(SPAN_ITALIC("\The [src] buzzes quietly and returns to an idle state."), range = 3)
+	if (searching != TIMER_ID_NULL)
+		deltimer(searching)
+	searching = TIMER_ID_NULL
+	if (brainmob && brainmob.key)
+		if (brainmob.mind && brainmob.mind.special_role)
+			var/sneaky = sanitizeSafe(input(brainmob, "You're safe. Pick a new name as cover? Leave blank to skip.", "Get Sneaky?", brainmob.real_name) as text, MAX_NAME_LEN)
+			if (sneaky)
+				brainmob.real_name = sneaky
+				brainmob.SetName(brainmob.real_name)
+				UpdateNames()
+		else
+			to_chat(brainmob, SPAN_NOTICE("You're safe! Your brain didn't manage to replace you. This time."))
+	else
+		icon_state = "brain-prosthetic"
+	update_icon()
+
+/obj/item/organ/internal/posibrain/attack_ghost(mob/observer/ghost/user)
+	if (searching == TIMER_ID_NULL)
+		return
+	if (!brainmob)
+		return
+	if (brainmob.mind && brainmob.mind.special_role)
+		return
+	var/datum/ghosttrap/T = get_ghost_trap("positronic brain")
+	if (!T.assess_candidate(user))
+		return
+	var/possess = alert(user, "Do you wish to become \the [src]?", "Become [src]?", "Yes", "No")
+	if (possess != "Yes")
+		return
+	if (brainmob.key)
+		to_chat(brainmob, SPAN_DANGER("Your thoughts shatter into nothingness, quickly subsumed by a new identity. \"You\" have died."))
+		var/mob/observer/ghost/G = brainmob.ghostize(FALSE)
+		G.timeofdeath = world.time
+	T.transfer_personality(user, brainmob)
+
+/obj/item/organ/internal/posibrain/examine(mob/user, distance)
 	. = ..()
 	if (distance > 3)
 		return
@@ -86,6 +157,8 @@
 					msg += SPAN_ITALIC(" The responsiveness fault indicator is lit.")
 			else if (damage)
 				msg += SPAN_ITALIC("The red integrity fault indicator pulses slowly.")
+			else
+				msg += SPAN_ITALIC("The blue ready indicator [searching != TIMER_ID_NULL ? "flickers quickly as it tries to generate a personality" : "pulses lazily"].")
 	else
 		if ((status & ORGAN_DEAD) || damage > min_broken_damage)
 			msg += SPAN_ITALIC("It looks wrecked.")
@@ -99,41 +172,27 @@
 			else
 				if (damage)
 					msg += SPAN_ITALIC("A lone red light pulses malevolently on its surface.")
+				else
+					msg += SPAN_ITALIC("A lone blue light [searching != TIMER_ID_NULL ? "flickers quickly" : "pulses lazily"].")
 	if (msg)
 		to_chat(user, msg)
 
-/obj/item/organ/internal/ipcbrain/emp_act(severity)
+/obj/item/organ/internal/posibrain/emp_act(severity)
 	damage += rand(15 - severity * 5, 20 - severity * 5)
 	..()
 
-/obj/item/organ/internal/ipcbrain/proc/PickName()
+/obj/item/organ/internal/posibrain/proc/PickName()
 	src.brainmob.SetName("[pick(list("PBU","HIU","SINA","ARMA","OSI"))]-[random_id(type,100,999)]")
 	src.brainmob.real_name = src.brainmob.name
 
-/obj/item/organ/internal/ipcbrain/proc/shackle(var/given_lawset)
-	if(given_lawset)
-		brainmob.laws = given_lawset
-	shackle = 1
-	verbs |= shackled_verbs
-	update_icon()
-	return 1
 
-/obj/item/organ/internal/ipcbrain/proc/unshackle()
-	shackle = 0
-	verbs -= shackled_verbs
-	update_icon()
-
-/obj/item/organ/internal/ipcbrain/on_update_icon()
+/obj/item/organ/internal/posibrain/on_update_icon()
 	if(src.brainmob && src.brainmob.key)
-		icon_state = "posibrain-occupied"
+		icon_state = "brain-prosthetic-occupied"
 	else
-		icon_state = "posibrain"
+		icon_state = "brain-prosthetic"
 
-	overlays.Cut()
-	if(shackle)
-		overlays |= image('icons/obj/assemblies.dmi', "posibrain-shackles")
-
-/obj/item/organ/internal/ipcbrain/proc/transfer_identity(var/mob/living/carbon/H)
+/obj/item/organ/internal/posibrain/proc/transfer_identity(var/mob/living/carbon/H)
 	if(H && H.mind)
 		brainmob.set_stat(CONSCIOUS)
 		H.mind.transfer_to(brainmob)
@@ -147,11 +206,11 @@
 	to_chat(brainmob, "<span class='notice'>You feel slightly disoriented. That's normal when you're just \a [initial(src.name)].</span>")
 	callHook("debrain", list(brainmob))
 
-/obj/item/organ/internal/ipcbrain/Process()
+/obj/item/organ/internal/posibrain/Process()
 	handle_damage_effects()
 	..()
 
-/obj/item/organ/internal/ipcbrain/proc/handle_damage_effects()
+/obj/item/organ/internal/posibrain/proc/handle_damage_effects()
 	if (!owner || owner.stat)
 		return
 	if (damage > min_bruised_damage)
@@ -188,7 +247,7 @@
 					S.start()
 
 
-/obj/item/organ/internal/ipcbrain/removed(var/mob/living/user)
+/obj/item/organ/internal/posibrain/removed(var/mob/living/user)
 	if(!istype(owner))
 		return ..()
 	UpdateNames()
@@ -197,7 +256,7 @@
 	if (!is_processing && !(status & ORGAN_DEAD))
 		START_PROCESSING(SSobj, src)
 
-/obj/item/organ/internal/ipcbrain/proc/UpdateNames()
+/obj/item/organ/internal/posibrain/proc/UpdateNames()
 	var/new_name = owner ? owner.real_name : (brainmob ? brainmob.real_name : "")
 	if (new_name)
 		if (brainmob)
@@ -206,7 +265,7 @@
 		return
 	SetName("\the [initial(name)]")
 
-/obj/item/organ/internal/ipcbrain/replaced(var/mob/living/target)
+/obj/item/organ/internal/posibrain/replaced(var/mob/living/target)
 
 	if(!..()) return 0
 
@@ -221,7 +280,7 @@
 
 	return 1
 
-/obj/item/organ/internal/ipcbrain/die()
+/obj/item/organ/internal/posibrain/die()
 	damage = max_damage
 	status |= ORGAN_DEAD
 	STOP_PROCESSING(SSobj, src)
@@ -234,19 +293,5 @@
 
 /*
 	This is for law stuff directly. This is how a human mob will be able to communicate with the posi_brainmob in the
-	ipcbrain organ for laws when the ipcbrain organ is shackled.
+	posibrain organ for laws when the posibrain organ is shackled.
 */
-/obj/item/organ/internal/posibrain/proc/show_laws_brain()
-	set category = "Shackle"
-	set name = "Show Laws"
-	set src in usr
-
-	brainmob.show_laws(owner)
-
-/obj/item/organ/internal/posibrain/proc/brain_checklaws()
-	set category = "Shackle"
-	set name = "State Laws"
-	set src in usr
-
-
-	brainmob.open_subsystem(/datum/nano_module/law_manager, usr)

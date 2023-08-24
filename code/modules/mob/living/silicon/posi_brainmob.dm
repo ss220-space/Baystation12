@@ -16,16 +16,10 @@
 
 	var/obj/item/organ/internal/posibrain/container = null
 	var/emp_damage = 0//Handles a type of MMI damage
+
 	var/alert = null
 	var/list/owner_channels = list()
 	var/list/law_channels = list()
-
-/mob/living/silicon/sil_brainmob/New()
-	reagents = new/datum/reagents(1000, src)
-	if(istype(loc, /obj/item/organ/internal/posibrain))
-		container = loc
-	add_language(LANGUAGE_ROBOT_GLOBAL)
-	..()
 
 /mob/living/silicon/sil_brainmob/Destroy()
 	if(key)				//If there is a mob connected to this thing. Have to check key twice to avoid false death reporting.
@@ -47,17 +41,56 @@
 /mob/living/silicon/sil_brainmob/check_has_mouth()
 	return 0
 
-/mob/living/silicon/sil_brainmob/show_laws(mob/M)
+// Решил разделить мозг борга и ИПСа на 2 разных.
+//
+/mob/living/silicon/sil_brainmob/borg/
+
+
+/mob/living/silicon/sil_brainmob/borg/New()
+	reagents = new/datum/reagents(1000, src)
+	if(istype(loc, /obj/item/organ/internal/posibrain))
+		container = loc
+	add_language(LANGUAGE_ROBOT_GLOBAL)
+	..()
+
+
+
+/mob/living/silicon/sil_brainmob/borg/show_laws(mob/M)
 	if(M)
 		to_chat(M, "<b>Obey these laws [M]:</b>")
 		src.laws_sanity_check()
 		src.laws.show_laws(M)
 
-/mob/living/silicon/sil_brainmob/open_subsystem(var/subsystem_type, var/mob/given = src)
+/mob/living/silicon/sil_brainmob/borg/open_subsystem(var/subsystem_type, var/mob/given = src)
 	update_owner_channels()
 	return ..(subsystem_type, given)
 
-/mob/living/silicon/sil_brainmob/proc/update_owner_channels()
+
+/mob/living/silicon/sil_brainmob/borg/statelaw(var/law, var/mob/living/L = src)
+	if(container && container.owner)
+		L = container.owner
+	return ..(law, L)
+
+/mob/living/silicon/sil_brainmob/borg/proc/update_law_channels()
+	update_owner_channels()
+	law_channels.Cut()
+	law_channels |= additional_law_channels
+	law_channels |= owner_channels
+	return law_channels
+
+/mob/living/silicon/sil_brainmob/borg/law_channels()
+	return law_channels
+
+/mob/living/silicon/sil_brainmob/borg/statelaws(var/datum/ai_laws/laws)
+	update_law_channels()
+	if(isnull(law_channels[lawchannel]))
+		to_chat(src, "<span class='danger'>[lawchannel]: Unable to state laws. Communication method unavailable.</span>")
+		return 0
+
+	dostatelaws(lawchannel, law_channels[lawchannel], laws)
+
+
+mob/living/silicon/sil_brainmob/proc/update_owner_channels()
 	var/mob/living/carbon/human/owner = container.owner
 	if(!owner)	return
 
@@ -80,22 +113,34 @@
 	owner_channels = new_channels
 	return 1
 
-/mob/living/silicon/sil_brainmob/statelaw(var/law, var/mob/living/L = src)
-	if(container && container.owner)
-		L = container.owner
-	return ..(law, L)
+/mob/living/silicon/sil_brainmob/ipc
 
-/mob/living/silicon/sil_brainmob/proc/update_law_channels()
+	var/law = null
+	icon = 'icons/obj/assemblies.dmi'
+	icon_state = "posibrain"
+
+
+/mob/living/silicon/sil_brainmob/ipc/New()
+	reagents = new/datum/reagents(1000, src)
+	if(istype(loc, /obj/item/organ/internal/posibrain))
+		container = loc
+	add_language(LANGUAGE_EAL)
+	..()
+
+
+/mob/living/silicon/sil_brainmob/ipc/proc/update_law_channels()
 	update_owner_channels()
 	law_channels.Cut()
-	law_channels |= additional_law_channels
 	law_channels |= owner_channels
 	return law_channels
 
-/mob/living/silicon/sil_brainmob/law_channels()
-	return law_channels
 
-/mob/living/silicon/sil_brainmob/statelaws(var/datum/ai_laws/laws)
+/mob/living/silicon/sil_brainmob/ipc/show_laws(mob/M)
+	if(M)
+		to_chat(M, "<b>Obey these laws [M]:</b>")
+		src.laws.show_laws(M)
+
+/mob/living/silicon/sil_brainmob/ipc/statelaws(var/datum/ai_laws/laws)
 	update_law_channels()
 	if(isnull(law_channels[lawchannel]))
 		to_chat(src, "<span class='danger'>[lawchannel]: Unable to state laws. Communication method unavailable.</span>")

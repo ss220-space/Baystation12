@@ -40,7 +40,7 @@
 	flesh_color = "#575757"
 
 	has_organ = list(
-		BP_POSIBRAIN = /obj/item/organ/internal/posibrain,
+		BP_POSIBRAIN = /obj/item/organ/internal/ipcbrain,
 		BP_EYES = /obj/item/organ/internal/eyes/robot
 		)
 
