@@ -190,7 +190,7 @@ area/centcom/scgfleet
 	icon_state = "purple"
 
 /area/tdome/testing
-	name = "Thunderdome (TESTING AREA.)"
+	name = "Thunderdome (TESTING AREA)"
 
 
 /area/tdome/testing/engineering
