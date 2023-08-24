@@ -209,7 +209,7 @@ proc/get_radio_key_from_channel(var/channel)
 	message = html_encode(message)
 	return message
 
-/mob/living/say(var/message, var/datum/language/speaking = null, var/verb="says", var/alt_name="", whispering)
+/mob/living/say(var/message, var/datum/language/speaking = null, var/verb="says", var/alt_name="", whispering=0)
 	if(client)
 		if(client.prefs.muted & MUTE_IC)
 			to_chat(src, "<span class='warning'>You cannot speak in IC (Muted).</span>")
@@ -249,6 +249,8 @@ proc/get_radio_key_from_channel(var/channel)
 	// irrespective of distance or anything else.
 	if(speaking && (speaking.flags & HIVEMIND))
 		speaking.broadcast(src,trim(message))
+		log_say("([speaking.name]) [message]", src)
+
 		return 1
 
 	if((is_muzzled()) && !(speaking && (speaking.flags & SIGNLANG)))
@@ -398,11 +400,18 @@ proc/get_radio_key_from_channel(var/channel)
 	if(length(eavesdroppers))
 		INVOKE_ASYNC(src, /atom/movable/proc/animate_chat, stars(message), speaking, italics, eavesdroppers)
 	//[/INF]
+	if (speaking)
+		if(message_mode)
+			if(whispering)
+				log_whisper("([message_mode]) ([speaking.name]) [message]", src)
+			else
+				log_say("([message_mode]) ([speaking.name]) [message]", src)
+		else
+			if(whispering)
+				log_whisper("([speaking.name]) [message]", src)
+			else
+				log_say("([speaking.name]) [message]", src)
 
-	if(whispering)
-		log_whisper(message, src)
-	else
-		log_say(message, src)
 
 	flick_overlay(speech_bubble, speech_bubble_recipients, 50)
 	animate(speech_bubble, alpha = 255, time = 10, easing = CIRCULAR_EASING)

@@ -24,13 +24,13 @@
 		if("GLOB")
 			return global.GLOB;
 		if("IClog")
-			return global.IClog;
+			return GLOB.IClog;
 		if("LIGHTING_CORNER_DIAGONAL")
 			return global.LIGHTING_CORNER_DIAGONAL;
 		if("Master")
 			return global.Master;
 		if("OOClog")
-			return global.OOClog;
+			return GLOB.OOClog;
 		if("SSai")
 			return global.SSai;
 		if("SSaifast")
@@ -195,8 +195,8 @@
 			return global.account_hack_attempted;
 		if("additional_antag_types")
 			return global.additional_antag_types;
-		if("admin_datums")
-			return global.admin_datums;
+		if("GLOB.admin_datums")
+			return global.GLOB.admin_datums;
 		if("admin_pm_repository")
 			return global.admin_pm_repository;
 		if("admin_ranks")
@@ -238,7 +238,7 @@
 		if("adminhelp_ignored_words")
 			return global.adminhelp_ignored_words;
 		if("adminlog")
-			return global.adminlog;
+			return GLOB.admin_log;
 		if("ai_list")
 			return global.ai_list;
 		if("ai_status_emotions")
@@ -350,7 +350,7 @@
 		if("client_repository")
 			return global.client_repository;
 		if("combatlog")
-			return global.combatlog;
+			return GLOB.combatlog;
 		if("comm_message_listeners")
 			return global.comm_message_listeners;
 		if("command_announcement")
@@ -510,7 +510,7 @@
 		if("invalid_zone")
 			return global.invalid_zone;
 		if("jobMax")
-			return global.jobMax;
+			return GLOB.jobMax;
 		if("jobban_keylist")
 			return global.jobban_keylist;
 		if("jobban_runonce")
@@ -534,7 +534,7 @@
 		if("loadout_categories")
 			return global.loadout_categories;
 		if("log_end")
-			return global.log_end;
+			return GLOB.log_end;
 		if("lunchables_drink_reagents_")
 			return global.lunchables_drink_reagents_;
 		if("lunchables_drinks_")
@@ -937,13 +937,13 @@
 		if("GLOB")
 			global.GLOB=newval;
 		if("IClog")
-			global.IClog=newval;
+			GLOB.IClog=newval;
 		if("LIGHTING_CORNER_DIAGONAL")
 			global.LIGHTING_CORNER_DIAGONAL=newval;
 		if("Master")
 			global.Master=newval;
 		if("OOClog")
-			global.OOClog=newval;
+			GLOB.OOClog=newval;
 		if("SSai")
 			global.SSai=newval;
 		if("SSaifast")
@@ -1108,8 +1108,8 @@
 			global.account_hack_attempted=newval;
 		if("additional_antag_types")
 			global.additional_antag_types=newval;
-		if("admin_datums")
-			global.admin_datums=newval;
+		if("GLOB.admin_datums")
+			global.GLOB.admin_datums=newval;
 		if("admin_pm_repository")
 			global.admin_pm_repository=newval;
 		if("admin_ranks")
@@ -1151,7 +1151,7 @@
 		if("adminhelp_ignored_words")
 			global.adminhelp_ignored_words=newval;
 		if("adminlog")
-			global.adminlog=newval;
+			GLOB.admin_log=newval;
 		if("ai_list")
 			global.ai_list=newval;
 		if("ai_status_emotions")
@@ -1263,7 +1263,7 @@
 		if("client_repository")
 			global.client_repository=newval;
 		if("combatlog")
-			global.combatlog=newval;
+			GLOB.combatlog=newval;
 		if("comm_message_listeners")
 			global.comm_message_listeners=newval;
 		if("command_announcement")
@@ -1423,7 +1423,7 @@
 		if("invalid_zone")
 			global.invalid_zone=newval;
 		if("jobMax")
-			global.jobMax=newval;
+			GLOB.jobMax=newval;
 		if("jobban_keylist")
 			global.jobban_keylist=newval;
 		if("jobban_runonce")
@@ -1447,7 +1447,7 @@
 		if("loadout_categories")
 			global.loadout_categories=newval;
 		if("log_end")
-			global.log_end=newval;
+			GLOB.log_end=newval;
 		if("lunchables_drink_reagents_")
 			global.lunchables_drink_reagents_=newval;
 		if("lunchables_drinks_")
@@ -1922,7 +1922,7 @@
 	"_client_preferences_by_type",
 	"account_hack_attempted",
 	"additional_antag_types",
-	"admin_datums",
+	"GLOB.admin_datums",
 	"admin_pm_repository",
 	"admin_ranks",
 	"admin_secrets",

@@ -1,8 +1,12 @@
 /mob/living/silicon/say(var/message, var/sanitize = 1)
 	return ..(sanitize ? sanitize(message) : message)
 
-/mob/living/silicon/handle_message_mode(message_mode, message, verb, speaking, used_radios, alt_name)
-	log_say("[key_name(src)] : [message]")
+/mob/living/silicon/handle_message_mode(message_mode, message, verb, var/datum/language/speaking = null, used_radios, alt_name)
+	if (speaking)
+		if (message_mode)
+			log_say("([message_mode]) ([speaking.name]) [message]", src)
+	return 0
+
 
 /mob/living/silicon/robot/handle_message_mode(message_mode, message, verb, speaking, used_radios, alt_name)
 	..()
