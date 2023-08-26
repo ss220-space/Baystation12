@@ -86,8 +86,7 @@
 
 
 /decl/cultural_info/culture/nabber/c/plus
-	valid_jobs = list(/datum/job/janitor,    /datum/job/cargo_assistant,
-					  /datum/job/scientist_assistant)
+	valid_jobs = list(/datum/job/janitor,    /datum/job/cargo_assistant)
 
 
 // GRADE B

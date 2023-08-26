@@ -171,7 +171,7 @@ What is the naming convention for planes or layers?
 	#define ABOVE_LIGHTING_LAYER   2
 
 #define EFFECTS_ABOVE_LIGHTING_PLANE   3 // For glowy eyes, laser beams, etc. that shouldn't be affected by darkness
-	#define EYE_GLOW_LAYER         0.5
+	#define EYE_GLOW_LAYER         1
 	#define BEAM_PROJECTILE_LAYER  2
 	#define SUPERMATTER_WALL_LAYER 3
 

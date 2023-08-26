@@ -542,6 +542,7 @@
 #include "code\datums\vote\custom.dm"
 #include "code\datums\vote\end_round.dm"
 #include "code\datums\vote\gamemode.dm"
+#include "code\datums\vote\manual_transfer.dm"
 #include "code\datums\vote\map.dm"
 #include "code\datums\vote\restart.dm"
 #include "code\datums\vote\transfer.dm"
