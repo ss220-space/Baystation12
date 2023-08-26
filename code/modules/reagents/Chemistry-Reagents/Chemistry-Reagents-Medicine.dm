@@ -1056,3 +1056,15 @@
 	..()
 	M.add_chemical_effect(CE_TOXIN, 1)
 	M.immunity -= 0.5 //inverse effects when abused
+
+
+/datum/reagent/nanofreon
+	name = "Nano Freon"
+	description = "A liquid used in coolant systems of syntetics."
+	taste_description = "Dense water"
+	reagent_state = LIQUID
+	color = "#80bfff"
+	metabolism = REM
+	overdose = REAGENTS_OVERDOSE
+	value = 1.5
+	scannable = 1

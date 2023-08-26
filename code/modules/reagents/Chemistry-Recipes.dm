@@ -3248,3 +3248,10 @@
 	minimum_temperature = 90 CELSIUS
 	maximum_temperature = 120 CELSIUS
 	mix_message = "The solution thickens."
+
+/datum/chemical_reaction/nanofreon
+	name = "Nano-Freon"
+	result = /datum/reagent/nanofreon
+	required_reagents = list(/datum/reagent/water = 3, /datum/reagent/ammonia = 1, /datum/reagent/chloralhydrate = 1)
+	result_amount = 3
+	mix_message = "The solution becomes thick and slightly slimy."
