@@ -50,3 +50,8 @@
 	display_name = "integrated sciHUD (head)"
 	cost = 4
 	path = /obj/item/organ/internal/augment/active/hud/science
+
+/datum/gear/augment/aug_false_face
+	display_name = "false face (chest)"
+	cost = 2
+	path = /obj/item/organ/internal/augment/active/simple/equip/aug_false_face
