@@ -17,7 +17,7 @@
 	var/used_coolant = 0
 	var/heating_modificator
 	var/list/coolant_reagents_efficiency = list()
-
+	var/coolant_reagent_water
 
 /obj/item/organ/internal/cooling_system/New()
 	robotize()
@@ -85,7 +85,7 @@
 			get_coolant_drain()
 			refrigerant_rate += bruised_cost     // Нагрев владельца при повреждениях высчитывается тут.
 
-		if(reagents.get_reagent_amount(/datum/reagent/water) < (0.6 * refrigerant_max))
+		if(reagents.get_reagent_amount(/datum/reagent/water) <= (0.6 * reagents.total_volume))
 			var/need_more_water = ((refrigerant_max - reagents.get_reagent_amount(/datum/reagent/water))/100)
 			take_internal_damage(need_more_water)
 
