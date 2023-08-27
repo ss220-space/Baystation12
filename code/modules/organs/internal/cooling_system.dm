@@ -1,9 +1,9 @@
 /obj/item/organ/internal/cooling_system
 	name = "cooling system"
 	icon_state = "cooling0"
-	organ_tag = "cooling system"
 	organ_tag = BP_COOLING
 	parent_organ = BP_GROIN
+	status = ORGAN_ROBOTIC
 	var/refrigerant_max = 90	// Максимальное количество охладителя
 	var/refrigerant_rate = 5	// Чем больше это значение, тем сильнее будет идти нагрев владельца.
 	var/durability_factor = 30	// Чем больше это значение, тем сильнее будет идти нагрев владельца при повреждениях
