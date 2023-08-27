@@ -4,23 +4,57 @@
 	organ_tag = "cooling system"
 	organ_tag = BP_COOLING
 	parent_organ = BP_GROIN
-	var/refrigerant_max = 50	// Максимальное количество охладителя
+	var/refrigerant_max = 90	// Максимальное количество охладителя
 	var/refrigerant_rate = 5	// Чем больше это значение, тем сильнее будет идти нагрев владельца.
 	var/durability_factor = 30	// Чем больше это значение, тем сильнее будет идти нагрев владельца при повреждениях
 	var/safety = 1
 	damage_reduction = 0.8
 	max_damage = 50
 	var/sprite_name = "cooling"
+	var/fresh_coolant = 0
+	var/coolant_purity = 0
+	var/datum/reagents/coolant_reagents
+	var/used_coolant = 0
+	var/heating_modificator
+	var/list/coolant_reagents_efficiency = list()
+
 
 /obj/item/organ/internal/cooling_system/New()
 	robotize()
 	create_reagents(refrigerant_max)
-	reagents.add_reagent(/datum/reagent/coolant, refrigerant_max)
+	coolant_reagents_efficiency[/datum/reagent/water] = 8
+	coolant_reagents_efficiency[/datum/reagent/ethanol] = 6
+	coolant_reagents_efficiency[/datum/reagent/space_cleaner] = 4
+	coolant_reagents_efficiency[/datum/reagent/sterilizine] = 2
+	coolant_reagents_efficiency[/datum/reagent/coolant] = 0.2
+	reagents.add_reagent(/datum/reagent/coolant, 30)
+	reagents.add_reagent(/datum/reagent/water, 60)
 	..()
 
 /obj/item/organ/internal/cooling_system/emp_act(severity)
 	damage += rand(15 - severity * 5, 20 - severity * 5)
 	..()
+// Коэффицент эффективности работы смеси
+/obj/item/organ/internal/cooling_system/proc/coolant_purity()
+	var/total_purity = 0
+	fresh_coolant = 0
+	coolant_purity = 0
+	for (var/datum/reagent/current_reagent in src.reagents.reagent_list)
+		if (!current_reagent)
+			continue
+		var/cur_purity = coolant_reagents_efficiency[current_reagent.type]
+		if(!cur_purity)
+			cur_purity = 15
+		else if(cur_purity < 0.1)
+			cur_purity = 0.1
+		total_purity += cur_purity * current_reagent.volume
+		fresh_coolant += current_reagent.volume
+	if(total_purity && fresh_coolant)
+		coolant_purity = total_purity / fresh_coolant
+		heating_modificator = coolant_purity
+
+
+
 
 /obj/item/organ/internal/cooling_system/proc/get_coolant_drain()
 	var/damage_factor = (damage*durability_factor)/max_damage
@@ -30,30 +64,33 @@
 
 	if(!owner || owner.stat == DEAD || owner.bodytemperature < 32)
 		return
-
-	if(reagents.has_reagent(/datum/reagent/coolant))
-		handle_cooling()
+	coolant_purity()
+	handle_cooling()
 	..()
 
 /obj/item/organ/internal/cooling_system/proc/handle_cooling()
 
 	var/obj/item/organ/internal/cell/C = owner.internal_organs_by_name[BP_CELL]
-	refrigerant_rate = 5
+	refrigerant_rate = heating_modificator
 	if (C && C.get_charge() < 25)
 		return
-
-	if(reagents.get_reagent_amount(/datum/reagent/coolant) > 0 && !is_broken())
+	if(reagents.total_volume >= 0)
 		var/bruised_cost = get_coolant_drain()
 
 		if(is_bruised())
-			reagents.remove_reagent(/datum/reagent/coolant,  (bruised_cost/durability_factor))
-		if(get_coolant_remaining() <= 0)
-			refrigerant_rate += 40
+			var/reagents_remove = bruised_cost/durability_factor
+			reagents.remove_any(reagents_remove)
 
 		if(is_damaged())
 			get_coolant_drain()
 			refrigerant_rate += bruised_cost     // Нагрев владельца при повреждениях высчитывается тут.
 
+		if(reagents.get_reagent_amount(/datum/reagent/water) < (0.6 * refrigerant_max))
+			var/need_more_water = ((refrigerant_max - reagents.get_reagent_amount(/datum/reagent/water))/100)
+			take_internal_damage(need_more_water)
+
+	if(reagents.total_volume <= 0)
+		refrigerant_rate += 40
 
 /obj/item/organ/internal/cooling_system/proc/get_tempgain()
 	if(refrigerant_rate > 0)

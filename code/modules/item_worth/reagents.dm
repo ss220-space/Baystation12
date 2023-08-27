@@ -603,9 +603,6 @@
 /datum/reagent/experimental
 	value = 30
 
-/datum/reagent/nanofreon
-	value = 10
-
 /datum/reagent/rsh4
 	value = 20
 
