@@ -22,13 +22,13 @@
 /obj/item/organ/internal/cooling_system/New()
 	robotize()
 	create_reagents(refrigerant_max)
-	coolant_reagents_efficiency[/datum/reagent/water] = 8
-	coolant_reagents_efficiency[/datum/reagent/ethanol] = 6
-	coolant_reagents_efficiency[/datum/reagent/space_cleaner] = 4
-	coolant_reagents_efficiency[/datum/reagent/sterilizine] = 2
-	coolant_reagents_efficiency[/datum/reagent/coolant] = 0.2
-	reagents.add_reagent(/datum/reagent/coolant, 30)
-	reagents.add_reagent(/datum/reagent/water, 60)
+	coolant_reagents_efficiency[/datum/reagent/water] = 17
+	coolant_reagents_efficiency[/datum/reagent/ethanol] = 10
+	coolant_reagents_efficiency[/datum/reagent/space_cleaner] = 5
+	coolant_reagents_efficiency[/datum/reagent/sterilizine] = 3
+	coolant_reagents_efficiency[/datum/reagent/coolant] = 0.1
+	reagents.add_reagent(/datum/reagent/coolant, 60)
+	reagents.add_reagent(/datum/reagent/water, 30)
 	..()
 
 /obj/item/organ/internal/cooling_system/emp_act(severity)
@@ -44,7 +44,7 @@
 			continue
 		var/cur_purity = coolant_reagents_efficiency[current_reagent.type]
 		if(!cur_purity)
-			cur_purity = 15
+			cur_purity = 25
 		else if(cur_purity < 0.1)
 			cur_purity = 0.1
 		total_purity += cur_purity * current_reagent.volume
@@ -85,7 +85,7 @@
 			get_coolant_drain()
 			refrigerant_rate += bruised_cost     // Нагрев владельца при повреждениях высчитывается тут.
 
-		if(reagents.get_reagent_amount(/datum/reagent/water) <= (0.6 * reagents.total_volume))
+		if(reagents.get_reagent_amount(/datum/reagent/water) <= (0.3 * reagents.total_volume))
 			var/need_more_water = ((refrigerant_max - reagents.get_reagent_amount(/datum/reagent/water))/100)
 			take_internal_damage(need_more_water)
 
@@ -132,12 +132,12 @@
 					return
 				amount = dispenser.reagents.trans_to_obj(src, refrigerant_max)
 				to_chat(user, SPAN_NOTICE("You fill \the [src] with [amount] units from \the [dispenser]."))
-				playsound(src.loc, 'sound/effects/refill.ogg', 50, 1, -6)
+				playsound(src.loc, 'sound/effects/pour.ogg', 25, 1)
 		if (!safety)
 			if (beaker)
 				amount = src.reagents.trans_to_obj(dispenser, refrigerant_max)
 				to_chat(user, SPAN_NOTICE("You fill \the [dispenser] with [amount] units from \the [src]."))
-				playsound(src.loc, 'sound/effects/refill.ogg', 50, 1, -6)
+				playsound(src.loc, 'sound/effects/pour.ogg', 25, 1)
 
 	else
 		return ..()
