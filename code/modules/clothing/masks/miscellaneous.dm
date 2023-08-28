@@ -347,3 +347,12 @@
 	icon_state = "bandskull"
 	item_state = "bandskull"
 
+
+/obj/item/clothing/mask/false_face
+	name = "false face"
+	desc = "Creepy mask that appears from under your chest."
+	icon = 'icons/mob/onmob/onmob_mask.dmi'
+	icon_state = "false_face"
+	icon = 'icons/obj/clothing/obj_mask.dmi'
+	item_state = "false_face"
+	body_parts_covered = FACE|EYES
