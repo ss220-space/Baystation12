@@ -26768,7 +26768,7 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aQp" = (
-/obj/structure/table/standard,
+/obj/machinery/external_cooling_device,
 /obj/item/device/robotanalyzer,
 /obj/item/device/radio/intercom{
 	dir = 8;
