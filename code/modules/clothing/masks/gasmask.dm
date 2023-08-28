@@ -266,11 +266,3 @@
 	body_parts_covered = FACE
 	tint = 0 //INF
 	w_class = 2
-
-/obj/item/clothing/mask/gas/false_face
-	name = "false face"
-	desc = "Creepy mask that appears from under your chest."
-	icon_state = "false_face"
-	item_state = "false_face"
-	tint = 0
-	body_parts_covered = FACE
