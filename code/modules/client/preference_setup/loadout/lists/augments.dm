@@ -52,6 +52,6 @@
 	path = /obj/item/organ/internal/augment/active/hud/science
 
 /datum/gear/augment/aug_false_face
-	display_name = "false face (chest)"
+	display_name = "false face (head)"
 	cost = 2
 	path = /obj/item/organ/internal/augment/active/simple/equip/aug_false_face
