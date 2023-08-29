@@ -4,6 +4,7 @@
 	organ_tag = BP_COOLING
 	parent_organ = BP_GROIN
 	status = ORGAN_ROBOTIC
+	desc = "The internal liquid cooling system consists of a weighty humming cylinder and a small ribbed block connected by flexible tubes through which clear liquid flows."
 	var/refrigerant_max = 90	// Максимальное количество охладителя
 	var/refrigerant_rate = 5	// Чем больше это значение, тем сильнее будет идти нагрев владельца.
 	var/durability_factor = 30	// Чем больше это значение, тем сильнее будет идти нагрев владельца при повреждениях

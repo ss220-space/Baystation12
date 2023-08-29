@@ -2,13 +2,15 @@
 	name = "\improper External Cooling Device"
 	icon = 'icons/obj/iv_drip.dmi'
 	icon_state = "basepowered"
+	desc = "It's a bulky machine that delivers life-giving cold through a hose."
 	anchored = FALSE
 	density = TRUE
 	var/mob/living/carbon/human/attached
 	var/obj/item/cell/cell = /obj/item/cell/high
 	var/active = 0
 	var/closed = 1
-	var/set_temperature = T0C	//K
+	var/set_temperature = T0C
+	var/interact = 1	//K
 
 /obj/machinery/external_cooling_device/New()
 	..()
@@ -18,7 +20,7 @@
 /obj/machinery/external_cooling_device/examine(mob/user)
 	. = ..()
 
-	to_chat(user, "The heater is [active ? "on" : "off"] and the hatch is [!closed ? "open" : "closed"].")
+	to_chat(user, "The external cooling device is [active ? "on" : "off"] and the hatch is [!closed ? "open" : "closed"].")
 	if(!closed)
 		to_chat(user, "The power cell is [cell ? "installed" : "missing"].")
 	else
@@ -74,12 +76,12 @@
 
 
 /obj/machinery/external_cooling_device/interface_interact(mob/user)
-	if(!closed)
+	if(interact)
 		interact(user)
 		return TRUE
 
 /obj/machinery/external_cooling_device/interact(mob/user)
-	if(!closed)
+	if(interact)
 		var/list/dat = list()
 		dat += "Power cell: "
 		if(cell)
