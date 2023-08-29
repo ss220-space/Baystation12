@@ -64,3 +64,4 @@
 	new /obj/item/clothing/accessory/braslet(src)
 	new /obj/item/clothing/accessory/braslet/pink(src)
 	new /obj/item/clothing/accessory/braslet/black(src)
+	..()

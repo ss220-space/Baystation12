@@ -55,8 +55,10 @@
 /obj/item/clothingbag/heph_set
 	name = "uniform package"
 	desc = "A utility bag stamped with a Hephaestus logo."
-	New()
-		new /obj/item/clothing/head/heph_hat(src)
-		new /obj/item/clothing/suit/storage/heph_coat(src)
-		new /obj/item/clothing/under/rank/security/heph_pants(src)
-		new /obj/item/clothing/shoes/jackboots/heph_boots(src)
+
+/obj/item/clothingbag/heph_set/New()
+	new /obj/item/clothing/head/heph_hat(src)
+	new /obj/item/clothing/suit/storage/heph_coat(src)
+	new /obj/item/clothing/under/rank/security/heph_pants(src)
+	new /obj/item/clothing/shoes/jackboots/heph_boots(src)
+	..()

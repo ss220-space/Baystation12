@@ -1,28 +1,5 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
 
-proc/Intoxicated(phrase)
-	phrase = html_decode(phrase)
-	var/leng=length_char(phrase)	// INF Localization
-	var/counter=length_char(phrase)	// INF Localization
-	var/newphrase=""
-	var/newletter=""
-	while(counter>=1)
-		newletter=copytext_char(phrase,(leng-counter)+1,(leng-counter)+2)
-		if(rand(1,3)==3)
-			if(lowertext(newletter)=="o")	newletter="u"
-			if(lowertext(newletter)=="s")	newletter="ch"
-			if(lowertext(newletter)=="a")	newletter="ah"
-			if(lowertext(newletter)=="c")	newletter="k"
-		switch(rand(1,7))
-			if(1,3,5,8)	newletter="[lowertext(newletter)]"
-			if(2,4,6,15)	newletter="[uppertext(newletter)]"
-			if(7)	newletter+="'"
-			//if(9,10)	newletter="<b>[newletter]</b>"
-			//if(11,12)	newletter="<big>[newletter]</big>"
-			//if(13)	newletter="<small>[newletter]</small>"
-		newphrase+="[newletter]";counter-=1
-	return newphrase
-
 proc/NewStutter(phrase,stunned)
 	phrase = html_decode(phrase)
 
@@ -169,4 +146,3 @@ proc/RadioChat(mob/living/user, message, distortion_chance = 60, distortion_spee
 		new_message += newletter
 		length_char += 1
 	return new_message
-

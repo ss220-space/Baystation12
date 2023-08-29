@@ -119,27 +119,3 @@
 			new /obj/item/tank/jetpack/carbondioxide(src)
 
 		return
-
-/obj/structure/closet/syndicate/resources/everything
-	desc = "It's an emergency storage closet for repairs."
-
-	New()
-		var/list/resources = list(
-		/obj/item/stack/material/steel,
-		/obj/item/stack/material/glass,
-		/obj/item/stack/material/gold,
-		/obj/item/stack/material/silver,
-		/obj/item/stack/material/phoron,
-		/obj/item/stack/material/uranium,
-		/obj/item/stack/material/diamond,
-		/obj/item/stack/material/plasteel,
-		/obj/item/stack/material/rods
-		)
-
-
-		for(var/i = 0, i<2, i++)
-			for(var/res in resources)
-				var/obj/item/stack/R = new res(src)
-				R.amount = R.max_amount
-
-		return

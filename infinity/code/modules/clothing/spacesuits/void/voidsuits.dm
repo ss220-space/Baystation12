@@ -12,6 +12,7 @@
 		overlays += ind
 
 /obj/item/clothing/suit/space/void/engineering/alt/inf/New()
+	..()
 	START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/suit/space/void/engineering/alt/inf/Destroy()

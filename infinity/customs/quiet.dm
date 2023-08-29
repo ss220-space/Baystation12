@@ -23,6 +23,7 @@
 
 /obj/item/clothing/mask/gas/creo/New()
 	last_time = world.time
+	..()
 
 /obj/item/clothing/mask/gas/creo/on_update_icon()
 	overlays.Cut()
@@ -180,11 +181,11 @@
 /obj/item/clothingbag/quiet_set
 	name = "item package"
 	desc = "A utility bag."
-	New()
-		//new /obj/item/clothing/under/casual_pants/camo/quiet(src)
-		new /obj/item/clothing/mask/surgical/quiet(src)
-		new /obj/item/clothing/ears/earmuffs/headphones/mental(src)
-		new /obj/item/toy/katana/snow_hand(src)
+/obj/item/clothingbag/quiet_set/New()
+	new /obj/item/clothing/mask/surgical/quiet(src)
+	new /obj/item/clothing/ears/earmuffs/headphones/mental(src)
+	new /obj/item/toy/katana/snow_hand(src)
+	..()
 
 /obj/item/melee/energy/toothpick
 	name = "myknife"

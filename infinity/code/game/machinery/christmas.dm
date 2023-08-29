@@ -11,7 +11,8 @@
 	power_channel = LIGHT
 	var/on = 1
 
-/obj/machinery/xmaslights/New()
+/obj/machinery/xmaslights/Initialize()
+	. = ..()
 	activate()
 
 /obj/machinery/xmaslights/attack_hand(mob/user)
@@ -64,7 +65,8 @@
 	power_channel = LIGHT
 	var/on = 1
 
-/obj/machinery/xmas_plant/New()
+/obj/machinery/xmas_plant/Initialize()
+	. = ..()
 	activate()
 
 /obj/machinery/xmas_plant/Move()

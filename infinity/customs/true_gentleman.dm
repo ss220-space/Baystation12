@@ -27,8 +27,9 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	trade_blacklisted = TRUE
 
-/obj/item/clothingbag/gentle_set
-	New()
-		new/obj/item/clothing/under/gentle_under(src)
-		new/obj/item/clothing/head/gentle_cap(src)
-		new/obj/item/clothing/suit/storage/gentle_suit(src)
+/obj/item/clothingbag/gentle_set/New()
+
+	new/obj/item/clothing/under/gentle_under(src)
+	new/obj/item/clothing/head/gentle_cap(src)
+	new/obj/item/clothing/suit/storage/gentle_suit(src)
+	..()

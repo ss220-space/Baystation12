@@ -92,6 +92,6 @@
 	species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
 	siemens_coefficient = 1 //Its literally metal
 
-	/obj/item/clothing/suit/armor/vox_scrap/New()
-		..()
-		slowdown_per_slot[slot_wear_suit] = 3
+/obj/item/clothing/suit/armor/vox_scrap/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = 3

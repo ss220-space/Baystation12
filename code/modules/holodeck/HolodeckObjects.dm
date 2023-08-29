@@ -89,7 +89,8 @@
 	name = "reinforced holofloor"
 	icon_state = "reinforced"
 
-/turf/simulated/floor/holofloor/space/New()
+/turf/simulated/floor/holofloor/space/Initialize()
+	. = ..()
 	icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 
 /turf/simulated/floor/holofloor/beach
@@ -233,12 +234,9 @@
 	var/item_color
 
 /obj/item/holo/esword/green
-	New()
-		item_color = "green"
-
+	item_color = "green"
 /obj/item/holo/esword/red
-	New()
-		item_color = "red"
+	item_color = "red"
 
 /obj/item/holo/esword/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	. = ..()
@@ -251,7 +249,8 @@
 /obj/item/holo/esword/get_parry_chance(mob/user)
 	return active ? ..() : 0
 
-/obj/item/holo/esword/New()
+/obj/item/holo/esword/Initialize()
+	. = ..()
 	item_color = pick("red","blue","green","purple")
 
 /obj/item/holo/esword/attack_self(mob/living/user as mob)

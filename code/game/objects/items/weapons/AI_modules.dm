@@ -86,13 +86,13 @@ AI MODULES
 		laws.sync(target, 0)
 
 	if(!sender.skill_check(SKILL_COMPUTER, SKILL_HARD))	//INF added the check, was "addAdditionalLaws(target, sender)" without if...else...
-		if(prob(40)):
+		if(prob(40))
 			target.add_inherent_law(pick(error_laws))
-		else if(prob(50)):								//in fact 30%
+		else if(prob(50))								//in fact 30%
 			target.add_supplied_law(rand(1, target.laws.supplied_laws.len+1), pick(error_laws))
-		else if(prob(40)):								//in fact 12%
+		else if(prob(40))								//in fact 12%
 			target.set_zeroth_law(pick(error_laws))
-		else:											//in fact 18%
+		else											//in fact 18%
 			addAdditionalLaws(target, sender)
 	else
 		addAdditionalLaws(target, sender)

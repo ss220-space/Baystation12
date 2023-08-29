@@ -240,7 +240,7 @@ var/list/global/organ_rel_size = list(
 	if(re_encode)
 		. = html_encode(.)
 
-proc/slur(phrase)
+/proc/slur(phrase)
 	phrase = html_decode(phrase)
 	var/leng=length_char(phrase)	// INF Localization
 	var/counter=length_char(phrase)	// INF Localization
@@ -259,13 +259,15 @@ proc/slur(phrase)
 			if(lowertext(newletter)=="а")	newletter="ах"
 			if(lowertext(newletter)=="с")	newletter="к"
 			if(lowertext(newletter)=="ч")	newletter="з"
-		switch(rand(1,15))
-			if(1,3,5,8)	newletter="[lowertext(newletter)]"
-			if(2,4,6,15)	newletter="[uppertext(newletter)]"
-			if(7)	newletter+="'"
-			//if(9,10)	newletter="<b>[newletter]</b>"
-			//if(11,12)	newletter="<big>[newletter]</big>"
-			//if(13)	newletter="<small>[newletter]</small>"
+		var/randomizer = rand(1, 15)
+		switch(randomizer)
+			if (1 to 4)
+				newletter="[lowertext(newletter)]"
+			if (5 to 8)
+				newletter="[uppertext(newletter)]"
+			if (9)
+				newletter+="'"
+			// 10-15 - Do nothing
 		newphrase+="[newletter]";counter-=1
 	return newphrase
 

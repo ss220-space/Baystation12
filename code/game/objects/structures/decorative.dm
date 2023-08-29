@@ -402,7 +402,8 @@
 	layer = ABOVE_WINDOW_LAYER
 	interaction_message = "<span class = 'notice'>Cool to touch and unbelievable smooth. You can almost see your reflection in it.</span>"
 
-/obj/structure/decor/statue/phoron/New()
+/obj/structure/decor/statue/phoron/Initialize()
+	. = ..()
 	set_light(2, 3, "#cc66ff")
 
 /obj/structure/decor/statue/pillar

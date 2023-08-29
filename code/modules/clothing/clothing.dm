@@ -244,7 +244,8 @@
 
 	slot_flags = SLOT_EARS | SLOT_TWOEARS
 
-/obj/item/clothing/ears/earmuffs/headphones/New()
+/obj/item/clothing/ears/earmuffs/headphones/Initialize()
+	. = ..()
 	icon_state = state_off
 	item_state = state_off
 

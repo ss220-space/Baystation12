@@ -177,7 +177,7 @@
 
 	var/list/targets = get_targets_by_name(text)
 	allowed_targets -= "everyone"
-	for(var/target in targets):
+	for(var/target in targets)
 		allowed_targets |= target
 
 	return targets.len != 0
