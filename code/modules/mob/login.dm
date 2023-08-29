@@ -73,7 +73,8 @@
 
 	next_move = 1
 //INF	set_sight(sight|SEE_SELF)
-	..()
+
+	client.statobj = src
 
 	my_client = client
 
