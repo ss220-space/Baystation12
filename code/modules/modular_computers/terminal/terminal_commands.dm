@@ -572,13 +572,14 @@ INF*/
 			if(F.filetype != "BAT")
 				return "<font color='#ffa000'>[name]: incorrect file. Expected batch file.</font>"
 			var/code = F.stored_data
+			var/obj/item/stock_parts/computer/hard_drive/HDD = terminal.computer.get_component(PART_HDD)
 			if(!findtext(code, ";"))
 				return "<font color='#ff0000'>[name]: compile error, lack this ';'.</font>"
 			if(findtext(code, inp_file_name) || findtext(code, "alias"))
-				terminal.computer.get_component(PART_HDD).damage += 30
+				HDD.damage += 30
 				return "<font color='#ff0000'> compile error, possible recursion detected.</font>"
 			if(length(code) > 500)
-				terminal.computer.get_component(PART_HDD).damage += 10
+				HDD.damage += 10
 				return "<font color='#ff0000'> compile error, too much commands.</font>"
 
 			var/regex/RegexHTML = new("<\[^<>]*>", "g")
