@@ -115,7 +115,7 @@
 		load = cargo
 
 		cargo.plane = plane
-		cargo.layer = ABOVE_CART
+		cargo.layer = ABOVE_STRUCTURE_LAYER
 
 		if(!istype(cargo, /obj/structure/closet/crate))
 			cargo.pixel_y += 6
@@ -143,7 +143,7 @@
 
 	cargo.pixel_y += 6
 	cargo.plane = plane
-	cargo.layer = ABOVE_CART
+	cargo.layer = ABOVE_STRUCTURE_LAYER
 
 	overlays += cargo
 

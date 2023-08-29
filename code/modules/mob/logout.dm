@@ -6,9 +6,10 @@
 /*	handle_admin_logout() inf-dev */
 	if(my_client)
 		my_client.screen -= l_general
-		my_client.screen -= l_plane
+
+	RemoveRenderers()
+
 	QDEL_NULL(l_general)
-	QDEL_NULL(l_plane)
 	hide_client_images()
 	..()
 

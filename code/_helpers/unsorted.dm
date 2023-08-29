@@ -1177,3 +1177,11 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 
 /proc/random_dir()
 	return pick(list(NORTH, EAST, SOUTH, WEST, NORTH|EAST, NORTH|WEST, SOUTH|EAST, SOUTH|WEST))
+
+/proc/subtypesof(datum/thing)
+	RETURN_TYPE(/list)
+	if(ispath(thing))
+		return typesof(thing) - thing
+	if(istype(thing))
+		return typesof(thing) - thing.type
+	return list()

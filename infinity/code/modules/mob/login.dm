@@ -6,10 +6,9 @@
 
 	set_sight(sight|SEE_SELF)
 
-	l_plane = new()
 	l_general = new()
-	client.screen += l_plane
 	client.screen += l_general
+	CreateRenderers()
 
 	refresh_client_images()
 	reload_fullscreen() // Reload any fullscreen overlays this mob has.
