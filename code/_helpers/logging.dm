@@ -13,7 +13,7 @@ GLOBAL_PROTECT(log_end)
 #define WRITE_FILE(file, text) DIRECT_OUTPUT(file, text)
 
 /proc/start_log(log)
-	rustg_log_write(log, "Starting up. Round ID is [game_id ? game_id : "NULL"]\n-------------------------[GLOB.log_end]")
+	WRITE_LOG(log, "Starting up. Round ID is [game_id ? game_id : "NULL"]\n-------------------------[GLOB.log_end]")
 
 /proc/error(msg)
 	log_world(msg)
@@ -53,7 +53,7 @@ GLOBAL_PROTECT(log_end)
 
 
 /proc/game_log(category, text)
-	rustg_log_write(GLOB.world_game_log, "[category]: [text][GLOB.log_end]")
+	WRITE_LOG(GLOB.world_game_log, "[category]: [text][GLOB.log_end]")
 
 // All the log_type() procs are used for writing down into game.log
 // don't use this for logging. We have add_type_logs() for this situation
@@ -62,7 +62,7 @@ GLOBAL_PROTECT(log_end)
 /proc/log_admin(text)
 	GLOB.admin_log.Add(text)
 	if(config.log_admin)
-		rustg_log_write(GLOB.world_game_log, "ADMIN: [text][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "ADMIN: [text][GLOB.log_end]")
 
 /proc/to_debug_listeners(text, prefix = "DEBUG")
 	for(var/client/C in GLOB.admins)
@@ -71,108 +71,108 @@ GLOBAL_PROTECT(log_end)
 
 /proc/log_debug(text)
 	if(config.log_debug)
-		rustg_log_write(GLOB.world_game_log, "DEBUG: [text][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "DEBUG: [text][GLOB.log_end]")
 	to_debug_listeners(text)
 
 
 /proc/log_game(text)
 	if(config.log_game)
-		rustg_log_write(GLOB.world_game_log, "GAME: [text][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "GAME: [text][GLOB.log_end]")
 
 /proc/log_vote(text)
 	if(config.log_vote)
-		rustg_log_write(GLOB.world_game_log, "VOTE: [text][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "VOTE: [text][GLOB.log_end]")
 
 /proc/log_access_in(client/new_client)
 	if(config.log_access)
 		var/message = "[key_name(new_client)] - IP:[new_client.address] - CID:[new_client.computer_id] - BYOND v[new_client.byond_version].[new_client.byond_build]"
-		rustg_log_write(GLOB.world_game_log, "ACCESS IN: [message][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "ACCESS IN: [message][GLOB.log_end]")
 		if(new_client.ckey in GLOB.admin_datums)
 			var/datum/admins/admin = GLOB.admin_datums[new_client.ckey]
-			rustg_log_write(GLOB.world_game_log, "ADMIN: Admin [key_name(new_client)] ([admin.rank]) logged in[GLOB.log_end]")
+			WRITE_LOG(GLOB.world_game_log, "ADMIN: Admin [key_name(new_client)] ([admin.rank]) logged in[GLOB.log_end]")
 
 /proc/log_access_out(mob/last_mob)
 	if(config.log_access)
 		var/message = "[key_name(last_mob)] - IP:[last_mob.lastKnownIP] - CID:[last_mob.computer_id] - BYOND Logged Out"
-		rustg_log_write(GLOB.world_game_log, "ACCESS OUT: [message][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "ACCESS OUT: [message][GLOB.log_end]")
 		if(last_mob.ckey in GLOB.admin_datums)
-			rustg_log_write(GLOB.world_game_log, "ADMIN: Admin [key_name(last_mob)] logged out[GLOB.log_end]")
+			WRITE_LOG(GLOB.world_game_log, "ADMIN: Admin [key_name(last_mob)] logged out[GLOB.log_end]")
 
 /proc/log_say(text, mob/speaker)
 	if(config.log_say)
-		rustg_log_write(GLOB.world_game_log, "SAY: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "SAY: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_whisper(text, mob/speaker)
 	if(config.log_whisper)
-		rustg_log_write(GLOB.world_game_log, "WHISPER: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "WHISPER: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_ooc(text, client/user)
 	if(config.log_ooc)
-		rustg_log_write(GLOB.world_game_log, "OOC: [user.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "OOC: [user.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_aooc(text, client/user)
 	if(config.log_ooc)
-		rustg_log_write(GLOB.world_game_log, "OOC: (AOOC) [user.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "OOC: (AOOC) [user.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_looc(text, client/user)
 	if(config.log_ooc)
-		rustg_log_write(GLOB.world_game_log, "LOOC: [user.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "LOOC: [user.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_emote(text, mob/speaker)
 	if(config.log_emote)
-		rustg_log_write(GLOB.world_game_log, "EMOTE: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "EMOTE: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_attack(mob/attacker, mob/victim, message)
 	if(config.log_attack)
-		rustg_log_write(GLOB.world_game_log, "ATTACK: [attacker.simple_info_line()] against [victim.simple_info_line()]: [message][GLOB.log_end]") //Seperate attack logs? Why?
+		WRITE_LOG(GLOB.world_game_log, "ATTACK: [attacker.simple_info_line()] against [victim.simple_info_line()]: [message][GLOB.log_end]") //Seperate attack logs? Why?
 
 /proc/log_adminsay(text, mob/speaker)
 	if(config.log_adminchat)
-		rustg_log_write(GLOB.world_game_log, "ADMINSAY: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "ADMINSAY: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_staff_say(text, mob/speaker)
 	if(config.log_adminchat)
-		rustg_log_write(GLOB.world_game_log, "STAFFSAY: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "STAFFSAY: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_adminwarn(text)
 	if (config.log_adminwarn)
-		rustg_log_write(GLOB.world_game_log, "ADMINWARN: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "ADMINWARN: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_permissions(text)
 	if (config.log_permissions)
-		rustg_log_write(GLOB.world_game_log,"PERMISSIONS: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log,"PERMISSIONS: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_fax(text)
-	rustg_log_write(GLOB.world_game_log, "FAX: [html_decode(text)][GLOB.log_end]")
+	WRITE_LOG(GLOB.world_game_log, "FAX: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_qdel(text)
-	rustg_log_write(GLOB.world_qdel_log, "QDEL: [text][GLOB.log_end]")
+	WRITE_LOG(GLOB.world_qdel_log, "QDEL: [text][GLOB.log_end]")
 
 /proc/log_mentorsay(text, mob/speaker)
 	if(config.log_adminchat)
-		rustg_log_write(GLOB.world_game_log, "MENTORSAY: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "MENTORSAY: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_ghostsay(text, mob/speaker)
 	if(config.log_say)
-		rustg_log_write(GLOB.world_game_log, "DEADCHAT: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "DEADCHAT: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_ghostemote(text, mob/speaker)
 	if(config.log_emote)
-		rustg_log_write(GLOB.world_game_log, "DEADEMOTE: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "DEADEMOTE: [speaker.simple_info_line()]: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_chat(text, mob/speaker)
 	if(config.log_pda)
-		rustg_log_write(GLOB.world_game_log, "CHAT: [speaker.simple_info_line()] [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "CHAT: [speaker.simple_info_line()] [html_decode(text)][GLOB.log_end]")
 
 /proc/log_misc(text)
-	rustg_log_write(GLOB.world_game_log, "MISC: [text][GLOB.log_end]")
+	WRITE_LOG(GLOB.world_game_log, "MISC: [text][GLOB.log_end]")
 
 /proc/log_unit_test(text)
 	to_world_log("## UNIT_TEST ##: [text]")
-	rustg_log_write(GLOB.world_game_log, "UNITTEST: [text][GLOB.log_end]")
+	WRITE_LOG(GLOB.world_game_log, "UNITTEST: [text][GLOB.log_end]")
 
 /proc/log_asset(text)
-	rustg_log_write(GLOB.world_game_log, "ASSETS: [text][GLOB.log_end]")
+	WRITE_LOG(GLOB.world_game_log, "ASSETS: [text][GLOB.log_end]")
 
 /proc/log_tgui(user_or_client, text)
 	if(!text)
@@ -188,49 +188,49 @@ GLOBAL_PROTECT(log_end)
 		var/client/client = user_or_client
 		entry += "[client.ckey]"
 	entry += ":\n[text]"
-	rustg_log_write(GLOB.world_game_log, "TGUI: [entry][GLOB.log_end]")
+	WRITE_LOG(GLOB.world_game_log, "TGUI: [entry][GLOB.log_end]")
 
 /proc/log_antag_objectives(datum/mind/Mind)
 	if(length(Mind.objectives))
-		rustg_log_write(GLOB.world_game_log, "GAME: Start objective log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "GAME: Start objective log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
 		var/count = 1
 		for(var/datum/objective/objective in Mind.objectives)
-			rustg_log_write(GLOB.world_game_log, "GAME: Objective #[count]: [objective.explanation_text][GLOB.log_end]")
+			WRITE_LOG(GLOB.world_game_log, "GAME: Objective #[count]: [objective.explanation_text][GLOB.log_end]")
 			count++
-		rustg_log_write(GLOB.world_game_log, "GAME: End objective log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "GAME: End objective log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
 
 /proc/log_goals(datum/mind/Mind)
 	if(length(Mind.goals))
-		rustg_log_write(GLOB.world_game_log, "GAME: Start goal log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "GAME: Start goal log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
 		var/count = 1
 		for(var/datum/goal/goal in Mind.goals)
-			rustg_log_write(GLOB.world_game_log, "GAME: Goal #[count]: [goal.description][GLOB.log_end]")
+			WRITE_LOG(GLOB.world_game_log, "GAME: Goal #[count]: [goal.description][GLOB.log_end]")
 			count++
-		rustg_log_write(GLOB.world_game_log, "GAME: End goal log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "GAME: End goal log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
 
 /proc/log_memories(datum/mind/Mind)
 	if(length(Mind.goals))
-		rustg_log_write(GLOB.world_game_log, "GAME: Start memory log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "GAME: Start memory log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
 		var/count = 1
 		for(var/datum/memory/memory in Mind.memories)
-			rustg_log_write(GLOB.world_game_log, "GAME:  Memory #[count]: [memory.memory][GLOB.log_end]")
+			WRITE_LOG(GLOB.world_game_log, "GAME:  Memory #[count]: [memory.memory][GLOB.log_end]")
 			count++
-		rustg_log_write(GLOB.world_game_log, "GAME: End memory log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "GAME: End memory log for [html_decode(Mind.key)]/[html_decode(Mind.name)][GLOB.log_end]")
 
 /proc/log_world(text)
 	if(config && config.log_world_output)
-		rustg_log_write(GLOB.world_game_log, "WORLD: [html_decode(text)][GLOB.log_end]")
+		WRITE_LOG(GLOB.world_game_log, "WORLD: [html_decode(text)][GLOB.log_end]")
 
 /proc/log_config(text)
-	rustg_log_write(GLOB.config_error_log, "[text][GLOB.log_end]")
+	WRITE_LOG(GLOB.config_error_log, "[text][GLOB.log_end]")
 	SEND_TEXT(world.log, text)
 
 /proc/log_href(text)
-	rustg_log_write(GLOB.world_href_log, "HREF: [html_decode(text)][GLOB.log_end]")
+	WRITE_LOG(GLOB.world_href_log, "HREF: [html_decode(text)][GLOB.log_end]")
 
 
 /proc/log_sql(text)
-	rustg_log_write(GLOB.sql_log, "[text][GLOB.log_end]")
+	WRITE_LOG(GLOB.sql_log, "[text][GLOB.log_end]")
 	SEND_TEXT(world.log, text)
 
 //pretty print a direction bitflag, can be useful for debugging.
