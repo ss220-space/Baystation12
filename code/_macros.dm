@@ -209,3 +209,6 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 /proc/______qdel_list_wrapper(list/L) //the underscores are to encourage people not to use this directly.
 	QDEL_LIST(L)
+
+/// Explicitly set the length of L to NEWLEN, adding nulls or dropping entries. Is the same value as NEWLEN.
+#define LIST_RESIZE(L, NEWLEN) ((L).len = (NEWLEN))

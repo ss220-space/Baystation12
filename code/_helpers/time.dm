@@ -205,3 +205,20 @@ GLOBAL_VAR_INIT(rollovercheck_last_timeofday, 0)
  */
 /proc/stop_watch(wh)
 	return round(0.1 * (REALTIMEOFDAY - wh), 0.1)
+
+/// Real time since the server started. Same concept as REALTIMEOFDAY.
+/proc/Uptime(from_zero)
+	var/static/days = 0
+	var/static/result = 0
+	var/static/started = world.timeofday
+	var/static/last_time = started
+	var/time = world.timeofday
+	if (time == last_time)
+		return result
+	if (time < last_time)
+		++days
+	last_time = time
+	result = time + days DAYS
+	if (from_zero)
+		result -= started
+	return result
