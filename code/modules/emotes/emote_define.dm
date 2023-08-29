@@ -99,12 +99,9 @@
 			M.audible_message(message = use_3p, self_message = use_1p, deaf_message = emote_message_impaired, hearing_distance = use_range, checkghosts = /datum/client_preference/ghost_sight)
 		else
 			M.visible_message(message = use_3p, self_message = use_1p, blind_message = emote_message_impaired, range = use_range, checkghosts = /datum/client_preference/ghost_sight)
-
+	log_emote(use_3p, user)
 	do_extra(user, target)
-//[INF]
-	if(ismob(user))
-		log_emote(use_3p, user)
-//[/INF]
+
 /decl/emote/proc/do_extra(var/atom/user, var/atom/target)
 	return
 

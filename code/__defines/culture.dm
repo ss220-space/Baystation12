@@ -134,7 +134,13 @@
 #define RELIGION_VOX           "Auralis Reverence"
 
 // IPC cultures.
-#define CULTURE_POSITRONICS    "Union Member"
+#define CULTURE_POSITRONICS_FIRSTGEN			"First Gen - Owned"
+#define CULTURE_POSITRONICS_SECONDGEN_OWNED		"Second Gen - Owned"
+#define CULTURE_POSITRONICS_SECONDGEN_FREE		"Second Gen - Free Resident"
+#define CULTURE_POSITRONICS_SECONDGEN_UNION		"Second Gen - Union Citizen"
+#define CULTURE_POSITRONICS_THIRDGEN_PRIVATELY	"Trird Gen - Privately Owned"
+#define CULTURE_POSITRONICS_THIRDGEN_CORPORATE	"Trird Gen - Corporate Owned"
+#define CULTURE_POSITRONICS_THIRDGEN_STATE		"Trird Gen - State Owned"
 
 #define HOME_SYSTEM_ROOT       "Root"
 
