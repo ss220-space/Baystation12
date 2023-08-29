@@ -148,15 +148,6 @@ Class Procs:
 		LAZYREMOVE(A.machinery_list, src)
 	. = ..()
 
-/obj/machinery/proc/ProcessAll(var/wait)
-	if(processing_flags & MACHINERY_PROCESS_COMPONENTS)
-		for(var/obj/item/stock_parts/part as anything in processing_parts)
-			if(istype(part) && part.machine_process(src) == PROCESS_KILL)
-				part.stop_processing()
-
-	if((processing_flags & MACHINERY_PROCESS_SELF) && Process(wait) == PROCESS_KILL)
-		STOP_PROCESSING_MACHINE(src, MACHINERY_PROCESS_SELF)
-
 /obj/machinery/Process()
 	return PROCESS_KILL // Only process if you need to.
 
