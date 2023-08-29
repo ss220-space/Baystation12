@@ -2,7 +2,7 @@
 	name = SPECIES_IPC
 	name_plural = "machines"
 
-	description = "Positronic intelligence really took off in the 26th century, and it is not uncommon to see independant, free-willed \
+	description = "Positronic intelligence really took off in the 24th century, and it is not uncommon to see independant, free-willed \
 	robots on many human stations, particularly in fringe systems where standards are slightly lax and public opinion less relevant \
 	to corporate operations. IPCs (Integrated Positronic Chassis) are a loose category of self-willed robots with a humanoid form, \
 	generally self-owned after being 'born' into servitude; they are reliable and dedicated workers, albeit more than slightly \
@@ -16,7 +16,7 @@
 	strength = STR_HIGH
 
 	min_age = 1
-	max_age = 90
+	max_age = 95
 
 	warning_low_pressure = 50
 	hazard_low_pressure = -1
@@ -52,7 +52,13 @@
 
 	available_cultural_info = list(
 		TAG_CULTURE = list(
-			CULTURE_POSITRONICS
+			CULTURE_POSITRONICS_FIRSTGEN,
+			CULTURE_POSITRONICS_SECONDGEN_OWNED,
+			CULTURE_POSITRONICS_SECONDGEN_FREE,
+			CULTURE_POSITRONICS_SECONDGEN_UNION,
+			CULTURE_POSITRONICS_THIRDGEN_PRIVATELY,
+			CULTURE_POSITRONICS_THIRDGEN_CORPORATE,
+			CULTURE_POSITRONICS_THIRDGEN_STATE
 		),
 		TAG_HOMEWORLD = list(
 			HOME_SYSTEM_ROOT,
@@ -107,7 +113,7 @@
 	)
 
 	default_cultural_info = list(
-		TAG_CULTURE = CULTURE_POSITRONICS,
+		TAG_CULTURE = CULTURE_POSITRONICS_FIRSTGEN,
 		TAG_HOMEWORLD = HOME_SYSTEM_ROOT,
 		TAG_FACTION = FACTION_POSITRONICS
 	)
@@ -141,9 +147,15 @@
 /datum/species/machine/can_float(mob/living/carbon/human/H)
 	return FALSE
 
+/datum/species/machine/check_background(var/datum/job/job, var/datum/preferences/prefs)
+	var/decl/cultural_info/culture/ipc/c = SSculture.get_culture(prefs.cultural_info[TAG_CULTURE])
+	. = istype(c) ? (job.type in c.valid_jobs) : ..()
+
 /datum/species/machine/skills_from_age(age)	//Converts an age into a skill point allocation modifier. Can be used to give skill point bonuses/penalities not depending on job.
 	switch(age)
 		if(0 to 10)    . = 0
-		if(11 to 20)   . =  4
-		if(21 to 40)   . =  8
-		else           . =  6
+		if(11 to 25)   . =  2
+		if(26 to 40)   . =  4
+		if(41 to 55)   . =  6
+		if(56 to 71)   . =  8
+		else           . =  2
