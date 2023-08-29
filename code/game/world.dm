@@ -117,9 +117,10 @@ GLOBAL_REAL_VAR(list/stack_trace_storage)
 		config.server_name += " #[(world.port % 1000) / 100]"
 
 	if(config && config.log_runtime)
-		var/runtime_log = file("data/logs/runtime/[date_string]_[time2text(world.timeofday, "hh:mm")]_[game_id].log")
-		to_file(runtime_log, "Game [game_id] starting up at [time2text(world.timeofday, "hh:mm.ss")]")
-		log = runtime_log // Note that, as you can see, this is misnamed: this simply moves world.log into the runtime log file.
+		world.log = file("[GLOB.log_directory]/runtime.log")
+		world.log << "Game [game_id] starting up at [time2text(world.timeofday, "hh:mm.ss")]"
+
+
 
 	if (config && config.log_hrefs)
 		GLOB.href_logfile = file("data/logs/[date_string] hrefs.htm")
@@ -154,7 +155,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 
 
 /world/Topic(T, addr, master, key)
-	to_file(diary, "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][log_end]")
+	to_file(diary, "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][GLOB.log_end]")
 
 	if (GLOB.world_topic_last > world.timeofday)
 		GLOB.world_topic_throttle = list() //probably passed midnight

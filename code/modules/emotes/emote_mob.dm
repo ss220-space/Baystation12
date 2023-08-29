@@ -59,7 +59,7 @@
 	for (var/obj/item/implant/I in src)
 		if (I.implanted)
 			I.trigger(act, src)
-	log_emote(message, src)
+
 
 /mob/proc/format_emote(var/emoter = null, var/message = null)
 	var/pretext
@@ -120,6 +120,7 @@
 	return overall
 
 /mob/proc/custom_emote(var/m_type = VISIBLE_MESSAGE, var/message = null)
+	log_emote(message, src)
 
 	if((usr && stat) || (!use_me && usr == src))
 		to_chat(src, "You are unable to emote.")
