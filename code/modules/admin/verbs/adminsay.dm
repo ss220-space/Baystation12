@@ -28,7 +28,7 @@
 
 	msg = sanitize(msg)
 	msg = emoji_parse_by_user(msg, src)//inf
-	log_staff_say("[key_name(src)] : [msg]")
+	log_mentorsay(msg,src)
 
 	if (!msg)
 		return

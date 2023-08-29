@@ -336,7 +336,15 @@ var/global/list/additional_antag_types = list()
 		if(client.mob && client.mob.mind)
 			client.mob.mind.show_roundend_summary(departmental_goal_summary)
 
+	for(var/thing in GLOB.clients)
+		var/client/client = thing
+		if(client.mob && client.mob.mind)
+			log_antag_objectives(client.mob.mind)
+			log_goals(client.mob.mind)
+			log_memories(client.mob.mind)
+
 	to_world(text)
+
 
 /*	if(GLOB.clients.len > 0) // INF, нужна дополнительная статистика? ~bear1ake
 		SSstatistics.set_field("round_end_clients",GLOB.clients.len)
