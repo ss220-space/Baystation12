@@ -176,7 +176,7 @@
 		if(is_species(SPECIES_IPC))
 			if(C && C.hatch_state == HATCH_OPENED)
 				var/mob/living/carbon/human/H = get_cultural_value(TAG_CULTURE)
-				msg += "Отображено на внутренней панеле корпуса: [H]\n"
+				msg += "Отображено на внутренней панели корпуса: [H]\n"
 
 	//splints
 	for(var/organ in list(BP_L_LEG, BP_R_LEG, BP_L_ARM, BP_R_ARM))
