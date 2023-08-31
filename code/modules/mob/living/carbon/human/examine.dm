@@ -171,6 +171,13 @@
 			if(length(robohead.display_text) && f_style == "Text")
 				msg += "Отображает на экране: [robohead.display_text]\n"
 
+	if(!skipjumpsuit)
+		var/obj/item/organ/external/chest/C = get_organ(BP_CHEST)
+		if(is_species(SPECIES_IPC))
+			if(C && C.hatch_state == HATCH_OPENED)
+				var/mob/living/carbon/human/H = get_cultural_value(TAG_CULTURE)
+				msg += "Отображено на внутренней панеле корпуса: [H]\n"
+
 	//splints
 	for(var/organ in list(BP_L_LEG, BP_R_LEG, BP_L_ARM, BP_R_ARM))
 		var/obj/item/organ/external/o = get_organ(organ)

@@ -168,6 +168,7 @@ var/const/NO_EMAG_ACT = -50
 	var/dna_hash = "\[UNSET\]"
 	var/fingerprint_hash = "\[UNSET\]"
 	var/sex = "\[UNSET\]"
+	var/ipc_gen = null
 	var/icon/front
 	var/icon/side
 
@@ -287,13 +288,16 @@ var/const/NO_EMAG_ACT = -50
 		id_card.military_branch = char_branch
 	if(GLOB.using_map.flags & MAP_HAS_RANK)
 		id_card.military_rank = char_rank
+	if(is_species(SPECIES_IPC))
+		id_card.ipc_gen = get_cultural_value(TAG_CULTURE)
 
 /obj/item/card/id/proc/dat()
 	var/list/dat = list("<table><tr><td>")
 	dat += text("Name: []</A><BR>", "[formal_name_prefix][registered_name][formal_name_suffix]")
 	dat += text("Sex: []</A><BR>\n", sex)
 	dat += text("Age: []</A><BR>\n", age)
-
+	if(ipc_gen)
+		dat += text("Registration: []</A><BR>\n", ipc_gen)
 	if(GLOB.using_map.flags & MAP_HAS_BRANCH)
 		dat += text("Branch: []</A><BR>\n", military_branch ? military_branch.name : "\[UNSET\]")
 	if(GLOB.using_map.flags & MAP_HAS_RANK)
