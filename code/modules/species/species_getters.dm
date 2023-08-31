@@ -53,15 +53,6 @@
 		return ((H && H.isSynthetic()) ? "displaying a blue screen on their monitor indicating total system failure" : show_coma)
 
 
-/datum/species/proc/get_ipc_gen(var/mob/living/carbon/human/H)
-	var/ipc_gen = null
-	if (H.key)
-		if(H && H.is_species(SPECIES_IPC))
-			ipc_gen = H.get_cultural_value(TAG_CULTURE)
-			return ipc_gen
-
-
-
 /datum/species/proc/get_blood_colour(var/mob/living/carbon/human/H)
 	return ((H && H.isSynthetic()) ? SYNTH_BLOOD_COLOUR : blood_color)
 
