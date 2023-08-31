@@ -26,7 +26,7 @@
 	path = /obj/item/device/suit_cooling_unit
 
 /datum/fabricator_recipe/mini_suit_cooler
-	path = /obj/item/device/suit_cooling_unit/miniature
+	path = /obj/item/device/suit_cooling_unit/miniature/empty
 
 /datum/fabricator_recipe/weldermask
 	path = /obj/item/clothing/head/welding

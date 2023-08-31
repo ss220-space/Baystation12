@@ -183,7 +183,7 @@
 /obj/item/device/suit_cooling_unit/miniature
 	name = "miniature cooling device"
 	desc = "Minituarized heat sink that can be hooked up to around waist. Weaker than it's bigger counterpart."
-	w_class = ITEM_SIZE_SMALL
+	w_class = ITEM_SIZE_NORMAL
 	icon = 'icons/obj/suitcooler.dmi'
 	icon_state = "miniaturesuitcooler0"
 	item_state = "coolingbelt"
@@ -246,3 +246,12 @@
 
 	if(cell.charge <= 0)
 		turn_off(1)
+
+
+/obj/item/device/suit_cooling_unit/miniature/empty
+
+
+/obj/item/device/suit_cooling_unit/empty/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+	cell = null
