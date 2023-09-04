@@ -232,7 +232,7 @@
 
 		for(var/M in client.prefs.body_markings)
 			var/datum/sprite_accessory/SA = GLOB.body_marking_styles_list[M]
-			if(istype(SA, /datum/sprite_accessory/marking/booster) && (client.DonateData?.level < 4))
+			if(istype(SA, /datum/sprite_accessory/marking/booster) && (client.DonateData?.level < 3))
 				to_chat(usr, "Нельзя зайти за бустера без соответствующего уровня доната.")
 				return 0
 //[/INF]
@@ -554,7 +554,7 @@
 
 	for(var/M in client.prefs.body_markings)
 		var/datum/sprite_accessory/S = GLOB.body_marking_styles_list[M]
-		if(istype(S, /datum/sprite_accessory/marking/booster) && (client.DonateData?.level < 4))
+		if(istype(S, /datum/sprite_accessory/marking/booster) && (client.DonateData?.level < 3))
 			to_chat(src, "Нельзя зайти за бустера без соответствующего уровня доната.")
 			spawning = 0
 			return null

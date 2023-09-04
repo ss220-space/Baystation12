@@ -997,9 +997,6 @@
 /area/map_template/ninja_dojo/dojo)
 "gz" = (
 /obj/structure/bed/chair/armchair/brown,
-/obj/effect/landmark{
-	name = "paramountstart"
-	},
 /turf/simulated/floor/carpet/green,
 /area/map_template/ninja_dojo/dojo)
 "kd" = (
@@ -1011,18 +1008,6 @@
 	},
 /obj/item/book/manual/psionics,
 /turf/simulated/floor/wood/walnut,
-/area/map_template/ninja_dojo/dojo)
-"oW" = (
-/obj/effect/landmark{
-	name = "paramountstart"
-	},
-/turf/simulated/floor/carpet,
-/area/map_template/ninja_dojo/dojo)
-"qb" = (
-/obj/effect/landmark{
-	name = "paramountstart"
-	},
-/turf/simulated/floor/carpet/green,
 /area/map_template/ninja_dojo/dojo)
 "wG" = (
 /obj/structure/bed/padded,
@@ -1063,12 +1048,6 @@
 /obj/item/device/flashlight/lamp,
 /obj/structure/table/woodentable/walnut,
 /turf/simulated/floor/wood/walnut,
-/area/map_template/ninja_dojo/dojo)
-"QW" = (
-/obj/effect/landmark/start{
-	name = "Paramount"
-	},
-/turf/simulated/floor/carpet/green,
 /area/map_template/ninja_dojo/dojo)
 "Ra" = (
 /obj/structure/table/woodentable/walnut,
@@ -1574,7 +1553,7 @@ aD
 aU
 aD
 bt
-oW
+bt
 bt
 bt
 aD
@@ -2163,7 +2142,7 @@ ab
 ac
 ad
 Ra
-qb
+kd
 ad
 av
 aD
@@ -2206,7 +2185,7 @@ ab
 ac
 ad
 bo
-QW
+kd
 ad
 aw
 aE

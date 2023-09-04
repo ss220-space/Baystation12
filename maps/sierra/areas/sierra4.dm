@@ -32,6 +32,10 @@
 
 /area/centcom/test
 	name = "Centcom Testing Facility"
+
+area/centcom/scgfleet
+	name = "SFV Stinger, Antietam-class Destroyer - Bridge"
+
 /*
 /area/centcom/evac
 	name = "Centcom Emergency Shuttle"
@@ -187,7 +191,7 @@
 
 /area/tdome/testing
 	name = "Thunderdome (TESTING AREA)"
-	icon_state = "purple"
+
 
 /area/tdome/testing/engineering
 	requires_power = 0

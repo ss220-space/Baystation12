@@ -3,55 +3,69 @@
 /client/New()
 	. = ..()
 	SyncWithDonatorData()
+	update_ooc_color()
 
 /client/proc/SyncWithDonatorData()
-	if(list_find(GLOB.donators_data, key))
-		DonateData = GLOB.donators_data[key]
-	else
-		DonateData = new(key)
+	DonateData = new()
+	DonateData.ckey = ckey
+	donator_check()
 
-GLOBAL_LIST_EMPTY(donators_data)
+/client/proc/donator_check()
+	set waitfor = FALSE // This needs to run async because any sleep() inside /client/New() breaks stuff badly
+	if(IsGuestKey(key))
+		return
+
+	if(!SSdbcore.IsConnected())
+		return
+
+	if(check_rights(R_ADMIN, 0, mob)) // Yes, the mob is required, regardless of other examples in this file, it won't work otherwise
+		DonateData.level = 4
+		DonateData.rank = "Tier IV"
+		DonateData.points = 100
+		return
+
+	//Donator stuff.
+	var/datum/db_query/query_donor_select = SSdbcore.NewQuery({"
+		SELECT CAST(SUM(amount) as UNSIGNED INTEGER) FROM [sqlfdbkdbutil].budget
+		WHERE ckey=:ckey
+			AND is_valid=true
+			AND date_start <= NOW()
+			AND (NOW() < date_end OR date_end IS NULL)
+		GROUP BY ckey
+	"}, list("ckey" = ckey))
+
+	if(!query_donor_select.warn_execute())
+		qdel(query_donor_select)
+		return
+
+	if(query_donor_select.NextRow())
+		var/total = query_donor_select.item[1]
+		if(total >= 100)
+			DonateData.level = 1
+			DonateData.rank = "Tier I"
+		if(total >= 300)
+			DonateData.level = 2
+			DonateData.rank = "Tier II"
+		if(total >= 500)
+			DonateData.level = 3
+			DonateData.rank = "Tier III"
+		if(total >= 1000)
+			DonateData.level = 4
+			DonateData.rank = "Tier IV"
+		DonateData.points = total / 10
+		var/list/rank_color = SSexdata.GetDataByKey(DATASTORE_RANKS_OOC_COLORS, DonateData.rank)
+		if(length(rank_color))
+			DonateData.ooc_color = rank_color
+			update_ooc_color()
+	qdel(query_donor_select)
 
 /datum/donator_data
-	var/key
+	var/ckey
 	var/rank
 	var/level
 	var/ooc_color
 	var/points = 0
 	var/list/donate_loadout = list()
-
-/datum/donator_data/New(_key)
-	. = ..()
-	key = _key
-	if(istext(key))
-		Update()
-		GLOB.donators_data[key] = src
-
-/datum/donator_data/proc/Update()
-	if(key)
-		var/list/rank_and_points = SSexdata.GetDataByKey(DATASTORE_DONATORS, ckey(key))
-		if(islist(rank_and_points) && length(rank_and_points))
-			if(list_find(rank_and_points, "rank"))
-				rank = rank_and_points["rank"]
-			if(list_find(rank_and_points, "points"))
-				points = rank_and_points["points"]
-			if(rank)
-				var/list/levels = SSexdata.GetDataByKey(DATASTORE_DONATORS_RANKS, rank)
-				if(levels && islist(levels) && length(levels) && list_find(levels, "level"))
-					level = levels["level"]
-
-				var/list/rank_color = SSexdata.GetDataByKey(DATASTORE_RANKS_OOC_COLORS, rank)
-				if(length(rank_color))
-					ooc_color = rank_color
-
-		for(var/client/C in GLOB.admins)
-			if (C.ckey != ckey(key))
-				continue
-			if(!check_rights(R_ADMIN, FALSE, C))
-				break
-			rank = "Admin"
-			level = 5
-			points = 500
 
 /datum/donator_data/proc/GetAvailablePoints()
 	. = points

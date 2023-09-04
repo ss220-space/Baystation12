@@ -303,6 +303,7 @@
 		else
 			passthrough = 1 //so ghosts don't stop bullets
 	else
+		admin_attack_log(firer, null, "shot at [A.type]", null, "shot with [src.type] at [A.type] ([A.x],[A.y],[A.z])")
 		passthrough = (A.bullet_act(src, def_zone) == PROJECTILE_CONTINUE) //backwards compatibility
 		if(isturf(A))
 			for(var/obj/O in A)

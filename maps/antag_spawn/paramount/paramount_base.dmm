@@ -1,0 +1,2535 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/table/rack,
+/obj/item/defibrillator/compact/combat/loaded,
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/paramount_den/den)
+"ab" = (
+/turf/unsimulated/wall{
+	desc = "A secure airlock. Doesn't look like you can get through easily.";
+	icon = 'icons/obj/doors/centcomm/door.dmi';
+	icon_state = "closed";
+	name = "Facility Access"
+	},
+/area/map_template/paramount_den/den)
+"ac" = (
+/obj/structure/table/rack,
+/obj/item/stack/nanopaste,
+/obj/item/stack/nanopaste,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"ad" = (
+/obj/structure/closet/medical_wall{
+	pixel_y = 32
+	},
+/obj/item/tank/anesthetic,
+/obj/item/clothing/mask/breath/medical,
+/obj/item/clothing/gloves/latex,
+/obj/item/clothing/mask/surgical,
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 16
+	},
+/obj/item/reagent_containers/glass/bottle/stoxin,
+/obj/item/reagent_containers/glass/bottle/stoxin,
+/obj/item/reagent_containers/syringe,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"af" = (
+/turf/unsimulated/wall{
+	desc = "A secure airlock. Doesn't look like you can get through easily.";
+	icon = 'icons/obj/doors/centcomm/door.dmi';
+	icon_state = "closed";
+	name = "Facility Access";
+	dir = 8
+	},
+/area/map_template/paramount_den/den)
+"ag" = (
+/obj/structure/table/glass,
+/obj/item/storage/firstaid/surgery,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/sterilizine,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"ai" = (
+/obj/structure/table/glass,
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 1
+	},
+/obj/structure/window/reinforced/crescent{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"aj" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/box/anti_photons,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"al" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/chemical_dispenser/full,
+/obj/item/reagent_containers/glass/beaker/large,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"am" = (
+/obj/item/clothing/suit/storage/toggle/labcoat/foundation,
+/obj/structure/closet/cabinet,
+/obj/item/storage/box/syringes,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/reagent_containers/glass/beaker/vial,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"ao" = (
+/obj/structure/table/woodentable/walnut,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"ar" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"as" = (
+/obj/machinery/computer/teleporter,
+/turf/simulated/floor/plating,
+/area/map_template/paramount_den/den)
+"at" = (
+/obj/machinery/tele_projector,
+/turf/simulated/floor/plating,
+/area/map_template/paramount_den/den)
+"au" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/tele_pad,
+/turf/simulated/floor/plating,
+/area/map_template/paramount_den/den)
+"aw" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "freezerfloor"
+	},
+/area/map_template/paramount_den/den)
+"ax" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/toy/figure/wizard,
+/obj/item/device/radio/intercom/syndicate{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"az" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/device/multitool/hacktool,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"aA" = (
+/obj/effect/landmark{
+	name = "paramountstart"
+	},
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/paramount_den/den)
+"aB" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/stack/medical/advanced/bruise_pack,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"aD" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"aE" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 8
+	},
+/area/map_template/paramount_den/den)
+"aG" = (
+/obj/machinery/chem_master,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"aH" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/purple,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"aK" = (
+/obj/item/device/radio/intercom/syndicate{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/paramount_den/den)
+"aM" = (
+/obj/structure/iv_drip,
+/obj/structure/window/reinforced/crescent,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"aN" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/cell_charger,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/clothing/accessory/storage/bandolier,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"aP" = (
+/obj/machinery/psi_meter{
+	req_access = list("ACCESS_SYNDICATE")
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"aR" = (
+/obj/structure/hygiene/toilet{
+	pixel_y = 15
+	},
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "freezerfloor"
+	},
+/area/map_template/paramount_den/den)
+"aT" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/ivbag/blood/OMinus,
+/obj/item/reagent_containers/ivbag/blood/OMinus,
+/obj/structure/window/reinforced/crescent{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"aU" = (
+/obj/structure/flora/pottedplant/aquatic,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"aV" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "freezerfloor"
+	},
+/area/map_template/paramount_den/den)
+"aW" = (
+/obj/machinery/fabricator{
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	fab_status_flags = 1;
+	name = "unlocked autolathe"
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"ba" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bb" = (
+/obj/effect/landmark/start{
+	name = "Paramount"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bd" = (
+/obj/machinery/door/airlock/centcom,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"be" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/paramount_den/den)
+"bf" = (
+/obj/item/storage/mirror{
+	dir = 4;
+	icon_state = "mirror";
+	pixel_x = -1;
+	pixel_y = 40
+	},
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 27
+	},
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "freezerfloor"
+	},
+/area/map_template/paramount_den/den)
+"bj" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/obj/item/device/radio/intercom/syndicate{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "freezerfloor"
+	},
+/area/map_template/paramount_den/den)
+"bk" = (
+/obj/structure/bookcase,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bq" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"br" = (
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/microwave,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5;
+	icon_state = "intact"
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bt" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bv" = (
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/paramount_den/den)
+"bw" = (
+/turf/unsimulated/wall/fakeglass,
+/area/map_template/paramount_den/den)
+"by" = (
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bA" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bB" = (
+/obj/structure/table/glass,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/combat,
+/obj/structure/window/reinforced/crescent{
+	dir = 4
+	},
+/obj/structure/window/reinforced/crescent,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bE" = (
+/turf/unsimulated/wall,
+/area/map_template/paramount_den/den)
+"bH" = (
+/obj/machinery/chemical_dispenser/ert,
+/obj/item/reagent_containers/glass/beaker/large,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bI" = (
+/obj/structure/flora/pottedplant/bamboo,
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/paramount_den/den)
+"bJ" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/holster/security/tactical,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bK" = (
+/obj/machinery/bodyscanner{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bL" = (
+/obj/machinery/door/morgue{
+	dir = 2;
+	name = "Bath"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bM" = (
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/chemical_dispenser/bar_soft/full,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bN" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"bQ" = (
+/turf/simulated/floor/beach/water/ocean{
+	icon_state = "seashallow"
+	},
+/area/map_template/paramount_den/den)
+"bT" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/psionics,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bU" = (
+/obj/structure/flora/pottedplant/crystal,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bX" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/device/flashlight/lamp,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"bZ" = (
+/obj/machinery/optable,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"ca" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/device/radio/intercom/syndicate{
+	dir = 1;
+	pixel_y = -28
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cd" = (
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"cf" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "freezerfloor"
+	},
+/area/map_template/paramount_den/den)
+"ci" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Equipment"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"cj" = (
+/obj/structure/hygiene/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -22;
+	pixel_y = 0
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cl" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/secure/briefcase/money,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"co" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cp" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/storage/box/glasses,
+/obj/item/storage/box/sinpockets{
+	pixel_x = 5
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"cq" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/medical,
+/obj/item/device/scanner/health,
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/paramount_den/den)
+"cr" = (
+/obj/structure/bookcase{
+	name = "bookcase (Tactics)"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"cv" = (
+/turf/space,
+/area/map_template/paramount_den/den)
+"cx" = (
+/obj/machinery/atmospherics/unary/cryo_cell,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cy" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cz" = (
+/obj/machinery/acting/changer,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cH" = (
+/obj/machinery/body_scanconsole{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cI" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cL" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/utility/full,
+/obj/item/device/multitool,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cN" = (
+/obj/structure/table/glass,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/fire{
+	pixel_x = 1
+	},
+/obj/structure/window/reinforced/crescent{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"cR" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 4
+	},
+/area/map_template/paramount_den/den)
+"gz" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"kd" = (
+/obj/item/reagent_containers/glass/beaker/cryoxadone,
+/obj/structure/table/glass,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"oW" = (
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"wG" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 1
+	},
+/area/map_template/paramount_den/den)
+"zd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+"CF" = (
+/obj/structure/bed/chair/armchair/brown,
+/obj/effect/landmark{
+	name = "paramountstart"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/paramount_den/den)
+"NF" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/device/radio/intercom/syndicate{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/paramount_den/den)
+"Yu" = (
+/obj/structure/table/glass,
+/obj/item/storage/box/beakers,
+/turf/unsimulated/floor/techfloor,
+/area/map_template/paramount_den/den)
+
+(1,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(2,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(3,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(4,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(5,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(6,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(7,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+bE
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(8,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+cz
+ac
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(9,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+cI
+oW
+oW
+ar
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(10,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+cL
+oW
+oW
+bJ
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(11,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+az
+oW
+oW
+ca
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(12,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+bt
+oW
+oW
+aj
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(13,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+oW
+oW
+cl
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(14,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+oW
+oW
+aN
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(15,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+ab
+oW
+oW
+aD
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(16,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+ab
+oW
+oW
+co
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(17,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+cv
+cv
+bE
+bE
+oW
+oW
+aW
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(18,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+ag
+cj
+aB
+aM
+bA
+oW
+bK
+bE
+cv
+bE
+bE
+bE
+ci
+ci
+bE
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(19,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+bZ
+oW
+oW
+oW
+oW
+oW
+cH
+bE
+bE
+bE
+bT
+by
+by
+by
+by
+cr
+bE
+bE
+bE
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(20,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+ad
+oW
+oW
+oW
+oW
+oW
+bq
+bv
+bv
+cR
+bU
+bv
+bv
+bv
+bv
+bU
+cR
+bv
+be
+as
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(21,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+aT
+cN
+ai
+bB
+aG
+oW
+bq
+bv
+bv
+bd
+by
+bv
+aA
+bv
+bv
+by
+bd
+bv
+be
+at
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(22,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+cx
+bs
+oW
+ba
+cy
+cy
+bN
+bv
+bv
+bd
+by
+bv
+bv
+bv
+bv
+by
+bd
+bv
+be
+au
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(23,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+gz
+zd
+oW
+bq
+bv
+bv
+bv
+bv
+bv
+aE
+aU
+bv
+bv
+bv
+bv
+aU
+aE
+bv
+aK
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(24,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+kd
+Yu
+bH
+al
+bI
+bv
+cq
+NF
+aa
+bE
+bk
+by
+by
+by
+by
+cd
+bE
+bE
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(25,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+bE
+bE
+bE
+bE
+af
+bE
+bE
+bE
+bE
+bE
+bw
+bd
+bd
+wG
+bE
+bE
+bE
+bE
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(26,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+bE
+cv
+cv
+cv
+bE
+bM
+by
+by
+by
+bL
+bj
+aw
+cf
+cf
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(27,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+br
+by
+by
+aP
+bE
+bf
+aV
+bQ
+bQ
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(28,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+cp
+by
+CF
+ao
+bE
+aR
+aV
+bQ
+bQ
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(29,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+am
+by
+bb
+ax
+bE
+bE
+bE
+bE
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(30,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+bX
+aH
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(31,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+bE
+bE
+bE
+bE
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(32,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(33,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(34,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(35,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(36,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(37,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(38,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(39,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(40,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(41,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(42,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(43,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}
+(44,1,1) = {"
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+"}

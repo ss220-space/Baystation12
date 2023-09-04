@@ -10,7 +10,7 @@
 	uncreated_component_parts = null
 	stat_immune = 0
 	construct_state = /decl/machine_construction/default/panel_closed
-	
+
 	machine_name = "cyborg recharging station"
 	machine_desc = "A station for recharging robots, cyborgs, and silicon-based humanoids such as IPCs and full-body prosthetics."
 
@@ -48,10 +48,10 @@
 		return
 
 	// If we have repair capabilities, repair any damage.
-	if(weld_rate && occupant.getBruteLoss())
+	if(weld_rate)
 		var/repair = weld_rate - use_power_oneoff(weld_power_use * weld_rate, LOCAL) / weld_power_use
 		occupant.adjustBruteLoss(-repair)
-	if(wire_rate && occupant.getFireLoss())
+	if(wire_rate)
 		var/repair = wire_rate - use_power_oneoff(wire_power_use * wire_rate, LOCAL) / wire_power_use
 		occupant.adjustFireLoss(-repair)
 
@@ -190,7 +190,7 @@
 		var/mob/living/silicon/robot/R = M
 		return (R.cell)
 	if(ishuman(M))
-		var/mob/living/carbon/human/H = M		
+		var/mob/living/carbon/human/H = M
 		if(H.isSynthetic()) // FBPs and IPCs
 			return 1
 		if(istype(H.back,/obj/item/rig))

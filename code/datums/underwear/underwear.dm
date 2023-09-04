@@ -67,7 +67,10 @@ datum/category_group/underwear/dd_SortValue()
 	var/obj/item/underwear/UW = new underwear_type()
 	UW.SetName(underwear_name)
 	UW.gender = underwear_gender
-	UW.icon = icon
+	if(user.is_species(SPECIES_UNATHI) || user.is_species(SPECIES_YEOSA))
+		UW.icon = 'icons/mob/underwear_unath.dmi'
+	else
+		UW.icon = icon
 	UW.icon_state = icon_state
 
 	for(var/datum/gear_tweak/gt in tweaks)
