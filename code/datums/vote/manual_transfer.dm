@@ -34,9 +34,7 @@
 	last_vote = world.time
 	..()
 
-/datum/vote/transfer_manual/handle_default_votes()
-	if(config.vote_no_default)
-		return
+/datum/vote/transfer_manual/tally_result()
 	var/factor = 0.5
 	switch(world.time / (1 MINUTE))
 		if(0 to 60)
@@ -49,8 +47,30 @@
 			factor = 1.2
 		else
 			factor = 1.4
-	choices[CHOICE_TRANSFER] = round(choices[CHOICE_TRANSFER] * factor)
+
+	var/list/new_choices = list(
+		CHOICE_TRANSFER = 0,
+		CHOICE_EXTEND = 0
+	)
+	for (var/ckey in votes)
+		var/mob/voter = get_mob_by_key(ckey)
+		if (!ismob(voter) || !votes[ckey] || !length(votes[ckey]))
+			continue
+
+		var/voted_key_index = votes[ckey][1]
+		var/voted_key = new_choices[voted_key_index]
+
+		if (!isliving(voter))
+			new_choices[voted_key] += 0.5
+			continue
+
+		new_choices[voted_key] += 1
+
+	choices[CHOICE_TRANSFER] = round(new_choices[CHOICE_TRANSFER] * factor)
+	choices[CHOICE_EXTEND]   = new_choices[CHOICE_EXTEND]
 	to_world("<font color='purple'>Crew Transfer Factor: [factor]</font>")
+
+	. = ..()
 
 /datum/vote/transfer_manual/report_result()
 	if(..())
