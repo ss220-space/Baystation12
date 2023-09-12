@@ -1,8 +1,9 @@
 /obj/effect/overmap/visitable/ship/landable/ascent
 	name = "Ascent Caulship"
-	scanner_name = "Ascent Caulship"
+	scanner_name = "Caulship"
+	scannable = TRUE
 	shuttle = "Ascent Caulship"
-	desc = "Wake signature indicates a small unarmed vessel of unknown design."
+	scanner_desc = "Wake signature indicates a small unarmed vessel of unknown design."
 	moving_state = "ship_moving"
 	max_speed = 1/(2 SECONDS)
 	burn_delay = 1 SECONDS
@@ -18,7 +19,6 @@
 
 /obj/machinery/computer/shuttle_control/explore/ascent
 	name = "shuttle control console"
-	scanner_name = "Ascent Caulship"
 	shuttle_tag = "Ascent Caulship"
 	icon_state = "ascent"
 	icon_keyboard = "ascent_key"

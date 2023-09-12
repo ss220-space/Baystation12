@@ -4673,19 +4673,6 @@
 /obj/structure/lattice,
 /turf/simulated/floor/reinforced/airless,
 /area/space)
-"wd" = (
-/obj/machinery/pointdefense{
-	initial_id_tag = "patrol_pd"
-	},
-/obj/machinery/pointdefense{
-	initial_id_tag = "patrol_pd"
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/space)
 "wv" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -10062,7 +10049,7 @@ aa
 ab
 ab
 ab
-wd
+FT
 ab
 ab
 aa

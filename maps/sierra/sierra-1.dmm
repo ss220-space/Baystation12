@@ -29422,6 +29422,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
+"VM" = (
+/obj/effect/shuttle_landmark/bearcat_shuttle/sierra,
+/turf/space,
+/area/space)
 "VO" = (
 /obj/structure/sign/warning/hot_exhaust{
 	dir = 1
@@ -40222,7 +40226,7 @@ Is
 Is
 Is
 Is
-Is
+VM
 Is
 Is
 Is

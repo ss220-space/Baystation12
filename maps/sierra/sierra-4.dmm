@@ -17899,6 +17899,16 @@
 	name = "carpet"
 	},
 /area/centcom/living)
+"sBN" = (
+/obj/effect/floor_decal/corner/darkblue/diagonal,
+/obj/machinery/acting/changer/mirror{
+	pixel_x = 32
+	},
+/turf/unsimulated/floor/techfloor{
+	icon_state = "dark";
+	icon = 'icons/turf/flooring/tiles.dmi'
+	},
+/area/centcom/scgfleet)
 "sCd" = (
 /obj/effect/floor_decal/corner/black/mono,
 /obj/effect/floor_decal/techfloor{
@@ -50410,7 +50420,7 @@ aab
 aDz
 smn
 kFu
-kFu
+sBN
 oue
 kFu
 aHR

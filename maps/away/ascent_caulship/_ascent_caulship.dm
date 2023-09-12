@@ -12,16 +12,19 @@
 	area_usage_test_exempted_areas = list(
 		/area/ship/ascent_caulship
 	)
-	spawn_cost = 0.5
+	spawn_cost = 2000
+	spawn_weight = 50
 	player_cost = 4 // Нынешнее значение основано на количестве игроков в авейке ~bear1ake
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/ascent)
 
 /obj/effect/overmap/visitable/sector/ascent_caulship_ring
 	name = "Ruined Bluespace Jump Ring"
-	desc = "A ruined jumpdrive ring of Ascent design, used to transport individual ships at FTL speeds."
+	scanner_name = "Ruined Bluespace Jump Ring"
+	scanner_desc = "A ruined jumpdrive ring of Ascent design, used to transport individual ships at FTL speeds."
 	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	icon_state = "event"
 	hide_from_reports = TRUE
+	scannable = TRUE
 
 /obj/effect/submap_landmark/joinable_submap/ascent_caulship
 	name = "Ascent Caulship"

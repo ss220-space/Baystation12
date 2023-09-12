@@ -103,7 +103,7 @@ SIERRA_ESCAPE_POD(9)
 	landmark_tag = "nav_ninja_deck1"
 
 /obj/effect/shuttle_landmark/ninja/deck2
-	name = "East of Third Deck"
+	name = "East of Second Deck"
 	landmark_tag = "nav_ninja_deck2"
 
 /obj/effect/shuttle_landmark/ninja/deck3
@@ -177,7 +177,7 @@ SIERRA_ESCAPE_POD(9)
 	landmark_tag = "nav_merc_deck1"
 
 /obj/effect/shuttle_landmark/merc/deck2
-	name = "South of Third deck"
+	name = "South of Second deck"
 	landmark_tag = "nav_merc_deck2"
 
 /obj/effect/shuttle_landmark/merc/deck3
@@ -222,11 +222,11 @@ SIERRA_ESCAPE_POD(9)
 		)
 
 /obj/effect/shuttle_landmark/skipjack/deck1
-	name = "Northeast of Fourth Deck"
+	name = "Northeast of Third Deck"
 	landmark_tag = "nav_skipjack_deck1"
 
 /obj/effect/shuttle_landmark/skipjack/deck2
-	name = "Southeast of Third deck"
+	name = "Southeast of Second deck"
 	landmark_tag = "nav_skipjack_deck2"
 
 /obj/effect/shuttle_landmark/skipjack/deck3
@@ -271,11 +271,11 @@ SIERRA_ESCAPE_POD(9)
 	landmark_tag = "nav_ert_merchant"
 
 /obj/effect/shuttle_landmark/ert/deck1
-	name =  "Southwest of Fourth deck"
+	name =  "Southwest of Third deck"
 	landmark_tag = "nav_ert_deck1"
 
 /obj/effect/shuttle_landmark/ert/deck2
-	name = "Northwest of Third deck"
+	name = "Northwest of Second deck"
 	landmark_tag = "nav_ert_deck2"
 
 /obj/effect/shuttle_landmark/ert/deck3
@@ -365,11 +365,11 @@ SIERRA_ESCAPE_POD(9)
 	base_turf = /turf/simulated/floor/plating
 
 /obj/effect/shuttle_landmark/sierra/deck1/exploration_shuttle
-	name = "Space near Fourth Deck"
+	name = "Space near Third Deck"
 	landmark_tag = "nav_deck1_calypso"
 
 /obj/effect/shuttle_landmark/sierra/deck2/exploration_shuttle
-	name = "Space near Third Deck"
+	name = "Space near Second Deck"
 	landmark_tag = "nav_deck2_calypso"
 
 /obj/effect/shuttle_landmark/sierra/deck3/exploration_shuttle
@@ -415,7 +415,7 @@ SIERRA_ESCAPE_POD(9)
 	landmark_tag = "nav_deck1_guppy"
 
 /obj/effect/shuttle_landmark/sierra/deck2/guppy
-	name = "Space near Third Deck"
+	name = "Space near Second Deck"
 	landmark_tag = "nav_deck2_guppy"
 
 /obj/effect/shuttle_landmark/sierra/deck3/guppy
