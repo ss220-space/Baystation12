@@ -225,6 +225,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
 	},
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "aA" = (
@@ -244,6 +247,9 @@
 "aC" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/tank/carbon_dioxide,
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "aD" = (
@@ -490,6 +496,10 @@
 "be" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 4
+	},
+/obj/structure/sign/warning/compressed_gas{
+	dir = 8;
+	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
