@@ -434,3 +434,12 @@ RADIATION_LOWER_LIMIT 0.15
 ## Add lines of 'DISALLOW_VOTABLE_MODE config_tag' to prevent a normally votable mode from being votable, eg:
 ## DISALLOW_VOTABLE_MODE changeling
 ## DISALLOW_VOTABLE_MODE malfunction
+
+
+## Manual transfer vote cooldowns (in minutes)
+
+## Length of time before the first manual transfer vote could be called
+#VOTE_MANUAL_TRANSFER_INITIAL 120
+
+## Length of time before the next manual transfer vote could be called
+#VOTE_MANUAL_TRANSFER_COOLDOWN 30

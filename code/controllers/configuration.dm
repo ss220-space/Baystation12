@@ -46,6 +46,7 @@ var/list/gamemode_cache = list()
 	var/vote_autotransfer_initial = 120 MINUTES // Length of time before the first autotransfer vote is called
 	var/vote_autotransfer_interval = 30 MINUTES // length of time before next sequential autotransfer vote
 	var/vote_manual_transfer_initial = 120 MINUTES // Length of time before the first manual transfer vote could be called
+	var/vote_manual_transfer_cooldown = 30 MINUTES // Length of time before the next manual transfer vote could be called
 	var/vote_autogamemode_timeleft = 100 //Length of time before round start when autogamemode vote is called (in seconds, default 100).
 	var/vote_no_default = 0				// vote does not default to nochange/norestart (tbi)
 	var/vote_no_dead = 0				// dead people can't vote (tbi)
@@ -439,6 +440,9 @@ var/list/gamemode_cache = list()
 
 				if ("vote_manual_transfer_initial")
 					config.vote_manual_transfer_initial = text2num(value) MINUTES
+
+				if ("vote_manual_transfer_cooldown")
+					config.vote_manual_transfer_cooldown = text2num(value) MINUTES
 
 				if ("vote_autogamemode_timeleft")
 					config.vote_autogamemode_timeleft = text2num(value)

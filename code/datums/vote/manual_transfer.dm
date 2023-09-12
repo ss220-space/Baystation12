@@ -4,6 +4,7 @@
 /datum/vote/transfer_manual
 	name = "manual transfer"
 	question = "End the shift?"
+	var/static/last_vote = 0
 
 /datum/vote/transfer_manual/can_run(mob/creator, automatic)
 	if(!(. = ..()))
@@ -17,6 +18,9 @@
 	if(world.time < config.vote_manual_transfer_initial)
 		to_chat(creator, "Manual crew transfer could be called after [(config.vote_manual_transfer_initial - world.time) / 600] minutes!")
 		return FALSE
+	if (world.time < last_vote + config.vote_manual_transfer_cooldown)
+		to_chat(creator, "Manual crew transfer could be called after [((last_vote + config.vote_manual_transfer_cooldown) - world.time) / 600] minutes!")
+		return FALSE
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 	if (!automatic && security_state.current_security_level_is_same_or_higher_than(security_state.high_security_level))
 		to_chat(creator, "The current alert status is too high to call for a crew transfer!")
@@ -27,6 +31,7 @@
 
 /datum/vote/transfer_manual/setup_vote(mob/creator, automatic)
 	choices = list(CHOICE_TRANSFER, CHOICE_EXTEND)
+	last_vote = world.time
 	..()
 
 /datum/vote/transfer_manual/handle_default_votes()
