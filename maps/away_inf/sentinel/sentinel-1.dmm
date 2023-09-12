@@ -648,7 +648,9 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bt" = (
-/obj/machinery/atmospherics/unary/tank/air,
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 1
+	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
