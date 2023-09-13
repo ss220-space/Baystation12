@@ -58,14 +58,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberia/merchantstorage)
 "af" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet/rd,
-/obj/item/storage/secure/safe{
-	pixel_x = 34
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/submap_landmark/spawnpoint/liberia,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/wall/prepainted,
 /area/liberia/captain)
 "ag" = (
 /obj/structure/bed/padded,
@@ -115,6 +108,11 @@
 	name = "merchant's locker"
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/storage/belt/holster/ic/full,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/mask/gas/alt,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/head/bandana/orange,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberia/merchantstorage)
 "ao" = (
@@ -736,6 +734,8 @@
 /obj/item/clothing/glasses/tacgoggles,
 /obj/item/clothing/accessory/legguards,
 /obj/item/clothing/under/syndicate,
+/obj/item/clothing/suit/armor/pcarrier,
+/obj/item/clothing/head/helmet,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberia/mule)
 "bt" = (
@@ -1741,11 +1741,12 @@
 /area/liberia/engineeringengines)
 "cZ" = (
 /obj/structure/table/woodentable/walnut,
-/obj/machinery/chemical_dispenser/bar_coffee{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
+	},
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	pixel_y = 8;
+	dir = 1
 	},
 /turf/simulated/floor/carpet/red,
 /area/liberia/traidingroom)
@@ -2590,7 +2591,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/item/instrument/guitar,
+/obj/item/device/synthesized_instrument/guitar,
 /turf/simulated/floor/tiled/steel_grid,
 /area/liberia/mule)
 "ej" = (
@@ -3282,8 +3283,7 @@
 "fr" = (
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 1;
-	icon_state = "air_map";
-	start_pressure = 740.5
+	icon_state = "air_map"
 	},
 /obj/machinery/light/small,
 /obj/effect/floor_decal/borderfloor,
@@ -3296,8 +3296,7 @@
 "fs" = (
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 1;
-	icon_state = "air_map";
-	start_pressure = 740.5
+	icon_state = "air_map"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -3613,12 +3612,11 @@
 /area/liberia/bar)
 "fU" = (
 /obj/structure/table/woodentable/walnut,
-/obj/random/drinkbottle,
-/obj/random/drinkbottle,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = null
 	},
+/obj/machinery/chemical_dispenser/bar_alc,
 /turf/simulated/floor/wood/ebony,
 /area/liberia/bar)
 "fV" = (
@@ -3937,6 +3935,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/item/storage/box/donkpockets,
 /turf/simulated/floor/wood/ebony,
 /area/liberia/bar)
 "gy" = (
@@ -3964,6 +3963,8 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
 /turf/simulated/floor/wood/ebony,
 /area/liberia/bar)
 "gA" = (
@@ -4143,12 +4144,12 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/wood/ebony,
-/area/liberia/captain)
-"gP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/turf/simulated/floor/wood/ebony,
+/area/liberia/captain)
+"gP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -4159,6 +4160,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/wood/ebony,
 /area/liberia/captain)
@@ -4201,33 +4205,29 @@
 /turf/simulated/floor/wood/walnut,
 /area/liberia/library)
 "gS" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/cable/blue{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
 /area/liberia/bar)
 "gT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
 /area/liberia/bar)
@@ -4238,7 +4238,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/machinery/light,
 /obj/structure/cable/blue{
 	d1 = 1;
 	d2 = 8;
@@ -4346,12 +4345,8 @@
 /turf/simulated/floor/wood/ebony,
 /area/liberia/captain)
 "hi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/effect/floor_decal/spline/plain/brown,
-/turf/simulated/floor/wood/ebony,
+/turf/simulated/wall/prepainted,
 /area/liberia/captain)
 "hj" = (
 /obj/machinery/door/airlock{
@@ -4456,21 +4451,18 @@
 /turf/simulated/floor/carpet,
 /area/liberia/personellroom2)
 "hv" = (
+/obj/machinery/door/window/northleft{
+	name = "Kitchen"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/liberia/bar)
+"hw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/obj/item/clothing/suit/chef/classic,
-/obj/item/material/kitchen/rollingpin,
-/obj/item/material/knife/kitchen,
-/turf/simulated/floor/tiled/freezer,
-/area/liberia/bar)
-"hw" = (
-/obj/machinery/door/window/northleft{
-	name = "Kitchen"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/freezer,
 /area/liberia/bar)
 "hx" = (
@@ -4534,22 +4526,18 @@
 "hE" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/device/flashlight/lamp/green,
-/turf/simulated/floor/carpet/red,
-/area/liberia/captain)
-"hF" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = 22
 	},
+/turf/simulated/floor/carpet/red,
+/area/liberia/captain)
+"hF" = (
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/structure/undies_wardrobe,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/wall/prepainted,
 /area/liberia/captain)
 "hG" = (
 /obj/structure/closet/cabinet,
@@ -4581,14 +4569,8 @@
 /turf/simulated/floor/carpet,
 /area/liberia/personellroom2)
 "hJ" = (
-/obj/structure/table/reinforced,
-/obj/machinery/reagentgrinder,
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/machinery/alarm/merchant{
-	dir = 4;
-	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/liberia/bar)
@@ -4602,13 +4584,14 @@
 /turf/simulated/floor/tiled/freezer,
 /area/liberia/bar)
 "hL" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/donkpockets,
 /obj/machinery/light/small{
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	req_access = newlist()
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/liberia/bar)
@@ -4644,13 +4627,6 @@
 /turf/simulated/floor/carpet,
 /area/liberia/personellroom2)
 "hQ" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = -21
-	},
-/obj/structure/closet/secure_closet/freezer/kitchen{
-	req_access = newlist()
-	},
 /turf/simulated/floor/tiled/freezer,
 /area/liberia/bar)
 "hR" = (
@@ -6801,19 +6777,31 @@
 /turf/simulated/floor/tiled,
 /area/liberia/hallway)
 "no" = (
+/obj/structure/undies_wardrobe,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/item/storage/secure/safe{
+	pixel_x = 34
+	},
 /turf/simulated/floor/carpet/red,
 /area/liberia/captain)
 "np" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood/walnut,
 /area/liberia/bar)
@@ -7117,6 +7105,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/liberia/dockinghall)
+"rl" = (
+/obj/structure/sign/poster,
+/turf/simulated/wall/prepainted,
+/area/liberia/personellroom2)
 "rn" = (
 /obj/structure/table/rack{
 	dir = 8
@@ -7358,6 +7350,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/liberia/hallway)
+"tj" = (
+/obj/machinery/alarm/merchant{
+	dir = 4;
+	pixel_x = -25
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/reagentgrinder/juicer,
+/turf/simulated/floor/tiled/freezer,
+/area/liberia/bar)
 "to" = (
 /obj/structure/table/rack/dark,
 /obj/random/loot,
@@ -8229,8 +8233,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/liberia/engineeringengines)
 "IQ" = (
-/obj/structure/sign/poster,
-/turf/simulated/wall/prepainted,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/obj/item/material/knife/kitchen,
+/obj/item/material/kitchen/rollingpin,
+/obj/item/clothing/suit/chef/classic,
+/obj/item/reagent_containers/glass/beaker/bowl,
+/turf/simulated/floor/tiled/freezer,
 /area/liberia/bar)
 "Ja" = (
 /obj/structure/bed/chair/wood/walnut,
@@ -8958,6 +8969,17 @@
 /obj/effect/floor_decal/corner/green/three_quarters,
 /turf/simulated/floor/tiled,
 /area/liberia/traidingroom)
+"VR" = (
+/obj/effect/floor_decal/spline/plain/brown,
+/obj/structure/bed/padded,
+/obj/item/bedsheet/rd,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/submap_landmark/spawnpoint/liberia,
+/turf/simulated/floor/wood/ebony,
+/area/liberia/captain)
 "VS" = (
 /obj/machinery/atm{
 	pixel_y = -30
@@ -9013,6 +9035,17 @@
 	},
 /turf/simulated/floor/wood/walnut,
 /area/liberia/library)
+"Wc" = (
+/obj/structure/closet/secure_closet{
+	name = "merchant's locker"
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/storage/belt/medical/emt,
+/obj/item/clothing/head/hardhat/EMS,
+/obj/item/clothing/suit/storage/toggle/fr_jacket/ems,
+/obj/item/clothing/mask/gas/half,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/liberia/merchantstorage)
 "Wn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -9097,6 +9130,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/liberia/hallway)
+"Xf" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/freezer,
+/area/liberia/bar)
 "Xw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -26524,7 +26565,7 @@ VX
 Fc
 Aa
 gO
-hh
+VR
 no
 hE
 xc
@@ -26692,7 +26733,7 @@ aa
 aa
 aa
 aa
-aa
+iy
 iy
 aN
 aU
@@ -26730,7 +26771,7 @@ hi
 af
 hF
 Aa
-aa
+Aa
 aa
 aa
 aa
@@ -26929,9 +26970,9 @@ lu
 Aa
 gQ
 Vp
-Vp
-Vp
-Fs
+hs
+hG
+hN
 Fs
 aa
 aa
@@ -27130,10 +27171,10 @@ fO
 gf
 gr
 np
-Vp
-hs
-hG
-hN
+hj
+ht
+hH
+hO
 Fs
 aa
 aa
@@ -27332,10 +27373,10 @@ fP
 gg
 gs
 gS
-hj
-ht
-hH
-hO
+Vp
+ag
+hI
+ah
 Fs
 aa
 aa
@@ -27534,10 +27575,10 @@ fQ
 gh
 gt
 gT
+rl
 Vp
-ag
-hI
-ah
+Vp
+Vp
 Fs
 aa
 aa
@@ -27736,10 +27777,10 @@ fR
 gi
 gu
 gU
+hk
 IQ
-nQ
-nQ
-nQ
+tj
+Xf
 Uh
 aa
 aa
@@ -27938,7 +27979,7 @@ fS
 gj
 gv
 BH
-hk
+BH
 hv
 hJ
 hQ
@@ -30337,7 +30378,7 @@ jV
 to
 iB
 ae
-al
+Wc
 at
 aC
 lD

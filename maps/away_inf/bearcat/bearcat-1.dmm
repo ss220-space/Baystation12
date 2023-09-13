@@ -2682,7 +2682,7 @@
 /turf/simulated/floor/usedup,
 /area/ship/scrap/maintenance/storage)
 "eU" = (
-/obj/machinery/vending/tool/bearcat,
+/obj/machinery/suit_cycler/engineering,
 /turf/simulated/floor/usedup,
 /area/ship/scrap/maintenance/storage)
 "eV" = (

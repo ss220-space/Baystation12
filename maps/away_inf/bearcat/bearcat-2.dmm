@@ -4282,11 +4282,11 @@
 /obj/structure/sign/warning/compressed_gas{
 	pixel_x = -32
 	},
-/obj/structure/bed/padded,
 /obj/machinery/power/apc/derelict/bearcat{
 	dir = 1;
 	name = "area power controller"
 	},
+/obj/machinery/vending/tool/bearcat,
 /turf/simulated/floor/tiled/usedup,
 /area/ship/scrap/maintenance/engineering)
 "hn" = (
@@ -6374,9 +6374,6 @@
 /obj/item/toy/prize/powerloader,
 /obj/item/material/ashtray/plastic,
 /obj/machinery/recharger,
-/obj/structure/sign/poster{
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled/usedup,
 /area/ship/scrap/maintenance/engineering)
 "Lp" = (
