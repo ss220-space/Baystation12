@@ -31,7 +31,6 @@
 
 /datum/vote/transfer_manual/setup_vote(mob/creator, automatic)
 	choices = list(CHOICE_TRANSFER, CHOICE_EXTEND)
-	last_vote = world.time
 	..()
 
 /datum/vote/transfer_manual/tally_result()
@@ -75,6 +74,7 @@
 /datum/vote/transfer_manual/report_result()
 	if(..())
 		return 1
+	last_vote = world.time
 	if(result[1] == CHOICE_TRANSFER)
 		init_autotransfer()
 
