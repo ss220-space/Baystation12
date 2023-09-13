@@ -6335,6 +6335,7 @@
 	pixel_x = 24
 	},
 /obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit/miniature,
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_y = -22
