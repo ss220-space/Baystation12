@@ -176,3 +176,8 @@
 	name = "Port Shuttle Dock"
 	landmark_tag = "nav_bearcat_port_dock_shuttle"
 	docking_controller = "bearcat_dock_port"
+
+/obj/effect/shuttle_landmark/bearcat_shuttle/sierra
+	name = "Fore Shuttle Dock"
+	landmark_tag = "nav_deck3_bearcat"
+	docking_controller = "nuke_shuttle_dock_airlock"

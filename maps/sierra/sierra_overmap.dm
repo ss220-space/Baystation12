@@ -27,6 +27,7 @@
 		"Skrellian Shuttle" = list("nav_deck3_skrellshuttle"), //away_inf/skrellscoutship.dm shuttle,
 		"Skrellian Scout" = list("nav_deck1_skrellscout"), //away_inf/skrellscoutship.dm shuttle,
 		"SRV Venerable Catfish" = list("nav_deck3_catfish"), //away/verne shuttle,
+		"Exploration Shuttle" = list("nav_deck3_bearcat") //away_inf/bearcat.dm shuttle
 	)
 
 	initial_generic_waypoints = list(

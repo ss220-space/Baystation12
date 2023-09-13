@@ -165,21 +165,23 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/dock)
 "av" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 6
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
 	},
-/obj/effect/paint/dark_gunmetal,
-/turf/simulated/wall/r_wall,
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aw" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
-/obj/machinery/atmospherics/portables_connector,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 8;
+	target_pressure = 15000
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
@@ -223,82 +225,57 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
 	},
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "aA" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+/obj/effect/paint/dark_gunmetal,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
-/obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/atmos)
 "aB" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	frequency = 1442;
-	icon_state = "map_injector";
-	id = "co2_in";
-	use_power = 1
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/black/half{
-	dir = 1
-	},
-/turf/simulated/floor/reinforced/carbon_dioxide,
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aC" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
-	icon_state = "map_vent_in";
-	id_tag = "co2_out";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
-	pump_direction = 0;
-	use_power = 1
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/unary/tank/carbon_dioxide,
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = 32
 	},
-/obj/effect/floor_decal/corner/black/half{
-	dir = 1
-	},
-/turf/simulated/floor/reinforced/carbon_dioxide,
+/turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "aD" = (
-/obj/effect/floor_decal/corner/mauve/half{
-	dir = 1
+/obj/machinery/atmospherics/unary/tank/hydrogen{
+	start_pressure = 6000
 	},
-/obj/machinery/atmospherics/unary/outlet_injector{
-	frequency = 1442;
-	icon_state = "map_injector";
-	id = "h2_in";
-	use_power = 1
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/railing/mapped{
+	dir = 8
 	},
-/turf/simulated/floor/reinforced/hydrogen,
+/turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "aF" = (
-/obj/effect/floor_decal/corner/mauve/half{
-	dir = 1
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/unary/tank/hydrogen{
+	start_pressure = 6000
 	},
-/turf/simulated/floor/reinforced/hydrogen,
+/turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "aG" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
-	icon_state = "map_vent_in";
-	id_tag = "h2_out";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
-	pump_direction = 0;
-	use_power = 1
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/unary/tank/hydrogen{
+	start_pressure = 6000
 	},
-/obj/effect/floor_decal/corner/mauve/half{
-	dir = 1
-	},
-/turf/simulated/floor/reinforced/hydrogen,
+/turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "aH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -425,35 +402,26 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/patrol/dock)
 "aR" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
+/obj/machinery/atmospherics/unary/tank/oxygen{
 	dir = 4;
-	frequency = 1442;
-	icon_state = "map_injector";
-	id = "o2_in";
-	use_power = 1
+	start_pressure = 5000
 	},
-/obj/effect/floor_decal/corner/blue/half{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced/oxygen,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "aS" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aT" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 1
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 10
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
@@ -469,50 +437,53 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aW" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 6
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aX" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	dir = 4
-	},
 /obj/effect/paint/dark_gunmetal,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/atmos)
 "aY" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "aZ" = (
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "ba" = (
-/obj/structure/sign/warning/compressed_gas,
-/obj/effect/paint/dark_gunmetal,
-/turf/simulated/wall/r_wall,
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bb" = (
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bc" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel,
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bd" = (
@@ -523,10 +494,13 @@
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/atmos)
 "be" = (
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
-/obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
+	dir = 4
+	},
+/obj/structure/sign/warning/compressed_gas{
+	dir = 8;
+	pixel_x = 32
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bf" = (
@@ -629,51 +603,44 @@
 /turf/simulated/floor/tiled,
 /area/ship/patrol/dock)
 "bo" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
-	icon_state = "map_vent_in";
-	id_tag = "o2_out";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
-	pump_direction = 0;
-	use_power = 1
-	},
-/obj/effect/floor_decal/corner/blue/half{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced/oxygen,
-/area/ship/patrol/maintenance/atmos)
-"bp" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+/obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
-/obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
-/obj/machinery/door/firedoor,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/plating,
+/area/ship/patrol/maintenance/atmos)
+"bp" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow,
+/obj/structure/sign/warning/compressed_gas{
+	dir = 1;
+	pixel_y = -32
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bq" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "br" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	dir = 1;
-	target_pressure = 40
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/omni/mixer{
+	active_power_usage = 7500;
+	tag_east_con = null;
+	tag_north = 2;
+	tag_south = 1;
+	tag_south_con = 0.79;
+	tag_west_con = 0.21;
+	tag_west = 1
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bs" = (
@@ -681,58 +648,48 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bt" = (
-/obj/machinery/atmospherics/portables_connector{
+/obj/machinery/atmospherics/unary/tank/air{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/blue/diagonal,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "bu" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+/obj/effect/paint/dark_gunmetal,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5
 	},
-/obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall,
 /area/ship/patrol/maintenance/atmos)
 "bv" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 5
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 10
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bw" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bx" = (
-/obj/machinery/light{
+/obj/structure/closet/crate/internals/fuel,
+/obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
-	icon_state = "tube1"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
+	target_pressure = 15000
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "by" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/atmospherics/omni/filter{
-	tag_east = 2;
-	tag_north = 8;
-	tag_south = 1;
-	tag_west = 5
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 1;
+	target_pressure = 15000
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bz" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 10
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 9
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
@@ -902,32 +859,20 @@
 /turf/simulated/floor/tiled,
 /area/ship/patrol/dock)
 "bT" = (
-/obj/machinery/atmospherics/omni/mixer{
-	active_power_usage = 7500;
-	tag_east = 2;
-	tag_east_con = null;
-	tag_north = 1;
-	tag_north_con = 0.21;
-	tag_south = 1;
-	tag_south_con = 0.79;
-	tag_west_con = null
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bU" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
 	},
-/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bV" = (
@@ -936,16 +881,9 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bW" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/effect/floor_decal/corner/red/diagonal{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bX" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 6
-	},
 /obj/machinery/door/firedoor,
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_y = 32
@@ -955,40 +893,34 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bY" = (
-/obj/machinery/atmospherics/omni/filter{
-	tag_east = 2;
-	tag_north = 3;
-	tag_south = 1;
-	tag_west = 4
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "bZ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "ca" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 5
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cb" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 9
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 2;
+	tag_north = 8;
+	tag_south = 1;
+	tag_west = 5
 	},
-/obj/structure/closet/crate/internals/fuel,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cc" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 5
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cd" = (
@@ -1234,31 +1166,16 @@
 /turf/simulated/floor/tiled,
 /area/ship/patrol/dock)
 "cC" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
-	icon_state = "map_vent_in";
-	id_tag = "n2_out";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
-	pump_direction = 0;
-	use_power = 1
+/obj/machinery/atmospherics/unary/tank/nitrogen{
+	start_pressure = 15000;
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/red/half{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced/nitrogen,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/steel_grid,
 /area/ship/patrol/maintenance/atmos)
 "cD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 6
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -1278,9 +1195,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 9
 	},
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -1311,7 +1225,6 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cG" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/structure/catwalk,
 /obj/structure/cable{
 	d1 = 4;
@@ -1327,7 +1240,6 @@
 /obj/machinery/door/airlock/glass/atmos{
 	name = "Atmospherics"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1339,6 +1251,9 @@
 	dir = 4;
 	target_pressure = 15000
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/patrol/maintenance/atmos)
 "cI" = (
@@ -1348,8 +1263,11 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 4
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 2;
+	tag_north = 3;
+	tag_south = 1;
+	tag_west = 4
 	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
@@ -1360,6 +1278,9 @@
 "cK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "cM" = (
@@ -1706,31 +1627,19 @@
 /turf/simulated/floor/tiled,
 /area/ship/patrol/dock)
 "di" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 4;
-	frequency = 1442;
-	icon_state = "map_injector";
-	id = "n2_in";
-	use_power = 1
-	},
-/obj/effect/floor_decal/corner/red/half{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced/nitrogen,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel,
+/turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dk" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/atmospherics/unary/tank/air{
-	dir = 1
-	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 8;
+	target_pressure = 15000
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dl" = (
 /obj/structure/cable{
@@ -1770,15 +1679,17 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dn" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /obj/effect/paint/dark_gunmetal,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 4
+	},
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/maintenance/atmos)
 "do" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+/obj/effect/paint/dark_gunmetal,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9
 	},
-/obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall,
 /area/ship/patrol/maintenance/atmos)
 "dp" = (
@@ -1921,21 +1832,23 @@
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dG" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dH" = (
-/obj/machinery/portable_atmospherics/canister/sleeping_agent,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dI" = (
-/obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "dJ" = (
@@ -2219,9 +2132,10 @@
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/tank{
+/obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister,
 /turf/simulated/floor/plating,
 /area/ship/patrol/maintenance/atmos)
 "ei" = (
@@ -2523,9 +2437,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
 "eR" = (
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8;
-	icon_state = "top-right"
+/obj/effect/floor_decal/scglogo{
+	icon_state = "bottom-right"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
@@ -2542,9 +2455,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
 "eU" = (
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8;
-	icon_state = "bottom-left"
+/obj/effect/floor_decal/scglogo{
+	icon_state = "top-left"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
@@ -2773,9 +2685,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8;
-	icon_state = "bottom-center"
+/obj/effect/floor_decal/scglogo{
+	icon_state = "center-left"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
@@ -2798,11 +2709,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8
-	},
 /obj/effect/overmap/visitable/ship/patrol,
 /obj/machinery/hologram/holopad/longrange,
+/obj/effect/floor_decal/scglogo,
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
 "fs" = (
@@ -2817,9 +2726,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8;
-	icon_state = "top-center"
+/obj/effect/floor_decal/scglogo{
+	icon_state = "center-right"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
@@ -3026,12 +2934,11 @@
 /area/ship/patrol/command/bridge)
 "fO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8;
-	icon_state = "bottom-right"
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
+	},
+/obj/effect/floor_decal/scglogo{
+	icon_state = "bottom-left"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
@@ -3041,18 +2948,16 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8;
-	icon_state = "center-right"
-	},
 /obj/structure/bed/chair/comfy/black,
+/obj/effect/floor_decal/scglogo{
+	icon_state = "bottom-center"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
 "fQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8;
-	icon_state = "top-left"
+/obj/effect/floor_decal/scglogo{
+	icon_state = "top-right"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
@@ -8183,14 +8088,17 @@
 /obj/item/clothing/accessory/legguards,
 /obj/item/clothing/accessory/legguards,
 /obj/item/clothing/accessory/legguards,
+/obj/item/clothing/accessory/armor/helmcover/black,
+/obj/item/clothing/accessory/armor/helmcover/black,
+/obj/item/clothing/accessory/armor/helmcover/black,
 /obj/item/clothing/accessory/storage/pouches,
 /obj/item/clothing/accessory/storage/pouches,
 /obj/item/clothing/accessory/storage/pouches,
 /obj/item/clothing/accessory/storage/pouches/large,
 /obj/item/clothing/accessory/storage/pouches/large,
 /obj/item/clothing/accessory/storage/pouches/large,
-/obj/machinery/light,
 /obj/item/clothing/accessory/ubac,
+/obj/machinery/light,
 /obj/item/clothing/accessory/ubac,
 /obj/item/clothing/accessory/ubac,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -8757,6 +8665,13 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/ship/patrol/barracks/armory)
+"AK" = (
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/ship/patrol/maintenance/atmos)
 "AU" = (
 /obj/effect/paint/dark_gunmetal,
 /turf/simulated/wall/r_wall,
@@ -9159,9 +9074,8 @@
 	icon_state = "1-2";
 	pixel_y = 0
 	},
-/obj/effect/floor_decal/icarus_scglogo{
-	dir = 8;
-	icon_state = "center-left"
+/obj/effect/floor_decal/scglogo{
+	icon_state = "top-center"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/patrol/command/bridge)
@@ -9301,6 +9215,15 @@
 /obj/effect/paint/black,
 /turf/simulated/wall/titanium,
 /area/ship/reaper)
+"OC" = (
+/obj/machinery/light{
+	dir = 1;
+	icon_state = "tube1"
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/unary/tank/carbon_dioxide,
+/turf/simulated/floor/tiled/steel_grid,
+/area/ship/patrol/maintenance/atmos)
 "OK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/spot{
@@ -9557,6 +9480,14 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/patrol/crew/hallway/lower/port)
+"VC" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/unary/tank/nitrogen{
+	start_pressure = 15000;
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/ship/patrol/maintenance/atmos)
 "VH" = (
 /obj/effect/paint/meatstation/lab,
 /turf/simulated/wall/r_wall,
@@ -9642,6 +9573,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/patrol/command/cannon)
+"Xh" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/unary/tank/oxygen{
+	dir = 4;
+	start_pressure = 5000
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/ship/patrol/maintenance/atmos)
 "Xj" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 5
@@ -17904,12 +17843,12 @@ aa
 aa
 aj
 Uk
-Uk
+Xh
 aR
 bo
-Uk
+aB
 cC
-di
+VC
 Uk
 ea
 dC
@@ -18028,9 +17967,9 @@ aj
 Uk
 av
 aS
-bp
-ba
-bp
+bB
+bB
+AK
 bp
 Uk
 ey
@@ -18758,7 +18697,7 @@ aa
 aa
 aj
 Uk
-aB
+aY
 aY
 bv
 bY
@@ -18884,7 +18823,7 @@ aC
 aZ
 bw
 bZ
-cJ
+dH
 dq
 dG
 eh
@@ -19002,13 +18941,13 @@ aa
 aa
 aj
 Uk
-Uk
+OC
 ba
 bx
 ca
 cK
 dr
-dH
+dI
 ei
 Uk
 fd
@@ -19128,7 +19067,7 @@ aD
 bb
 by
 cb
-cJ
+bz
 dr
 dI
 ej
@@ -19247,9 +19186,9 @@ aa
 aj
 Uk
 aF
-bc
-bz
 cc
+bW
+ce
 cJ
 dt
 dt
@@ -19491,7 +19430,7 @@ aa
 aj
 Uk
 aF
-bc
+di
 bB
 ce
 cM

@@ -21,6 +21,7 @@
 	helm_covers += /obj/item/clothing/accessory/armor/helmcover/green
 	helm_covers += /obj/item/clothing/accessory/armor/helmcover/tan
 	helm_covers += /obj/item/clothing/accessory/armor/helmcover/nt
+	helm_covers += /obj/item/clothing/accessory/armor/helmcover/black
 	helm_covers += /obj/item/clothing/accessory/armor/helmcover/pcrc
 	helm_covers += /obj/item/clothing/accessory/armor/helmcover/saare
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(helm_covers)

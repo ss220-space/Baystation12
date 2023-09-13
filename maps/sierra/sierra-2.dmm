@@ -28128,10 +28128,7 @@
 	pixel_x = -23
 	},
 /obj/item/reagent_containers/food/snacks/semki,
-/obj/structure/displaycase{
-	destroyed = 1;
-	icon_state = "labcageb0"
-	},
+/obj/structure/table,
 /turf/simulated/floor/plating,
 /area/vacant/gambling)
 "aYb" = (

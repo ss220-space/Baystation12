@@ -3086,9 +3086,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1starboard)
-"agb" = (
-/turf/simulated/wall/r_wall/hull,
-/area/space)
 "agc" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
@@ -30105,9 +30102,6 @@
 /area/security/sierra/interrogation{
 	name = "First Deck - Security - Interrogation #1"
 	})
-"aVi" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/space)
 "aVj" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -42355,7 +42349,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "Research - Miscellaneous Test Chamber";
 	dir = 8;
-	network = list("Research","Miscellaneous Reseach")
+	network = list("Research","Miscellaneous  Reseach")
 	},
 /obj/machinery/air_sensor{
 	id_tag = "testchamber_sensor"
@@ -52401,7 +52395,7 @@ aUW
 aUW
 aLX
 aae
-aVi
+aaa
 aaa
 aaa
 aaa
@@ -53211,7 +53205,7 @@ aSq
 awQ
 aSq
 aSq
-aaa
+bcI
 aaa
 aaa
 aaa
@@ -53413,7 +53407,7 @@ dqq
 aSv
 jfY
 aSq
-aaa
+bcI
 aaa
 aaa
 aaa
@@ -53615,7 +53609,7 @@ aWy
 bbo
 aXM
 aSq
-agb
+bcI
 aaa
 aaa
 aaa
