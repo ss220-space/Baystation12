@@ -74,6 +74,8 @@
 				to_chat(user, SPAN_NOTICE("Cell charge: [C.percent()] %"))
 			else
 				to_chat(user, SPAN_NOTICE("Cell charge: ERROR - Cell not present"))
+			to_chat(user, SPAN_NOTICE("Operating temperature: [round(H.bodytemperature-T0C)]&deg;C"))
+
 			to_chat(user, "<span class='notice'>External prosthetics:</span>")
 			var/organ_found
 			for(var/obj/item/organ/external/E in H.organs)

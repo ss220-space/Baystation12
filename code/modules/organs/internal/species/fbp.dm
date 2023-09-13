@@ -60,6 +60,14 @@
 		if(!owner.lying && !owner.buckled)
 			to_chat(owner, "<span class='warning'>You don't have enough energy to function!</span>")
 		owner.Paralyse(3)
+		if(owner.species.name && SPECIES_IPC)
+			owner.species.passive_temp_gain = 0
+	if(owner.species.name && SPECIES_IPC)
+		var/obj/item/organ/internal/cooling_system/Cooling = owner.internal_organs_by_name[BP_COOLING]
+		if(!(owner.internal_organs_by_name[BP_COOLING]))
+			owner.species.passive_temp_gain = 30
+		else
+			owner.species.passive_temp_gain = Cooling.get_tempgain()
 
 /obj/item/organ/internal/cell/emp_act(severity)
 	..()

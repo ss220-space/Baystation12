@@ -26767,8 +26767,7 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aQp" = (
-/obj/structure/table/standard,
-/obj/item/device/robotanalyzer,
+/obj/machinery/external_cooling_device,
 /obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = 24
@@ -28143,6 +28142,7 @@
 /area/assembly/robotics)
 "aRV" = (
 /obj/structure/table/standard,
+/obj/item/device/robotanalyzer,
 /obj/item/reagent_containers/spray/cleaner{
 	pixel_x = -5;
 	pixel_y = 4
