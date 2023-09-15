@@ -144,7 +144,7 @@
 				to_chat(src, SPAN_NOTICE("Проверьте таймер \"Round Duration\" во вкладке Status чтобы узнать сколько прошло времени."))
 				return
 
-		if(!config.respawn_delay || client.holder || alert(src,"Вы уверены, что хотите наблюдать? Вам придется ждать [OBSERV_SPAWN_DELAY] минут прежде чем получить возможность респавна.","Player Setup","Да","Нет") == "Да")
+		if(!config.respawn_observer_delay || client.holder || alert(src,"Вы уверены, что хотите наблюдать? Вам придется ждать [config.respawn_observer_delay] минут прежде чем получить возможность респавна.","Player Setup","Да","Нет") == "Да")
 			if(!client) return 1
 
 			// eckff-inf@dev: Safety checks
