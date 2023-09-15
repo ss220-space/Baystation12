@@ -30,9 +30,8 @@
 /turf/simulated/floor/plating,
 /area/yacht/engine)
 "ad" = (
-/obj/effect/wingrille_spawn/reinforced/full,
-/obj/effect/paint/sun,
 /obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced/hull,
 /turf/simulated/floor/plating,
 /area/yacht/bridge)
 "ae" = (
@@ -43,11 +42,6 @@
 /obj/effect/shuttle_landmark/nav_yacht/nav1,
 /turf/space,
 /area/space)
-"ag" = (
-/obj/structure/catwalk,
-/obj/structure/closet/emcloset,
-/turf/simulated/floor/plating,
-/area/yacht/engine)
 "ah" = (
 /turf/simulated/wall/walnut,
 /area/yacht/bridge)
@@ -711,8 +705,8 @@
 /turf/simulated/wall/walnut,
 /area/yacht/living)
 "by" = (
-/obj/effect/wingrille_spawn/reinforced/full,
 /obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced/hull,
 /turf/simulated/floor/plating,
 /area/yacht/living)
 "bz" = (
@@ -819,6 +813,7 @@
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 4
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/wood/walnut,
 /area/yacht/living)
 "bJ" = (
@@ -1190,24 +1185,17 @@
 "cx" = (
 /obj/effect/submap_landmark/spawnpoint/yachtman_spawn,
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	dir = 4;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	dir = 1;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	dir = 1;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/yacht/engine)
 "cy" = (
@@ -1415,14 +1403,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
-	},
-/obj/machinery/door/airlock/external/glass/bolted/cycling{
-	frequency = 1380;
-	id_tag = "solar_yacht_outer"
-	},
-/obj/machinery/door/airlock/external/glass/bolted/cycling{
-	frequency = 1380;
-	id_tag = "solar_yacht_outer"
 	},
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -1640,7 +1620,7 @@
 "de" = (
 /obj/effect/paint/sun,
 /obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced/full,
+/obj/effect/wallframe_spawn/reinforced/hull,
 /turf/simulated/floor/plating,
 /area/yacht/engine)
 "df" = (
@@ -3068,12 +3048,6 @@
 /obj/effect/floor_decal/solarpanel,
 /turf/simulated/floor/airless,
 /area/yacht/engine)
-"UX" = (
-/obj/effect/wingrille_spawn/reinforced/full,
-/obj/machinery/door/firedoor,
-/obj/effect/paint/sun,
-/turf/simulated/floor/plating,
-/area/yacht/living)
 "YE" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -3106,8 +3080,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/yacht/living)
 "Zs" = (
-/obj/effect/wingrille_spawn/reinforced/full,
-/obj/effect/paint/sun,
+/obj/effect/wallframe_spawn/reinforced/hull,
 /turf/simulated/floor/plating,
 /area/yacht/living)
 "ZN" = (
@@ -7442,9 +7415,9 @@ aa
 aa
 aA
 aA
-UX
-UX
-UX
+by
+by
+by
 Zs
 cc
 cc
@@ -8170,7 +8143,7 @@ Lb
 aD
 ed
 dR
-ag
+ky
 ky
 db
 Gu
