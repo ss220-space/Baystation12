@@ -9,8 +9,6 @@
 #define TINT_SIX 6
 #define TINT_BLIND 7
 
-#define OBSERV_SPAWN_DELAY round(config.respawn_delay / 2)
-
 // Organs
 #define BP_FAKE    "fake_brain"
 #define BP_ZOMB    "festering ooze"
