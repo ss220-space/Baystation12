@@ -4,6 +4,7 @@
 	uniform =  /obj/item/clothing/under/ascent
 	id_types = list( /obj/item/card/id/ascent)
 	shoes =    /obj/item/clothing/shoes/magboots/ascent
+	back = 	   /obj/item/rig/mantid/gyne
 	l_ear =    null
 	pda_type = null
 	pda_slot = 0
