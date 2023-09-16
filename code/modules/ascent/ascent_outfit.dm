@@ -16,15 +16,24 @@
 /decl/hierarchy/outfit/job/ascent/tech
 	name = "Ascent - Technician"
 	belt = /obj/item/clothing/suit/storage/ascent
+	back = /obj/item/rig/mantid/seed
 
 /decl/hierarchy/outfit/job/ascent/worker
 	name = "Ascent - Serpentid Adjunct"
 	uniform =  /obj/item/clothing/under/harness
 	belt = /obj/item/clothing/suit/storage/ascent
+	mask = /obj/item/clothing/mask/gas/ascent/monarch
+	back = /obj/item/rig/mantid/nabber
+
+/decl/hierarchy/outfit/job/ascent/worker/tech
+	name = "Ascent = Serpentid Technician"
+	back = /obj/item/rig/mantid/nabber/seed
 
 /decl/hierarchy/outfit/job/ascent/queen
 	name = "Ascent - Serpentid Queen"
 	belt = /obj/item/clothing/suit/storage/ascent
+	mask = /obj/item/clothing/mask/gas/ascent/monarch
+	back = /obj/item/rig/mantid/nabber/queen
 
 /obj/item/clothing/mask/gas/ascent
 	name = "mantid facemask"

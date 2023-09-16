@@ -87,7 +87,7 @@
 /area/ship/ascent_caulship)
 "as" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
+	dir = 5
 	},
 /turf/simulated/wall/r_wall/ascent,
 /area/ship/ascent_caulship)
@@ -96,21 +96,20 @@
 /obj/effect/catwalk_plated/ascent,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
-"au" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall/ascent,
-/area/ship/ascent_caulship)
 "av" = (
-/obj/effect/catwalk_plated/ascent,
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/computer/ship/engines/ascent,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "aw" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
+/obj/machinery/portable_atmospherics/canister/methyl_bromide{
+	start_pressure = 10000
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4;
+	icon_state = "map_connector"
 	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
@@ -159,9 +158,7 @@
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "aF" = (
-/obj/machinery/light/ascent{
-	dir = 4
-	},
+/obj/effect/submap_landmark/spawnpoint/ascent_caulship,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "aG" = (
@@ -204,6 +201,9 @@
 	dir = 1;
 	target_pressure = 5000
 	},
+/obj/structure/bed/chair/padded/purple/ascent{
+	dir = 1
+	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "aM" = (
@@ -211,11 +211,19 @@
 /obj/machinery/atmospherics/binary/pump/high_power/on{
 	target_pressure = 150
 	},
+/obj/structure/bed/chair/padded/purple/ascent{
+	dir = 1
+	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "aN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
+/obj/machinery/atmospherics/omni/mixer{
+	tag_east = 1;
+	tag_east_con = 0.5;
+	tag_west = 2;
+	use_power = 2;
+	tag_north = 1;
+	tag_north_con = 0.5
 	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
@@ -229,13 +237,9 @@
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "aP" = (
-/obj/machinery/atmospherics/omni/mixer{
-	tag_east = 1;
-	tag_east_con = 0.5;
-	tag_south = 1;
-	tag_south_con = 0.5;
-	tag_west = 2;
-	use_power = 2
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1;
+	icon_state = "map"
 	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
@@ -347,6 +351,9 @@
 	},
 /obj/item/stack/material/rods/fifty,
 /obj/item/stack/material/rods/fifty,
+/obj/item/storage/bag/trash/purple/ascent,
+/obj/item/storage/bag/trash/purple/ascent,
+/obj/item/storage/bag/trash/purple/ascent,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "be" = (
@@ -578,17 +585,7 @@
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bB" = (
-/obj/structure/table/rack/dark,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/splint,
-/obj/item/stack/medical/splint,
-/obj/item/stack/medical/splint,
-/obj/item/clothing/mask/gas/ascent_captive,
-/obj/item/clothing/mask/gas/ascent_captive,
-/obj/item/clothing/mask/gas/ascent_captive,
+/obj/machinery/cryopod/ascent_spawn,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bC" = (
@@ -604,19 +601,23 @@
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bD" = (
-/obj/effect/submap_landmark/spawnpoint/ascent_caulship,
-/obj/machinery/sleeper/ascent{
-	dir = 1;
-	icon_state = "sleeper_0"
-	},
+/obj/structure/table/rack/dark,
+/obj/item/tank/mantid/methyl_bromide,
+/obj/item/tank/mantid/methyl_bromide,
+/obj/item/clothing/head/helmet/space/void/ascent,
+/obj/item/clothing/head/helmet/space/void/ascent,
+/obj/item/clothing/suit/space/void/ascent,
+/obj/item/clothing/suit/space/void/ascent,
+/obj/item/tank/jetpack/ascent,
+/obj/item/device/scanner/gas,
+/obj/machinery/light/ascent,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bE" = (
-/obj/machinery/sleeper/ascent{
-	dir = 1;
-	icon_state = "sleeper_0"
-	},
 /obj/effect/submap_landmark/spawnpoint/ascent_caulship/alate,
+/obj/machinery/computer/cryopod/ascent_spawn{
+	pixel_y = -24
+	},
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bF" = (
@@ -629,6 +630,8 @@
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "bG" = (
+/obj/effect/catwalk_plated/ascent,
+/obj/machinery/door/airlock/ascent,
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
@@ -639,14 +642,25 @@
 /area/ship/ascent_caulship)
 "bI" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/storage/box/water/ascent,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bJ" = (
-/obj/structure/reagent_dispensers/water_cooler/ascent,
+/obj/effect/submap_landmark/spawnpoint/ascent_caulship/queen,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bK" = (
+/obj/structure/table/rack/dark,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/splint,
+/obj/item/stack/medical/splint,
+/obj/item/stack/medical/splint,
+/obj/item/clothing/mask/gas/ascent_captive,
+/obj/item/clothing/mask/gas/ascent_captive,
+/obj/item/clothing/mask/gas/ascent_captive,
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 10;
 	icon_state = "intact-supply"
@@ -777,6 +791,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/hyper/ascent/east,
+/obj/machinery/portable_atmospherics/canister/methyl_bromide{
+	start_pressure = 10000
+	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "ca" = (
@@ -877,7 +894,8 @@
 	id_tag = "ascent_caulship";
 	pixel_x = -24;
 	pixel_y = 0;
-	req_access = list("ACCESS_ASCENT")
+	req_access = list("ACCESS_ASCENT");
+	dir = 4
 	},
 /obj/structure/hygiene/shower/ascent{
 	dir = 4;
@@ -907,7 +925,6 @@
 	dir = 1;
 	id_tag = "ascent_caulship_pump"
 	},
-/obj/structure/hygiene/drain,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "cl" = (
@@ -928,7 +945,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	id_tag = "ascent_caulship_pump_out_internal"
 	},
-/obj/structure/hygiene/drain,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "co" = (
@@ -1012,6 +1028,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/table/rack/dark,
+/obj/item/device/scanner/gas,
+/obj/item/device/lightreplacer,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "cw" = (
@@ -1074,12 +1093,15 @@
 /obj/structure/table/rack/dark,
 /obj/item/gun/energy/particle/small,
 /obj/item/gun/energy/particle/small,
+/obj/item/gun/energy/particle/small,
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 2;
 	icon_state = "intact-supply"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
-/obj/item/tank/jetpack/ascent,
+/obj/item/gun/energy/particle,
+/obj/item/gun/energy/particle,
+/obj/item/gun/energy/particle,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "cC" = (
@@ -1108,19 +1130,14 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/table/rack/dark,
-/obj/item/clothing/suit/space/void/ascent,
-/obj/item/clothing/suit/space/void/ascent,
-/obj/item/clothing/head/helmet/space/void/ascent,
-/obj/item/clothing/head/helmet/space/void/ascent,
-/obj/item/tank/mantid/methyl_bromide,
-/obj/item/tank/mantid/methyl_bromide,
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 2;
 	icon_state = "intact-supply"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
-/obj/item/device/scanner/gas,
+/obj/structure/table/rack/dark,
+/obj/item/rig/mantid/nabber,
+/obj/item/rig/mantid/nabber/queen/seed,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "cF" = (
@@ -1350,7 +1367,8 @@
 /obj/effect/catwalk_plated/ascent,
 /obj/structure/hygiene/sink/ascent{
 	dir = 4;
-	icon_state = "sink"
+	icon_state = "sink";
+	pixel_x = 24
 	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
@@ -1398,13 +1416,19 @@
 	dir = 4;
 	icon_state = "intact-scrubbers"
 	},
-/obj/machinery/portable_atmospherics/canister/methyl_bromide,
+/obj/machinery/portable_atmospherics/canister/methyl_bromide{
+	start_pressure = 10000
+	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "in" = (
 /obj/machinery/computer/ship/engines/ascent,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
+"pR" = (
+/obj/effect/landmark/explosion/light,
+/turf/simulated/floor/ascent/tiled,
+/area/space)
 "sH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 9;
@@ -1417,9 +1441,24 @@
 /obj/structure/closet/crate/freezer/meat/ascent,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
+"uV" = (
+/obj/structure/reagent_dispensers/water_cooler/ascent{
+	dir = 8
+	},
+/turf/simulated/floor/ascent/tiled,
+/area/ship/ascent_caulship)
 "vq" = (
 /obj/item/reagent_containers/food/snacks/meat/beef,
 /turf/simulated/floor/ascent,
+/area/ship/ascent_caulship)
+"vT" = (
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/machinery/ion_engine{
+	dir = 1
+	},
+/turf/space,
 /area/ship/ascent_caulship)
 "wE" = (
 /obj/effect/catwalk_plated/ascent,
@@ -1437,6 +1476,12 @@
 /area/ship/ascent_caulship)
 "wR" = (
 /obj/machinery/computer/ship/helm/ascent,
+/turf/simulated/floor/ascent/tiled,
+/area/ship/ascent_caulship)
+"Au" = (
+/obj/machinery/portable_atmospherics/canister/methyl_bromide{
+	start_pressure = 10000
+	},
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "En" = (
@@ -1473,9 +1518,23 @@
 /obj/effect/catwalk_plated/ascent,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
+"Ts" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/ascent/tiled,
+/area/ship/ascent_caulship)
 "Xe" = (
 /obj/effect/catwalk_plated/ascent,
 /turf/simulated/floor/ascent,
+/area/ship/ascent_caulship)
+"Yy" = (
+/obj/effect/submap_landmark/spawnpoint/ascent_caulship/worker,
+/turf/simulated/floor/ascent/tiled,
+/area/ship/ascent_caulship)
+"YJ" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/reagent_containers/food/snacks/meat/beef,
+/turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 
 (1,1,1) = {"
@@ -18940,7 +18999,7 @@ aa
 aa
 aa
 bU
-aa
+dc
 bU
 bU
 aa
@@ -19142,7 +19201,7 @@ aa
 aa
 aa
 aa
-aa
+dc
 bU
 bU
 aa
@@ -19344,7 +19403,7 @@ aa
 aa
 aa
 aa
-aa
+dc
 bU
 aa
 aa
@@ -19546,7 +19605,7 @@ aa
 aa
 aa
 aa
-aa
+dc
 bU
 aa
 aa
@@ -19558,8 +19617,8 @@ az
 az
 az
 az
-az
-bC
+bJ
+Yy
 ai
 bS
 aa
@@ -19748,7 +19807,7 @@ aa
 aa
 aa
 aa
-aa
+dc
 aa
 aa
 aa
@@ -19950,7 +20009,7 @@ aa
 aa
 aa
 aa
-aa
+dc
 aa
 ab
 ab
@@ -19962,7 +20021,7 @@ az
 bF
 az
 cV
-az
+aF
 bE
 ab
 af
@@ -20152,7 +20211,7 @@ aa
 aa
 aa
 aa
-aa
+dc
 aa
 ab
 aj
@@ -20160,12 +20219,12 @@ aA
 ab
 aK
 az
-az
+bC
 bK
 bP
 cW
-aF
-bE
+az
+bB
 ai
 bS
 aa
@@ -20354,8 +20413,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+dc
+ab
 ab
 am
 aB
@@ -20555,8 +20614,8 @@ aa
 aa
 aa
 aa
-af
-af
+ab
+ab
 ab
 ag
 aq
@@ -20756,9 +20815,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+ab
+af
+af
 ac
 ak
 ar
@@ -21189,7 +21248,7 @@ cq
 aa
 db
 da
-da
+pR
 da
 bU
 bU
@@ -21392,7 +21451,7 @@ aa
 db
 da
 Fb
-da
+pR
 da
 da
 bU
@@ -21593,7 +21652,7 @@ cr
 aa
 db
 da
-da
+pR
 da
 bU
 bU
@@ -21770,7 +21829,7 @@ aa
 aa
 aa
 aa
-as
+ab
 av
 aM
 bg
@@ -21972,9 +22031,9 @@ ab
 ad
 af
 af
-au
 ab
-ab
+ar
+as
 ab
 cy
 az
@@ -22174,10 +22233,10 @@ aa
 ab
 ab
 ab
-ar
+ab
 aw
+aP
 bG
-aD
 cG
 cH
 cJ
@@ -22400,7 +22459,7 @@ ab
 aa
 bU
 bU
-da
+pR
 bU
 bU
 bU
@@ -22791,19 +22850,19 @@ az
 az
 az
 bz
-bI
+YJ
 ab
 af
+af
+af
+ab
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-da
+pR
 bU
 bU
 aa
@@ -22990,14 +23049,14 @@ aU
 cX
 az
 az
-af
+az
 az
 bA
 bI
 ab
-aa
-aa
-aa
+ab
+ab
+ab
 aa
 aa
 aa
@@ -23191,16 +23250,16 @@ ai
 aV
 bc
 az
-uK
-bJ
-af
-cY
-ae
-ae
+az
+az
+az
+az
+bA
+ai
+vT
 aa
 aa
 aa
-dc
 aa
 bU
 bU
@@ -23393,22 +23452,22 @@ ab
 ab
 ab
 bd
-af
-af
+Au
+uK
+uV
+Ts
+cY
 ae
-ae
-ae
 af
 af
-aa
-aa
-aa
+af
+ab
 aa
 aa
 aa
 bU
 bU
-da
+pR
 aa
 aa
 aa
@@ -23596,14 +23655,14 @@ aa
 ab
 ab
 ai
+ai
+ai
+ai
 ae
 ae
-aa
-af
-aa
-aa
-aa
-dc
+ab
+ab
+ab
 aa
 aa
 aa
@@ -23801,11 +23860,11 @@ aa
 aa
 aa
 aa
-ae
 aa
 aa
 aa
-dc
+aa
+aa
 aa
 aa
 aa
@@ -23813,7 +23872,7 @@ aa
 bU
 bU
 da
-da
+pR
 bU
 aa
 aa
@@ -24211,11 +24270,11 @@ aa
 bU
 da
 da
-da
+pR
 aa
 bU
 da
-da
+pR
 bU
 bU
 aa
@@ -24411,11 +24470,11 @@ bU
 aa
 aa
 aa
-da
+pR
 bU
 bU
 aa
-da
+pR
 da
 bU
 bU
@@ -24596,20 +24655,20 @@ bU
 bU
 da
 da
+pR
 da
-da
-da
+pR
 da
 aa
 aa
+pR
 da
 da
+pR
 da
+pR
 da
-da
-da
-da
-da
+pR
 aa
 aa
 aa
