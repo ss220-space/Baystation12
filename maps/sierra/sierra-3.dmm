@@ -14388,7 +14388,8 @@
 /obj/structure/closet/secure_closet/walllocker/secure{
 	name = "High-Risk Papers";
 	req_access = list("ACCESS_IAA");
-	pixel_x = 28
+	pixel_x = 28;
+	anchored = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -22664,7 +22665,8 @@
 /obj/structure/closet/secure_closet/walllocker/secure{
 	name = "Prisoners cutlery";
 	pixel_y = -30;
-	wall_mounted = 1
+	wall_mounted = 1;
+	anchored = 1
 	},
 /obj/item/material/knife/table/plastic,
 /obj/item/material/knife/table/plastic,
@@ -42233,7 +42235,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "Research - Miscellaneous Test Chamber";
 	dir = 8;
-	network = list("Research","Miscellaneous Reseach")
+	network = list("Research","Miscellaneous  Reseach")
 	},
 /obj/machinery/air_sensor{
 	id_tag = "testchamber_sensor"
