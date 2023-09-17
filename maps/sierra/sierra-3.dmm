@@ -10586,7 +10586,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/firstdeck/centralstarboard)
 "arz" = (
-/turf/simulated/wall/prepainted,
+/turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/heads/office/iaa)
 "arA" = (
 /turf/simulated/wall/r_wall/hull,
@@ -14413,7 +14413,7 @@
 /area/turret_protected/ai_cyborg_station)
 "azV" = (
 /obj/structure/sign/warning/high_voltage,
-/turf/simulated/wall/prepainted,
+/turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/heads/office/iaa)
 "azW" = (
 /obj/machinery/door/firedoor,
@@ -38442,6 +38442,9 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/office/hop)
+"gGv" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/engineering/auxpower)
 "gHs" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment,
@@ -42230,7 +42233,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "Research - Miscellaneous Test Chamber";
 	dir = 8;
-	network = list("Research","Miscellaneous  Reseach")
+	network = list("Research","Miscellaneous    Reseach")
 	},
 /obj/machinery/air_sensor{
 	id_tag = "testchamber_sensor"
@@ -61959,11 +61962,11 @@ aaB
 ahG
 rcG
 ajY
-ald
-ald
-ald
-ald
-ald
+gGv
+gGv
+gGv
+gGv
+gGv
 arz
 arz
 vkZ
