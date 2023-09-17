@@ -14,7 +14,7 @@
 	)
 	spawn_cost = 2000
 	spawn_weight = 50
-	player_cost = 4 // Нынешнее значение основано на количестве игроков в авейке ~bear1ake
+	//player_cost = 4 // Нынешнее значение основано на количестве игроков в авейке ~bear1ake
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/ascent)
 
 /obj/effect/overmap/visitable/sector/ascent_caulship_ring
