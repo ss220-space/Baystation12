@@ -10586,7 +10586,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/firstdeck/centralstarboard)
 "arz" = (
-/turf/simulated/wall/prepainted,
+/turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/heads/office/iaa)
 "arA" = (
 /turf/simulated/wall/r_wall/hull,
@@ -14388,7 +14388,8 @@
 /obj/structure/closet/secure_closet/walllocker/secure{
 	name = "High-Risk Papers";
 	req_access = list("ACCESS_IAA");
-	pixel_x = 28
+	pixel_x = 28;
+	anchored = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -14413,7 +14414,7 @@
 /area/turret_protected/ai_cyborg_station)
 "azV" = (
 /obj/structure/sign/warning/high_voltage,
-/turf/simulated/wall/prepainted,
+/turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/heads/office/iaa)
 "azW" = (
 /obj/machinery/door/firedoor,
@@ -22664,7 +22665,8 @@
 /obj/structure/closet/secure_closet/walllocker/secure{
 	name = "Prisoners cutlery";
 	pixel_y = -30;
-	wall_mounted = 1
+	wall_mounted = 1;
+	anchored = 1
 	},
 /obj/item/material/knife/table/plastic,
 /obj/item/material/knife/table/plastic,
@@ -38442,6 +38444,9 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/office/hop)
+"gGv" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/engineering/auxpower)
 "gHs" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment,
@@ -61959,11 +61964,11 @@ aaB
 ahG
 rcG
 ajY
-ald
-ald
-ald
-ald
-ald
+gGv
+gGv
+gGv
+gGv
+gGv
 arz
 arz
 vkZ
