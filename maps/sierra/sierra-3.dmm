@@ -42233,7 +42233,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "Research - Miscellaneous Test Chamber";
 	dir = 8;
-	network = list("Research","Miscellaneous    Reseach")
+	network = list("Research","Miscellaneous Reseach")
 	},
 /obj/machinery/air_sensor{
 	id_tag = "testchamber_sensor"
