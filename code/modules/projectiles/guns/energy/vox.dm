@@ -30,7 +30,7 @@
 	firemodes = list(
 		list(mode_name="stunning", burst=1, fire_delay=null, burst_accuracy=list(30), dispersion=null, projectile_type=/obj/item/projectile/beam/stun/darkmatter, charge_cost = 60),
 		list(mode_name="focused", burst=1, fire_delay=17,  burst_accuracy=list(30), dispersion=null, projectile_type=/obj/item/projectile/beam/darkmatter, charge_cost = 100),
-		list(mode_name="scatter burst", burst=8, fire_delay=null,  burst_accuracy=list(0, 0, 0, 0, 0, 0, 0, 0), dispersion=list(0, 0, 0, 0, 1, 1, 1, 2, 2), projectile_type=/obj/item/projectile/energy/darkmatter, charge_cost = 7),
+		list(mode_name="scatter burst", burst=8, fire_delay=null,  burst_accuracy=list(0, 0, 0, 0, 0, 0, 0, 0), dispersion=list(0, 0, 0, 1, 1, 1, 2, 2, 3), projectile_type=/obj/item/projectile/energy/darkmatter, charge_cost = 7),
 		)
 
 	bulk = GUN_BULK_RIFLE
