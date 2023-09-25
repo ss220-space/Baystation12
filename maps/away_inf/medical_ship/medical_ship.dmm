@@ -1,0 +1,249 @@
+"al" = (/turf/simulated/floor/tiled/white,/area/space)
+"aF" = (/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/space)
+"cV" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/plating,/area/space)
+"da" = (/obj/machinery/door/airlock/external/bolted/cycling{id_tag = "emergency_ship_outer"; name = "Engineering External Access"},/obj/machinery/atmospherics/binary/pump/on{icon_state = "map_on"; dir = 4},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/space)
+"eY" = (/obj/machinery/atmospherics/pipe/manifold/visible/cyan{dir = 8},/turf/simulated/floor/plating,/area/space)
+"fm" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/space)
+"fv" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10},/turf/simulated/floor/tiled/white,/area/space)
+"fA" = (/turf/space,/area/space)
+"fF" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/space)
+"fR" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular{dir = 2; id_tag = "merch-ship_windows"},/turf/simulated/floor/plating,/area/space)
+"gf" = (/obj/machinery/portable_atmospherics/powered/pump/filled,/turf/simulated/floor/plating,/area/space)
+"gt" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/plating,/area/space)
+"gM" = (/obj/item/stock_parts/manipulator/pico,/obj/item/stock_parts/manipulator/pico,/obj/item/stock_parts/manipulator/pico,/obj/item/stock_parts/manipulator/pico,/obj/item/stock_parts/matter_bin/super,/obj/item/stock_parts/matter_bin/super,/obj/item/stock_parts/matter_bin/super,/obj/item/stock_parts/matter_bin/super,/obj/item/stock_parts/micro_laser/ultra,/obj/item/stock_parts/micro_laser/ultra,/obj/item/stock_parts/micro_laser/ultra,/obj/item/stock_parts/micro_laser/ultra,/obj/item/stock_parts/smes_coil/super_io,/obj/item/stock_parts/smes_coil/super_io,/obj/item/stock_parts/smes_coil/super_capacity,/obj/item/stock_parts/smes_coil/super_capacity,/obj/item/stock_parts/scanning_module/phasic,/obj/item/stock_parts/scanning_module/phasic,/obj/item/stock_parts/scanning_module/phasic,/obj/item/stock_parts/scanning_module/phasic,/obj/item/stock_parts/circuitboard/bioprinter,/obj/item/stock_parts/circuitboard/body_scanconsole,/obj/item/stock_parts/circuitboard/body_scanconsole/display,/obj/item/stock_parts/circuitboard/bodyscanner,/obj/structure/closet/crate,/obj/item/stack/material/aliumium/ten,/obj/item/stack/material/aliumium/ten,/obj/item/stack/material/glass/fifty,/obj/item/stack/material/plastic/ten,/obj/item/stack/material/plastic/ten,/turf/simulated/floor/plating,/area/space)
+"gP" = (/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/space)
+"hb" = (/obj/machinery/atmospherics/pipe/simple/visible/universal{dir = 4},/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_y = 24; req_access = list("ACCESS_ENGINEERING")},/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 0},/obj/machinery/fabricator,/turf/simulated/floor/plating,/area/space)
+"hR" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/space)
+"id" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 6},/turf/simulated/floor/plating,/area/space)
+"iE" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/white,/area/space)
+"iI" = (/obj/machinery/atmospherics/unary/heater,/turf/simulated/floor/plating,/area/space)
+"jk" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/turf/simulated/floor/plating,/area/space)
+"jn" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/white,/area/space)
+"jq" = (/obj/effect/catwalk_plated/dark,/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/space)
+"jP" = (/obj/machinery/power/port_gen/pacman/super/potato,/obj/structure/cable,/turf/simulated/floor/plating,/area/space)
+"jS" = (/obj/machinery/sleeper{dir = 4},/obj/effect/floor_decal/corner/blue{dir = 10; icon_state = "corner_white"},/obj/effect/floor_decal/corner/blue{dir = 1},/turf/simulated/floor/tiled/white,/area/space)
+"ke" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/turf/simulated/floor/plating,/area/space)
+"kf" = (/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/white,/area/space)
+"kw" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/white,/area/space)
+"kz" = (/obj/machinery/atmospherics/unary/tank/carbon_dioxide{dir = 8; icon_state = "co2_map"},/turf/simulated/floor/plating,/area/space)
+"kJ" = (/obj/structure/closet/secure_closet/personal/patient,/obj/effect/floor_decal/corner/blue/border{dir = 9},/turf/simulated/floor/tiled/white,/area/space)
+"kU" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/plating,/area/space)
+"lk" = (/obj/structure/table/reinforced,/obj/machinery/reagent_temperature{pixel_x = -7},/obj/machinery/reagent_temperature/cooler{pixel_x = 7},/obj/machinery/atmospherics/unary/vent_pump/on,/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/white,/area/space)
+"lv" = (/obj/machinery/atmospherics/unary/freezer{icon_state = "freezer"},/obj/effect/catwalk_plated/white,/turf/simulated/floor/plating,/area/space)
+"lG" = (/turf/simulated/floor/plating,/area/space)
+"lQ" = (/obj/machinery/sleeper/survival_pod,/obj/effect/floor_decal/corner/blue{dir = 5},/obj/effect/floor_decal/corner/blue,/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/white,/area/space)
+"lZ" = (/obj/machinery/atmospherics/portables_connector{dir = 1},/turf/simulated/floor/plating,/area/space)
+"mE" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/white,/area/space)
+"mH" = (/turf/simulated/wall/r_wall/prepainted,/area/space)
+"nY" = (/obj/machinery/atmospherics/pipe/simple/visible/universal,/obj/machinery/door/firedoor,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/space)
+"nZ" = (/obj/structure/table/rack,/obj/item/flame/lighter/zippo/random,/obj/item/stack/cable_coil/random,/obj/random/coin,/obj/random/gloves,/obj/random/maintenance,/turf/simulated/floor/plating,/area/space)
+"on" = (/obj/machinery/power/smes/buildable,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/simulated/floor/plating,/area/space)
+"ow" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 10},/turf/simulated/floor/plating,/area/space)
+"ox" = (/obj/structure/fireaxecabinet{pixel_x = -31},/turf/simulated/floor/plating,/area/space)
+"oF" = (/obj/machinery/atmospherics/pipe/manifold/visible/black{dir = 1; icon_state = "map"},/turf/simulated/floor/plating,/area/space)
+"oH" = (/obj/machinery/atmospherics/unary/tank/air{dir = 8; icon_state = "air_map"},/turf/simulated/floor/plating,/area/space)
+"oS" = (/obj/machinery/bodyscanner{dir = 4},/obj/effect/floor_decal/corner/blue{dir = 10; icon_state = "corner_white"},/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/tiled/white,/area/space)
+"oU" = (/obj/machinery/door/airlock/multi_tile/glass/medical,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/space)
+"pO" = (/obj/machinery/atmospherics/portables_connector,/obj/machinery/portable_atmospherics/canister/air/airlock,/turf/simulated/floor/plating,/area/space)
+"pR" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/tiled/white,/area/space)
+"qf" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular{dir = 2; id_tag = "medic_ship_windows"},/turf/simulated/floor/plating,/area/space)
+"qr" = (/obj/effect/floor_decal/corner/blue{dir = 9},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/power/apc{dir = 8; name = "north bump"; pixel_x = -24},/obj/structure/cable{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/white,/area/space)
+"qA" = (/obj/structure/hygiene/sink,/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/effect/floor_decal/corner/blue/border,/turf/simulated/floor/tiled/white,/area/space)
+"qJ" = (/obj/machinery/atmospherics/portables_connector{dir = 8},/turf/simulated/floor/plating,/area/space)
+"qO" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating,/area/space)
+"ra" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor/plating,/area/space)
+"ry" = (/obj/effect/catwalk_plated/white,/obj/machinery/door/airlock/command,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/space)
+"rX" = (/obj/machinery/atmospherics/pipe/manifold/visible/cyan{dir = 1},/obj/machinery/meter,/turf/simulated/floor/plating,/area/space)
+"sh" = (/obj/effect/catwalk_plated/dark,/turf/space,/area/space)
+"sH" = (/obj/machinery/atmospherics/pipe/simple/visible/universal{dir = 4},/turf/simulated/floor/plating,/area/space)
+"ug" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/obj/structure/bed/chair/comfy/red{dir = 8},/turf/simulated/floor/plating,/area/space)
+"ur" = (/obj/structure/panic_button{pixel_x = 31},/turf/simulated/floor/plating,/area/space)
+"uC" = (/obj/structure/bed/chair/comfy/red{dir = 4},/obj/machinery/button/blast_door{id_tag = "bridge_windows"; name = "Bridge Window Blast Doors"; pixel_x = 28; pixel_y = 6},/turf/simulated/floor/plating,/area/space)
+"uG" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/turf/simulated/floor/plating,/area/space)
+"uZ" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4; icon_state = "intact"},/turf/simulated/floor/tiled/white,/area/space)
+"vm" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/space)
+"wl" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/space)
+"xj" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/plating,/area/space)
+"xq" = (/obj/machinery/sleeper/survival_pod,/obj/effect/floor_decal/corner/blue{dir = 6},/turf/simulated/floor/tiled/white,/area/space)
+"xP" = (/obj/machinery/atmospherics/pipe/manifold/visible/black{dir = 4; icon_state = "map"},/turf/simulated/floor/plating,/area/space)
+"ys" = (/obj/effect/floor_decal/corner/blue{dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor/tiled/white,/area/space)
+"yP" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/machinery/vending/tool,/turf/simulated/floor/plating,/area/space)
+"zf" = (/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_y = 24; req_access = list("ACCESS_ENGINEERING")},/turf/simulated/floor/plating,/area/space)
+"zn" = (/obj/structure/cable,/obj/machinery/power/terminal,/turf/simulated/floor/plating,/area/space)
+"zS" = (/obj/machinery/access_button/airlock_exterior{master_tag = "emergency_ship"; name = "exterior access button"; pixel_x = 21; pixel_y = 8},/turf/simulated/floor/plating,/area/space)
+"Bm" = (/obj/effect/catwalk_plated/dark,/obj/structure/bed/chair/comfy/red{dir = 1},/turf/simulated/floor/plating,/area/space)
+"By" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/closet/crate/uranium,/turf/simulated/floor/plating,/area/space)
+"CP" = (/obj/machinery/atmospherics/portables_connector{dir = 4},/turf/simulated/floor/plating,/area/space)
+"Df" = (/obj/machinery/atmospherics/pipe/manifold/visible/black{dir = 8},/turf/simulated/floor/plating,/area/space)
+"Dl" = (/obj/structure/catwalk,/turf/space,/area/space)
+"Dw" = (/obj/structure/cable{icon_state = "2-8"},/turf/simulated/floor/plating,/area/space)
+"DC" = (/obj/structure/closet/toolcloset,/obj/item/storage/mre/random,/obj/random/loot,/obj/random/loot,/turf/simulated/floor/plating,/area/space)
+"DH" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/plating,/area/space)
+"DY" = (/turf/simulated/wall/r_titanium,/area/space)
+"Ek" = (/obj/structure/table/steel_reinforced,/obj/machinery/photocopier/faxmachine{department = "MRV Cockpit"; send_access = list()},/turf/simulated/floor/plating,/area/space)
+"Ev" = (/obj/effect/floor_decal/corner/blue{dir = 6},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/tiled/white,/area/space)
+"EB" = (/obj/machinery/atmospherics/pipe/simple/hidden/blue,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/space)
+"EK" = (/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,/turf/simulated/floor/plating,/area/space)
+"EV" = (/obj/machinery/atmospherics/pipe/manifold4w/visible/black,/turf/simulated/floor/plating,/area/space)
+"EY" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled/white,/area/space)
+"FO" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/plating,/area/space)
+"Gd" = (/obj/structure/table/standard,/obj/item/reagent_containers/spray/sterilizine,/obj/item/storage/firstaid/surgery{pixel_y = 6},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8},/obj/item/storage/box/freezer{pixel_x = 5; pixel_y = 9},/obj/effect/floor_decal/corner/blue/border{dir = 5},/obj/machinery/body_scan_display{pixel_x = 32; pixel_y = -5},/turf/simulated/floor/tiled/white,/area/space)
+"GS" = (/obj/machinery/chemical_dispenser/full,/turf/simulated/floor/tiled/white,/area/space)
+"Hg" = (/obj/structure/closet/secure_closet/chemical_sierra{req_access = null},/obj/item/stack/material/phoron{amount = 5},/obj/item/clothing/glasses/science,/obj/item/device/scanner/spectrometer/adv,/obj/item/hand_labeler{pixel_x = -2; pixel_y = -3},/obj/effect/floor_decal/corner/beige/bordercorner2{dir = 10},/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/white,/area/space)
+"Hl" = (/obj/structure/table/standard,/obj/item/auto_cpr{pixel_y = 5},/obj/item/reagent_containers/glass/beaker/cryoxadone,/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/white,/area/space)
+"HO" = (/obj/machinery/chem_master,/turf/simulated/floor/tiled/white,/area/space)
+"Io" = (/obj/effect/wallframe_spawn/reinforced,/turf/simulated/floor/plating,/area/space)
+"IH" = (/obj/machinery/optable,/obj/machinery/light{dir = 4},/obj/effect/floor_decal/corner/blue/border{dir = 4},/turf/simulated/floor/tiled/white,/area/space)
+"Jn" = (/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,/obj/effect/catwalk_plated/white,/turf/simulated/floor/plating,/area/space)
+"Jo" = (/obj/machinery/portable_atmospherics/powered/scrubber,/turf/simulated/floor/plating,/area/space)
+"Jv" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/tiled/white,/area/space)
+"JY" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/white,/area/space)
+"Kd" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4; icon_state = "intact"},/obj/effect/floor_decal/corner/blue/border{dir = 8},/turf/simulated/floor/tiled/white,/area/space)
+"Kr" = (/obj/structure/table/steel_reinforced,/obj/machinery/recharger,/turf/simulated/floor/plating,/area/space)
+"KI" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/turf/simulated/floor/plating,/area/space)
+"Le" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor/plating,/area/space)
+"Ln" = (/obj/effect/catwalk_plated/white,/turf/space,/area/space)
+"Lr" = (/obj/structure/table/standard,/obj/machinery/cell_charger{pixel_x = -5; pixel_y = 8},/obj/item/bodybag/rescue/loaded,/obj/item/defibrillator/loaded,/obj/effect/floor_decal/corner/blue{dir = 5},/turf/simulated/floor/tiled/white,/area/space)
+"LP" = (/obj/machinery/atmospherics/unary/tank/carbon_dioxide{dir = 4; icon_state = "co2_map"},/turf/simulated/floor/plating,/area/space)
+"Md" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/turf/simulated/floor/plating,/area/space)
+"Mq" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/vending/engivend{req_access = list()},/turf/simulated/floor/plating,/area/space)
+"MQ" = (/obj/effect/catwalk_plated/dark,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/turf/simulated/floor/plating,/area/space)
+"Nt" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/body_scanconsole{dir = 4},/obj/effect/floor_decal/corner/blue{dir = 10; icon_state = "corner_white"},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/obj/machinery/light,/turf/simulated/floor/tiled/white,/area/space)
+"Nv" = (/obj/machinery/power/smes/buildable,/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/simulated/floor/plating,/area/space)
+"Nz" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/space)
+"NK" = (/obj/effect/floor_decal/corner/blue{dir = 10; icon_state = "corner_white"},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/white,/area/space)
+"Ol" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{dir = 8; id_tag = "merchant_station_vent"},/turf/simulated/floor/plating,/area/space)
+"Ou" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/structure/closet/radiation,/turf/simulated/floor/plating,/area/space)
+"ON" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor/plating,/area/space)
+"Pg" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/obj/effect/catwalk_plated/white,/obj/structure/iv_drip,/obj/machinery/light{dir = 8},/turf/simulated/floor/plating,/area/space)
+"Qo" = (/obj/machinery/door/airlock/multi_tile/engineering,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/space)
+"Qv" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/turf/simulated/floor/plating,/area/space)
+"Re" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 5},/turf/simulated/floor/plating,/area/space)
+"Sl" = (/obj/structure/table/steel_reinforced,/turf/simulated/floor/plating,/area/space)
+"Sm" = (/obj/machinery/door/airlock/external/bolted/cycling{id_tag = "emergency_ship_outer"; name = "Engineering External Access"},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/space)
+"Sn" = (/obj/machinery/atmospherics/binary/pump,/turf/simulated/floor/plating,/area/space)
+"Sz" = (/obj/machinery/access_button/airlock_exterior{master_tag = "emergency_ship"; name = "exterior access button"; pixel_x = -22; pixel_y = 8},/turf/space,/area/space)
+"SD" = (/obj/structure/table/reinforced,/obj/item/reagent_containers/spray/cleaner{pixel_x = 7; pixel_y = 8},/obj/item/reagent_containers/dropper{pixel_x = -4; pixel_y = 8},/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_y = 24},/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 0},/turf/simulated/floor/tiled/white,/area/space)
+"SO" = (/obj/effect/catwalk_plated/dark,/obj/machinery/computer/ship/helm,/turf/simulated/floor/plating,/area/space)
+"SW" = (/obj/machinery/door/blast/regular/open{dir = 2; icon_state = "pdoor0"; id_tag = "merch_radaway"; opacity = 0},/obj/machinery/meter/turf,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/space)
+"Tp" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/white,/area/space)
+"UA" = (/obj/machinery/reagentgrinder,/turf/simulated/floor/tiled/white,/area/space)
+"UF" = (/obj/item/roller{pixel_y = 4},/obj/item/roller,/obj/structure/closet/walllocker{pixel_x = 24},/obj/effect/floor_decal/corner/blue{dir = 6},/obj/structure/iv_drip,/obj/random/blood_packs,/obj/random/blood_packs,/obj/random/blood_packs,/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/tiled/white,/area/space)
+"Vl" = (/obj/machinery/door/blast/regular/open{dir = 2; icon_state = "pdoor0"; id_tag = "merch_radaway"; opacity = 0},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/space)
+"Vo" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/tiled/white,/area/space)
+"VA" = (/obj/machinery/computer/ship/engines,/turf/simulated/floor/plating,/area/space)
+"Wa" = (/obj/machinery/vending/medical/sierra,/obj/effect/floor_decal/corner/blue{dir = 5},/turf/simulated/floor/tiled/white,/area/space)
+"Wf" = (/obj/machinery/vitals_monitor,/obj/effect/floor_decal/corner/blue/border{dir = 6},/turf/simulated/floor/tiled/white,/area/space)
+"Wi" = (/obj/machinery/embedded_controller/radio/airlock/airlock_controller{id_tag = "solar_starboard"; pixel_x = -5; pixel_y = 21; req_access = list("ACCESS_EXTERNAL")},/obj/machinery/airlock_sensor{id_tag = "solar_starboard_sensor"; master_tag = "solar_starboard"; pixel_x = 10; pixel_y = 27},/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{dir = 8; id_tag = "merchant_station_vent"},/turf/simulated/floor/plating,/area/space)
+"Ws" = (/obj/machinery/atmospherics/unary/engine{dir = 1},/turf/simulated/wall/r_titanium,/area/space)
+"WL" = (/obj/machinery/computer/ship/sensors,/turf/simulated/floor/plating,/area/space)
+"WN" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/white,/area/space)
+"WR" = (/obj/machinery/smartfridge/secure/medbay{req_access = list(list("ACCESS_CHEMISTRY","ACCESS_MEDICAL_EQUIP"))},/turf/simulated/floor/plating,/area/space)
+"WY" = (/obj/machinery/door/firedoor,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/space)
+"XL" = (/obj/machinery/atmospherics/unary/cryo_cell,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/white,/area/space)
+"Ye" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8},/turf/simulated/floor/plating,/area/space)
+"Zc" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 9},/turf/simulated/floor/plating,/area/space)
+"ZA" = (/obj/machinery/power/apc{name = "south bump"; pixel_y = -24},/obj/machinery/organ_printer/robot/mapped,/obj/structure/cable{icon_state = "0-4"; d2 = 4},/obj/effect/floor_decal/corner/blue/border{dir = 10},/turf/simulated/floor/tiled/white,/area/space)
+
+(1,1,1) = {"
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfRfRfRfRfRfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYfRVASOWLfRDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfREklGBmlGKrfRfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfRSlugMQuCSlqffAfAshfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfRlGgtjqlGlGfRfAfALnfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYoxlGFOlGurDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYDYDYDYDYDYryDYDYDYDYDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYUAlkSDGSDYlGFOlGDYlGlGlGDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYHgalVoEYHODYlGFOlGDYlGlGlGlGDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYDYIoWNWRDYDYlGFOlGDYlGlGlGlGDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYHlLrWamETplQIolGYelGgPlGlGlGlGlGDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYXLuZfvJvkfJYxqIolGFOlGDYlGvmlGlGlGlGDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYjSNKpRNtoSysUFDYlGFOlGDYlGQvlGlGDYDYDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYDYjnDYDYqrEvIolGFOlGDYlGlGlGlGDYpODYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYlvkJiEGdDYoUWYDYlGFOlGDYDYDYDYDYDYkeWiDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYPgKdkwIHDYYeqOraraLerarararahRsHdaMdOlSmfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYJnZAqAWfDYFOlGlGlGlGlGlGlGlGEBzSDYlGlGDYSzfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYDYDYDYDYfmDYDYDYDYDYDYDYQonYDYDYDYDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYlGlGlGlGlGFOcVcVlGDYyPOuMqNzwlhbrXoHDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYlGlGlGlGlGKIjkQvlGDYuGuGlGlGxjkUeYoHDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYlGlGlGlGlGlGlGlGDYDHONDwlGfFlGEKoHDYDYfADlfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYlGlGlGlGlGlGlGDYVlmHByaFfFgMlZDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYDYDYDYDYlGlGlGlGlGDYSWmHznznfFDYDYDYDYDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYiIzflGlGgPlGlGlGlGlGDYjPmHNvonkUgPlGlGzfiIDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYDYReoFqJDYDYDYDYDYDYDYDYDYDYDYDYDYDYDYCPoFZcDYDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYLPoFxPDCDYfAfAlGlGlGlGlGlGlGlGlGfAfADYJoDfoFkzDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYLPZcSnnZDYfAfAfAlGlGlGlGlGlGlGfAfAfADYgfSnRekzDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYidoFEVowDYfAfAfAfAlGlGlGlGlGfAfAfAfADYidEVoFowDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfADYWsWsWsWsDYfAfAfAfAfAlGlGlGfAfAfAfAfADYWsWsWsWsDYfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+fAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfAfA
+"}
