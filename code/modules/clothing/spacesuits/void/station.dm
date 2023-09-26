@@ -346,7 +346,7 @@
 //[/INF]
 	icon_state = "rig0-secalt"
 	item_state = "secalt_helm"
-	light_overlay = "helmet_light_alt"
+	light_overlay = "helmet_light_secalt"
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_PISTOL, //INF WAS ARMOR_BALLISTIC_SMALL
