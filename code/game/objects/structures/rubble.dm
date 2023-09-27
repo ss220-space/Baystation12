@@ -3,7 +3,7 @@
 	desc = "One man's garbage is another man's treasure."
 	icon = 'infinity/icons/obj/rubble.dmi' // inf-dev
 	icon_state = "base"
-	appearance_flags = PIXEL_SCALE
+	appearance_flags = DEFAULT_APPEARANCE_FLAGS | PIXEL_SCALE
 	opacity = TRUE
 	density = TRUE
 	anchored = TRUE
