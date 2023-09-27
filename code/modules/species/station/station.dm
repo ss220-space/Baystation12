@@ -187,7 +187,6 @@
 		/datum/mob_descriptor/headtail_length = 0
 	)
 
-
 	available_cultural_info = list(
 		TAG_CULTURE = list(
 			CULTURE_SKRELL_QERR,
