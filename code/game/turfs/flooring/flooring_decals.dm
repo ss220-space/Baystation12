@@ -28,7 +28,7 @@ var/list/floor_decals = list()
 		if(!floor_decals[cache_key])
 			var/image/I = image(icon = src.icon, icon_state = src.icon_state, dir = src.dir)
 			I.layer = layer
-			I.appearance_flags = appearance_flags
+			I.appearance_flags = DEFAULT_APPEARANCE_FLAGS | appearance_flags
 			I.color = src.color
 			I.alpha = src.alpha
 			if(detail_overlay)
