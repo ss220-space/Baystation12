@@ -58,7 +58,7 @@
 	icon_state = "[initial(icon_state)][opened ? "_open" : "[contains_body ? "_occupied" : ""]"]"
 	overlays.Cut()
 	var/image/I = image(icon, "indicator")
-	I.appearance_flags = RESET_COLOR
+	I.appearance_flags = DEFAULT_APPEARANCE_FLAGS | RESET_COLOR
 	var/maxstasis = initial(stasis_power)
 	if(stasis_power > 0.5 * maxstasis)
 		I.color = COLOR_LIME
