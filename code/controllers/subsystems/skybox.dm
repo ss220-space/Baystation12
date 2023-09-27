@@ -51,7 +51,6 @@ SUBSYSTEM_DEF(skybox)
 
 /datum/controller/subsystem/skybox/proc/generate_skybox(z)
 	var/image/res = image(skybox_icon)
-	res.appearance_flags = KEEP_TOGETHER
 
 	var/image/base = overlay_image(skybox_icon, background_icon, background_color)
 
