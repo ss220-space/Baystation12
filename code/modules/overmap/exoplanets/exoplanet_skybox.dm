@@ -17,7 +17,7 @@
 	if (water_color) //TODO: move water levels out of randommap into exoplanet
 		var/image/water = image('icons/skybox/planet.dmi', "water")
 		water.color = water_color
-		water.appearance_flags = PIXEL_SCALE
+		water.appearance_flags = DEFAULT_APPEARANCE_FLAGS | PIXEL_SCALE
 		water.transform = water.transform.Turn(rand(0,360))
 		skybox_image.overlays += water
 
