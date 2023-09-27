@@ -68,7 +68,7 @@ SUBSYSTEM_DEF(skybox)
 			for(var/obj/effect/overmap/visitable/other in O.loc)
 				if(other != O)
 					overmap.overlays += other.get_skybox_representation()
-			overmap.appearance_flags = RESET_COLOR
+			overmap.appearance_flags |= RESET_COLOR
 			res.overlays += overmap
 
 	for(var/datum/event/E in SSevent.active_events)
