@@ -187,8 +187,6 @@
 		/datum/mob_descriptor/headtail_length = 0
 	)
 
-	min_height = 152
-	max_height = 206
 
 	available_cultural_info = list(
 		TAG_CULTURE = list(
