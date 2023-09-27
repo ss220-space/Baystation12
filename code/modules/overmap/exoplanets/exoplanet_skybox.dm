@@ -55,4 +55,4 @@
 
 	skybox_image.pixel_x = rand(0,64)
 	skybox_image.pixel_y = rand(128,256)
-	skybox_image.appearance_flags = RESET_COLOR
+	skybox_image.appearance_flags = DEFAULT_APPEARANCE_FLAGS | RESET_COLOR
