@@ -11,7 +11,6 @@
 		default_language = all_languages[species_language]
 	..()
 
-
 /mob/living/carbon/Destroy()
 	QDEL_NULL(touching)
 	bloodstr = null // We don't qdel(bloodstr) because it's the same as qdel(reagents)
