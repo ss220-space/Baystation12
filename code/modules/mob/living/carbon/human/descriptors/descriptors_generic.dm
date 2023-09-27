@@ -21,7 +21,30 @@
 		"towering over you"
 		)
 	var/list/scale_effect = list(
-		SPECIES_HUMAN = list(-7, -4, 0, 4, 7)
+		SPECIES_HUMAN = list(-7, -4, 0, 4, 7),
+		SPECIES_DIONA = list(-7, -4, 0, 4, 7),
+		SPECIES_IPC = list(-7, -4, 0, 4, 7),
+		SPECIES_UNATHI = list(-7, -4, 0, 4, 7),
+		SPECIES_YEOSA = list(-7, -4, 0, 4, 7),
+		SPECIES_SKRELL = list(-7, -4, 0, 4, 7),
+		SPECIES_TRITONIAN = list(-7, -4, 0, 4, 7),
+		SPECIES_SPACER = list(-7, -4, 0, 4, 7),
+		SPECIES_VATGROWN = list(-7, -4, 0, 4, 7),
+		SPECIES_GRAVWORLDER = list(-7, -4, 0, 4, 7),
+		SPECIES_MULE = list(-7, -4, 0, 4, 7),
+		SPECIES_RESOMI = list(-7, -4, 0, 4, 7),
+		SPECIES_TAJARA = list(-7, -4, 0, 4, 7),
+		SPECIES_VOX = list(-7, -4, 0, 4, 7),
+		SPECIES_ALIEN = list(-7, -4, 0, 4, 7),
+		SPECIES_GOLEM = list(-7, -4, 0, 4, 7),
+		SPECIES_NABBER = list(-7, -4, 0, 4, 7),
+		SPECIES_MANTID_GYNE = list(-7, -4, 0, 4, 7),
+		SPECIES_MANTID_ALATE = list(-7, -4, 0, 4, 7),
+		SPECIES_MONARCH_WORKER = list(-7, -4, 0, 4, 7),
+		SPECIES_MONARCH_QUEEN = list(-7, -4, 0, 4, 7),
+		SPECIES_XENO = list(-7, -4, 0, 4, 7),
+		SPECIES_EROSAN = list(-7, -4, 0, 4, 7),
+		SPECIES_ADHERENT = list(-7, -4, 0, 4, 7),
 	)
 
 /datum/mob_descriptor/build
@@ -47,5 +70,28 @@
 		"dwarfing you"
 		)
 	var/list/scale_effect = list(
-		SPECIES_HUMAN = list(-7.5, 0, 0, 0, 7.5)
+		SPECIES_HUMAN = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_DIONA = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_IPC = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_UNATHI = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_YEOSA = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_SKRELL = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_TRITONIAN = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_SPACER = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_VATGROWN = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_GRAVWORLDER = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_MULE = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_RESOMI = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_TAJARA = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_VOX = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_ALIEN = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_GOLEM = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_NABBER = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_MANTID_GYNE = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_MANTID_ALATE = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_MONARCH_WORKER = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_MONARCH_QUEEN = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_XENO = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_EROSAN = list(-7.5, -4, 0, 4, 7.5),
+		SPECIES_ADHERENT = list(-7.5, -4, 0, 4, 7.5),
 	)
