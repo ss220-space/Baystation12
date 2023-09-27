@@ -54,6 +54,9 @@
 	slowdown = -1
 	hud_type = /datum/hud_data/adherent
 
+	min_height = 200
+	max_height = 300
+
 	descriptors = list(
 		/datum/mob_descriptor/height = 1.6,
 		/datum/mob_descriptor/build = 0.4
