@@ -13,7 +13,7 @@
 	blend_mode = BLEND_OVERLAY
 	vis_flags = VIS_HIDE
 
-	appearance_flags = 0
+	appearance_flags = DEFAULT_APPEARANCE_FLAGS
 
 	var/lum_r = 0
 	var/lum_g = 0
