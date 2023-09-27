@@ -20,8 +20,6 @@
 	base_auras = list(
 		/obj/aura/regenerating/human/unathi/yeosa
 		)
-	min_height = 150
-	max_height = 275
 
 
 	additional_available_cultural_info = list(
