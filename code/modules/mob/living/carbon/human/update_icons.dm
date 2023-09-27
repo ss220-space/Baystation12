@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(species_icon_template_cache)
 /proc/overlay_image(icon,icon_state,color,flags,plane,layer)
 	var/image/ret = image(icon,icon_state)
 	ret.color = color
-	ret.appearance_flags = flags
+	ret.appearance_flags = DEFAULT_APPEARANCE_FLAGS | flags
 
 	if(plane)
 		ret.plane = plane
