@@ -315,7 +315,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	var/datum/species/mob_species = all_species[pref.species]
 	if(href_list["toggle_species_verbose"])
 		hide_species = !hide_species
-		return TOPIC_REFRESH
+		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["random"])
 		pref.randomize_appearance_and_body_for()
