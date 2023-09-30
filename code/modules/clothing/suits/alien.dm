@@ -105,7 +105,7 @@
 		laser = ARMOR_LASER_MAJOR,
 		bomb = ARMOR_BOMB_PADDED
 		)
-	icon_state = "vox-scrap-helmet"
+	icon_state = "vox-hcrap-helm"
 	body_parts_covered = HEAD|FACE|EYES
 	species_restricted = list(SPECIES_VOX)
 	siemens_coefficient = 1
