@@ -100,8 +100,8 @@
 	name = "rusted metal helmet"
 	desc = "A hodgepodge of various pieces of unknown heavy metal scrapped together into a rudimentary vox-shaped helmet."
 	armor = list(
-	   	melee = ARMOR_MELEE_VERY_HIGH,
-	 	bullet = ARMOR_BALLISTIC_RIFLE,
+		melee = ARMOR_MELEE_VERY_HIGH,
+		bullet = ARMOR_BALLISTIC_RIFLE,
 		laser = ARMOR_LASER_MAJOR,
 		bomb = ARMOR_BOMB_PADDED
 		)
