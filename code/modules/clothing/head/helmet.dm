@@ -252,6 +252,9 @@
 /obj/item/clothing/head/helmet/vox_scrap
 	name = "rusted metal helmet"
 	desc = "A hodgepodge of various pieces of unknown heavy metal scrapped together into a rudimentary vox-shaped helmet."
+	icon = 'icons/obj/clothing/obj_head.dmi'
+	item_icons = list(slot_head_str = 'icons/mob/species/vox/onmob_head_vox.dmi')
+	icon_state = "vox_scrap"
 	armor = list(
 		melee = ARMOR_MELEE_VERY_HIGH,
 		bullet = ARMOR_BALLISTIC_RIFLE,
@@ -260,9 +263,6 @@
 		)
 	item_flags = ITEM_FLAG_THICKMATERIAL
 	flags_inv = HIDEEARS|BLOCKHEADHAIR
-	heat_protection = HEAD
-	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
-	icon_state = "vox_scrap"
 	body_parts_covered = HEAD|FACE
 	species_restricted = list(SPECIES_VOX)
 	siemens_coefficient = 1
