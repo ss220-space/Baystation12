@@ -83,11 +83,6 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/pellet
 	marking_color = COLOR_RED_GRAY
 
-/obj/item/ammo_magazine/shotholder/manstopper
-	name = "manstopper shell holder"
-	ammo_type = /obj/item/ammo_casing/shotgun/manstopper
-	marking_color = COLOR_SURGERY_BLUE
-
 /obj/item/ammo_magazine/shotholder/flechette
 	name = "flechette shell holder"
 	ammo_type = /obj/item/ammo_casing/shotgun/flechette

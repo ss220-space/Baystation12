@@ -287,7 +287,7 @@
 /obj/item/projectile/beam/darkmatter
 	name = "dark matter bolt"
 	icon_state = "darkb"
-	damage = 30
+	damage = 25
 	armor_penetration = 35
 	damage_type = BRUTE
 	muzzle_type = /obj/effect/projectile/darkmatter/muzzle

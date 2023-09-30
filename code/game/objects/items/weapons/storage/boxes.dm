@@ -199,10 +199,6 @@
 	name = "box of shotgun slugs"
 	startswith = list(/obj/item/ammo_magazine/shotholder = 2)
 
-/obj/item/storage/box/ammo/manstoppershells
-	name = "box of manstopper shells"
-	startswith = list(/obj/item/ammo_magazine/shotholder/manstopper = 2)
-
 /obj/item/storage/box/ammo/shotgunshells
 	name = "box of shotgun shells"
 	startswith = list(/obj/item/ammo_magazine/shotholder/shell = 2)

@@ -169,11 +169,6 @@
 	damage = 65
 	armor_penetration = 10
 
-/obj/item/projectile/bullet/shotgun/manstopper
-	name = "manstopper"
-	damage = 50
-	agony = 30
-
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
 	name = "beanbag"
 	damage = 25

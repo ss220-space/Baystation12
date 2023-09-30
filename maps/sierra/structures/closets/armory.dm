@@ -14,10 +14,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/sierra_armory/shotgun/WillContain()
 	return list(/obj/item/gun/projectile/shotgun/pump/combat/armory = 2,
-				/obj/item/clothing/accessory/storage/bandolier/armory = 2,
-				/obj/item/storage/box/ammo/beanbags = 2,
-				/obj/item/storage/box/ammo/practiceshells = 2,
-				/obj/item/storage/box/ammo/manstoppershells = 2)
+				/obj/item/clothing/accessory/storage/bandolier/armory = 2)
 
 /obj/structure/closet/secure_closet/guncabinet/sierra_armory/laser
 	name = "laser guncabinet"

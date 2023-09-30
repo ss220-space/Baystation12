@@ -68,14 +68,6 @@
 	matter = list(MATERIAL_STEEL = 360)
 	fall_sounds = list('sound/weapons/guns/shotgun_fall.ogg')
 
-/obj/item/ammo_casing/shotgun/manstopper
-	name = "shotgun shell"
-	desc = "A manstopper shell."
-	icon_state = "mnshell"
-	spent_icon = "mnshell-spent"
-	projectile_type = /obj/item/projectile/bullet/shotgun/manstopper
-	matter = list(MATERIAL_STEEL = 360)
-
 /obj/item/ammo_casing/shotgun/pellet
 	name = "shotgun shell"
 	desc = "A shotshell."

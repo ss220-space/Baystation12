@@ -175,7 +175,6 @@
 	 Исключением являются те ситуации, когда вы терпите бедствие или на вашем судне аварийная ситуация.<br>\
 	\
 	<b>Хоть вы и являетесь офицером, в ваши обязанности НЕ входит командование экипажем - это всего лишь показатель вашего профессионализма в медицинской сфере!</b>"
-	whitelisted_species = list(SPECIES_HUMAN, SPECIES_IPC)
 	min_skill = list(SKILL_COMBAT  = SKILL_BASIC,
 					 SKILL_WEAPONS = SKILL_BASIC,
 					 SKILL_HAULING = SKILL_ADEPT,
@@ -202,7 +201,6 @@
 	\
 	 Вам крайне нежелательно приближаться к кораблям и станциям с опозновательными знаками без разрешения от командования группировкой. \
 	 Исключением являются те ситуации, когда вы терпите бедствие или на вашем судне аварийная ситуация."
-	whitelisted_species = list(SPECIES_HUMAN, SPECIES_IPC)
 	min_skill = list(SKILL_COMBAT  = SKILL_BASIC,
 					 SKILL_WEAPONS = SKILL_BASIC,
 					 SKILL_HAULING = SKILL_ADEPT,
