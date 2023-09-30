@@ -252,7 +252,7 @@
 /obj/item/clothing/head/helmet/vox_scrap
 	name = "rusted metal helmet"
 	desc = "A hodgepodge of various pieces of unknown heavy metal scrapped together into a rudimentary vox-shaped helmet."
-	icon = 'icons/obj/clothing/obj_head.dmi'
+	icon = 'icons/mob/species/vox/head.dmi'
 	item_icons = list(slot_head_str = 'icons/mob/species/vox/onmob_head_vox.dmi')
 	icon_state = "vox_scrap"
 	armor = list(
