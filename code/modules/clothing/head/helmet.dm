@@ -262,7 +262,7 @@
 	flags_inv = HIDEEARS|BLOCKHEADHAIR
 	heat_protection = HEAD
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
-	icon_state = "vox-scrap"
+	icon_state = "vox_scrap"
 	body_parts_covered = HEAD|FACE
 	species_restricted = list(SPECIES_VOX)
 	siemens_coefficient = 1

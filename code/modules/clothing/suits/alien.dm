@@ -87,7 +87,7 @@
 		laser = ARMOR_LASER_MAJOR,
 		bomb = ARMOR_BOMB_PADDED
 		)
-	icon_state = "vox_scrap"
+	icon_state = "vox-scrap"
 	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS
 	species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
 	siemens_coefficient = 1 //Its literally metal
