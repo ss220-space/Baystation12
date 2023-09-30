@@ -95,22 +95,3 @@
 	/obj/item/clothing/suit/armor/vox_scrap/New()
 		..()
 		slowdown_per_slot[slot_wear_suit] = 2
-
-/obj/item/clothing/head/helmet/vox_scrap_helm
-	name = "rusted metal helmet"
-	desc = "A hodgepodge of various pieces of unknown heavy metal scrapped together into a rudimentary vox-shaped helmet."
-	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_MAJOR,
-		bomb = ARMOR_BOMB_PADDED
-		)
-	icon_state = "vox-scrap-helm"
-	body_parts_covered = HEAD|FACE
-	species_restricted = list(SPECIES_VOX)
-	siemens_coefficient = 1
-	tint = 4
-
-	/obj/item/clothing/head/helmet/vox_scrap_helm/New()
-		..()
-		slowdown_per_slot[slot_head] = 0.7

@@ -248,3 +248,26 @@
 	flags_inv = BLOCKHAIR
 	body_parts_covered = 0
 	siemens_coefficient = 0.9
+
+/obj/item/clothing/head/helmet/vox_scrap
+	name = "rusted metal helmet"
+	desc = "A hodgepodge of various pieces of unknown heavy metal scrapped together into a rudimentary vox-shaped helmet."
+	armor = list(
+		melee = ARMOR_MELEE_VERY_HIGH,
+		bullet = ARMOR_BALLISTIC_RIFLE,
+		laser = ARMOR_LASER_MAJOR,
+		bomb = ARMOR_BOMB_PADDED
+		)
+	item_flags = ITEM_FLAG_THICKMATERIAL
+	flags_inv = HIDEEARS|BLOCKHEADHAIR
+	heat_protection = HEAD
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	icon_state = "vox-scrap"
+	body_parts_covered = HEAD|FACE
+	species_restricted = list(SPECIES_VOX)
+	siemens_coefficient = 1
+	tint = 4
+
+	/obj/item/clothing/head/helmet/vox_scrap/New()
+		..()
+		slowdown_per_slot[slot_head] = 0.7
