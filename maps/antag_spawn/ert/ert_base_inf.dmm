@@ -589,10 +589,6 @@
 /obj/structure/closet{
 	name = "insignias closet"
 	},
-/obj/item/clothing/accessory/solgov/department/medical/fleet,
-/obj/item/clothing/accessory/solgov/department/medical/fleet,
-/obj/item/clothing/accessory/solgov/department/medical/fleet,
-/obj/item/clothing/accessory/solgov/department/medical/fleet,
 /obj/item/clothing/head/beret/solgov/fleet/medical{
 	name = "asset protection medical beret"
 	},
@@ -605,6 +601,10 @@
 /obj/item/clothing/head/beret/solgov/fleet/medical{
 	name = "asset protection medical beret"
 	},
+/obj/item/clothing/accessory/ert/med,
+/obj/item/clothing/accessory/ert/med,
+/obj/item/clothing/accessory/ert/med,
+/obj/item/clothing/accessory/ert/med,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -808,11 +808,9 @@
 	},
 /area/map_template/rescue_base/base)
 "bN" = (
-/obj/machinery/door/blast/regular{
-	icon_state = "pdoor1";
+/obj/machinery/door/blast/regular/admin{
 	id_tag = "standardrescue";
-	name = "Garage";
-	p_open = 0
+	name = "Garage"
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -960,8 +958,6 @@
 /area/map_template/rescue_base/base)
 "bY" = (
 /obj/structure/table/rack,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
 /obj/item/clothing/glasses/hud/health/visor,
 /obj/item/clothing/glasses/hud/health/visor,
 /obj/item/storage/box/gloves,
@@ -1743,6 +1739,7 @@
 "dM" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/armor/vest/ert,
+/obj/item/clothing/accessory/ert/lead,
 /obj/item/clothing/head/helmet/riot/ert,
 /turf/unsimulated/floor{
 	dir = 1;
@@ -1782,11 +1779,9 @@
 	},
 /area/map_template/rescue_base/base)
 "dR" = (
-/obj/machinery/door/blast/regular{
-	icon_state = "pdoor1";
+/obj/machinery/door/blast/regular/admin{
 	id_tag = "rescuegarage";
-	name = "Garage Exit";
-	p_open = 0
+	name = "Garage Exit"
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -1805,10 +1800,6 @@
 /obj/structure/closet{
 	name = "insignias closet"
 	},
-/obj/item/clothing/accessory/solgov/department/security/fleet,
-/obj/item/clothing/accessory/solgov/department/security/fleet,
-/obj/item/clothing/accessory/solgov/department/security/fleet,
-/obj/item/clothing/accessory/solgov/department/security/fleet,
 /obj/item/clothing/head/beret/solgov/fleet/security{
 	name = "asset protection security beret"
 	},
@@ -1821,6 +1812,10 @@
 /obj/item/clothing/head/beret/solgov/fleet/security{
 	name = "asset protection security beret"
 	},
+/obj/item/clothing/accessory/ert/sec,
+/obj/item/clothing/accessory/ert/sec,
+/obj/item/clothing/accessory/ert/sec,
+/obj/item/clothing/accessory/ert/sec,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -2094,11 +2089,9 @@
 	opacity = 1;
 	req_access = newlist()
 	},
-/obj/machinery/door/blast/regular{
-	icon_state = "pdoor1";
+/obj/machinery/door/blast/regular/admin{
 	id_tag = "heavyrescue";
-	name = "Combat Exosuit";
-	p_open = 0
+	name = "Combat Exosuit"
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -3304,10 +3297,12 @@
 	},
 /area/map_template/rescue_base/base)
 "jv" = (
-/turf/unsimulated/wall{
-	icon = 'icons/turf/wall_masks.dmi';
-	icon_state = "r_generic"
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 101;
+	name = "Blocker"
 	},
+/turf/simulated/wall/r_wall/prepainted,
 /area/map_template/rescue_base/base)
 "jx" = (
 /obj/structure/table/rack,
@@ -3321,10 +3316,6 @@
 /obj/structure/closet{
 	name = "insignias closet"
 	},
-/obj/item/clothing/accessory/solgov/department/engineering/fleet,
-/obj/item/clothing/accessory/solgov/department/engineering/fleet,
-/obj/item/clothing/accessory/solgov/department/engineering/fleet,
-/obj/item/clothing/accessory/solgov/department/engineering/fleet,
 /obj/item/clothing/head/beret/solgov/fleet/engineering{
 	name = "asset protection engineering beret"
 	},
@@ -3337,6 +3328,10 @@
 /obj/item/clothing/head/beret/solgov/fleet/engineering{
 	name = "asset protection engineering beret"
 	},
+/obj/item/clothing/accessory/ert/eng,
+/obj/item/clothing/accessory/ert/eng,
+/obj/item/clothing/accessory/ert/eng,
+/obj/item/clothing/accessory/ert/eng,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3391,7 +3386,7 @@
 	name = "Emergency Insertion";
 	opacity = 1
 	},
-/obj/machinery/door/blast/regular{
+/obj/machinery/door/blast/regular/admin{
 	id_tag = "teleporter";
 	name = "Emergency Insertion"
 	},
@@ -3471,11 +3466,9 @@
 	name = "Garage";
 	req_access = newlist()
 	},
-/obj/machinery/door/blast/regular{
-	icon_state = "pdoor1";
+/obj/machinery/door/blast/regular/admin{
 	id_tag = "standardrescue";
-	name = "Garage";
-	p_open = 0
+	name = "Garage"
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -6308,14 +6301,14 @@ am
 am
 ac
 ac
-ac
-ac
+jv
+jv
 dR
 dR
 dR
 dR
-ac
-ac
+jv
+jv
 aY
 et
 eG
@@ -6382,7 +6375,7 @@ am
 am
 am
 Gc
-ac
+jv
 aY
 et
 eG
@@ -6449,7 +6442,7 @@ am
 am
 am
 ew
-ac
+jv
 aZ
 et
 eG
@@ -6509,14 +6502,14 @@ am
 am
 ac
 ac
-ac
+jv
 am
 am
 am
 am
 am
 ex
-ac
+jv
 aY
 dC
 dQ
@@ -6576,14 +6569,14 @@ am
 am
 ac
 ab
-ac
+jv
 dD
 am
 am
 am
 am
 ey
-ac
+jv
 aX
 aY
 aY
@@ -6643,14 +6636,14 @@ am
 db
 ac
 ab
-ac
+jv
 dE
 am
 am
 am
 am
 ez
-ac
+jv
 aY
 aZ
 aY
@@ -6710,14 +6703,14 @@ am
 am
 ac
 ab
-ac
+jv
 dF
 dS
 dX
 ek
 am
 eA
-ac
+jv
 aX
 aX
 ab
@@ -6777,14 +6770,14 @@ am
 am
 ac
 ab
-ac
-ac
-ac
-ac
-ac
+jv
+jv
+jv
+jv
+jv
 ep
-ac
-ac
+jv
+jv
 aX
 ab
 ab
@@ -6847,11 +6840,11 @@ ab
 ab
 ab
 ab
-ac
+jv
 el
 am
 aF
-ac
+jv
 ab
 ab
 ab
@@ -6914,11 +6907,11 @@ ab
 ab
 ab
 ab
-ac
+jv
 em
 eq
 eB
-ac
+jv
 ab
 ab
 ab
@@ -6981,11 +6974,11 @@ aa
 aa
 aa
 aa
-ac
-ac
-ac
-ac
-ac
+jv
+jv
+jv
+jv
+jv
 aa
 aa
 aa

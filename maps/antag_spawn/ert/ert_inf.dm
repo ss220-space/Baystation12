@@ -93,12 +93,14 @@
 	circuitboard = /obj/item/stock_parts/circuitboard/telecomms/allinone/ert
 
 /obj/item/clothing/accessory/ert
-	name = "NT asset protection patch"
-	desc = "A patch carrying insignia of NT forward base Kodai-624, tasked with emergency response operations."
+	name = "NT asset protection patches"
+	desc = "A combination of patches carrying insignia of NanoTrasen forward base Kodai-624, tasked with emergency response operations."
 	icon = 'icons/obj/clothing/obj_accessories.dmi'
 	accessory_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_accessories.dmi', slot_wear_suit_str = 'icons/mob/onmob/onmob_accessories.dmi')
 	icon_state = "ert"
 	w_class = ITEM_SIZE_TINY
+	slot = ACCESSORY_SLOT_INSIGNIA
+	on_rolled = list("down" = "none")
 
 /obj/item/clothing/accessory/ert/sec
 	name = "ERT security insignia"
