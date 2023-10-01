@@ -196,6 +196,7 @@
 	suit_type = "security command hardsuit"
 	desc = "A specialized hardsuit rig control module issued to ranking security command staff of the NanoTrasen and their peers."
 	icon = 'infinity/icons/obj/rig_modules.dmi'
+	item_icons = list(slot_back_str = 'infinity/icons/mob/onmob/onmob_rig_back.dmi')
 	icon_state = "hos_rig"
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT,

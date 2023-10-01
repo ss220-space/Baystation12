@@ -91,3 +91,31 @@
 	channel_color = COMMS_COLOR_CENTCOMM
 	channel_name = "Response Team"
 	circuitboard = /obj/item/stock_parts/circuitboard/telecomms/allinone/ert
+
+/obj/item/clothing/accessory/ert
+	name = "NT asset protection patch"
+	desc = "A patch carrying insignia of NT forward base Kodai-624, tasked with emergency response operations."
+	icon = 'icons/obj/clothing/obj_accessories.dmi'
+	accessory_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_accessories.dmi', slot_wear_suit_str = 'icons/mob/onmob/onmob_accessories.dmi')
+	icon_state = "ert"
+	w_class = ITEM_SIZE_TINY
+
+/obj/item/clothing/accessory/ert/sec
+	name = "ERT security insignia"
+	desc = "Insignia denoting a security member of the emergency response team."
+	icon_state = "ert_sec"
+
+/obj/item/clothing/accessory/ert/lead
+	name = "ERT leader insignia"
+	desc = "Insignia denoting a leader of the emergency response team."
+	icon_state = "ert_lead"
+
+/obj/item/clothing/accessory/ert/eng
+	name = "ERT engineering insignia"
+	desc = "Insignia denoting an engineer of the emergency response team."
+	icon_state = "ert_eng"
+
+/obj/item/clothing/accessory/ert/med
+	name = "ERT medical insignia"
+	desc = "Insignia denoting a medic of the emergency response team."
+	icon_state = "ert_med"

@@ -75,12 +75,13 @@
 
 /obj/item/clothing/under/ert_outfit
 	name = "asset protection uniform"
-	desc = "A black camouflage uniform for NT Security Force's asset protection."
-	icon = 'infinity/icons/obj/clothing/obj_under.dmi'
-	item_icons = list(slot_w_uniform_str = 'infinity/icons/mob/onmob/onmob_under.dmi')
-	icon_state = "ass_protection"
-	item_state = "ass_protection"
-	worn_state = "ass_protection"
+	desc = "A comfortable turtleneck and utility trousers for NT Security Force's asset protection."
+	icon = 'maps/torch/icons/obj/obj_under_solgov.dmi'
+	item_icons = list(slot_w_uniform_str = 'maps/torch/icons/mob/onmob_under_solgov.dmi')
+	icon_state = "blackutility"
+	item_state = "bl_suit"
+	worn_state = "blackutility"
+	starting_accessories = list(/obj/item/clothing/accessory/ert)
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.8
 
