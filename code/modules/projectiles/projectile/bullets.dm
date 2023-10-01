@@ -173,6 +173,7 @@
 	name = "manstopper"
 	damage = 50
 	agony = 30
+	armor_penetration = 0
 
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
 	name = "beanbag"
