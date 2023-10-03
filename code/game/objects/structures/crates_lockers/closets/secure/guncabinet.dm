@@ -26,7 +26,7 @@
 	..()
 	update_icon()
 
-/obj/structure/closet/secure_closet/guncabinet/update_icon()
+/obj/structure/closet/secure_closet/guncabinet/on_update_icon()
 	overlays.Cut()
 	var/lazors = 0
 	var/shottas = 0

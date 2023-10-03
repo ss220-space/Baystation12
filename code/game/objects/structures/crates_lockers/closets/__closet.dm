@@ -452,7 +452,7 @@
 		to_chat(usr, "<span class='warning'>This mob type can't use this verb.</span>")
 
 
-/obj/structure/closet/update_icon()
+/obj/structure/closet/on_update_icon()
 	if(!door_underlay)
 		overlays.Cut()
 

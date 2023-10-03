@@ -118,7 +118,7 @@ GLOBAL_REAL_VAR(list/stack_trace_storage)
 
 	if(config && config.log_runtime)
 		world.log = file("[GLOB.log_directory]/runtime.log")
-		world.log << "Game [game_id] starting up at [time2text(world.timeofday, "hh:mm.ss")]"
+		to_world_log("Game [game_id] starting up at [time2text(world.timeofday, "hh:mm.ss")]")
 
 
 

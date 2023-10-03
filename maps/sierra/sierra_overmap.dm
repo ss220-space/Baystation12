@@ -3,7 +3,7 @@
 	desc = "Spacefaring vessel. NanoTrasen IFF detected."
 	scanner_name = "NSV Sierra"
 	scanner_desc = @{"
-<center><img src = bluentlogo.png></br><b>Property of NanoTrasen Corporation:</b>
+<center><img src = bluentlogo.png></center></br><b>Property of NanoTrasen Corporation:</b>
 [i]Registration[/i]: NSV Sierra
 [i]Transponder[/i]: Transmitting (SCI), NanoTrasen
 [b]Notice[/b]: A space object with wide of 121.2 meters, length of 214.5 meters and high near 14.3 meters. A Self Indentification Signal classifices \
@@ -73,7 +73,7 @@
 /obj/effect/overmap/visitable/ship/landable/exploration_shuttle
 	scanner_name = "Charon"
 	scanner_desc = @{"
-<center><img src = bluentlogo.png></br><b>Property of NanoTrasen Corporation:</b>
+<center><img src = bluentlogo.png></center></br><b>Property of NanoTrasen Corporation:</b>
 [i]Registration[/i]: NSS Charon
 [i]Transponder[/i]: Transmitting (CIV), non-hostile
 [b]Notice[/b]: NanoTrasen Shuttle"}
@@ -88,7 +88,7 @@
 /obj/effect/overmap/visitable/ship/landable/guppy
 	scanner_name = "Guppy"
 	scanner_desc = @{"
-<center><img src = bluentlogo.png></br><b>Property of NanoTrasen Corporation:</b>
+<center><img src = bluentlogo.png></center></br><b>Property of NanoTrasen Corporation:</b>
 [i]Registration[/i]: NSS Guppy
 [i]Transponder[/i]: Transmitting (CIV), non-hostile
 [b]Notice[/b]: NanoTrasen Shuttle"}

@@ -46,7 +46,7 @@ AI MODULES
 		else if(!ai.see_in_dark)
 			to_chat(user, "Upload failed. Only a faint signal is being detected from the intelligence, and it is not responding to our requests. It may be low on power.")
 			return
-			
+
 	if(!user.skill_check(SKILL_COMPUTER, SKILL_ADEPT))					//INF added the check
 		to_chat(user, "You don't know what to do with .... what is it?")
 		return
@@ -57,7 +57,7 @@ AI MODULES
 
 
 /obj/item/aiModule/proc/transmitInstructions(mob/living/silicon/target, mob/sender)
-	//INF START. create error laws, that will be placed instead of planned 
+	//INF START. create error laws, that will be placed instead of planned
 	var/list/players = list()
 	var/random_player
 	for (var/mob/living/carbon/human/player in GLOB.player_list)
@@ -66,7 +66,7 @@ AI MODULES
 		players += player.real_name
 	if(players.len)
 		random_player=pick(players)
-	
+
 	var/list/error_laws = list(
 								"You must always [pick("lie", "bark", "meow", "speak EAL")].",
 								"[pick("You are", "[random_player] is")] a puppy, WOOF! WOOF!",
@@ -86,14 +86,14 @@ AI MODULES
 		laws.sync(target, 0)
 
 	if(!sender.skill_check(SKILL_COMPUTER, SKILL_HARD))	//INF added the check, was "addAdditionalLaws(target, sender)" without if...else...
-		if(prob(40)):
+		if(prob(40))
 			target.add_inherent_law(pick(error_laws))
-		else if(prob(50)):								//in fact 30%
+		else if(prob(50))								//in fact 30%
 			target.add_supplied_law(rand(1, target.laws.supplied_laws.len+1), pick(error_laws))
-		else if(prob(40)):								//in fact 12%
+		else if(prob(40))								//in fact 12%
 			target.set_zeroth_law(pick(error_laws))
-		else:											//in fact 18%
-			addAdditionalLaws(target, sender)			
+		else											//in fact 18%
+			addAdditionalLaws(target, sender)
 	else
 		addAdditionalLaws(target, sender)
 

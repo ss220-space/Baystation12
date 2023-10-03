@@ -64,12 +64,12 @@
 	species_restricted = list(SPECIES_UNATHI)
 	w_class = ITEM_SIZE_NORMAL
 	allowed = list(
-    	/obj/item/gun,
-    	/obj/item/ammo_magazine,
-    	/obj/item/ammo_casing,
-    	/obj/item/melee/baton,
-    	/obj/item/handcuffs,
-    	/obj/item/tank/emergency
+		/obj/item/gun,
+		/obj/item/ammo_magazine,
+		/obj/item/ammo_casing,
+		/obj/item/melee/baton,
+		/obj/item/handcuffs,
+		/obj/item/tank/emergency
 	)
 	siemens_coefficient = 0.9
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS

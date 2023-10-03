@@ -35,48 +35,48 @@ GLOBAL_DATUM_INIT(traitors, /datum/antagonist/traitor, new)
 		return 1
 
 /datum/antagonist/traitor/create_objectives(var/datum/mind/traitor)
-    if(!..())
-        return
-    var/objectives_count = round(count_living()/config.traitor_objectives_scaling) + 1
-    var/datum/objective/objective = null
-    for (var/count in 1 to objectives_count)
-        switch(rand(1,100))
-            if(1 to 10)
-                objective = new /datum/objective/assassinate()
-            if(11 to 20)
-                objective = new /datum/objective/debrain()
-            if(21 to 40)
-                objective = new /datum/objective/brig()
-            if(41 to 80)
-                objective = new /datum/objective/harm()
-            else
-                objective = new /datum/objective/steal()
+	if(!..())
+		return
+	var/objectives_count = round(count_living()/config.traitor_objectives_scaling) + 1
+	var/datum/objective/objective = null
+	for (var/count in 1 to objectives_count)
+		switch(rand(1,100))
+			if(1 to 10)
+				objective = new /datum/objective/assassinate()
+			if(11 to 20)
+				objective = new /datum/objective/debrain()
+			if(21 to 40)
+				objective = new /datum/objective/brig()
+			if(41 to 80)
+				objective = new /datum/objective/harm()
+			else
+				objective = new /datum/objective/steal()
 
-        objective.owner = traitor
+		objective.owner = traitor
 
-        if(istype(objective, /datum/objective/steal))
-            objective.find_target(traitor.objectives)
+		if(istype(objective, /datum/objective/steal))
+			objective.find_target(traitor.objectives)
 
-        else if (!objective.find_target())
-            qdel(objective)
-            objective = new /datum/objective/steal()
-            objective.owner = traitor
-            objective.find_target(traitor.objectives)
+		else if (!objective.find_target())
+			qdel(objective)
+			objective = new /datum/objective/steal()
+			objective.owner = traitor
+			objective.find_target(traitor.objectives)
 
-        traitor.objectives += objective
+		traitor.objectives += objective
 
-    switch(rand(1,10))
-        if(1 to 4)
-            if (!(locate(/datum/objective/escape) in traitor.objectives))
-                var/datum/objective/escape/escape_objective = new
-                escape_objective.owner = traitor
-                traitor.objectives += escape_objective
-        else
-            if (!(locate(/datum/objective/survive) in traitor.objectives))
-                var/datum/objective/survive/survive_objective = new
-                survive_objective.owner = traitor
-                traitor.objectives += survive_objective
-    return
+	switch(rand(1,10))
+		if(1 to 4)
+			if (!(locate(/datum/objective/escape) in traitor.objectives))
+				var/datum/objective/escape/escape_objective = new
+				escape_objective.owner = traitor
+				traitor.objectives += escape_objective
+		else
+			if (!(locate(/datum/objective/survive) in traitor.objectives))
+				var/datum/objective/survive/survive_objective = new
+				survive_objective.owner = traitor
+				traitor.objectives += survive_objective
+	return
 
 /* original
 /datum/antagonist/traitor/create_objectives(var/datum/mind/traitor)

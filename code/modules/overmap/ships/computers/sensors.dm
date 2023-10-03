@@ -20,7 +20,7 @@
 	icon_keyboard = null
 	icon_state = "adv_sensors"
 	icon_screen = "adv_sensors_screen"
-	light_color = "#05A6A8"
+	light_color = "#05a6a8"
 
 /obj/machinery/computer/ship/sensors/spacer
 	construct_state = /decl/machine_construction/default/panel_closed/computer/no_deconstruct
@@ -285,7 +285,7 @@
 	icon_keyboard = null
 	icon_state = "adv_sensors"
 	icon_screen = "adv_sensors_screen"
-	light_color = "#05A6A8"
+	light_color = "#05a6a8"
 	base_type = /obj/machinery/computer/ship/navigation
 
 /obj/machinery/shipsensors/weak
