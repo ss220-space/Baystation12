@@ -14,9 +14,13 @@ exactly() { # exactly N name search [mode] [filter]
 	num="$(grep "$mode" "$search" $filter | wc -l || true)"
 
 	if [ $num -eq $count ]; then
-		echo "$num $name"
+		echo "[1;32mOK[0m $num $name"
 	else
-		echo "$(tput setaf 9)$num $name (expecting exactly $count)$(tput sgr0)"
+		echo "[1;31mFAIL[0m $num $name (expecting exactly $count)"
+		if [ $1 -lt 30 ]; then
+			echo "entries:"
+			grep "$mode" "$search" $filter
+		fi
 		FAILED=1
 	fi
 }
@@ -30,11 +34,11 @@ exactly 2 "/datum text paths" '"/datum'
 exactly 2 "/mob text paths" '"/mob'
 exactly 10 "/obj text paths" '"/obj'
 exactly 8 "/turf text paths" '"/turf'
-exactly 142 "to_world uses" '\sto_world\('
-exactly 69 "to_world_log uses" '\sto_world_log\('
+exactly 141 "to_world uses" '\sto_world\('
+exactly 66 "to_world_log uses" '\sto_world_log\('
 exactly 0 "world<< uses" 'world<<|world[[:space:]]<<'
 exactly 0 "world.log<< uses" 'world.log<<|world.log[[:space:]]<<'
-exactly 134 "<< uses" '(?<!<)<<(?!<)' -P
+exactly 148 "<< uses" '(?<!<)<<(?!<)' -P
 exactly 0 "incorrect indentations" '^( {4,})' -P
 exactly 36 "text2path uses" 'text2path'
 exactly 3 "update_icon() override" '/update_icon\((.*)\)'  -P
