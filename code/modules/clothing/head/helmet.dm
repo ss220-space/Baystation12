@@ -184,7 +184,7 @@
 
 //Non-hardsuit ERT helmets.
 //Commander
-/obj/item/clothing/head/helmet/ert
+/obj/item/clothing/head/helmet/riot/ert
 	name = "asset protection command helmet"
 	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has blue highlights."
 	icon_state = "erthelmet_cmd"
@@ -202,19 +202,19 @@
 		)
 
 //Security
-/obj/item/clothing/head/helmet/ert/security
+/obj/item/clothing/head/helmet/riot/ert/security
 	name = "asset protection security helmet"
 	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has red highlights."
 	icon_state = "erthelmet_sec"
 
 //Engineer
-/obj/item/clothing/head/helmet/ert/engineer
+/obj/item/clothing/head/helmet/riot/ert/engineer
 	name = "asset protection engineering helmet"
 	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has orange highlights."
 	icon_state = "erthelmet_eng"
 
 //Medical
-/obj/item/clothing/head/helmet/ert/medical
+/obj/item/clothing/head/helmet/riot/ert/medical
 	name = "asset protection medical helmet"
 	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has red and white highlights."
 	icon_state = "erthelmet_med"
