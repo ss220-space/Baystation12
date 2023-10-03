@@ -110,7 +110,7 @@
 		)
 	item_flags = ITEM_FLAG_THICKMATERIAL
 	flags_inv = HIDEEARS|BLOCKHEADHAIR
-	body_parts_covered = HEAD|FACE
+	body_parts_covered = HEAD
 	species_restricted = list(SPECIES_VOX)
 	siemens_coefficient = 1
 	tint = 4
