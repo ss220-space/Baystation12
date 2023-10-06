@@ -1195,9 +1195,7 @@
 	dir = 4;
 	icon_state = "handrail"
 	},
-/obj/machinery/shipsensors{
-	tag = "catfish_shuttle_sensor_external"
-	},
+/obj/machinery/shipsensors,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/verne/catfish/engineering)
 "ev" = (

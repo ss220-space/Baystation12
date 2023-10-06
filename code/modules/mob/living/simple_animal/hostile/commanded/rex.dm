@@ -91,7 +91,7 @@
 
 	else if(target.a_intent == I_HELP)
 		if((target == master) || (weakref(target) in friends))
-			visible_message("<span class='notice'>The [src] wags its tail")
+			visible_message("<span class='notice'>The [src] wags its tail</span>")
 			if(prob(20))
 				say("Wuff!")
 			return TRUE

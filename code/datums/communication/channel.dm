@@ -25,7 +25,8 @@
 */
 /decl/communication_channel/proc/communicate(var/datum/communicator, var/message)
 	if(can_communicate(arglist(args)))
-		call(log_proc)(message, communicator.get_client().mob)
+		var/client/C = communicator.get_client()
+		call(log_proc)(message, C.mob)
 		return do_communicate(arglist(args))
 	return FALSE
 

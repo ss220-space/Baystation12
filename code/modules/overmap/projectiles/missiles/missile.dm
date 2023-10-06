@@ -16,7 +16,7 @@
 	icon = 'icons/obj/bigmissile.dmi'
 	icon_state = "base"
 
-	density = 1
+	density = TRUE
 	w_class = ITEM_SIZE_HUGE
 	dir = WEST
 	does_spin = FALSE

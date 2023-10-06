@@ -503,6 +503,6 @@ SUBSYSTEM_DEF(garbage)
 
 			else if (islist(I))
 				var/list/Xlist = X
-				DoSearchVar(I, "[Xname]\[[Xlist.Find(I)]\] -> list", recursive_limit-1)
+				DoSearchVar(I, "[Xname]\[[list_find(Xlist, I)]\] -> list", recursive_limit-1)
 
 #endif

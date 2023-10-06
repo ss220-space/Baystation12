@@ -259,13 +259,10 @@ proc/slur(phrase)
 			if(lowertext(newletter)=="а")	newletter="ах"
 			if(lowertext(newletter)=="с")	newletter="к"
 			if(lowertext(newletter)=="ч")	newletter="з"
-		switch(rand(1,15))
-			if(1,3,5,8)	newletter="[lowertext(newletter)]"
-			if(2,4,6,15)	newletter="[uppertext(newletter)]"
+		switch(rand(1,7))
+			if(1,3,5)	newletter="[lowertext(newletter)]"
+			if(2,4,6)	newletter="[uppertext(newletter)]"
 			if(7)	newletter+="'"
-			//if(9,10)	newletter="<b>[newletter]</b>"
-			//if(11,12)	newletter="<big>[newletter]</big>"
-			//if(13)	newletter="<small>[newletter]</small>"
 		newphrase+="[newletter]";counter-=1
 	return newphrase
 

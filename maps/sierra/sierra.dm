@@ -152,7 +152,7 @@
 	#include "../away/slavers/slavers_base.dm"
 	#include "../away/verne/verne.dm"
 	#include "../away/voxship/voxship.dm"
-    #include "../away/ascent_caulship/_ascent_caulship.dm"
+	#include "../away/ascent_caulship/_ascent_caulship.dm"
 
 	#include "../random_ruins/exoplanet_ruins/playablecolony_inf/playablecolony.dm"
 

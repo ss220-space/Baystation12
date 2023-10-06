@@ -319,8 +319,8 @@
 		to_chat(user, "\The [launcher] is empty.")
 
 /obj/item/gun/projectile/automatic/bullpup_rifle/toggle_safety(mob/user)
-    . = ..()
-    launcher.toggle_safety(user)
+	. = ..()
+	launcher.toggle_safety(user)
 
 /obj/item/gun/projectile/automatic/l6_saw
 	name = "L6 machine gun"
@@ -504,7 +504,7 @@
 		)
 
 
-/obj/item/gun/projectile/automatic/akrifle/update_icon()
+/obj/item/gun/projectile/automatic/akrifle/on_update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "ak12"
@@ -538,7 +538,7 @@
 		list(mode_name="full auto",      burst=1,    fire_delay=1.7,    burst_delay=1.3,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(1.3, 1.5, 1.7, 1.9, 2.2), autofire_enabled=1)
 		)
 
-/obj/item/gun/projectile/automatic/mr735/update_icon()
+/obj/item/gun/projectile/automatic/mr735/on_update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "nostockrifle"
@@ -572,7 +572,7 @@
 		list(mode_name="full auto",      burst=1,    fire_delay=1.7,    burst_delay=1.3,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(1.3, 1.5, 1.7, 1.9, 2.2), autofire_enabled=1)
 		)
 
-/obj/item/gun/projectile/automatic/mbr/update_icon()
+/obj/item/gun/projectile/automatic/mbr/on_update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "malyatko"

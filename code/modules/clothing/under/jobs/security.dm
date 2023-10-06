@@ -37,29 +37,29 @@
 	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/security/officer
-    name = "large security uniform"
-    desc = "An aftermarket modification of a regular desert jumpsuit, favored by unathi mercenaries. This one provides a bit more physical protection as if unathi ever needed that. It's too big to fit anyone, but unathi."
-    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
-    species_restricted  = list(SPECIES_UNATHI)
-    icon_state = "unsecuniform"
-    item_state = "unsecuniform"
-    worn_state = "unsecuniform"
-    rolled_sleeves = 0  //0 = unrolled, 1 = rolled, -1 = cannot be toggled
+	name = "large security uniform"
+	desc = "An aftermarket modification of a regular desert jumpsuit, favored by unathi mercenaries. This one provides a bit more physical protection as if unathi ever needed that. It's too big to fit anyone, but unathi."
+	item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
+	species_restricted  = list(SPECIES_UNATHI)
+	icon_state = "unsecuniform"
+	item_state = "unsecuniform"
+	worn_state = "unsecuniform"
+	rolled_sleeves = 0  //0 = unrolled, 1 = rolled, -1 = cannot be toggled
 
 
 /obj/item/clothing/under/security/desert
-    name = "desert jumpsuit"
-    desc = "A bulky and light jumpsuit designed for use in the desert. Unathi use it to withstand scorhing heat rays when \"Burning Mother\" at it's zenith, something that their scales cannot handle. It's too big to fit anyone, but unathi."
-    //icon = 'infinity/icons/mob/species/unathi/onmob_under_unathi.dmi'
-    species_restricted  = list(SPECIES_UNATHI)
-    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
-    //sprite_sheets = list(
-    //        SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi'
-    //)
-    icon_state = "desertuniform"
-    item_state = "desertuniform"
-    worn_state = "desertuniform"
-    rolled_sleeves = 0  //0 = unrolled, 1 = rolled, -1 = cannot be toggled
+	name = "desert jumpsuit"
+	desc = "A bulky and light jumpsuit designed for use in the desert. Unathi use it to withstand scorhing heat rays when \"Burning Mother\" at it's zenith, something that their scales cannot handle. It's too big to fit anyone, but unathi."
+	//icon = 'infinity/icons/mob/species/unathi/onmob_under_unathi.dmi'
+	species_restricted  = list(SPECIES_UNATHI)
+	item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
+	//sprite_sheets = list(
+	//        SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi'
+	//)
+	icon_state = "desertuniform"
+	item_state = "desertuniform"
+	worn_state = "desertuniform"
+	rolled_sleeves = 0  //0 = unrolled, 1 = rolled, -1 = cannot be toggled
 
 /obj/item/clothing/under/rank/dispatch
 	name = "dispatcher's uniform"

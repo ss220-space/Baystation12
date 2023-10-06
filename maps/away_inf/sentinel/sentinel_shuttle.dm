@@ -18,7 +18,7 @@
 /obj/effect/overmap/visitable/ship/landable/reaper
 	scanner_name = "Reaper-G"
 	scanner_desc = @{"
-		<center><img src = FleetLogo.png><br>
+		<center><img src = FleetLogo.png></center><br>
 		<i>Registration</i>: SCGDF Shuttle<br>
 		<i>Class</i>: Shuttle<br>
 		<i>Transponder</i>: Transmitting (MIL), SCG<br>

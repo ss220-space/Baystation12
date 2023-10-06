@@ -517,7 +517,7 @@
 	nutriment_factor = 5
 	taste_mult = 2
 	reagent_state = LIQUID
-	color = "#F4CBA8"
+	color = "#f4cba8"
 
 /datum/reagent/nutriment/condensedmilkboiled
 	name = "boiled condensed milk"
@@ -526,4 +526,4 @@
 	nutriment_factor = 6
 	taste_mult = 2
 	reagent_state = LIQUID
-	color = "#AC6527"
+	color = "#ac6527"
