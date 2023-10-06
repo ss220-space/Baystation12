@@ -78,7 +78,7 @@
 	else
 		overlay.icon_state = "pass"
 		overlays += overlay
-		set_light(0.8, 0.1, 1, 2,"#0099FF")
+		set_light(0.8, 0.1, 1, 2,"#0099ff")
 
 /obj/machinery/computer/guestpass/New()
 	..()

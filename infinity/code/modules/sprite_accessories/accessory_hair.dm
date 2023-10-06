@@ -543,12 +543,12 @@
 	icon_state = "hair_wolfmane"
 
 /datum/sprite_accessory/hair/infinity/sickboy
-    name = "Sick"
-    icon_state = "hair_sickboy"
+	name = "Sick"
+	icon_state = "hair_sickboy"
 
 /datum/sprite_accessory/hair/infinity/bowie
-    name = "From Mars"
-    icon_state = "hair_bowie"
+	name = "From Mars"
+	icon_state = "hair_bowie"
 
 /datum/sprite_accessory/hair/infinity/undercut_2
 	name = "Undercut Swept Right"

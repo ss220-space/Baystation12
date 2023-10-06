@@ -548,7 +548,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/powered()
 	return anchored && ..()
 
-/obj/machinery/vending/update_icon()
+/obj/machinery/vending/on_update_icon()
 	overlays.Cut()
 	if(stat & BROKEN)
 		icon_state = "[initial(icon_state)]-broken"
@@ -790,7 +790,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 	restockable = FALSE
 
-/obj/machinery/vending/coffee/update_icon()
+/obj/machinery/vending/coffee/on_update_icon()
 	..()
 	if(stat & BROKEN && prob(20))
 		icon_state = "[initial(icon_state)]-hellfire"
@@ -960,7 +960,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 	restockable = FALSE
 
-/obj/machinery/vending/fitness/update_icon()
+/obj/machinery/vending/fitness/on_update_icon()
 	..()
 	if(!(stat & NOPOWER))
 		overlays += image(icon, "[initial(icon_state)]-overlay")
@@ -1622,7 +1622,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 					/obj/item/toy/katana = 2
 					)
 
-/obj/machinery/vending/props/update_icon()
+/obj/machinery/vending/props/on_update_icon()
 	..()
 	if(!(stat & NOPOWER))
 		overlays += image(icon, "[initial(icon_state)]-overlay")
@@ -1810,7 +1810,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 	restockable = FALSE
 
-/obj/machinery/vending/snix/update_icon()
+/obj/machinery/vending/snix/on_update_icon()
 	..()
 	if(!(stat & NOPOWER))
 		overlays += image(icon, "[initial(icon_state)]-fan")
@@ -1878,7 +1878,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 	restockable = FALSE
 
-/obj/machinery/vending/weeb/update_icon()
+/obj/machinery/vending/weeb/on_update_icon()
 	..()
 	if(!(stat & NOPOWER))
 		overlays += image(icon, "[initial(icon_state)]-fan")
@@ -1903,7 +1903,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 	restockable = FALSE
 
-/obj/machinery/vending/hotfood/update_icon()
+/obj/machinery/vending/hotfood/on_update_icon()
 	..()
 	if(!(stat & NOPOWER))
 		overlays += image(icon, "[initial(icon_state)]-heater")

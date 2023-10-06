@@ -84,8 +84,8 @@
 	info = "You are Gyna on your own independent vessel. Your path has led you to this remote sector full of primitive bioforms. \
 	\
 	Show everyone your greatness, crush all those who dare to oppose you, establish your new nest here and bring prosperity to your lineage. \
-    Your radars picked up a large ship equipped with a bluespace engine, until you find out who owns it, it's better not to give yourself away with vigorous activity. \
-    Your ship was damaged during the bluespace jump, you need to restore it to fully function."
+	Your radars picked up a large ship equipped with a bluespace engine, until you find out who owns it, it's better not to give yourself away with vigorous activity. \
+	Your ship was damaged during the bluespace jump, you need to restore it to fully function."
 	outfit_type = /decl/hierarchy/outfit/job/ascent
 	minimal_player_age = 21
 	blacklisted_species = null

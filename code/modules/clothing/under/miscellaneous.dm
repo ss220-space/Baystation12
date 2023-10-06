@@ -776,14 +776,14 @@
 
 
 /obj/item/clothing/under/medic/paramedic
-    name = "first responder uniform"
-    desc = "Light and bulky paramedic jumpsuit with bright markings. It's too big to fit anyone, but unathi."
-    species_restricted  = list(SPECIES_UNATHI)
-    item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
-    icon_state = "unathi_paramedic"
-    item_state = "unathi_paramedic"
-    worn_state = "unathi_paramedic"
-    //rolled_sleeves = 0
+	name = "first responder uniform"
+	desc = "Light and bulky paramedic jumpsuit with bright markings. It's too big to fit anyone, but unathi."
+	species_restricted  = list(SPECIES_UNATHI)
+	item_icons = list(slot_w_uniform_str = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi')
+	icon_state = "unathi_paramedic"
+	item_state = "unathi_paramedic"
+	worn_state = "unathi_paramedic"
+	//rolled_sleeves = 0
 
 /obj/item/clothing/under/inf
 	name = "antiquated skirt"

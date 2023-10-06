@@ -12,7 +12,7 @@
 	icon_keyboard = null
 	icon_state = "adv_engines"
 	icon_screen = "adv_engines_screen"
-	light_color = "#05A6A8"
+	light_color = "#05a6a8"
 	base_type = /obj/machinery/computer/ship/engines
 
 

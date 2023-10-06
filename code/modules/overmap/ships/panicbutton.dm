@@ -9,7 +9,7 @@
 	var/launched = FALSE
 
 
-/obj/structure/panic_button/update_icon()
+/obj/structure/panic_button/on_update_icon()
 	if(launched)
 		icon_state = "[initial(icon_state)]_launched"
 	else if(!glass)

@@ -92,9 +92,9 @@
 	species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
 	siemens_coefficient = 1 //Its literally metal
 
-	/obj/item/clothing/suit/armor/vox_scrap/New()
-		..()
-		slowdown_per_slot[slot_wear_suit] = 2
+/obj/item/clothing/suit/armor/vox_scrap/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = 2
 
 /obj/item/clothing/head/helmet/vox_scrap
 	name = "rusted metal helmet"
@@ -115,6 +115,6 @@
 	siemens_coefficient = 1
 	tint = 4
 
-	/obj/item/clothing/head/helmet/vox_scrap/New()
-		..()
-		slowdown_per_slot[slot_head] = 0.7
+/obj/item/clothing/head/helmet/vox_scrap/New()
+	..()
+	slowdown_per_slot[slot_head] = 0.7
