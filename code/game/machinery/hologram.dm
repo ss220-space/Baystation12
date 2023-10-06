@@ -255,7 +255,7 @@ var/const/HOLOPAD_MODE = RANGE_BASED
 	hologram.mouse_opacity = 0//So you can't click on it.
 //	hologram.plane = ABOVE_HUMAN_PLANE
 	hologram.layer = ABOVE_HUMAN_LAYER //Above all the other objects/mobs. Or the vast majority of them.
-	hologram.anchored = 1//So space wind cannot drag it.
+	hologram.anchored = TRUE//So space wind cannot drag it.
 	hologram.SetName("[user.name] (Hologram)")
 	masters[user] = hologram
 	hologram.set_light(1, 0.1, 2)	//hologram lighting
@@ -463,7 +463,7 @@ var/const/HOLOPAD_MODE = RANGE_BASED
  */
 
 /obj/machinery/hologram
-	anchored = 1
+	anchored = TRUE
 	idle_power_usage = 5
 	active_power_usage = 100
 

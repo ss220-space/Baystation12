@@ -3250,7 +3250,7 @@
 	icon_state = "sgushenka"
 	desc = "A can of condensed milk originating from the ICCG."
 	trash = /obj/item/trash/sgushenka
-	filling_color = "#F4CBA8"
+	filling_color = "#f4cba8"
 	volume = 40
 	center_of_mass = "x=15;y=9"
 	eat_sound = 'sound/items/drink.ogg'
@@ -3291,7 +3291,7 @@
 	icon_state = "varenka"
 	desc = "A can of boiled condensed milk originating from the ICCG."
 	trash = /obj/item/trash/varenka
-	filling_color = "#AC6527"
+	filling_color = "#ac6527"
 	volume = 40
 	center_of_mass = "x=15;y=9"
 	bitesize = 8

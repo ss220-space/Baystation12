@@ -12,7 +12,7 @@
   *
   * Handles creation, callbacks, and destruction of timed events.
   *
-    * It is important to understand the buckets used in the timer subsystem are just a series of doubly-linked
+  * It is important to understand the buckets used in the timer subsystem are just a series of doubly-linked
   * lists. The object at a given index in bucket_list is a /datum/timedevent, the head of a list, which has prev
   * and next references for the respective elements in that bucket's list.
   */
@@ -303,7 +303,7 @@ SUBSYSTEM_DEF(timer)
 		// Check that timer has a valid callback and hasn't been invoked
 		if (!timer.callBack || timer.spent)
 			WARNING("Invalid timer: [get_timer_debug_string(timer)] world.time: [world.time], \
-            	head_offset: [head_offset], practical_offset: [practical_offset]")
+					 head_offset: [head_offset], practical_offset: [practical_offset]")
 			if (timer.callBack)
 				qdel(timer)
 			continue

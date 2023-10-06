@@ -236,7 +236,7 @@ var/list/html_allowed_tags = list(
 )
 var/list/html_allowed_attrs = list(
 	"style", "class",       // Everything
-	"color", "size", "face" // <font>
+	"color", "size", "face" // <font></font>
 )
 
 // It's not perfect, but will work in most cases

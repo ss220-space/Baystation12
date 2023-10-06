@@ -290,13 +290,13 @@ var/global/list/all_objectives = list()
 
 
 /datum/objective/steal/find_target(var/list/used_objectives)
-    var/list/used_items = list()
-    for (var/datum/objective/steal/steal_objective in used_objectives)
-        if (istype(steal_objective))
-            used_items += steal_objective.target_name
+	var/list/used_items = list()
+	for (var/datum/objective/steal/steal_objective in used_objectives)
+		if (istype(steal_objective))
+			used_items += steal_objective.target_name
 
-    var/list/currently_possible_items = possible_items - used_items
-    return set_target(pick(currently_possible_items))
+	var/list/currently_possible_items = possible_items - used_items
+	return set_target(pick(currently_possible_items))
 
 
 /datum/objective/steal/proc/select_target()

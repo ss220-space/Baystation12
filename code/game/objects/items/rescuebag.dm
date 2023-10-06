@@ -81,7 +81,7 @@
 		airtank.forceMove(null)
 	update_icon()
 
-/obj/structure/closet/body_bag/rescue/update_icon()
+/obj/structure/closet/body_bag/rescue/on_update_icon()
 	icon_state = "[initial(icon_state)][opened ? "_open" : "[contains_body ? "_occupied" : ""]"]"
 	//src.overlays.Cut()
 

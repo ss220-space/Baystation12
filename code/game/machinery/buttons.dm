@@ -129,8 +129,8 @@
 		overlay.icon_state = "doorctrl[operating]-overlay"
 		overlays += overlay
 		switch(operating)
-			if(0) set_light(0.3, 0.1, 1, 2, "#F2FF00")
-			if(1) set_light(0.3, 0.1, 1, 2, "#a1FF00")
+			if(0) set_light(0.3, 0.1, 1, 2, "#f2ff00")
+			if(1) set_light(0.3, 0.1, 1, 2, "#a1ff00")
 			else set_light(0.3, 0.1, 1, 2,"#f86060")
 
 //Toggle button determines icon state from active, not operating
@@ -182,12 +182,12 @@
 		icon_state = "blastctrl-active"
 		overlay.icon_state = "big-switch-green-ol"
 		overlays += overlay
-		set_light(0.3, 0.1, 1, 2,"#a1FF00")
+		set_light(0.3, 0.1, 1, 2,"#a1ff00")
 	else
 		icon_state = "blastctrl-nonactive"
 		overlay.icon_state = "big-switch-red-ol"
 		overlays += overlay
-		set_light(0.3, 0.1, 1, 2,"#C50022")
+		set_light(0.3, 0.1, 1, 2,"#c50022")
 
 
 //-------------------------------
@@ -221,8 +221,8 @@
 		overlay.icon_state = "doorctrl[operating]-overlay"
 		overlays += overlay
 		switch(operating)
-			if(0) set_light(0.3, 0.1, 1, 2, "#F2FF00")
-			if(1) set_light(0.3, 0.1, 1, 2, "#a1FF00")
+			if(0) set_light(0.3, 0.1, 1, 2, "#f2ff00")
+			if(1) set_light(0.3, 0.1, 1, 2, "#a1ff00")
 			else set_light(0.3, 0.1, 1, 2,"#f86060")
 
 /decl/stock_part_preset/radio/basic_transmitter/button/door

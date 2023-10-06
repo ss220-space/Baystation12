@@ -219,9 +219,9 @@ GLOBAL_LIST_EMPTY(adminfaxes) //cache for faxes that have been sent to admins
 	if (destination == GLOB.using_map.boss_name)
 		message_admins(sender, "[uppertext(GLOB.using_map.boss_short)] FAX", rcvdcopy, "CentComFaxReply", "#006100")
 	else if (destination == "Sol Governmental Authority") // Vorestation Edit
-		message_admins(sender, "SOL GOVERNMENTAL FAX ", rcvdcopy, "SolGovFaxReply", "#1F66A0")
+		message_admins(sender, "SOL GOVERNMENTAL FAX ", rcvdcopy, "SolGovFaxReply", "#1f66a0")
 	else if (destination == "Sol-Gov Supply Departament")
-		message_admins(sender, "[uppertext(GLOB.using_map.boss_short)] SUPPLY FAX", rcvdcopy, "SolGovFaxReply", "#5F4519")
+		message_admins(sender, "[uppertext(GLOB.using_map.boss_short)] SUPPLY FAX", rcvdcopy, "SolGovFaxReply", "#5f4519")
 	else if (destination == "FTU Agency")
 		message_admins(sender, "FTU AGENCY FAX", rcvdcopy, "FtuFaxReply", "#3ec4ad")
 	else

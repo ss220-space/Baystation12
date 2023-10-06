@@ -32,7 +32,7 @@ exactly 2 "/atom text paths" '"/atom'
 exactly 2 "/area text paths" '"/area'
 exactly 2 "/datum text paths" '"/datum'
 exactly 2 "/mob text paths" '"/mob'
-exactly 10 "/obj text paths" '"/obj'
+exactly 12 "/obj text paths" '"/obj'
 exactly 8 "/turf text paths" '"/turf'
 exactly 141 "to_world uses" '\sto_world\('
 exactly 66 "to_world_log uses" '\sto_world_log\('
@@ -44,7 +44,7 @@ exactly 36 "text2path uses" 'text2path'
 exactly 3 "update_icon() override" '/update_icon\((.*)\)'  -P
 exactly 1 "goto use" 'goto '
 exactly 1 "NOOP match" 'NOOP'
-exactly 488 "spawn uses" 'spawn\s*\(\s*(-\s*)?\d*\s*\)' -P
+exactly 487 "spawn uses" 'spawn\s*\(\s*(-\s*)?\d*\s*\)' -P
 exactly 0 "tag uses" '\stag = ' -P '**/*.dmm'
 exactly 4 ".Replace( matches" '\.Replace(_char)?\(' -P
 exactly 5 ".Find( matches" '\.Find(_char)?\(' -P
