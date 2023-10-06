@@ -772,7 +772,7 @@
 
 /obj/item/mech_equipment/mounted_system/circuit
 	name = "exosuit circuit rack"
-	icon_state = "mech_flash"
+	icon_state = "mech_power"
 	holding_type = null //We must get the holding item externally
 	desc = "A DIY circuit rack for exosuit. Circuitry not included."
 	restricted_hardpoints = list(HARDPOINT_LEFT_SHOULDER, HARDPOINT_RIGHT_SHOULDER)
