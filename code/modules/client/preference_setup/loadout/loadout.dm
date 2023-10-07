@@ -25,8 +25,6 @@ var/list/gear_datums = list()
 			continue
 		if(GLOB.using_map.loadout_blacklist && (geartype in GLOB.using_map.loadout_blacklist))
 			continue
-		if(!length_char(initial(G.display_name)))
-			continue
 
 		var/use_name = initial(G.display_name)
 		var/use_category = initial(G.sort_category)
