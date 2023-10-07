@@ -195,21 +195,29 @@
 			else
 				to_chat(user, "You don't see any use for \the [S].")
 
-		return
-
 	// If we've gotten this far, all we have left to do before we pass off to root procs
 	// is check if any of the loaded modules want to use the item we've been given.
 	for(var/obj/item/rig_module/module in installed_modules)
 		if(module.accepts_item(W,user)) //Item is handled in this proc
 			return
+
 	..()
 
 
-/obj/item/rig/attack_hand(var/mob/user)
-
+/obj/item/rig/attack_hand(mob/user as mob)
 	if(electrified != 0)
 		if(shock(user)) //Handles removing charge from the cell, as well. No need to do that here.
 			return
+
+	..()
+
+/obj/item/rig/AltClick(mob/user as mob)
+	for(var/obj/item/rig_module/module in installed_modules)
+		var/obj/item/rig_module/storage/storage = module
+		if(istype(storage))
+			storage.internal_storage.open(user)
+			return
+
 	..()
 
 /obj/item/rig/emag_act(var/remaining_charges, var/mob/user)
