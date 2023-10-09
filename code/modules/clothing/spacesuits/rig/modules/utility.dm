@@ -510,7 +510,7 @@
 	icon_state = "storage"
 	interface_name = "hardsuit storage module"
 	interface_desc = "Stores your belongings."
-	origin_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 6)
+	origin_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 6, TECH_ENGINEERING = 6)
 	var/obj/item/storage/internal_storage = null
 
 /obj/item/rig_module/storage/Destroy()
@@ -519,4 +519,4 @@
 
 /obj/item/rig_module/storage/Initialize()
 	. = ..()
-	internal_storage = new /obj/item/storage/backpack/satchel/pocketbook(src)
+	internal_storage = new /obj/item/storage/box(src)
