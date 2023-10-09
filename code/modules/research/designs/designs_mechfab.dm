@@ -851,7 +851,7 @@
 	category = "Hardsuits"
 	name = "Storage Module"
 	build_path = /obj/item/rig_module/storage
-	materials = list(MATERIAL_STEEL = 6000, MATERIAL_GLASS = 4000, MATERIAL_DIAMOND = 2000, MATERIAL_SILVER = 4000, MATERIAL_URANIUM = 2000, MATERIAL_GOLD = 4000)
+	materials = list(MATERIAL_STEEL = 12000, MATERIAL_GLASS = 8000, MATERIAL_DIAMOND = 2000, MATERIAL_SILVER = 4000, MATERIAL_URANIUM = 2000, MATERIAL_GOLD = 4000)
 	req_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 6, TECH_ENGINEERING = 6)
 	id = "rig_storage"
 	sort_string = "WCLAC"
