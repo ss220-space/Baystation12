@@ -5,16 +5,16 @@
 /mob/living/exosuit/premade/merc/Initialize()
 	if(!arms)
 		arms = new /obj/item/mech_component/manipulators/merc(src)
-		arms.color = COLOR_GUNMETAL
+		arms.color = COLOR_RED
 	if(!legs)
 		legs = new /obj/item/mech_component/propulsion/merc(src)
-		legs.color = COLOR_GUNMETAL
+		legs.color = COLOR_RED
 	if(!head)
 		head = new /obj/item/mech_component/sensors/merc(src)
-		head.color = COLOR_GUNMETAL
+		head.color = COLOR_RED
 	if(!body)
 		body = new /obj/item/mech_component/chassis/merc(src)
-		body.color = COLOR_GUNMETAL
+		body.color = COLOR_RED
 
 	. = ..()
 
