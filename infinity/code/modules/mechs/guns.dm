@@ -1,7 +1,7 @@
 /obj/item/mech_equipment/mounted_system/taser/plasma_rifle
 	name = "mounted plasma rifle"
 	desc = "A very deadly mounted plasma rifle, capable of destroying everything."
-	icon_state = "mech_ionrifle"
+	icon_state = "mech_pulse"
 	holding_type = /obj/item/gun/energy/pulse_rifle/mounted/mech
 
 /obj/item/gun/energy/pulse_rifle/mounted/mech
@@ -36,5 +36,5 @@
 /obj/item/mech_equipment/mounted_system/taser/machinegun
 	name = "mounted machinegun"
 	desc = "An exosuit-mounted machinegun. Handle with care."
-	icon_state = "mech_taser"
+	icon_state = "mech_scatter"
 	holding_type = /obj/item/gun/energy/machingegun/mounted/mech
