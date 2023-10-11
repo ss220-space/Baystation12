@@ -90,7 +90,7 @@
 
 
 	if(href_list["exploitable_record"])
-		var/exploitmsg = sanitize(input(user,"Укажите компромитирующую Вашего персонажа информацию. Придумайте, как антагонист может использовать её для взаимодействия с вами. Например: возможности для шантажа, награда за голову, случаи помощи крминальным элементам.","Компромитирующая информация", html_decode(pref.exploit_record)) as message|null, MAX_PAPER_MESSAGE_LEN, extra = 0)
+		var/exploitmsg = sanitize(input(user,"Укажите компромитирующую Вашего персонажа информацию. Придумайте, как антагонист может использовать её для взаимодействия с вами. Например: возможности для шантажа, награда за голову, случаи помощи криминальным элементам.","Компромитирующая информация", html_decode(pref.exploit_record)) as message|null, MAX_PAPER_MESSAGE_LEN, extra = 0)
 		if(!isnull(exploitmsg) && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 			pref.exploit_record = exploitmsg
 			return TOPIC_REFRESH
