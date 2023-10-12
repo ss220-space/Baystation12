@@ -10755,6 +10755,7 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/item/bodybag/cryobag,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "arU" = (
