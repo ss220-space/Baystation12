@@ -729,7 +729,7 @@
 	materials = list(MATERIAL_STEEL = 2000, MATERIAL_GLASS = 1000, MATERIAL_PLASTIC = 1000, MATERIAL_GOLD = 700, MATERIAL_PHORON = 500)
 	req_tech = list(TECH_MATERIAL = 4, TECH_PHORON = 3, TECH_ENGINEERING = 6, TECH_COMBAT = 4)
 	id = "rig_plasmacutter"
-	sort_string = "VCCAB"
+	sort_string = "WCCAB"
 
 /datum/design/item/mechfab/rig/orescanner
 	category = "Hardsuits"
@@ -846,3 +846,12 @@
 	req_tech = list(TECH_MATERIAL = 2, TECH_MAGNET = 2, TECH_ENGINEERING = 5)
 	id = "rig_cooler"
 	sort_string = "WCLAB"
+
+/datum/design/item/mechfab/rig/storage
+	category = "Hardsuits"
+	name = "Storage Module"
+	build_path = /obj/item/rig_module/storage
+	materials = list(MATERIAL_STEEL = 12000, MATERIAL_GLASS = 8000, MATERIAL_DIAMOND = 2000, MATERIAL_SILVER = 4000, MATERIAL_URANIUM = 2000, MATERIAL_GOLD = 4000)
+	req_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 6, TECH_ENGINEERING = 6)
+	id = "rig_storage"
+	sort_string = "WCLAC"
