@@ -173,10 +173,21 @@
 "az" = (
 /obj/random/snack,
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "aA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
+/obj/structure/catwalk,
+/obj/machinery/door/airlock/hatch/voxship,
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "aB" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -310,11 +321,13 @@
 "aU" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/black,
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "aV" = (
-/obj/effect/decal/cleanable/filth,
-/turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/tiled/freezer{
+	initial_gas = list("nitrogen" = 101.383)
+	},
+/area/voxship/fore)
 "aW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -516,7 +529,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "br" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/hidden/blue{
@@ -536,21 +549,21 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/black,
 /obj/machinery/meter,
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "bu" = (
 /obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 8;
 	start_pressure = 7000
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "bv" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 4;
 	icon_state = "map_off"
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "bw" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -558,7 +571,7 @@
 	icon_state = "intact"
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "bx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
@@ -726,11 +739,11 @@
 	},
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "bS" = (
 /obj/random/junk,
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "bT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light/small{
@@ -889,13 +902,13 @@
 "cl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "cm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "cn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9;
@@ -936,7 +949,7 @@
 	req_access = list("ACCESS_VOXSHIP")
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "ct" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/computer/shuttle_control/explore/vox_ship,
@@ -1080,7 +1093,7 @@
 	},
 /obj/machinery/door/airlock/hatch/voxship,
 /turf/simulated/floor/plating/vox,
-/area/voxship/scavship)
+/area/voxship/engineering)
 "cF" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/random/junk,
@@ -1095,7 +1108,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/scavship)
+/area/voxship/engineering)
 "cG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4;
@@ -1114,7 +1127,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/scavship)
+/area/voxship/engineering)
 "cH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/blue,
 /obj/structure/cable{
@@ -1200,7 +1213,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "cN" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable{
@@ -1214,7 +1227,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "cO" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8;
@@ -1776,6 +1789,9 @@
 "dR" = (
 /obj/effect/floor_decal/corner_steel_grid/diagonal,
 /obj/item/tank/nitrogen,
+/obj/machinery/computer/cryopod{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)
 "dS" = (
@@ -1961,6 +1977,9 @@
 "en" = (
 /obj/item/inflatable_duck,
 /obj/effect/floor_decal/corner_steel_grid/diagonal,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)
 "eo" = (
@@ -2191,8 +2210,11 @@
 /turf/simulated/wall/r_wall/hull/vox,
 /area/voxship/thrusters)
 "eN" = (
-/obj/structure/extinguisher_cabinet,
-/turf/simulated/wall/prepainted,
+/obj/effect/floor_decal/corner_steel_grid/diagonal,
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)
 "eO" = (
 /obj/item/pizzabox/meat,
@@ -2409,6 +2431,8 @@
 	dir = 1;
 	level = 2
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/reagent_temperature/cooler,
 /turf/simulated/floor/tiled/freezer{
 	initial_gas = list("nitrogen" = 101.383)
 	},
@@ -2419,6 +2443,7 @@
 /obj/item/storage/firstaid/combat,
 /obj/item/storage/box/detergent,
 /obj/item/storage/box/syringes,
+/obj/machinery/reagent_temperature,
 /turf/simulated/floor/tiled/freezer{
 	initial_gas = list("nitrogen" = 101.383)
 	},
@@ -2710,7 +2735,7 @@
 "ge" = (
 /obj/structure/fuel_port,
 /turf/simulated/wall/r_wall/hull/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "gf" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -2946,11 +2971,11 @@
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/shuttle)
 "gH" = (
-/obj/machinery/power/smes/buildable/preset/voxship/ship,
 /obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes/buildable/preset/voxship/ship,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/shuttle)
 "gI" = (
@@ -3172,7 +3197,7 @@
 	start_pressure = 7000
 	},
 /turf/simulated/floor/plating/vox,
-/area/voxship/engineering)
+/area/voxship/thrusters)
 "Gf" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -7551,7 +7576,7 @@ ar
 er
 eT
 fn
-ar
+aV
 ar
 at
 at
@@ -8864,12 +8889,12 @@ fX
 fX
 fX
 fX
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
 cJ
 as
 as
@@ -8966,12 +8991,12 @@ fX
 fX
 fX
 fX
-ac
-ac
+ab
+ab
 DD
 DD
 DD
-ac
+ab
 cK
 cg
 dE
@@ -9068,12 +9093,12 @@ fX
 fX
 fX
 fX
-ac
-ac
+ab
+ab
 bq
 bt
 aU
-ac
+ab
 cL
 cg
 dE
@@ -9170,13 +9195,13 @@ fX
 fX
 fX
 fX
-ac
+ab
 ge
 bu
 bv
 bu
-ac
-cJ
+ab
+aA
 cg
 dF
 dG
@@ -9272,9 +9297,9 @@ fX
 fX
 fX
 fX
-ac
+ab
 az
-aA
+ah
 bq
 bR
 cl
@@ -9374,9 +9399,9 @@ fX
 fX
 fX
 fX
-ac
+ab
 cs
-aV
+ap
 bw
 bS
 cm
