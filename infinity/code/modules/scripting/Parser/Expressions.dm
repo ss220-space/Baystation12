@@ -32,7 +32,7 @@
 	Proc: Precedence
 	Compares two operators, decides which is higher in the order of operations, and returns <SHIFT> or <REDUCE>.
 */
-		Precedence(node/expression/operator/top, node/expression/operator/input)
+		Precedence(node/expression/c_operator/top, node/expression/c_operator/input)
 			if(istype(top))
 				top=top.precedence
 			if(istype(input))
@@ -90,7 +90,7 @@
 	- <GetBinaryOperator()>
 	- <GetUnaryOperator()>
 */
-		GetOperator(O, type=/node/expression/operator, L[])
+		GetOperator(O, type=/node/expression/c_operator, L[])
 			if(istype(O, type)) return O		//O is already the desired type
 			if(istype(O, /token)) O=O:value //sets O to text
 			if(istext(O))										//sets O to path
@@ -110,7 +110,7 @@
 	- <GetUnaryOperator()>
 */
 		GetBinaryOperator(O)
-			return GetOperator(O, /node/expression/operator/binary, options.binary_operators)
+			return GetOperator(O, /node/expression/c_operator/binary, options.binary_operators)
 
 /*
 	Proc: GetUnaryOperator
@@ -122,7 +122,7 @@
 	- <GetBinaryOperator()>
 */
 		GetUnaryOperator(O)
-			return GetOperator(O, /node/expression/operator/unary,  options.unary_operators)
+			return GetOperator(O, /node/expression/c_operator/unary,  options.unary_operators)
 
 /*
 	Proc: Reduce
@@ -130,15 +130,15 @@
 	of the val stack.
 */
 		Reduce(stack/opr, stack/val)
-			var/node/expression/operator/O=opr.Pop()
+			var/node/expression/c_operator/O=opr.Pop()
 			if(!O) return
 			if(!istype(O))
 				errors+=new/scriptError("Error reducing expression - invalid operator.")
 				return
 			//Take O and assign its operands, popping one or two values from the val stack
 			//depending on whether O is a binary or unary operator.
-			if(istype(O, /node/expression/operator/binary))
-				var/node/expression/operator/binary/B=O
+			if(istype(O, /node/expression/c_operator/binary))
+				var/node/expression/c_operator/binary/B=O
 				B.exp2=val.Pop()
 				B.exp =val.Pop()
 				val.Push(B)
@@ -205,7 +205,7 @@
 						continue
 					val.Push(ParseParenExpression())
 				else if(istype(curToken, /token/symbol))												//Operator found.
-					var/node/expression/operator/curOperator											//Figure out whether it is unary or binary and get a new instance.
+					var/node/expression/c_operator/curOperator											//Figure out whether it is unary or binary and get a new instance.
 					if(src.expecting==OPERATOR)
 						curOperator=GetBinaryOperator(curToken)
 						if(!curOperator)
@@ -299,7 +299,7 @@
 		ParseParenExpression()
 			if(!CheckToken("(", /token/symbol))
 				return
-			return new/node/expression/operator/unary/group(ParseExpression(list(")")))
+			return new/node/expression/c_operator/unary/group(ParseExpression(list(")")))
 
 /*
 	Proc: ParseParamExpression

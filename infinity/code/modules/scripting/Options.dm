@@ -60,18 +60,18 @@ n_scriptOptions/nS_Options
 														"^=" = "^",
 														"%=" = "%")
 
-	var/list/unary_operators = list("!"  = /node/expression/operator/unary/LogicalNot, 		 "~"  = /node/expression/operator/unary/BitwiseNot,
-														"-"  = /node/expression/operator/unary/Minus)
+	var/list/unary_operators = list("!"  = /node/expression/c_operator/unary/LogicalNot, 		 "~"  = /node/expression/c_operator/unary/BitwiseNot,
+														"-"  = /node/expression/c_operator/unary/Minus)
 
-	var/list/binary_operators = list("==" = /node/expression/operator/binary/Equal, 			   "!="	= /node/expression/operator/binary/NotEqual,
-														">"  = /node/expression/operator/binary/Greater, 			 "<" 	= /node/expression/operator/binary/Less,
-														">=" = /node/expression/operator/binary/GreaterOrEqual,"<=" = /node/expression/operator/binary/LessOrEqual,
-														"&&" = /node/expression/operator/binary/LogicalAnd,  	 "||"	= /node/expression/operator/binary/LogicalOr,
-														"&"  = /node/expression/operator/binary/BitwiseAnd,  	 "|" 	= /node/expression/operator/binary/BitwiseOr,
-														"`"  = /node/expression/operator/binary/BitwiseXor,  	 "+" 	= /node/expression/operator/binary/Add,
-														"-"  = /node/expression/operator/binary/Subtract, 		 "*" 	= /node/expression/operator/binary/Multiply,
-														"/"  = /node/expression/operator/binary/Divide, 			 "^" 	= /node/expression/operator/binary/Power,
-														"%"  = /node/expression/operator/binary/Modulo)
+	var/list/binary_operators = list("==" = /node/expression/c_operator/binary/Equal, 			   "!="	= /node/expression/c_operator/binary/NotEqual,
+														">"  = /node/expression/c_operator/binary/Greater, 			 "<" 	= /node/expression/c_operator/binary/Less,
+														">=" = /node/expression/c_operator/binary/GreaterOrEqual,"<=" = /node/expression/c_operator/binary/LessOrEqual,
+														"&&" = /node/expression/c_operator/binary/LogicalAnd,  	 "||"	= /node/expression/c_operator/binary/LogicalOr,
+														"&"  = /node/expression/c_operator/binary/BitwiseAnd,  	 "|" 	= /node/expression/c_operator/binary/BitwiseOr,
+														"`"  = /node/expression/c_operator/binary/BitwiseXor,  	 "+" 	= /node/expression/c_operator/binary/Add,
+														"-"  = /node/expression/c_operator/binary/Subtract, 		 "*" 	= /node/expression/c_operator/binary/Multiply,
+														"/"  = /node/expression/c_operator/binary/Divide, 			 "^" 	= /node/expression/c_operator/binary/Power,
+														"%"  = /node/expression/c_operator/binary/Modulo)
 
 /n_scriptOptions/nS_Options/New()
 	.=..()
