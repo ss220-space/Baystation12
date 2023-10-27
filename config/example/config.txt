@@ -452,3 +452,6 @@ RADIATION_LOWER_LIMIT 0.15
 
 ## An observer that has returned to the main menu must wait this many minutes before rejoining
 #RESPAWN_MENU_DELAY 0
+
+## Uncomment this to shut down the world any time it would normally reboot
+#SHUTDOWN_ON_REBOOT
