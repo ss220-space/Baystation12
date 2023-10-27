@@ -5884,6 +5884,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/stack/material/glass/ten,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "aku" = (
