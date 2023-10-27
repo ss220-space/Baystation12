@@ -169,6 +169,7 @@ var/list/gamemode_cache = list()
 
 	var/enter_allowed = 1
 	var/player_limit = 0
+	var/shutdown_on_reboot = FALSE
 
 	var/use_irc_bot = 0
 	var/irc_bot_host = ""
@@ -810,6 +811,8 @@ var/list/gamemode_cache = list()
 					radiation_lower_limit = text2num(value)
 				if("player_limit")
 					player_limit = text2num(value)
+				if ("shutdown_on_reboot")
+					shutdown_on_reboot = TRUE
 				if("hub_visible")
 					world.update_hub_visibility(TRUE)
 
