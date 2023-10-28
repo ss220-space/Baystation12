@@ -58,7 +58,6 @@
 	id_tag = "sensor";
 	name = "Sensor Shroud"
 	},
-/obj/item/device/radio/map_preset/bearcat,
 /obj/item/cell/high,
 /turf/simulated/floor/tiled/dark,
 /area/ship/scrap/command/bridge)
@@ -145,23 +144,18 @@
 "av" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/hologram/holopad/longrange/remoteship,
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/dark,
 /area/ship/scrap/command/bridge)
 "aw" = (
 /obj/structure/bed/chair{
 	dir = 1;
 	icon_state = "chair_preview"
-	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	default_hailing = 1;
-	dir = 8;
-	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/scrap/command/bridge)
@@ -174,10 +168,6 @@
 /obj/machinery/computer/modular/preset/engineering{
 	dir = 1;
 	icon_state = "console"
-	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	dir = 4;
-	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/scrap/command/bridge)
@@ -477,9 +467,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = -32
-	},
 /obj/machinery/alarm{
 	dir = 8;
 	icon_state = "alarm0";
@@ -503,9 +490,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/scrap/command/hallway)
 "ba" = (
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_x = -32
-	},
 /obj/item/gun/projectile/shotgun/pump/combat{
 	desc = "When words don't strike hard enough.";
 	name = "Solid Argument"
@@ -780,9 +764,6 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/dock)
 "bA" = (
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_x = -32
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4;
 	level = 2
@@ -941,9 +922,6 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/dock)
 "bN" = (
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = -32
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/alarm{
 	dir = 8;
@@ -965,9 +943,6 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/dock)
 "bP" = (
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = -32
-	},
 /obj/machinery/alarm{
 	dir = 4;
 	icon_state = "alarm0";
@@ -1343,9 +1318,6 @@
 /obj/machinery/light/small{
 	dir = 8;
 	icon_state = "bulb1"
-	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_x = -32
 	},
 /obj/structure/closet/wardrobe/pjs,
 /obj/structure/sign/poster{
@@ -1723,9 +1695,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = -32
-	},
 /obj/structure/ladder,
 /turf/simulated/floor/tiled,
 /area/ship/scrap/crew/saloon)
@@ -1834,9 +1803,6 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/crew/kitchen)
 "dF" = (
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 2;
 	level = 2
@@ -1891,9 +1857,6 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/cargo)
 "dJ" = (
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/ship/scrap/cargo)
@@ -1951,9 +1914,6 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/scrap/crew/medbay)
 "dQ" = (
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = 32
-	},
 /obj/item/bedsheet/medical,
 /obj/structure/curtain/open/privacy,
 /obj/structure/bed/padded,
@@ -1963,6 +1923,9 @@
 	icon_state = "alarm0";
 	pixel_x = 24;
 	req_access = newlist()
+	},
+/obj/structure/closet/walllocker/medical/filled{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/ship/scrap/crew/medbay)
@@ -2375,6 +2338,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/closet/walllocker/medical/filled,
 /turf/simulated/floor,
 /area/ship/scrap/crew/hallway/starboard)
 "ev" = (
@@ -2631,9 +2595,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -25
 	},
-/obj/structure/closet/medical_wall/filled{
-	pixel_y = -32
-	},
 /obj/item/tape_roll,
 /obj/item/retractor,
 /obj/item/scalpel,
@@ -2669,7 +2630,6 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/scrap/crew/medbay)
 "eR" = (
-/obj/item/device/radio/map_preset/bearcat,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
@@ -2917,9 +2877,6 @@
 	dir = 1;
 	icon_state = "bulb1"
 	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -3050,28 +3007,21 @@
 /area/ship/scrap/crew/hallway/starboard)
 "fw" = (
 /turf/simulated/wall,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fx" = (
-/obj/machinery/telecomms/broadcaster/map_preset/bearcat,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fy" = (
 /obj/machinery/light_switch{
 	pixel_y = 25
 	},
-/obj/machinery/telecomms/bus/map_preset/bearcat,
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fz" = (
 /obj/effect/decal/cleanable/cobweb2,
-/obj/machinery/telecomms/hub/map_preset/bearcat,
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
-"fA" = (
-/obj/effect/paint/brown,
-/turf/simulated/wall/r_wall,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fB" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/sign/warning/hot_exhaust,
@@ -3210,11 +3160,6 @@
 	},
 /obj/structure/cable/green{
 	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
@@ -3227,11 +3172,6 @@
 	icon_state = "intact"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -3239,13 +3179,8 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fQ" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4;
 	icon_state = "intact"
@@ -3258,27 +3193,22 @@
 	dir = 10
 	},
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fR" = (
 /obj/effect/decal/cleanable/generic,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4;
 	icon_state = "intact"
 	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4;
 	icon_state = "intact"
 	},
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fT" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular{
@@ -3294,7 +3224,7 @@
 	icon_state = "intact"
 	},
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "fU" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -3378,7 +3308,6 @@
 /turf/simulated/floor,
 /area/ship/scrap/crew/hallway/starboard)
 "gb" = (
-/obj/machinery/telecomms/processor/map_preset/bearcat,
 /obj/machinery/alarm/server{
 	dir = 1
 	},
@@ -3386,21 +3315,14 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "gc" = (
-/obj/machinery/power/apc/derelict{
-	cell_type = /obj/item/cell/standard;
-	name = "Medical Bay APC"
-	},
-/obj/structure/cable/green,
-/obj/machinery/telecomms/receiver/map_preset/bearcat,
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "gd" = (
 /obj/random/maintenance,
-/obj/machinery/telecomms/server/map_preset/bearcat,
 /turf/simulated/floor,
-/area/ship/scrap/tcomms)
+/area/ship/scrap/crew/hallway/starboard)
 "ge" = (
 /turf/simulated/wall/r_wall,
 /area/ship/scrap/fire)
@@ -4160,9 +4082,6 @@
 "ho" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5;
@@ -4726,11 +4645,6 @@
 	dir = 4;
 	icon_state = "corner_white"
 	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	default_hailing = 1;
-	dir = 8;
-	pixel_x = 22
-	},
 /turf/simulated/floor/tiled/airless,
 /area/ship/scrap/maintenance/atmos)
 "ii" = (
@@ -5250,10 +5164,6 @@
 /turf/simulated/floor/airless,
 /area/ship/scrap/maintenance/engine/aft)
 "jl" = (
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	dir = 8;
-	pixel_x = 22
-	},
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -5654,9 +5564,6 @@
 /obj/machinery/power/apc/derelict{
 	dir = 8
 	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_y = 32
-	},
 /obj/item/cell/crap,
 /obj/item/cell/crap,
 /obj/structure/cable/green{
@@ -5871,9 +5778,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/item/device/radio/intercom/map_preset/bearcat{
-	pixel_x = -32
 	},
 /turf/simulated/floor/airless,
 /area/ship/scrap/maintenance/engine/aft)
@@ -14171,9 +14075,9 @@ so
 ez
 so
 so
-fA
+cg
 fT
-fA
+cg
 Va
 Va
 Va
