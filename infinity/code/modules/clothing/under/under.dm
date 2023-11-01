@@ -81,6 +81,10 @@
 	icon_state = "blackutility"
 	item_state = "bl_suit"
 	worn_state = "blackutility"
+	valid_accessory_slots = list(
+		ACCESSORY_SLOT_INSIGNIA,
+		ACCESSORY_SLOT_DEPT
+	)
 	starting_accessories = list(/obj/item/clothing/accessory/ert)
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.8

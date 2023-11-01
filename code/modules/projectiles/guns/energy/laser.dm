@@ -174,7 +174,7 @@ obj/item/gun/energy/retro
 	desc = "The HI DMR 9E is an older design of Hephaestus Industries. A designated marksman rifle capable of shooting powerful ionized beams, this is a weapon to kill from a distance."
 	icon = 'icons/obj/guns/laser_sniper.dmi'
 	icon_state = "sniper"
-	item_state = "laser"
+	item_state = null
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 5, TECH_POWER = 4)
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
@@ -182,7 +182,7 @@ obj/item/gun/energy/retro
 	max_shots = 4
 	fire_delay = 35
 	force = 10
-	wielded_item_state = "gun_wielded"
+	wielded_item_state = "sniper-wielded"
 	scope_zoom = 2
 
 	accuracy = -2 //shooting at the hip
@@ -192,10 +192,6 @@ obj/item/gun/energy/retro
 	one_hand_penalty = 5 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
 	s_gun = "9E"
 	is_serial = 1
-
-/obj/item/gun/energy/sniperrifle/on_update_icon()
-	..()
-	item_state_slots[slot_back_str] = icon_state //so that the on-back overlay uses the different charged states
 
 ////////Laser Tag////////////////////
 

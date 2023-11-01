@@ -191,7 +191,7 @@
 		/obj/item/gun/projectile/revolver/medium,
 		/obj/item/combitool,
 		/obj/item/clothing/gloves/wristwatch/gold,
-		/obj/item/clothing/head/solgov/dress/fleet,
+		/obj/item/clothing/head/solgov/dress/fleet/command,
 		/obj/item/clothing/accessory/solgov/department/command/fleet,
 		/obj/item/clothing/suit/storage/solgov/service/fleet/officer
 	)

@@ -858,6 +858,10 @@
 /obj/item/ammo_magazine/smg_top,
 /obj/item/ammo_magazine/smg_top,
 /obj/item/ammo_magazine/smg_top,
+/obj/item/gun/projectile/automatic/sec_smg,
+/obj/item/gun/projectile/automatic/sec_smg,
+/obj/item/gun/projectile/automatic/sec_smg,
+/obj/item/gun/projectile/automatic/sec_smg,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -1096,10 +1100,10 @@
 /area/map_template/rescue_base/base)
 "cl" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/sec_smg,
-/obj/item/gun/projectile/automatic/sec_smg,
-/obj/item/gun/projectile/automatic/sec_smg,
-/obj/item/gun/projectile/automatic/sec_smg,
+/obj/item/gun/energy/laser,
+/obj/item/gun/energy/laser,
+/obj/item/gun/energy/laser,
+/obj/item/gun/energy/laser,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3628,10 +3632,6 @@
 /obj/item/storage/box/ammo/stunshells,
 /obj/item/storage/box/ammo/beanbags,
 /obj/item/storage/box/ammo/beanbags,
-/obj/item/storage/box/ammo/shotgunammo,
-/obj/item/storage/box/ammo/shotgunammo,
-/obj/item/storage/box/ammo/shotgunshells,
-/obj/item/storage/box/ammo/shotgunshells,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3645,8 +3645,10 @@
 /area/map_template/rescue_base/office)
 "Dd" = (
 /obj/structure/table/rack,
-/obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser,
+/obj/item/storage/box/ammo/shotgunammo,
+/obj/item/storage/box/ammo/shotgunammo,
+/obj/item/storage/box/ammo/shotgunshells,
+/obj/item/storage/box/ammo/shotgunshells,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
