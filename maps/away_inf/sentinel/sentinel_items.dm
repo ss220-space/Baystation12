@@ -63,13 +63,18 @@
  * ========
  */
 
+/obj/item/clothing/under/solgov/utility/army/urban/away_solpatrol
+	starting_accessories = list(
+		/obj/item/clothing/accessory/solgov/army/tempest
+	)
+
 /obj/item/clothing/under/solgov/utility/fleet/officer/pilot1/away_solpatrol
 	starting_accessories = list(
 		/obj/item/clothing/accessory/solgov/specialty/pilot,
 		/obj/item/clothing/accessory/solgov/fleet_patch/fifth
 	)
 
-/obj/item/clothing/under/solgov/utility/fleet/officer/command/commander/away_solpatrol
+/obj/item/clothing/under/solgov/utility/fleet/officer/command/away_solpatrol
 	starting_accessories = list(
 		/obj/item/clothing/accessory/solgov/department/command/fleet,
 		/obj/item/clothing/accessory/solgov/specialty/pilot,
@@ -125,12 +130,20 @@
 
 /obj/item/clothing/accessory/armband/bluegold/away_solpatrol
 	name = "SCG armband"
-	desc = "An armband, worn by the crew to display which country they represent. This one is blue and gold."
+	desc = "An armband, worn by the crew to display which nation they represent. This one is blue and gold."
 	icon_state = "solblue"
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt
 	name = "ranks (E-4 specialist)"
 	desc = "Insignia denoting the rank of Specialist."
+
+/obj/item/clothing/accessory/solgov/army/tempest
+	name = "Tempest Squad patch"
+	desc = "A tactical shoulder patch carrying insignia of Tempest Squad, the Special Operations Force of SCG Army."
+	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
+	icon_state = "army_tempest"
+	on_rolled = list("down" = "none")
+	slot = ACCESSORY_SLOT_INSIGNIA
 
 /* MISC
  * ========

@@ -367,14 +367,14 @@
 /decl/hierarchy/outfit/job/patrol/army_ops
 	name = PATROL_OUTFIT_JOB_NAME("Ops")
 	head = /obj/item/clothing/head/solgov/utility/army/urban
-	uniform = /obj/item/clothing/under/solgov/utility/army/urban
+	uniform = /obj/item/clothing/under/solgov/utility/army/urban/away_solpatrol
 	id_types = list(/obj/item/card/id/awaycavalry/ops)
 	gloves = /obj/item/clothing/gloves/thick/combat/marine
 
 /decl/hierarchy/outfit/job/patrol/captain
 	name = PATROL_OUTFIT_JOB_NAME("Captain")
 	head = /obj/item/clothing/head/solgov/utility/army/urban
-	uniform = /obj/item/clothing/under/solgov/utility/army/urban
+	uniform = /obj/item/clothing/under/solgov/utility/army/urban/away_solpatrol
 	id_types = list(/obj/item/card/id/awaycavalry/ops/captain)
 	gloves = /obj/item/clothing/gloves/thick/combat/marine
 
@@ -393,7 +393,7 @@
 /decl/hierarchy/outfit/job/patrol/commander
 	name = PATROL_OUTFIT_JOB_NAME("Commander")
 	head = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/officer/command/commander/away_solpatrol
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/officer/command/away_solpatrol
 	belt = /obj/item/storage/belt/holster/security/tactical/away_solpatrol
 	id_types = list(/obj/item/card/id/awaycavalry/fleet/commander)
 	gloves = /obj/item/clothing/gloves/thick/duty/solgov/cmd
