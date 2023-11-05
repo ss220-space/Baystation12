@@ -137,6 +137,7 @@
 	#include "../away_inf/yacht/yacht.dm"
 	#include "../away_inf/ascent/ascent.dm"
 	#include "../away_inf/raider_vessel/raider_vessel.dm"
+	#include "../away_inf/spy_station/spy_station.dm"
 //	#include "../away_inf/skrellscoutship/skrellscoutship.dm"
 //  #include "../away_inf/tajsc/tajsciship.dm"
 
