@@ -9,7 +9,7 @@
 	flags = WHITELISTED
 	space_chance = 40
 	partial_understanding = list(
-		LANGUAGE_UNATHI_YEOSA = 20
+		LANGUAGE_UNATHI_YEOSA = 80
 	)
 	syllables = list(
 		"za", "az", "ze", "ez", "zi", "iz", "zo", "oz", "zu", "uz", "zs", "sz",
@@ -34,7 +34,7 @@
 	flags = WHITELISTED
 	space_chance = 40
 	partial_understanding = list(
-		LANGUAGE_UNATHI_SINTA = 20
+		LANGUAGE_UNATHI_SINTA = 80
 	)
 	syllables = list(
 		"azs","zis","zau","azua","skiu","zuakz","izo","aei","ki","kut","zo",
