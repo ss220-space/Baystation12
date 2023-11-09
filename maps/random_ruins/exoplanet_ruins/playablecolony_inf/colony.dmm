@@ -1715,9 +1715,11 @@
 /turf/simulated/floor/plating,
 /area/map_template/colony/commons)
 "dA" = (
-/obj/structure/dispenser,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/fabricator/hacked{
+	name = "unlocked autolathe"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/colony/engineering)
@@ -1964,13 +1966,16 @@
 	icon_state = "techfloor_edges";
 	dir = 1
 	},
-/obj/machinery/r_n_d/destructive_analyzer,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/colony/engineering)
 "dZ" = (
 /obj/effect/floor_decal/techfloor{
 	icon_state = "techfloor_edges";
 	dir = 6
+	},
+/obj/machinery/computer/rdconsole/core{
+	req_access = list();
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/colony/engineering)
@@ -2430,10 +2435,9 @@
 /turf/simulated/floor/exoplanet/concrete,
 /area/template_noop)
 "eM" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/storage/toolbox/mechanical,
-/obj/item/storage/toolbox/mechanical,
-/obj/item/device/integrated_circuit_printer/upgraded,
+/obj/machinery/robotics_fabricator{
+	req_access = list()
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/colony/engineering)
 "eN" = (
@@ -2645,6 +2649,9 @@
 /obj/item/grenade/chem_grenade/metalfoam,
 /obj/item/grenade/chem_grenade/metalfoam,
 /obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/device/integrated_circuit_printer/upgraded,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/colony/engineering)
 "fe" = (
@@ -2808,9 +2815,7 @@
 "fs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/techfloor,
-/obj/machinery/computer/rdconsole/core{
-	req_access = list()
-	},
+/obj/machinery/r_n_d/destructive_analyzer,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/colony/engineering)
 "ft" = (
@@ -7030,9 +7035,7 @@
 /turf/simulated/floor/exoplanet/concrete,
 /area/template_noop)
 "me" = (
-/obj/machinery/fabricator/hacked{
-	name = "unlocked autolathe"
-	},
+/obj/structure/dispenser,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/colony/engineering)
 "mf" = (
@@ -8011,7 +8014,6 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/colony/engineering)
 "nL" = (
@@ -8890,6 +8892,10 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/colony/hydroponics)
+"Nm" = (
+/obj/machinery/r_n_d/circuit_imprinter,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/colony/engineering)
 "Og" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/structure/railing/mapped{
@@ -9608,7 +9614,7 @@ bR
 aw
 dG
 bP
-cD
+Nm
 dY
 fs
 ei
@@ -9649,7 +9655,7 @@ bT
 au
 cb
 bQ
-aT
+cD
 cT
 dZ
 aT
