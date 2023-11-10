@@ -18518,12 +18518,15 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
@@ -18540,6 +18543,9 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "aFA" = (
@@ -18548,6 +18554,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
@@ -19400,6 +19410,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics)
 "aGH" = (
@@ -19615,7 +19626,8 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/southright{
 	name = "Robotics Laboratory Desk";
-	req_access = newlist()
+	req_access = newlist();
+	tint_id = "Robo_tint"
 	},
 /obj/item/paper_bin,
 /obj/item/pen,
@@ -19654,10 +19666,12 @@
 	name = "Biohazard Shutter";
 	opacity = 0
 	},
-/obj/effect/wallframe_spawn/reinforced,
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/effect/wallframe_spawn/reinforced/polarized/prepainted{
+	id = "Robo_tint"
 	},
 /turf/simulated/floor/plating,
 /area/assembly/robotics)
@@ -21003,7 +21017,6 @@
 /area/assembly/robotics)
 "aIG" = (
 /obj/structure/bed/chair/office/purple,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
@@ -21018,7 +21031,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/vending/assist,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -21031,10 +21043,12 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/random/date_based/christmas/xmaslights{
 	dir = 1
 	},
+/obj/machinery/r_n_d/circuit_imprinter,
+/obj/item/reagent_containers/glass/beaker/sulphuric,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aII" = (
@@ -21064,6 +21078,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aIK" = (
@@ -21075,7 +21093,6 @@
 	pixel_x = -6;
 	pixel_y = 28
 	},
-/obj/structure/holoplant,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
 	},
@@ -21093,6 +21110,15 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 4
+	},
+/obj/machinery/button/windowtint{
+	pixel_y = 28;
+	id = "Robo_tint";
+	pixel_x = -1
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -22214,10 +22240,6 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/rd)
 "aKn" = (
-/obj/structure/table/standard,
-/obj/item/paper_bin,
-/obj/item/folder/nt,
-/obj/item/pen,
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = -24
@@ -22228,6 +22250,9 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
 	},
+/obj/machinery/computer/rdconsole/robotics{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aKp" = (
@@ -22236,15 +22261,6 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics)
-"aKq" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aKr" = (
@@ -23383,7 +23399,9 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/rd)
 "aLJ" = (
-/obj/structure/bed/chair/office/purple,
+/obj/structure/bed/chair/office/purple{
+	dir = 4
+	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
 	},
@@ -23392,13 +23410,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
-"aLK" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics)
 "aLL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aLN" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -23417,7 +23432,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/reagent_dispensers/fueltank,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -23431,6 +23445,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/robotics_fabricator,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aLP" = (
@@ -23897,9 +23912,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/sleep/cryo/upper)
 "aMG" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 1
-	},
 /obj/machinery/light/spot{
 	dir = 8
 	},
@@ -23908,6 +23920,24 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/table/standard,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	step_y = 12;
+	step_x = -1
+	},
+/obj/item/cell/high{
+	step_x = 8;
+	step_y = 12
+	},
+/obj/item/cell/high{
+	step_x = -10;
+	step_y = 12
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -24393,9 +24423,7 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/research)
 "aNg" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aNi" = (
@@ -24407,16 +24435,6 @@
 	dir = 4;
 	name = "east bump";
 	pixel_x = 24
-	},
-/obj/structure/table/rack,
-/obj/item/stack/material/steel{
-	amount = 25
-	},
-/obj/item/stack/material/steel{
-	amount = 25
-	},
-/obj/item/stack/material/steel{
-	amount = 25
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -24434,6 +24452,29 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack,
+/obj/item/stack/material/plastic{
+	amount = 20
+	},
+/obj/item/stack/material/aluminium/ten,
+/obj/item/stack/material/glass{
+	amount = 20
+	},
+/obj/item/stack/material/glass{
+	amount = 20
+	},
+/obj/item/stack/material/plasteel{
+	amount = 20
+	},
+/obj/item/stack/material/steel{
+	amount = 25
+	},
+/obj/item/stack/material/steel{
+	amount = 25
+	},
+/obj/item/stack/material/steel{
+	amount = 25
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aNk" = (
@@ -25287,20 +25328,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/stack/material/plasteel{
-	amount = 20
-	},
-/obj/item/stack/material/glass{
-	amount = 20
-	},
-/obj/item/stack/material/glass{
-	amount = 20
-	},
-/obj/item/stack/material/aluminium/ten,
-/obj/item/stack/material/plastic{
-	amount = 20
-	},
-/obj/structure/table/rack,
 /obj/structure/railing/mapped,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -25318,6 +25345,7 @@
 /obj/random/date_based/christmas/xmaslights{
 	dir = 4
 	},
+/obj/machinery/robotics_fabricator,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aOy" = (
@@ -25328,10 +25356,6 @@
 /turf/simulated/floor/plating,
 /area/assembly/robotics)
 "aOz" = (
-/obj/structure/hygiene/sink{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
 	},
@@ -25347,23 +25371,22 @@
 /obj/random/date_based/christmas/xmaslights{
 	dir = 8
 	},
+/obj/machinery/external_cooling_device,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aOA" = (
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_y = 32
 	},
-/obj/structure/table/standard,
-/obj/item/storage/toolbox/mechanical,
-/obj/item/stack/nanopaste,
-/obj/item/stack/nanopaste,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
+	},
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -26429,7 +26452,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "aQb" = (
-/obj/structure/closet/wardrobe/robotics_black,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
 	},
@@ -26445,6 +26467,7 @@
 /obj/random/date_based/christmas/xmaslights{
 	dir = 4
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aQc" = (
@@ -26527,10 +26550,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -26639,7 +26658,6 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aQp" = (
-/obj/machinery/external_cooling_device,
 /obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = 24
@@ -26647,6 +26665,12 @@
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
+/obj/structure/table/standard,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/nanopaste,
+/obj/item/stack/nanopaste,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aQq" = (
@@ -27858,7 +27882,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "aRM" = (
-/obj/machinery/disposal,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
 	},
@@ -27872,23 +27895,31 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_x = -24;
 	pixel_y = 0
 	},
+/obj/structure/closet/wardrobe/robotics_black,
+/obj/item/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aRN" = (
-/obj/item/storage/box/lights/mixed,
 /obj/random/maintenance,
 /obj/structure/table/rack,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/device/multitool{
+	pixel_x = 3
+	},
+/obj/random/tool,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/random/tech_supply,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aRO" = (
@@ -27901,40 +27932,35 @@
 	dir = 1;
 	pixel_y = -20
 	},
-/obj/item/device/robotanalyzer,
-/obj/random/tool,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/glasses/welding,
+/obj/random/tech_supply,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aRP" = (
 /obj/structure/table/rack,
-/obj/item/storage/belt/utility/full,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/glasses/welding,
 /obj/structure/sign/poster{
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/organ/internal/posibrain,
+/obj/item/storage/box/lights/mixed,
+/obj/item/device/robotanalyzer,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aRQ" = (
-/obj/structure/table/standard,
-/obj/machinery/cell_charger,
-/obj/item/cell/high,
-/obj/item/cell/high,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/item/organ/internal/posibrain,
 /obj/machinery/light/spot,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aRR" = (
@@ -39803,12 +39829,6 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/dungeon_master_lounge)
 "jRz" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
-/obj/machinery/r_n_d/circuit_imprinter,
-/obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
 	},
@@ -39821,7 +39841,12 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 10
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/reagent_dispensers/acid{
+	step_x = -32
+	},
+/obj/machinery/vending/assist{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "jYP" = (
@@ -41038,6 +41063,9 @@
 /obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/purple/bordercorner2,
 /obj/random/date_based/christmas/xmaslights,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "mXP" = (
@@ -42182,10 +42210,6 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
-"pSw" = (
-/obj/structure/railing/mapped,
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics)
 "pSP" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/prepainted,
 /obj/machinery/door/blast/regular/open{
@@ -42211,24 +42235,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/red,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
-"pWi" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics)
 "pWA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -43183,11 +43189,6 @@
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
-"sZA" = (
-/obj/machinery/robotics_fabricator,
-/obj/structure/railing/mapped,
-/turf/simulated/floor/tiled/white/monotile,
-/area/assembly/robotics)
 "tcQ" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 4
@@ -68853,11 +68854,11 @@ aDL
 aFx
 aHa
 aIG
-aLK
-aLK
+aOv
+aOv
 aNg
-aLK
-pWi
+aOv
+aQi
 aRN
 aTs
 sKK
@@ -69257,10 +69258,10 @@ aDB
 aFz
 aGZ
 aII
-aKq
-sZA
-pSw
-sZA
+dxt
+aLL
+aOv
+aLL
 aQi
 aRP
 aTs
