@@ -105,18 +105,18 @@
 /datum/gear/suit/storage/denim/gray
 	display_name = "gray denim jacket"
 	path = /obj/item/clothing/suit/storage/denim/gray
-/datum/gear/suit/crop_sweater
-	display_name =  "crop sweater"
+
+/datum/gear/suit/crop_sweater_selection
+	display_name = "crop sweater selection"
 	path = /obj/item/clothing/suit/crop_sweater
-/datum/gear/suit/crop_sweater/one
-	display_name =  "second crop sweater"
-	path = /obj/item/clothing/suit/crop_sweater/one
-/datum/gear/suit/crop_sweater/two
-	display_name =  "third sweater"
-	path = /obj/item/clothing/suit/crop_sweater/two
-/datum/gear/suit/crop_sweater/three
-	display_name =  "fourth sweater"
-	path = /obj/item/clothing/suit/crop_sweater/three
+
+/datum/gear/suit/crop_sweater_selection/New()
+	..()
+	var/crop_sweater_selection_type = list()
+	crop_sweater_selection_typee["black crop sweater with red stripes"] = /obj/item/clothing/suit/crop_sweater/black_with_red
+	crop_sweater_selection_type["black crop sweater with yellow stripes"] = /obj/item/clothing/suit/storage/crop_sweater/black_with_yellow
+	crop_sweater_selection_type["white crop sweater with white stripes"] = /obj/item/clothing/suit/storage/crop_sweater/white_with_blue
+	gear_tweaks += new/datum/gear_tweak/path(crop_sweater_selection_type)
 /datum/gear/suit/crystaljock
 	display_name = "crystaljock bobmer"
 	path =/obj/item/clothing/suit/crystaljock
@@ -128,24 +128,18 @@
 /datum/gear/suit/storage/hooded/anorak/desert
 	path = /obj/item/clothing/suit/storage/hooded/anorak/desert
 	display_name = "desert anorak"
+/datum/gear/suit/rugby_selection
+	display_name = "rugby selection"
+	path = /obj/item/clothing/suit/rugby
 
-/datum/gear/suit/storage/red
-	display_name = "red rugby"
-	path = /obj/item/clothing/suit/storage/rugby/red
-
-/datum/gear/suit/storage/black
-	display_name = "black rugby"
-	path = /obj/item/clothing/suit/storage/rugby/black
-
-/datum/gear/suit/storage/rugby/blue
-	display_name = "blue rugby"
-	path = /obj/item/clothing/suit/storage/rugby/blue
-
-
-/datum/gear/suit/storage/rugby/blue
-	display_name = "brown rugby"
-	path = /obj/item/clothing/suit/storage/rugby/brown
-
+/datum/gear/suit/rugby_selection/New()
+	..()
+	var/rugby_selection_type = list()
+	rugby_selection_type["red rugby"] = /obj/item/clothing/suit/storage/rugby/red
+	rugby_selection_type["black rugby"] = /obj/item/clothing/suit/storage/rugby/black
+	rugby_selection_type["blue rugby"] = /obj/item/clothing/suit/storage/rugby/blue
+	rugby_selectionn_type["brown rugby"] = /obj/item/clothing/suit/storage/rugby/brown
+	gear_tweaks += new/datum/gear_tweak/path(rugby_selectionn_type)
 
 /datum/gear/suit/storage/engi_jacket
 	display_name = "hazard jacket"
@@ -178,27 +172,23 @@
 	path = /obj/item/clothing/suit/color/storage/neo_jacket
 	flags = GEAR_HAS_COLOR_SELECTION
 
-/datum/gear/suit/stirage/neo_jacket_female
+/datum/gear/suit/strage/neo_jacket_female
 	display_name = "female neokitsch jacket"
 	path = /obj/item/clothing/suit/color/storage/neo_jacket_female
 	flags = GEAR_HAS_COLOR_SELECTION
 
-/datum/gear/suit/freefit_shirt
-	display_name = "freefit shirt"
+/datum/gear/suit/freefit_shirt_selection
+	display_name = "freefit shirt selection"
 	path = /obj/item/clothing/suit/freefit_shirt
 
-/datum/gear/suit/freefit_shirt/one
-	display_name = "light blue freefit shirt"
-	path = /obj/item/clothing/suit/freefit_shirt/one
-	
-/datum/gear/suit/freefit_shirt/two
-	display_name = "black freefit shirt"
-	path = /obj/item/clothing/suit/freefit_shirt/two
-	
-/datum/gear/suit/freefit_shirt/three
-	display_name = "green freefit shirt"
-	path = /obj/item/clothing/suit/freefit_shirt/three
-	
+/datum/gear/suit/freefit_shirt_selection/New()
+	..()
+	var/freefit_selection_type = list()
+	freefit_selection_type["light blue freefit shirt"] = /obj/item/clothing/suit/freefit_shirt/one
+	freefit_selection_type["black freefit shirt"] = /obj/item/clothing/suit/freefit_shirt/two
+	freefit_selection_type["green freefit shirt"] = /obj/item/clothing/suit/freefit_shirt/three
+	gear_tweaks += new/datum/gear_tweak/path(freefit_selection_type)
+
 /datum/gear/suit/storage/biker_jacket
 	path = /obj/item/clothing/suit/storage/toggle/inf/biker_jacket
 	display_name = "biker jacket"
