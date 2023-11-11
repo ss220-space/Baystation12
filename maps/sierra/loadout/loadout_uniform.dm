@@ -69,6 +69,7 @@
 	shirts += /obj/item/clothing/under/suit_jacket/burgundy/no_accessories
 	shirts += /obj/item/clothing/under/suit_jacket/checkered/no_accessories
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(shirts)
+
 //New Leroy Stuff
 /datum/gear/uniform/cherry
 	display_name = "cherry suit"
@@ -104,70 +105,77 @@
 /datum/gear/uniform/plaint/dark
 	display_name = "dark plain suit"
 
-/datum/gear/uniform/kitsch_dress
-	display_name = "kitsch dress"
+/datum/gear/uniform/kitsch_dress_selection
+	display_name = "kitsch dress selection"
 	path = /obj/item/clothing/under/kitsch_dress
 
-/datum/gear/unfirom/kitsch_dress/one
-	display_name = "Second type kitsch dress"
-	path = /obj/item/clothing/under/kitsch_dress/one
-
-
-/datum/gear/uniform/kitsch_dress/two
-	display_name = "three type kitsch dress"
-	path = /obj/item/clothing/under/kitsch_dress/two
-
-/datum/gear/uniform/kitsch_dress/three
-	display_name = "Fourth type kitsch dress"
-	path = /obj/item/clothing/under/kitsch_dress/three
+/datum/gear/uniform/kitsch_dress_selection/New()
+	..()
+	var/kitsch_dress_selection_type = list()
+	kitsch_dress_selection_type["blue-yellow kitsch dress"] = /obj/item/clothing/under/kitsch_dress/one
+	kitsch_dress_selection_type["black-pink kitsch dress"] =  /obj/item/clothing/under/kitsch_dress/two
+	kitsch_dress_selection_type["white-black hitsch dress"] =  /obj/item/clothing/under/kitsch_dress/three
+	gear_tweaks += new/datum/gear_tweak/path(kitsch_dress_selection_type)
 
 /datum/gear/uniform/startrek/captain
 	display_name = "captain's jumpsuit"
 	path = /obj/item/clothing/under/startrek/captain
+	allowed_roles = list(/datum/job/captain)
 
 /datum/gear/uniform/startrek/hop
 	display_name = "head of personnel's jumpsuit"
 	path = /obj/item/clothing/under/startrek/hop
+	allowed_roles = list(/datum/job/hop)
 
 /datum/gear/uniform/startrek/hos
 	display_name = "head of security's jumpsuit"
 	path = /obj/item/clothing/under/startrek/hos
+	allowed_roles = list(/datum/job/hos)
 
 /datum/gear/uniform/startrek/cmo
 	display_name = "chief medical officer's jumpsuit"
 	path = /obj/item/clothing/under/startrek/cmo
+	allowed_roles = list(/datum/job/cmo)
 
 /datum/gear/uniform/startrek/rd
 	display_name = "research director's jumpsuit"
 	path = /obj/item/clothing/under/startrek/rd
+	allowed_roles = list(/datum/job/rd)
 
 /datum/gear/uniform/startrek/ce
 	display_name = "chief engineer's jumpsuit"
 	path = /obj/item/clothing/under/startrek/ce
+	allowed_roles = list(/datum/job/chief_engineer)
 
 /datum/gear/uniform/startrek/sergeant
 	display_name = "sergeant's jumpsuit"
 	path = /obj/item/clothing/under/startrek/sergeant
+	allowed_roles = list (/datum/job/warden)
 
 /datum/gear/uniform/startrek/adjutant
 	display_name = "adjutant's jumpsuit"
 	path = /obj/item/clothing/under/startrek/adjutant
+	allowed_roles = list()
 
 /datum/gear/uniform/startrek/eng
 	display_name = "engineer's jumpsuit"
 	path = /obj/item/clothing/under/startrek/eng
+	allowed_roles = list(/datum/job/chief_engineer, /datum/job/senior_engineer, /datum/job/engineer, /datum/job/roboticist, /datum/job/engineer_trainee, /datum/job/explorer_engineer, /datum/job/submap/merchant, /datum/job/submap/merchant_trainee, /datum/job/infsys)
 
 /datum/gear/uniform/startrek/sec
 	display_name = "security guard's jumpsuit"
 	path = /obj/item/clothing/under/startrek/sec
+	allowed_roles = list(/datum/job/hos, /datum/job/warden, /datum/job/detective, /datum/job/officer, /datum/job/submap/merchant, /datum/job/submap/merchant_trainee)
 
 /datum/gear/uniform/startrek/med
 	display_name = "physician's jumpsuit"
 	path = /obj/item/clothing/under/startrek/med
+	allowed_roles = list(/datum/job/cmo, /datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_trainee, /datum/job/explorer_medic, /datum/job/psychiatrist, /datum/job/chemist, /datum/job/roboticist, /datum/job/submap/merchant, /datum/job/submap/merchant_trainee)
 
 /datum/gear/uniform/startrek/sci
 	display_name = "researcher's jumpsuit"
 	path = /obj/item/clothing/under/startrek/sci
+	allowed_roles = list(/datum/job/rd, /datum/job/scientist, /datum/job/scientist_assistant, /datum/job/senior_scientist, /datum/job/roboticist, /datum/job/submap/merchant, /datum/job/submap/merchant_trainee)
 
 /datum/gear/uniform/bdu
 	display_name = "battle dress uniform"
@@ -176,7 +184,7 @@
 /datum/gear/uniform/ems/dark
 	display_name = "black emergency medical responder's jumpsuit"
 	path = /obj/item/clothing/under/ems/dark
-
 /datum/gear/uniform/ems/white
+
 	display_name = "black emergency medical responder's jumpsuit"
 	path = /obj/item/clothing/under/ems/white
