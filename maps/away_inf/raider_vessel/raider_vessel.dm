@@ -1,7 +1,8 @@
 #include "raider_vessel_areas.dm"
 
 /obj/effect/overmap/visitable/sector/raider_vessel
-	scanner_name = "Raider Vessel"
+	name = "Raider Vessel"
+	scanner_name = "Unknown Vessel"
 	scanner_desc = @{"<br>
 		<i>Registration</i>: UNKNOWN<br>
 		<i>Class</i>: Gunboat<br>
