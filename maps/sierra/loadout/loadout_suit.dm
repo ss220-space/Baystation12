@@ -87,3 +87,98 @@
 /datum/gear/suit/snakeskin
 	display_name = "snakeskin coat"
 	path = /obj/item/clothing/suit/snakeskin
+
+//Custom shit from Leroy
+/datum/gear/suit/storage/shortcoat
+	display_name = "shortcoat"
+	path = /obj/item/clothing/suit/storage/shortcoat
+
+/datum/gear/suit/storage/toggle/bomber/navy
+	display_name = "navy bomber jacket"
+	path = /obj/item/clothing/suit/storage/toggle/bomber/navy
+/datum/gear/suit/storage/greatcoat
+	display_name = "sleek greatcoat"
+	path = /obj/item/clothing/suit/storage/greatcoat
+/datum/gear/suit/storage/denim
+	display_name = "denim jacket"
+	path = /obj/item/clothing/suit/storage/denim
+/datum/gear/suit/storage/denim/gray
+	display_name = "gray denim jacket"
+	path = /obj/item/clothing/suit/storage/denim/gray
+/datum/gear/suit/crop_sweater
+	display_name =  "crop sweater"
+	path = /obj/item/clothing/suit/crop_sweater
+/datum/gear/suit/crop_sweater/one
+	display_name =  "second crop sweater"
+	path = /obj/item/clothing/suit/crop_sweater/one
+/datum/gear/suit/crop_sweater/two
+	display_name =  "third sweater"
+	path = /obj/item/clothing/suit/crop_sweater/two
+/datum/gear/suit/crop_sweater/three
+	display_name =  "fourth sweater"
+	path = /obj/item/clothing/suit/crop_sweater/three
+/datum/gear/suit/crystaljock
+	display_name = "crystaljock bobmer"
+	path =/obj/item/clothing/suit/crystaljock
+
+/datum/gear/suit/sturage/hooded/anorak/khaki
+	display_name = "khaki anorak"
+	path = /obj/item/clothing/suit/storage/hooded/anorak/khaki
+
+/datum/gear/suit/storage/hooded/anorak/desert
+	path = /obj/item/clothing/suit/storage/hooded/anorak/desert
+	display_name = "desert anorak"
+
+/datum/gear/suit/storage/red
+	display_name = "red rugby"
+	path = /obj/item/clothing/suit/storage/rugby/red
+
+/datum/gear/suit/storage/black
+	display_name = "black rugby"
+	path = /obj/item/clothing/suit/storage/rugby/black
+
+/datum/gear/suit/storage/rugby/blue
+	display_name = "blue rugby"
+	path = /obj/item/clothing/suit/storage/rugby/blue
+
+
+/datum/gear/suit/storage/rugby/blue
+	display_name = "brown rugby"
+	path = /obj/item/clothing/suit/storage/rugby/brown
+
+
+/datum/gear/suit/storage/engi_jacket
+	display_name = "hazard jacket"
+	path = /obj/item/clothing/suit/storage/engi_jacket
+
+/datum/gear/suit/storage/cargo_jacket
+	display_name = "lanor jacket"
+	path = /obj/item/clothing/suit/storage/cargo_jacket
+
+/datum/gear/suit/storage/amizov
+	display_name = "striped pullover"
+	path = /obj/item/clothing/suit/amizov
+
+/datum/gear/suit/storage/grimbomber
+	display_name = "black bomber"
+	path = /obj/item/clothing/suit/storage/grimbomber
+
+/datum/gear/suit/storage/neo_blaser
+	display_name = "neokitsch blaser"
+	path = /obj/item/clothing/suit/color/storage/neo_blaser
+	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/suit/storage/neo_blaser_female
+	display_name = "female neokitsch blaser"
+	path = /obj/item/clothing/suit/color/storage/neo_blaser_female
+	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/suit/storage/neo_jacket
+	display_name = "neokitsch jacket"
+	path = /obj/item/clothing/suit/color/storage/neo_jacket
+	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/suit/stirage/neo_jacket_female
+	display_name = "female neokitsch jacket"
+	path = /obj/item/clothing/suit/color/storage/neo_jacket_female
+	flags = GEAR_HAS_COLOR_SELECTION
