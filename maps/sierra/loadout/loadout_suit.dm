@@ -115,7 +115,7 @@
 	var/crop_sweater_selection_type = list()
 	crop_sweater_selection_type["black crop sweater with red stripes"] = /obj/item/clothing/suit/crop_sweater/black_with_red
 	crop_sweater_selection_type["black crop sweater with yellow stripes"] = /obj/item/clothing/suit/crop_sweater/black_with_yellow
-	crop_sweater_selection_type["white crop sweater with white stripes"] = /obj/item/clothing/suit/crop_sweater/white_with_blue
+	crop_sweater_selection_type["white crop sweater with blue stripes"] = /obj/item/clothing/suit/crop_sweater/white_with_blue
 	gear_tweaks += new/datum/gear_tweak/path(crop_sweater_selection_type)
 /datum/gear/suit/crystaljock
 	display_name = "crystaljock bobmer"
