@@ -173,10 +173,6 @@
 	display_name = "battle dress uniform"
 	path = /obj/item/clothing/under/bdu
 
-/datum/gear/uniform/ems
-	display_name = "emergency medical responder's jumpsuit"
-	path = /obj/item/clothing/under/ems
-
 /datum/gear/uniform/ems/dark
 	display_name = "black emergency medical responder's jumpsuit"
 	path = /obj/item/clothing/under/ems/dark
