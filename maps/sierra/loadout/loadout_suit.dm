@@ -182,3 +182,23 @@
 	display_name = "female neokitsch jacket"
 	path = /obj/item/clothing/suit/color/storage/neo_jacket_female
 	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/suit/freefit_shirt
+	display_name = "freefit shirt"
+	path = /obj/item/clothing/suit/freefit_shirt
+
+/datum/gear/suit/freefit_shirt/one
+	display_name = "light blue freefit shirt"
+	path = /obj/item/clothing/suit/freefit_shirt/one
+	
+/datum/gear/suit/freefit_shirt/two
+	display_name = "black freefit shirt"
+	path = /obj/item/clothing/suit/freefit_shirt/two
+	
+/datum/gear/suit/freefit_shirt/three
+	display_name = "green freefit shirt"
+	path = /obj/item/clothing/suit/freefit_shirt/three
+	
+/datum/gear/suit/storage/biker_jacket
+	path = /obj/item/clothing/suit/storage/toggle/inf/biker_jacket
+	display_name = "biker jacket"
