@@ -115,6 +115,28 @@
 	icon_state = "denim_jacket_gray"
 	item_state = "denim_jacket_gray"
 	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
+/obj/item/clothing/suit/freefit_shirt //
+	icon = CUSTOM_ITEM_OBJ
+	name = "freefit shirt"
+	desc = "This silken fabric is like a breath of fresh air."
+
+/obj/item/clothing/suit/freefit_shirt/one
+	icon = CUSTOM_ITEM_OBJ
+	icon_state = "freefit_shirt_1"
+	item_state = "freefit_shirt_1"
+	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
+
+/obj/item/clothing/suit/freefit_shirt/two
+	icon = CUSTOM_ITEM_OBJ
+	icon_state = "freefit_shirt_2"
+	item_state = "freefit_shirt_2"
+	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
+
+/obj/item/clothing/suit/freefit_shirt/three
+	icon = CUSTOM_ITEM_OBJ
+	icon_state = "freefit_shirt_3"
+	item_state = "freefit_shirt_3"
+	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
 
 /obj/item/clothing/suit/crop_sweater
 	icon = CUSTOM_ITEM_OBJ
