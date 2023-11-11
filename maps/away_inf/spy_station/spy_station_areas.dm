@@ -1,7 +1,7 @@
 /area/spy_station/
 	name = "\improper Center Corridor"
 	icon_state = "corridor"
-	icon = 'maps/away_inf/spy_station/spy_station.dmi'
+	icon = 'maps/away_inf/spy_station/spy_station_sprites.dmi'
 
 /area/spy_station/com
 	name = "\improper Center Command"
@@ -21,7 +21,7 @@
 
 /area/spy_station/lc
 	name = "\improper SCL office"
-	icon_state = "office"
+	icon_state = "offise"
 
 /area/spy_station/canteen
 	name = "\improper Canteen"
