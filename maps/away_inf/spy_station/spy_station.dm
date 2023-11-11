@@ -13,10 +13,10 @@
 	hide_from_reports = TRUE
 
 	initial_generic_waypoints = list(
-	"nav_spy_station_1",
-	"nav_spy_station_2",
-	"nav_spy_station_3",
-	"nav_spy_station_antag"
+		"nav_spy_station_1",
+		"nav_spy_station_2",
+		"nav_spy_station_3",
+		"nav_spy_station_antag"
 	)
 
 /datum/map_template/ruin/away_site/spy_station
@@ -25,7 +25,7 @@
 	description = "Delta Station"
 	prefix = "maps/away_inf/"
 	suffixes = list("spy_station/spy_station.dmm")
-	spawn_cost = 0.5
+	spawn_cost = 1
 	template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
 	area_usage_test_exempted_root_areas = list(/area/spy_station)
 
@@ -55,14 +55,8 @@
 	item_state = "card-id"
 	w_class = ITEM_SIZE_TINY
 
-
-/obj/item/scgstation_disk
-	name = "disk"
+/obj/item/scgstation_disk/freq
 	desc = "A dusty disk. Its label says: \"List of classified military radio frequencies.\". Its content is encrypted with quantum crypthography methods."
-	icon = 'icons/obj/items.dmi'
-	icon_state = "nucleardisk"
-	item_state = "card-id"
-	w_class = ITEM_SIZE_TINY
 
 /obj/item/paper/signal1
 	name = "Signal Detected 1"
