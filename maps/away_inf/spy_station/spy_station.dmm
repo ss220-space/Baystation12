@@ -178,7 +178,6 @@
 "uF" = (/obj/machinery/light{dir = 1; icon_state = "tube1"},/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled/techmaint,/area/spy_station/barrack)
 "uM" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/floordetail/tiled,/obj/effect/floor_decal/floordetail/edgedrain{dir = 4},/turf/simulated/floor/tiled/dark,/area/spy_station)
 "uR" = (/obj/effect/floor_decal/borderfloorwhite{dir = 5},/obj/effect/floor_decal/corner/paleblue/border{dir = 5},/obj/machinery/atmospherics/unary/vent_pump/on,/obj/machinery/vending/medical{req_access = list("SOL_MEDIC_ACCESS")},/obj/machinery/light{dir = 1; icon_state = "tube1"},/turf/simulated/floor/tiled/white,/area/spy_station/med)
-"uU" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/blast/regular/open{density = 0; id_tag = "ofi"},/obj/machinery/door/firedoor,/obj/effect/paint/black,/turf/simulated/floor,/area/spy_station/lc)
 "uY" = (/obj/random/trash,/obj/machinery/cooker/grill,/obj/structure/extinguisher_cabinet{pixel_x = -24; dir = 4},/turf/simulated/floor/tiled/freezer,/area/spy_station/canteen)
 "vj" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/decal/cleanable/dirt,/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/random/trash,/turf/simulated/floor/tiled/techfloor/grid,/area/spy_station/engin)
 "vB" = (/obj/structure/scrap_cube,/turf/space,/area/space)
@@ -210,7 +209,7 @@
 "yK" = (/obj/effect/floor_decal/industrial/warning{dir = 1; icon_state = "warning"},/obj/machinery/firealarm{dir = 8; pixel_x = -24},/obj/random/toolbox,/turf/simulated/floor/tiled/techfloor,/area/spy_station/engin)
 "yL" = (/obj/effect/floor_decal/floordetail/tiled,/obj/effect/floor_decal/floordetail/edgedrain{dir = 8},/turf/simulated/floor/tiled/dark,/area/spy_station)
 "yS" = (/obj/structure/filingcabinet,/obj/effect/floor_decal/borderfloor{dir = 1},/turf/simulated/floor/tiled/dark,/area/spy_station/com)
-"yX" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/obj/effect/paint/black,/obj/machinery/door/blast/regular/open{density = 0; id_tag = "ofi"},/turf/simulated/floor,/area/spy_station/lc)
+"yX" = (/obj/effect/wallframe_spawn/reinforced,/obj/machinery/door/firedoor,/obj/effect/paint/black,/obj/machinery/door/blast/regular{id_tag = "ofi"; name = "Protective Shutters"},/turf/simulated/floor,/area/spy_station/lc)
 "zi" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/turf/simulated/floor/tiled/techfloor,/area/spy_station/engin)
 "zo" = (/obj/effect/floor_decal/floordetail/tiled,/obj/effect/floor_decal/floordetail/edgedrain,/turf/simulated/floor/tiled/dark,/area/spy_station)
 "zp" = (/obj/effect/floor_decal/floordetail/edgedrain{dir = 8},/turf/simulated/floor/tiled/dark,/area/spy_station)
@@ -420,7 +419,7 @@
 "UH" = (/obj/effect/floor_decal/industrial/hatch/yellow,/obj/machinery/door/airlock/civilian{id_tag = "mercshower"; name = "Shower"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/freezer,/area/spy_station/toilet)
 "UN" = (/obj/structure/sign/solgov{pixel_y = -31},/obj/effect/decal/cleanable/dirt,/obj/machinery/ntnet_relay{name = "Quantum Relay"},/obj/effect/floor_decal/borderfloor,/obj/machinery/light,/turf/simulated/floor/tiled/dark,/area/spy_station/com)
 "UO" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/turf/simulated/floor/tiled/techfloor/grid,/area/spy_station/engin)
-"UU" = (/obj/effect/wallframe_spawn/reinforced,/obj/effect/paint/black,/obj/machinery/door/blast/regular/open{icon_state = "pdoor1"; id_tag = "window sp"; name = "Protective Shutters"},/turf/simulated/floor,/area/spy_station/com)
+"UU" = (/obj/effect/wallframe_spawn/reinforced,/obj/effect/paint/black,/obj/machinery/door/blast/regular{id_tag = "window sp"; name = "Protective Shutters"},/turf/simulated/floor,/area/spy_station/com)
 "UW" = (/obj/effect/floor_decal/borderfloorwhite{dir = 8},/obj/effect/decal/cleanable/generic,/obj/structure/iv_drip,/turf/simulated/floor/tiled/white,/area/spy_station/med)
 "Vf" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/tiled/dark,/area/spy_station)
 "Vl" = (/obj/structure/sign/double/solgovflag/left{pixel_y = 24},/turf/simulated/floor/wood/walnut,/area/spy_station/lc)
@@ -492,8 +491,8 @@ dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCvBdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCcYCZcYCZCZcYcYcYdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCvBdCdCdCdCdCdCdCdCcYcYAoAoAoAoAoAocYcYdCdCdCdCQZQZQZQZQZQZfgcYcYcYfgQZQZQZQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
-dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZQZfgQZQZcfcYxusaqRAoAoqRsaxucYQZQZfgQZQZrUrUdCdCdCdCGjrUrUdCdCdCrUQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
-dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZcfrUdCdCdCrUAoAoAoAoAoAoAoAoAoAorUdCdCdCdCrUrUfOfOfOfOfOfOfOfOfOfOrUQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
+dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZQZfgQZQZcfcYAoAoAoAoAoAoAoAocYQZQZfgQZQZrUrUdCdCdCdCGjrUrUdCdCdCrUQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
+dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZcfrUdCdCdCrUAoxusaqRAoAoqRsaxuAorUdCdCdCdCrUrUfOfOfOfOfOfOfOfOfOfOrUQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCfgrUrUdCdCdCrUzWgUgUgUPJPJgUgUgUzWrUdCdCdCdCtemckukukukukukukukukukutbQZQZQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZQZdCtQtQtQtQtQJTUUUUUUJTJTUUUUUUJTJTkNkNkNkNlTjaFxFxFxFxFxFxFxFxFxFxUrrUrUQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZdCdCtQhFfHRstQiqXAFlySiZElkZOppshqJTzKaFOXkNUrOYrUrUrUrUrUrUrUrUrUrUfsfVBdQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
@@ -522,7 +521,7 @@ dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZdCgYgYgYgYgYgY
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZdCdCdCrUdCdCdCdCECunXoVloHwFDOQFwFdCdCrUdCdCdCdCBddCQZqhdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZQZdCdCrUdCdCdCdCECqdQvhLRlwFKiCAwFdCdCrUdCdCdCdCrUrUQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZQZfgQZQZQZrUrUECNGemNXlawFDOONwFQiQiQiQiQiQiQiQidCQZdCvBdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
-dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZdCdCECECuUyXECwFcehtwFxwHJKmeOUHcuETQidCQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
+dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZdCdCECECyXyXECwFcehtwFxwHJKmeOUHcuETQidCQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCvBdCdCdCdCdCQZDydCdCZDKbKbdCwFLewhZPmpaXRFKTtOtOtOQirUQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCvBdCdCdCdCdCdCdCdCdCQZDydCrUdCdCdCwFoYXkwFJpuBtUlemlGRACQidCfgdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC
 dCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCQZQZQZfgQZrUwFwFwFwFQiQiQiQiQiQiQiQidCQZdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdCdC

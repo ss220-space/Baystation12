@@ -4,11 +4,12 @@
 	name = "spy station"
 	desc = "spy SCG station"
 	scanner_name = "Small station"
-	scanner_desc = @{"[i]Registration[/i]: SCGDF military facility
-[i]Class[/i]: Installation
-[i]Transponder[/i]: (MIL), SCG
-[b]Notice[/b]: Sensors detect a small station. No further scanning is possible. Interference: camouflage radio network"} //убрать скобки, написать хрень, убрать записки
-	icon_state = "sector"
+	scanner_desc = @{"<br>
+	<i>Registration</i>: SCGDF military facility<br>
+	<i>Class</i>: Installation<br>
+	<i>Transponder</i>: (MIL), SCG<br>
+	<b>Notice</b>: Sensors detect a small station. No further scanning is possible. Interference: camouflage radio network"}
+	icon_state = "object"
 	known = 0
 	hide_from_reports = TRUE
 
