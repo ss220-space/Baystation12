@@ -59,7 +59,7 @@
 "hF" = (/obj/structure/table/marble,/obj/machinery/reagentgrinder/juicer,/turf/simulated/floor/tiled/freezer,/area/spy_station/canteen)
 "hG" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/turf/simulated/floor/tiled/techfloor,/area/spy_station/dock)
 "hL" = (/obj/random/trash,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/wood/walnut,/area/spy_station/lc)
-"hM" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sign/warning/vacuum{step_y = 30},/obj/machinery/atmospherics/pipe/simple/hidden/universal{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/spy_station/dock)
+"hM" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sign/warning/vacuum{pixel_y = 30},/obj/machinery/atmospherics/pipe/simple/hidden/universal{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/spy_station/dock)
 "hN" = (/obj/machinery/photocopier,/obj/effect/floor_decal/borderfloor{dir = 10},/turf/simulated/floor/tiled/dark,/area/spy_station/com)
 "hR" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 5},/turf/simulated/floor/tiled/techfloor/grid,/area/spy_station/engin)
 "hT" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/spy_station)
