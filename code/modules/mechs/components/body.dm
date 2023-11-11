@@ -91,7 +91,7 @@
 				cockpit.temperature = air.temperature
 				cockpit.update_values()
 
-		air_supply = new /obj/machinery/portable_atmospherics/canister/air(src)
+		air_supply = new /obj/machinery/portable_atmospherics/canister/air/mech(src)
 	storage_compartment = new(src)
 
 /obj/item/mech_component/chassis/proc/update_air(var/take_from_supply)
@@ -168,7 +168,7 @@
 	if(!istype(C))
 		return ..()
 	if(pilot_coverage < 100)
-		to_chat(user, SPAN_NOTICE("This type of chassis doesn't support internals."))	
+		to_chat(user, SPAN_NOTICE("This type of chassis doesn't support internals."))
 	if(!C.anchored && do_after(user, 5, src))
 		if(C.anchored)
 			return
@@ -197,5 +197,3 @@ obj/item/mech_component/chassis/MouseDrop(atom/over)
 		to_chat(user, SPAN_NOTICE(" Armor Integrity: <b>[round((((m_armour.max_dam - m_armour.total_dam) / m_armour.max_dam)) * 100)]%</b>"))
 	else
 		to_chat(user, SPAN_WARNING(" Armor Missing or Non-functional."))
-
-
