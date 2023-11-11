@@ -113,9 +113,9 @@
 /datum/gear/suit/crop_sweater_selection/New()
 	..()
 	var/crop_sweater_selection_type = list()
-	crop_sweater_selection_typee["black crop sweater with red stripes"] = /obj/item/clothing/suit/crop_sweater/black_with_red
-	crop_sweater_selection_type["black crop sweater with yellow stripes"] = /obj/item/clothing/suit/storage/crop_sweater/black_with_yellow
-	crop_sweater_selection_type["white crop sweater with white stripes"] = /obj/item/clothing/suit/storage/crop_sweater/white_with_blue
+	crop_sweater_selection_type["black crop sweater with red stripes"] = /obj/item/clothing/suit/crop_sweater/black_with_red
+	crop_sweater_selection_type["black crop sweater with yellow stripes"] = /obj/item/clothing/suit/crop_sweater/black_with_yellow
+	crop_sweater_selection_type["white crop sweater with white stripes"] = /obj/item/clothing/suit/crop_sweater/white_with_blue
 	gear_tweaks += new/datum/gear_tweak/path(crop_sweater_selection_type)
 /datum/gear/suit/crystaljock
 	display_name = "crystaljock bobmer"
@@ -130,7 +130,7 @@
 	display_name = "desert anorak"
 /datum/gear/suit/rugby_selection
 	display_name = "rugby selection"
-	path = /obj/item/clothing/suit/rugby
+	path = /obj/item/clothing/suit/storage/rugby
 
 /datum/gear/suit/rugby_selection/New()
 	..()
@@ -138,8 +138,9 @@
 	rugby_selection_type["red rugby"] = /obj/item/clothing/suit/storage/rugby/red
 	rugby_selection_type["black rugby"] = /obj/item/clothing/suit/storage/rugby/black
 	rugby_selection_type["blue rugby"] = /obj/item/clothing/suit/storage/rugby/blue
-	rugby_selectionn_type["brown rugby"] = /obj/item/clothing/suit/storage/rugby/brown
-	gear_tweaks += new/datum/gear_tweak/path(rugby_selectionn_type)
+	rugby_selection_type["brown rugby"] = /obj/item/clothing/suit/storage/rugby/brown
+	gear_tweaks += new/datum/gear_tweak/path(rugby_selection_type)
+
 
 /datum/gear/suit/storage/engi_jacket
 	display_name = "hazard jacket"
