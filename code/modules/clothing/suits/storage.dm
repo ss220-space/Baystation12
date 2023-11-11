@@ -115,7 +115,8 @@
 	icon_state = "denim_jacket_gray"
 	item_state = "denim_jacket_gray"
 	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
-/obj/item/clothing/suit/freefit_shirt //
+
+/obj/item/clothing/suit/freefit_shirt
 	icon = CUSTOM_ITEM_OBJ
 	name = "freefit shirt"
 	desc = "This silken fabric is like a breath of fresh air."
@@ -137,25 +138,24 @@
 	icon_state = "freefit_shirt_3"
 	item_state = "freefit_shirt_3"
 	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
-
 /obj/item/clothing/suit/crop_sweater
 	icon = CUSTOM_ITEM_OBJ
 	name = "crop sweater"
 	desc = "Well, this seems impractical. Are you actually cold or not?"
 
-/obj/item/clothing/suit/crop_sweater/one
+/obj/item/clothing/suit/crop_sweater/black_with_red
 	icon = CUSTOM_ITEM_OBJ
 	icon_state = "crop_sweater_1"
 	item_state = "crop_sweater_1"
 	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
 
-/obj/item/clothing/suit/crop_sweater/two
+/obj/item/clothing/suit/crop_sweater/black_with_yellow
 	icon = CUSTOM_ITEM_OBJ
 	icon_state = "crop_sweater_2"
 	item_state = "crop_sweater_2"
 	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
 
-/obj/item/clothing/suit/crop_sweater/three
+/obj/item/clothing/suit/crop_sweater/white_with_blue
 	icon = CUSTOM_ITEM_OBJ
 	icon_state = "crop_sweater_3"
 	item_state = "crop_sweater_3"
@@ -290,8 +290,6 @@
 	item_state = "amizov"
 	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
 
-
-
 /obj/item/clothing/suit/storage/grimbomber
 	name = "black bomber"
 	desc = "A sleek black bomber with high-vis patches on its arms and pockets."
@@ -316,7 +314,6 @@
 	item_state = "neokitsch_blaser_f"
 	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
 
-
 /obj/item/clothing/suit/color/storage/neo_jacket
 	name = "neokitsch jacket"
 	desc = "Style and substance. Show everyone all these money ain't for nothing."
@@ -324,7 +321,6 @@
 	icon_state = "neokitsch_jacket"
 	item_state = "neokitsch_jacket"
 	item_icons = list(slot_wear_suit_str = CUSTOM_ITEM_MOB)
-
 
 /obj/item/clothing/suit/color/storage/neo_jacket_female
 	name = "female neokitsch jacket"
