@@ -27,7 +27,6 @@
 	prefix = "maps/away_inf/"
 	suffixes = list("spy_station/spy_station.dmm")
 	spawn_cost = 1
-	template_flags = TEMPLATE_FLAG_SPAWN_GUARANTEED
 	area_usage_test_exempted_root_areas = list(/area/spy_station)
 
 /obj/effect/shuttle_landmark/spy_station/nav1
