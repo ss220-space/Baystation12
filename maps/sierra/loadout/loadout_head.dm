@@ -21,6 +21,7 @@
 /datum/gear/head/rangerhat
 	display_name = "drill sergeant's hat"
 	path = /obj/item/clothing/head/rangerhat
+	allowed_roles = list (/datum/job/warden)
 
 /datum/gear/head/beret_selection/New()
 	..()
