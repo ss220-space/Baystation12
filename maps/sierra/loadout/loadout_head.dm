@@ -18,11 +18,6 @@
 	path = /obj/item/clothing/head/beret
 	allowed_roles = SECURITY_ROLES
 
-/datum/gear/head/rangerhat
-	display_name = "drill sergeant's hat"
-	path = /obj/item/clothing/head/rangerhat
-	allowed_roles = list (/datum/job/warden)
-
 /datum/gear/head/beret_selection/New()
 	..()
 	var/beret_selection_type = list()
@@ -32,3 +27,4 @@
 	beret_selection_type["PCRC beret"] = /obj/item/clothing/head/beret/sec/corporate/pcrc
 	beret_selection_type["ZPCI beret"] = /obj/item/clothing/head/beret/sec/corporate/zpci
 	gear_tweaks += new/datum/gear_tweak/path(beret_selection_type)
+
