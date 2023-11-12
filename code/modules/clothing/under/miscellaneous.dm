@@ -1116,36 +1116,36 @@
 	desc = "Sleek slim-fit trousers with extra pockets and some stripes hanging off the belt for... extra style points perhaps."
 	icon = CUSTOM_ITEM_OBJ
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
-	icon_state = "cargo_trousers"
-	item_state = "cargo_trousers"
-	worn_state = "cargo_trousers"
+	icon_state = "cargo_trousers_s"
+	item_state = "cargo_trousers_s"
+	worn_state = "cargo_trousers_s"
 
 /obj/item/clothing/under/neo_pants/cargos
 	name = "cargo pants"
 	desc = "Loose-fit grey cargo pants with plenty of pockets."
 	icon = CUSTOM_ITEM_OBJ
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
-	icon_state = "cargos_1"
-	item_state = "cargos_1"
-	worn_state = "cargos_1"
+	icon_state = "cargos_1_s"
+	item_state = "cargos_1_s"
+	worn_state = "cargos_1_s"
 
 /obj/item/clothing/under/neo_pants/neotac
 	name = "neotac pants"
 	desc = "Regular-fit trousers with gradient pattern and plenty of belts around the waist. For the sake of style, of course."
 	icon = CUSTOM_ITEM_OBJ
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
-	icon_state = "neotac_1"
-	item_state = "neotac_1"
-	worn_state = "neotac_1"
+	icon_state = "neotac_1_s"
+	item_state = "neotac_1_s"
+	worn_state = "neotac_1_s"
 
 /obj/item/clothing/under/neo_pants/breeches
 	name = "denim breeches"
 	desc = "Short-cut jeans with micromesh underlayer at the crotch for extra durability."
 	icon = CUSTOM_ITEM_OBJ
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
-	icon_state = "breeches_1"
-	item_state = "breeches_1"
-	worn_state = "breeches_1"
+	icon_state = "breeches_1_s"
+	item_state = "breeches_1_s"
+	worn_state = "breeches_1_s"
 
 /obj/item/clothing/under/netrunner
 	name = "specialized netrunner suit"
