@@ -1207,12 +1207,6 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_cap"
 	item_state = "trek_cap"
-	armor = list(
-		melee = ARMOR_MELEE_SMALL,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_MINOR
-		)
-	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/startrek/hop
 	name = "head of personnel's jumpsuit"
@@ -1229,12 +1223,6 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_hos"
 	item_state = "trek_hos"
-	armor = list(
-		melee = ARMOR_MELEE_SMALL,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_MINOR
-		)
-	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/startrek/cmo
 	name = "chief medical officer's jumpsuit"
@@ -1243,10 +1231,6 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_cmo"
 	item_state = "trek_cmo"
-	permeability_coefficient = 0.50
-	armor = list(
-		bio = ARMOR_BIO_MINOR
-		)
 
 /obj/item/clothing/under/startrek/rd
 	name = "research director's jumpsuit"
@@ -1255,9 +1239,6 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_rd"
 	item_state = "trek_rd"
-	armor = list(
-		bio = ARMOR_BIO_MINOR
-		)
 
 /obj/item/clothing/under/startrek/ce
 	name = "chief engineer's jumpsuit"
@@ -1266,9 +1247,6 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_ce"
 	item_state = "trek_ce"
-	armor = list(
-		bio = ARMOR_BIO_MINOR
-		)
 
 /obj/item/clothing/under/startrek/sergeant
 	name = "sergeant's jumpsuit"
@@ -1277,12 +1255,6 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_serg"
 	item_state = "trek_serg"
-	armor = list(
-		melee = ARMOR_MELEE_SMALL,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_MINOR
-		)
-	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/startrek/adjutant
 	name = "adjutant's jumpsuit"
@@ -1299,9 +1271,7 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_eng"
 	item_state = "trek_eng"
-	armor = list(
-		bio = ARMOR_BIO_MINOR
-		)
+
 
 /obj/item/clothing/under/startrek/sec
 	name = "security guard's jumpsuit"
@@ -1310,10 +1280,6 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_sec"
 	item_state = "trek_sec"
-	armor = list(
-		melee = ARMOR_MELEE_SMALL
-		)
-	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/startrek/med
 	name = "physician's jumpsuit"
@@ -1323,9 +1289,6 @@
 	icon_state = "trek_med"
 	item_state = "trek_med"
 	permeability_coefficient = 0.50
-	armor = list(
-		bio = ARMOR_BIO_MINOR
-		)
 
 /obj/item/clothing/under/startrek/sci
 	name = "researcher's jumpsuit"
@@ -1334,9 +1297,6 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "trek_sci"
 	item_state = "trek_sci"
-	armor = list(
-		bio = ARMOR_BIO_MINOR
-		)
 
 /obj/item/clothing/under/bdu
 	name = "battle dress uniform"
@@ -1345,12 +1305,7 @@
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
 	icon_state = "bdu"
 	item_state = "bdu"
-	armor = list(
-		melee = ARMOR_MELEE_SMALL,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_MINOR
-		)
-	siemens_coefficient = 0.9
+
 
 /obj/item/clothing/under/ems
 	name = "emergency medical responder's jumpsuit"
@@ -1359,10 +1314,11 @@
 
 /obj/item/clothing/under/ems/dark
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
-	icon_state = "ems_dark"
-	item_state = "ems_dark"
+	icon_state = "ems_dark_s"
+	item_state = "ems_dark_s"
 
 /obj/item/clothing/under/ems/white
 	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
-	icon_state = "ems_white"
-	item_state = "ems_white"
+	icon_state = "ems_white_s"
+	item_state = "ems_white_s"
+
