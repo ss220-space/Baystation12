@@ -184,7 +184,7 @@
 /datum/gear/uniform/ems/dark
 	display_name = "black emergency medical responder's jumpsuit"
 	path = /obj/item/clothing/under/ems/dark
-/datum/gear/uniform/ems/white
 
+/datum/gear/uniform/ems/white
 	display_name = "black emergency medical responder's jumpsuit"
 	path = /obj/item/clothing/under/ems/white
