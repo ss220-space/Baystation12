@@ -63,8 +63,3 @@
 	get["red geta"] = /obj/item/clothing/shoes/red_geta
 	get["black geta"] = /obj/item/clothing/shoes/black_geta
 	gear_tweaks += new/datum/gear_tweak/path(get)
-
-
-/datum/gear/shoes/trekking
-	display_name  = "trekking boots"
-	path = /obj/item/clothing/shoes/trekking //
