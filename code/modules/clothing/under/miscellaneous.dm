@@ -1110,3 +1110,259 @@
 	armor = list(
 		bio = ARMOR_BIO_MINOR
 		)
+
+/obj/item/clothing/under/neo_pants/trousers
+	name = "cargo trousers"
+	desc = "Sleek slim-fit trousers with extra pockets and some stripes hanging off the belt for... extra style points perhaps."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "cargo_trousers"
+	item_state = "cargo_trousers"
+	worn_state = "cargo_trousers"
+
+/obj/item/clothing/under/neo_pants/cargos
+	name = "cargo pants"
+	desc = "Loose-fit grey cargo pants with plenty of pockets."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "cargos_1"
+	item_state = "cargos_1"
+	worn_state = "cargos_1"
+
+/obj/item/clothing/under/neo_pants/neotac
+	name = "neotac pants"
+	desc = "Regular-fit trousers with gradient pattern and plenty of belts around the waist. For the sake of style, of course."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "neotac_1"
+	item_state = "neotac_1"
+	worn_state = "neotac_1"
+
+/obj/item/clothing/under/neo_pants/breeches
+	name = "denim breeches"
+	desc = "Short-cut jeans with micromesh underlayer at the crotch for extra durability."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "breeches_1"
+	item_state = "breeches_1"
+	worn_state = "breeches_1"
+
+/obj/item/clothing/under/netrunner
+	name = "specialized netrunner suit"
+	desc = "A compressing, thermoregulating suit that prevents body from going numb of sitting still too long monitoring telecommunication systems."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "netrunner"
+	item_state = "netrunner"
+	worn_state = "netrunner"
+	valid_accessory_slots = list(
+		ACCESSORY_SLOT_ARMBAND
+	)
+	min_cold_protection_temperature = T0C - 5
+
+/obj/item/clothing/under/plain
+	name = "plain suit"
+	desc = "A plain suit with double-breasted shirt. Buttons not included."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "plain_suit"
+	item_state = "plain_suit"
+	worn_state = "plain_suit"
+
+/obj/item/clothing/under/plain/dark
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "plain_suit_dark"
+	item_state = "plain_suit_dark"
+	worn_state = "plain_suit_dark"
+
+/obj/item/clothing/under/kitsch_dress
+	icon = CUSTOM_ITEM_OBJ
+	name = "kitsch dress"
+	desc = "Very extravagant piece of fashion. Style over necessity."
+
+/obj/item/clothing/under/kitsch_dress/one
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "kitsch_dress_1"
+	item_state = "kitsch_dress_1"
+	worn_state = "kitsch_dress_1"
+
+/obj/item/clothing/under/kitsch_dress/two
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "kitsch_dress_2"
+	item_state = "kitsch_dress_2"
+	worn_state = "kitsch_dress_2"
+
+/obj/item/clothing/under/kitsch_dress/three
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "kitsch_dress_3"
+	item_state = "kitsch_dress_3"
+	worn_state = "kitsch_dress_3"
+
+
+/obj/item/clothing/under/startrek/captain
+	name = "captain's jumpsuit"
+	desc = "A bright yellow jumpsuit with golden accents on arms and shoulders."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_cap"
+	item_state = "trek_cap"
+	armor = list(
+		melee = ARMOR_MELEE_SMALL,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_MINOR
+		)
+	siemens_coefficient = 0.9
+
+/obj/item/clothing/under/startrek/hop
+	name = "head of personnel's jumpsuit"
+	desc = "A bright yellow jumpsuit with golden accents on arms."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_hop"
+	item_state = "trek_hop"
+
+/obj/item/clothing/under/startrek/hos
+	name = "head of security's jumpsuit"
+	desc = "A crimson jumpsuit with golden accents on arms and shoulders."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_hos"
+	item_state = "trek_hos"
+	armor = list(
+		melee = ARMOR_MELEE_SMALL,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_MINOR
+		)
+	siemens_coefficient = 0.9
+
+/obj/item/clothing/under/startrek/cmo
+	name = "chief medical officer's jumpsuit"
+	desc = "A bright cerulean jumpsuit with golden accents on arms."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_cmo"
+	item_state = "trek_cmo"
+	permeability_coefficient = 0.50
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
+
+/obj/item/clothing/under/startrek/rd
+	name = "research director's jumpsuit"
+	desc = "A bright lilac jumpsuit with golden accents on arms."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_rd"
+	item_state = "trek_rd"
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
+
+/obj/item/clothing/under/startrek/ce
+	name = "chief engineer's jumpsuit"
+	desc = "A bright yellow jumpsuit with golden accents on arms, padded shoulders and waist."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_ce"
+	item_state = "trek_ce"
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
+
+/obj/item/clothing/under/startrek/sergeant
+	name = "sergeant's jumpsuit"
+	desc = "A crimson jumpsuit with padded shoulders and waist."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_serg"
+	item_state = "trek_serg"
+	armor = list(
+		melee = ARMOR_MELEE_SMALL,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_MINOR
+		)
+	siemens_coefficient = 0.9
+
+/obj/item/clothing/under/startrek/adjutant
+	name = "adjutant's jumpsuit"
+	desc = "A cerulean jumpsuit with padded shoulders and waist."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_adju"
+	item_state = "trek_adju"
+
+/obj/item/clothing/under/startrek/eng
+	name = "engineer's jumpsuit"
+	desc = "A dark-blue jumpsuit with yellow stripes, insulated against radiation."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_eng"
+	item_state = "trek_eng"
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
+
+/obj/item/clothing/under/startrek/sec
+	name = "security guard's jumpsuit"
+	desc = "A dark-blue jumpsuit with red stripes and some armor padding."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_sec"
+	item_state = "trek_sec"
+	armor = list(
+		melee = ARMOR_MELEE_SMALL
+		)
+	siemens_coefficient = 0.9
+
+/obj/item/clothing/under/startrek/med
+	name = "physician's jumpsuit"
+	desc = "A dark-blue jumpsuit with cerulean stripes, insulated against chemicals."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_med"
+	item_state = "trek_med"
+	permeability_coefficient = 0.50
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
+
+/obj/item/clothing/under/startrek/sci
+	name = "researcher's jumpsuit"
+	desc = "A dark-blue jumpsuit with lilac stripes."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "trek_sci"
+	item_state = "trek_sci"
+	armor = list(
+		bio = ARMOR_BIO_MINOR
+		)
+
+/obj/item/clothing/under/bdu
+	name = "battle dress uniform"
+	desc = "A padded jumpsuit purposed for combat engagement."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "bdu"
+	item_state = "bdu"
+	armor = list(
+		melee = ARMOR_MELEE_SMALL,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_MINOR
+		)
+	siemens_coefficient = 0.9
+
+/obj/item/clothing/under/ems
+	name = "emergency medical responder's jumpsuit"
+	desc = "This jumpsuit bears a really big red cross on its back so to let everyone know what your job is."
+	icon = CUSTOM_ITEM_OBJ
+
+/obj/item/clothing/under/ems/dark
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "ems_dark"
+	item_state = "ems_dark"
+
+/obj/item/clothing/under/ems/white
+	item_icons = list(slot_w_uniform_str = CUSTOM_ITEM_MOB)
+	icon_state = "ems_white"
+	item_state = "ems_white"

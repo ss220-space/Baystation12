@@ -191,3 +191,13 @@
 	name = "senior engineer beret"
 	desc = "A light yellow beret. Emphasizes the status of a senior engineer"
 	icon_state = "se_beret"
+
+/obj/item/clothing/head/rangerhat
+	name = "drill sergeant's hat"
+	desc = "Assert the dominance."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(
+		slot_head_str = CUSTOM_ITEM_MOB
+	)
+	icon_state = "sergeants"
+	item_state = "sergeants"

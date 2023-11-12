@@ -327,3 +327,14 @@ obj/item/clothing/shoes/heels/red
 	item_icons = list(slot_shoes_str = 'infinity/icons/mob/onmob/onmob_feet.dmi')
 	icon_state = "noble_boots"
 	item_state = "noble_boots"
+
+
+/obj/item/clothing/shoes/trekking
+	name = "trekking boots"
+	desc = "A pair of sleek and ergonomical military-style sneakers."
+	icon = CUSTOM_ITEM_OBJ
+	item_icons = list(
+		slot_shoes_str = CUSTOM_ITEM_MOB
+	)
+	icon_state = "trekking_boots"
+	item_state = "trekking_boots"
