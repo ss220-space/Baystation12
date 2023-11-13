@@ -63,7 +63,7 @@
 
 /datum/uplink_item/item/badassery/mech
 	name = "Combat Mech"
-	var/BOUGHT_MECH = 0
+	var/static/BOUGHT_MECH = 0
 	desc = "A terrible and at the same time beautiful combat mech to destroy all living things in your way. Comes with special plasma rifle, machinegun and shielding drone. Also, it is almoust EMP-proof!"
 	item_cost = 300
 	antag_roles = list(MODE_MERCENARY)
