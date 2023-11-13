@@ -130,6 +130,17 @@ GLOBAL_LIST_EMPTY(compatable_genomes_owners)
 			stat("Battery charge:", "[potato.get_charge()]/[potato.cell.maxcharge]")
 			stat("Operating temperature:", "[round(bodytemperature-T0C)]&deg;C")
 			stat("Coolant remaining:","[coolant.get_coolant_remaining()]/[coolant.refrigerant_max]")
+
+
+		if(bodytemperature > 394)
+			var/turf/simulated/location = loc
+			if(!istype(location))
+				return//returns if loc is not simulated
+			var/datum/gas_mixture/environment = location.return_air()
+			if(environment && environment.temperature < bodytemperature)
+				environment.add_thermal_energy(bodytemperature)
+
+
 		if(back && istype(back,/obj/item/rig))
 			var/obj/item/rig/suit = back
 			var/cell_status = "ERROR"
