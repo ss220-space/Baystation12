@@ -69,16 +69,14 @@
 	antag_roles = list(MODE_MERCENARY)
 
 /datum/uplink_item/item/badassery/mech/get_goods(var/obj/item/device/uplink/U, var/loc)
-	if(MAX_MECH == 0)
+	if(MAX_MECH <= 0)
 		U.visible_message("[U.loc] Превышен лимит бронетехники для данной миссии. Обьявите войну для дополнительной единицы.\"")
 		return new /obj/item/stack/telecrystal(loc, 300)
-	else
-		MAX_MECH--
-		BOUGHT_MECH++
-		return new /mob/living/exosuit/premade/merc(loc,)
+	MAX_MECH--
+	BOUGHT_MECH++
 	if(BOUGHT_MECH == 2)
 		command_announcement.Announce("В секторе была замечена телепортация большого количества бронетехники Мародёров Горлекса.", "Показания датчиков [station_name()]" , msg_sanitized = 1, zlevels = GLOB.using_map.station_levels)
-
+	return new /mob/living/exosuit/premade/merc(loc,)
 
 /datum/uplink_item/item/badassery/tobacco
 	name = "Strong tobacco"
