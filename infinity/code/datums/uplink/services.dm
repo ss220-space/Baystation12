@@ -9,5 +9,5 @@
 		U.visible_message("[U.loc] buzzez and declares, \"Unable to teleport telecrystals.\"")
 		return 0
 	command_announcement.Announce("В секторе была замечена телепортация большого объема телекристаллов, использующихся Горлекскими Мародерами. Рекомендуется вызвать поддержку с ЦК для урегулирования ситуации.", "Показания датчиков [station_name()]" , msg_sanitized = 1, zlevels = GLOB.using_map.station_levels)
-	MAX_MECH = MAX_MECH + 1
+	MAX_MECH += 1
 	return new /obj/item/stack/telecrystal(loc, 781)
