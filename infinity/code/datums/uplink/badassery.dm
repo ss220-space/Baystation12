@@ -73,8 +73,7 @@
 		U.visible_message("[U.loc] Превышен лимит бронетехники для данной миссии. Обьявите войну для дополнительной единицы.\"")
 		return new /obj/item/stack/telecrystal(loc, 300)
 	MAX_MECH--
-	BOUGHT_MECH++
-	if(BOUGHT_MECH == 2)
+	if(++BOUGHT_MECH == 2)
 		command_announcement.Announce("В секторе была замечена телепортация большого количества бронетехники Мародёров Горлекса.", "Показания датчиков [station_name()]" , msg_sanitized = 1, zlevels = GLOB.using_map.station_levels)
 	return new /mob/living/exosuit/premade/merc(loc,)
 
