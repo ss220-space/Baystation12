@@ -58,9 +58,9 @@
 	branch = /datum/mil_branch/army
 	allowed_branches = list(/datum/mil_branch/army)
 	allowed_ranks = list(
-		/datum/mil_rank/army/e5,
 		/datum/mil_rank/army/e4,
-		/datum/mil_rank/army/e4_alt
+		/datum/mil_rank/army/e4_alt,
+		/datum/mil_rank/army/e5
 	)
 	supervisors = "Army SCGSO Leader"
 	loadout_allowed = TRUE
@@ -86,8 +86,8 @@
 	branch = /datum/mil_branch/army
 	allowed_branches = list(/datum/mil_branch/army)
 	allowed_ranks = list(
-		/datum/mil_rank/army/o3,
-		/datum/mil_rank/army/o2
+		/datum/mil_rank/army/o2,
+		/datum/mil_rank/army/o3
 	)
 	supervisors = "Fleet Commander, Command of the Battle Group Bravo of the 5th fleet, SCGDF"
 	loadout_allowed = TRUE
@@ -113,8 +113,8 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o3
+		/datum/mil_rank/fleet/o3,
+		/datum/mil_rank/fleet/o4
 	)
 	supervisors = "Command of the Battle Group Bravo of the 5th fleet, SCGDF"
 	loadout_allowed = TRUE
@@ -138,8 +138,8 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o1
+		/datum/mil_rank/fleet/o1,
+		/datum/mil_rank/fleet/o2
 	)
 	supervisors = "Fleet Commander"
 	loadout_allowed = TRUE
@@ -191,9 +191,9 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e6,
+		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e4
+		/datum/mil_rank/fleet/e6
 	)
 	supervisors = "Fleet Pilot, Fleet Commander"
 	loadout_allowed = TRUE
@@ -230,7 +230,10 @@
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4
+		/datum/mil_rank/fleet/o4,
+		/datum/mil_rank/fleet/o5,
+		/datum/mil_rank/fleet/o6,
+		/datum/mil_rank/fleet/o7
 	)
 	spawn_rank_types = list(
 		/datum/mil_rank/fleet/e4,
@@ -239,7 +242,10 @@
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4
+		/datum/mil_rank/fleet/o4,
+		/datum/mil_rank/fleet/o5,
+		/datum/mil_rank/fleet/o6,
+		/datum/mil_rank/fleet/o7
 	)
 
 /datum/mil_rank/grade()
@@ -291,6 +297,24 @@
 	name_short = "LCDR"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o4, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 14
+
+/datum/mil_rank/fleet/o5
+	name = "Commander"
+	name_short = "CDR"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o5, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 15
+
+/datum/mil_rank/fleet/o6
+	name = "Captain"
+	name_short = "CAPT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o6, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 16
+
+/datum/mil_rank/fleet/o7
+	name = "Commodore"
+	name_short = "CDRE"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 17
 
 /datum/mil_branch/army
 	name = "SCG Army"
@@ -409,24 +433,26 @@
 /decl/hierarchy/outfit/job/patrol/centcom/bridge_officer
 	name = PATROL_OUTFIT_JOB_NAME("Bridge Officer")
 	head = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
+	r_ear = /obj/item/device/radio/headset/away_scg_patrol
 	l_ear = /obj/item/device/radio/headset/headset_com/alt
 	uniform = /obj/item/clothing/under/solgov/service/fleet
 	belt = /obj/item/storage/belt/holster/general/away_solpatrol
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/bridge_officer
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/officer/away_solpatrol
 	r_pocket = /obj/item/card/id/syndicate
-	l_pocket = /obj/item/clothing/accessory/solgov/rank/fleet/officer
+	l_pocket = /obj/item/clothing/head/solgov/dress/fleet/command
 	id_types = list(/obj/item/card/id/centcom/NtPass/station)
 	id_pda_assignment = "5th Fleet Bridge Officer"
 
 /decl/hierarchy/outfit/job/patrol/centcom/comms_officer
 	name = PATROL_OUTFIT_JOB_NAME("Communications Officer")
-	head = /obj/item/clothing/head/solgov/dress/fleet
+	head = /obj/item/clothing/head/solgov/dress/fleet/command
+	r_ear = /obj/item/device/radio/headset/away_scg_patrol
 	l_ear = /obj/item/device/radio/headset/headset_com/alt
 	uniform = /obj/item/clothing/under/solgov/service/fleet
 	belt = /obj/item/storage/belt/holster/general/away_solpatrol
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/comms_officer
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/officer/away_solpatrol
 	r_pocket = /obj/item/card/id/syndicate
 	l_pocket = /obj/item/clothing/head/beret/solgov/fleet/command
 	id_types = list(/obj/item/card/id/centcom/NtPass/station)
@@ -435,12 +461,13 @@
 /decl/hierarchy/outfit/job/patrol/centcom/commanding_officer
 	name = PATROL_OUTFIT_JOB_NAME("Commanding Officer")
 	head = /obj/item/clothing/head/solgov/dress/fleet/command
+	r_ear = /obj/item/device/radio/headset/away_scg_patrol
+	l_ear = /obj/item/device/radio/headset/headset_com/alt
 	uniform = /obj/item/clothing/under/solgov/service/fleet
 	belt = /obj/item/storage/belt/holster/general/away_solpatrol
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/commanding_officer
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol
 	r_pocket = /obj/item/card/id/syndicate
-	l_pocket = /obj/item/clothing/accessory/solgov/rank/fleet/flag
 	id_types = list(/obj/item/card/id/centcom/NtPass/station)
 	id_pda_assignment = "5th Fleet Commanding Officer"
 

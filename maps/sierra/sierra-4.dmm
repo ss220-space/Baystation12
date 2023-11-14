@@ -17530,7 +17530,9 @@
 "rSU" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/corner/black/mono,
-/obj/machinery/photocopier/faxmachine/centcomm,
+/obj/machinery/photocopier/faxmachine/centcomm{
+	department = "SFV Stinger Command Departament"
+	},
 /turf/unsimulated/floor/techfloor{
 	icon_state = "monotiledark";
 	icon = 'icons/turf/flooring/tiles.dmi'

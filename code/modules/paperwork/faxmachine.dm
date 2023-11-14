@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY(adminfaxes) //cache for faxes that have been sent to admins
 	insert_anim = "faxsend"
 	var/send_access = list(list(access_lawyer, access_bridge, access_armory, access_qm, access_heads, access_cent_general))
 
-	var/static/list/admin_departments = list("[GLOB.using_map.boss_name]", "Command of the 5th Fleet", "Sol Governmental Authority", "Sol-Gov Job Boards", "Sol-Gov Supply Departament", "FTU Agency")
+	var/static/list/admin_departments = list("[GLOB.using_map.boss_name]", "SFV Stinger Command Departament", "Sol Governmental Authority", "Sol-Gov Job Boards", "Sol-Gov Supply Departament", "FTU Agency")
 
 
 	idle_power_usage = 30
