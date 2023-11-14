@@ -58,9 +58,9 @@
 	branch = /datum/mil_branch/army
 	allowed_branches = list(/datum/mil_branch/army)
 	allowed_ranks = list(
-		/datum/mil_rank/army/e5,
 		/datum/mil_rank/army/e4,
-		/datum/mil_rank/army/e4_alt
+		/datum/mil_rank/army/e4_alt,
+		/datum/mil_rank/army/e5
 	)
 	supervisors = "Army SCGSO Leader"
 	loadout_allowed = TRUE
@@ -86,8 +86,8 @@
 	branch = /datum/mil_branch/army
 	allowed_branches = list(/datum/mil_branch/army)
 	allowed_ranks = list(
-		/datum/mil_rank/army/o3,
-		/datum/mil_rank/army/o2
+		/datum/mil_rank/army/o2,
+		/datum/mil_rank/army/o3
 	)
 	supervisors = "Fleet Commander, Command of the Battle Group Bravo of the 5th fleet, SCGDF"
 	loadout_allowed = TRUE
@@ -137,8 +137,8 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o1
+		/datum/mil_rank/fleet/o1,
+		/datum/mil_rank/fleet/o2
 	)
 	supervisors = "Fleet Commander"
 	loadout_allowed = TRUE
@@ -190,9 +190,9 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e6,
+		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e4
+		/datum/mil_rank/fleet/e6
 	)
 	supervisors = "Fleet Pilot, Fleet Commander"
 	loadout_allowed = TRUE
