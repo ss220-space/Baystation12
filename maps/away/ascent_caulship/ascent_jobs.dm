@@ -116,7 +116,7 @@
 	var/requires_supervisor = FALSE
 	var/set_species_on_join = SPECIES_MANTID_GYNE
 
-/datum/job/submap/ascent/is_position_available()
+/* /datum/job/submap/ascent/is_position_available()
 	. = ..()
 	if(. && requires_supervisor)
 		for(var/mob/M in GLOB.player_list)
@@ -125,7 +125,7 @@
 			var/datum/job/submap/ascent/ascent_job = M.mind.assigned_job
 			if(istype(ascent_job) && ascent_job.owner == owner)
 				return TRUE
-		return FALSE
+		return FALSE */
 
 /datum/job/submap/ascent/handle_variant_join(var/mob/living/carbon/human/H, var/alt_title)
 
@@ -170,7 +170,6 @@
 	set_species_on_join = SPECIES_MANTID_ALATE
 	outfit_type = /decl/hierarchy/outfit/job/ascent/attendant
 	whitelisted_species = list(SPECIES_MANTID_ALATE)
-	requires_supervisor = "Ascent Gyne"
 	min_skill = list(
 		SKILL_EVA = SKILL_ADEPT,
 		SKILL_HAULING = SKILL_ADEPT,
@@ -179,6 +178,7 @@
 		SKILL_MEDICAL = SKILL_BASIC
 	)
 	required_role = list("Ascent Gyne")
+	//requires_supervisor = "Ascent Gyne"
 
 /datum/job/submap/ascent/drone
 	title = "Ascent Drone"
@@ -187,8 +187,8 @@
 	info = "You are a Machine Intelligence of an independent Ascent vessel. The Gyne you assist has fled her sisters, ending up in this sector full of primitive bioforms. Try to keep her alive, and assist where you can."
 	set_species_on_join = /mob/living/silicon/robot/flying/ascent
 	whitelisted_species = list(SPECIES_MANTID_ALATE)
-	requires_supervisor = "Ascent Gyne"
 	required_role = list("Ascent Gyne")
+	//requires_supervisor = "Ascent Gyne"
 
 /datum/job/submap/ascent/worker
 	title = "Serpentid Adjunct"
@@ -198,7 +198,6 @@
 	whitelisted_species = list(SPECIES_MANTID_ALATE, SPECIES_NABBER)
 	set_species_on_join = SPECIES_MONARCH_WORKER
 	outfit_type = /decl/hierarchy/outfit/job/ascent/worker/tech
-	requires_supervisor = "Serpentid Queen"
 	min_skill = list(SKILL_EVA = SKILL_ADEPT,
 					SKILL_HAULING = SKILL_ADEPT,
 					SKILL_COMBAT = SKILL_ADEPT,
@@ -207,6 +206,7 @@
 					SKILL_MEDICAL = SKILL_BASIC
 	)
 	required_role = list("Serpentid Queen")
+	//requires_supervisor = "Serpentid Queen"
 
 /datum/job/submap/ascent/queen
 	title = "Serpentid Queen"
@@ -216,7 +216,6 @@
 	set_species_on_join = SPECIES_MONARCH_QUEEN
 	outfit_type = /decl/hierarchy/outfit/job/ascent/queen
 	whitelisted_species = list(SPECIES_MANTID_GYNE, SPECIES_NABBER)
-	requires_supervisor = "Ascent Gyne"
 	min_skill = list(SKILL_EVA = SKILL_ADEPT,
 					SKILL_HAULING = SKILL_ADEPT,
 					SKILL_COMBAT = SKILL_ADEPT,
@@ -224,6 +223,8 @@
 					SKILL_MEDICAL = SKILL_BASIC
 	)
 	required_role = list("Ascent Gyne")
+	//requires_supervisor = "Ascent Gyne"
+
 
 // Spawn points.
 /obj/effect/submap_landmark/spawnpoint/ascent_caulship
