@@ -432,24 +432,26 @@
 /decl/hierarchy/outfit/job/patrol/centcom/bridge_officer
 	name = PATROL_OUTFIT_JOB_NAME("Bridge Officer")
 	head = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
+	r_ear = /obj/item/device/radio/headset/away_scg_patrol
 	l_ear = /obj/item/device/radio/headset/headset_com/alt
 	uniform = /obj/item/clothing/under/solgov/service/fleet
 	belt = /obj/item/storage/belt/holster/general/away_solpatrol
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/bridge_officer
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/officer/away_solpatrol
 	r_pocket = /obj/item/card/id/syndicate
-	l_pocket = /obj/item/clothing/accessory/solgov/rank/fleet/officer
+	l_pocket = /obj/item/clothing/head/solgov/dress/fleet/command
 	id_types = list(/obj/item/card/id/centcom/NtPass/station)
 	id_pda_assignment = "5th Fleet Bridge Officer"
 
 /decl/hierarchy/outfit/job/patrol/centcom/comms_officer
 	name = PATROL_OUTFIT_JOB_NAME("Communications Officer")
-	head = /obj/item/clothing/head/solgov/dress/fleet
+	head = /obj/item/clothing/head/solgov/dress/fleet/command
+	r_ear = /obj/item/device/radio/headset/away_scg_patrol
 	l_ear = /obj/item/device/radio/headset/headset_com/alt
 	uniform = /obj/item/clothing/under/solgov/service/fleet
 	belt = /obj/item/storage/belt/holster/general/away_solpatrol
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/comms_officer
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/officer/away_solpatrol
 	r_pocket = /obj/item/card/id/syndicate
 	l_pocket = /obj/item/clothing/head/beret/solgov/fleet/command
 	id_types = list(/obj/item/card/id/centcom/NtPass/station)
@@ -458,12 +460,13 @@
 /decl/hierarchy/outfit/job/patrol/centcom/commanding_officer
 	name = PATROL_OUTFIT_JOB_NAME("Commanding Officer")
 	head = /obj/item/clothing/head/solgov/dress/fleet/command
+	r_ear = /obj/item/device/radio/headset/away_scg_patrol
+	l_ear = /obj/item/device/radio/headset/headset_com/alt
 	uniform = /obj/item/clothing/under/solgov/service/fleet
 	belt = /obj/item/storage/belt/holster/general/away_solpatrol
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/commanding_officer
+	suit = /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol
 	r_pocket = /obj/item/card/id/syndicate
-	l_pocket = /obj/item/clothing/accessory/solgov/rank/fleet/flag
 	id_types = list(/obj/item/card/id/centcom/NtPass/station)
 	id_pda_assignment = "5th Fleet Commanding Officer"
 
