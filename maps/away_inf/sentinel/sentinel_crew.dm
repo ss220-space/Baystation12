@@ -113,7 +113,8 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o3
+		/datum/mil_rank/fleet/o3,
+		/datum/mil_rank/fleet/o4
 	)
 	supervisors = "Command of the Battle Group Bravo of the 5th fleet, SCGDF"
 	loadout_allowed = TRUE
