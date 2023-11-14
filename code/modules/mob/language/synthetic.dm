@@ -70,6 +70,8 @@
 	speech_verb = "whistles"
 	ask_verb = "chirps"
 	exclaim_verb = "whistles loudly"
+	speech_sound = list('sound/voice/eal.ogg', 'sound/voice/eal2.ogg')
+	sound_chance = 35
 	colour = "changeling"
 	key = "6"
 	flags = NO_STUTTER
@@ -84,4 +86,3 @@
 	if(prob(70))
 		return "[pick(list("PBU","HIU","SINA","ARMA","OSI"))]-[rand(100, 999)]"
 	return pick(GLOB.ai_names)
-
