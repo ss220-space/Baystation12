@@ -101,7 +101,7 @@
 	info = "You are a Gyne of the Ascent, fleeing the murderous Kharmaani political sphere after your first molt. Your search for safe harbour has brought you to this remote unsettled sector. Find a safe nest, and bring prosperity to your lineage."
 	outfit_type = /decl/hierarchy/outfit/job/ascent
 	blacklisted_species = null
-	whitelisted_species = list("Kharmaan Gyne")
+	whitelisted_species = list(SPECIES_MANTID_GYNE)
 	loadout_allowed = FALSE
 	is_semi_antagonist = TRUE
 	min_skill = list(
@@ -169,7 +169,7 @@
 	info = "You are a young Alate of a new Gyne. She has led you to this remote sector to found a new nest. Follow her instructions and bring prosperity to your nest-lineage."
 	set_species_on_join = SPECIES_MANTID_ALATE
 	outfit_type = /decl/hierarchy/outfit/job/ascent/attendant
-	whitelisted_species = list("Kharmaan Alate")
+	whitelisted_species = list(SPECIES_MANTID_ALATE)
 	requires_supervisor = "Ascent Gyne"
 	min_skill = list(
 		SKILL_EVA = SKILL_ADEPT,
@@ -186,7 +186,7 @@
 	total_positions = 1
 	info = "You are a Machine Intelligence of an independent Ascent vessel. The Gyne you assist has fled her sisters, ending up in this sector full of primitive bioforms. Try to keep her alive, and assist where you can."
 	set_species_on_join = /mob/living/silicon/robot/flying/ascent
-	whitelisted_species = list("Kharmaan Alate")
+	whitelisted_species = list(SPECIES_MANTID_ALATE)
 	requires_supervisor = "Ascent Gyne"
 	required_role = list("Ascent Gyne")
 
@@ -195,6 +195,7 @@
 	supervisors = "the Serpentid Queen and the Gyne"
 	total_positions = 2
 	info = "You are a Monarch Serpentid Worker serving as an attendant to your Queen on this vessel. Serve her however she requires."
+	whitelisted_species = list(SPECIES_MANTID_ALATE, SPECIES_NABBER)
 	set_species_on_join = SPECIES_MONARCH_WORKER
 	outfit_type = /decl/hierarchy/outfit/job/ascent/worker/tech
 	requires_supervisor = "Serpentid Queen"
@@ -209,12 +210,12 @@
 
 /datum/job/submap/ascent/queen
 	title = "Serpentid Queen"
-	supervisors = "the Gyne"
+	supervisors = "the Gyne"	
 	total_positions = 1
 	info = "You are a Monarch Serpentid Queen living on an independant Ascent vessel. Assist the Gyne in her duties and tend to your Workers."
 	set_species_on_join = SPECIES_MONARCH_QUEEN
 	outfit_type = /decl/hierarchy/outfit/job/ascent/queen
-	whitelisted_species = list("Kharmaan Gyne")
+	whitelisted_species = list(SPECIES_MANTID_GYNE, SPECIES_NABBER)
 	requires_supervisor = "Ascent Gyne"
 	min_skill = list(SKILL_EVA = SKILL_ADEPT,
 					SKILL_HAULING = SKILL_ADEPT,
