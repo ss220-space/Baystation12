@@ -113,7 +113,6 @@
 	branch = /datum/mil_branch/fleet
 	allowed_branches = list(/datum/mil_branch/fleet)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o4,
 		/datum/mil_rank/fleet/o3
 	)
 	supervisors = "Command of the Battle Group Bravo of the 5th fleet, SCGDF"
@@ -230,7 +229,10 @@
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4
+		/datum/mil_rank/fleet/o4,
+		/datum/mil_rank/fleet/o5,
+		/datum/mil_rank/fleet/o6,
+		/datum/mil_rank/fleet/o7
 	)
 	spawn_rank_types = list(
 		/datum/mil_rank/fleet/e4,
@@ -239,7 +241,10 @@
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4
+		/datum/mil_rank/fleet/o4,
+		/datum/mil_rank/fleet/o5,
+		/datum/mil_rank/fleet/o6,
+		/datum/mil_rank/fleet/o7
 	)
 
 /datum/mil_rank/grade()
@@ -291,6 +296,24 @@
 	name_short = "LCDR"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o4, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 14
+
+/datum/mil_rank/fleet/o5
+	name = "Commander"
+	name_short = "CDR"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o5, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 15
+
+/datum/mil_rank/fleet/o6
+	name = "Captain"
+	name_short = "CAPT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o6, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 16
+
+/datum/mil_rank/fleet/o7
+	name = "Commodore"
+	name_short = "CDRE"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag, /obj/item/clothing/accessory/solgov/specialty/officer)
+	sort_order = 17
 
 /datum/mil_branch/army
 	name = "SCG Army"

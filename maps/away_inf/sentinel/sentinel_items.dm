@@ -101,19 +101,19 @@
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/bridge_officer
 	starting_accessories = list(
-		/obj/item/clothing/accessory/solgov/rank/fleet/officer/o2,
+		/obj/item/clothing/accessory/chameleon,
 		/obj/item/clothing/accessory/solgov/specialty/officer
 	)
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/comms_officer
 	starting_accessories = list(
-		/obj/item/clothing/accessory/solgov/rank/fleet/officer/o4,
+		/obj/item/clothing/accessory/chameleon,
 		/obj/item/clothing/accessory/solgov/specialty/officer
 	)
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/command/away_solpatrol/commanding_officer
 	starting_accessories = list(
-		/obj/item/clothing/accessory/solgov/rank/fleet/officer/o6,
+		/obj/item/clothing/accessory/chameleon,
 		/obj/item/clothing/accessory/solgov/specialty/officer
 	)
 
