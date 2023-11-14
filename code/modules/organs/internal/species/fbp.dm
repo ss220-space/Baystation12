@@ -65,7 +65,7 @@
 	if(owner.species.name == SPECIES_IPC)
 		var/obj/item/organ/internal/cooling_system/Cooling = owner.internal_organs_by_name[BP_COOLING]
 		if(!(owner.internal_organs_by_name[BP_COOLING]))
-			if(owner.bodytemperature > 774) // 774 Kelvin it's around 500C
+			if(owner.bodytemperature > 1220) // 1220 Kelvin it's around 950C
 				owner.species.passive_temp_gain = 0
 			else
 				owner.species.passive_temp_gain = 30
