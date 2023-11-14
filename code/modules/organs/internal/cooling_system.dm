@@ -95,7 +95,7 @@
 
 /obj/item/organ/internal/cooling_system/proc/get_tempgain()
 	var/tempgain = refrigerant_rate
-	if(owner.bodytemperature > 774)  //774 Kelvin it's around 500C
+	if(owner.bodytemperature > 1220)  //774 Kelvin it's around 950C
 		tempgain = 0
 		return tempgain
 	else
