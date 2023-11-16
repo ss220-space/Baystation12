@@ -95,9 +95,7 @@
 
 /obj/item/organ/internal/cooling_system/proc/get_tempgain()
 	if(owner.bodytemperature > 950 CELSIUS)
-		var/tempgain = refrigerant_rate
-		tempgain = 0
-		return tempgain
+		return 0
 	if(refrigerant_rate > 0)
 		return refrigerant_rate
 
