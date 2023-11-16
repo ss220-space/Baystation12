@@ -70,7 +70,7 @@
 	speech_verb = "whistles"
 	ask_verb = "chirps"
 	exclaim_verb = "whistles loudly"
-	speech_sound = list('sound/voice/eal.ogg', 'sound/voice/eal2.ogg')
+	speech_sound = list('sound/voice/eal.ogg')
 	sound_chance = 35
 	colour = "changeling"
 	key = "6"
