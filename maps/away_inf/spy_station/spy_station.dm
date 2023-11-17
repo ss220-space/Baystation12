@@ -1,8 +1,6 @@
 #include "spy_station_areas.dm"
 
 /obj/effect/overmap/visitable/sector/spy_station
-	name = "spy station"
-	desc = "spy SCG station"
 	scanner_name = "Small station"
 	scanner_desc = @{"<br>
 	<i>Registration</i>: SCGDF military facility<br>
