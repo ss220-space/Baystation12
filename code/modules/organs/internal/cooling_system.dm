@@ -94,9 +94,10 @@
 		refrigerant_rate += 40
 
 /obj/item/organ/internal/cooling_system/proc/get_tempgain()
+	if(owner.bodytemperature > 950 CELSIUS)
+		return 0
 	if(refrigerant_rate > 0)
-		var/tempgain = refrigerant_rate
-		return tempgain
+		return refrigerant_rate
 
 /obj/item/organ/internal/cooling_system/proc/get_coolant_remaining()
 	if(status & ORGAN_DEAD)
