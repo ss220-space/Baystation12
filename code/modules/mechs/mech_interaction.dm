@@ -186,13 +186,66 @@
 			if(system_moved)
 				temp_system.forceMove(selected_system)
 			return
-
+//Attack by mech fist system
 	if(A == src)
 		setClickCooldown(5)
 		return attack_self(user)
-	else if(adj)
-		setClickCooldown(arms ? arms.action_delay : 15)
-		return A.attack_generic(src, arms.melee_damage, "attacked")
+	else if(adj && user.a_intent == I_HURT)
+		setClickCooldown(arms ? arms.action_delay : 7)
+		src.visible_message(SPAN_DANGER(" [src] steps back, preparing for a punch!"), blind_message = SPAN_DANGER("You hear the loud hissing of hydraulics!"))
+		playsound(src.loc, mech_step_sound, 60, 1)
+		if(do_after(src, (((arms ? arms.action_delay : 7)/5) SECONDS), get_turf(src),DO_SHOW_PROGRESS|DO_FAIL_FEEDBACK|DO_USER_CAN_TURN| DO_USER_UNIQUE_ACT | DO_PUBLIC_PROGRESS) && user)
+			if(istype(A, /obj/machinery/door/firedoor) )
+				var/obj/machinery/door/firedoor/FD = A
+				if(!FD.blocked)
+					setClickCooldown(arms ? arms.action_delay : 7)
+					addtimer(CALLBACK(FD, /obj/machinery/door/firedoor.proc/toggle, TRUE), 0)
+					return
+				return
+			else if((istype(A, (/turf/simulated/wall/r_wall))) || (istype(A,/turf/simulated/wall/r_titanium)))
+				setClickCooldown(arms ? arms.action_delay : 7)
+				to_chat(user, SPAN_NOTICE("This structure too reinforced for being damaged by [src]!"))
+				return
+			else if((istype(A, /obj/machinery/door/blast)))
+				var/obj/machinery/door/blast/FD = A
+				if(((FD.stat & NOPOWER) || (FD.stat & BROKEN)) && !( FD.operating ))
+					setClickCooldown(arms ? arms.action_delay : 7)
+					addtimer(CALLBACK(FD, /obj/machinery/door/blast.proc/force_toggle, TRUE), 0)
+					return
+				if(istype(A,/obj/machinery/door/blast/regular))
+					to_chat(user, SPAN_NOTICE("This structure too reinforced for being damaged by [src]!"))
+					return
+				do_attack_effect(A, "smash")
+				setClickCooldown(arms ? arms.action_delay : 7)
+				playsound(loc, 'sound/weapons/tablehit1.ogg', 40, 1)
+				return A.attack_generic(src,(arms.melee_damage*2),"forcefully strikes")
+			else if((istype(A, /obj/machinery/door)))
+				var/obj/machinery/door/airlock/FD = A
+				if(FD.anchored && !FD.arePowerSystemsOn() && !FD.locked && (istype(A, /obj/machinery/door) || istype(A,/obj/machinery/door/blast)))
+					setClickCooldown(arms ? arms.action_delay : 7)
+					addtimer(CALLBACK(FD, /obj/machinery/door/.proc/toggle, TRUE), 0)
+					return
+				do_attack_effect(A, "smash")
+				setClickCooldown(arms ? arms.action_delay : 7)
+				playsound(loc, 'sound/weapons/tablehit1.ogg', 40, 1)
+				return A.attack_generic(src, arms.melee_damage, "trying to force the airlock with its arms, damages motors ")
+			else if( istype(A, (/obj/structure)) || (istype(A, /obj/machinery)))
+				do_attack_effect(A, "smash")
+				setClickCooldown(arms ? arms.action_delay : 7)
+				playsound(loc, 'sound/weapons/tablehit1.ogg', 40, 1)
+				return A.attack_generic(src, arms.melee_damage, "after striking the [A], the combat exosuit forcefully pulls out a section of ")
+			else if(istype(A, /turf/simulated/wall)  )
+				do_attack_effect(A, "smash")
+				setClickCooldown(arms ? arms.action_delay : 7)
+				playsound(loc, 'sound/weapons/tablehit1.ogg', 40, 1)
+				return A.attack_generic(src, arms.melee_damage, "after striking the [A], the combat exosuit forcefully pulls out a section of ",BRUTE)
+			else if(adj && user.a_intent == I_HURT)
+				do_attack_effect(A, "smash")
+				setClickCooldown(arms ? arms.action_delay : 7)
+				return A.attack_generic(src, arms.melee_damage, "punch",BRUTE)
+	else if(istype(A, /obj/structure/ladder))
+		var/obj/structure/ladder/L = A
+		L.climb(src) //Those are some real sturdy ladders.
 	return
 
 /mob/living/exosuit/proc/set_hardpoint(var/hardpoint_tag)
@@ -460,7 +513,7 @@
 		hud_open.toggled()
 	return
 
-/mob/living/exosuit/attack_generic(var/mob/user, var/damage, var/attack_message = "smashes into")
+/mob/living/exosuit/attack_generic(var/mob/user, var/damage)
 	if(..())
 		playsound(loc, 'sound/effects/metal_close.ogg', 40, 1)
 		playsound(loc, 'sound/weapons/tablehit1.ogg', 40, 1)

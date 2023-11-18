@@ -28,7 +28,7 @@
 	name = "light arms"
 	exosuit_desc_string = "lightweight, segmented manipulators"
 	icon_state = "light_arms"
-	melee_damage = 5
+	melee_damage = 25
 	action_delay = 15
 	max_damage = 40
 	power_use = 10
