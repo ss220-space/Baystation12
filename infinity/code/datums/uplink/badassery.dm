@@ -62,18 +62,20 @@
 	path = /obj/item/storage/backpack/dufflebag/syndie_kit/heavy
 
 /datum/uplink_item/item/badassery/mech
-	name = "Syndicate Mech"
-	desc = "Special heavy mech with cool weaponery. It has: taser, laser and shield generator. Ideal for murderbone."
-	item_cost = DEFAULT_TELECRYSTAL_AMOUNT * 2
-	antag_roles = list(MODE_MERCENARY)
-	path = /mob/living/exosuit/premade/heavy/merc
-
-/datum/uplink_item/item/badassery/mech
 	name = "Combat Mech"
+	var/static/BOUGHT_MECH = 0
 	desc = "A terrible and at the same time beautiful combat mech to destroy all living things in your way. Comes with special plasma rifle, machinegun and shielding drone. Also, it is almoust EMP-proof!"
-	item_cost = DEFAULT_TELECRYSTAL_AMOUNT * 2
+	item_cost = 300
 	antag_roles = list(MODE_MERCENARY)
-	path = /mob/living/exosuit/premade/merc
+
+/datum/uplink_item/item/badassery/mech/get_goods(var/obj/item/device/uplink/U, var/loc)
+	if(MAX_MECH <= 0)
+		U.visible_message("[U.loc] Превышен лимит бронетехники для данной миссии. Обьявите войну для дополнительной единицы.\"")
+		return new /obj/item/stack/telecrystal(loc, 300)
+	MAX_MECH--
+	if(++BOUGHT_MECH == 2)
+		command_announcement.Announce("В секторе была замечена телепортация большого количества бронетехники Мародёров Горлекса.", "Показания датчиков [station_name()]" , msg_sanitized = 1, zlevels = GLOB.using_map.station_levels)
+	return new /mob/living/exosuit/premade/merc(loc)
 
 /datum/uplink_item/item/badassery/tobacco
 	name = "Strong tobacco"

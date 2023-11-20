@@ -65,6 +65,17 @@
 	icon_state = "black"
 	canister_color = "black"
 	can_label = 0
+	start_pressure = 45 * ONE_ATMOSPHERE
+
+/obj/machinery/portable_atmospherics/canister/air/mech
+	name = "\improper Canister \[Air\]"
+	icon_state = "grey"
+	canister_color = "grey"
+	can_label = 0
+	valve_open = 1
+	release_pressure = 80
+	start_pressure = 135 * ONE_ATMOSPHERE
+
 
 /obj/machinery/portable_atmospherics/canister/air
 	name = "\improper Canister \[Air\]"
