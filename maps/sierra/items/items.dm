@@ -192,11 +192,11 @@ Passports
 
 /obj/item/passport/independent/mirania
 	name = "\improper Mirania passport"
-	desc = "A passport from Mirania, an independent colony."
+	desc = "A passport from the Federal Republic of Mirania, an independent nation established upon Mirania III after its secession from the SCG."
 
 /obj/item/passport/independent/avalon
 	name = "\improper Avalon passport"
-	desc = "A passport from Avalon, an independent colony."
+	desc = "A passport from the Star Kingdom of Avalon, an independent nation established upon Claude III."
 
 /obj/item/passport/independent/eremus
 	name = "\improper Eremus passport"
