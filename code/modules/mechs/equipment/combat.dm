@@ -115,6 +115,8 @@ obj/item/mech_equipment/shields/proc/delayed_toggle() //[INF]Отложит по
 		OVERHEAT = FALSE
 		update_icon()
 		toggle()
+		var/obj/item/cell/cell = owner.get_cell()
+		cell.use(max_charge)
 	else
 		OVERHEAT = TRUE
 		delayed_toggle()
