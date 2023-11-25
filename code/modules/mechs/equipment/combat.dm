@@ -71,7 +71,6 @@
 	. = ..()
 	if(charge == -1)
 		OVERHEAT = TRUE
-		src.visible_message("ANTI-ABUSE!","ANTI-ABUSE!",0)
 	aura = new(owner, src)
 
 
