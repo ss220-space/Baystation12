@@ -8,7 +8,7 @@
 
 /obj/item/mech_equipment/mounted_system/taser/MouseDragInteraction(src_object, over_object, src_location, over_location, src_control, over_control, params, var/mob/user)
 	. = ..()
-	
+
 	if(over_object)
 		var/obj/item/gun/gun = holding
 		if(istype(gun) && gun.can_autofire())
@@ -56,19 +56,31 @@
 	desc = "The Hephaestus Armature system is a well liked energy deflector system designed to stop any projectile before it has a chance to become a threat."
 	icon_state = "shield_droid"
 	var/obj/aura/mechshield/aura = null
-	var/max_charge = 150
-	var/charge = 150
-	var/last_recharge = 0
+	var/max_charge = 200
+	var/charge = 200 //[INF]Current charge of shields
+	var/last_recharge = 0 // [INF]Dont touch this shit
+	var/last_overheat = 0 // [INF]<- thats too
 	var/charging_rate = 7500 * CELLRATE
 	var/cooldown = 3.5 SECONDS //Time until we can recharge again after a blocked impact
+	var/overheat_cooldown = 50 SECONDS  //[INF](500) Я расчитал эту хуйню сидя с секундомером, вышла минута при 150. 50 секунд за глаза будет ЗА ГЛАЗА
+	var/OVERHEAT = FALSE
 	restricted_hardpoints = list(HARDPOINT_BACK)
 	restricted_software = list(MECH_SOFTWARE_WEAPONS)
 
 /obj/item/mech_equipment/shields/installed(var/mob/living/exosuit/_owner)
 	. = ..()
+	if(charge==-1)
+		OVERHEAT = TRUE
+		src.visible_message("ANTI-ABUSE!","ANTI-ABUSE!",0)
 	aura = new(owner, src)
 
-/obj/item/mech_equipment/shields/uninstalled()
+
+/obj/item/mech_equipment/shields/uninstalled() // [INF] Анти-абуз байда, если снять щиты во время перегрева, после установки они опять уйдут в перегрев
+	if(OVERHEAT)
+		OVERHEAT = FALSE
+		icon_state = "shield_droid"
+		update_icon()
+		charge = -1
 	QDEL_NULL(aura)
 	. = ..()
 
@@ -80,26 +92,55 @@
 /obj/item/mech_equipment/shields/proc/stop_damage(var/damage)
 	var/difference = damage - charge
 	charge = Clamp(charge - damage, 0, max_charge)
-
 	last_recharge = world.time
-
-	if(difference > 0)
-		for(var/mob/pilot in owner.pilots)
-			to_chat(pilot, SPAN_DANGER("Warning: Deflector shield failure detect, shutting down"))
+	if(difference > 0 || charge <= 0)
 		toggle()
-		playsound(owner.loc,'sound/mecha/internaldmgalarm.ogg',35,1)
+		OVERHEAT = TRUE
+		src.visible_message("The mech's computer flashes: WARNING! Shield overheat detected!","The mech's computer beeps, reporting a shield error!",0)
+		playsound(owner.loc,'sound/mecha/shield_deflector_fail.ogg',60,0)
+		update_icon()
+		last_overheat = world.time
+		delayed_toggle()
 		return difference
 	else return 0
-		
+
+obj/item/mech_equipment/shields/proc/delayed_toggle() //[INF]Отложит поднятие щита на опр время, без вреда работы коду
+	set waitfor = 0
+	if(charge == -1)
+		return
+	sleep(overheat_cooldown)
+	if(OVERHEAT)
+		src.visible_message("Overheat terminated,energy shield automaticly up!","Overheat terminated,energy shield automaticly up",0)
+		charge=200
+		OVERHEAT = FALSE
+		update_icon()
+		toggle()
+	else
+		OVERHEAT = TRUE
+		delayed_toggle()
+
 /obj/item/mech_equipment/shields/proc/toggle()
+	if(charge == -1)
+		charge = 0
+		src.visible_message("The mech's computer flashes: WARNING! Shield overheat detected!","The mech's computer beeps, reporting a shield error!",0) //[INF] Для предотвращения абуза
+		playsound(owner.loc,'sound/mecha/shield_deflector_fail.ogg',60,0)
+		OVERHEAT = TRUE
+		update_icon()
+		delayed_toggle()
+		return
+	if(OVERHEAT)
+		if((world.time - last_overheat) < overheat_cooldown)
+			src.visible_message("Shields still overheated!","Shields still overheated!",0)
+			return
 	if(!aura)
 		return
 	aura.toggle()
-	playsound(owner,'sound/weapons/flash.ogg',35,1)
 	update_icon()
 	if(aura.active)
+		playsound(owner,'sound/mecha/mech_shield_up.ogg',50,0)
 		START_PROCESSING(SSobj, src)
-	else 
+	else
+		playsound(owner,'sound/mecha/mech_shield_down.ogg',50,1)
 		STOP_PROCESSING(SSobj, src)
 	active = aura.active
 	passive_power_use = active ? 1 KILOWATTS : 0
@@ -112,20 +153,23 @@
 
 /obj/item/mech_equipment/shields/on_update_icon()
 	. = ..()
+	if(OVERHEAT)
+		icon_state= "shield_droid_overheat"
+		return
 	if(!aura)
 		return
 	if(aura.active)
 		icon_state = "shield_droid_a"
-	else 
+	else
 		icon_state = "shield_droid"
 
 /obj/item/mech_equipment/shields/Process()
 	if(charge >= max_charge)
 		return
 	if((world.time - last_recharge) < cooldown)
-		return	
+		return
 	var/obj/item/cell/cell = owner.get_cell()
-	
+
 	var/actual_required_power = Clamp(max_charge - charge, 0, charging_rate)
 
 	if(cell)
@@ -134,8 +178,11 @@
 /obj/item/mech_equipment/shields/get_hardpoint_status_value()
 	return charge / max_charge
 
-/obj/item/mech_equipment/shields/get_hardpoint_maptext()	
-	return "[(aura && aura.active) ? "ONLINE" : "OFFLINE"]: [round((charge / max_charge) * 100)]%"
+/obj/item/mech_equipment/shields/get_hardpoint_maptext()
+	if(OVERHEAT)
+		return "["OVERHEAT!"]"
+	else
+		return "[(aura && aura.active) ? "ONLINE" : "OFFLINE"]: [round((charge / max_charge) * 100)]%"
 
 /obj/aura/mechshield
 	icon = 'icons/mecha/shield.dmi'
@@ -147,12 +194,12 @@
 	plane = DEFAULT_PLANE
 	pixel_x = 8
 	pixel_y = 4
-	mouse_opacity = 0 
+	mouse_opacity = 0
 
 /obj/aura/mechshield/Initialize(var/maploading, var/obj/item/mech_equipment/shields/holder)
 	. = ..()
 	shields = holder
-		
+
 /obj/aura/mechshield/added_to(var/mob/living/target)
 	. = ..()
 	target.vis_contents += src
@@ -174,7 +221,7 @@
 		user.vis_contents -= src
 	shields = null
 	. = ..()
-	
+
 /obj/aura/mechshield/proc/toggle()
 	active = !active
 
@@ -182,15 +229,15 @@
 
 	if(active)
 		flick("shield_raise", src)
-	else 
+	else
 		flick("shield_drop", src)
-	
+
 
 /obj/aura/mechshield/on_update_icon()
 	. = ..()
 	if(active)
 		icon_state = "shield"
-	else 
+	else
 		icon_state = "shield_null"
 
 /obj/aura/mechshield/bullet_act(var/obj/item/projectile/P, var/def_zone)
@@ -290,7 +337,7 @@
 	var/chance = 60 //For attacks from the front, diminishing returns
 	var/last_max_block = 0 //Blocking during a perfect block window resets this, else there is an anti spam
 	var/max_block = 60 // Should block most things
-	var/blocking = FALSE 
+	var/blocking = FALSE
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
 	restricted_software = list(MECH_SOFTWARE_UTILITY)
 
@@ -325,7 +372,7 @@
 							M.attack_generic(owner, (owner.arms ? owner.arms.melee_damage * 1.2 : 0), "slammed")
 							M.throw_at(get_edge_target_turf(owner ,owner.dir),5, 2)
 						do_attack_effect(T, "smash")
-			
+
 /obj/item/mech_equipment/ballistic_shield/attack_self(mob/user)
 	. = ..()
 	if (.) //FORM A SHIELD WALL!
@@ -354,7 +401,7 @@
 
 		if (!conscious_pilot_exists)
 			effective_block *= 0.5 //Who is going to block anything?
-		
+
 		//Bit copypasta but I am doing something different from normal shields
 		var/attack_dir = 0
 		if (istype(source, /obj/item/projectile))
@@ -376,14 +423,14 @@
 	if (blocking)
 		//Reset timer for maximum chainblocks
 		last_max_block = 0
-	
+
 /obj/aura/mech_ballistic
 	icon = 'icons/mecha/ballistic_shield.dmi'
 	name = "mech_ballistic_shield"
 	var/obj/item/mech_equipment/ballistic_shield/shield = null
 	layer = MECH_UNDER_LAYER
 	plane = DEFAULT_PLANE
-	mouse_opacity = 0 
+	mouse_opacity = 0
 
 /obj/aura/mech_ballistic/Initialize(maploading, obj/item/mech_equipment/ballistic_shield/holder)
 	. = ..()
@@ -398,8 +445,8 @@
 				icon_state = "mech_shield_[hardpoint]"
 				var/image/I = image(icon, "[icon_state]_over")
 				I.layer = ABOVE_HUMAN_LAYER
-				overlays.Add(I)			
-		
+				overlays.Add(I)
+
 /obj/aura/mech_ballistic/added_to(mob/living/target)
 	. = ..()
 	target.vis_contents += src
@@ -415,7 +462,7 @@
 		user.vis_contents -= src
 	shield = null
 	. = ..()
-	
+
 /obj/aura/mech_ballistic/bullet_act(obj/item/projectile/P, def_zone)
 	. = ..()
 	if (shield)
@@ -459,7 +506,7 @@
 
 /obj/item/mech_equipment/flash/proc/area_flash()
 	playsound(src.loc, 'sound/weapons/flash.ogg', 100, 1)
-	var/flash_time = (rand(flash_min,flash_max) - 1) 
+	var/flash_time = (rand(flash_min,flash_max) - 1)
 
 	var/obj/item/cell/C = owner.get_cell()
 	C.use(active_power_use * CELLRATE)
@@ -471,7 +518,7 @@
 				return
 
 			if(protection >= FLASH_PROTECTION_MINOR)
-				flash_time /= 2	
+				flash_time /= 2
 
 			if(ishuman(O))
 				var/mob/living/carbon/human/H = O
@@ -483,7 +530,7 @@
 				O.flash_eyes(FLASH_PROTECTION_MODERATE - protection)
 				O.eye_blurry += flash_time
 				O.confused += (flash_time + 2)
-			
+
 /obj/item/mech_equipment/flash/attack_self(mob/user)
 	. = ..()
 	if(.)
@@ -503,7 +550,7 @@
 		var/mob/living/O = target
 		owner.setClickCooldown(5)
 		next_use = world.time + 15
-		
+
 		if(istype(O))
 
 			playsound(src.loc, 'sound/weapons/flash.ogg', 100, 1)
@@ -517,7 +564,7 @@
 				return
 
 			if(protection >= FLASH_PROTECTION_MODERATE)
-				flash_time /= 2	
+				flash_time /= 2
 
 			if(ishuman(O))
 				var/mob/living/carbon/human/H = O
