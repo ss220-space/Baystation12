@@ -62,7 +62,7 @@
 	var/last_overheat = 0 // [INF]<- thats too
 	var/charging_rate = 7500 * CELLRATE
 	var/cooldown = 3.5 SECONDS //Time until we can recharge again after a blocked impact
-	var/overheat_cooldown = 50 SECONDS  //[INF](500) Я расчитал эту хуйню сидя с секундомером, вышла минута при 150. 50 секунд за глаза будет ЗА ГЛАЗА
+	var/overheat_cooldown = 50 SECONDS  //[INF](500) Огромное окно для пробития меха.
 	var/OVERHEAT = FALSE
 	restricted_hardpoints = list(HARDPOINT_BACK)
 	restricted_software = list(MECH_SOFTWARE_WEAPONS)
@@ -75,7 +75,7 @@
 	aura = new(owner, src)
 
 
-/obj/item/mech_equipment/shields/uninstalled() // [INF] Анти-абуз байда, если снять щиты во время перегрева, после установки они опять уйдут в перегрев
+/obj/item/mech_equipment/shields/uninstalled() // [INF] Анти-абуз. Если снять щиты во время перегрева, после установки они опять уйдут в перегрев
 	if(OVERHEAT)
 		OVERHEAT = FALSE
 		icon_state = "shield_droid"
