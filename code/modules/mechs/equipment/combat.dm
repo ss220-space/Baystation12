@@ -69,7 +69,7 @@
 
 /obj/item/mech_equipment/shields/installed(var/mob/living/exosuit/_owner)
 	. = ..()
-	if(charge==-1)
+	if(charge == -1)
 		OVERHEAT = TRUE
 		src.visible_message("ANTI-ABUSE!","ANTI-ABUSE!",0)
 	aura = new(owner, src)
