@@ -92,7 +92,7 @@
 	var/difference = damage - charge
 	charge = Clamp(charge - damage, 0, max_charge)
 	last_recharge = world.time
-	if(difference > 0 || charge <= 0)
+	if(difference >= 0)
 		toggle()
 		OVERHEAT = TRUE
 		src.visible_message("The mech's computer flashes: WARNING! Shield overheat detected!","The mech's computer beeps, reporting a shield error!",0)
