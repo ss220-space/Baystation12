@@ -104,7 +104,7 @@
 		return difference
 	else return 0
 
-obj/item/mech_equipment/shields/proc/delayed_toggle() //[INF]Отложит поднятие щита на опр время, без вреда работы коду
+/obj/item/mech_equipment/shields/proc/delayed_toggle() //[INF]Отложит поднятие щита на опр время, без вреда работы коду
 	set waitfor = 0
 	if(charge == -1)
 		return
