@@ -29,6 +29,7 @@
 	var/wreckage_path = /obj/structure/mech_wreckage
 	var/mech_turn_sound = 'sound/mecha/mechturn.ogg'
 	var/mech_step_sound = 'sound/mecha/mechstep.ogg'
+	var/arms_punch_sound = 'sound/mecha/punch.ogg'
 
 	// Access updating/container.
 	var/obj/item/card/id/access_card
