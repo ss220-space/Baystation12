@@ -26,6 +26,9 @@
 	var/hidden_from_codex			  // If it should not show up in Codex
 	var/category = /datum/language    // Used to point at root language types that shouldn't be visible
 	var/has_written_form = FALSE
+	var/speech_sound				// Plays sounds of it's language
+	var/sound_chance				// chance of sound
+
 
 /datum/language/proc/can_be_spoken_properly_by(var/mob/speaker)
 	return TRUE
