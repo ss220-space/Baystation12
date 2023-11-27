@@ -238,7 +238,7 @@ proc/get_radio_key_from_channel(var/channel)
 
 	if(speaking.speech_sound && prob(speaking.sound_chance))
 		var/sound/language_voice = pick(speaking.speech_sound)
-		playsound(usr.loc, language_voice, 75, 1)
+		playsound(loc, language_voice, 75, 1)
 
 
 	//parse the radio code and consume it
