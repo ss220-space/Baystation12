@@ -248,7 +248,7 @@
 /obj/item/mech_equipment/catapult
 	name = "gravitational catapult"
 	desc = "An exosuit-mounted gravitational catapult."
-	icon_state = "mech_clamp"
+	icon_state = "mech_catapult"
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
 	restricted_software = list(MECH_SOFTWARE_UTILITY)
 	var/mode = CATAPULT_SINGLE

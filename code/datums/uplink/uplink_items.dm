@@ -35,7 +35,8 @@ var/datum/uplink/uplink = new()
 	var/list/datum/antagonist/antag_roles = list("Exclude", MODE_DEITY)	// Antag roles this item is displayed to. If empty, display to all. If it includes 'Exclude", anybody except this role can view it
 
 /datum/uplink_item/item
-	var/static/MAX_MECH = 1
+	var/static/MAX_MECH = 0
+	var/static/WAR_DECLARED = FALSE
 	var/path = null
 
 /datum/uplink_item/proc/buy(var/obj/item/device/uplink/U, var/mob/user)
