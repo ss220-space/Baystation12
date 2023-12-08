@@ -54,7 +54,7 @@
 		list(mode_name="Manstoppers", projectile_type=/obj/item/projectile/bullet/shotgun/manstopper),
 		list(mode_name="Slugs", projectile_type=/obj/item/projectile/bullet/shotgun),
 		)
-	max_shots = 10
+	max_shots = 16
 	multi_aim = 1
 	fire_delay=15
 	autofire_enabled=1
