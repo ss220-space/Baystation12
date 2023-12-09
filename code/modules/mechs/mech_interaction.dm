@@ -202,7 +202,7 @@
 				setClickCooldown(arms ? arms.action_delay : 7)
 				playsound(src.loc, arms_punch_sound, 50, 1)
 				return
-			else if(istype(A, /obj/machinery/door/firedoor) )
+			if(istype(A, /obj/machinery/door/firedoor) )
 				var/obj/machinery/door/firedoor/FD = A
 				if(!FD.blocked)
 					setClickCooldown(arms ? arms.action_delay : 7)
