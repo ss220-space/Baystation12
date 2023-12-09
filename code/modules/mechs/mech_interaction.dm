@@ -198,7 +198,7 @@
 		if(do_after(src, 1.2 SECONDS, get_turf(src), DO_DEFAULT|DO_USER_UNIQUE_ACT|DO_PUBLIC_PROGRESS) && user)
 			if(target_prev_loc != A.loc)
 				src.visible_message(SPAN_DANGER(" [src] misses with his attack!"))
-				do_attack_effect(PAST, "smash")
+				do_attack_effect(target_prev_loc, "smash")
 				setClickCooldown(arms ? arms.action_delay : 7)
 				playsound(src.loc, arms_punch_sound, 50, 1)
 				return
