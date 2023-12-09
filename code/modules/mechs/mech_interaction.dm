@@ -194,9 +194,9 @@
 		setClickCooldown(arms ? arms.action_delay : 7)
 		src.visible_message(SPAN_DANGER(" [src] steps back, preparing for a punch!"), blind_message = SPAN_DANGER("You hear the loud hissing of hydraulics!"))
 		playsound(src.loc, mech_step_sound, 60, 1)
-		var/PAST = A.loc //[INF] Данная пермена нужна для проверки, осталась ли цель на месте атаки
-		if(do_after(src, 1.2 SECONDS, get_turf(src),DO_DEFAULT|DO_USER_UNIQUE_ACT|DO_PUBLIC_PROGRESS) && user)
-			if(PAST!=A.loc)
+		var/target_prev_loc = A.loc
+		if(do_after(src, 1.2 SECONDS, get_turf(src), DO_DEFAULT|DO_USER_UNIQUE_ACT|DO_PUBLIC_PROGRESS) && user)
+			if(target_prev_loc != A.loc)
 				src.visible_message(SPAN_DANGER(" [src] misses with his attack!"))
 				do_attack_effect(PAST, "smash")
 				setClickCooldown(arms ? arms.action_delay : 7)
