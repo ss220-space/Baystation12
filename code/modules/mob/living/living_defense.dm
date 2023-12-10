@@ -164,7 +164,11 @@
 			mass = I.w_class/THROWNOBJ_KNOCKBACK_DIVISOR
 		var/momentum = TT.speed*mass
 
-		if(momentum >= THROWNOBJ_KNOCKBACK_SPEED)
+		if(momentum >= THROWNOBJ_KNOCKBACK_SPEED | can_be_buckled)
+			if(!can_be_buckled)//Not effective vs slimes and mechs
+				visible_message("<span class='warning'>[O] flyes away from [src]!</span>","<span class='warning'>The projectile was ineffective against you!</span>")
+				apply_damage(throw_damage*1.4, BRUTE) //[INF] Мехи и слаймы не прибиваются, а просто получают урон. Учтите, он проходит сквозь энергощит меха.
+				return
 			var/dir = TT.init_dir
 
 			visible_message("<span class='warning'>\The [src] staggers under the impact!</span>","<span class='warning'>You stagger under the impact!</span>")
