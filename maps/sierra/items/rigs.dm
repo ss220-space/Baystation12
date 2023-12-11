@@ -332,10 +332,10 @@
 		rad = ARMOR_RAD_SHIELDED
 		)
 
-	chest_type = /obj/item/clothing/suit/space/rig/command
+	chest_type = /obj/item/clothing/suit/space/rig/command/exploration
 	helm_type = /obj/item/clothing/head/helmet/space/rig/command/exploration
-	boot_type = /obj/item/clothing/shoes/magboots/rig/command
-	glove_type = /obj/item/clothing/gloves/rig/command
+	boot_type = /obj/item/clothing/shoes/magboots/rig/command/exploration
+	glove_type = /obj/item/clothing/gloves/rig/command/exploration
 
 	allowed = list(/obj/item/gun,
 				   /obj/item/ammo_magazine,
@@ -352,6 +352,27 @@
 	icon_state = "command_exp_rig"
 	light_overlay = "yellow_double_light"
 	brightness_on = 0.8
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI,SPECIES_IPC)
+	sprite_sheets = list(
+		SPECIES_TAJARA = 'maps/torch/icons/mob/tajara/onmob_head_solgov_tajara.dmi',
+		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi'
+	)
+		
+/obj/item/clothing/suit/space/rig/command/exploration
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI,SPECIES_IPC)
+	icon_state = "command_exp_rig"
+	sprite_sheets = list(
+		SPECIES_TAJARA = 'maps/torch/icons/mob/tajara/onmob_suit_solgov_tajara.dmi',
+		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi'
+	)
+		
+/obj/item/clothing/gloves/rig/command/exploration
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI,SPECIES_IPC)
+	icon_state = "command_exp_rig"
+		
+/obj/item/clothing/shoes/magboots/rig/command/exploration
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI,SPECIES_IPC)
+	icon_state = "command_exp_rig"
 
 /obj/item/rig/exploration/equipped
 	initial_modules = list(
