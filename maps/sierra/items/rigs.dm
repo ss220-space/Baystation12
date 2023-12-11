@@ -370,10 +370,16 @@
 /obj/item/clothing/gloves/rig/command/exploration
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI,SPECIES_IPC)
 	icon_state = "command_exp_rig"
+	sprite_sheets = list(
+		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_hands_solgov_unathi.dmi'
+	)
 		
 /obj/item/clothing/shoes/magboots/rig/command/exploration
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI,SPECIES_IPC)
 	icon_state = "command_exp_rig"
+	sprite_sheets = list(
+		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_feet_solgov_unathi.dmi'
+	)
 
 /obj/item/rig/exploration/equipped
 	initial_modules = list(
