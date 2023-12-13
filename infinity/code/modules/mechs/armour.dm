@@ -2,12 +2,11 @@
 	name = "tactical combat plating"
 	desc = "Special combat plating, designed for operating in field of battle."
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_RIFLES,
-		energy = ARMOR_ENERGY_STRONG,
+		melee = ARMOR_MELEE_MAJOR + 5, //55
+		bullet = ARMOR_BALLISTIC_RESISTANT, //65
+		laser = ARMOR_LASER_MAJOR, //55
+		energy = ARMOR_ENERGY_STRONG, //EMP dont work actually
 		bomb = ARMOR_BOMB_RESISTANT,
-		rad = ARMOR_RAD_RESISTANT,
 		bio = ARMOR_BIO_SHIELDED
 		)
 	origin_tech = list(TECH_MATERIAL = 7)

@@ -1157,10 +1157,8 @@
 /obj/structure/table/rack,
 /obj/item/gun/energy/ionrifle,
 /obj/item/gun/energy/ionrifle,
-/obj/item/gun/energy/ionrifle,
-/obj/item/gun/energy/ionrifle,
-/obj/item/gun/energy/antimech,
-/obj/item/gun/energy/antimech,
+/obj/item/gun/energy/ionrifle/advanced,
+/obj/item/gun/energy/ionrifle/advanced,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
