@@ -13,7 +13,7 @@
 //Mech machinegun START
 /obj/item/gun/energy/machingegun/mounted/mech
 	name = "mech machingegun"
-	desc = "You shouldn't see this!"
+	desc = "This one connected by ammunition belt to the mech."
 	icon = 'icons/obj/guns/saw.dmi'
 	icon_state = "l6closed50"
 	item_state = "l6closedmag"
@@ -44,7 +44,7 @@
 //Mech autoshotgun START
 /obj/item/gun/energy/shotgun/mounted/mech
 	name = "mech autoshotgun"
-	desc = "Stop shitspawn,pedal'!"
+	desc = "This one connected by ammunition belt to the mech."
 	icon = 'icons/obj/guns/saw.dmi'
 	icon_state = "l6closed50"
 	item_state = "l6closedmag"
