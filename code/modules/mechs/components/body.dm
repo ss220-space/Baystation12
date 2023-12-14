@@ -1,4 +1,4 @@
-/obj/item/storage/mech
+/obj/item/storage/mech //[INF] Сам багажник меха
 	w_class = ITEM_SIZE_NO_CONTAINER
 	max_w_class = ITEM_SIZE_LARGE
 	storage_slots = 4
@@ -21,8 +21,18 @@
 	name = "body"
 	icon_state = "loader_body"
 	gender = NEUTER
-
-	var/mech_health = 300
+//*=======REINFORCES FOR MECH===================
+//[INF]ХП корпуса будет зависить от материала, которым обшивают меха. Чем он прочнее (больше Integrity), тем больше мех вытерпливает поджопников до полного разрушения
+// Плассталь 400 (550 ХП)
+// Сталь 150 (300 ХП)
+// Титан 200 (350 ХП)
+// Аллюминий 125 (275 ХП)
+// Алмазы 150 (300 ХП)
+// Пластик 50 (200 ХП)
+// Стекло 50 (200 хп)
+// Золото 100 (250 ХП)
+// Серебро 150 (300 ХП)
+	var/mech_health = 150 //в updatehealth() добавляется хп от укрепления ресурсом.
 	var/obj/item/cell/cell
 	var/obj/item/robot_parts/robot_component/diagnosis_unit/diagnostics
 	var/obj/item/robot_parts/robot_component/armour/exosuit/m_armour

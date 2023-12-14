@@ -40,6 +40,7 @@
 	name = "combat arms"
 	exosuit_desc_string = "flexible, advanced manipulators"
 	icon_state = "combat_arms"
+	max_damage = 60
 	melee_damage = 25
 	action_delay = 10
 	power_use = 50
@@ -48,6 +49,7 @@
 	name = "combat legs"
 	exosuit_desc_string = "sleek hydraulic legs"
 	icon_state = "combat_legs"
+	max_damage = 60
 	move_delay = 3
 	turn_delay = 3
 	power_use = 20
@@ -55,6 +57,7 @@
 /obj/item/mech_component/sensors/combat
 	name = "combat sensors"
 	gender = PLURAL
+	max_damage = 60
 	exosuit_desc_string = "high-resolution thermal sensors"
 	icon_state = "combat_head"
 	vision_flags = SEE_MOBS
@@ -67,9 +70,10 @@
 	software.installed_software = list(MECH_SOFTWARE_WEAPONS)
 
 /obj/item/mech_component/chassis/combat
-	name = "sealed exosuit chassis"
+	name = "combat exosuit chassis"
 	hatch_descriptor = "canopy"
 	pilot_coverage = 100
+	max_damage = 100 //[INF]+40 хп
 	exosuit_desc_string = "an armoured chassis"
 	icon_state = "combat_body"
 	power_use = 40

@@ -43,7 +43,7 @@
 					return AR
 
 	return def_zone //Careful with effects, mechs shouldn't be stunned
-	
+
 /mob/living/exosuit/hitby(atom/movable/AM, var/datum/thrownthing/TT)
 	if(LAZYLEN(pilots) && (!hatch_closed || !prob(body.pilot_coverage)))
 		var/mob/living/pilot = pick(pilots)
@@ -65,8 +65,8 @@
 		if(body_armor)
 			. += body_armor
 
-/mob/living/exosuit/updatehealth()
-	maxHealth = body ? body.mech_health : 0
+/mob/living/exosuit/updatehealth() //Самая крепкая сборка Тяжёлая броня + плассталь может жить вполне прилично (500 + 400)
+	maxHealth = body ? (body.mech_health + material.integrity) : 0 //[INF] Обьяснение логики в code/modules/mechs/components/body
 	health = maxHealth-(getFireLoss()+getBruteLoss())
 
 /mob/living/exosuit/adjustFireLoss(var/amount, var/obj/item/mech_component/MC = pick(list(arms, legs, body, head)))
@@ -126,9 +126,33 @@
 	var/target = zoneToComponent(def_zone)
 	//Only 3 types of damage concern mechs and vehicles
 	switch(damagetype)
+	//==============================================RENFORCE MATERIAL=============================================================
+	//This code response for mech reiforce - melting(heat), brute and burn defense . Hear writed all material modifiers (Steel - Standart (Brute 7 Burn 7))
+	//Картон(Carboard). brute 1 burn 2
+	// Сталь (Steel) brute 2 burn не выставлен
+	//Плассталь (Plasteel) burn 10 brute 8
+	//Алмаз(Diamond) brute 10 burn 50
+	//Пластик(Plastic) brute 2 burn 2
+	//Стекло(Glass) brute 1 burn 2
+	//Серебро(Silver) brute 2 burn 2
+	//Платина (Platinum) brute 2 burn 2
+	//Золото (Gold) burte 2 burn 2
+	//Аллюминий (Alluminium) brute 2 burn 2
+	//Сталь (Steel) brute 7 burn 7 <---- STANDART
+	//Титан (Titan) brute 10 burn 8
 		if(BRUTE)
+			//Здесь формула что призовёт материал БРУТ //max = 20
+			var/brute_resist = ((material.brute_armor-7)) // Макс защита - 4 от брута, 8 от бёрна
+			if(brute_resist > 4)
+				brute_resist = 4
+			damage = damage - brute_resist
 			adjustBruteLoss(damage, target)
 		if(BURN)
+			//Здесь формула что призовёт материал БЁРН
+			var/burn_resist = ((material.burn_armor-7))
+			if(burn_resist > 8)
+				burn_resist = 5
+			damage = damage - burn_resist
 			adjustFireLoss(damage, target)
 		if(IRRADIATE)
 			for(var/mob/living/pilot in pilots)
@@ -149,7 +173,7 @@
 	if(!hatch_closed || (body.pilot_coverage < 100)) //Open, environment is the source
 		return .
 	var/list/after_armor = modify_damage_by_armor(null, ., IRRADIATE, DAM_DISPERSED, src, 0, TRUE)
-	return after_armor[1]	
+	return after_armor[1]
 
 /mob/living/exosuit/getFireLoss()
 	var/total = 0
@@ -185,6 +209,6 @@
 			for(var/thing in pilots)
 				var/mob/pilot = thing
 				pilot.emp_act(severity)
-				
+
 /mob/living/exosuit/get_bullet_impact_effect_type(def_zone)
 	return BULLET_IMPACT_METAL
