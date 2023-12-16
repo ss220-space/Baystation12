@@ -19627,7 +19627,6 @@
 /obj/machinery/door/window/southright{
 	name = "Robotics Laboratory Desk";
 	req_access = newlist();
-	polarized = 1;
 	tint_id = "robotistic_window"
 	},
 /obj/item/paper_bin,
