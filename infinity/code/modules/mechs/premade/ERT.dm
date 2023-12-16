@@ -1,4 +1,4 @@
-/mob/living/exosuit/premade/Ert
+/mob/living/exosuit/premade/ert
 	name = "Nanotrasen special combat mech"
 	desc = "A sleek, modern combat exosuit created by Nanotrasen for specific missions."
 
@@ -18,7 +18,7 @@
 
 	. = ..()
 
-/mob/living/exosuit/premade/Ert/spawn_mech_equipment()
+/mob/living/exosuit/premade/ert/spawn_mech_equipment()
 	..()
 	install_system(new /obj/item/mech_equipment/mounted_system/taser/laser/Ert(src), HARDPOINT_RIGHT_HAND)
 	install_system(new /obj/item/mech_equipment/mounted_system/taser/shotgun(src), HARDPOINT_LEFT_HAND)
@@ -26,7 +26,7 @@
 	install_system(new /obj/item/mech_equipment/light(src), HARDPOINT_RIGHT_SHOULDER)
 	install_system(new /obj/item/mech_equipment/flash(src), HARDPOINT_LEFT_SHOULDER)
 
-/obj/item/mech_component/manipulators/Ert
+/obj/item/mech_component/manipulators/ert
 	name = "Nanotrasen combat arms"
 	exosuit_desc_string = "flexible, advanced manipulators"
 	icon_state = "combat_arms"
@@ -34,7 +34,7 @@
 	action_delay = 10
 	power_use = 50
 
-/obj/item/mech_component/propulsion/Ert
+/obj/item/mech_component/propulsion/ert
 	name = "Nanotrasen combat legs"
 	exosuit_desc_string = "sleek hydraulic legs"
 	icon_state = "combat_legs"
@@ -42,7 +42,7 @@
 	turn_delay = 3
 	power_use = 20
 
-/obj/item/mech_component/sensors/Ert
+/obj/item/mech_component/sensors/ert
 	name = "Nanotrasen combat sensors"
 	gender = PLURAL
 	exosuit_desc_string = "high-resolution thermal sensors"
@@ -51,13 +51,13 @@
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	power_use = 200
 
-/obj/item/mech_component/sensors/Ert/prebuild()
+/obj/item/mech_component/sensors/ert/prebuild()
 	..()
 	software = new(src)
 	software.installed_software = list(MECH_SOFTWARE_WEAPONS,MECH_SOFTWARE_UTILITY)
 
 
-/obj/item/mech_component/chassis/Ert
+/obj/item/mech_component/chassis/ert
 	name = "sealed exosuit chassis"
 	hatch_descriptor = "canopy"
 	pilot_coverage = 100
@@ -65,14 +65,14 @@
 	icon_state = "combat_body"
 	power_use = 40
 
-/obj/item/mech_component/chassis/Ert/prebuild()
+/obj/item/mech_component/chassis/ert/prebuild()
 	. = ..()
 	QDEL_NULL(cell)
 	cell = new /obj/item/cell/hyper(src)
 	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/combat/syndie(src)
 
 
-/obj/item/mech_component/chassis/Ert/Initialize()
+/obj/item/mech_component/chassis/ert/Initialize()
 	pilot_positions = list(
 		list(
 			"[NORTH]" = list("x" = 8,  "y" = 8),
