@@ -27909,6 +27909,9 @@
 	pixel_x = 3
 	},
 /obj/item/organ/internal/posibrain,
+/obj/item/device/multitool{
+	pixel_x = 3
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aRO" = (
