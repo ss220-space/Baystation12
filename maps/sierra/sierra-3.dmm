@@ -24413,7 +24413,6 @@
 /area/rnd/research)
 "aNg" = (
 /obj/machinery/hologram/holopad,
-/obj/item/pen,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aNi" = (
