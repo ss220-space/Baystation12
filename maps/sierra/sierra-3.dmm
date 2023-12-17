@@ -20995,9 +20995,6 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/crew_quarters/heads/office/rd)
 "aIF" = (
-/obj/machinery/computer/modular/preset/civilian{
-	dir = 4
-	},
 /obj/structure/filingcabinet/wallcabinet{
 	pixel_y = 26
 	},
@@ -21012,6 +21009,16 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_x = -30
+	},
+/obj/machinery/button/windowtint{
+	id = "robotistic_window";
+	pixel_x = -26
+	},
+/obj/machinery/computer/rdconsole/robotics{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics)
@@ -21085,15 +21092,6 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aIK" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
-/obj/machinery/light_switch{
-	pixel_x = -6;
-	pixel_y = 28
-	},
-/obj/structure/holoplant,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
 	},
@@ -21115,10 +21113,6 @@
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
-	},
-/obj/machinery/button/windowtint{
-	pixel_y = 28;
-	id = "robotistic_window"
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -22226,9 +22220,6 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/rd)
 "aKm" = (
-/obj/structure/filingcabinet/wallcabinet{
-	pixel_x = 28
-	},
 /obj/item/folder/nt,
 /obj/item/folder/nt,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -22236,21 +22227,24 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
+	},
+/obj/structure/filingcabinet/wallcabinet{
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/rd)
 "aKn" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = -24
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole/robotics{
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/machinery/computer/modular/preset/civilian{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -27910,6 +27904,10 @@
 /obj/item/organ/internal/posibrain,
 /obj/item/device/multitool{
 	pixel_x = 3
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
