@@ -69,13 +69,13 @@
 	antag_roles = list(MODE_MERCENARY)
 
 /datum/uplink_item/item/badassery/mech/get_goods(var/obj/item/device/uplink/U, var/loc)
-	if(GLOB.WarDeclared == FALSE)
+	if(GLOB.war_declared == FALSE)
 		U.visible_message("[U.loc] Война не обьявлена, бронетехника не может быть вызвана. Обьявите войну для получения доступа к бронетехнике.\"")
 		return new /obj/item/stack/telecrystal(loc, 400)
-	if(GLOB.MaxMech <= 0)
+	if(GLOB.max_mech <= 0)
 		U.visible_message("[U.loc] Превышен лимит бронетехники для данной миссии.\"")
 		return new /obj/item/stack/telecrystal(loc, 400)
-	GLOB.MaxMech--
+	GLOB.max_mech--
 	U.visible_message("[U.loc] Запрос на бронетехнику Горлекса обработан, единица телепортирована на ваше местоположение.\"")
 	command_announcement.Announce("В секторе была замечена телепортация бронетехники Мародёров Горлекса.", "Показания датчиков [station_name()]" , msg_sanitized = 1, zlevels = GLOB.using_map.station_levels)
 	return new /mob/living/exosuit/premade/merc(loc)
