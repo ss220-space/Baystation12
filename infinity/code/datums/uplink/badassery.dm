@@ -69,7 +69,7 @@
 	antag_roles = list(MODE_MERCENARY)
 
 /datum/uplink_item/item/badassery/mech/get_goods(var/obj/item/device/uplink/U, var/loc)
-	if(GLOB.war_declared == FALSE)
+	if(!GLOB.war_declared)
 		U.visible_message("[U.loc] Война не обьявлена, бронетехника не может быть вызвана. Обьявите войну для получения доступа к бронетехнике.\"")
 		return new /obj/item/stack/telecrystal(loc, 400)
 	if(GLOB.max_mech <= 0)
