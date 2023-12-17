@@ -2,9 +2,9 @@
 	name = "Nanotrasen special combat mech"
 	desc = "A sleek, modern combat exosuit created by Nanotrasen for specific missions."
 
-/mob/living/exosuit/premade/Ert/Initialize()
+/mob/living/exosuit/premade/ert/Initialize()
 	if(!arms)
-		arms = new /obj/item/mech_component/manipulators/Ert(src)
+		arms = new /obj/item/mech_component/manipulators/ert(src)
 		arms.color = COLOR_CYAN_BLUE
 	if(!legs)
 		legs = new /obj/item/mech_component/propulsion/merc(src)
