@@ -106,6 +106,7 @@ obj/item/gun/energy/retro
 	is_serial = 1
 	s_gun = "LC"
 
+
 /obj/item/gun/energy/laser/assault
 	name = "Laser assault rifle"
 	desc = "An advanced fully automatic laser rifle, dubbed LAR-1. Capable of firing in several firemodes."
@@ -124,15 +125,6 @@ obj/item/gun/energy/retro
 		list(mode_name="full auto", fire_delay=2, burst=1, burst_delay=2.8, one_hand_penalty=4, dispersion=list(0.4, 0.8, 1.2, 1.4), burst_accuracy=list(0,-1,-1,-2), autofire_enabled=1),
 		)
 
-
-/obj/item/gun/energy/lasercannon/mounted
-	name = "mounted laser cannon"
-	self_recharge = 1
-	use_external_power = 1
-	recharge_time = 10
-	accuracy = 0 //mounted laser cannons don't need any help, thanks
-	one_hand_penalty = 0
-	has_safety = FALSE
 
 /obj/item/gun/energy/xray
 	name = "G56E x-ray carbine"
