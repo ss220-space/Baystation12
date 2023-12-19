@@ -368,6 +368,7 @@ var/list/gear_datums = list()
 	var/list/allowed_roles //Roles that can spawn with this item.
 	var/list/allowed_branches //Service branches that can spawn with it.
 	var/list/allowed_skills //Skills required to spawn with this item.
+	var/list/allowed_backgrounds //Character background required to spawn with this item.
 	var/whitelisted        //Term to check the whitelist for..
 	var/sort_category = "General"
 	var/flags              //Special tweaks in New
