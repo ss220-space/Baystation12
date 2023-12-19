@@ -399,6 +399,14 @@ SUBSYSTEM_DEF(jobs)
 					for(var/required in G.allowed_skills)
 						if(!H.skill_check(required,G.allowed_skills[required]))
 							permitted = 0
+							
+				if(permitted && G.allowed_backgrounds)
+					var/decl/cultural_info/background = H.get_cultural_value(TAG_FACTION)
+					var/bcndname = background ? background.name : "Unset"
+					if(bcndname in G.allowed_backgrounds)
+						permitted = 1
+					else
+						permitted = 0
 
 				if(G.whitelisted && (!(H.species.name in G.whitelisted)))
 					permitted = 0

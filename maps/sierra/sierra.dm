@@ -56,6 +56,7 @@
 	#include "items/rigs.dm"
 	#include "items/stamps.dm"
 
+	#include "items/clothing/accessory.dm"
 	#include "items/clothing/clothing.dm"
 	#include "items/clothing/exploration.dm"
 	#include "items/clothing/override.dm"
