@@ -124,9 +124,11 @@
 					if (key == "Space")
 						var/move_speed = exosuit.legs.move_delay
 						if(!exosuit.legs.good_in_strafe)
-							move_speed = move_speed * 2
-						if(move_speed > 6)
-							move_speed = 6
+							move_speed = move_speed * 2.5
+						if(direction == NORTHWEST || direction == NORTHEAST || direction == SOUTHWEST || direction == SOUTHEAST)
+							move_speed = sqrt((move_speed*move_speed) + (move_speed * move_speed))
+						if(move_speed > 12)
+							move_speed = 12
 						exosuit.SetMoveCooldown(exosuit.legs ? move_speed : 3)
 						var/turf/target_loc = get_step(exosuit, direction)
 						if(target_loc && exosuit.legs && exosuit.legs.can_move_on(exosuit.loc, target_loc) && exosuit.MayEnterTurf(target_loc))
