@@ -32,7 +32,7 @@
 	desc = "Designed to function where any other piece of equipment would have long fallen apart, the Hephaestus Superheavy Lifter series can take a beating and excel at delivering it."
 	melee_damage = 40
 	action_delay = 15
-	max_damage = 90
+	max_damage = 160
 	power_use = 60
 
 /obj/item/mech_component/propulsion/heavy
@@ -65,7 +65,7 @@
 	pilot_coverage = 100
 	exosuit_desc_string = "a heavily armoured chassis"
 	icon_state = "heavy_body"
-	max_damage = 150
+	max_damage = 160
 	mech_health = 500
 	power_use = 50
 	has_hardpoints = list(HARDPOINT_BACK)

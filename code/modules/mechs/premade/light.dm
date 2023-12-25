@@ -54,7 +54,7 @@
 	gender = PLURAL
 	exosuit_desc_string = "advanced sensor array"
 	icon_state = "light_head"
-	max_damage = 30
+	max_damage = 45
 	vision_flags = SEE_TURFS
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	power_use = 50

@@ -9,6 +9,7 @@
 	icon_colour = COLOR_WHITE
 	hardness = MATERIAL_FLEXIBLE
 	weight = 5
+	integrity = 50
 	melting_point = T0C+371 //assuming heat resistant plastic
 	stack_origin_tech = list(TECH_MATERIAL = 3)
 	conductive = 0
@@ -61,6 +62,7 @@
 	hardness = MATERIAL_SOFT
 	weight = 1
 	brute_armor = 1
+	integrity = 10
 	conductive = 0
 	stack_type = null
 	hidden_from_codex = TRUE
