@@ -128,27 +128,15 @@
 	switch(damagetype)
 	//==============================================RENFORCE MATERIAL=============================================================
 	//This code response for mech reiforce - melting(heat), brute and burn defense . Hear writed all material modifiers (Steel - Standart (Brute 7 Burn 7))
-	//Картон(Carboard). brute 1 burn 2
-	// Сталь (Steel) brute 2 burn не выставлен
-	//Плассталь (Plasteel) burn 10 brute 8
-	//Алмаз(Diamond) brute 10 burn 50
-	//Пластик(Plastic) brute 2 burn 2
-	//Стекло(Glass) brute 1 burn 2
-	//Серебро(Silver) brute 2 burn 2
-	//Платина (Platinum) brute 2 burn 2
-	//Золото (Gold) burte 2 burn 2
-	//Аллюминий (Alluminium) brute 2 burn 2
-	//Сталь (Steel) brute 7 burn 7 <---- STANDART
-	//Титан (Titan) brute 10 burn 8
 		if(BRUTE)
-			//Здесь формула что призовёт материал БРУТ //max = 20
+			//Данная формула призывает БРУТ материала
 			var/brute_resist = ((material.brute_armor-7)) // Макс защита - 4 от брута, 8 от бёрна
 			if(brute_resist > 4)
 				brute_resist = 4
 			damage = damage - brute_resist
 			adjustBruteLoss(damage, target)
 		if(BURN)
-			//Здесь формула что призовёт материал БЁРН
+			//Данная формула призывает БЁРН материала
 			var/burn_resist = ((material.burn_armor-7))
 			if(burn_resist > 8)
 				burn_resist = 5
