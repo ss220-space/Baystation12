@@ -194,7 +194,14 @@
 		setClickCooldown(arms ? arms.action_delay : 7)
 		src.visible_message(SPAN_DANGER(" [src] steps back, preparing for a punch!"), blind_message = SPAN_DANGER("You hear the loud hissing of hydraulics!"))
 		playsound(src.loc, mech_step_sound, 60, 1)
-		if(do_after(src, 1.2 SECONDS, get_turf(src),DO_SHOW_PROGRESS|DO_FAIL_FEEDBACK|DO_USER_CAN_TURN|DO_TARGET_CAN_TURN| DO_USER_UNIQUE_ACT | DO_PUBLIC_PROGRESS) && user)
+		var/target_prev_loc = A.loc
+		if(do_after(src, 1.2 SECONDS, get_turf(src), DO_DEFAULT|DO_USER_UNIQUE_ACT|DO_PUBLIC_PROGRESS) && user)
+			if(target_prev_loc != A.loc)
+				src.visible_message(SPAN_DANGER(" [src] misses with his attack!"))
+				do_attack_effect(target_prev_loc, "smash")
+				setClickCooldown(arms ? arms.action_delay : 7)
+				playsound(src.loc, arms_punch_sound, 50, 1)
+				return
 			if(istype(A, /obj/machinery/door/firedoor) )
 				var/obj/machinery/door/firedoor/FD = A
 				if(!FD.blocked)

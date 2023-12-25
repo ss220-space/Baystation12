@@ -64,6 +64,8 @@
 	var/cooldown = 3.5 SECONDS //Time until we can recharge again after a blocked impact
 	var/overheat_cooldown = 50 SECONDS  //[INF](500) Огромное окно для пробития меха.
 	var/OVERHEAT = FALSE
+	var/slowdown_constant = 2.5 //How much legs (and hands) get slower (move_delay/action_delay/turn_delay * slowndown_constant)
+	var/cooldown_time = 10 SECONDS //How long mech have movement slowdown after overheat
 	restricted_hardpoints = list(HARDPOINT_BACK)
 	restricted_software = list(MECH_SOFTWARE_WEAPONS)
 
@@ -92,13 +94,16 @@
 	var/difference = damage - charge
 	charge = Clamp(charge - damage, 0, max_charge)
 	last_recharge = world.time
-	if(difference >= 0)
+	if(difference >= 0) //[INF] OVERHEAT/перегрев
 		toggle()
 		OVERHEAT = TRUE
 		src.visible_message("The mech's computer flashes: WARNING! Shield overheat detected!","The mech's computer beeps, reporting a shield error!",0)
 		playsound(owner.loc,'sound/mecha/shield_deflector_fail.ogg',60,0)
 		update_icon()
 		last_overheat = world.time
+		if(damage==300)
+			src.visible_message("Critical overheat, energy emergency redirected to cooling systems.","Critical overheat, energy emergency redirected to cooling systems.",0)
+			owner.Slowdown_mech(slowdown_constant, cooldown_time) //[INF] Замедлит меха в slowdown_constant раз на cooldown_time время
 		delayed_toggle()
 		return difference
 	else return 0
@@ -119,6 +124,18 @@
 	else
 		OVERHEAT = TRUE
 		delayed_toggle()
+
+//Slodown protocol
+/mob/living/exosuit/proc/Slowdown_mech(var/slowdown_constant, var/cooldown_time)
+	set waitfor = 0
+	legs.move_delay = legs.move_delay * slowdown_constant
+	legs.turn_delay = legs.turn_delay * slowdown_constant
+	arms.action_delay = arms.action_delay * slowdown_constant
+	sleep(cooldown_time)
+	legs.move_delay = legs.move_delay / slowdown_constant
+	legs.turn_delay = legs.turn_delay / slowdown_constant
+	arms.action_delay = arms.action_delay / slowdown_constant
+
 
 /obj/item/mech_equipment/shields/proc/toggle()
 	if(charge == -1)

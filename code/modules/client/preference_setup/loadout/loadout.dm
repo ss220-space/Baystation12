@@ -260,6 +260,22 @@ var/list/gear_datums = list()
 				skill_checks += skill_entry
 
 			entry += "[english_list(skill_checks)]</i>"
+			
+		if(allowed && G.allowed_backgrounds)
+			var/good_background = 0
+			var/decl/cultural_info/background = SSculture.get_culture(pref.cultural_info[TAG_FACTION])
+			var/bgndname = background ? background.name : "Unset"
+			entry += "<br><i>"
+			
+			var/list/backgroundchecks = list()
+			
+			if(bgndname in G.allowed_backgrounds)
+				backgroundchecks += "<font color=55cc55>[bgndname]</font>"
+				good_background = 1
+			else
+				backgroundchecks += "<font color=cc5555>[bgndname]</font>"
+			allowed = good_background
+			entry += "[english_list(backgroundchecks)]</i>"
 		//[INF]
 		entry += "<td style='[text_style]'>[G.price]"
 		entry += "<td style='[text_style]'>[G.required_donate_level]"
@@ -352,6 +368,7 @@ var/list/gear_datums = list()
 	var/list/allowed_roles //Roles that can spawn with this item.
 	var/list/allowed_branches //Service branches that can spawn with it.
 	var/list/allowed_skills //Skills required to spawn with this item.
+	var/list/allowed_backgrounds //Character background required to spawn with this item.
 	var/whitelisted        //Term to check the whitelist for..
 	var/sort_category = "General"
 	var/flags              //Special tweaks in New
