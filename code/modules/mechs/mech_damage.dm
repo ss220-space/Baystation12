@@ -65,7 +65,7 @@
 		if(body_armor)
 			. += body_armor
 
-/mob/living/exosuit/updatehealth() //Самая крепкая сборка Тяжёлая броня + плассталь может жить вполне прилично (500 + 400)
+/mob/living/exosuit/updatehealth()
 	maxHealth = body ? (body.mech_health + material.integrity) : 0 //[INF] Обьяснение логики в code/modules/mechs/components/body
 	health = maxHealth-(getFireLoss()+getBruteLoss())
 
