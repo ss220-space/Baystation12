@@ -3,7 +3,7 @@
 	exosuit_desc_string = "hydraulic quadlegs"
 	desc = "Xion Industrial's arachnid series boasts more leg per leg than the leading competitor."
 	icon_state = "spiderlegs"
-	max_damage = 80
+	max_damage = 240
 	move_delay = 4
 	turn_delay = 1
 	power_use = 25
@@ -13,7 +13,7 @@
 	exosuit_desc_string = "armored tracks"
 	desc = "A classic brought back. The Hephaestus' Landmaster class tracks are impervious to most damage and can maintain top speed regardless of load. Watch out for corners."
 	icon_state = "tracks"
-	max_damage = 150
+	max_damage = 450
 	move_delay = 2 //It´s fast
 	turn_delay = 7
 	power_use = 150
@@ -27,7 +27,7 @@
 	hide_pilot = TRUE //Sprite too small, legs clip through, so for now hide pilot
 	exosuit_desc_string = "a spherical chassis"
 	icon_state = "pod_body"
-	max_damage = 70
+	max_damage = 210
 	power_use = 5
 	has_hardpoints = list(HARDPOINT_BACK)
 	desc = "The NanoTrasen Katamari series cockpits have won a massive tender by SCG few years back. No one is sure why, but these terrible things keep popping up on every government facility."
