@@ -44,7 +44,7 @@
 	name = "exosuit arms"
 	exosuit_desc_string = "heavy-duty industrial lifters"
 	melee_damage = 25
-	max_damage = 50 //[INF] было 70
+	max_damage = 150
 	power_use = 30
 	desc = "The Xion Industrial Digital Interaction Manifolds allow you poke untold dangers from the relative safety of your cockpit."
 
@@ -52,7 +52,7 @@
 	name = "exosuit legs"
 	exosuit_desc_string = "reinforced hydraulic legs"
 	desc = "Wide and stable but not particularly fast."
-	max_damage = 50 //[INF] было 70
+	max_damage = 150
 	move_delay = 4
 	turn_delay = 4
 	power_use = 10
@@ -62,7 +62,7 @@
 	gender = PLURAL
 	exosuit_desc_string = "simple collision detection sensors"
 	desc = "A primitive set of sensors designed to work in tandem with most MKI Eyeball platforms."
-	max_damage = 50 //[INF] было 100(чё)
+	max_damage = 150
 	power_use = 0
 
 /obj/item/mech_component/sensors/powerloader/prebuild()
@@ -76,7 +76,7 @@
 	pilot_coverage = 40
 	exosuit_desc_string = "an industrial rollcage"
 	desc = "A Xion industrial brand roll cage. Technically OSHA compliant. Technically."
-	max_damage = 60 //[INF] Теперь стандартное хп. Карго пузо НЕ должно быть крепче боевой туши
+	max_damage = 180
 	power_use = 0
 	climb_time = 6
 
