@@ -53,7 +53,7 @@
 		)
 
 /obj/item/clothing/under/solgov/utility/expeditionary
-	name = "expeditionary uniform"
+	name = "Expeditionary Corps uniform"
 	desc = "The utility uniform of the SCG Expeditionary Corps, made from biohazard resistant material. This one has silver trim."
 	icon_state = "blackutility_crew"
 	worn_state = "blackutility_crew"
@@ -62,7 +62,7 @@
 		)
 
 /obj/item/clothing/under/solgov/utility/expeditionary_skirt
-	name = "expeditionary skirt"
+	name = "Expeditionary Corps skirt"
 	desc = "A black turtleneck and skirt, the elusive ladies' uniform of the Expeditionary Corps."
 	icon_state = "blackservicefem"
 	worn_state = "blackservicefem"
@@ -71,7 +71,7 @@
 		)
 
 /obj/item/clothing/under/solgov/utility/expeditionary_skirt/officer
-	name = "expeditionary officer skirt"
+	name = "Expeditionary Corps officer skirt"
 	desc = "A black turtleneck and skirt, the elusive ladies' uniform of the Expeditionary Corps. This one has gold trim."
 	icon_state = "blackservicefem_com"
 	worn_state = "blackservicefem_com"
@@ -101,7 +101,7 @@
 	starting_accessories = list(/obj/item/clothing/accessory/solgov/department/research)
 
 /obj/item/clothing/under/solgov/utility/expeditionary/officer
-	name = "expeditionary officer's uniform"
+	name = "Expeditionary Corps officer's uniform"
 	desc = "The utility uniform of the SCG Expeditionary Corps, made from biohazard resistant material. This one has gold trim."
 	icon_state = "blackutility_com"
 	worn_state = "blackutility_com"

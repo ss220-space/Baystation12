@@ -19,6 +19,10 @@
 	display_name = "tape recorder"
 	path = /obj/item/device/taperecorder
 
+/datum/gear/utility/crayons
+	display_name = "crayon pack"
+	path = /obj/item/storage/fancy/crayons
+
 /datum/gear/utility/folder/New()
 	..()
 	var/folders = list()

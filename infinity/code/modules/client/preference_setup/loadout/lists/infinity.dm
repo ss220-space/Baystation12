@@ -84,6 +84,8 @@
 	corpsi["Morpheus uniform"]			= /obj/item/clothing/under/morpheus
 	corpsi["Skinner uniform"]			= /obj/item/clothing/under/skinner
 	corpsi["DAIS uniform"]				= /obj/item/clothing/under/dais
+	corpsi["SCG EC uniform"]			= /obj/item/clothing/under/solgov/utility/expeditionary
+	corpsi["SCG EC officer's uniform"]	= /obj/item/clothing/under/solgov/utility/expeditionary/officer
 	gear_tweaks += new/datum/gear_tweak/path(corpsi)
 
 
