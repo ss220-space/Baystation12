@@ -30,6 +30,7 @@
 	name = "Nanotrasen combat arms"
 	exosuit_desc_string = "flexible, advanced manipulators"
 	icon_state = "combat_arms"
+	max_damage = 180
 	melee_damage = 40
 	action_delay = 10
 	power_use = 50
@@ -38,6 +39,7 @@
 	name = "Nanotrasen combat legs"
 	exosuit_desc_string = "sleek hydraulic legs"
 	icon_state = "combat_legs"
+	max_damage = 180
 	move_delay = 3
 	turn_delay = 3
 	power_use = 20
@@ -49,6 +51,7 @@
 	icon_state = "combat_head"
 	vision_flags = SEE_MOBS
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	max_damage = 180
 	power_use = 200
 
 /obj/item/mech_component/sensors/ert/prebuild()
@@ -60,6 +63,7 @@
 /obj/item/mech_component/chassis/ert
 	name = "sealed exosuit chassis"
 	hatch_descriptor = "canopy"
+	max_damage = 300
 	pilot_coverage = 100
 	exosuit_desc_string = "an armoured chassis"
 	icon_state = "combat_body"
