@@ -22240,12 +22240,11 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = -24
-	},
 /obj/machinery/computer/modular/preset/civilian{
 	dir = 4
+	},
+/obj/structure/reagent_dispensers/acid{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -23402,8 +23401,9 @@
 /obj/structure/bed/chair/office/purple{
 	dir = 4
 	},
-/obj/structure/reagent_dispensers/acid{
-	pixel_x = -32
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -25352,12 +25352,12 @@
 	dir = 8
 	},
 /obj/machinery/external_cooling_device,
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics)
-"aOA" = (
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_y = 32
 	},
+/turf/simulated/floor/tiled/white,
+/area/assembly/robotics)
+"aOA" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
