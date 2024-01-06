@@ -6,6 +6,8 @@
 
 	var/melee_damage = 15
 	var/action_delay = 15
+	var/component_reinforced = MECH_COMPONENT_DEFAULT
+	var/slowdown = 0
 	var/obj/item/robot_parts/robot_component/actuator/motivator
 	power_use = 10
 	w_class = ITEM_SIZE_LARGE
