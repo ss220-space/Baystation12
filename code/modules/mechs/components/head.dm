@@ -10,6 +10,8 @@
 	var/obj/item/mech_component/control_module/software
 	has_hardpoints = list(HARDPOINT_HEAD)
 	var/active_sensors = 0
+	var/status = 0 // 0 - clear, 1 - destroyed but sensors reinforced, 2 - destroyed but sensors shielded
+	var/component_reinforced = MECH_COMPONENT_DEFAULT
 	power_use = 15
 	w_class = ITEM_SIZE_NORMAL
 
@@ -38,20 +40,30 @@
 
 /obj/item/mech_component/sensors/proc/get_sight(powered)
 	var/flags = 0
-	if(total_damage >= 0.8 * max_damage || !powered)
-		flags |= BLIND
-	else if(active_sensors && powered)
-		flags |= vision_flags
+	if(!powered) //Камера не работает/Ничё не запитано?
+		flags |= BLIND //включается слепота
+	if(!camera && powered) //Энергия есть но камера подбита
+		if(component_reinforced == MECH_COMPONENT_DEFAULT)
+			flags |= BLIND //включается слепота
+			status = 3 //All bad!
+		else if(component_reinforced == MECH_COMPONENT_REINFORCED) //Среднее укрепление, комбат сенсоры
+			status = 1 //damaged
+		else if(component_reinforced == MECH_COMPONENT_SHIELDED) //Полное укрепление, тяжёлые сенсоры!
+			status = 2 //damaged but dont care
+	if(powered && camera)
+		if(active_sensors) //SENSORS active? (Button)
+			flags |= vision_flags //Мех получает спец зрение от сенсоров
+			status = 0 // all ok
 
 	return flags
 
+/obj/item/mech_component/sensors/proc/get_vision_type(powered)
+
 /obj/item/mech_component/sensors/proc/get_invisible(powered)
 	var/invisible = 0
-	if((total_damage <= 0.8 * max_damage) && active_sensors && powered)
+	if(active_sensors && powered)
 		invisible = see_invisible
 	return invisible
-
-
 
 /obj/item/mech_component/sensors/ready_to_install()
 	return (radio && camera)
@@ -130,7 +142,7 @@
 
 	if(user)
 		to_chat(user, SPAN_NOTICE("You load \the [software] into \the [src]'s memory."))
-		
+
 	software.forceMove(src)
 	update_software()
 
