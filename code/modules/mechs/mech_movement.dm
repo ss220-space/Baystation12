@@ -12,7 +12,7 @@
 		playsound(src.loc, mech_step_sound, 40, 1)
 
 /mob/living/exosuit/can_ztravel()
-	if(Allow_Spacemove()) //Handle here 
+	if(Allow_Spacemove()) //Handle here
 		return TRUE
 
 /mob/living/exosuit/Allow_Spacemove(check_drift)
@@ -43,7 +43,7 @@
 
 /mob/living/exosuit/can_float()
 	return FALSE //Nope
-	
+
 /datum/movement_handler/mob/delay/exosuit
 	expected_host_type = /mob/living/exosuit
 
@@ -75,14 +75,29 @@
 	var/mob/living/exosuit/exosuit = host
 	if((!(mover in exosuit.pilots) && mover != exosuit) || exosuit.incapacitated() || mover.incapacitated())
 		return MOVEMENT_STOP
+
 	if(!exosuit.legs)
-		to_chat(mover, SPAN_WARNING("\The [exosuit] has no means of propulsion!"))
+		to_chat(mover, SPAN_WARNING("\The [exosuit] has no means of propulsion!")) //Ног вообще нет (Как?)
 		exosuit.SetMoveCooldown(3)
 		return MOVEMENT_STOP
-	if(!exosuit.legs.motivator || !exosuit.legs.motivator.is_functional())
-		to_chat(mover, SPAN_WARNING("Your motivators are damaged! You can't move!"))
-		exosuit.SetMoveCooldown(15)
-		return MOVEMENT_STOP
+
+	if((!exosuit.legs.motivator || !exosuit.legs.motivator.is_functional())) //Выбиты актуаторы
+		if(exosuit.legs.component_reinforced == MECH_COMPONENT_DEFAULT)
+			to_chat(mover, SPAN_WARNING("Your motivators are damaged! You can't move!"))
+			exosuit.SetMoveCooldown(15)
+			return MOVEMENT_STOP
+
+		else if(exosuit.legs.component_reinforced == MECH_COMPONENT_REINFORCED)
+			exosuit.legs.slowdown = 15
+			to_chat(mover, SPAN_WARNING("Your motivators are damaged, movement is difficult!"))
+			exosuit.adjustBruteLoss(2.5, exosuit.legs)
+			sparks(3, 1, mover)
+
+		else if(exosuit.legs.component_reinforced == MECH_COMPONENT_SHIELDED)
+			exosuit.legs.slowdown = 7
+			exosuit.adjustBruteLoss(1.5, exosuit.legs)
+			sparks(3, 1,mover)
+
 	if(exosuit.maintenance_protocols)
 		to_chat(mover, SPAN_WARNING("Maintenance protocols are in effect."))
 		exosuit.SetMoveCooldown(3)
@@ -118,12 +133,19 @@
 	if(exosuit.dir != moving_dir && !(direction & (UP|DOWN)))
 		playsound(exosuit.loc, exosuit.mech_turn_sound, 40,1)
 		exosuit.set_dir(moving_dir)
-		exosuit.SetMoveCooldown(exosuit.legs.turn_delay)
+		if(exosuit.legs.slowdown > exosuit.legs.move_delay)
+			exosuit.SetMoveCooldown(exosuit.legs.slowdown)
+		else
+			exosuit.SetMoveCooldown(exosuit.legs.turn_delay)
 	else
-		exosuit.SetMoveCooldown(exosuit.legs ? exosuit.legs.move_delay : 3)
+		if(exosuit.legs.slowdown > exosuit.legs.move_delay)
+			exosuit.SetMoveCooldown(exosuit.legs ? exosuit.legs.slowdown : 3)
+		else
+			exosuit.SetMoveCooldown(exosuit.legs ? exosuit.legs.move_delay : 3)
 		var/turf/target_loc = get_step(exosuit, direction)
 		if(target_loc && exosuit.legs && exosuit.legs.can_move_on(exosuit.loc, target_loc) && exosuit.MayEnterTurf(target_loc))
 			exosuit.Move(target_loc)
+	exosuit.legs.slowdown = 0
 	return MOVEMENT_HANDLED
 /datum/movement_handler/mob/space/exosuit
 	expected_host_type = /mob/living/exosuit
@@ -140,7 +162,7 @@
 			return MOVEMENT_HANDLED
 		else
 			mob.inertia_dir = 0 //If not then we can reset inertia and move
-	else 
+	else
 		mob.anchored = TRUE
 		mob.inertia_dir = 0 //Reset inertia values as we are not going to be treated as floating
 
