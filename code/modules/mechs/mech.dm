@@ -55,6 +55,7 @@
 	var/list/hardpoints = list()
 	var/hardpoints_locked
 	var/maintenance_protocols
+	var/action_modificator = 0 //Вот эта штука нужна для замедления/ускорения работы рук.
 
 	// Material
 	var/material/material
@@ -76,6 +77,8 @@
 	var/obj/screen/exosuit/toggle/camera/hud_camera
 	//POWER
 	var/power = MECH_POWER_OFF
+	//Head stuff dont touch
+	var/was_status = 0
 
 /mob/living/exosuit/MayZoom()
 	if(head?.vision_flags)
