@@ -130,15 +130,15 @@
 	//This code response for mech reiforce - melting(heat), brute and burn defense . Hear writed all material modifiers (Steel - Standart (Brute 7 Burn 7))
 		if(BRUTE)
 			//Данная формула использует БРУТ АРМОР материала, которым обшили меха (Его каркас)
-			var/brute_resist = ((material.brute_armor-7)) // Макс защита - 4 от брута, 8 от бёрна
-			if(brute_resist > 4)
-				brute_resist = 4
+			var/brute_resist = ((material.brute_armor-7)) // Макс защита - 5 от брута, 5 от бёрна
+			if(brute_resist > 5)
+				brute_resist = 5
 			damage = damage - brute_resist
 			adjustBruteLoss(damage, target)
 		if(BURN)
 			//Данная формула использует БЁРН АРМОР материала, которым обшили меха (Его каркас)
 			var/burn_resist = ((material.burn_armor-7))
-			if(burn_resist > 8)
+			if(burn_resist > 5)
 				burn_resist = 5
 			damage = damage - burn_resist
 			adjustFireLoss(damage, target)
