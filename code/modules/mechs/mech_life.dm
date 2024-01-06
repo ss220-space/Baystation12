@@ -30,7 +30,7 @@
 			var/obj/item/mech_equipment/M = hardpoints[hardpoint]
 			if(istype(M) && M.active && M.passive_power_use)
 				M.deactivate()
-		
+
 
 	updatehealth()
 	if(health <= 0 && stat != DEAD)
@@ -76,11 +76,11 @@
 		bodytemperature += ((environment.temperature - bodytemperature) / 6)
 
 	if(bodytemperature > material.melting_point * 1.45 ) //A bit higher because I like to assume there's a difference between a mech and a wall
-		var/damage = 5
+		var/damage = 15
 		if(bodytemperature > material.melting_point * 1.75 )
-			damage = 10
+			damage = 20
 		if(bodytemperature > material.melting_point * 2.15 )
-			damage = 15
+			damage = 25
 		apply_damage(damage, BURN)
 	//A possibility is to hook up interface icons here. But this works pretty well in my experience
 		if(prob(damage))
@@ -135,13 +135,44 @@
 	explosion(T, -1, 0, 2)
 	qdel(src)
 	return
-
+// SENSORS/head
 /mob/living/exosuit/handle_vision(powered)
 	var/was_blind = sight & BLIND
-	if(head)
-		sight = head.get_sight(powered)
-		see_invisible = head.get_invisible(powered)
-	if(body && (body.pilot_coverage < 100 || body.transparent_cabin) || !hatch_closed)
+	if(hatch_closed && body.pilot_coverage <= 100)
+		if(head.status == 0)
+			sight = head.get_sight(powered)
+			see_invisible = head.get_invisible(powered)
+			action_modificator = 0
+		else if(head.status == 1)
+			for(var/mob/living/pilot in pilots)
+				if(pilot.eye_blurry < 4 || pilot.eye_blurry == null)
+					pilot.eye_blurry += 4
+				if(world.time - was_blind > 5 SECONDS)
+					pilot.eye_blind += 1 // Чутка ослепляет
+				was_blind = world.time
+				action_modificator = 8 // Замедляет все действия на 8.
+		else if (head.status == 2)
+			if(world.time - was_blind > 10 SECONDS) // Каждые 10 сек немного мешает мехводу смотреть
+				for(var/mob/living/pilot in pilots)
+					if(pilot.eye_blurry < 2 || pilot.eye_blurry == null)
+						pilot.eye_blurry += 2
+				was_blind = world.time
+			action_modificator = 4
+
+	if(was_status != head.status) // Этот участок кода нужен для того, чтоб пилоту писало в чат лишь тогда, когда состояние его камеры изменяется!
+		for(var/mob/pilot in pilots)
+			if(head.status == 1)
+				to_chat(pilot, SPAN_WARNING("Main camera of sensors damaged, vision is problematical, repair camera as soon as posible!"))
+				if(head.active_sensors) // Само выключит сенсоры меха, если выбьют камеру
+					head.active_sensors = ..() // Отрубаем сенсоры
+			else if(head.status == 2) // Могут появиться ещё статусы, пусть так останется
+				to_chat(pilot, SPAN_WARNING("Main camera of sensors damaged, alternative vision system active, repair camera as soon as posible"))
+				if(head.active_sensors) // Само выключит сенсоры меха, если выбьют камеру
+					head.active_sensors = ..() // Отрубаем сенсоры
+		hud_camera.on_update_icon()
+		was_status = head.status
+
+	if(body.transparent_cabin || !hatch_closed)
 		sight &= ~BLIND
 
 	if(sight & BLIND && !was_blind)
