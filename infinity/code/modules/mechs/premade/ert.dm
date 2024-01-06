@@ -29,6 +29,7 @@
 /obj/item/mech_component/manipulators/ert
 	name = "Nanotrasen combat arms"
 	exosuit_desc_string = "flexible, advanced manipulators"
+	component_reinforced = MECH_COMPONENT_REINFORCED
 	icon_state = "combat_arms"
 	melee_damage = 40
 	action_delay = 10
@@ -37,6 +38,7 @@
 /obj/item/mech_component/propulsion/ert
 	name = "Nanotrasen combat legs"
 	exosuit_desc_string = "sleek hydraulic legs"
+	component_reinforced = MECH_COMPONENT_REINFORCED
 	icon_state = "combat_legs"
 	move_delay = 3
 	turn_delay = 3
@@ -46,6 +48,7 @@
 	name = "Nanotrasen combat sensors"
 	gender = PLURAL
 	exosuit_desc_string = "high-resolution thermal sensors"
+	component_reinforced = MECH_COMPONENT_REINFORCED
 	icon_state = "combat_head"
 	vision_flags = SEE_MOBS
 	see_invisible = SEE_INVISIBLE_NOLIGHTING

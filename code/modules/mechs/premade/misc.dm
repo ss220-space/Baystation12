@@ -3,6 +3,7 @@
 	exosuit_desc_string = "hydraulic quadlegs"
 	desc = "Xion Industrial's arachnid series boasts more leg per leg than the leading competitor."
 	icon_state = "spiderlegs"
+	component_reinforced = MECH_COMPONENT_REINFORCED
 	max_damage = 80
 	move_delay = 4
 	turn_delay = 1
@@ -13,6 +14,7 @@
 	exosuit_desc_string = "armored tracks"
 	desc = "A classic brought back. The Hephaestus' Landmaster class tracks are impervious to most damage and can maintain top speed regardless of load. Watch out for corners."
 	icon_state = "tracks"
+	component_reinforced = MECH_COMPONENT_REINFORCED
 	max_damage = 150
 	move_delay = 2 //It´s fast
 	turn_delay = 7

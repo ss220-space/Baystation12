@@ -31,6 +31,10 @@ GLOBAL_LIST_INIT(mech_weapon_overlays, icon_states('icons/mecha/mech_weapon_over
 #define MECH_COMPONENT_DAMAGE_DAMAGED 2
 #define MECH_COMPONENT_DAMAGE_DAMAGED_BAD 3
 #define MECH_COMPONENT_DAMAGE_DAMAGED_TOTAL 4
+//Component reaction to damages
+#define MECH_COMPONENT_SHIELDED 2
+#define MECH_COMPONENT_REINFORCED 1
+#define MECH_COMPONENT_DEFAULT 0
 
 //Construction
 #define FRAME_REINFORCED 1

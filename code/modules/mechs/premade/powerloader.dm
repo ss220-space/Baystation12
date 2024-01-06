@@ -76,9 +76,11 @@
 	pilot_coverage = 40
 	exosuit_desc_string = "an industrial rollcage"
 	desc = "A Xion industrial brand roll cage. Technically OSHA compliant. Technically."
+	transparent_cabin = TRUE
 	max_damage = 60 //[INF] Теперь стандартное хп. Карго пузо НЕ должно быть крепче боевой туши
 	power_use = 0
 	climb_time = 6
+	hide_pilot = FALSE //Мехвода видно
 
 /obj/item/mech_component/chassis/powerloader/prebuild()
 	. = ..()

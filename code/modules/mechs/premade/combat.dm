@@ -40,6 +40,7 @@
 	name = "combat arms"
 	exosuit_desc_string = "flexible, advanced manipulators"
 	icon_state = "combat_arms"
+	component_reinforced = MECH_COMPONENT_REINFORCED
 	max_damage = 60
 	melee_damage = 25
 	action_delay = 10
@@ -49,6 +50,7 @@
 	name = "combat legs"
 	exosuit_desc_string = "sleek hydraulic legs"
 	icon_state = "combat_legs"
+	component_reinforced = MECH_COMPONENT_REINFORCED
 	max_damage = 60
 	move_delay = 3
 	turn_delay = 3
@@ -56,6 +58,7 @@
 
 /obj/item/mech_component/sensors/combat
 	name = "combat sensors"
+	component_reinforced = MECH_COMPONENT_REINFORCED
 	gender = PLURAL
 	max_damage = 60
 	exosuit_desc_string = "high-resolution thermal sensors"
