@@ -48,6 +48,14 @@
 	origin_tech = list(TECH_POWER = 1, TECH_ENGINEERING = 1)
 	battery_rating = 60
 
+/obj/item/stock_parts/computer/battery_module/converter
+	name = "Converter battery"
+	desc = "A tiny device with sole purpose to connect main IPC battery"
+	icon_state = "battery_nano"
+	origin_tech = list(TECH_POWER = 1, TECH_ENGINEERING = 1)
+	battery_rating = 80
+	exonets_ipc_computer_suitable = TRUE
+
 // This is not intended to be obtainable in-game. Intended for adminbus and debugging purposes.
 /obj/item/stock_parts/computer/battery_module/lambda
 	name = "lambda coil"

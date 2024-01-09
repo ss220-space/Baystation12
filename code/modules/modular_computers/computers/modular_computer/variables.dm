@@ -50,6 +50,8 @@
 
 	var/modifiable = TRUE	// can't be modified or damaged if false
 
+	var/exonets_ipc_computer = FALSE					// Checks if it suitable to install for IPCs head computers
+
 	var/stores_pen = FALSE
 	var/obj/item/pen/stored_pen
 

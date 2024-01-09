@@ -7,6 +7,7 @@
 	hardware_size = 1
 	max_capacity = 16
 	origin_tech = list(TECH_DATA = 1)
+	exonets_ipc_computer_suitable = TRUE
 
 /obj/item/stock_parts/computer/hard_drive/portable/advanced
 	name = "advanced data crystal"

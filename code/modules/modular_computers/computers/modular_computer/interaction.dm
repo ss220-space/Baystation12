@@ -164,10 +164,12 @@
 
 	if(istype(W, /obj/item/stock_parts/computer))
 		var/obj/item/stock_parts/computer/C = W
-		if(C.hardware_size <= max_hardware_size)
+		if((C.hardware_size <= max_hardware_size) && (!exonets_ipc_computer))
+			try_install_component(user, C)
+		else if(exonets_ipc_computer && C.exonets_ipc_computer_suitable)
 			try_install_component(user, C)
 		else
-			to_chat(user, "This component is too large for \the [src].")
+			to_chat(user, "This component is not suitable for \the [src].")
 	if(isWrench(W))
 		var/list/components = get_all_components()
 		if(components.len)

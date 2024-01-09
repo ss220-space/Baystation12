@@ -1,6 +1,6 @@
 /datum/design/item/modularcomponent
 	category_items = "Computer Parts"
-	
+
 // Drives
 /datum/design/item/modularcomponent/disk/AssembleDesignName()
 	..()
@@ -280,6 +280,15 @@
 	materials = list(MATERIAL_STEEL = 400)
 	build_path = /obj/item/stock_parts/computer/battery_module/micro
 	sort_string = "VBAEF"
+
+/datum/design/item/modularcomponent/battery/converter
+	name = "Converter battery"
+	id = "bat_nano"
+	req_tech = list(TECH_POWER = 1, TECH_ENGINEERING = 1)
+	build_type = PROTOLATHE
+	materials = list(MATERIAL_STEEL = 200)
+	build_path = /obj/item/stock_parts/computer/battery_module/converter
+	sort_string = "VBAFE"
 
 // Processor unit
 /datum/design/item/modularcomponent/cpu/AssembleDesignName()
