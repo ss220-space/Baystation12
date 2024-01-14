@@ -273,10 +273,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		if(alert("Proceeding will destroy loaded item. Continue?", "Destructive analyzer confirmation", "Yes", "No") == "No")
 			return TOPIC_HANDLED
 		CHECK_DESTROY
-		linked_destroy.busy = 1
-		screen = 0.1
-		flick("d_analyzer_process", linked_destroy)
-		addtimer(CALLBACK(src, .proc/finish_deconstruct, weakref(user)), 24)
+		deconstruct(weakref(usr))
 
 	else if(href_list["lock"]) //Lock the console from use by anyone without tox access.
 		if(allowed(usr))
