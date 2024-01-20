@@ -1,10 +1,10 @@
 /obj/item/organ/internal/ecs
-	name = "exonet connection slot"
+	name = "exonet connection port"
 	icon_state = "cooling0"
 	organ_tag = BP_EXONET
 	parent_organ = BP_HEAD
 	status = ORGAN_ROBOTIC
-	desc = "The internal port for computers to connection exonet."
+	desc = "The internal the port is designed to establish communication between the positronic brain and the computer."
 	max_damage = 100
 	var/obj/item/modular_computer/ecs/computer = /obj/item/modular_computer/ecs
 	var/open
@@ -20,9 +20,9 @@
 	..()
 	if(!owner)
 		return
-	if(owner.stat == DEAD)	//not a drain anymore
+	if(owner.stat == DEAD)
 		return
-	if(computer.battery_module.battery.charge < (computer.battery_module.battery.maxcharge * 0.8))
+	if(computer.battery_module.battery.charge < (computer.battery_module.battery.maxcharge))
 		transfer_charge()
 
 /obj/item/organ/internal/ecs/proc/transfer_charge()
@@ -51,13 +51,19 @@
 	if (istype(W, /obj/item/modular_computer/ecs))
 		if(open)
 			if(computer)
-				to_chat(user, "<span class ='warning'>There is a power cell already installed.</span>")
+				to_chat(user, "<span class ='warning'>There \the [computer] already installed.</span>")
 			else if(user.unEquip(W, src))
 				computer = W
 				to_chat(user, "<span class = 'notice'>You insert \the [computer].</span>")
 
 
-/obj/item/organ/internal/ecs/proc/exonet(var/mob/user)
-	var/datum/extension/interactive/ntos/os = get_extension(computer, /datum/extension/interactive/ntos)
-	computer.turn_on(user)
-	os.ui_interact(user)
+/obj/item/organ/internal/ecs/proc/exonet(mob/user)
+	if(!computer.enabled && computer.screen_on)
+		return computer.turn_on(user)
+	switch(alert("Open Terminal or interact with it?", "Open Terminal or interact with it?", "Interact", "Terminal"))
+		if("Interact")
+//[/INF]
+			return computer.ui_interact(user)
+//[INF]
+		if("Terminal")
+			return computer.open_terminal_ecs(user)

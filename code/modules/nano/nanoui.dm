@@ -159,7 +159,7 @@ nanoui is used to open and update nano browser uis
 	if(master_ui)
 		new_status = min(new_status, master_ui.status)
 
-	if(new_status == STATUS_CLOSE)
+	if(new_status == STATUS_CLOSE && !(user.is_species(SPECIES_IPC)))
 		close()
 		return 1
 	set_status(new_status, push_update)

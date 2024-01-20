@@ -23,7 +23,6 @@
 	var/update_postshutdown
 
 	var/list/terminals
-
 //[INF]
 	var/is_remote_ui = 0
 GLOBAL_LIST_EMPTY(CreatedOSes)
@@ -61,7 +60,7 @@ GLOBAL_LIST_EMPTY(CreatedOSes)
 	on = FALSE
 	for(var/datum/computer_file/program/P in running_programs)
 		kill_program(P, 1)
-	
+
 	var/obj/item/stock_parts/computer/network_card/network_card = get_component(PART_NETWORK)
 	if(network_card)
 		ntnet_global.unregister(network_card.identification_id)

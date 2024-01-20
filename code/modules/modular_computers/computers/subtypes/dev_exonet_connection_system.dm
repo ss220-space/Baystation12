@@ -13,7 +13,7 @@
 	max_damage = 100
 	broken_damage = 70
 	max_hardware_size = 2
-	hardware_flag = PROGRAM_CONSOLE
+	hardware_flag = PROGRAM_LAPTOP
 	w_class = ITEM_SIZE_NORMAL
 	w_class = ITEM_SIZE_HUGE
 	exonets_ipc_computer = TRUE
@@ -35,4 +35,12 @@
 	..()
 	hard_drive.store_file(new/datum/computer_file/program/email_client())
 	hard_drive.store_file(new/datum/computer_file/program/wordprocessor())
-	hard_drive.store_file(new/datum/computer_file/program/reports())
+
+
+/obj/item/modular_computer/ecs/attack_self(var/mob/user) // Оставляем возможность вызывать окно только через абилку ИПСа
+	return
+
+
+/obj/item/modular_computer/ecs/proc/open_terminal_ecs(var/mob/user)
+	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
+	return  os.open_terminal(user)
