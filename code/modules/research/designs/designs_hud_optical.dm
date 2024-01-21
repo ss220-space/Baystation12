@@ -32,7 +32,7 @@
 
 /datum/design/item/optical
 	category_items = "HUD Optical"
-	
+
 /datum/design/item/optical/AssembleDesignName()
 	..()
 	name = "Optical glasses design ([item_name])"
