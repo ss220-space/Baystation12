@@ -273,7 +273,7 @@
 		for(var/hardpoint in hardpoints)
 			if(hardpoint != selected_hardpoint)
 				continue
-			var/obj/screen/exosuit/hardpoint/H = hardpoint_hud_elements[hardpoint]
+			var/obj/screen/movable/exosuit/hardpoint/H = hardpoint_hud_elements[hardpoint]
 			if(istype(H))
 				H.icon_state = "hardpoint"
 				break

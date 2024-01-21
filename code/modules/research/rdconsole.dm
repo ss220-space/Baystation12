@@ -66,6 +66,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	var/id = 0			//ID of the computer (for server restrictions).
 	var/sync = 1		//If sync = 0, it doesn't show up on Server Control Console
 	var/can_analyze = TRUE //If the console is allowed to use destructive analyzers
+	var/quick_deconstruct = FALSE
 
 	req_access = list(access_research)	//Data and setting manipulation requires scientist access.
 
@@ -272,10 +273,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		if(alert("Proceeding will destroy loaded item. Continue?", "Destructive analyzer confirmation", "Yes", "No") == "No")
 			return TOPIC_HANDLED
 		CHECK_DESTROY
-		linked_destroy.busy = 1
-		screen = 0.1
-		flick("d_analyzer_process", linked_destroy)
-		addtimer(CALLBACK(src, .proc/finish_deconstruct, weakref(user)), 24)
+		deconstruct(weakref(usr))
 
 	else if(href_list["lock"]) //Lock the console from use by anyone without tox access.
 		if(allowed(usr))
@@ -462,6 +460,17 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 				screen = ((text2num(href_list["print"]) == 2) ? 5.0 : 1.1)
 				interact(user)
 
+	else if (href_list["decon_mode"])
+		quick_deconstruct = !quick_deconstruct
+		interact(user)
+
+/obj/machinery/computer/rdconsole/proc/deconstruct(weakref/W)
+	linked_destroy.busy = TRUE
+	if (!quick_deconstruct)
+		screen = 0.1
+	linked_destroy.icon_state = "d_analyzer_process"
+	addtimer(CALLBACK(src, .proc/finish_deconstruct, W), 24)
+
 /obj/machinery/computer/rdconsole/proc/finish_deconstruct(weakref/W)
 	CHECK_DESTROY
 	var/mob/user = W.resolve()
@@ -495,7 +504,8 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 				linked_destroy.icon_state = "d_analyzer"
 
 	use_power_oneoff(linked_destroy.active_power_usage)
-	screen = 1.0
+	if (!quick_deconstruct)
+		screen = 1.0
 	if(CanInteract(user, DefaultTopicState()))
 		interact(user)
 
@@ -706,16 +716,19 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			dat += "</UL>"
 
 		////////////////////DESTRUCTIVE ANALYZER SCREENS////////////////////////////
+
 		if(2.0)
 			dat += "<A href='?src=\ref[src];menu=1.0'>Main Menu</A><HR>"
 			dat += "NO DESTRUCTIVE ANALYZER LINKED TO CONSOLE<BR><BR>"
 
 		if(2.1)
 			dat += "<A href='?src=\ref[src];menu=1.0'>Main Menu</A><HR>"
+			dat += "<A href='?src=\ref[src];decon_mode=1'>Automatic Deconstruction: [quick_deconstruct ? "ON" : "OFF"]</A><HR>"
 			dat += "No Item Loaded. Standing-by...<BR><HR>"
 
 		if(2.2)
 			dat += "<A href='?src=\ref[src];menu=1.0'>Main Menu</A><HR>"
+			dat += "<A href='?src=\ref[src];decon_mode=1'>Automatic Deconstruction: [quick_deconstruct ? "ON" : "OFF"]</A><HR>"
 			dat += "Deconstruction Menu<HR>"
 			dat += "Name: [linked_destroy.loaded_item.name]<BR>"
 
