@@ -72,6 +72,8 @@
 		to_chat(user, "\The [src] was already emagged.")
 		return NO_EMAG_ACT
 	else
+		if(src.type == /obj/item/modular_computer/ecs)
+			return NO_EMAG_ACT
 		computer_emagged = TRUE
 		to_chat(user, "You emag \the [src]. It's screen briefly shows a \"OVERRIDE ACCEPTED: New software downloads available.\" message.")
 		return 1

@@ -334,3 +334,13 @@
 	chemicals = list(/datum/reagent/acid = 20)
 	build_path = /obj/item/stock_parts/computer/processor_unit/photonic/small
 	sort_string = "VBAFD"
+
+/datum/design/item/modularcomponent/ecs
+	name = "exonet connection system"
+	id = "exonet"
+	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 4)
+	build_type = IMPRINTER
+	materials = list(MATERIAL_STEEL = 4000, glass = 3000)
+	chemicals = list(/datum/reagent/acid = 50)
+	build_path = /obj/item/modular_computer/ecs
+	sort_string = "VBAFE"

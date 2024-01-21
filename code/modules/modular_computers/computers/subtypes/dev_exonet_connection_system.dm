@@ -1,10 +1,10 @@
 //// INTERNAL IPCs COMPUTER
 /obj/item/modular_computer/ecs
 	name = "exonet connection system"
-	desc = "A box with some ports and wires inside."
-	icon = 'icons/obj/modular_telescreen.dmi'
-	icon_state = "telescreen"
-	icon_state_unpowered = "telescreen"
+	desc = "A cirquit with some ports and wires."
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "ecs_on"
+	icon_state_unpowered = "ecs_off"
 	anchored = FALSE
 	w_class = ITEM_SIZE_NORMAL
 	base_idle_power_usage = 5

@@ -1,6 +1,6 @@
 /obj/item/organ/internal/ecs
 	name = "exonet connection port"
-	icon_state = "cooling0"
+	icon_state = "setup_large"
 	organ_tag = BP_EXONET
 	parent_organ = BP_HEAD
 	status = ORGAN_ROBOTIC
@@ -47,6 +47,7 @@
 				user.put_in_hands(computer)
 				to_chat(user, "<span class='notice'>You remove \the [computer] from \the [src].</span>")
 				computer = null
+				icon_state = "setup_large-open"
 
 	if (istype(W, /obj/item/modular_computer/ecs))
 		if(open)
@@ -55,15 +56,16 @@
 			else if(user.unEquip(W, src))
 				computer = W
 				to_chat(user, "<span class = 'notice'>You insert \the [computer].</span>")
+				icon_state = "setup_large"
 
 
 /obj/item/organ/internal/ecs/proc/exonet(mob/user)
 	if(!computer.enabled && computer.screen_on)
 		return computer.turn_on(user)
-	switch(alert("Open Terminal or interact with it?", "Open Terminal or interact with it?", "Interact", "Terminal"))
+	switch(alert("Open Terminal or interact with it?", "Open Terminal or interact with it?", "Interact", "Terminal", "Emergency Shutdown"))
 		if("Interact")
-//[/INF]
 			return computer.ui_interact(user)
-//[INF]
 		if("Terminal")
 			return computer.open_terminal_ecs(user)
+		if("Emergency Shutdown")
+			return computer.emergency_shutdown(user)
