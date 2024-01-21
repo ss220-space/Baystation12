@@ -249,3 +249,13 @@
 	containername = "engineering voidsuit crate"
 	containertype = /obj/structure/closet/crate/secure/large
 	access = access_engine
+
+
+/decl/hierarchy/supply_pack/engineering/it
+	name = "IT-HUD"
+	contains = list(/obj/item/clothing/glasses/hud/it,
+			/obj/item/clothing/glasses/hud/it)
+	cost = 10
+	containertype = /obj/structure/closet/crate/secure
+	containername = "engineering IT crate"
+	access = access_network
