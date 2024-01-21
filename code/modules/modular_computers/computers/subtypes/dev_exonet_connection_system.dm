@@ -11,11 +11,9 @@
 	base_active_power_usage = 50
 	light_strength = 0
 	max_damage = 100
-	broken_damage = 70
+	broken_damage = 60
 	max_hardware_size = 2
 	hardware_flag = PROGRAM_LAPTOP
-	w_class = ITEM_SIZE_NORMAL
-	w_class = ITEM_SIZE_HUGE
 	exonets_ipc_computer = TRUE
 
 /obj/item/modular_computer/ecs/New()

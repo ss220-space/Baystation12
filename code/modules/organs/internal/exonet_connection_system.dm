@@ -5,6 +5,7 @@
 	parent_organ = BP_HEAD
 	status = ORGAN_ROBOTIC
 	desc = "The internal the port is designed to establish communication between the positronic brain and the computer."
+	w_class = ITEM_SIZE_NORMAL
 	max_damage = 100
 	var/obj/item/modular_computer/ecs/computer = /obj/item/modular_computer/ecs
 	var/open
