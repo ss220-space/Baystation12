@@ -60,12 +60,3 @@
 	materials = list(MATERIAL_STEEL = 50, MATERIAL_GLASS = 50, MATERIAL_SILVER = 50, MATERIAL_GOLD = 50)
 	build_path = /obj/item/clothing/glasses/tacgoggles
 	sort_string = "GAAAC"
-
-
-/datum/design/item/optical/it
-	name = "IT HUD"
-	id = "it_goggles"
-	req_tech = list(TECH_MAGNET = 4, TECH_DATA = 4, TECH_ENGINEERING = 4)
-	materials = list(MATERIAL_STEEL = 50, MATERIAL_GLASS = 50)
-	build_path = /obj/item/clothing/glasses/hud/it
-	sort_string = "GAAAD"
