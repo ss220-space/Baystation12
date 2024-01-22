@@ -121,9 +121,8 @@
 	if(!damage)
 		return 0
 
-	var/target = zoneToComponent(def_zone)
-	if(zoneToComponent(def_zone).total_damage >= zoneToComponent(def_zone).max_damage)
-		//ебать его рот сука
+	var/obj/item/mech_component/target = zoneToComponent(def_zone)
+	if(target.total_damage >= target.max_damage)
 		if(target == head)
 			body.take_brute_damage(damage/3)
 			arms.take_brute_damage(damage/3)
@@ -140,7 +139,9 @@
 			body.take_brute_damage(damage/2)
 			head.take_brute_damage(damage/2)
 			arms.take_brute_damage(damage/2)
+		updatehealth()
 		return
+
 	//Only 3 types of damage concern mechs and vehicles
 	switch(damagetype)
 	//==============================================RENFORCE MATERIAL=============================================================
