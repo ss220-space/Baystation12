@@ -179,6 +179,11 @@
 
 /mob/living/exosuit/emp_act(var/severity)
 
+	for(var/obj/aura/mechshield/thing in auras)
+		if(thing.active)
+			thing.emp_act(severity)
+			return
+
 	var/ratio = get_blocked_ratio(null, BURN, null, (4-severity) * 20)
 
 	if(ratio >= 0.5)
