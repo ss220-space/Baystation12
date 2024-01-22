@@ -82,6 +82,8 @@
 	if(total_damage == max_damage)
 		take_component_damage(0,amt)
 
+
+
 /obj/item/mech_component/proc/take_component_damage(var/brute, var/burn)
 	var/list/damageable_components = list()
 	for(var/obj/item/robot_parts/robot_component/RC in contents)

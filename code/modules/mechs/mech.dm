@@ -112,7 +112,8 @@
 			body = source_frame.body
 		if(source_frame.material)
 			material = source_frame.material
-
+	maxHealth = (body.mech_health + material.integrity) + head.max_damage + arms.max_damage + legs.max_damage
+	health = maxHealth
 	updatehealth()
 
 	// Generate hardpoint list.
