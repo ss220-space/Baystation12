@@ -7,7 +7,7 @@
 	move_delay = 4
 	turn_delay = 1
 	power_use = 25
-	good_in_strafe = TRUE //Харош в стрейфе (Нет штрафа за стрейф)
+	can_strafe = TRUE
 
 /obj/item/mech_component/propulsion/tracks
 	name = "tracks"
@@ -19,7 +19,6 @@
 	turn_delay = 7
 	power_use = 150
 	color = COLOR_WHITE
-	can_strafe = FALSE //Вообще не может стрейфить (Ходить боком)
 
 /obj/item/mech_component/chassis/pod
 	name = "spherical exosuit chassis"
