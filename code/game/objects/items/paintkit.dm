@@ -76,7 +76,6 @@
 	desc = "A kit containing all the needed tools and parts to repaint a exosuit."
 	var/removable = null
 	new_icon_file = 'icons/mecha/mech_decals.dmi'
-	//Нужен механизм смены ебаного типа камуфляжа
 	var/current_decal = "cammo2" //По умолчанию
 	var/list/mech_decales = list(
 		"flames_red",
@@ -98,7 +97,7 @@
 
 /obj/item/device/kit/mech/proc/choose_decal(mob/user)
 	set name = "Choose decal"
-	set desc = "Сверху блять не понятно, да?."
+	set desc = "Choose mech decal."
 	set category = "Object"
 	set src in usr
 
