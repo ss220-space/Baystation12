@@ -7,6 +7,7 @@
 	move_delay = 4
 	turn_delay = 1
 	power_use = 25
+	can_strafe = TRUE
 
 /obj/item/mech_component/propulsion/tracks
 	name = "tracks"

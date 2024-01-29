@@ -214,12 +214,13 @@
 	if(.)
 		update_pilots()
 
-/mob/living/exosuit/proc/toggle_power(var/mob/user)
+/mob/living/exosuit/proc/toggle_power(var/mob/user) //Отвечает за энергообеспечение меха, обновляет спрайты меха и его модулей при изменении питания
 	if(power == MECH_POWER_TRANSITION)
 		to_chat(user, SPAN_NOTICE("Power transition in progress. Please wait."))
 	else if(power == MECH_POWER_ON) //Turning it off is instant
 		playsound(src, 'sound/mecha/mech-shutdown.ogg', 100, 0)
 		power = MECH_POWER_OFF
+		update_icon()
 	else if(get_cell(TRUE))
 		//Start power up sequence
 		power = MECH_POWER_TRANSITION
@@ -230,6 +231,7 @@
 		else
 			to_chat(user, SPAN_WARNING("You abort the powerup sequence."))
 			power = MECH_POWER_OFF
+		update_icon()
 		hud_power_control?.queue_icon_update()
 	else
 		to_chat(user, SPAN_WARNING("Error: No power cell was detected."))

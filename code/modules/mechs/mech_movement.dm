@@ -12,7 +12,7 @@
 		playsound(src.loc, mech_step_sound, 40, 1)
 
 /mob/living/exosuit/can_ztravel()
-	if(Allow_Spacemove()) //Handle here 
+	if(Allow_Spacemove()) //Handle here
 		return TRUE
 
 /mob/living/exosuit/Allow_Spacemove(check_drift)
@@ -43,7 +43,7 @@
 
 /mob/living/exosuit/can_float()
 	return FALSE //Nope
-	
+
 /datum/movement_handler/mob/delay/exosuit
 	expected_host_type = /mob/living/exosuit
 
@@ -115,16 +115,43 @@
 		var/txt_dir = direction & UP ? "upwards" : "downwards"
 		exosuit.visible_message(SPAN_NOTICE("\The [exosuit] moves [txt_dir]."))
 
+//STRAFE
+	if(exosuit.legs.can_strafe)
+		for(var/thing in exosuit.pilots) //Для всех пилотов внутри
+			var/mob/pilot = thing
+			if(pilot && pilot.client)
+				for(var/key in pilot.client.keys_held)
+					if (key == "Space")
+						var/move_speed = exosuit.legs.move_delay
+						if(!exosuit.legs.good_in_strafe)
+							move_speed = move_speed * 2.5
+						if(direction == NORTHWEST || direction == NORTHEAST || direction == SOUTHWEST || direction == SOUTHEAST)
+							move_speed = sqrt((move_speed*move_speed) + (move_speed * move_speed))
+						if(move_speed > 12)
+							move_speed = 12
+						exosuit.SetMoveCooldown(exosuit.legs ? move_speed : 3)
+						var/turf/target_loc = get_step(exosuit, direction)
+						if(target_loc && exosuit.legs && exosuit.legs.can_move_on(exosuit.loc, target_loc) && exosuit.MayEnterTurf(target_loc))
+							exosuit.Move(target_loc)
+						return MOVEMENT_HANDLED
+//STRAFE
+
+//TURN
 	if(exosuit.dir != moving_dir && !(direction & (UP|DOWN)))
 		playsound(exosuit.loc, exosuit.mech_turn_sound, 40,1)
 		exosuit.set_dir(moving_dir)
 		exosuit.SetMoveCooldown(exosuit.legs.turn_delay)
+//TURN
+
+//MOVE
 	else
 		exosuit.SetMoveCooldown(exosuit.legs ? exosuit.legs.move_delay : 3)
 		var/turf/target_loc = get_step(exosuit, direction)
 		if(target_loc && exosuit.legs && exosuit.legs.can_move_on(exosuit.loc, target_loc) && exosuit.MayEnterTurf(target_loc))
 			exosuit.Move(target_loc)
 	return MOVEMENT_HANDLED
+//MOVE
+
 /datum/movement_handler/mob/space/exosuit
 	expected_host_type = /mob/living/exosuit
 
@@ -140,7 +167,7 @@
 			return MOVEMENT_HANDLED
 		else
 			mob.inertia_dir = 0 //If not then we can reset inertia and move
-	else 
+	else
 		mob.anchored = TRUE
 		mob.inertia_dir = 0 //Reset inertia values as we are not going to be treated as floating
 
