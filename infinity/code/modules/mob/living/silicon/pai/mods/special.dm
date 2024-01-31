@@ -39,5 +39,5 @@
 	name = "PAI women models' data card"
 	holochasises = list(
 			"Human Female"		=	"h_female",
-			"Human Female Red"	=	"h_female_dead"
+			"Human Female Red"	=	"h_female_red"
 			)

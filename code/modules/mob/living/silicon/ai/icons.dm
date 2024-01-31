@@ -1,6 +1,6 @@
 /datum/ai_icon
 	var/name
-	var/icon = 'infinity/icons/mob/AI.dmi'
+	var/icon = 'icons/mob/AI.dmi'
 	var/alive_icon
 	var/alive_light = COLOR_WHITE
 	var/nopower_icon = "4"
