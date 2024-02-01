@@ -72,7 +72,7 @@
 
 // Mechs are handled in their attackby (mech_interaction.dm).
 /obj/item/device/kit/mech
-	name = "exosuit customisation kit"
+	name = "exosuit customization kit"
 	desc = "A kit containing all the needed tools and parts to repaint a exosuit."
 	var/removable = null
 	new_icon_file = 'icons/mecha/mech_decals.dmi'
