@@ -111,5 +111,5 @@
 /obj/item/device/kit/mech/proc/change_decal(var/new_decal, mob/user)
 	current_decal = new_decal
 	new_name = new_decal
-	to_chat(user, SPAN_NOTICE("You set \the [src] to castomize with [new_decal]."))
+	to_chat(user, SPAN_NOTICE("You set \the [src] to customize with [new_decal]."))
 	playsound(src, 'sound/weapons/flipblade.ogg', 30, 1)
