@@ -250,7 +250,7 @@
 
 /decl/hierarchy/supply_pack/nonessent/exosuit_mod
 	num_contained = 1
-	name = "castomize exosuit modkit"
+	name = "Customization exosuit modkit"
 	contains = list(/obj/item/device/kit/mech)
 	cost = 50
 	containername = "heavy exosuit modkit crate"
