@@ -101,9 +101,6 @@
 		playsound(owner.loc,'sound/mecha/shield_deflector_fail.ogg',60,0)
 		update_icon()
 		last_overheat = world.time
-		if(damage==300)
-			src.visible_message("Critical overheat, energy emergency redirected to cooling systems.","Critical overheat, energy emergency redirected to cooling systems.",0)
-			owner.Slowdown_mech(slowdown_constant, cooldown_time) //[INF] Замедлит меха в slowdown_constant раз на cooldown_time время
 		delayed_toggle()
 		return difference
 	else return 0
@@ -124,18 +121,6 @@
 	else
 		OVERHEAT = TRUE
 		delayed_toggle()
-
-//Slodown protocol
-/mob/living/exosuit/proc/Slowdown_mech(var/slowdown_constant, var/cooldown_time)
-	set waitfor = 0
-	legs.move_delay = legs.move_delay * slowdown_constant
-	legs.turn_delay = legs.turn_delay * slowdown_constant
-	arms.action_delay = arms.action_delay * slowdown_constant
-	sleep(cooldown_time)
-	legs.move_delay = legs.move_delay / slowdown_constant
-	legs.turn_delay = legs.turn_delay / slowdown_constant
-	arms.action_delay = arms.action_delay / slowdown_constant
-
 
 /obj/item/mech_equipment/shields/proc/toggle()
 	if(charge == -1)
@@ -182,13 +167,16 @@
 		icon_state = "shield_droid"
 
 /obj/item/mech_equipment/shields/Process()
-	if(charge >= max_charge)
-		return
 	if((world.time - last_recharge) < cooldown)
 		return
+	if(charge >= max_charge)
+		var/obj/item/cell/cell = owner.get_cell()
+		cell.use(charging_rate/2)
+		return
+
 	var/obj/item/cell/cell = owner.get_cell()
 
-	var/actual_required_power = Clamp(max_charge - charge, 0, charging_rate)
+	var/actual_required_power = 2*Clamp(max_charge - charge, 0, charging_rate)
 
 	if(cell)
 		charge += cell.use(actual_required_power)
@@ -287,6 +275,19 @@
 		playsound(user,'sound/effects/basscannon.ogg',10,1)
 		return AURA_FALSE|AURA_CANCEL
 	//Too fast!
+
+/obj/aura/mechshield/emp_act(var/severity)
+	if(shields)
+		if(shields.charge)
+			if(severity == 1)
+				var/emp_damage = severity * 75
+				shields.stop_damage(emp_damage)
+			if(severity == 2)
+				var/emp_damage = severity * 50
+				shields.stop_damage(emp_damage)
+			user.visible_message(SPAN_WARNING("\The [shields.owner]'s shilds craks, flashs and covers with sparks and energy strikes."))
+			flick("shield_impact", src)
+			playsound(user,'sound/effects/basscannon.ogg',100,0)
 
 //Melee! As a general rule I would recommend using regular objects and putting logic in them.
 /obj/item/mech_equipment/mounted_system/melee
