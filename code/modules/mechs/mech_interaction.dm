@@ -71,10 +71,10 @@
 	var/body_chosen = FALSE
 	if(selected_hardpoint == HARDPOINT_LEFT_HAND || selected_hardpoint == HARDPOINT_RIGHT_HAND)
 		arms_chosen = TRUE
-		body_choosed = FALSE
+		body_chosen = FALSE
 	else if(selected_hardpoint == HARDPOINT_BACK || selected_hardpoint == HARDPOINT_HEAD || selected_hardpoint == HARDPOINT_LEFT_SHOULDER || selected_hardpoint == HARDPOINT_RIGHT_SHOULDER)
 		arms_chosen = FALSE
-		body_choosed = TRUE
+		body_chosen = TRUE
 
 	if(!loc) return
 	var/adj = A.Adjacent(src) // Why in the fuck isn't Adjacent() commutative.
