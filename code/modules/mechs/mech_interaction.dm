@@ -67,13 +67,13 @@
 /mob/living/exosuit/ClickOn(var/atom/A, var/params, var/mob/user)
 	if(!user || incapacitated() || user.incapacitated())
 		return
-	var/arms_choosed = FALSE
-	var/body_choosed = FALSE
+	var/arms_chosen = FALSE
+	var/body_chosen = FALSE
 	if(selected_hardpoint == HARDPOINT_LEFT_HAND || selected_hardpoint == HARDPOINT_RIGHT_HAND)
-		arms_choosed = TRUE
+		arms_chosen = TRUE
 		body_choosed = FALSE
-	if(selected_hardpoint == HARDPOINT_BACK || selected_hardpoint == HARDPOINT_HEAD || selected_hardpoint == HARDPOINT_LEFT_SHOULDER || selected_hardpoint == HARDPOINT_RIGHT_SHOULDER)
-		arms_choosed = FALSE
+	else if(selected_hardpoint == HARDPOINT_BACK || selected_hardpoint == HARDPOINT_HEAD || selected_hardpoint == HARDPOINT_LEFT_SHOULDER || selected_hardpoint == HARDPOINT_RIGHT_SHOULDER)
+		arms_chosen = FALSE
 		body_choosed = TRUE
 
 	if(!loc) return
@@ -101,16 +101,16 @@
 	if(A.loc != src && !(get_dir(src, A) & dir))
 		return
 
-	if(!arms && arms_choosed)
+	if(!arms && arms_chosen)
 		to_chat(user, SPAN_WARNING("\The [src] has no manipulators!"))
 		setClickCooldown(3)
 		return
 
-	if(!arms.motivator && arms_choosed)
+	if(!arms.motivator && arms_chosen)
 		to_chat(user, SPAN_WARNING("Your motivators are damaged! You can't use your manipulators!"))
 		setClickCooldown(15)
 		return
-	if((!body || body.total_damage >= body.max_damage) && body_choosed)
+	if((!body || body.total_damage >= body.max_damage) && body_chosen)
 		to_chat(user, SPAN_WARNING("Your cockpit too damaged, additional hardpoints control system damaged, you cant this module!"))
 		setClickCooldown(15)
 		return
