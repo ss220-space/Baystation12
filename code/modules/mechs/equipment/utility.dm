@@ -556,6 +556,7 @@
 	name = "mounted plasma cutter"
 	desc = "An industrial plasma cutter mounted onto the chassis of the mech. "
 	icon_state = "railauto" //TODO: Make a new sprite that doesn't get sec called on you.
+	disturb_passengers = TRUE // Мешает пассажирам у плеч, слишком длинная байда
 	holding_type = /obj/item/gun/energy/plasmacutter/mounted/mech
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND, HARDPOINT_LEFT_SHOULDER, HARDPOINT_RIGHT_SHOULDER)
 	restricted_software = list(MECH_SOFTWARE_UTILITY)
@@ -593,6 +594,7 @@
 	require_adjacent = FALSE
 	var/stabilizers = FALSE
 	var/slide_distance = 6
+	disturb_passengers = TRUE
 
 /obj/item/mech_equipment/ionjets/Initialize()
 	. = ..()

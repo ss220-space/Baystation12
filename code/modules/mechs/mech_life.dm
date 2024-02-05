@@ -30,7 +30,11 @@
 			var/obj/item/mech_equipment/M = hardpoints[hardpoint]
 			if(istype(M) && M.active && M.passive_power_use)
 				M.deactivate()
-		
+
+	if(passengers_ammount>0)
+		passagirka.return_air()
+		passagirka.check_passengers_status()
+
 
 	updatehealth()
 	if(health <= 0 && stat != DEAD)

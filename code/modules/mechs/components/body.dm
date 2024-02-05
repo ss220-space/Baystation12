@@ -33,12 +33,17 @@
 	var/transparent_cabin = FALSE
 	var/hide_pilot =        FALSE
 	var/hatch_descriptor = "cockpit"
+	var/mob/living/exosuit/owner
 	var/list/pilot_positions
+	var/list/back_passengers_positions
+	var/list/left_back_passengers_positions
+	var/list/right_back_passengers_positions
 	var/pilot_coverage = 100
 	var/min_pilot_size = MOB_SMALL
 	var/max_pilot_size = MOB_LARGE
 	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_LEFT_SHOULDER, HARDPOINT_RIGHT_SHOULDER)
 	var/climb_time = 25
+	var/able_passenger = TRUE
 
 /obj/item/mech_component/chassis/New()
 	..()
@@ -81,7 +86,7 @@
 		cockpit = new
 		cockpit.volume = 200
 		if(loc)
-			var/datum/gas_mixture/air = loc.return_air()
+			var/datum/gas_mixture/air = return_air()
 			if(air)
 				//Essentially at this point its like we created a vacuum, but realistically making a bottle doesnt actually increase volume of a room and neither should a mech
 				for(var/g in air.gas)
@@ -185,7 +190,7 @@ obj/item/mech_component/chassis/MouseDrop(atom/over)
 	if(!usr || !over) return
 	if(!Adjacent(usr) || !over.Adjacent(usr)) return
 
-	if(storage_compartment)
+	if(storage_compartment && LAZYLEN(owner.passagirka.back_passengers)<=0) //Багажник не откроется, пока на спине есть пассажир.
 		return storage_compartment.MouseDrop(over)
 
 /obj/item/mech_component/chassis/return_diagnostics(mob/user)

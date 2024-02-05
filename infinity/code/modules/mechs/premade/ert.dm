@@ -70,11 +70,11 @@
 	power_use = 40
 
 /obj/item/mech_component/chassis/ert/prebuild()
+
 	. = ..()
 	QDEL_NULL(cell)
 	cell = new /obj/item/cell/hyper(src)
 	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/combat/syndie(src)
-
 
 /obj/item/mech_component/chassis/ert/Initialize()
 	pilot_positions = list(
@@ -85,5 +85,24 @@
 			"[WEST]"  = list("x" = 12, "y" = 8)
 		)
 	)
+	back_passengers_positions = list(
+			"[NORTH]" = list("x" = 8,  "y" = 16),
+			"[SOUTH]" = list("x" = 8,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+	left_back_passengers_positions = list(
+			"[NORTH]" = list("x" = -4,  "y" = 16),
+			"[SOUTH]" = list("x" = 20,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+	right_back_passengers_positions = list(
+			"[NORTH]" = list("x" = 20,  "y" = 16),
+			"[SOUTH]" = list("x" = -4,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+
 
 	. = ..()

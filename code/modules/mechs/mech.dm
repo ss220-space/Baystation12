@@ -76,6 +76,19 @@
 	var/obj/screen/movable/exosuit/toggle/camera/hud_camera
 	//POWER
 	var/power = MECH_POWER_OFF
+	//Passenger places
+	// В связи с кор механом, пассажиры будут помещены в отдельный обьект, для того чтобы пассажиры не курили воздух внутри меха!
+	var/obj/item/mech_component/passenger_compartment/passagirka
+	var/list/passenger_places = list(
+		"Back",
+		"Left back",
+		"Right back"
+	)
+	var/passengers_ammount = 0// Хранит в себе общее число пассажиров меха
+	var/list/back_passengers_overlays // <- Изображение пассажира на спине
+	var/list/left_back_passengers_overlays // <- Изображение пассажира на левом боку
+	var/list/right_back_passengers_overlays // <- Изображение пассажира на правом боку
+
 
 /mob/living/exosuit/MayZoom()
 	if(head?.vision_flags)
@@ -112,7 +125,7 @@
 			body = source_frame.body
 		if(source_frame.material)
 			material = source_frame.material
-
+		passagirka = new(src)
 	updatehealth()
 
 	// Generate hardpoint list.

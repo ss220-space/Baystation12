@@ -34,6 +34,9 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 /mob/living/exosuit/on_update_icon()
 	var/list/new_overlays = get_mech_images(list(body, head), MECH_BASE_LAYER)
 	if(body)
+		new_overlays += back_passengers_overlays
+		new_overlays += left_back_passengers_overlays
+		new_overlays += right_back_passengers_overlays
 		new_overlays += get_mech_image(body.decal, "[body.icon_state]_cockpit", body.on_mech_icon, overlay_layer = MECH_INTERMEDIATE_LAYER)
 	update_pilots(FALSE)
 	if(LAZYLEN(pilot_overlays))
@@ -74,6 +77,87 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 			LAZYADD(pilot_overlays, draw_pilot)
 		if(update_overlays && LAZYLEN(pilot_overlays))
 			overlays += pilot_overlays
+
+/mob/living/exosuit/proc/update_passengers(var/update_overlays = TRUE)
+	if(update_overlays && LAZYLEN(back_passengers_overlays))
+		overlays -= back_passengers_overlays
+	if(update_overlays && LAZYLEN(left_back_passengers_overlays))
+		overlays -= left_back_passengers_overlays
+	if(update_overlays && LAZYLEN(right_back_passengers_overlays))
+		overlays -= right_back_passengers_overlays
+	back_passengers_overlays = null
+	left_back_passengers_overlays = null
+	right_back_passengers_overlays = null
+	var/passenger_back_layer
+	var/passenger_left_back_layer
+	var/passenger_right_back_layer
+	//
+	if(dir == EAST)
+		passenger_back_layer = MECH_IDK_BACK_LAYER
+		passenger_left_back_layer = MECH_IDK_BACK_LAYER - 0.01
+		passenger_right_back_layer = MECH_GEAR_LAYER
+	else if(dir == WEST)
+		passenger_back_layer = MECH_IDK_BACK_LAYER
+		passenger_left_back_layer = MECH_GEAR_LAYER
+		passenger_right_back_layer = MECH_IDK_BACK_LAYER - 0.01
+	else if(dir == SOUTH)
+		passenger_back_layer  = MECH_IDK_BACK_LAYER
+		passenger_left_back_layer = MECH_IDK_BACK_LAYER
+		passenger_right_back_layer = MECH_IDK_BACK_LAYER
+	else if(dir == NORTH)
+		passenger_back_layer  = MECH_GEAR_LAYER + 0.01
+		passenger_left_back_layer = MECH_GEAR_LAYER + 0.01
+		passenger_right_back_layer = MECH_GEAR_LAYER + 0.01   // <- Пидорас ломается
+	//
+	//
+	if(LAZYLEN(passagirka.back_passengers)>0) // Отрисовка среднего пассажирка
+		var/mob/passenger_back = passagirka.back_passengers[1]
+		var/image/draw_passenger_back = new
+		draw_passenger_back.appearance = passenger_back
+		var/list/back_offset_values = body.back_passengers_positions
+		var/list/back_directional_offset_values = back_offset_values["[dir]"]
+		draw_passenger_back.pixel_x = passenger_back.default_pixel_x + back_directional_offset_values["x"]
+		draw_passenger_back.pixel_y = passenger_back.default_pixel_y + back_directional_offset_values["y"]
+		draw_passenger_back.pixel_z = 0
+		draw_passenger_back.transform = null
+		draw_passenger_back.layer = passenger_back_layer
+		LAZYADD(back_passengers_overlays, draw_passenger_back)
+	//
+	if(LAZYLEN(passagirka.left_back_passengers)>0) // Отрисовка левого пассажира
+		var/mob/passenger_left_back = passagirka.left_back_passengers[1]
+		var/image/draw_passenger_left_back = new
+		draw_passenger_left_back.appearance = passenger_left_back
+		draw_passenger_left_back.plane = FLOAT_PLANE
+		var/list/left_offset_values = body.left_back_passengers_positions
+		var/list/left_directional_offset_values = left_offset_values["[dir]"]
+		draw_passenger_left_back.pixel_x = passenger_left_back.default_pixel_x + left_directional_offset_values["x"]
+		draw_passenger_left_back.pixel_y = passenger_left_back.default_pixel_y + left_directional_offset_values["y"]
+		draw_passenger_left_back.pixel_z = 0
+		draw_passenger_left_back.transform = null
+		draw_passenger_left_back.layer = passenger_left_back_layer // <- Ебучие слои должны быть в конце кода, иначе пассажира закроют руки, НЕ ЕБУ ПОЧЕМУ
+		LAZYADD(left_back_passengers_overlays, draw_passenger_left_back)
+	//
+	if(LAZYLEN(passagirka.right_back_passengers)>0) // Отрисовка правого пассажира
+		var/mob/passenger_right_back = passagirka.right_back_passengers[1]
+		var/image/draw_passenger_right_back = new
+		draw_passenger_right_back.layer = passenger_right_back_layer
+		draw_passenger_right_back.appearance = passenger_right_back
+		draw_passenger_right_back.plane = FLOAT_PLANE
+		var/list/right_offset_values = body.right_back_passengers_positions
+		var/list/right_directional_offset_values = right_offset_values["[dir]"]
+		draw_passenger_right_back.pixel_x = passenger_right_back.default_pixel_x + right_directional_offset_values["x"]
+		draw_passenger_right_back.pixel_y = passenger_right_back.default_pixel_y + right_directional_offset_values["y"]
+		draw_passenger_right_back.pixel_z = 0
+		draw_passenger_right_back.transform = null
+		draw_passenger_right_back.layer = passenger_right_back_layer // <- Гнида
+		LAZYADD(right_back_passengers_overlays, draw_passenger_right_back)
+	//
+	if(update_overlays && LAZYLEN(back_passengers_overlays))
+		overlays += back_passengers_overlays
+	if(update_overlays && LAZYLEN(left_back_passengers_overlays))
+		overlays += left_back_passengers_overlays
+	if(update_overlays && LAZYLEN(right_back_passengers_overlays))
+		overlays += right_back_passengers_overlays
 
 /mob/living/exosuit/regenerate_icons()
 	return

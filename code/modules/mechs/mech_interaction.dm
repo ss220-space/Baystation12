@@ -286,10 +286,10 @@
 	if(!user.Adjacent(src))
 		return FALSE
 	if(hatch_locked)
-		to_chat(user, SPAN_WARNING("The [body.hatch_descriptor] is locked."))
+		check_passenger(user)// <- Если кабина закрыта - игрок пытается занять пассажирку(Каким ваще хуем кабина может быть locked, но не closed)
 		return FALSE
 	if(hatch_closed)
-		to_chat(user, SPAN_WARNING("The [body.hatch_descriptor] is closed."))
+		check_passenger(user)// <- Если кабина закрыта - игрок пытается занять пассажирку
 		return FALSE
 	if(LAZYLEN(pilots) >= LAZYLEN(body.pilot_positions))
 		to_chat(user, SPAN_WARNING("\The [src] is occupied to capacity."))
@@ -316,6 +316,178 @@
 	update_pilots()
 	user.PushClickHandler(/datum/click_handler/default/mech)
 	return 1
+
+/mob/living/exosuit/proc/check_passenger(var/mob/user)// Выбираем желаемое место, проверяем можно ли его занять, стартуем прок занятия
+	var/choose
+	var/choosed_place = input(usr, "Choose passenger place which you want to take.", name, choose) as null|anything in passenger_places
+	if(user.r_hand != null || user.l_hand != null)
+		to_chat(user,SPAN_NOTICE("You need two free hands to take [choosed_place]."))
+		return
+	if(user.mob_size > MOB_MEDIUM)
+		to_chat(user,SPAN_NOTICE("Looks like you too big to take [choosed_place]."))
+		return
+	if(choosed_place == "Back")
+		if(LAZYLEN(passagirka.back_passengers)>0)
+			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
+			return 0
+		else if(body.able_passenger == FALSE)
+			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [body.name]"))
+			return 0
+	else if(choosed_place == "Left back")
+		if(LAZYLEN(passagirka.left_back_passengers)>0)
+			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
+			return 0
+		else if(arms.able_passenger == FALSE)
+			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [arms.name]"))
+			return 0
+	else if(choosed_place == "Right back")
+		if(LAZYLEN(passagirka.right_back_passengers)>0)
+			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
+			return 0
+		else if(arms.able_passenger == FALSE)
+			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [arms.name]"))
+			return 0
+	else if(choosed_place == null) // How the fuck)
+		return 0
+	if(check_hardpoint_passengers(choosed_place,user) == TRUE)
+		enter_passenger(user,choosed_place)
+
+/mob/living/exosuit/proc/check_hardpoint_passengers(var/place,var/mob/user)// Данный прок проверяет, доступна ли часть тела для занятия её пассажиром в данный момент
+	var/obj/item/mech_equipment/checker
+	if(place == "Back" && hardpoints["back"] != null)
+		checker = hardpoints["back"]
+		if(checker.disturb_passengers == TRUE)
+			to_chat(user,SPAN_NOTICE("[place] covered by [checker] and cant be taked."))
+			return FALSE
+	else if(place == "Left back" && hardpoints["left shoulder"] != null)
+		checker = hardpoints["left shoulder"]
+		if(checker.disturb_passengers == TRUE)
+			to_chat(user,SPAN_NOTICE("[place] covered by [checker] and cant be taked."))
+			return FALSE
+	else if(place == "Right back" && hardpoints["right shoulder"] != null)
+		checker = hardpoints["right shoulder"]
+		if(checker.disturb_passengers == TRUE)
+			to_chat(user,SPAN_NOTICE("[place] covered by [checker] and cant be taked."))
+			return FALSE
+	return TRUE
+
+/mob/living/exosuit/proc/enter_passenger(var/mob/user,var/place)// Пытается пихнуть на пассажирское место пассажира, перед этим ещё раз проверяя их
+	//Проверка спины
+	src.visible_message(SPAN_NOTICE(" [user] Starts climb on the [place] of mech!"))
+	if(do_after(user, 2 SECONDS, get_turf(src),DO_SHOW_PROGRESS|DO_FAIL_FEEDBACK|DO_USER_CAN_TURN| DO_USER_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
+		if(user.r_hand != null || user.l_hand != null)
+			to_chat(user,SPAN_NOTICE("You need two free hands to clim on[place] of mech."))
+			return
+		if(place == "Back" && LAZYLEN(passagirka.back_passengers)==0)
+			user.forceMove(passagirka)
+			LAZYDISTINCTADD(passagirka.back_passengers,user)
+			user.pinned += src
+		else if(place == "Left back" && LAZYLEN(passagirka.left_back_passengers)==0)
+			user.forceMove(passagirka)
+			LAZYDISTINCTADD(passagirka.left_back_passengers,user)
+			user.pinned += src
+		else if(place == "Right back" && LAZYLEN(passagirka.right_back_passengers)==0)
+			user.forceMove(passagirka)
+			LAZYDISTINCTADD(passagirka.right_back_passengers,user)
+			user.pinned += src
+		else
+			to_chat(user,SPAN_NOTICE("Looks like [place] is busy!"))
+			return 0
+		src.visible_message(SPAN_NOTICE(" [user] climbed on [place] of mech!"))
+		passengers_ammount += 1
+		update_passengers()
+
+/mob/living/exosuit/proc/leave_passenger(var/mob/user)// Пассажир сам покидает меха
+	src.visible_message(SPAN_NOTICE("[user] jump off from mech!"))
+	user.dropInto(loc)
+	if(user in passagirka.back_passengers)
+		user.pinned -= src
+		LAZYREMOVE(passagirka.back_passengers,user)
+	else if(user in passagirka.left_back_passengers)
+		user.pinned -= src
+		LAZYREMOVE(passagirka.left_back_passengers,user)
+	else if(user in passagirka.right_back_passengers)
+		user.pinned -= src
+		LAZYREMOVE(passagirka.right_back_passengers,user)
+	passengers_ammount -= 1
+	update_passengers()
+
+/mob/living/exosuit/proc/forced_leave_passenger(var/place,var/mode,var/author)// Нечто внешнее насильно опустошает Одно/все места пассажиров
+// mode 1 - полный выгруз, mode 2 - рандомного одного, mode 0(Отсутствие мода) - ручной скид пассажира мехводом
+	if(mode==1) // Полная разгрузка!!!!!
+		if(LAZYLEN(passagirka.back_passengers)>0)
+			for(var/mob/i in passagirka.back_passengers)
+				LAZYREMOVE(passagirka.back_passengers,i)
+				i.dropInto(loc)
+				i.pinned -= src
+				passengers_ammount -= 1
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+		if(LAZYLEN(passagirka.left_back_passengers)>0)
+			for(var/mob/i in passagirka.left_back_passengers)
+				LAZYREMOVE(passagirka.left_back_passengers,i)
+				i.dropInto(loc)
+				i.pinned -= src
+				passengers_ammount -= 1
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+		if(LAZYLEN(passagirka.right_back_passengers)>0)
+			for(var/mob/i in passagirka.right_back_passengers)
+				LAZYREMOVE(passagirka.right_back_passengers,i)
+				i.dropInto(loc)
+				i.pinned -= src
+				passengers_ammount -= 1
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+		update_passengers()
+
+	else if(mode==2)//Сброс первого попавшегося
+		if(LAZYLEN(passagirka.back_passengers)>0)
+			for(var/mob/i in passagirka.back_passengers)
+				LAZYREMOVE(passagirka.back_passengers,i)
+				i.dropInto(loc)
+				i.pinned -= src
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				passengers_ammount -= 1
+				update_passengers()
+				return
+		else if(LAZYLEN(passagirka.left_back_passengers)>0)
+			for(var/mob/i in passagirka.left_back_passengers)
+				LAZYREMOVE(passagirka.left_back_passengers,i)
+				i.dropInto(loc)
+				i.pinned -= src
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				passengers_ammount -= 1
+				update_passengers()
+				return
+		else if(LAZYLEN(passagirka.right_back_passengers)>0)
+			for(var/mob/i in passagirka.right_back_passengers)
+				LAZYREMOVE(passagirka.right_back_passengers,i)
+				i.dropInto(loc)
+				i.pinned -= src
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				passengers_ammount -= 1
+				update_passengers()
+				return
+
+	else // <- Выбирается первый пассажир (Каким хуем вы сможете пихнуть туда два?)
+		if(place == "Back")
+			for(var/mob/i in passagirka.back_passengers)
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				i.dropInto(loc)
+				i.pinned -= src
+				LAZYREMOVE(passagirka.back_passengers,i)
+		else if(place == "Left back")
+			for(var/mob/i in passagirka.left_back_passengers)
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]!"))
+				i.dropInto(loc)
+				i.pinned -= src
+				LAZYREMOVE(passagirka.left_back_passengers,i)
+		else if(place == "Right back")
+			for(var/mob/i in passagirka.right_back_passengers)
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]!"))
+				i.dropInto(loc)
+				i.pinned -= src
+				LAZYREMOVE(passagirka.right_back_passengers,i)
+		passengers_ammount -= 1
+		update_passengers()
 
 /mob/living/exosuit/proc/sync_access()
 	access_card.access = saved_access.Copy()
@@ -370,6 +542,22 @@
 		var/to_place = input("Where would you like to install it?") as null|anything in (realThing.restricted_hardpoints & free_hardpoints)
 		if(!to_place)
 			to_chat(user, SPAN_WARNING("There is no room to install \the [thing]."))
+		// check passengers subsystem before
+		if(realThing.disturb_passengers == TRUE)// Module cant be equiped with passengers? (jets, sleeper etc)
+			if(to_place == "back")
+				if(LAZYLEN(passagirka.back_passengers) > 0)
+					to_chat(user, SPAN_WARNING("[to_place] covered by passenger, you cant install \the [thing]."))
+					return
+			else if(to_place == "left shoulder")
+				if(LAZYLEN(passagirka.left_back_passengers) > 0)
+					to_chat(user, SPAN_WARNING("[to_place] covered by passenger, you cant install \the [thing]."))
+					return
+			else if(to_place == "right shoulder")
+				if(LAZYLEN(passagirka.right_back_passengers) > 0)
+					to_chat(user, SPAN_WARNING("[to_place] covered by passenger, you cant install \the [thing]."))
+					return
+		//
+			return
 		if(install_system(thing, to_place, user))
 			return
 		to_chat(user, SPAN_WARNING("\The [thing] could not be installed in that hardpoint."))
@@ -504,6 +692,9 @@
 /mob/living/exosuit/attack_hand(var/mob/user)
 	// Drag the pilot out if possible.
 	if(user.a_intent == I_HURT)
+		if(passengers_ammount > 0 && hatch_closed)// Стянуть пассажира с меха рукой!
+			forced_leave_passenger(null,2,user)
+			return
 		if(!LAZYLEN(pilots))
 			to_chat(user, SPAN_WARNING("There is nobody inside \the [src]."))
 		else if(!hatch_closed)
@@ -512,7 +703,6 @@
 			if(do_after(user, 30) && user.Adjacent(src) && (pilot in pilots) && !hatch_closed)
 				user.visible_message(SPAN_DANGER("\The [user] drags \the [pilot] out of \the [src]!"))
 				eject(pilot, silent=1)
-		else if(hatch_closed)
 			if(MUTATION_FERAL in user.mutations)
 				user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 				attack_generic(user, 5)

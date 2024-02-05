@@ -12,7 +12,7 @@
 		playsound(src.loc, mech_step_sound, 40, 1)
 
 /mob/living/exosuit/can_ztravel()
-	if(Allow_Spacemove()) //Handle here 
+	if(Allow_Spacemove()) //Handle here
 		return TRUE
 
 /mob/living/exosuit/Allow_Spacemove(check_drift)
@@ -43,7 +43,7 @@
 
 /mob/living/exosuit/can_float()
 	return FALSE //Nope
-	
+
 /datum/movement_handler/mob/delay/exosuit
 	expected_host_type = /mob/living/exosuit
 
@@ -118,6 +118,8 @@
 	if(exosuit.dir != moving_dir && !(direction & (UP|DOWN)))
 		playsound(exosuit.loc, exosuit.mech_turn_sound, 40,1)
 		exosuit.set_dir(moving_dir)
+		if(exosuit.passengers_ammount>0)
+			exosuit.update_passengers()
 		exosuit.SetMoveCooldown(exosuit.legs.turn_delay)
 	else
 		exosuit.SetMoveCooldown(exosuit.legs ? exosuit.legs.move_delay : 3)
@@ -140,7 +142,7 @@
 			return MOVEMENT_HANDLED
 		else
 			mob.inertia_dir = 0 //If not then we can reset inertia and move
-	else 
+	else
 		mob.anchored = TRUE
 		mob.inertia_dir = 0 //Reset inertia values as we are not going to be treated as floating
 

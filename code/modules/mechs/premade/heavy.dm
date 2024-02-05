@@ -69,10 +69,47 @@
 	mech_health = 500
 	power_use = 50
 	has_hardpoints = list(HARDPOINT_BACK)
+	hide_pilot = TRUE //<- Поможет избежать возможных оказиц с отображением пилотов(Чего быть не должно)
 
 /obj/item/mech_component/chassis/heavy/prebuild()
 	. = ..()
 	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/combat(src)
+
+/obj/item/mech_component/chassis/heavy/Initialize()
+	pilot_positions = list(
+		list(
+			"[NORTH]" = list("x" = 8,  "y" = 8),
+			"[SOUTH]" = list("x" = 8,  "y" = 8),
+			"[EAST]"  = list("x" = 4,  "y" = 8),
+			"[WEST]"  = list("x" = 12, "y" = 8)
+		),
+		list(
+			"[NORTH]" = list("x" = 8,  "y" = 8),
+			"[SOUTH]" = list("x" = 8,  "y" = 8),
+			"[EAST]"  = list("x" = 4,  "y" = 8),
+			"[WEST]"  = list("x" = 12, "y" = 8)
+		)
+	)
+	back_passengers_positions = list(
+			"[NORTH]" = list("x" = 8,  "y" = 16),
+			"[SOUTH]" = list("x" = 8,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+	left_back_passengers_positions = list(
+			"[NORTH]" = list("x" = -4,  "y" = 16),
+			"[SOUTH]" = list("x" = 20,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+	right_back_passengers_positions = list(
+			"[NORTH]" = list("x" = 20,  "y" = 16),
+			"[SOUTH]" = list("x" = -4,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+
+	. = ..()
 
 /mob/living/exosuit/premade/heavy/merc/Initialize()
 	. = ..()
