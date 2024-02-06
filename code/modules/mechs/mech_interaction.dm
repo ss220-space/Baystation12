@@ -711,6 +711,7 @@
 			if(do_after(user, 30) && user.Adjacent(src) && (pilot in pilots) && !hatch_closed)
 				user.visible_message(SPAN_DANGER("\The [user] drags \the [pilot] out of \the [src]!"))
 				eject(pilot, silent=1)
+		else if(hatch_closed)
 			if(MUTATION_FERAL in user.mutations)
 				user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 				attack_generic(user, 5)
