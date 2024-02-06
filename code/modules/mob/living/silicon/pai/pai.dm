@@ -21,8 +21,8 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 
 /mob/living/silicon/pai
 	name = "pAI"
-	icon = 'infinity/icons/mob/pai.dmi'
-	icon_state = "repairbot"
+	icon = 'icons/mob/pai.dmi'
+	icon_state = "drone"
 	hud_type = /datum/hud/pai
 	emote_type = 2		// pAIs emotes are heard, not seen, so they can be seen through a container (eg. person)
 	pass_flags = PASS_FLAG_TABLE

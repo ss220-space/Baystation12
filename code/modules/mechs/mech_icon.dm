@@ -51,8 +51,11 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		var/obj/item/mech_equipment/hardpoint_object = hardpoints[hardpoint]
 		if(hardpoint_object)
 			var/use_icon_state = "[hardpoint_object.icon_state]_[hardpoint]"
-			if(use_icon_state in GLOB.mech_weapon_overlays)
-				new_overlays += get_mech_image(null, use_icon_state, 'icons/mecha/mech_weapon_overlays.dmi', null, hardpoint_object.mech_layer )
+			if(power == MECH_POWER_ON)
+				if(use_icon_state in GLOB.mech_weapon_overlays)
+					new_overlays += get_mech_image(null, use_icon_state, 'icons/mecha/mech_weapon_overlays.dmi', null, hardpoint_object.mech_layer )
+			else
+				new_overlays += get_mech_image(null, use_icon_state, 'icons/mecha/mech_weapon_overlays_off.dmi', null, hardpoint_object.mech_layer )
 	overlays = new_overlays
 
 /mob/living/exosuit/proc/update_pilots(var/update_overlays = TRUE)

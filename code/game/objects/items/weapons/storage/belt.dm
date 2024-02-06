@@ -136,7 +136,10 @@
 		/obj/item/tape_roll,
 		/obj/item/clothing/head/beret,
 		/obj/item/material/knife/folding/,
-		/obj/item/welder_tank
+		/obj/item/welder_tank,
+		/obj/item/device/paint_sprayer,
+		/obj/item/rcd,
+		/obj/item/rcd_ammo
 		)
 
 
@@ -161,7 +164,13 @@
 	new /obj/item/device/t_scanner(src)
 	update_icon()
 
-
+/obj/item/storage/belt/utility/chief/New()
+	..()
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/weldingtool(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/stack/cable_coil/random(src, 30)
+	update_icon()
 
 /obj/item/storage/belt/medical
 	name = "medical belt"

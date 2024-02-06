@@ -5,11 +5,6 @@
 	var/new_desc = "An exosuit." //How is the new exosuit described?
 	var/new_icon = "ripley"  //What base icon will the new exosuit use?
 	var/new_icon_file
-	var/uses = 1        // Uses before the kit deletes itself.
-
-/obj/item/device/kit/examine(mob/user)
-	. = ..()
-	to_chat(user, "It has [uses] use\s left.")
 
 /obj/item/device/kit/inherit_custom_item_data(var/datum/custom_item/citem)
 	new_name = citem.item_name
@@ -18,18 +13,14 @@
 	new_icon_file = CUSTOM_ITEM_OBJ
 	. = src
 
-/obj/item/device/kit/proc/use(var/amt, var/mob/user)
-	uses -= amt
+/obj/item/device/kit/proc/use(var/mob/user)
 	playsound(get_turf(user), 'sound/items/Screwdriver.ogg', 50, 1)
-	if(uses<1)
-		qdel(src)
 
 // Root hardsuit kit defines.
 // Icons for modified hardsuits need to be in the proper .dmis because suit cyclers may cock them up.
 /obj/item/device/kit/suit
 	name = "voidsuit modification kit"
 	desc = "A kit for modifying a voidsuit."
-	uses = 2
 	var/new_light_overlay
 	var/new_mob_icon_file
 
@@ -80,93 +71,45 @@
 	return ..()
 
 // Mechs are handled in their attackby (mech_interaction.dm).
-/obj/item/device/kit/paint
-	name = "exosuit customisation kit"
+/obj/item/device/kit/mech
+	name = "exosuit customization kit"
 	desc = "A kit containing all the needed tools and parts to repaint a exosuit."
 	var/removable = null
+	new_icon_file = 'icons/mecha/mech_decals.dmi'
+	var/current_decal = "cammo2" //По умолчанию
+	var/list/mech_decales = list(
+		"flames_red",
+		"flames_blue",
+		"cammo2",
+		"cammo1",
+		"red_stripes",
+		"white_stripes",
+		"black_stripes",
+		"green_stripes",
+	)
 
-/obj/item/device/kit/paint/examine(mob/user)
+/obj/item/device/kit/mech/attack_self(mob/user)//Тыкаем по самому киту дабы вызвать список того, какую декаль хотим на меха
+	choose_decal(user)
+
+/obj/item/device/kit/mech/examine(mob/user)
 	. = ..()
 	to_chat(user, "This kit will add a '[new_name]' decal to a exosuit'.")
 
-// exosuit kits.
-/obj/item/device/kit/paint/use(amt, mob/user)
-	playsound(get_turf(user), 'sound/items/Screwdriver.ogg', 50, 1)
-	
-/obj/item/device/kit/paint/flames_red
-	name = "\"Firestarter\" exosuit customisation kit"
-	new_icon = "flames_red"
+/obj/item/device/kit/mech/proc/choose_decal(mob/user)
+	set name = "Choose decal"
+	set desc = "Choose mech decal."
+	set category = "Object"
+	set src in usr
 
-/obj/item/device/kit/paint/flames_blue
-	name = "\"Burning Chrome\" exosuit customisation kit"
-	new_icon = "flames_blue"
+	if(usr.incapacitated())
+		return
+	var/new_decal = input(usr, "Choose a decal.", name, current_decal) as null|anything in mech_decales
+	if (usr.incapacitated())
+		return
+	change_decal(new_decal, usr)
 
-
-/*
-//[inf]
-	//Ripley
-/obj/item/device/kit/paint/ripley
-	name = "\"Classic\" APLU customisation kit"
-	new_name = "APLU \"Classic\""
-	new_desc = "A very retro APLU unit; didn't they retire these back in 2287?"
-	new_icon = "ripley-old"
-	allowed_types = list("ripley")
-
-/obj/item/device/kit/paint/ripley/death
-	name = "\"Reaper\" APLU customisation kit"
-	new_name = "APLU \"Reaper\""
-	new_desc = "A terrifying, grim power loader. Why do those clamps have spikes?"
-	new_icon = "deathripley"
-	allowed_types = list("ripley","firefighter")
-
-	// Durand kits.
-/obj/item/device/kit/paint/durand
-	name = "\"Classic\" Durand customisation kit"
-	new_name = "Durand \"Classic\""
-	new_desc = "An older model of Durand combat exosuit. This model was retired for rotating a pilot's torso 180 degrees."
-	new_icon = "old_durand"
-	allowed_types = list("durand")
-
-/obj/item/device/kit/paint/durand/seraph
-	name = "\"Cherubim\" Durand customisation kit"
-	new_name = "Durand \"Cherubim\""
-	new_desc = "A Durand combat exosuit modelled after ancient Earth entertainment. Your heart goes doki-doki just looking at it."
-	new_icon = "old_durand"
-
-/obj/item/device/kit/paint/durand/phazon
-	name = "\"Sypher\" Durand customisation kit"
-	new_name = "Durand \"Sypher\""
-	new_desc = "A Durand combat exosuit with some very stylish neons and decals. Seems to blur slightly at the edges; probably an optical illusion."
-	new_icon = "phazon"
-
-// Gygax kits.
-/obj/item/device/kit/paint/gygax
-	name = "\"Jester\" Gygax customisation kit"
-	new_name = "Gygax \"Jester\""
-	new_desc = "A Gygax exosuit modelled after the infamous combat-troubadors of Earth's distant past. Terrifying to behold."
-	new_icon = "honker"
-	allowed_types = list("gygax")
-
-/obj/item/device/kit/paint/gygax/darkgygax
-	name = "\"Silhouette\" Gygax customisation kit"
-	new_name = "Gygax \"Silhouette\""
-	new_desc = "An ominous Gygax exosuit modelled after the fictional corporate 'death squads' that were popular in pulp action-thrillers back in 2280s."
-	new_icon = "darkgygax"
-
-/obj/item/device/kit/paint/gygax/recitence
-	name = "\"Gaoler\" Gygax customisation kit"
-	new_name = "Durand \"Gaoler\""
-	new_desc = "A bulky silver Gygax exosuit. The extra armour appears to be painted on, but it's very shiny."
-	new_icon = "recitence"
-
-//[/inf]
-*/
-/obj/item/device/kit/paint/camouflage
-	name = "\"Guerilla\" exosuit customisation kit"
-	desc = "The exact same pattern the 76th Armored Gauntlet used in the Gaia war, now available for general use."
-	new_icon = "cammo1"
-
-/obj/item/device/kit/paint/camouflage/forest
-	name = "\"Alpine\" exosuit customisation kit"
-	new_icon = "cammo2"
-	desc = "A muted pattern for alpine environments. Don't miss the forest for the trees!"
+/obj/item/device/kit/mech/proc/change_decal(var/new_decal, mob/user)
+	current_decal = new_decal
+	new_name = new_decal
+	to_chat(user, SPAN_NOTICE("You set \the [src] to customize with [new_decal]."))
+	playsound(src, 'sound/weapons/flipblade.ogg', 30, 1)
