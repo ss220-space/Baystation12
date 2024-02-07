@@ -664,29 +664,20 @@ default behaviour is:
 			return TRUE
 
 	// Пассажирка меха
-	if(istype(loc, /obj/item/mech_component/passenger_compartment))
+	if(istype(loc, /obj/item/mech_component/passenger_compartment))// Если прожал resist пассажир меха
 		var/mob/living/exosuit/M = loc.loc
 		var/obj/item/mech_component/passenger_compartment/C = loc
 		if((src in C.back_passengers) || (src in C.left_back_passengers) || (src in C.right_back_passengers))
 			if(M.leave_passenger(src))// Пассажир, сьебись с меха
 				return TRUE
-	if(istype(loc, /mob/living/exosuit))
+	if(istype(loc, /mob/living/exosuit)) // Если прожал resist пилот меха
 		var/mob/living/exosuit/C = loc
-		var/obj/item/mech_component/passenger_compartment/P = C.passagirka
-		if(C.passengers_ammount >= 1) //
+		if(C.passengers_ammount > 1)
 			var/choose
-			var/choosed_place = input(usr, "Выберите пассажирское место, которое вы хотите опустошить.", name, choose) as null|anything in C.passenger_places
-			C.forced_leave_passenger(choosed_place,0) // Вторая переменная 0, т.к мы хотим скинуть опр. чувака
+			var/choosed_place = input(usr, "Choose passenger place which you want unload.", name, choose) as null|anything in C.passenger_places
+			C.forced_leave_passenger(choosed_place,0,C) // Вторая переменная 0, т.к мы хотим скинуть опр. чувака
 		else
-			if(LAZYLEN(P.back_passengers)>0) // Пассажир на спине
-				if(C.forced_leave_passenger("Back",0,C))
-					return TRUE
-			else if(LAZYLEN(P.left_back_passengers)>0) // Пассажир на левом боку
-				if(C.forced_leave_passenger("Left back",0,C))
-					return TRUE
-			else if(LAZYLEN(P.right_back_passengers)>0) // Пассажир на правом боку
-				if(C.forced_leave_passenger("Right back",0,C))
-					return TRUE
+			C.forced_leave_passenger(null,2,C) // Вторая переменная 2, т.к мы хотим скинуть единственного чувака с меха
 		return TRUE
 
 

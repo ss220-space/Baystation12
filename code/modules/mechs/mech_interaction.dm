@@ -397,17 +397,17 @@
 		passengers_ammount += 1
 		update_passengers()
 
+// будет использоваться Life() дабы исключить моменты, когда по какой-то причине пассажир слез с меха, лежа на полу. Life вызовется, обработается pinned, всем в кайф.
 /mob/living/exosuit/proc/leave_passenger(var/mob/user)// Пассажир сам покидает меха
 	src.visible_message(SPAN_NOTICE("[user] jump off from mech!"))
 	user.dropInto(loc)
+	user.pinned -= src
+	user.Life()
 	if(user in passagirka.back_passengers)
-		user.pinned -= src
 		LAZYREMOVE(passagirka.back_passengers,user)
 	else if(user in passagirka.left_back_passengers)
-		user.pinned -= src
 		LAZYREMOVE(passagirka.left_back_passengers,user)
 	else if(user in passagirka.right_back_passengers)
-		user.pinned -= src
 		LAZYREMOVE(passagirka.right_back_passengers,user)
 	passengers_ammount -= 1
 	update_passengers()
@@ -420,6 +420,7 @@
 				LAZYREMOVE(passagirka.back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
+				i.Life()
 				passengers_ammount -= 1
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
 		if(LAZYLEN(passagirka.left_back_passengers)>0)
@@ -427,6 +428,7 @@
 				LAZYREMOVE(passagirka.left_back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
+				i.Life()
 				passengers_ammount -= 1
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
 		if(LAZYLEN(passagirka.right_back_passengers)>0)
@@ -434,6 +436,7 @@
 				LAZYREMOVE(passagirka.right_back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
+				i.Life()
 				passengers_ammount -= 1
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
 		update_passengers()
@@ -444,6 +447,7 @@
 				LAZYREMOVE(passagirka.back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
+				i.Life()
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
 				passengers_ammount -= 1
 				update_passengers()
@@ -453,6 +457,7 @@
 				LAZYREMOVE(passagirka.left_back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
+				i.Life()
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
 				passengers_ammount -= 1
 				update_passengers()
@@ -462,6 +467,8 @@
 				LAZYREMOVE(passagirka.right_back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
+				i.Life()
+				i.Life()
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
 				passengers_ammount -= 1
 				update_passengers()
