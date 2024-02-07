@@ -69,7 +69,6 @@
 			. += body_armor
 
 /mob/living/exosuit/updatehealth()
-	maxHealth = body ? (body.mech_health + material.integrity) : 0 //[INF] Обьяснение логики в code/modules/mechs/components/body
 	health = maxHealth-(getFireLoss()+getBruteLoss())
 
 /mob/living/exosuit/adjustFireLoss(var/amount, var/obj/item/mech_component/MC = pick(list(arms, legs, body, head)))
@@ -118,7 +117,6 @@
 			return
 
 		def_zone = ran_zone(def_zone)
-
 	var/list/after_armor = modify_damage_by_armor(def_zone, damage, damagetype, damage_flags, src, armor_pen, TRUE)
 	damage = after_armor[1]
 	damagetype = after_armor[2]
@@ -126,7 +124,27 @@
 	if(!damage)
 		return 0
 
-	var/target = zoneToComponent(def_zone)
+	var/obj/item/mech_component/target = zoneToComponent(def_zone)
+	if(target.total_damage >= target.max_damage)
+		if(target == head)
+			body.take_brute_damage(damage/3)
+			arms.take_brute_damage(damage/3)
+			legs.take_brute_damage(damage/3)
+		else if(target == body)
+			head.take_brute_damage(damage/1.5)
+			legs.take_brute_damage(damage/1.5)
+			arms.take_brute_damage(damage/1.5)
+		else if(target == arms)
+			body.take_brute_damage(damage/3)
+			head.take_brute_damage(damage/3)
+			legs.take_brute_damage(damage/3)
+		else if(target == legs)
+			body.take_brute_damage(damage/2)
+			head.take_brute_damage(damage/2)
+			arms.take_brute_damage(damage/2)
+		updatehealth()
+		return
+
 	//Only 3 types of damage concern mechs and vehicles
 	switch(damagetype)
 	//==============================================RENFORCE MATERIAL=============================================================
@@ -181,6 +199,11 @@
 	return total
 
 /mob/living/exosuit/emp_act(var/severity)
+
+	for(var/obj/aura/mechshield/thing in auras)
+		if(thing.active)
+			thing.emp_act(severity)
+			return
 
 	var/ratio = get_blocked_ratio(null, BURN, null, (4-severity) * 20)
 
