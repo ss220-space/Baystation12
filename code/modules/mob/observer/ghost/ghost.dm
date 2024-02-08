@@ -32,6 +32,8 @@ var/global/list/image/ghost_sightless_images = list() //this is a list of images
 	var/obj/item/device/multitool/ghost_multitool
 	var/list/hud_images // A list of hud images
 
+	var/thearea
+
 /mob/observer/ghost/New(mob/body)
 	see_in_dark = 100
 	verbs += /mob/proc/toggle_antag_pool
@@ -71,7 +73,6 @@ var/global/list/image/ghost_sightless_images = list() //this is a list of images
 	ghost_multitool = new(src)
 
 	GLOB.ghost_mob_list += src
-
 	..()
 
 /mob/observer/ghost/Destroy()
@@ -108,7 +109,6 @@ Works together with spawning an observer, noted above.
 	..()
 	if(!loc) return
 	if(!client) return 0
-
 	handle_hud_glasses()
 
 	if(antagHUD)
@@ -150,6 +150,7 @@ Works together with spawning an observer, noted above.
 		ghost.key = key
 		if(ghost.client && !ghost.client.holder && !config.antag_hud_allowed)		// For new ghosts we remove the verb from even showing up if it's not allowed.
 			ghost.verbs -= /mob/observer/ghost/verb/toggle_antagHUD	// Poor guys, don't know what they are missing!
+		ghost.add_ghost_buttons()
 		return ghost
 
 /mob/observer/ghostize() // Do not create ghosts of ghosts.
@@ -233,6 +234,16 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		announce_ghost_joinleave(mind, 0, "They now occupy their body again.")
 	return 1
 
+/mob/observer/ghost/proc/jumptomob()
+	var/mob/M = input(usr, "Pick a mob", "Pick a mob") as null|anything in SSmobs.mob_list
+	log_and_message_admins("jumped to [key_name(M)]")
+	var/turf/T = get_turf(M)
+	if(T && isturf(T))
+		jumpTo(T)
+	else
+		to_chat(usr, "This mob is not located in the game world.")
+
+
 /mob/observer/ghost/verb/toggle_medHUD()
 	set category = "Ghost"
 	set name = "Toggle MedicHUD"
@@ -273,16 +284,17 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		M.antagHUD = 1
 		to_chat(src, SPAN_NOTICE("AntagHUD Enabled"))
 
-/mob/observer/ghost/verb/dead_tele(A in area_repository.get_areas_by_z_level())
+/mob/observer/ghost/verb/dead_tele()
 	set category = "Ghost"
 	set name = "Teleport"
 	set desc= "Teleport to a location"
 
+	var/A = input(usr, "Pick an area.", "Pick an area") as num|anything in area_repository.get_areas_by_z_level()
 	var/area/thearea = area_repository.get_areas_by_z_level()[A]
+
 	if(!thearea)
 		to_chat(src, "No area available.")
 		return
-
 	var/list/area_turfs = get_area_turfs(thearea, shall_check_if_holy() ? list(/proc/is_not_holy_turf) : list())
 	if(!area_turfs.len)
 		to_chat(src, "<span class='warning'>This area has been entirely made into sacred grounds, you cannot enter it while you are in this plane of existence!</span>")
@@ -300,13 +312,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		ghost_to_turf(T)
 	else
 		to_chat(src, "<span class='warning'>Invalid coordinates.</span>")
-/mob/observer/ghost/verb/follow(var/datum/follow_holder/fh in get_follow_targets())
+
+/mob/observer/ghost/verb/follow()
 	set category = "Ghost"
 	set name = "Follow"
 	set desc = "Follow and haunt a mob."
 
-	if(!fh.show_entry()) return
-	start_following(fh.followed_instance)
+	GLOB.orbit_menu.show(src)
 
 /mob/observer/ghost/proc/ghost_to_turf(var/turf/target_turf)
 	if(check_is_holy_turf(target_turf))
@@ -326,7 +338,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		verbs -= /mob/observer/ghost/verb/scan_target
 	..()
 
-/mob/observer/ghost/keep_following(var/atom/movable/am, var/old_loc, var/new_loc)
+/mob/observer/ghost/keep_following(var/obj/am, var/old_loc, var/new_loc)
 	var/turf/T = get_turf(new_loc)
 	if(check_is_holy_turf(T))
 		to_chat(src, "<span class='warning'>You cannot follow something standing on holy grounds!</span>")
@@ -623,3 +635,15 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		M.respawned_time = world.time
 	M.key = key
 	log_and_message_admins("has respawned.", M)
+
+/mob/observer/ghost/proc/add_ghost_buttons()
+	var/jumptomob = new /obj/screen/ghost/jumptomob()
+	var/orbit = new /obj/screen/ghost/orbit()
+	var/reenter_corpse = new /obj/screen/ghost/reenter_corpse()
+	var/teleport = new /obj/screen/ghost/teleport()
+	var/toggle_darkness = new /obj/screen/ghost/toggle_darkness()
+	client.screen.Add(jumptomob)
+	client.screen.Add(orbit)
+	client.screen.Add(reenter_corpse)
+	client.screen.Add(teleport)
+	client.screen.Add(toggle_darkness)
