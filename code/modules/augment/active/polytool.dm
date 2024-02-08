@@ -4,6 +4,7 @@
 	icon_state = "multitool"
 	allowed_organs = list(BP_AUGMENT_R_HAND, BP_AUGMENT_L_HAND)
 	var/list/items = list()
+	var/list/images = list()
 	var/list/paths = list() //We may lose them
 	augment_flags = AUGMENTATION_MECHANIC
 
@@ -50,7 +51,14 @@
 		else
 			to_chat(owner, SPAN_WARNING("You must drop [I] before tool can be extend."))
 	else
-		var/obj/item = input(owner, "Select item for deploy") as null|anything in src
+		//var/obj/item = input(owner, "Select item for deploy") as null|anything in src //<- Здесь меняй
+		var/obj/item
+		//Здесь нам потребуется создать лист иконок, код листов крайне выёбывается
+		for(var/obj/item/i in items)
+			var/image/j = image(icon = i.icon, icon_state = i.item_state)
+			j.name = i
+			images[i] = j
+		item = show_radial_menu(owner, owner, images , radius = 32, require_near = TRUE)
 		if(!item || !(src in owner.internal_organs))
 			return
 		if(owner.equip_to_slot_if_possible(item, slot))

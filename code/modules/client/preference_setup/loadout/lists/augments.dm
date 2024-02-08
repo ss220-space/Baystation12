@@ -2,6 +2,11 @@
 	sort_category = "Augments"
 	category = /datum/gear/augment
 
+/datum/gear/augment/enginiiring_tools
+	display_name = "Engineering toolselt"
+	cost = 2
+	path = /obj/item/organ/internal/augment/active/polytool
+
 /datum/gear/augment/minor_head
 	display_name = "minor augments selection (head)"
 	description = "A minor augment with no in-game effects."
