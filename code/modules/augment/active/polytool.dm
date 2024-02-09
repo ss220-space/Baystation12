@@ -58,7 +58,7 @@
 			var/image/j = image(icon = i.icon, icon_state = i.item_state)
 			j.name = i
 			images[i] = j
-		item = show_radial_menu(owner, owner, images , radius = 32, require_near = TRUE)
+		item = show_radial_menu(owner, owner, images , radius = 48, require_near = TRUE)
 		if(!item || !(src in owner.internal_organs))
 			return
 		if(owner.equip_to_slot_if_possible(item, slot))
