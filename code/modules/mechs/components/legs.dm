@@ -7,6 +7,8 @@
 	var/obj/item/robot_parts/robot_component/actuator/motivator
 	power_use = 50
 	var/max_fall_damage = 30
+	var/can_strafe = FALSE
+	var/good_in_strafe = FALSE //Влияет на эффективность стрейфа, используйте когда мир будет к нему готов.
 
 /obj/item/mech_component/propulsion/Destroy()
 	QDEL_NULL(motivator)

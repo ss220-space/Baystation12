@@ -65,9 +65,16 @@
 
 
 /mob/living/exosuit/ClickOn(var/atom/A, var/params, var/mob/user)
-
 	if(!user || incapacitated() || user.incapacitated())
 		return
+	var/arms_chosen = FALSE
+	var/body_chosen = FALSE
+	if(selected_hardpoint == HARDPOINT_LEFT_HAND || selected_hardpoint == HARDPOINT_RIGHT_HAND)
+		arms_chosen = TRUE
+		body_chosen = FALSE
+	else if(selected_hardpoint == HARDPOINT_BACK || selected_hardpoint == HARDPOINT_HEAD || selected_hardpoint == HARDPOINT_LEFT_SHOULDER || selected_hardpoint == HARDPOINT_RIGHT_SHOULDER)
+		arms_chosen = FALSE
+		body_chosen = TRUE
 
 	if(!loc) return
 	var/adj = A.Adjacent(src) // Why in the fuck isn't Adjacent() commutative.
@@ -94,13 +101,17 @@
 	if(A.loc != src && !(get_dir(src, A) & dir))
 		return
 
-	if(!arms)
+	if(!arms && arms_chosen)
 		to_chat(user, SPAN_WARNING("\The [src] has no manipulators!"))
 		setClickCooldown(3)
 		return
 
-	if(!arms.motivator || !arms.motivator.is_functional())
+	if(!arms.motivator && arms_chosen)
 		to_chat(user, SPAN_WARNING("Your motivators are damaged! You can't use your manipulators!"))
+		setClickCooldown(15)
+		return
+	if((!body || body.total_damage >= body.max_damage) && body_chosen)
+		to_chat(user, SPAN_WARNING("Your cockpit too damaged, additional hardpoints control system damaged, you cant this module!"))
 		setClickCooldown(15)
 		return
 
@@ -190,7 +201,7 @@
 	if(A == src)
 		setClickCooldown(5)
 		return attack_self(user)
-	else if(adj && user.a_intent == I_HURT)
+	else if(adj && user.a_intent == I_HURT && arms.motivator)
 		setClickCooldown(arms ? arms.action_delay : 7)
 		src.visible_message(SPAN_DANGER(" [src] steps back, preparing for a punch!"), blind_message = SPAN_DANGER("You hear the loud hissing of hydraulics!"))
 		playsound(src.loc, mech_step_sound, 60, 1)
@@ -375,17 +386,14 @@
 		to_chat(user, SPAN_WARNING("\The [thing] could not be installed in that hardpoint."))
 		return
 
-	else if(istype(thing, /obj/item/device/kit/paint))
+	else if(istype(thing, /obj/item/device/kit/mech))
 		user.visible_message(SPAN_NOTICE("\The [user] opens \the [thing] and spends some quality time customising \the [src]."))
-		var/obj/item/device/kit/paint/P = thing
-		SetName(P.new_name)
-		desc = P.new_desc
+		var/obj/item/device/kit/mech/P = thing
 		for(var/obj/item/mech_component/comp in list(arms, legs, head, body))
-			comp.decal = P.new_icon
+			comp.decal = P.current_decal
 		if(P.new_icon_file)
 			icon = P.new_icon_file
 		queue_icon_update()
-		P.use(1, user)
 		return 1
 
 	else
