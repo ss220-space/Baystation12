@@ -184,5 +184,8 @@
 
 	if(R.is_stump() || R.is_broken() || !R)
 		return
+	if(!enter)
+		to_chat(usr, "<span class='warning'>You have no exonet connection port</span>")
+		return
 	else
 		enter.exonet(src)

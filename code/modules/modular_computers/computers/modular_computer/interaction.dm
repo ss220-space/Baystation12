@@ -31,7 +31,10 @@
 	if(enabled)
 		bsod = 1
 		update_icon()
-		to_chat(usr, "You press a hard-reset button on \the [src]. It displays a brief debug screen before shutting down.")
+		if((usr.is_species(SPECIES_IPC) && istype(src, /obj/item/modular_computer/ecs)))
+			to_chat(usr, "You send signal for a hard-reset on \the [src].")
+		else
+			to_chat(usr, "You press a hard-reset button on \the [src]. It displays a brief debug screen before shutting down.")
 		shutdown_computer(FALSE)
 		spawn(2 SECONDS)
 			bsod = 0

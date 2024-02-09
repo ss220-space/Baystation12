@@ -100,7 +100,9 @@
 		return
 	if(tesla_link)
 		tesla_link.enabled = 1
-	var/issynth = issilicon(user) // Robots and AIs get different activation messages.
+	var/issynth = FALSE
+	if((user.is_species(SPECIES_IPC) && istype(src, /obj/item/modular_computer/ecs)) || issilicon(user))
+		issynth = TRUE // Robots and AIs and IPCs get different activation messages.
 	if(damage > broken_damage)
 		if(issynth)
 			to_chat(user, "You send an activation signal to \the [src], but it responds with an error code. It must be damaged.")

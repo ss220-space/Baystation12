@@ -23,6 +23,8 @@
 		return
 	if(owner.stat == DEAD)
 		return
+	if(!computer)
+		return
 	if(computer.battery_module.battery.charge < (computer.battery_module.battery.maxcharge))
 		transfer_charge()
 
@@ -61,6 +63,9 @@
 
 
 /obj/item/organ/internal/ecs/proc/exonet(mob/user)
+	if(!computer)
+		to_chat(user, "<span class='warning'>You have no exonet connection system installed</span>")
+		return
 	if(!computer.enabled && computer.screen_on)
 		return computer.turn_on(user)
 	switch(alert("Open Terminal or interact with it?", "Open Terminal or interact with it?", "Interact", "Terminal", "Emergency Shutdown"))
