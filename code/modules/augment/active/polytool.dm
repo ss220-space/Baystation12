@@ -14,6 +14,10 @@
 		var/obj/item/I = new path (src)
 		I.canremove = FALSE
 		items += I
+	for(var/obj/item/i in items)
+		var/image/j = image(icon = i.icon, icon_state = i.item_state)
+		j.name = i
+		images[i] = j
 /obj/item/organ/internal/augment/active/polytool/Destroy()
 	QDEL_NULL_LIST(items)
 	. = ..()
@@ -51,13 +55,7 @@
 		else
 			to_chat(owner, SPAN_WARNING("You must drop [I] before tool can be extend."))
 	else
-		//var/obj/item = input(owner, "Select item for deploy") as null|anything in src //<- Здесь меняй
 		var/obj/item
-		//Здесь нам потребуется создать лист иконок, код листов крайне выёбывается
-		for(var/obj/item/i in items)
-			var/image/j = image(icon = i.icon, icon_state = i.item_state)
-			j.name = i
-			images[i] = j
 		item = show_radial_menu(owner, owner, images , radius = 32, require_near = TRUE)
 		if(!item || !(src in owner.internal_organs))
 			return
