@@ -325,14 +325,30 @@ INF*/
 	else
 		return "<font color='#f00'>UNDEFINED ERROR</font>"
 
+//datum/terminal_command/datajack
+//	name = "datajack"
+//	man_entry = list("Format: datajack.", "Deploys a datajack cable to make some hacking stuff.")
+//	pattern = "^datajack$"
+//	skill_needed = SKILL_EXPERT
+//
+///datum/terminal_command/datajack/proper_input_entered(text, mob/user, datum/terminal/terminal)
+//	if(!CPU.check_functionality())
+//		return "datajack: CPU ERROR, cannot deploy datajack"
+//	else
+//		if(/obj/item/modular_computer/pda/datajack_stored, mob/user)
+//			return "datajack: ERROR, DATA JACK CANNOT BE DEPLOYED!"
+//		else
+//			return "datajack: Data jack deployed successfuly."
+//			(/obj/item/modular_computer/pda/datajack_stored = 0, mob/user)
+
 /datum/terminal_command/session
 	name = "session"
 	man_entry = list("Format: session; session -kill",
 					"Utilite for manipulations with active programs",
 					"As session return list of active PRG programs.",
 					"Option -kill kill all active PRG programs",
-					//"Option -restore open interface of devise.",
-					//"-restore manual: if you use -restore to open programs in remote console, duplicate input of command with -restore option after open of program interface."
+					"Option -restore open interface of devise.",
+					"-restore manual: if you use -restore to open programs in remote console, duplicate input of command with -restore option after open of program interface."
 					)
 	pattern = "^session"
 	skill_needed = SKILL_ADEPT
@@ -348,10 +364,10 @@ INF*/
 	if(!CPU.check_functionality())
 		return "session: Access attempt to RAM failed. Check integrity of your CPU."
 	var/ermsg = " programs is absent"
-	/*if(copytext(text, 8) == " -restore")
+	if(copytext(text, 8) == " -restore")
 		CT.is_remote_ui = 1
 		CT.ui_interact(user)
-		return "session: interface restored."*/
+		return "session: interface restored."
 
 	if(copytext(text,8) == " -kill")
 		if(CT.running_programs)
