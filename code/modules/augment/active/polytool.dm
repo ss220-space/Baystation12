@@ -56,7 +56,7 @@
 			to_chat(owner, SPAN_WARNING("You must drop [I] before tool can be extend."))
 	else
 		var/obj/item
-		item = show_radial_menu(owner, owner, images , radius = 32, require_near = TRUE)
+		item = show_radial_menu(owner, owner, images , radius = 48, require_near = TRUE)
 		if(!item || !(src in owner.internal_organs))
 			return
 		if(owner.equip_to_slot_if_possible(item, slot))
