@@ -8,7 +8,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	max_damage = 100
 	var/obj/item/modular_computer/ecs/computer = /obj/item/modular_computer/ecs
-	var/open
+	var/open = FALSE
 
 
 /obj/item/organ/internal/ecs/Initialize()
@@ -38,10 +38,10 @@
 /obj/item/organ/internal/ecs/attackby(obj/item/W, mob/user)
 	if(isScrewdriver(W))
 		if(open)
-			open = 0
+			open = FALSE
 			to_chat(user, "<span class='notice'>You screw the exonet connection slot panel in place.</span>")
 		else
-			open = 1
+			open = TRUE
 			to_chat(user, "<span class='notice'>You unscrew the exonet connection slot panel.</span>")
 
 	if(isCrowbar(W))

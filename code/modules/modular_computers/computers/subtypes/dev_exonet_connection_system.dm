@@ -16,9 +16,10 @@
 	hardware_flag = PROGRAM_LAPTOP
 	exonets_ipc_computer = TRUE
 
-/obj/item/modular_computer/ecs/New()
-	..()
-	name = "exonet connection system"
+/obj/item/modular_computer/ecs/CanUseTopic(var/mob/user, var/datum/topic_state/state = GLOB.inventory_state)
+	if(user.is_species(SPECIES_IPC))
+		return STATUS_INTERACTIVE
+
 
 
 
