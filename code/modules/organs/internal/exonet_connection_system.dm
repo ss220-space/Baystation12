@@ -14,7 +14,7 @@
 /obj/item/organ/internal/ecs/Initialize()
 	if(ispath(computer))
 		computer = new computer(src)
-	..()
+	. = ..()
 
 
 /obj/item/organ/internal/ecs/Process()
