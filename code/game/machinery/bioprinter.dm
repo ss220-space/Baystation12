@@ -122,6 +122,7 @@
 		BP_R_HAND   = list(/obj/item/organ/external/hand/right, 40),
 		BP_CELL		= list(/obj/item/organ/internal/cell/print, 25),
 		BP_COOLING	= list(/obj/item/organ/internal/cooling_system, 25),
+		BP_EXONET	= list(/obj/item/organ/internal/ecs, 		35),
 		)
 
 	machine_name = "prosthetic organ fabricator"

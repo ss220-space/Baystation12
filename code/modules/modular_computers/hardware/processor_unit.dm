@@ -10,7 +10,7 @@
 	critical = 1
 	malfunction_probability = 1
 	origin_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 2)
-
+	exonets_ipc_computer_suitable = TRUE
 	var/processing_power = 2 // Used for DDoS speed calculations
 
 /obj/item/stock_parts/computer/processor_unit/small

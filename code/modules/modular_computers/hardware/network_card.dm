@@ -14,6 +14,7 @@ var/global/ntnet_card_uid = 1
 	var/ethernet = 0 // Hard-wired, therefore always on, ignores NTNet wireless checks.
 	var/proxy_id     // If set, uses the value to funnel connections through another network card.
 	malfunction_probability = 1
+	exonets_ipc_computer_suitable = TRUE
 
 /obj/item/stock_parts/computer/network_card/diagnostics()
 	. = ..()

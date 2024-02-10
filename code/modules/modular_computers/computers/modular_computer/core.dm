@@ -72,6 +72,8 @@
 		to_chat(user, "\The [src] was already emagged.")
 		return NO_EMAG_ACT
 	else
+		if(src.type == /obj/item/modular_computer/ecs)
+			return NO_EMAG_ACT
 		computer_emagged = TRUE
 		to_chat(user, "You emag \the [src]. It's screen briefly shows a \"OVERRIDE ACCEPTED: New software downloads available.\" message.")
 		return 1
@@ -98,7 +100,9 @@
 		return
 	if(tesla_link)
 		tesla_link.enabled = 1
-	var/issynth = issilicon(user) // Robots and AIs get different activation messages.
+	var/issynth = FALSE
+	if((user.is_species(SPECIES_IPC) && istype(src, /obj/item/modular_computer/ecs)) || issilicon(user))
+		issynth = TRUE // Robots and AIs and IPCs get different activation messages.
 	if(damage > broken_damage)
 		if(issynth)
 			to_chat(user, "You send an activation signal to \the [src], but it responds with an error code. It must be damaged.")

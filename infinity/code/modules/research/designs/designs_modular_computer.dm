@@ -15,3 +15,13 @@
 	chemicals = list(/datum/reagent/acid = 20)
 	build_path = /obj/item/stock_parts/computer/network_card/lambda
 	sort_string = "VBABD"
+
+/datum/design/item/modularcomponent/battery/converter
+	name = "exonet battery converter"
+	id = "ecs_converter"
+	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 4, TECH_POWER = 3)
+	build_type = IMPRINTER
+	materials = list(MATERIAL_STEEL = 1000, MATERIAL_GLASS = 800)
+	chemicals = list(/datum/reagent/acid = 20)
+	build_path = /obj/item/stock_parts/computer/battery_module/converter
+	sort_string = "VBABE"

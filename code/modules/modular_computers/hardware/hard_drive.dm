@@ -5,6 +5,7 @@
 	icon_state = "hdd_normal"
 	hardware_size = 1
 	origin_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1)
+	exonets_ipc_computer_suitable = TRUE
 	var/max_capacity = 128
 	var/used_capacity = 0
 	var/list/stored_files = list()		// List of stored files on this drive. DO NOT MODIFY DIRECTLY!

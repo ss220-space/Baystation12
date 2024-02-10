@@ -42,7 +42,8 @@
 	has_organ = list(
 		BP_POSIBRAIN = /obj/item/organ/internal/posibrain,
 		BP_EYES = /obj/item/organ/internal/eyes/robot,
-		BP_COOLING = /obj/item/organ/internal/cooling_system
+		BP_COOLING = /obj/item/organ/internal/cooling_system,
+		BP_EXONET = /obj/item/organ/internal/ecs,
 		)
 
 	heat_discomfort_level = 373.15

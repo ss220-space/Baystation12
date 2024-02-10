@@ -1,6 +1,6 @@
 /datum/design/item/modularcomponent
 	category_items = "Computer Parts"
-	
+
 // Drives
 /datum/design/item/modularcomponent/disk/AssembleDesignName()
 	..()
@@ -281,6 +281,15 @@
 	build_path = /obj/item/stock_parts/computer/battery_module/micro
 	sort_string = "VBAEF"
 
+/datum/design/item/modularcomponent/battery/converter
+	name = "Converter battery"
+	id = "bat_nano"
+	req_tech = list(TECH_POWER = 1, TECH_ENGINEERING = 1)
+	build_type = PROTOLATHE
+	materials = list(MATERIAL_STEEL = 200)
+	build_path = /obj/item/stock_parts/computer/battery_module/converter
+	sort_string = "VBAFE"
+
 // Processor unit
 /datum/design/item/modularcomponent/cpu/AssembleDesignName()
 	..()
@@ -325,3 +334,13 @@
 	chemicals = list(/datum/reagent/acid = 20)
 	build_path = /obj/item/stock_parts/computer/processor_unit/photonic/small
 	sort_string = "VBAFD"
+
+/datum/design/item/modularcomponent/ecs
+	name = "exonet connection system"
+	id = "exonet"
+	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 4)
+	build_type = IMPRINTER
+	materials = list(MATERIAL_STEEL = 4000, glass = 3000)
+	chemicals = list(/datum/reagent/acid = 50)
+	build_path = /obj/item/modular_computer/ecs
+	sort_string = "VBAFE"

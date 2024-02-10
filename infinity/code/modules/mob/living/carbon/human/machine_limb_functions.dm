@@ -1,5 +1,5 @@
 /datum/species/machine
-	inherent_verbs = list(/mob/living/carbon/human/proc/detach_limb, /mob/living/carbon/human/proc/attach_limb, /mob/living/carbon/human/proc/IPC_change_screen, /mob/living/carbon/human/proc/IPC_display_text, /mob/living/carbon/human/proc/IPC_toggle_off_screen)
+	inherent_verbs = list(/mob/living/carbon/human/proc/detach_limb, /mob/living/carbon/human/proc/attach_limb, /mob/living/carbon/human/proc/IPC_change_screen, /mob/living/carbon/human/proc/IPC_display_text, /mob/living/carbon/human/proc/IPC_toggle_off_screen, /mob/living/carbon/human/proc/enter_exonet)
 
 /mob/living/carbon/human/proc/detach_limb()
 	set category = "Abilities"
@@ -172,3 +172,20 @@
 		f_style = "Off"
 		R.set_light(0, 0)
 		update_hair()
+
+
+
+/mob/living/carbon/human/proc/enter_exonet()
+	set category = "Abilities"
+	set name = "Enter Exonet"
+	set desc = ""
+	var/obj/item/organ/external/head/R = src.get_organ(BP_HEAD)
+	var/obj/item/organ/internal/ecs/enter = src.internal_organs_by_name[BP_EXONET]
+
+	if(R.is_stump() || R.is_broken() || !R)
+		return
+	if(!enter)
+		to_chat(usr, "<span class='warning'>You have no exonet connection port</span>")
+		return
+	else
+		enter.exonet(src)
