@@ -14,10 +14,9 @@
 		var/obj/item/I = new path (src)
 		I.canremove = FALSE
 		items += I
-	for(var/obj/item/i in items)
-		var/image/j = image(icon = i.icon, icon_state = i.item_state)
-		j.name = i
-		images[i] = j
+		var/image/img = image(icon = I.icon, icon_state = I.item_state)
+		img.name = I.name
+		images[I] = img
 /obj/item/organ/internal/augment/active/polytool/Destroy()
 	QDEL_NULL_LIST(items)
 	. = ..()
