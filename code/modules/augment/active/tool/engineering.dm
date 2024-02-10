@@ -17,7 +17,6 @@
 	name = "digital welder"
 	desc = "A precise, high quality welding tool."
 	icon_state = "welder_finger"
-	var/aug_state = "welder"
 	icon = 'icons/obj/augment_tools.dmi'
 
 
