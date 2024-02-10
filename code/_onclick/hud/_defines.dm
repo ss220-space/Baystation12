@@ -133,3 +133,11 @@
 #define ui_pai_light "NORTH,WEST+3:6"
 #define ui_pai_rest "NORTH,WEST+4:6"
 
+// Ghosts
+#define ui_ghost_toggle_darkness "SOUTH:6,CENTER-3:16"
+#define ui_ghost_jumptomob       "SOUTH:6,CENTER-2:16"
+#define ui_ghost_orbit           "SOUTH:6,CENTER-1:16"
+#define ui_ghost_reenter_corpse  "SOUTH:6,CENTER:16"
+#define ui_ghost_teleport        "SOUTH:6,CENTER+1:16"
+#define ui_ghost_mafia           "SOUTH:6,CENTER+2:16"
+#define ui_ghost_spawners_menu   "SOUTH:6,CENTER-4:16"
