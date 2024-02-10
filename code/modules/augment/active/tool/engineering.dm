@@ -73,4 +73,5 @@
 	name = "digital multitool"
 	desc = "A multitool inside of a multitool. Doubletool?"
 	icon_state = "multitool_finger"
+	item_state = "multitool"
 	icon = 'icons/obj/augment_tools.dmi'

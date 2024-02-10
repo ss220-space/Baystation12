@@ -4,6 +4,7 @@
 	icon_state = "multitool"
 	allowed_organs = list(BP_AUGMENT_R_HAND, BP_AUGMENT_L_HAND)
 	var/list/items = list()
+	var/list/images = list()
 	var/list/paths = list() //We may lose them
 	augment_flags = AUGMENTATION_MECHANIC
 
@@ -13,6 +14,9 @@
 		var/obj/item/I = new path (src)
 		I.canremove = FALSE
 		items += I
+		var/image/img = image(icon = I.icon, icon_state = I.item_state)
+		img.name = I.name
+		images[I] = img
 /obj/item/organ/internal/augment/active/polytool/Destroy()
 	QDEL_NULL_LIST(items)
 	. = ..()
@@ -50,7 +54,7 @@
 		else
 			to_chat(owner, SPAN_WARNING("You must drop [I] before tool can be extend."))
 	else
-		var/obj/item = input(owner, "Select item for deploy") as null|anything in src
+		var/obj/item = show_radial_menu(owner, owner, images , radius = 48, require_near = TRUE)
 		if(!item || !(src in owner.internal_organs))
 			return
 		if(owner.equip_to_slot_if_possible(item, slot))
