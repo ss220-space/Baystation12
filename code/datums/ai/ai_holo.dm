@@ -4,7 +4,7 @@
 */
 /decl/ai_holo
 	var/requires_malf = FALSE
-	var/icon = 'infinity/icons/mob/hologram.dmi'
+	var/icon = 'icons/mob/hologram.dmi'
 	var/icon_state = "icon_state"
 	var/bypass_colorize = FALSE
 	var/name

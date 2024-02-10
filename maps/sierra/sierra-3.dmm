@@ -27887,6 +27887,8 @@
 	pixel_x = -3;
 	pixel_y = 5
 	},
+/obj/item/device/paint_sprayer,
+/obj/item/device/kit/mech,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "aRN" = (
