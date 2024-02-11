@@ -210,8 +210,6 @@
 		I.showscreen(src)
 		f_style = "Database"
 		update_hair()
-		var/mob/M
-		robohead.display_text = "<a HREF=?src=\ref[M];showipcscreen=\ref[src]>Take a closer look.</a>"
 	else
 		to_chat(usr, "<span class='warning'>Your head has no screen!</span>")
 
