@@ -75,3 +75,9 @@
 			return computer.open_terminal_ecs(user)
 		if("Emergency Shutdown")
 			return computer.emergency_shutdown(user)
+
+/mob/living/carbon/human/machine/attackby(var/obj/item/H as obj, var/mob/user as mob)
+	var/obj/item/organ/internal/ecs/T = src.internal_organs_by_name[BP_EXONET]
+	if(istype(H, /obj/item/stock_parts/computer/hard_drive/portable))
+		if(user.zone_sel.selecting == BP_MOUTH && user.a_intent == I_HELP)
+			T.computer.try_install_component(user, H)

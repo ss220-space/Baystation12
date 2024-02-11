@@ -95,7 +95,12 @@ GLOBAL_DATUM_INIT(default_state, /datum/topic_state/default, new)
 			. = min(., shared_living_nano_distance(src_object))
 		if(. == STATUS_UPDATE && (psi && !psi.suppressed && psi.get_rank(PSI_PSYCHOKINESIS) >= PSI_RANK_OPERANT))
 			return STATUS_INTERACTIVE
-		if(is_species(SPECIES_IPC))
-			var/obj/item/modular_computer/ecs/computer = src_object
-			if(computer.type == /obj/item/modular_computer/ecs)
+		var/dist = get_dist(src_object, src)
+		var/obj/item/modular_computer/ecs/computer = src_object
+		if(computer.type == /obj/item/modular_computer/ecs)
+			if(is_species(SPECIES_IPC) && dist == 0)
 				return STATUS_INTERACTIVE
+			else if (dist <= 3)
+				return STATUS_UPDATE
+			else
+				return STATUS_CLOSE

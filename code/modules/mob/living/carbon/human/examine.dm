@@ -168,8 +168,9 @@
 				msg += "<span class='warning'>[T.His] face is horribly mangled!</span>\n"
 		if(species.species_flags & SPECIES_ALL_ROBOPARTS)
 			var/datum/robolimb/robohead = all_robolimbs[E.model]
-			if(length(robohead.display_text) && f_style == "Text")
+			if(length(robohead.display_text) && (f_style == "Text" || f_style == "Database"))
 				msg += "Отображает на экране: [robohead.display_text]\n"
+				show_message("[user] changes image on his screen. <a HREF=?src=\ref[user];showipcscreen=\ref[src]>Take a closer look.</a>",1)
 
 	//splints
 	for(var/organ in list(BP_L_LEG, BP_R_LEG, BP_L_ARM, BP_R_ARM))

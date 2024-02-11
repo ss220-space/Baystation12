@@ -40,3 +40,8 @@
 /obj/item/stock_parts/computer/hard_drive/portable/merchant/Initialize()
 	. = ..()
 	store_file(new/datum/computer_file/program/merchant(src))
+
+/obj/item/stock_parts/computer/hard_drive/portable/attack(var/mob/living/carbon/human/H, var/mob/living/user, target_zone, animate = TRUE)
+	if(H.is_species(SPECIES_IPC) && ishuman(user) && (user.zone_sel.selecting == BP_MOUTH || user.zone_sel.selecting == BP_HEAD))
+		var/obj/item/organ/internal/ecs/T = H.internal_organs_by_name[BP_EXONET]
+		T.computer.try_install_component(user, src)
