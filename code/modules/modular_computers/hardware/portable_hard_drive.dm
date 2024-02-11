@@ -44,4 +44,9 @@
 /obj/item/stock_parts/computer/hard_drive/portable/attack(var/mob/living/carbon/human/H, var/mob/living/user, target_zone, animate = TRUE)
 	if(H.is_species(SPECIES_IPC) && ishuman(user) && (user.zone_sel.selecting == BP_MOUTH || user.zone_sel.selecting == BP_HEAD))
 		var/obj/item/organ/internal/ecs/T = H.internal_organs_by_name[BP_EXONET]
-		T.computer.try_install_component(user, src)
+		if (do_after(user, 10, src))
+			user.visible_message( \
+				"<span class='notice'>\The [user] install's [src] into [H]'s exonet port.</span>", \
+				"<span class='notice'>You have installed [src] into [H]'s exonet port.</span>" \
+				)
+			T.computer.try_install_component(user, src)

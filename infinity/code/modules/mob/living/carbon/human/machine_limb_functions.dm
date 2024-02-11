@@ -1,5 +1,5 @@
 /datum/species/machine
-	inherent_verbs = list(/mob/living/carbon/human/proc/detach_limb, /mob/living/carbon/human/proc/attach_limb, /mob/living/carbon/human/proc/IPC_change_screen, /mob/living/carbon/human/proc/IPC_display_text, /mob/living/carbon/human/proc/IPC_toggle_off_screen, /mob/living/carbon/human/proc/enter_exonet, /mob/living/carbon/human/proc/show_exonet_screen)
+	inherent_verbs = list(/mob/living/carbon/human/proc/detach_limb, /mob/living/carbon/human/proc/attach_limb, /mob/living/carbon/human/proc/IPC_toggle_off_screen, /mob/living/carbon/human/proc/enter_exonet)
 
 /mob/living/carbon/human/proc/detach_limb()
 	set category = "Abilities"
@@ -221,11 +221,24 @@
 
 
 /mob/living/carbon/human/proc/update_ipc_verbs()
+	var/obj/item/organ/external/head/R = src.get_organ(BP_HEAD)
+	var/datum/robolimb/robohead = all_robolimbs[R.model]
 	var/obj/item/organ/internal/ecs/enter = src.internal_organs_by_name[BP_EXONET]
 	if(enter.computer.portable_drive)
 		src.verbs |= /mob/living/carbon/human/proc/ipc_eject_usb
 	else
 		src.verbs -= /mob/living/carbon/human/proc/ipc_eject_usb
+
+	if(robohead.is_monitor)
+		src.verbs |= /mob/living/carbon/human/proc/show_exonet_screen
+		src.verbs |= /mob/living/carbon/human/proc/IPC_change_screen
+		src.verbs |= /mob/living/carbon/human/proc/IPC_display_text
+	else
+		src.verbs -= /mob/living/carbon/human/proc/show_exonet_screen
+		src.verbs -= /mob/living/carbon/human/proc/IPC_change_screen
+		src.verbs -= /mob/living/carbon/human/proc/IPC_display_text
+
+
 
 /mob/living/carbon/human/proc/ipc_eject_usb()
 	set category = "Abilities"
