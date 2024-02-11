@@ -32,8 +32,8 @@
 				M.deactivate()
 
 	if(passengers_ammount>0)
-		passagirka.return_air()
-		passagirka.check_passengers_status()
+		passenger_compartment.return_air()
+		passenger_compartment.check_passengers_status()
 
 
 	updatehealth()
@@ -97,7 +97,7 @@
 		hatch_locked = 0 // So they can get out.
 		for(var/pilot in pilots)
 			eject(pilot, silent=1)
-	forced_leave_passenger(0,1,"destruction of [src]")
+	forced_leave_passenger(0 , MECH_DROP_ALL_PASSENGER , "destruction of [src]")
 
 	// Salvage moves into the wreck unless we're exploding violently.
 	var/obj/wreck = new wreckage_path(get_turf(src), src, gibbed)

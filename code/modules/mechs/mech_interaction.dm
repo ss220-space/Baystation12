@@ -297,7 +297,7 @@
 	if(!user.Adjacent(src))
 		return FALSE
 	if(hatch_locked)
-		check_passenger(user)// <- Если кабина закрыта - игрок пытается занять пассажирку(Каким ваще хуем кабина может быть locked, но не closed)
+		check_passenger(user)// <- Если кабина закрыта - игрок пытается занять пассажирку
 		return FALSE
 	if(hatch_closed)
 		check_passenger(user)// <- Если кабина закрыта - игрок пытается занять пассажирку
@@ -338,27 +338,27 @@
 		to_chat(user,SPAN_NOTICE("Looks like you too big to take [choosed_place]."))
 		return
 	if(choosed_place == "Back")
-		if(LAZYLEN(passagirka.back_passengers)>0)
+		if(LAZYLEN(passenger_compartment.back_passengers) > 0)
 			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
 			return 0
 		else if(body.able_passenger == FALSE)
 			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [body.name]"))
 			return 0
 	else if(choosed_place == "Left back")
-		if(LAZYLEN(passagirka.left_back_passengers)>0)
+		if(LAZYLEN(passenger_compartment.left_back_passengers) > 0)
 			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
 			return 0
 		else if(arms.able_passenger == FALSE)
 			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [arms.name]"))
 			return 0
 	else if(choosed_place == "Right back")
-		if(LAZYLEN(passagirka.right_back_passengers)>0)
+		if(LAZYLEN(passenger_compartment.right_back_passengers)>0)
 			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
 			return 0
 		else if(arms.able_passenger == FALSE)
 			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [arms.name]"))
 			return 0
-	else if(choosed_place == null) // How the fuck)
+	else if(choosed_place == null)
 		return 0
 	if(check_hardpoint_passengers(choosed_place,user) == TRUE)
 		enter_passenger(user,choosed_place)
@@ -389,17 +389,17 @@
 		if(user.r_hand != null || user.l_hand != null)
 			to_chat(user,SPAN_NOTICE("You need two free hands to clim on[place] of mech."))
 			return
-		if(place == "Back" && LAZYLEN(passagirka.back_passengers)==0)
-			user.forceMove(passagirka)
-			LAZYDISTINCTADD(passagirka.back_passengers,user)
+		if(place == "Back" && LAZYLEN(passenger_compartment.back_passengers) == 0)
+			user.forceMove(passenger_compartment)
+			LAZYDISTINCTADD(passenger_compartment.back_passengers,user)
 			user.pinned += src
-		else if(place == "Left back" && LAZYLEN(passagirka.left_back_passengers)==0)
-			user.forceMove(passagirka)
-			LAZYDISTINCTADD(passagirka.left_back_passengers,user)
+		else if(place == "Left back" && LAZYLEN(passenger_compartment.left_back_passengers) == 0)
+			user.forceMove(passenger_compartment)
+			LAZYDISTINCTADD(passenger_compartment.left_back_passengers,user)
 			user.pinned += src
-		else if(place == "Right back" && LAZYLEN(passagirka.right_back_passengers)==0)
-			user.forceMove(passagirka)
-			LAZYDISTINCTADD(passagirka.right_back_passengers,user)
+		else if(place == "Right back" && LAZYLEN(passenger_compartment.right_back_passengers) == 0)
+			user.forceMove(passenger_compartment)
+			LAZYDISTINCTADD(passenger_compartment.right_back_passengers,user)
 			user.pinned += src
 		else
 			to_chat(user,SPAN_NOTICE("Looks like [place] is busy!"))
@@ -414,37 +414,37 @@
 	user.dropInto(loc)
 	user.pinned -= src
 	user.Life()
-	if(user in passagirka.back_passengers)
-		LAZYREMOVE(passagirka.back_passengers,user)
-	else if(user in passagirka.left_back_passengers)
-		LAZYREMOVE(passagirka.left_back_passengers,user)
-	else if(user in passagirka.right_back_passengers)
-		LAZYREMOVE(passagirka.right_back_passengers,user)
+	if(user in passenger_compartment.back_passengers)
+		LAZYREMOVE(passenger_compartment.back_passengers,user)
+	else if(user in passenger_compartment.left_back_passengers)
+		LAZYREMOVE(passenger_compartment.left_back_passengers,user)
+	else if(user in passenger_compartment.right_back_passengers)
+		LAZYREMOVE(passenger_compartment.right_back_passengers,user)
 	passengers_ammount -= 1
 	update_passengers()
 
 /mob/living/exosuit/proc/forced_leave_passenger(var/place,var/mode,var/author)// Нечто внешнее насильно опустошает Одно/все места пассажиров
 // mode 1 - полный выгруз, mode 2 - рандомного одного, mode 0(Отсутствие мода) - ручной скид пассажира мехводом
-	if(mode==1) // Полная разгрузка!!!!!
-		if(LAZYLEN(passagirka.back_passengers)>0)
-			for(var/mob/i in passagirka.back_passengers)
-				LAZYREMOVE(passagirka.back_passengers,i)
+	if(mode == MECH_DROP_ALL_PASSENGER) // Полная разгрузка
+		if(LAZYLEN(passenger_compartment.back_passengers)>0)
+			for(var/mob/i in passenger_compartment.back_passengers)
+				LAZYREMOVE(passenger_compartment.back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
 				i.Life()
 				passengers_ammount -= 1
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
-		if(LAZYLEN(passagirka.left_back_passengers)>0)
-			for(var/mob/i in passagirka.left_back_passengers)
-				LAZYREMOVE(passagirka.left_back_passengers,i)
+		if(LAZYLEN(passenger_compartment.left_back_passengers)>0)
+			for(var/mob/i in passenger_compartment.left_back_passengers)
+				LAZYREMOVE(passenger_compartment.left_back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
 				i.Life()
 				passengers_ammount -= 1
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
-		if(LAZYLEN(passagirka.right_back_passengers)>0)
-			for(var/mob/i in passagirka.right_back_passengers)
-				LAZYREMOVE(passagirka.right_back_passengers,i)
+		if(LAZYLEN(passenger_compartment.right_back_passengers) > 0)
+			for(var/mob/i in passenger_compartment.right_back_passengers)
+				LAZYREMOVE(passenger_compartment.right_back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
 				i.Life()
@@ -452,10 +452,10 @@
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
 		update_passengers()
 
-	else if(mode==2)//Сброс первого попавшегося
-		if(LAZYLEN(passagirka.back_passengers)>0)
-			for(var/mob/i in passagirka.back_passengers)
-				LAZYREMOVE(passagirka.back_passengers,i)
+	else if(mode == MECH_DROP_ANY_PASSENGER) // Сброс по приоритету спина - левый бок - правый бок.
+		if(LAZYLEN(passenger_compartment.back_passengers) > 0)
+			for(var/mob/i in passenger_compartment.back_passengers)
+				LAZYREMOVE(passenger_compartment.back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
 				i.Life()
@@ -463,9 +463,9 @@
 				passengers_ammount -= 1
 				update_passengers()
 				return
-		else if(LAZYLEN(passagirka.left_back_passengers)>0)
-			for(var/mob/i in passagirka.left_back_passengers)
-				LAZYREMOVE(passagirka.left_back_passengers,i)
+		else if(LAZYLEN(passenger_compartment.left_back_passengers)>0)
+			for(var/mob/i in passenger_compartment.left_back_passengers)
+				LAZYREMOVE(passenger_compartment.left_back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
 				i.Life()
@@ -473,9 +473,9 @@
 				passengers_ammount -= 1
 				update_passengers()
 				return
-		else if(LAZYLEN(passagirka.right_back_passengers)>0)
-			for(var/mob/i in passagirka.right_back_passengers)
-				LAZYREMOVE(passagirka.right_back_passengers,i)
+		else if(LAZYLEN(passenger_compartment.right_back_passengers)>0)
+			for(var/mob/i in passenger_compartment.right_back_passengers)
+				LAZYREMOVE(passenger_compartment.right_back_passengers,i)
 				i.dropInto(loc)
 				i.pinned -= src
 				i.Life()
@@ -485,25 +485,25 @@
 				update_passengers()
 				return
 
-	else // <- Выбирается первый пассажир (Каким хуем вы сможете пихнуть туда два?)
+	else // <- Опустошается определённое место
 		if(place == "Back")
-			for(var/mob/i in passagirka.back_passengers)
+			for(var/mob/i in passenger_compartment.back_passengers)
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
 				i.dropInto(loc)
 				i.pinned -= src
-				LAZYREMOVE(passagirka.back_passengers,i)
+				LAZYREMOVE(passenger_compartment.back_passengers,i)
 		else if(place == "Left back")
-			for(var/mob/i in passagirka.left_back_passengers)
+			for(var/mob/i in passenger_compartment.left_back_passengers)
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]!"))
 				i.dropInto(loc)
 				i.pinned -= src
-				LAZYREMOVE(passagirka.left_back_passengers,i)
+				LAZYREMOVE(passenger_compartment.left_back_passengers,i)
 		else if(place == "Right back")
-			for(var/mob/i in passagirka.right_back_passengers)
+			for(var/mob/i in passenger_compartment.right_back_passengers)
 				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]!"))
 				i.dropInto(loc)
 				i.pinned -= src
-				LAZYREMOVE(passagirka.right_back_passengers,i)
+				LAZYREMOVE(passenger_compartment.right_back_passengers,i)
 		passengers_ammount -= 1
 		update_passengers()
 
@@ -563,15 +563,15 @@
 		// check passengers subsystem before
 		if(realThing.disturb_passengers == TRUE)// Module cant be equiped with passengers? (jets, sleeper etc)
 			if(to_place == "back")
-				if(LAZYLEN(passagirka.back_passengers) > 0)
+				if(LAZYLEN(passenger_compartment.back_passengers) > 0)
 					to_chat(user, SPAN_WARNING("[to_place] covered by passenger, you cant install \the [thing]."))
 					return
 			else if(to_place == "left shoulder")
-				if(LAZYLEN(passagirka.left_back_passengers) > 0)
+				if(LAZYLEN(passenger_compartment.left_back_passengers) > 0)
 					to_chat(user, SPAN_WARNING("[to_place] covered by passenger, you cant install \the [thing]."))
 					return
 			else if(to_place == "right shoulder")
-				if(LAZYLEN(passagirka.right_back_passengers) > 0)
+				if(LAZYLEN(passenger_compartment.right_back_passengers) > 0)
 					to_chat(user, SPAN_WARNING("[to_place] covered by passenger, you cant install \the [thing]."))
 					return
 		//

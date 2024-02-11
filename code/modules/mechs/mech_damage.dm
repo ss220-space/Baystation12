@@ -56,8 +56,8 @@
 			if(LAZYLEN(pilots) && (!hatch_closed || !prob(body.pilot_coverage)))
 				var/mob/living/pilot = pick(pilots)
 				return pilot.bullet_act(P, def_zone, used_weapon)
-	if(passengers_ammount>0)// <- Если в меха выстрелили и были пассажиры,пассажирку меха опустошит
-		forced_leave_passenger(0,1,"attack")
+	if(passengers_ammount > 0) // <- Если в меха выстрелили и были пассажиры,пассажирку меха опустошит
+		forced_leave_passenger(null , MECH_DROP_ALL_PASSENGER , "attack")
 
 	..()
 
