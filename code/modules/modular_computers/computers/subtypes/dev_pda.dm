@@ -34,7 +34,7 @@
 	else
 		..()
 
-//PDA box
+// PDA box
 /obj/item/storage/box/PDAs
 	name = "box of spare PDAs"
 	desc = "A box of spare PDA microcomputers."

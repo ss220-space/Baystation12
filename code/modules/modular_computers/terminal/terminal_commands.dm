@@ -348,10 +348,10 @@ INF*/
 	if(!CPU.check_functionality())
 		return "session: Access attempt to RAM failed. Check integrity of your CPU."
 	var/ermsg = " programs is absent"
-	//if(copytext(text, 8) == " -restore")
-	//	CT.is_remote_ui = 1
-	//	CT.ui_interact(user)
-	//	return "session: interface restored."
+	/*if(copytext(text, 8) == " -restore")
+		CT.is_remote_ui = 1
+		CT.ui_interact(user)
+		return "session: interface restored."*/
 
 	if(copytext(text,8) == " -kill")
 		if(CT.running_programs)
