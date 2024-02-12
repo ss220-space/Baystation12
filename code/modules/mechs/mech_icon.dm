@@ -113,7 +113,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		passenger_right_back_layer = MECH_GEAR_LAYER + 0.01
 	//
 	//
-	if(LAZYLEN(passenger_compartment.back_passengers)>0) // Отрисовка среднего пассажирка
+	if(LAZYLEN(passenger_compartment.back_passengers) > 0) // Отрисовка среднего пассажирка
 		var/mob/passenger_back = passenger_compartment.back_passengers[1]
 		var/image/draw_passenger_back = new
 		draw_passenger_back.appearance = passenger_back
@@ -126,7 +126,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		draw_passenger_back.layer = passenger_back_layer
 		LAZYADD(back_passengers_overlays, draw_passenger_back)
 	//
-	if(LAZYLEN(passenger_compartment.left_back_passengers)>0) // Отрисовка левого пассажира
+	if(LAZYLEN(passenger_compartment.left_back_passengers) > 0) // Отрисовка левого пассажира
 		var/mob/passenger_left_back = passenger_compartment.left_back_passengers[1]
 		var/image/draw_passenger_left_back = new
 		draw_passenger_left_back.appearance = passenger_left_back
@@ -140,7 +140,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		draw_passenger_left_back.layer = passenger_left_back_layer
 		LAZYADD(left_back_passengers_overlays, draw_passenger_left_back)
 	//
-	if(LAZYLEN(passenger_compartment.right_back_passengers)>0) // Отрисовка правого пассажира
+	if(LAZYLEN(passenger_compartment.right_back_passengers) > 0) // Отрисовка правого пассажира
 		var/mob/passenger_right_back = passenger_compartment.right_back_passengers[1]
 		var/image/draw_passenger_right_back = new
 		draw_passenger_right_back.layer = passenger_right_back_layer
