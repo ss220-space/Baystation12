@@ -45,7 +45,7 @@
 
 /datum/terminal_command/datajack
 	name = "datajack"
-	man_entry = list("Format: datajack", "Works only on mobile devices. Ejects a datajack.")
+	man_entry = list("Format: datajack", "Works only on mobile devices. Ejects a datajack for checking wiring and pulsing any of it.")
 	pattern = "^datajack$"
 	skill_needed = SKILL_EXPERT
 
