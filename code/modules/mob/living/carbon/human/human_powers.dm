@@ -112,3 +112,23 @@
 
 	var/new_skin = input(usr, "Choose your new skin colour: ", "Change Colour", rgb(r_skin, g_skin, b_skin)) as color|null
 	change_skin_color(hex2num(copytext(new_skin, 2, 4)), hex2num(copytext(new_skin, 4, 6)), hex2num(copytext(new_skin, 6, 8)))
+
+/mob/living/carbon/human/unathi/yeosa/proc/decant_venom()
+	set category = "Abilities"
+	set name = "Decant Venom"
+	set desc = ""
+	var/obj/item/target = usr.get_active_hand()
+	var/poison_type = /datum/reagent/toxin/yeosvenom
+
+
+	if(venom_cooldown > world.time)
+		to_chat(usr, "<span class='warning'>Your venom glands are too exhausted; it will take some time before you can decant your innate venom again.</span>")
+		return
+	if(istype(target, /obj/item/reagent_containers/))
+		if(target.reagents)
+			target.reagents.add_reagent(poison_type, 8)
+			usr.visible_message(
+			SPAN_NOTICE("[usr] sticks their fangs into the side of the [target], dripping thick, green-ish substance into the container."),
+			SPAN_NOTICE("You stick your fangs into the side of the [target], allowing some of your innate venom to drip into the container.")
+			)
+			venom_cooldown = world.time + (30 SECONDS)

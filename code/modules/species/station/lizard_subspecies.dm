@@ -21,6 +21,10 @@
 		/obj/aura/regenerating/human/unathi/yeosa
 		)
 
+	inherent_verbs = list(
+		/mob/living/carbon/human/proc/diona_heal_toggle, /mob/living/carbon/human/unathi/yeosa/proc/decant_venom
+		)
+
 	additional_available_cultural_info = list(
 		TAG_CULTURE = list(
 			CULTURE_UNATHI_YEOSA_ABYSS,
