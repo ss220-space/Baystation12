@@ -23,7 +23,7 @@
 
 /obj/item/modular_computer/dropped(mob/user)
 	. = ..()
-	src.insert_datajack()
+	insert_datajack()
 
 /obj/item/modular_computer/Initialize()
 	. = ..()
@@ -45,7 +45,7 @@
 
 /datum/terminal_command/datajack
 	name = "datajack"
-	man_entry = list("Format: datajack", "Works only on mobile devices. Ejects a datajack for checking wiring and pulsing any of it.")
+	man_entry = list("Format: datajack", "Works only on mobile devices. Ejects a datajack for checking wiring and pulsing any of those.")
 	pattern = "^datajack$"
 	skill_needed = SKILL_EXPERT
 
