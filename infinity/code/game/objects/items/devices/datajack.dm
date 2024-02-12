@@ -4,6 +4,7 @@
 	desc = "Кабель для мультизадачного подключения к различным устройствам посредством электронных устройств и продвинутой диагностики."
 	icon = 'infinity/icons/obj/items.dmi'
 	icon_state = "datajack"
+	w_class = ITEM_SIZE_HUGE
 	mode = METER_CHECKING // Mode
 	var/obj/item/modular_computer/holder
 
@@ -56,4 +57,4 @@
 
 	var/obj/item/modular_computer/comp = terminal.computer.get_physical_host()
 	comp.eject_datajack(user)
-	return list("Datajack tried to eject further.")
+	return list(SPAN_INFO("Datajack tried to eject further."))
