@@ -32,6 +32,7 @@
 	action_delay = 15
 	max_damage = 120
 	power_use = 10
+	allow_passengers = FALSE // Лёгкие слишком маленькие и лёгкие
 	desc = "As flexible as they are fragile, these Vey-Med manipulators can follow a pilot's movements in close to real time."
 
 /obj/item/mech_component/propulsion/light
@@ -69,8 +70,8 @@
 	name = "light exosuit chassis"
 	hatch_descriptor = "canopy"
 	pilot_coverage = 100
-	transparent_cabin =  TRUE
 	hide_pilot = TRUE //Sprite too small, legs clip through, so for now hide pilot
+	transparent_cabin = TRUE
 	exosuit_desc_string = "an open and light chassis"
 	icon_state = "light_body"
 	max_damage = 150
@@ -92,4 +93,24 @@
 			"[WEST]"  = list("x" = 9,  "y" = -2)
 		)
 	)
+	back_passengers_positions = list(
+			"[NORTH]" = list("x" = 8,  "y" = 16),
+			"[SOUTH]" = list("x" = 8,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+	left_back_passengers_positions = list(
+			"[NORTH]" = list("x" = -2,  "y" = 16),
+			"[SOUTH]" = list("x" = 16,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+	right_back_passengers_positions = list(
+			"[NORTH]" = list("x" = 16,  "y" = 16),
+			"[SOUTH]" = list("x" = -2,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+
+
 	. = ..()

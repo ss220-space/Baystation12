@@ -20,6 +20,7 @@
 		body.prebuild()
 	if(!material)
 		material = SSmaterials.get_material_by_name(MATERIAL_STEEL)
+	passenger_compartment = new(src)
 	. = ..()
 
 	spawn_mech_equipment()

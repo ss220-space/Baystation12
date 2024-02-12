@@ -6,6 +6,7 @@
 
 	var/melee_damage = 15
 	var/action_delay = 15
+	var/allow_passengers = TRUE // Отвечает за то, что могут ли руки перевозить пассажиров
 	var/obj/item/robot_parts/robot_component/actuator/motivator
 	power_use = 10
 	w_class = ITEM_SIZE_LARGE

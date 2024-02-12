@@ -15,6 +15,7 @@
 	var/passive_power_use = 0          // For gear that for some reason takes up power even if it's supposedly doing nothing (mech will idly consume power)
 	var/mech_layer = MECH_GEAR_LAYER //For the part where it's rendered as mech gear
 	var/require_adjacent = TRUE
+	var/disturb_passengers = FALSE // Отвечает за то, мешает ли модуль посадке пассажира в занятый хардпоинт.
 	var/active = FALSE //For gear that has an active state (ie, floodlights)
 
 /obj/item/mech_equipment/attack(mob/living/M, mob/living/user, target_zone) //Generally it's not desired to be able to attack with items
@@ -23,25 +24,25 @@
 /obj/item/mech_equipment/afterattack(var/atom/target, var/mob/living/user, var/inrange, var/params)
 	if(require_adjacent)
 		if(!inrange)
-			return 0	
+			return 0
 	if (owner && loc == owner && ((user in owner.pilots) || user == owner))
 		if(target in owner.contents)
 			return 0
 
 		if(!(owner.get_cell()?.check_charge(active_power_use * CELLRATE)))
 			to_chat(user, SPAN_WARNING("The power indicator flashes briefly as you attempt to use \the [src]"))
-			return 0	
+			return 0
 		return 1
-	else 
+	else
 		return 0
 
 /obj/item/mech_equipment/attack_self(var/mob/user)
 	if (owner && loc == owner && ((user in owner.pilots) || user == owner))
 		if(!(owner.get_cell()?.check_charge(active_power_use * CELLRATE)))
 			to_chat(user, SPAN_WARNING("The power indicator flashes briefly as you attempt to use \the [src]"))
-			return 0	
+			return 0
 		return 1
-	else 
+	else
 		return 0
 
 /obj/item/mech_equipment/examine(mob/user, distance)
@@ -115,14 +116,14 @@
 			icon_state = holding.icon_state
 		SetName(holding.name)
 		desc = "[holding.desc] This one is suitable for installation on an exosuit."
-		
+
 
 /obj/item/mech_equipment/mounted_system/Destroy()
 	GLOB.destroyed_event.unregister(holding, src, .proc/forget_holding)
 	if(holding)
 		QDEL_NULL(holding)
 	. = ..()
-	
+
 
 /obj/item/mech_equipment/mounted_system/get_effective_obj()
 	return (holding ? holding : src)

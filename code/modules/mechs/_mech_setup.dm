@@ -44,3 +44,7 @@ GLOBAL_LIST_INIT(mech_weapon_overlays, icon_states('icons/mecha/mech_weapon_over
 #define MECH_POWER_OFF 0
 #define MECH_POWER_TRANSITION 1
 #define MECH_POWER_ON 2
+
+//Passengers
+#define MECH_DROP_ALL_PASSENGER 1 // Скинуть всех пассажиров
+#define MECH_DROP_ANY_PASSENGER 2 // Скинуть первого попавшегося пассажира
