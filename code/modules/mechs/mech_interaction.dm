@@ -297,10 +297,10 @@
 	if(!user.Adjacent(src))
 		return FALSE
 	if(hatch_locked)
-		check_passenger(user)// <- Если кабина закрыта - игрок пытается занять пассажирку
+		check_passenger(user) // <- Если кабина закрыта - игрок пытается занять пассажирку
 		return FALSE
 	if(hatch_closed)
-		check_passenger(user)// <- Если кабина закрыта - игрок пытается занять пассажирку
+		check_passenger(user) // <- Если кабина закрыта - игрок пытается занять пассажирку
 		return FALSE
 	if(LAZYLEN(pilots) >= LAZYLEN(body.pilot_positions))
 		to_chat(user, SPAN_WARNING("\The [src] is occupied to capacity."))
@@ -328,7 +328,7 @@
 	user.PushClickHandler(/datum/click_handler/default/mech)
 	return 1
 
-/mob/living/exosuit/proc/check_passenger(var/mob/user)// Выбираем желаемое место, проверяем можно ли его занять, стартуем прок занятия
+/mob/living/exosuit/proc/check_passenger(var/mob/user) // Выбираем желаемое место, проверяем можно ли его занять, стартуем прок занятия
 	var/choose
 	var/choosed_place = input(usr, "Choose passenger place which you want to take.", name, choose) as null|anything in passenger_places
 	if(user.r_hand != null || user.l_hand != null)
@@ -352,7 +352,7 @@
 			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [arms.name]"))
 			return 0
 	else if(choosed_place == "Right back")
-		if(LAZYLEN(passenger_compartment.right_back_passengers)>0)
+		if(LAZYLEN(passenger_compartment.right_back_passengers) > 0)
 			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
 			return 0
 		else if(arms.able_passenger == FALSE)
