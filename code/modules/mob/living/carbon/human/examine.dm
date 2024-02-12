@@ -168,7 +168,7 @@
 				msg += "<span class='warning'>[T.His] face is horribly mangled!</span>\n"
 		if(species.species_flags & SPECIES_ALL_ROBOPARTS)
 			var/datum/robolimb/robohead = all_robolimbs[E.model]
-			if(length(robohead.display_text) && f_style == "Text")
+			if(length(robohead.display_text) && (f_style == "Text" || f_style == "Database"))
 				msg += "Отображает на экране: [robohead.display_text]\n"
 
 	//splints

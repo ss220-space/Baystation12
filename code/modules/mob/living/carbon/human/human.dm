@@ -557,6 +557,11 @@ GLOBAL_LIST_EMPTY(compatable_genomes_owners)
 		if(I)
 			src.examinate(I)
 			return TOPIC_HANDLED
+	if(href_list["showipcscreen"])
+		var/obj/item/modular_computer/ecs/S = locate(href_list["showipcscreen"])
+		if(S)
+			S.ui_interact(src)
+			return STATUS_UPDATE
 	return ..()
 
 /mob/living/carbon/human/CanUseTopic(mob/user, datum/topic_state/state, href_list)
