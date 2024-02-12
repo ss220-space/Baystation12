@@ -11,7 +11,6 @@
 	base_idle_power_usage = 0
 	light_strength = 2
 	slot_flags = SLOT_ID | SLOT_BELT
-	var/datajack_stored = 1
 	stores_pen = TRUE
 	stored_pen = /obj/item/pen/retractable
 	interact_sounds = list('sound/machines/pda_click.ogg')
@@ -35,14 +34,6 @@
 	else
 		..()
 
-/obj/item/modular_computer/pda/attackby(obj/item/device/multitool/datajack, mob/user)
-    . = ..()
-    if(datajack_stored)
-		to_chat(user, SPAN_WARNING("There is a datajack inside already!"))
-    else
-        to_chat(user, SPAN_NOTICE("You insert a datajack inside of your PDA."))
-		datajack_stored = 1
-// PDA box
 /obj/item/storage/box/PDAs
 	name = "box of spare PDAs"
 	desc = "A box of spare PDA microcomputers."
