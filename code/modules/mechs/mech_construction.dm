@@ -1,5 +1,5 @@
 /mob/living/exosuit/proc/dismantle()
-
+	forced_leave_passenger(0 , MECH_DROP_ALL_PASSENGER , "dismantle of [src]") // Перед разбором, сбросим всех пассажиров
 	playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
 	var/obj/structure/heavy_vehicle_frame/frame = new(get_turf(src))
 	for(var/hardpoint in hardpoints)

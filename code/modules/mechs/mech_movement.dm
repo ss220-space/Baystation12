@@ -140,6 +140,8 @@
 	if(exosuit.dir != moving_dir && !(direction & (UP|DOWN)))
 		playsound(exosuit.loc, exosuit.mech_turn_sound, 40,1)
 		exosuit.set_dir(moving_dir)
+		if(exosuit.passengers_ammount>0)
+			exosuit.update_passengers()
 		exosuit.SetMoveCooldown(exosuit.legs.turn_delay)
 //TURN
 

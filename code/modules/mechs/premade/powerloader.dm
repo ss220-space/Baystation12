@@ -99,6 +99,26 @@
 			"[WEST]"  = list("x" = 16, "y" = 16)
 		)
 	)
+	back_passengers_positions = list(
+			"[NORTH]" = list("x" = 8,  "y" = 16),
+			"[SOUTH]" = list("x" = 8,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+	left_back_passengers_positions = list(
+			"[NORTH]" = list("x" = -4,  "y" = 16),
+			"[SOUTH]" = list("x" = 20,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+	right_back_passengers_positions = list(
+			"[NORTH]" = list("x" = 20,  "y" = 16),
+			"[SOUTH]" = list("x" = -4,  "y" = 16),
+			"[EAST]"  = list("x" = -4, "y" = 16),
+			"[WEST]"  = list("x" = 16, "y" = 16)
+			)
+
+
 	. = ..()
 
 /mob/living/exosuit/premade/powerloader/flames_red

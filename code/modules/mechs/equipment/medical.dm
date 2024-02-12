@@ -8,6 +8,7 @@
 	active_power_use = 0 //Usage doesn't really require power. We don't want people stuck inside
 	origin_tech = list(TECH_DATA = 2, TECH_BIO = 3)
 	passive_power_use = 1.5 KILOWATTS
+	disturb_passengers = TRUE // Мешает залезть пассажирам на спину(не бока)
 	var/obj/machinery/sleeper/mounted/sleeper = null
 
 /obj/item/mech_equipment/sleeper/Initialize()
@@ -77,4 +78,3 @@
 			user.visible_message("<span class='notice'>\The [user] removes \the [beaker] from \the [src].</span>", "<span class='notice'>You remove \the [beaker] from \the [src].</span>")
 		beaker = I
 		user.visible_message("<span class='notice'>\The [user] adds \a [I] to \the [src].</span>", "<span class='notice'>You add \a [I] to \the [src].</span>")
-
