@@ -190,7 +190,7 @@ obj/item/mech_component/chassis/MouseDrop(atom/over)
 	if(!usr || !over) return
 	if(!Adjacent(usr) || !over.Adjacent(usr)) return
 
-	if(storage_compartment && LAZYLEN(owner.passenger_compartment.back_passengers)<=0) //Багажник не откроется, пока на спине есть пассажир.
+	if(storage_compartment && LAZYLEN(owner.passenger_compartment.back_passengers) <= 0) //Багажник не откроется, пока на спине есть пассажир.
 		return storage_compartment.MouseDrop(over)
 
 /obj/item/mech_component/chassis/return_diagnostics(mob/user)
