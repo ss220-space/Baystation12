@@ -341,21 +341,21 @@
 		if(LAZYLEN(passenger_compartment.back_passengers) > 0)
 			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
 			return 0
-		else if(body.able_passenger == FALSE)
+		else if(body.allow_passengers == FALSE)
 			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [body.name]"))
 			return 0
 	else if(choosed_place == "Left back")
 		if(LAZYLEN(passenger_compartment.left_back_passengers) > 0)
 			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
 			return 0
-		else if(arms.able_passenger == FALSE)
+		else if(arms.allow_passengers == FALSE)
 			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [arms.name]"))
 			return 0
 	else if(choosed_place == "Right back")
 		if(LAZYLEN(passenger_compartment.right_back_passengers) > 0)
 			to_chat(user,SPAN_NOTICE("[choosed_place] is busy"))
 			return 0
-		else if(arms.able_passenger == FALSE)
+		else if(arms.allow_passengers == FALSE)
 			to_chat(user,SPAN_NOTICE("[choosed_place] not able with [arms.name]"))
 			return 0
 	else if(choosed_place == null)

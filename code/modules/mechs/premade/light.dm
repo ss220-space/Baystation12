@@ -32,7 +32,7 @@
 	action_delay = 15
 	max_damage = 120
 	power_use = 10
-	able_passenger = FALSE // Лёгкие слишком маленькие и лёгкие
+	allow_passengers = FALSE // Лёгкие слишком маленькие и лёгкие
 	desc = "As flexible as they are fragile, these Vey-Med manipulators can follow a pilot's movements in close to real time."
 
 /obj/item/mech_component/propulsion/light

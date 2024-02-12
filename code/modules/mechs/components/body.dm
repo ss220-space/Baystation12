@@ -43,7 +43,7 @@
 	var/max_pilot_size = MOB_LARGE
 	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_LEFT_SHOULDER, HARDPOINT_RIGHT_SHOULDER)
 	var/climb_time = 25
-	var/able_passenger = TRUE
+	var/allow_passengers = TRUE
 
 /obj/item/mech_component/chassis/New()
 	..()
