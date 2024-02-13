@@ -122,13 +122,13 @@
 
 
 	if(venom_cooldown > world.time)
-		to_chat(usr, "<span class='warning'>Your venom glands are too exhausted; it will take some time before you can decant your innate venom again.</span>")
+		to_chat(usr, SPAN_WARNING("Your venom glands are too exhausted, it will take some time before you can decant your innate venom again."))
 		return
 	if(istype(target, /obj/item/reagent_containers/))
 		if(target.reagents)
 			target.reagents.add_reagent(poison_type, 8)
 			usr.visible_message(
-			SPAN_NOTICE("[usr] sticks their fangs into the side of the [target], dripping thick, green-ish substance into the container."),
-			SPAN_NOTICE("You stick your fangs into the side of the [target], allowing some of your innate venom to drip into the container.")
+			SPAN_NOTICE("\The [usr] sticks their fangs into the side of the [target], dripping thick, green-ish substance into the container."),
+			SPAN_NOTICE("You stick your fangs into the side of the \the [target], allowing some of your innate venom to drip into the container.")
 			)
 			venom_cooldown = world.time + (30 SECONDS)
