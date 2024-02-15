@@ -33,15 +33,20 @@
 
 /obj/item/modular_computer/proc/eject_datajack(mob/living/carbon/human/user)
 	if(!datajack || datajack.loc != src)
-		return 0
+		return
 
 	if(!user.put_in_hands(datajack))
 		to_chat(user, SPAN_WARNING("No free space in hands."))
 
 /obj/item/modular_computer/proc/insert_datajack()
-	if(!datajack || datajack.loc == src)
-		return 0
+	if(!datajack)
+		return
 
+	if(istype(datajack.loc, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = datajack.loc
+		H.remove_from_mob(datajack, src)
+		to_chat(H, SPAN_WARNING("А усё, датаджек сьбелся, сосешь получается)0)0))"))
+		return
 	datajack.forceMove(src)
 
 /datum/terminal_command/datajack
