@@ -45,7 +45,7 @@
 	if(istype(datajack.loc, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = datajack.loc
 		H.remove_from_mob(datajack, src)
-		to_chat(H, SPAN_WARNING("А усё, датаджек сьбелся, сосешь получается)0)0))"))
+		to_chat(H, SPAN_WARNING("А усё, датаджек сьебался, сосешь получается)0)0))"))
 		return
 	datajack.forceMove(src)
 
