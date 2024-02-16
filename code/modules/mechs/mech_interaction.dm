@@ -384,10 +384,10 @@
 
 /mob/living/exosuit/proc/enter_passenger(var/mob/user,var/place)// Пытается пихнуть на пассажирское место пассажира, перед этим ещё раз проверяя их
 	//Проверка спины
-	src.visible_message(SPAN_NOTICE(" [user] Starts climb on the [place] of mech!"))
+	src.visible_message(SPAN_NOTICE(" [user] starts climb on the [place] of [src]!"))
 	if(do_after(user, 2 SECONDS, get_turf(src),DO_SHOW_PROGRESS|DO_FAIL_FEEDBACK|DO_USER_CAN_TURN| DO_USER_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
 		if(user.r_hand != null || user.l_hand != null)
-			to_chat(user,SPAN_NOTICE("You need two free hands to clim on[place] of mech."))
+			to_chat(user,SPAN_NOTICE("You need two free hands to clim on[place] of [src]."))
 			return
 		if(place == "Back" && LAZYLEN(passenger_compartment.back_passengers) == 0)
 			user.forceMove(passenger_compartment)
@@ -404,13 +404,13 @@
 		else
 			to_chat(user,SPAN_NOTICE("Looks like [place] is busy!"))
 			return 0
-		src.visible_message(SPAN_NOTICE(" [user] climbed on [place] of mech!"))
+		src.visible_message(SPAN_NOTICE(" [user] climbed on [place] of [src]!"))
 		passengers_ammount += 1
 		update_passengers()
 
 // будет использоваться Life() дабы исключить моменты, когда по какой-то причине пассажир слез с меха, лежа на полу. Life вызовется, обработается pinned, всем в кайф.
 /mob/living/exosuit/proc/leave_passenger(var/mob/user)// Пассажир сам покидает меха
-	src.visible_message(SPAN_NOTICE("[user] jump off from mech!"))
+	src.visible_message(SPAN_NOTICE("[user] jump off [src]!"))
 	user.dropInto(loc)
 	user.pinned -= src
 	user.Life()
@@ -433,7 +433,7 @@
 				i.pinned -= src
 				i.Life()
 				passengers_ammount -= 1
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]"))
 		if(LAZYLEN(passenger_compartment.left_back_passengers)>0)
 			for(var/mob/i in passenger_compartment.left_back_passengers)
 				LAZYREMOVE(passenger_compartment.left_back_passengers,i)
@@ -441,7 +441,7 @@
 				i.pinned -= src
 				i.Life()
 				passengers_ammount -= 1
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]"))
 		if(LAZYLEN(passenger_compartment.right_back_passengers) > 0)
 			for(var/mob/i in passenger_compartment.right_back_passengers)
 				LAZYREMOVE(passenger_compartment.right_back_passengers,i)
@@ -449,7 +449,7 @@
 				i.pinned -= src
 				i.Life()
 				passengers_ammount -= 1
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]"))
 		update_passengers()
 
 	else if(mode == MECH_DROP_ANY_PASSENGER) // Сброс по приоритету спина - левый бок - правый бок.
@@ -459,7 +459,7 @@
 				i.dropInto(loc)
 				i.pinned -= src
 				i.Life()
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]"))
 				passengers_ammount -= 1
 				update_passengers()
 				return
@@ -469,7 +469,7 @@
 				i.dropInto(loc)
 				i.pinned -= src
 				i.Life()
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]"))
 				passengers_ammount -= 1
 				update_passengers()
 				return
@@ -480,7 +480,7 @@
 				i.pinned -= src
 				i.Life()
 				i.Life()
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]"))
 				passengers_ammount -= 1
 				update_passengers()
 				return
@@ -488,19 +488,19 @@
 	else // <- Опустошается определённое место
 		if(place == "Back")
 			for(var/mob/i in passenger_compartment.back_passengers)
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]"))
 				i.dropInto(loc)
 				i.pinned -= src
 				LAZYREMOVE(passenger_compartment.back_passengers,i)
 		else if(place == "Left back")
 			for(var/mob/i in passenger_compartment.left_back_passengers)
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]!"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]!"))
 				i.dropInto(loc)
 				i.pinned -= src
 				LAZYREMOVE(passenger_compartment.left_back_passengers,i)
 		else if(place == "Right back")
 			for(var/mob/i in passenger_compartment.right_back_passengers)
-				src.visible_message(SPAN_WARNING("[i] was forcelly removed from mech by [author]!"))
+				src.visible_message(SPAN_WARNING("[i] was forcelly removed from [src] by [author]!"))
 				i.dropInto(loc)
 				i.pinned -= src
 				LAZYREMOVE(passenger_compartment.right_back_passengers,i)

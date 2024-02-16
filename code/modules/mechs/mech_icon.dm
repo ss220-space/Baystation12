@@ -50,6 +50,18 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 	for(var/hardpoint in hardpoints)
 		var/obj/item/mech_equipment/hardpoint_object = hardpoints[hardpoint]
 		if(hardpoint_object)
+		//
+			if(hardpoint == "left hand")
+				if(dir == WEST || dir == SOUTHWEST || dir == NORTHWEST)
+					hardpoint_object.mech_layer = MECH_GEAR_LAYER
+				else if(dir == EAST || dir == SOUTHEAST || dir == NORTHEAST)
+					hardpoint_object.mech_layer = MECH_BACK_LAYER
+			if(hardpoint == "right hand")
+				if(dir == WEST || dir == SOUTHWEST || dir == NORTHWEST)
+					hardpoint_object.mech_layer = MECH_BACK_LAYER
+				else if(dir == EAST || dir == SOUTHEAST || dir == NORTHEAST)
+					hardpoint_object.mech_layer = MECH_GEAR_LAYER
+		//
 			var/use_icon_state = "[hardpoint_object.icon_state]_[hardpoint]"
 			if(power == MECH_POWER_ON)
 				if(use_icon_state in GLOB.mech_weapon_overlays)
@@ -59,20 +71,25 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 	overlays = new_overlays
 
 /mob/living/exosuit/proc/update_pilots(var/update_overlays = TRUE)
+	var/local_dir = dir
 	if(update_overlays && LAZYLEN(pilot_overlays))
 		overlays -= pilot_overlays
 	pilot_overlays = null
+	if(local_dir == NORTHEAST || local_dir == SOUTHEAST)
+		local_dir = EAST
+	else if(local_dir == NORTHWEST || local_dir == SOUTHWEST)
+		local_dir = WEST
 	if(!body || ((body.pilot_coverage < 100 || body.transparent_cabin) && !body.hide_pilot))
 		for(var/i = 1 to LAZYLEN(pilots))
 			var/mob/pilot = pilots[i]
 			var/image/draw_pilot = new
 			draw_pilot.appearance = pilot
-			var/rel_pos = dir == NORTH ? -1 : 1
+			var/rel_pos = local_dir == NORTH ? -1 : 1
 			draw_pilot.layer = MECH_PILOT_LAYER + (body ? ((LAZYLEN(body.pilot_positions)-i)*0.001 * rel_pos) : 0)
 			draw_pilot.plane = FLOAT_PLANE
 			if(body && i <= LAZYLEN(body.pilot_positions))
 				var/list/offset_values = body.pilot_positions[i]
-				var/list/directional_offset_values = offset_values["[dir]"]
+				var/list/directional_offset_values = offset_values["[local_dir]"]
 				draw_pilot.pixel_x = pilot.default_pixel_x + directional_offset_values["x"]
 				draw_pilot.pixel_y = pilot.default_pixel_y + directional_offset_values["y"]
 				draw_pilot.pixel_z = 0
@@ -82,6 +99,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 			overlays += pilot_overlays
 
 /mob/living/exosuit/proc/update_passengers(var/update_overlays = TRUE)
+	var/local_dir = dir // <- Для того чтоб не руинить направление передвижения меха, мы применим эту переменную
 	if(update_overlays && LAZYLEN(back_passengers_overlays))
 		overlays -= back_passengers_overlays
 	if(update_overlays && LAZYLEN(left_back_passengers_overlays))
@@ -94,20 +112,23 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 	var/passenger_back_layer
 	var/passenger_left_back_layer
 	var/passenger_right_back_layer
-	//
-	if(dir == EAST)
+	// Дабы исключить момент когда при боковом движении пассажиров не видно, помимо обычных направлений, будут прописаны следующие:
+
+	if(local_dir == EAST || local_dir == NORTHEAST || local_dir == SOUTHEAST)
+		local_dir = EAST
 		passenger_back_layer = MECH_BACK_LAYER
 		passenger_left_back_layer = MECH_BACK_LAYER - 0.01
 		passenger_right_back_layer = MECH_GEAR_LAYER
-	else if(dir == WEST)
+	else if(local_dir == WEST || local_dir == NORTHWEST || local_dir == SOUTHWEST)
+		local_dir = WEST
 		passenger_back_layer = MECH_BACK_LAYER
 		passenger_left_back_layer = MECH_GEAR_LAYER
 		passenger_right_back_layer = MECH_BACK_LAYER - 0.01
-	else if(dir == SOUTH)
+	else if(local_dir == SOUTH)
 		passenger_back_layer  = MECH_BACK_LAYER
 		passenger_left_back_layer = MECH_BACK_LAYER
 		passenger_right_back_layer = MECH_BACK_LAYER
-	else if(dir == NORTH)
+	else if(local_dir == NORTH)
 		passenger_back_layer  = MECH_GEAR_LAYER + 0.01
 		passenger_left_back_layer = MECH_GEAR_LAYER + 0.01
 		passenger_right_back_layer = MECH_GEAR_LAYER + 0.01
@@ -118,7 +139,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		var/image/draw_passenger_back = new
 		draw_passenger_back.appearance = passenger_back
 		var/list/back_offset_values = body.back_passengers_positions
-		var/list/back_directional_offset_values = back_offset_values["[dir]"]
+		var/list/back_directional_offset_values = back_offset_values["[local_dir]"]
 		draw_passenger_back.pixel_x = passenger_back.default_pixel_x + back_directional_offset_values["x"]
 		draw_passenger_back.pixel_y = passenger_back.default_pixel_y + back_directional_offset_values["y"]
 		draw_passenger_back.pixel_z = 0
@@ -132,7 +153,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		draw_passenger_left_back.appearance = passenger_left_back
 		draw_passenger_left_back.plane = FLOAT_PLANE
 		var/list/left_offset_values = body.left_back_passengers_positions
-		var/list/left_directional_offset_values = left_offset_values["[dir]"]
+		var/list/left_directional_offset_values = left_offset_values["[local_dir]"]
 		draw_passenger_left_back.pixel_x = passenger_left_back.default_pixel_x + left_directional_offset_values["x"]
 		draw_passenger_left_back.pixel_y = passenger_left_back.default_pixel_y + left_directional_offset_values["y"]
 		draw_passenger_left_back.pixel_z = 0
@@ -147,7 +168,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		draw_passenger_right_back.appearance = passenger_right_back
 		draw_passenger_right_back.plane = FLOAT_PLANE
 		var/list/right_offset_values = body.right_back_passengers_positions
-		var/list/right_directional_offset_values = right_offset_values["[dir]"]
+		var/list/right_directional_offset_values = right_offset_values["[local_dir]"]
 		draw_passenger_right_back.pixel_x = passenger_right_back.default_pixel_x + right_directional_offset_values["x"]
 		draw_passenger_right_back.pixel_y = passenger_right_back.default_pixel_y + right_directional_offset_values["y"]
 		draw_passenger_right_back.pixel_z = 0
