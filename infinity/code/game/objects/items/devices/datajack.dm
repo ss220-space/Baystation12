@@ -10,11 +10,11 @@
 	var/obj/item/modular_computer/holder
 
 /obj/item/device/multitool/multimeter/datajack/New(var/obj/item/modular_computer/P)
-	..()
+	. = ..()
 	holder = P
 
 /obj/item/device/multitool/multimeter/datajack/attack_self(mob/user)
-	..()
+	. = ..()
 
 /obj/item/device/multitool/multimeter/datajack/dropped(mob/user)
 	. = ..()
