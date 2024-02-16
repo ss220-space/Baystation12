@@ -6,17 +6,19 @@
 	icon_state = "datajack"
 	w_class = ITEM_SIZE_HUGE
 	mode = METER_CHECKING // Mode
+	slot_flags = null
 	var/obj/item/modular_computer/holder
 
 /obj/item/device/multitool/multimeter/datajack/New(var/obj/item/modular_computer/P)
-	. = ..()
+	..()
 	holder = P
 
 /obj/item/device/multitool/multimeter/datajack/attack_self(mob/user)
-	. = ..()
+	..()
 
 /obj/item/device/multitool/multimeter/datajack/dropped(mob/user)
 	. = ..()
+	to_chat(user, SPAN_WARNING("Datajack moves into your device as you release it."))
 	holder.insert_datajack()
 
 /obj/item/modular_computer
@@ -36,7 +38,7 @@
 		return
 
 	if(!user.put_in_hands(datajack))
-		to_chat(user, SPAN_WARNING("No free space in hands."))
+		to_chat(user, SPAN_WARNING("Datajack cannot be deployed as long as you have no free space in hands."))
 
 /obj/item/modular_computer/proc/insert_datajack()
 	if(!datajack)
@@ -45,7 +47,7 @@
 	if(istype(datajack.loc, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = datajack.loc
 		H.remove_from_mob(datajack, src)
-		to_chat(H, SPAN_WARNING("А усё, датаджек сьебался, сосешь получается)0)0))"))
+		to_chat(H, SPAN_WARNING("Datajack moves into your device as you move away from it."))
 		return
 	datajack.forceMove(src)
 
@@ -62,4 +64,4 @@
 
 	var/obj/item/modular_computer/comp = terminal.computer.get_physical_host()
 	comp.eject_datajack(user)
-	return list(SPAN_INFO("Datajack tried to eject further."))
+	return SPAN_WARNING("Datajack tried to eject further.")
