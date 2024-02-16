@@ -4,7 +4,7 @@
 	desc = "Кабель для мультизадачного подключения к различным устройствам посредством электронных устройств и продвинутой диагностики."
 	icon = 'infinity/icons/obj/items.dmi'
 	icon_state = "datajack"
-	w_class = ITEM_SIZE_SMALL
+	w_class = ITEM_SIZE_TINY
 	mode = METER_CHECKING // Mode
 	slot_flags = null
 	var/obj/item/modular_computer/holder
