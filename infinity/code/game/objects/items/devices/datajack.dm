@@ -4,7 +4,7 @@
 	desc = "Кабель для мультизадачного подключения к различным устройствам посредством электронных устройств и продвинутой диагностики."
 	icon = 'infinity/icons/obj/items.dmi'
 	icon_state = "datajack"
-	w_class = ITEM_SIZE_HUGE
+	w_class = ITEM_SIZE_SMALL
 	mode = METER_CHECKING // Mode
 	slot_flags = null
 	var/obj/item/modular_computer/holder
@@ -18,7 +18,6 @@
 
 /obj/item/device/multitool/multimeter/datajack/dropped(mob/user)
 	. = ..()
-	to_chat(user, SPAN_WARNING("Datajack moves into your device as you release it."))
 	holder.insert_datajack()
 
 /obj/item/modular_computer
@@ -32,6 +31,12 @@
 	. = ..()
 	datajack = new(src)
 	datajack.forceMove(src)
+
+/obj/item/modular_computer/attackby(obj/item/W, mob/user, var/click_params)
+	. = ..()
+	if(datajack == W)
+		insert_datajack()
+		return
 
 /obj/item/modular_computer/proc/eject_datajack(mob/living/carbon/human/user)
 	if(!datajack || datajack.loc != src)
@@ -47,7 +52,7 @@
 	if(istype(datajack.loc, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = datajack.loc
 		H.remove_from_mob(datajack, src)
-		to_chat(H, SPAN_WARNING("Datajack moves into your device as you move away from it."))
+		to_chat(H, SPAN_WARNING("Datajack moves into your device."))
 		return
 	datajack.forceMove(src)
 
@@ -65,3 +70,6 @@
 	var/obj/item/modular_computer/comp = terminal.computer.get_physical_host()
 	comp.eject_datajack(user)
 	return SPAN_WARNING("Datajack tried to eject further.")
+
+/obj/item/device/multitool/multimeter/datajack/mob_can_unequip()
+	return
