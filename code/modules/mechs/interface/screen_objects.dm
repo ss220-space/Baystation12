@@ -325,6 +325,9 @@
 	if(!owner.get_cell())
 		to_chat(usr,  SPAN_WARNING("The augmented vision systems are offline."))
 		return
+	if(!owner.head.camera)
+		to_chat(usr,SPAN_WARNING("ERROR, main camera damaged."))
+		return
 	owner.head.active_sensors = ..()
 	to_chat(usr, SPAN_NOTICE("[owner.head.name] advanced sensor mode is [owner.head.active_sensors ? "now" : "no longer" ] active."))
 
