@@ -140,14 +140,14 @@
 	if(exosuit.dir != moving_dir && !(direction & (UP|DOWN)))
 		playsound(exosuit.loc, exosuit.mech_turn_sound, 40,1)
 		exosuit.set_dir(moving_dir)
+		//Данная формула нужна чтобы УБЕДИТЬСЯ в расчётах количества пассажиров, ибо по не очевидным причинам, оно может не расчитать верно
+		exosuit.passengers_ammount = LAZYLEN(exosuit.passenger_compartment.back_passengers) + LAZYLEN(exosuit.passenger_compartment.left_back_passengers) + LAZYLEN(exosuit.passenger_compartment.right_back_passengers)
 		if(exosuit.passengers_ammount > 0)
 			exosuit.update_passengers()
 		for(var/hardpoint in exosuit.hardpoints)
 			if(hardpoint == "left hand" || hardpoint == "right hand")
 				exosuit.update_icon()
 		exosuit.SetMoveCooldown(exosuit.legs.turn_delay)
-		//Данная формула нужна чтобы УБЕДИТЬСЯ в расчётах количества пассажиров, ибо по не очевидным причинам, оно может не расчитать верно
-		exosuit.passengers_ammount = LAZYLEN(exosuit.passenger_compartment.back_passengers) + LAZYLEN(exosuit.passenger_compartment.left_back_passengers) + LAZYLEN(exosuit.passenger_compartment.right_back_passengers)
 //TURN
 
 //MOVE
