@@ -57,7 +57,7 @@
     if(istype(datajack.loc, /mob/living/carbon/human))
         var/mob/living/carbon/human/H = datajack.loc
         H.remove_from_mob(datajack, src)
-        to_chat(H, SPAN_WARNING("Datajack moves into your device."))
+        to_chat(H, SPAN_WARNING("Datajack moves into portable device."))
         return
     datajack.forceMove(src)
 
