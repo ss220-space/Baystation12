@@ -138,6 +138,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		var/mob/passenger_back = passenger_compartment.back_passengers[1]
 		var/image/draw_passenger_back = new
 		draw_passenger_back.appearance = passenger_back
+		draw_passenger_back.plane = FLOAT_PLANE
 		var/list/back_offset_values = body.back_passengers_positions
 		var/list/back_directional_offset_values = back_offset_values["[local_dir]"]
 		draw_passenger_back.pixel_x = passenger_back.default_pixel_x + back_directional_offset_values["x"]

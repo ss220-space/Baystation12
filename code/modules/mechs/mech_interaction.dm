@@ -331,6 +331,8 @@
 /mob/living/exosuit/proc/check_passenger(var/mob/user) // Выбираем желаемое место, проверяем можно ли его занять, стартуем прок занятия
 	var/choose
 	var/choosed_place = input(usr, "Choose passenger place which you want to take.", name, choose) as null|anything in passenger_places
+	if(!user.Adjacent(src)) // <- Мех рядом?
+		return FALSE
 	if(user.r_hand != null || user.l_hand != null)
 		to_chat(user,SPAN_NOTICE("You need two free hands to take [choosed_place]."))
 		return
@@ -575,7 +577,6 @@
 					to_chat(user, SPAN_WARNING("[to_place] covered by passenger, you cant install \the [thing]."))
 					return
 		//
-			return
 		if(install_system(thing, to_place, user))
 			return
 		to_chat(user, SPAN_WARNING("\The [thing] could not be installed in that hardpoint."))
