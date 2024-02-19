@@ -84,7 +84,7 @@
 /obj/item/mech_equipment/mounted_system/taser/laser/Ert //Mech laser canon (Danger shit)
 	name = "\improper CH-PS \"Anigilator\" laser"
 	desc = "An exosuit-mounted laser rifle. Handle with care."
-	icon_state = "mech_lasercarbine"
+	icon_state = "mech_lasercanon"
 	holding_type = /obj/item/gun/energy/lasercannon/mounted
 
 /obj/item/gun/energy/lasercannon/mounted

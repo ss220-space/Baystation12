@@ -675,7 +675,9 @@ default behaviour is:
 		if(C.passengers_ammount > 1)
 			var/choose
 			var/choosed_place = input(usr, "Choose passenger place which you want unload.", name, choose) as null|anything in C.passenger_places
-			C.forced_leave_passenger(choosed_place , null , C)
+			if(choosed_place == null)
+				return FALSE
+			C.forced_leave_passenger(choosed_place, null , C)
 		else
 			C.forced_leave_passenger(null , MECH_DROP_ANY_PASSENGER , C)
 		return TRUE
