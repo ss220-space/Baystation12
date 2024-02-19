@@ -127,6 +127,8 @@
 	if(istype(target, /obj/item/reagent_containers/))
 		if(target.reagents)
 			target.reagents.add_reagent(poison_type, 8)
+			src.adjust_nutrition(-25)
+			src.adjust_hydration(-15)
 			usr.visible_message(
 			SPAN_NOTICE("\The [usr] sticks their fangs into the side of the [target], dripping thick, green-ish substance into the container."),
 			SPAN_NOTICE("You stick your fangs into the side of the \the [target], allowing some of your innate venom to drip into the container.")
