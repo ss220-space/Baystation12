@@ -99,6 +99,7 @@
 
 		air_supply = new /obj/machinery/portable_atmospherics/canister/air/mech(src)
 	storage_compartment = new(src)
+	owner = loc
 
 /obj/item/mech_component/chassis/proc/update_air(var/take_from_supply)
 
