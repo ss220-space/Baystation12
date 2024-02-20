@@ -43,10 +43,15 @@
         return
 
     if(!user.put_in_hands(datajack))
-        to_chat(user, SPAN_WARNING("Datajack cannot be deployed as long as you have no free space in hands."))
+        to_chat(user, SPAN_WARNING("Datajack cannot be deployed in your hands, dropping it on the ground"))
+        START_PROCESSING(SSobj, datajack)
         return
 
     START_PROCESSING(SSobj, datajack)
+    visible_message(
+    SPAN_WARNING("Datajack ejects from device."),
+    SPAN_WARNING("You hear coil reeling out something.")
+    )
 
 /obj/item/modular_computer/proc/insert_datajack()
     if(!datajack)
@@ -55,13 +60,18 @@
     STOP_PROCESSING(SSobj, datajack)
 
     if(istype(datajack.loc, /mob/living/carbon/human))
-        visible_message(
-            SPAN_WARNING("Datajack moves into portable device."),
-            SPAN_WARNING("You hear coil reeling back in place")
-        )
+
         var/mob/living/carbon/human/H = datajack.loc
         H.remove_from_mob(datajack, src)
+        visible_message(
+        SPAN_WARNING("Datajack moves into portable device."),
+        SPAN_WARNING("You hear coil reeling back in place")
+        )
         return
+    visible_message(
+    SPAN_WARNING("Datajack moves into portable device."),
+    SPAN_WARNING("You hear coil reeling back in place")
+    )
     datajack.forceMove(src)
 
 /datum/terminal_command/datajack
@@ -72,7 +82,7 @@
 
 /datum/terminal_command/datajack/proper_input_entered(text, mob/user, var/datum/terminal/terminal)
 	var/datum/extension/interactive/ntos/C = terminal.computer
-	if(!(C.get_hardware_flag() & (PROGRAM_PDA | PROGRAM_LAPTOP | PROGRAM_TABLET)))
+	if(!(C.get_hardware_flag() & (PROGRAM_PDA | PROGRAM_TABLET)))
 		return SPAN_WARNING("This command cant be executed on this device.")
 
 	var/obj/item/modular_computer/comp = terminal.computer.get_physical_host()
