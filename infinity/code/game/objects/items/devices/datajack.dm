@@ -55,10 +55,10 @@
     STOP_PROCESSING(SSobj, datajack)
 
     if(istype(datajack.loc, /mob/living/carbon/human))
-		visible_message(
-			SPAN_WARNING("Datajack moves into portable device."),
-			SPAN_WARNING("You hear coil reeling back in place")
-			)
+        visible_message(
+            SPAN_WARNING("Datajack moves into portable device."),
+            SPAN_WARNING("You hear coil reeling back in place")
+        )
         var/mob/living/carbon/human/H = datajack.loc
         H.remove_from_mob(datajack, src)
         return
