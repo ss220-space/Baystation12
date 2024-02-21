@@ -79,6 +79,7 @@
 	max_damage = 180
 	power_use = 0
 	climb_time = 6
+	allow_passengers = FALSE
 
 /obj/item/mech_component/chassis/powerloader/prebuild()
 	. = ..()
