@@ -112,3 +112,5 @@
 	var/list/descriptors
 
 	var/last_smelt = 0
+
+	var/venom_cooldown = 0 // used for Unathi
