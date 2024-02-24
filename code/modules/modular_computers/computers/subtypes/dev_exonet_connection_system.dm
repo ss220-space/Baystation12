@@ -17,17 +17,18 @@
 	exonets_ipc_computer = TRUE
 
 /obj/item/modular_computer/ecs/first
-	name = "exonet connection system of first generation"
+	name = "exonet connection system."
 	hardware_flag = PROGRAM_TABLET
+	desc = "A cirquit with some ports and wires. Looks like it's for a first generation IPC"
 
 /obj/item/modular_computer/ecs/second
-	name = "exonet connection system of second generation"
+	name = "exonet connection system."
 	hardware_flag = PROGRAM_TABLET
-
+	desc = "A cirquit with some ports and wires. Looks like it's for a second generation IPC"
 /obj/item/modular_computer/ecs/third
-	name = "exonet connection system of third generation"
+	name = "exonet connection system."
 	hardware_flag = PROGRAM_LAPTOP
-
+	desc = "A cirquit with some ports and wires. Looks like it's for a third generation IPC"
 
 /obj/item/modular_computer/ecs/first/install_default_hardware()
 	..()

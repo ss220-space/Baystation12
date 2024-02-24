@@ -389,13 +389,13 @@
 
 /obj/item/organ/internal/shackles/afterattack(obj/item/organ/internal/posibrain/ipc/C, mob/user)
 	if(istype(C))
-		if(C == /obj/item/organ/internal/posibrain/ipc/third)
+		if(C.type == /obj/item/organ/internal/posibrain/ipc/third)
 			to_chat(user, "This posibrain generattion cannot support shackle module.")
 			return
 		if(!newFreeFormLaw)
 			to_chat(user, "No law detected on shackle module, please create one.")
 			return
-		if(C.shackle = TRUE)
+		if(C.shackle == TRUE)
 			to_chat(user, "This positronic brain already have shackles module on it installed.")
 			return
 		if(do_after(user, 80, src))
