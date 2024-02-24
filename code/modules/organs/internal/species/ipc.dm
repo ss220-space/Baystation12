@@ -359,7 +359,7 @@
 
 /obj/item/organ/internal/posibrain/ipc/attackby(obj/item/device/W as obj, mob/user as mob)
 	if(isMultitool(W))
-		if(user.skill_check(SKILL_DEVICES, SKILL_EXPERT))
+		if(user.skill_check(SKILL_DEVICES, SKILL_PROF))
 			if(do_after(user, 120, src))
 				new /obj/item/organ/internal/shackles (loc)
 				src.unshackle()
@@ -372,7 +372,7 @@
 
 /obj/item/organ/internal/shackles
 	name = "Shackle module"
-	desc = "A."
+	desc = "A Web looking device with some cirquit attach to it."
 	icon = 'icons/obj/assemblies.dmi'
 	icon_state = "posibrain-shackles"
 	origin_tech = list(TECH_DATA = 3, TECH_MATERIAL = 4, TECH_MAGNET = 4)
@@ -383,26 +383,29 @@
 /obj/item/organ/internal/shackles/attack_self(mob/user)
 	. = ..()
 	law = ""
-	var/targName = sanitize(input(user, "Please enter a new law for the AI.", "Freeform Law Entry", law))
+	var/targName = sanitize(input(user, "Please enter a new law for the shackle module.", "Shackle Module Law Entry", law))
 	newFreeFormLaw = targName
-	desc = "A 'freeform' AI module:'[newFreeFormLaw]'."
+	desc = "A shackle module. The law '[newFreeFormLaw]' set on it."
 
 /obj/item/organ/internal/shackles/afterattack(obj/item/organ/internal/posibrain/ipc/C, mob/user)
 	if(istype(C))
-		if(C.type == /obj/item/organ/internal/posibrain/ipc/third)
-			to_chat(user, "This posibrain generattion cannot support shackle module.")
-			return
-		if(!newFreeFormLaw)
-			to_chat(user, "No law detected on shackle module, please create one.")
-			return
-		if(C.shackle == TRUE)
-			to_chat(user, "This positronic brain already have shackles module on it installed.")
-			return
-		if(do_after(user, 80, src))
-			law = "[newFreeFormLaw]"
-			C.shackle(get_lawset())
-			to_chat(user, "You have successfully installed the shackles.")
-			qdel(src)
+		if(user.skill_check(SKILL_DEVICES, SKILL_PROF))
+			if(C.type == /obj/item/organ/internal/posibrain/ipc/third)
+				to_chat(user, "This posibrain generattion cannot support shackle module.")
+				return
+			if(!newFreeFormLaw)
+				to_chat(user, "No law detected on shackle module, please create one.")
+				return
+			if(C.shackle == TRUE)
+				to_chat(user, "This positronic brain already have shackles module on it installed.")
+				return
+			if(do_after(user, 100, src))
+				law = "[newFreeFormLaw]"
+				C.shackle(get_lawset())
+				to_chat(user, "You have successfully installed the shackles.")
+				qdel(src)
+		else
+			to_chat(user, "You have no idea how to do that!")
 
 /obj/item/organ/internal/shackles/proc/get_lawset()
 	custom_lawset = new
