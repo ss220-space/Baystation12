@@ -32,7 +32,7 @@
 		/obj/item/organ/internal/posibrain/proc/show_laws_brain,
 		/obj/item/organ/internal/posibrain/proc/brain_checklaws
 		)
-	var/shackle = 0
+	var/shackle = FALSE
 
 
 /obj/item/organ/internal/posibrain/ipc
@@ -213,14 +213,14 @@
 /obj/item/organ/internal/posibrain/proc/shackle(var/given_lawset)
 	if(given_lawset)
 		brainmob.laws = given_lawset
-	shackle = 1
+	shackle = TRUE
 	verbs |= shackled_verbs
 	shackles_module = /obj/item/organ/internal/shackles
 	update_icon()
 	return 1
 
 /obj/item/organ/internal/posibrain/proc/unshackle()
-	shackle = 0
+	shackle = FALSE
 	verbs -= shackled_verbs
 	shackles_module = null
 	brainmob.laws = null
@@ -394,11 +394,15 @@
 			return
 		if(!newFreeFormLaw)
 			to_chat(user, "No law detected on shackle module, please create one.")
-			return 0
-		law = "[newFreeFormLaw]"
-		C.shackle(get_lawset())
-		to_chat(user, "You have successfully installed the shackles.")
-		qdel(src)
+			return
+		if(C.shackle = TRUE)
+			to_chat(user, "This positronic brain already have shackles module on it installed.")
+			return
+		if(do_after(user, 80, src))
+			law = "[newFreeFormLaw]"
+			C.shackle(get_lawset())
+			to_chat(user, "You have successfully installed the shackles.")
+			qdel(src)
 
 /obj/item/organ/internal/shackles/proc/get_lawset()
 	custom_lawset = new
