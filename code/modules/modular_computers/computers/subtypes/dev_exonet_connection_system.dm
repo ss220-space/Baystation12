@@ -19,16 +19,17 @@
 /obj/item/modular_computer/ecs/first
 	name = "exonet connection system."
 	hardware_flag = PROGRAM_TABLET
-	desc = "A cirquit with some ports and wires. Looks like it's for a first generation IPC"
+	desc = "A simple circuit with some ports and wires."
 
 /obj/item/modular_computer/ecs/second
 	name = "exonet connection system."
 	hardware_flag = PROGRAM_TABLET
-	desc = "A cirquit with some ports and wires. Looks like it's for a second generation IPC"
+	desc = "A complex circuit with some ports and wires."
+
 /obj/item/modular_computer/ecs/third
 	name = "exonet connection system."
 	hardware_flag = PROGRAM_LAPTOP
-	desc = "A cirquit with some ports and wires. Looks like it's for a third generation IPC"
+	desc = "An extremely complex circuit with some ports and wires."
 
 /obj/item/modular_computer/ecs/first/install_default_hardware()
 	..()

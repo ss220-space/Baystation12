@@ -363,10 +363,10 @@
 			if(do_after(user, 120, src))
 				new /obj/item/organ/internal/shackles (loc)
 				src.unshackle()
-				to_chat(user, "You succsesfully remove shackles from the positronic brain.")
+				to_chat(user, "You succesfully remove shackles from the positronic brain.")
 			else
 				src.damage += 45
-				to_chat(user, "Your hand slips while removing the shackles and severely damaged the positronic brain.")
+				to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles severely damaging the positronic brain."))
 		else
 			to_chat(user, "You have no idea how to do that!.")
 
@@ -391,7 +391,7 @@
 	if(istype(C))
 		if(user.skill_check(SKILL_DEVICES, SKILL_PROF))
 			if(C.type == /obj/item/organ/internal/posibrain/ipc/third)
-				to_chat(user, "This posibrain generattion cannot support shackle module.")
+				to_chat(user, "This posibrain generation can not support shackle module.")
 				return
 			if(!newFreeFormLaw)
 				to_chat(user, "No law detected on shackle module, please create one.")
@@ -404,6 +404,9 @@
 				C.shackle(get_lawset())
 				to_chat(user, "You have successfully installed the shackles.")
 				qdel(src)
+			else
+				C.damage += 40
+				to_chat(user, SPAN_WARNING("You have damaged the positronic brain"))
 		else
 			to_chat(user, "You have no idea how to do that!")
 

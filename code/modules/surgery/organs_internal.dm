@@ -268,6 +268,9 @@
 				if(implant.organ_tag == O.organ_tag)
 					to_chat(user, SPAN_WARNING("\The [target] already has [o_a][O.name]."))
 					return
+			if(O.type == /obj/item/organ/internal/posibrain)
+				to_chat(user, SPAN_WARNING("There's no place in [target] to fit \the [O.organ_tag]."))
+				return
 			if(O.organ_tag == BP_POSIBRAIN && !target.species.has_organ[BP_POSIBRAIN])
 				to_chat(user, SPAN_WARNING("There's no place in [target] to fit \the [O.organ_tag]."))
 			else if(O.damage > (O.max_damage * 0.75))
