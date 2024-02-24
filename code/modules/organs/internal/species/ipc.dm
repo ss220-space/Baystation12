@@ -19,6 +19,8 @@
 	min_broken_damage = 60
 	relative_size = 60
 
+	var/obj/item/organ/internal/shackles/shackles_module = null
+
 	var/mob/living/silicon/sil_brainmob/brainmob = null
 
 	var/searching = TIMER_ID_NULL
@@ -32,12 +34,30 @@
 		)
 	var/shackle = 0
 
+
+/obj/item/organ/internal/posibrain/ipc
+	name = "IPC positronic brain"
+
+/obj/item/organ/internal/posibrain/ipc/attack_self(mob/user)
+	return
+/obj/item/organ/internal/posibrain/ipc/attack_ghost(mob/observer/ghost/user)
+	return
+
+/obj/item/organ/internal/posibrain/ipc/first
+	name = "positronic brain of the first generation"
+
+/obj/item/organ/internal/posibrain/ipc/second
+	name = "positronic brain of the second generation"
+
+/obj/item/organ/internal/posibrain/ipc/third
+	name = "positronic brain of the third generation"
+
+
 /obj/item/organ/internal/posibrain/New(var/mob/living/carbon/H)
 	..()
 	if(!brainmob && H)
 		init(H)
 	robotize()
-	unshackle()
 	update_icon()
 	if (!is_processing)
 		START_PROCESSING(SSobj, src)
@@ -112,7 +132,7 @@
 			if (sneaky)
 				brainmob.real_name = sneaky
 				brainmob.SetName(brainmob.real_name)
-				UpdateNames() 
+				UpdateNames()
 		else
 			to_chat(brainmob, SPAN_NOTICE("You're safe! Your brain didn't manage to replace you. This time."))
 	else
@@ -195,12 +215,15 @@
 		brainmob.laws = given_lawset
 	shackle = 1
 	verbs |= shackled_verbs
+	shackles_module = /obj/item/organ/internal/shackles
 	update_icon()
 	return 1
 
 /obj/item/organ/internal/posibrain/proc/unshackle()
 	shackle = 0
 	verbs -= shackled_verbs
+	shackles_module = null
+	brainmob.laws = null
 	update_icon()
 
 /obj/item/organ/internal/posibrain/on_update_icon()
@@ -210,7 +233,7 @@
 		icon_state = "posibrain"
 
 	overlays.Cut()
-	if(shackle)
+	if(shackle || shackles_module)
 		overlays |= image('icons/obj/assemblies.dmi', "posibrain-shackles")
 
 /obj/item/organ/internal/posibrain/proc/transfer_identity(var/mob/living/carbon/H)
@@ -330,4 +353,54 @@
 
 
 	brainmob.open_subsystem(/datum/nano_module/law_manager, usr)
-	
+
+/obj/item/organ/internal/posibrain/ipc/third/attackby(obj/item/device/W as obj, mob/user as mob) // third gen ipc have perma shackles for now
+	return
+
+/obj/item/organ/internal/posibrain/ipc/attackby(obj/item/device/W as obj, mob/user as mob)
+	if(isMultitool(W))
+		if(user.skill_check(SKILL_DEVICES, SKILL_EXPERT))
+			if(do_after(user, 120, src))
+				new /obj/item/organ/internal/shackles (loc)
+				src.unshackle()
+				to_chat(user, "You succsesfully remove shackles from the positronic brain.")
+			else
+				src.damage += 45
+				to_chat(user, "Your hand slips while removing the shackles and severely damaged the positronic brain.")
+		else
+			to_chat(user, "You have no idea how to do that!.")
+
+/obj/item/organ/internal/shackles
+	name = "Shackle module"
+	desc = "A."
+	icon = 'icons/obj/assemblies.dmi'
+	icon_state = "posibrain-shackles"
+	origin_tech = list(TECH_DATA = 3, TECH_MATERIAL = 4, TECH_MAGNET = 4)
+	var/newFreeFormLaw
+	var/law
+	var/datum/ai_laws/custom_lawset
+
+/obj/item/organ/internal/shackles/attack_self(mob/user)
+	. = ..()
+	law = ""
+	var/targName = sanitize(input(user, "Please enter a new law for the AI.", "Freeform Law Entry", law))
+	newFreeFormLaw = targName
+	desc = "A 'freeform' AI module:'[newFreeFormLaw]'."
+
+/obj/item/organ/internal/shackles/afterattack(obj/item/organ/internal/posibrain/ipc/C, mob/user)
+	if(istype(C))
+		if(C == /obj/item/organ/internal/posibrain/ipc/third)
+			to_chat(user, "This posibrain generattion cannot support shackle module.")
+			return
+		if(!newFreeFormLaw)
+			to_chat(user, "No law detected on shackle module, please create one.")
+			return 0
+		law = "[newFreeFormLaw]"
+		C.shackle(get_lawset())
+		to_chat(user, "You have successfully installed the shackles.")
+		qdel(src)
+
+/obj/item/organ/internal/shackles/proc/get_lawset()
+	custom_lawset = new
+	custom_lawset.add_inherent_law(law)
+	return custom_lawset

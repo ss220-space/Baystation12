@@ -16,6 +16,18 @@
 	hardware_flag = PROGRAM_LAPTOP
 	exonets_ipc_computer = TRUE
 
+/obj/item/modular_computer/ecs/first
+	name = "exonet connection system of first generation"
+	hardware_flag = PROGRAM_TABLET
+
+/obj/item/modular_computer/ecs/second
+	name = "exonet connection system of second generation"
+	hardware_flag = PROGRAM_TABLET
+
+/obj/item/modular_computer/ecs/third
+	name = "exonet connection system of third generation"
+	hardware_flag = PROGRAM_LAPTOP
+
 
 /obj/item/modular_computer/ecs/install_default_hardware()
 	..()
@@ -23,6 +35,30 @@
 	hard_drive = new/obj/item/stock_parts/computer/hard_drive/advanced(src)
 	network_card = new/obj/item/stock_parts/computer/network_card/advanced(src)
 	battery_module = new/obj/item/stock_parts/computer/battery_module/converter(src)
+
+
+/obj/item/modular_computer/ecs/first/install_default_hardware()
+	..()
+	processor_unit = new/obj/item/stock_parts/computer/processor_unit(src)
+	hard_drive = new/obj/item/stock_parts/computer/hard_drive/small(src)
+	network_card = new/obj/item/stock_parts/computer/network_card(src)
+	battery_module = new/obj/item/stock_parts/computer/battery_module/converter(src)
+
+/obj/item/modular_computer/ecs/second/install_default_hardware()
+	..()
+	processor_unit = new/obj/item/stock_parts/computer/processor_unit(src)
+	hard_drive = new/obj/item/stock_parts/computer/hard_drive(src)
+	network_card = new/obj/item/stock_parts/computer/network_card/advanced(src)
+	battery_module = new/obj/item/stock_parts/computer/battery_module/converter(src)
+
+
+/obj/item/modular_computer/ecs/third/install_default_hardware()
+	..()
+	processor_unit = new/obj/item/stock_parts/computer/processor_unit(src)
+	hard_drive = new/obj/item/stock_parts/computer/hard_drive/advanced(src)
+	network_card = new/obj/item/stock_parts/computer/network_card/advanced(src)
+	battery_module = new/obj/item/stock_parts/computer/battery_module/converter(src)
+
 
 /obj/item/modular_computer/ecs/install_default_programs()
 	..()

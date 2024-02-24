@@ -11,6 +11,19 @@
 	var/open = FALSE
 
 
+/obj/item/organ/internal/ecs/first_gen
+	name = "exonet connection port of first generation"
+	computer = /obj/item/modular_computer/ecs/first
+
+/obj/item/organ/internal/ecs/second_gen
+	name = "exonet connection portof second generation"
+	computer = /obj/item/modular_computer/ecs/second
+
+/obj/item/organ/internal/ecs/third_gen
+	name = "exonet connection portof third generation"
+	computer = /obj/item/modular_computer/ecs/third
+
+
 /obj/item/organ/internal/ecs/Initialize()
 	if(ispath(computer))
 		computer = new computer(src)

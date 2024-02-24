@@ -40,7 +40,7 @@
 	flesh_color = "#575757"
 
 	has_organ = list(
-		BP_POSIBRAIN = /obj/item/organ/internal/posibrain,
+		BP_POSIBRAIN = /obj/item/organ/internal/posibrain/ipc,
 		BP_EYES = /obj/item/organ/internal/eyes/robot,
 		BP_COOLING = /obj/item/organ/internal/cooling_system,
 		BP_EXONET = /obj/item/organ/internal/ecs,
@@ -152,6 +152,31 @@
 /datum/species/machine/check_background(var/datum/job/job, var/datum/preferences/prefs)
 	var/decl/cultural_info/culture/ipc/c = SSculture.get_culture(prefs.cultural_info[TAG_CULTURE])
 	. = istype(c) ? (job.type in c.valid_jobs) : ..()
+
+	if(c.parent_type == /decl/cultural_info/culture/ipc)
+		src.has_organ = list(
+			BP_POSIBRAIN = /obj/item/organ/internal/posibrain/ipc/first,
+			BP_EYES = /obj/item/organ/internal/eyes/robot,
+			BP_COOLING = /obj/item/organ/internal/cooling_system,
+			BP_EXONET = /obj/item/organ/internal/ecs/first_gen,
+		)
+		return
+	if(c.parent_type == /decl/cultural_info/culture/ipc/third)
+		src.has_organ = list(
+			BP_POSIBRAIN = /obj/item/organ/internal/posibrain/ipc/third,
+			BP_EYES = /obj/item/organ/internal/eyes/robot,
+			BP_COOLING = /obj/item/organ/internal/cooling_system,
+			BP_EXONET = /obj/item/organ/internal/ecs/third_gen,
+		)
+		return
+	if(c.parent_type == /decl/cultural_info/culture/ipc/second)
+		src.has_organ = list(
+			BP_POSIBRAIN = /obj/item/organ/internal/posibrain/ipc/second,
+			BP_EYES = /obj/item/organ/internal/eyes/robot,
+			BP_COOLING = /obj/item/organ/internal/cooling_system,
+			BP_EXONET = /obj/item/organ/internal/ecs/second_gen,
+		)
+		return
 
 /datum/species/machine/skills_from_age(age)	//Converts an age into a skill point allocation modifier. Can be used to give skill point bonuses/penalities not depending on job.
 	switch(age)
