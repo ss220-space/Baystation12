@@ -31,48 +31,48 @@
 		return
 
 /obj/item/device/multitool/multimeter/datajack/Process()
-    if(!holder)
-        qdel_self()
-        return PROCESS_KILL
-    if(!Adjacent(holder))
-        holder.insert_datajack()
-        return PROCESS_KILL
+	if(!holder)
+		qdel_self()
+		return PROCESS_KILL
+	if(!Adjacent(holder))
+		holder.insert_datajack()
+		return PROCESS_KILL
 
 /obj/item/modular_computer/proc/eject_datajack(mob/living/carbon/human/user)
-    if(!datajack || datajack.loc != src)
-        return
+	if(!datajack || datajack.loc != src)
+		return
 
-    if(!user.put_in_hands(datajack))
-        to_chat(user, SPAN_WARNING("Datajack cannot be deployed in your hands, dropping it on the ground"))
-        START_PROCESSING(SSobj, datajack)
-        return
+	if(!user.put_in_hands(datajack))
+		to_chat(user, SPAN_WARNING("Datajack cannot be deployed in your hands, dropping it on the ground"))
+		START_PROCESSING(SSobj, datajack)
+		return
 
-    START_PROCESSING(SSobj, datajack)
-    visible_message(
-    SPAN_WARNING("Datajack ejects from device."),
-    SPAN_WARNING("You hear coil reeling out something.")
-    )
+	START_PROCESSING(SSobj, datajack)
+	visible_message(
+	SPAN_WARNING("Datajack ejects from device."),
+	SPAN_WARNING("You hear coil reeling out something.")
+	)
 
 /obj/item/modular_computer/proc/insert_datajack()
-    if(!datajack)
-        return
+	if(!datajack)
+		return
 
-    STOP_PROCESSING(SSobj, datajack)
+	STOP_PROCESSING(SSobj, datajack)
 
-    if(istype(datajack.loc, /mob/living/carbon/human))
+	if(istype(datajack.loc, /mob/living/carbon/human))
 
-        var/mob/living/carbon/human/H = datajack.loc
-        H.remove_from_mob(datajack, src)
-        visible_message(
-        SPAN_WARNING("Datajack moves into portable device."),
-        SPAN_WARNING("You hear coil reeling back in place")
-        )
-        return
-    visible_message(
-    SPAN_WARNING("Datajack moves into portable device."),
-    SPAN_WARNING("You hear coil reeling back in place")
-    )
-    datajack.forceMove(src)
+		var/mob/living/carbon/human/H = datajack.loc
+		H.remove_from_mob(datajack, src)
+		visible_message(
+		SPAN_WARNING("Datajack moves into portable device."),
+		SPAN_WARNING("You hear coil reeling back in place")
+		)
+		return
+	visible_message(
+	SPAN_WARNING("Datajack moves into portable device."),
+	SPAN_WARNING("You hear coil reeling back in place")
+	)
+	datajack.forceMove(src)
 
 /datum/terminal_command/datajack
 	name = "datajack"
