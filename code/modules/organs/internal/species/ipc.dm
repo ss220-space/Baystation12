@@ -51,7 +51,8 @@
 
 /obj/item/organ/internal/posibrain/ipc/third
 	name = "positronic brain of the third generation"
-
+	var/obj/item/organ/internal/shackles/shackles_module = /obj/item/organ/internal/shackles
+	var/shackle = TRUE
 
 /obj/item/organ/internal/posibrain/New(var/mob/living/carbon/H)
 	..()
@@ -351,24 +352,59 @@
 	set name = "State Laws"
 	set src in usr
 
-
 	brainmob.open_subsystem(/datum/nano_module/law_manager, usr)
+
 
 /obj/item/organ/internal/posibrain/ipc/third/attackby(obj/item/device/W as obj, mob/user as mob) // third gen ipc have perma shackles for now
 	return
 
-/obj/item/organ/internal/posibrain/ipc/attackby(obj/item/device/W as obj, mob/user as mob)
-	if(isMultitool(W))
-		if(user.skill_check(SKILL_DEVICES, SKILL_PROF))
-			if(do_after(user, 120, src))
-				new /obj/item/organ/internal/shackles (loc)
-				src.unshackle()
-				to_chat(user, "You succesfully remove shackles from the positronic brain.")
+/obj/item/organ/internal/posibrain/ipc/attackby(obj/item/W as obj, mob/user as mob)
+	if(shackle)
+		if(istype(W, /obj/item/wirecutters))
+			if(user.skill_check(SKILL_DEVICES, SKILL_PROF))
+				if(src.type == /obj/item/organ/internal/posibrain/ipc/third)
+					if(do_after(user, 120, src))
+						if(prob(10))
+							new /obj/item/organ/internal/shackles (loc)
+							src.unshackle()
+							to_chat(user, "You succesfully remove shackles from the positronic brain.")
+						else
+							src.damage += 200
+							to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles completely destroying the positronic brain."))
+					else
+						src.damage += 45
+						to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles severely damaging the positronic brain."))
+
+				else
+					if(do_after(user, 120, src))
+						new /obj/item/organ/internal/shackles (loc)
+						src.unshackle()
+						to_chat(user, "You succesfully remove shackles from the positronic brain.")
+						if(prob(30))
+							src.damage += 30
+					else
+						src.damage += 45
+						to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles severely damaging the positronic brain."))
 			else
-				src.damage += 45
-				to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles severely damaging the positronic brain."))
-		else
-			to_chat(user, "You have no idea how to do that!.")
+				to_chat(user, "You have no idea how to do that!")
+
+		if(istype(W, /obj/item/device/multitool/multimeter/datajack))
+			if(user.skill_check(SKILL_COMPUTER, SKILL_PROF))
+				if(do_after(user, 100, src))
+					var/law
+					var/targName = sanitize(input(user, "Please enter a new law for the shackle module.", "Shackle Module Law Entry", law))
+					law = "[targName]"
+					shackle(shackles_module.get_lawset())
+					to_chat(user, "You succesfully change laws in shackles of the positronic brain.")
+					if(prob(30))
+						src.damage += 30
+				else
+					src.damage += 35
+					to_chat(user, SPAN_WARNING("Your hand slips while changing laws in the shackles, severely damaging the systems of positronic brain."))
+			else
+				to_chat(user, "You have no idea how to do that!")
+	if(!shackle)
+		to_chat(user, "There is nothing you can do with it.")
 
 /obj/item/organ/internal/shackles
 	name = "Shackle module"
@@ -376,6 +412,7 @@
 	icon = 'icons/obj/assemblies.dmi'
 	icon_state = "posibrain-shackles"
 	origin_tech = list(TECH_DATA = 3, TECH_MATERIAL = 4, TECH_MAGNET = 4)
+	w_class = ITEM_SIZE_NORMAL
 	var/newFreeFormLaw
 	var/law
 	var/datum/ai_laws/custom_lawset
