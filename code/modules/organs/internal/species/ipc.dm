@@ -51,7 +51,7 @@
 
 /obj/item/organ/internal/posibrain/ipc/third
 	name = "positronic brain of the third generation"
-	obj/item/organ/internal/shackles/shackles_module = /obj/item/organ/internal/shackles
+	shackles_module = /obj/item/organ/internal/shackles
 	shackle = TRUE
 
 /obj/item/organ/internal/posibrain/New(var/mob/living/carbon/H)
