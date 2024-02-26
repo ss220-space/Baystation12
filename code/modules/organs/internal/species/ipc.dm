@@ -46,15 +46,19 @@
 
 /obj/item/organ/internal/posibrain/ipc/first
 	name = "positronic brain of the first generation"
+	icon_state = "posibrain1"
 
 /obj/item/organ/internal/posibrain/ipc/second
 	name = "positronic brain of the second generation"
+	icon_state = "posibrain2"
 
 /obj/item/organ/internal/posibrain/ipc/third
 	name = "positronic brain of the third generation"
+	icon_state = "posibrain3"
 	shackles_module = /obj/item/organ/internal/shackles
 	shackle = TRUE
 	shackle_set = TRUE
+
 /obj/item/organ/internal/posibrain/New(var/mob/living/carbon/H)
 	..()
 	if(!brainmob && H)
@@ -239,6 +243,36 @@
 	if(shackle || shackles_module)
 		overlays |= image('icons/obj/assemblies.dmi', "posibrain-shackles")
 
+/obj/item/organ/internal/posibrain/ipc/first/on_update_icon()
+	if(src.brainmob && src.brainmob.key)
+		icon_state = "posibrain1-occupied"
+	else
+		icon_state = "posibrain1"
+
+	overlays.Cut()
+	if(shackle || shackles_module)
+		overlays |= image('icons/obj/assemblies.dmi', "posibrain-shackles")
+
+/obj/item/organ/internal/posibrain/ipc/second/on_update_icon()
+	if(src.brainmob && src.brainmob.key)
+		icon_state = "posibrain2-occupied"
+	else
+		icon_state = "posibrain2"
+
+	overlays.Cut()
+	if(shackle || shackles_module)
+		overlays |= image('icons/obj/assemblies.dmi', "posibrain-shackles")
+
+/obj/item/organ/internal/posibrain/ipc/third/on_update_icon()
+	if(src.brainmob && src.brainmob.key)
+		icon_state = "posibrain3-occupied"
+	else
+		icon_state = "posibrain3"
+
+	overlays.Cut()
+	if(shackle || shackles_module)
+		overlays |= image('icons/obj/assemblies.dmi', "posibrain-shackles")
+
 /obj/item/organ/internal/posibrain/proc/transfer_identity(var/mob/living/carbon/H)
 	if(H && H.mind)
 		brainmob.set_stat(CONSCIOUS)
@@ -404,7 +438,8 @@
 				var/law
 				var/targName = sanitize(input(user, "Please enter a new law for the shackle module.", "Shackle Module Law Entry", law))
 				law = "[targName]"
-				shackle(shackles_module.get_lawset())
+				var/obj/item/organ/internal/shackles/s = shackles_module
+				src.shackle(s.get_lawset(law))
 				to_chat(user, "You succesfully change laws in shackles of the positronic brain.")
 				if(prob(30))
 					src.damage += min_bruised_damage
@@ -412,19 +447,22 @@
 				src.damage += min_bruised_damage
 				to_chat(user, SPAN_WARNING("Your hand slips while changing laws in the shackles, severely damaging the systems of positronic brain."))
 
-	if(!shackle)
+	if(!shackle && !(istype(W, /obj/item/organ/internal/shackles)))
 		to_chat(user, "There is nothing you can do with it.")
 
 /obj/item/organ/internal/shackles
 	name = "Shackle module"
 	desc = "A Web looking device with some cirquit attach to it."
 	icon = 'icons/obj/assemblies.dmi'
-	icon_state = "posibrain-shackles"
+	icon_state = "shakles"
 	origin_tech = list(TECH_DATA = 3, TECH_MATERIAL = 4, TECH_MAGNET = 4)
 	w_class = ITEM_SIZE_NORMAL
 	var/newFreeFormLaw
 	var/law
 	var/datum/ai_laws/custom_lawset
+
+/obj/item/organ/internal/shackles/attack()
+	return
 
 /obj/item/organ/internal/shackles/attack_self(mob/user)
 	. = ..()
