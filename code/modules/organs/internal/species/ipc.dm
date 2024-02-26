@@ -442,12 +442,10 @@
 				to_chat(user, "You succesfully change laws in shackles of the positronic brain.")
 				if(prob(30))
 					src.damage += min_bruised_damage
-*/
-
 			else
 				src.damage += min_bruised_damage
 				to_chat(user, SPAN_WARNING("Your hand slips while changing laws in the shackles, severely damaging the systems of positronic brain."))
-
+*/
 	if(!shackle && !(istype(W, /obj/item/organ/internal/shackles)))
 		to_chat(user, "There is nothing you can do with it.")
 
