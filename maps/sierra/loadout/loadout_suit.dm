@@ -60,7 +60,7 @@
 
 /datum/gear/suit/labcoat_corp_si
 	display_name = "labcoat, NT or Hephaestus"
-	path = /obj/item/clothing/suit/storage/toggle/labcoat/science
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/science/nanotrasen
 	allowed_roles = RESEARCH_ROLES
 	allowed_branches = list(/datum/mil_branch/employee, /datum/mil_branch/contractor)
 

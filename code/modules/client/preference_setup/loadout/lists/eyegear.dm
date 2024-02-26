@@ -13,7 +13,7 @@
 
 /datum/gear/eyes/fashionglasses
 	display_name = "non-prescription glasses"
-	path = /obj/item/clothing/glasses
+	path = /obj/item/clothing/glasses/prescription/gglasses
 
 /datum/gear/eyes/fashionglasses/New()
 	..()

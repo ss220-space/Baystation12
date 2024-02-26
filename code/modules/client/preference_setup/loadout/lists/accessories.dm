@@ -6,7 +6,7 @@
 
 /datum/gear/accessory/tie
 	display_name = "tie selection"
-	path = /obj/item/clothing/accessory
+	path = /obj/item/clothing/accessory/blue
 
 /datum/gear/accessory/tie/New()
 	..()
@@ -55,7 +55,7 @@
 /datum/gear/accessory/ntaward
 	display_name = "NT award selection" //inf, was: display_name = "NanoTrasen award selection"
 	description = "A medal or ribbon awarded to NanoTrasen personnel for significant accomplishments."
-	path = /obj/item/clothing/accessory/medal
+	path = /obj/item/clothing/accessory/medal/iron/nanotrasen
 	cost = 8
 
 /datum/gear/accessory/ntaward/New()

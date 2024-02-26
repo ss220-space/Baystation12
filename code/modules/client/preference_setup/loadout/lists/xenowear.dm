@@ -192,7 +192,7 @@
 
 /datum/gear/eyes/visors
 	display_name = "(Tajara) visor selection"
-	path = /obj/item/clothing/glasses/tajvisor
+	path = /obj/item/clothing/glasses/tajvisor/a
 	sort_category = "Xenowear"
 	whitelisted = list(SPECIES_TAJARA)
 	cost = 1
@@ -274,7 +274,7 @@
 
 /datum/gear/accessory/capes
 	display_name = "(Tajara) shoulder capes"
-	path = /obj/item/clothing/accessory/shouldercape
+	path = /obj/item/clothing/accessory/shouldercape/officer
 	whitelisted = list(SPECIES_TAJARA)
 	sort_category = "Xenowear"
 

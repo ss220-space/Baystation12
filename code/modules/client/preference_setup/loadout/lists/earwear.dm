@@ -12,7 +12,7 @@
 
 /datum/gear/earrings
 	display_name = "earrings"
-	path = /obj/item/clothing/ears/earring
+	path = /obj/item/clothing/ears/earring/dangle/diamond
 	sort_category = "Earwear"
 
 /datum/gear/earrings/New()

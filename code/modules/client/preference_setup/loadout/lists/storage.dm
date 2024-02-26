@@ -5,7 +5,7 @@
 
 /datum/gear/storage/vest
 	display_name = "webbing vest selection"
-	path = /obj/item/clothing/accessory/storage
+	path = /obj/item/clothing/accessory/storage/black_vest
 	cost = 3
 
 /datum/gear/storage/vest/New()
@@ -18,7 +18,7 @@
 
 /datum/gear/storage/pouches
 	display_name = "drop pouches selection"
-	path = /obj/item/clothing/accessory/storage
+	path = /obj/item/clothing/accessory/storage/black_drop
 
 /datum/gear/storage/pouches/New()
 	..()
@@ -30,7 +30,7 @@
 
 /datum/gear/storage/belt
 	display_name = "storage belt selection"
-	path = /obj/item/storage/belt
+	path = /obj/item/storage/belt/general
 	slot = slot_belt
 	cost = 2
 

@@ -45,7 +45,7 @@
 /datum/gear/tactical/security_uniforms
 	display_name = "security uniform"
 	allowed_roles = SECURITY_ROLES
-	path = /obj/item/clothing/under
+	path = /obj/item/clothing/under/rank/security/corp/alt
 	slot = slot_w_uniform
 
 /datum/gear/tactical/security_uniforms/New()
@@ -61,4 +61,3 @@
 	path = /obj/item/clothing/under/gray_camo
 	slot = slot_w_uniform
 	flags = GEAR_HAS_COLOR_SELECTION
-

@@ -4,7 +4,7 @@
 
 /datum/gear/accessory/collar
 	display_name = "collar selection"
-	path = /obj/item/clothing/accessory/necklace/collar
+	path = /obj/item/clothing/accessory/necklace/collar/gold
 
 /datum/gear/accessory/collar/New()
 	..()
@@ -49,7 +49,7 @@
 /datum/gear/uniform/pmc //Please don't dublicate it in maps anymore, ok?
 	display_name = "PMC uniform selection"
 	allowed_roles = list(/datum/job/detective, /datum/job/officer, /datum/job/hos)
-	path = /obj/item/clothing/under
+	path = /obj/item/clothing/under/pcrcsuit
 
 /datum/gear/uniform/pmc/New()
 	..()
@@ -69,7 +69,7 @@
 */
 /datum/gear/uniform/corpsi
 	display_name = "corporate uniform selection"
-	path = /obj/item/clothing/under
+	path = /obj/item/clothing/under/mbill
 
 /datum/gear/uniform/corpsi/New()
 	..()

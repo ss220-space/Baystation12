@@ -13,7 +13,7 @@
 	name = "combi-knife"
 	desc = "A small, colourable, multi-purpose folding knife."
 	icon = 'icons/obj/swiss_knife.dmi'
-	icon_state = "swissknf_closed"
+	icon_state = "swissknf_handle"
 	handle_icon = "swissknf_handle"
 	takes_colour = FALSE
 	valid_colors = null
@@ -25,7 +25,7 @@
 	var/sharp_tools = list(SWISSKNF_LBLADE, SWISSKNF_SBLADE, SWISSKNF_GBLADE, SWISSKNF_WBLADE)
 
 /obj/item/material/knife/folding/swiss/attack_self(mob/user)
-	var/choice	
+	var/choice
 	if(user.a_intent != I_HELP && ((SWISSKNF_LBLADE in tools) || (SWISSKNF_SBLADE in tools)) && active_tool == SWISSKNF_CLOSED)
 		open = TRUE
 		if(SWISSKNF_LBLADE in tools)
@@ -38,7 +38,7 @@
 		else
 			choice = SWISSKNF_CLOSED
 			open = FALSE
-	
+
 	if(!choice || !CanPhysicallyInteract(user))
 		return
 	if(choice == SWISSKNF_CLOSED)
@@ -51,7 +51,7 @@
 			playsound(user, 'sound/weapons/flipblade.ogg', 15, 1)
 		else
 			user.visible_message("<span class='notice'>\The [user] opens the [lowertext(choice)].</span>")
-			
+
 	active_tool = choice
 	update_force()
 	update_icon()

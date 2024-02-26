@@ -22,14 +22,14 @@
 	path = /obj/item/clothing/under/rank/guard/nanotrasen
 	allowed_roles = list(/datum/job/officer)
 
-/datum/gear/uniform/si_exec
-	display_name = "NanoTrasen senior researcher alt uniform"
-	path = /obj/item/clothing/under/rank/scientist/executive
-	allowed_roles = list(/datum/job/senior_scientist)
+// /datum/gear/uniform/si_exec
+// 	display_name = "NanoTrasen senior researcher alt uniform"
+// 	path = /obj/item/clothing/under/rank/scientist/executive
+// 	allowed_roles = list(/datum/job/senior_scientist) спрайта нема
 
 /datum/gear/uniform/si_overalls
 	display_name = "corporate coveralls"
-	path = /obj/item/clothing/under/rank/ntwork
+	path = /obj/item/clothing/under/rank/ntwork/heph
 	allowed_branches = list(/datum/mil_branch/employee, /datum/mil_branch/contractor)
 
 /datum/gear/uniform/si_overalls/New()
@@ -41,7 +41,7 @@
 
 /datum/gear/uniform/si_flight
 	display_name = "corporate pilot suit"
-	path = /obj/item/clothing/under/rank/ntpilot
+	path = /obj/item/clothing/under/rank/ntpilot/nanotrasen
 	allowed_branches = list(/datum/mil_branch/employee, /datum/mil_branch/contractor)
 
 /datum/gear/uniform/si_flight/New()
@@ -58,7 +58,7 @@
 
 /datum/gear/uniform/formal_shirt_and_pants
 	display_name = "formal shirts with pants"
-	path = /obj/item/clothing/under/suit_jacket
+	path = /obj/item/clothing/under/suit_jacket/charcoal/no_accessories
 
 /datum/gear/uniform/formal_shirt_and_pants/New()
 	..()

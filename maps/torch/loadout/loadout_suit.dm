@@ -113,6 +113,7 @@
 
 /datum/gear/tactical/pcarrier/misc
 	display_name = "miscellaneous plate carrier selection"
+	path = /obj/item/clothing/suit/armor/pcarrier/green
 	allowed_roles = ARMORED_ROLES
 	allowed_branches = CIVILIAN_BRANCHES
 

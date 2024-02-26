@@ -64,7 +64,7 @@
 /datum/gear/knives
 	display_name = "knives selection"
 	description = "A selection of knives."
-	path = /obj/item/material/knife
+	path = /obj/item/material/knife/folding
 
 /datum/gear/knives/New()
 	..()
@@ -271,7 +271,7 @@
 
 /datum/gear/cross
 	display_name = "cross"
-	path = /obj/item/material/cross
+	path = /obj/item/material/cross/wood
 	cost = 2
 
 /datum/gear/cross/New()
@@ -284,7 +284,7 @@
 
 /datum/gear/coin
 	display_name = "coin"
-	path = /obj/item/material/coin
+	path = /obj/item/material/coin/gold
 	cost = 2
 
 /datum/gear/coin/New()

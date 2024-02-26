@@ -200,7 +200,7 @@ var/list/gear_datums = list()
 
 		var/text_style = "vertical-align:top;text-align:center;"
 		//[/INF]
-		entry += "<tr style='vertical-align:top;'><td><a style='white-space:normal;' class='[gear_link_class]' href='?src=\ref[src];toggle_gear=\ref[G]'>[G.display_name]</a></td>" //inf, was: entry += "<tr style='vertical-align:top;'><td width=25%><a style='white-space:normal;' [ticked ? "class='linkOn' " : ""]href='?src=\ref[src];toggle_gear=\ref[G]'>[G.display_name]</a></td>"
+		entry += "<tr style='vertical-align:top;'><td><a style='white-space:normal;' class='[gear_link_class]' href='?src=\ref[src];toggle_gear=\ref[G]'>[G.display_name]</a><br/><img src=data:image/jpeg;base64,[G.base64icon] class='loadoutPreview'></td>" //inf, was: entry += "<tr style='vertical-align:top;'><td width=25%><a style='white-space:normal;' [ticked ? "class='linkOn' " : ""]href='?src=\ref[src];toggle_gear=\ref[G]'>[G.display_name]</a></td>"
 		entry += "<td style='[text_style]'>[G.cost]</td>"//inf, was: entry += "<td width = 10% style='vertical-align:top'>[G.cost]</td>"
 		entry += "<td><font size=2>[G.get_description(get_gear_metadata(G,1))]</font>"
 		var/allowed = 1
@@ -260,15 +260,15 @@ var/list/gear_datums = list()
 				skill_checks += skill_entry
 
 			entry += "[english_list(skill_checks)]</i>"
-			
+
 		if(allowed && G.allowed_backgrounds)
 			var/good_background = 0
 			var/decl/cultural_info/background = SSculture.get_culture(pref.cultural_info[TAG_FACTION])
 			var/bgndname = background ? background.name : "Unset"
 			entry += "<br><i>"
-			
+
 			var/list/backgroundchecks = list()
-			
+
 			if(bgndname in G.allowed_backgrounds)
 				backgroundchecks += "<font color=55cc55>[bgndname]</font>"
 				good_background = 1
@@ -312,6 +312,14 @@ var/list/gear_datums = list()
 	var/list/metadata = get_gear_metadata(G)
 	metadata["[tweak]"] = new_metadata
 
+/datum/category_item/player_setup_item/loadout/proc/update_gear_icon(var/datum/gear/G, var/datum/gear_tweak/tweak, var/metadata)
+	if(istype(tweak, /datum/gear_tweak/path))
+		var/datum/gear_tweak/path/path_tweak = tweak
+		G.path = path_tweak.valid_paths[metadata]
+		G.update_icon()
+	if(istype(tweak, /datum/gear_tweak/color))
+		G.update_icon(metadata)
+
 /datum/category_item/player_setup_item/loadout/OnTopic(href, href_list, user)
 	if(href_list["toggle_gear"])
 		var/datum/gear/TG = locate(href_list["toggle_gear"])
@@ -319,6 +327,8 @@ var/list/gear_datums = list()
 			return TOPIC_REFRESH
 		if((TG.display_name in pref.gear_list[pref.gear_slot]) || !gear_allowed_to_equip(TG, user)) //inf, was: if(TG.display_name in pref.gear_list[pref.gear_slot])
 			pref.gear_list[pref.gear_slot] -= TG.display_name
+			TG.path = initial(TG.path)
+			TG.update_icon()
 		else
 			var/total_cost = 0
 			for(var/gear_name in pref.gear_list[pref.gear_slot])
@@ -335,6 +345,7 @@ var/list/gear_datums = list()
 		var/metadata = tweak.get_metadata(user, get_tweak_metadata(gear, tweak))
 		if(!metadata || !CanUseTopic(user))
 			return TOPIC_NOACTION
+		update_gear_icon(gear, tweak, metadata)
 		set_tweak_metadata(gear, tweak, metadata)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 	if(href_list["next_slot"])
@@ -362,7 +373,10 @@ var/list/gear_datums = list()
 /datum/gear
 	var/display_name       //Name/index. Must be unique.
 	var/description        //Description of this gear. If left blank will default to the description of the pathed item.
-	var/path               //Path to item.
+	var/atom/path               //Path to item.
+	var/icon_state		   //Icon state of item
+	var/icon			   //File of icon
+	var/base64icon         //It will be generated automaticly
 	var/cost = 1           //Number of points used. Items in general cost 1 point, storage/armor/gloves/special use costs 2 points.
 	var/slot               //Slot to equip to.
 	var/list/allowed_roles //Roles that can spawn with this item.
@@ -380,8 +394,7 @@ var/list/gear_datums = list()
 	if(HAS_FLAGS(flags, GEAR_HAS_TYPE_SELECTION|GEAR_HAS_SUBTYPE_SELECTION))
 		CRASH("May not have both type and subtype selection tweaks")
 	if(!description)
-		var/obj/O = path
-		description = initial(O.desc)
+		description = initial(path.desc)
 	if(flags & GEAR_HAS_COLOR_SELECTION)
 		gear_tweaks += gear_tweak_free_color_choice()
 	if(flags & GEAR_HAS_TYPE_SELECTION)
@@ -390,6 +403,16 @@ var/list/gear_datums = list()
 		gear_tweaks += new/datum/gear_tweak/path/subtype(path)
 	if(custom_setup_proc)
 		gear_tweaks += new/datum/gear_tweak/custom_setup(custom_setup_proc)
+	update_icon()
+
+/datum/gear/proc/update_icon(var/color)
+	if(!initial(icon) || !initial(icon_state))
+		icon_state = initial(path.icon_state)
+		icon = initial(path.icon)
+	var/icon/item_icon = icon(icon, icon_state, SOUTH, 1, FALSE)
+	if(color)
+		item_icon.ColorTone(color)
+	base64icon = icon2base64(item_icon)
 
 /datum/gear/proc/get_description(var/metadata)
 	. = description

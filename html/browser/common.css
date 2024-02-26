@@ -353,4 +353,12 @@ a.donate:hover
 	color: #00aa88 !important;
 	border-color: #00aa88 !important;
 }
+
+.loadoutPreview
+{
+	-ms-interpolation-mode: nearest-neighbor;
+	width: 64px;
+	height:64px;
+}
+
 /* [/INF] */

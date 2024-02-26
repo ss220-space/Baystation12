@@ -34,7 +34,7 @@
 
 /datum/gear/suit/suit_jacket
 	display_name = "standard suit jackets"
-	path = /obj/item/clothing/suit/storage/toggle/suit
+	path = /obj/item/clothing/suit/storage/toggle/suit/black
 
 /datum/gear/suit/suit_jacket/New()
 	..()
@@ -65,7 +65,7 @@
 
 /datum/gear/suit/hoodie_sel
 	display_name = "standard hoodies"
-	path = /obj/item/clothing/suit/storage/toggle/hoodie
+	path = /obj/item/clothing/suit/storage/toggle/hoodie/black
 
 /datum/gear/suit/hoodie_sel/New()
 	..()
@@ -103,7 +103,7 @@
 
 /datum/gear/suit/leather
 	display_name = "jacket selection"
-	path = /obj/item/clothing/suit
+	path = /obj/item/clothing/suit/storage/tgbomber
 
 /datum/gear/suit/leather/New()
 	..()
@@ -141,7 +141,7 @@
 
 /datum/gear/suit/medcoat
 	display_name = "medical suit selection"
-	path = /obj/item/clothing/suit
+	path = /obj/item/clothing/suit/storage/toggle/fr_jacket
 
 /datum/gear/suit/medcoat/New()
 	..()
@@ -149,7 +149,7 @@
 
 /datum/gear/suit/trenchcoat
 	display_name = "trenchcoat selection"
-	path = /obj/item/clothing/suit
+	path = /obj/item/clothing/suit/storage/det_trench/ft
 
 /datum/gear/suit/trenchcoat/New()
 	..()

@@ -1,6 +1,6 @@
 /datum/gear/tactical/bloodpatch
 	display_name = "blood patch selection"
-	path = /obj/item/clothing/accessory/armor/tag
+	path = /obj/item/clothing/accessory/armor/tag/abpos
 	allowed_roles = list(/datum/job/detective, /datum/job/officer, /datum/job/hos)
 
 /datum/gear/tactical/bloodpatch/New()
@@ -52,7 +52,7 @@
 
 /datum/gear/tactical/armor_deco
 	display_name = "armor tags selection"
-	path = /obj/item/clothing/accessory/armor/tag
+	path = /obj/item/clothing/accessory/armor/tag/nt
 	allowed_roles = list(/datum/job/detective, /datum/job/officer, /datum/job/hos)
 
 /datum/gear/tactical/armor_deco/New()

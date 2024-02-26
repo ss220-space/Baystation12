@@ -2,7 +2,7 @@
 
 /datum/gear/passport/unathi
 	display_name = "(Unathi) registration document"
-	path = /obj/item/passport/xeno/unathi
+	path = /obj/item/passport/xeno/unathi/independent
 	sort_category = "Xenowear"
 	flags = 0
 	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)

@@ -50,7 +50,7 @@
 /datum/gear/uniform/thermal
 	sort_category = "Xenowear"
 	display_name = "thermal suit selection"
-	path = /obj/item/clothing/under
+	path = /obj/item/clothing/under/thermal/tajara/black
 	whitelisted = list(SPECIES_TAJARA, SPECIES_RESOMI)
 
 /datum/gear/uniform/thermal/New()

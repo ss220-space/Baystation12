@@ -11,7 +11,7 @@
 
 /datum/gear/head/bandana
 	display_name = "bandana selection"
-	path = /obj/item/clothing
+	path = /obj/item/clothing/mask/bandana
 
 /datum/gear/head/bandana/New()
 	..()
@@ -39,7 +39,7 @@
 
 /datum/gear/head/cap
 	display_name = "cap selection"
-	path = /obj/item/clothing/head
+	path = /obj/item/clothing/head/soft/black
 
 /datum/gear/head/cap/New()
 	..()
@@ -91,7 +91,7 @@
 
 /datum/gear/head/formalhat
 	display_name = "formal hat selection"
-	path = /obj/item/clothing/head
+	path = /obj/item/clothing/head/boaterhat
 
 /datum/gear/head/formalhat/New()
 	..()
@@ -109,7 +109,7 @@
 
 /datum/gear/head/informalhat
 	display_name = "informal hat selection"
-	path = /obj/item/clothing/head
+	path = /obj/item/clothing/head/cowboy_hat
 
 /datum/gear/head/informalhat/New()
 	..()
@@ -175,7 +175,7 @@
 
 /datum/gear/head/corporateberet
 	display_name = "corporate beret selection"
-	path = /obj/item/clothing/head/beret
+	path = /obj/item/clothing/head/beret/pcrc
 
 /datum/gear/head/corporateberet/New()
 	..()

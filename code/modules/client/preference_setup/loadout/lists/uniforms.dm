@@ -23,7 +23,7 @@
 
 /datum/gear/uniform/suit
 	display_name = "clothes selection"
-	path = /obj/item/clothing/under
+	path = /obj/item/clothing/under/sl_suit
 
 /datum/gear/uniform/suit/New()
 	..()
@@ -69,7 +69,7 @@
 
 /datum/gear/uniform/dress
 	display_name = "dress selection"
-	path = /obj/item/clothing/under
+	path = /obj/item/clothing/under/dress/dress_fire
 
 /datum/gear/uniform/dress/New()
 	..()
@@ -151,7 +151,7 @@
 
 /datum/gear/uniform/corporate
 	display_name = "corporate uniform selection"
-	path = /obj/item/clothing/under
+	path = /obj/item/clothing/under/rank/scientist/corporate/nanotrasen
 
 /datum/gear/uniform/corporate/New()
 	..()

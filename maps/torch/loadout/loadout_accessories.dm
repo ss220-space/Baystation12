@@ -1,7 +1,7 @@
 /datum/gear/accessory/solawardmajor
 	display_name = "SolGov major award selection"
 	description = "A medal or ribbon awarded to SolGov personnel for significant accomplishments."
-	path = /obj/item/clothing/accessory
+	path = /obj/item/clothing/accessory/medal/solgov/bronze/heart
 	cost = 8
 	allowed_branches = SOLGOV_BRANCHES
 
@@ -21,7 +21,7 @@
 /datum/gear/accessory/solawardminor
 	display_name = "SolGov minor award selection"
 	description = "A medal or ribbon awarded to SolGov personnel for minor accomplishments."
-	path = /obj/item/clothing/accessory
+	path = /obj/item/clothing/accessory/medal/solgov/iron/sol
 	cost = 5
 	allowed_branches = SOLGOV_BRANCHES
 
@@ -216,7 +216,7 @@
 
 /datum/gear/tactical/ubac/misc
 	display_name = "miscellaneous UBAC shirt selection"
-	path = /obj/item/clothing/accessory/ubac
+	path = /obj/item/clothing/accessory/ubac/green
 	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/ubac/misc/New()
@@ -239,7 +239,7 @@
 
 /datum/gear/tactical/armor_pouches/misc
 	display_name = "miscellaneous armor pouches selection"
-	path = /obj/item/clothing/accessory/storage/pouches
+	path = /obj/item/clothing/accessory/storage/pouches/green
 	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/armor_pouches/misc/New()
@@ -262,7 +262,7 @@
 
 /datum/gear/tactical/large_pouches/misc
 	display_name = "miscellaneous large armor pouches selection"
-	path = /obj/item/clothing/accessory/storage/pouches/large
+	path = /obj/item/clothing/accessory/storage/pouches/large/green
 	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/large_pouches/misc/New()

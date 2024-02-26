@@ -55,7 +55,7 @@
 /datum/gear/accessory/solgov_ec_rank
 	display_name = "Expeditionary Corps rank badges selection"
 	description = "An insignia denoting wearer's rank within the SCG Expeditionary Corps."
-	path = /obj/item/clothing/accessory
+	path = /obj/item/clothing/accessory/solgov/rank/ec/enlisted
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_backgrounds = list(FACTION_SOL_CENTRAL, FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 

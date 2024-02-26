@@ -6,12 +6,16 @@
 	display_name = "minor augments selection (head)"
 	description = "A minor augment with no in-game effects."
 	cost = 1
+	icon = 'icons/obj/augment.dmi'
+	icon_state = "booster"
 	path = /obj/item/organ/internal/augment/fluff/head
 	flags = GEAR_HAS_SUBTYPE_SELECTION
 
 /datum/gear/augment/minor_chest
 	display_name = "minor augments selection (chest)"
 	description = "A minor augment with no in-game effects."
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "cell"
 	cost = 1
 	path = /obj/item/organ/internal/augment/fluff/chest
 	flags = GEAR_HAS_SUBTYPE_SELECTION

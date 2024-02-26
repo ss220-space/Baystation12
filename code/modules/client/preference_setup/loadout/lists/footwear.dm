@@ -11,7 +11,7 @@
 
 /datum/gear/shoes/boots
 	display_name = "boot selection"
-	path = /obj/item/clothing/shoes
+	path = /obj/item/clothing/shoes/desertboots
 	cost = 3
 
 /datum/gear/shoes/boots/New()
@@ -26,7 +26,7 @@
 
 /datum/gear/shoes/color
 	display_name = "shoe selection"
-	path = /obj/item/clothing/shoes
+	path = /obj/item/clothing/shoes/black
 
 /datum/gear/shoes/color/New()
 	..()

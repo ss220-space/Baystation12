@@ -15,7 +15,7 @@
 /datum/gear/head/beret_selection
 	display_name = "contractor beret selection"
 	description = "A list of berets used by various organizations and corporights."
-	path = /obj/item/clothing/head/beret
+	path = /obj/item/clothing/head/beret/sec/corporate/pcrc
 	allowed_roles = SECURITY_ROLES
 
 /datum/gear/head/beret_selection/New()
@@ -27,4 +27,3 @@
 	beret_selection_type["PCRC beret"] = /obj/item/clothing/head/beret/sec/corporate/pcrc
 	beret_selection_type["ZPCI beret"] = /obj/item/clothing/head/beret/sec/corporate/zpci
 	gear_tweaks += new/datum/gear_tweak/path(beret_selection_type)
-
