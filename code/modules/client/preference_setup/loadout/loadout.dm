@@ -316,9 +316,9 @@ var/list/gear_datums = list()
 	if(istype(tweak, /datum/gear_tweak/path))
 		var/datum/gear_tweak/path/path_tweak = tweak
 		G.path = path_tweak.valid_paths[metadata]
-		G.update_icon()
+		G.update_item_icon()
 	if(istype(tweak, /datum/gear_tweak/color))
-		G.update_icon(metadata)
+		G.update_item_icon(metadata)
 
 /datum/category_item/player_setup_item/loadout/OnTopic(href, href_list, user)
 	if(href_list["toggle_gear"])
@@ -328,7 +328,7 @@ var/list/gear_datums = list()
 		if((TG.display_name in pref.gear_list[pref.gear_slot]) || !gear_allowed_to_equip(TG, user)) //inf, was: if(TG.display_name in pref.gear_list[pref.gear_slot])
 			pref.gear_list[pref.gear_slot] -= TG.display_name
 			TG.path = initial(TG.path)
-			TG.update_icon()
+			TG.update_item_icon()
 		else
 			var/total_cost = 0
 			for(var/gear_name in pref.gear_list[pref.gear_slot])
@@ -403,9 +403,9 @@ var/list/gear_datums = list()
 		gear_tweaks += new/datum/gear_tweak/path/subtype(path)
 	if(custom_setup_proc)
 		gear_tweaks += new/datum/gear_tweak/custom_setup(custom_setup_proc)
-	update_icon()
+	update_item_icon()
 
-/datum/gear/proc/update_icon(var/color)
+/datum/gear/proc/update_item_icon(var/color)
 	if(!initial(icon) || !initial(icon_state))
 		icon_state = initial(path.icon_state)
 		icon = initial(path.icon)
