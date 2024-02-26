@@ -429,7 +429,7 @@
 					src.damage += min_bruised_damage
 					to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles severely damaging the positronic brain."))
 
-
+/*
 		if(istype(W, /obj/item/device/multitool/multimeter/datajack))
 			if(!(user.skill_check(SKILL_COMPUTER, SKILL_PROF)))
 				to_chat(user, "You have no idea how to do that!")
@@ -438,11 +438,12 @@
 				var/law
 				var/targName = sanitize(input(user, "Please enter a new law for the shackle module.", "Shackle Module Law Entry", law))
 				law = "[targName]"
-				var/obj/item/organ/internal/shackles/s = shackles_module
-				src.shackle(s.get_lawset(law))
+				src.shackle(s.get_lawset(law)) ///// НАДО ПРИДУМАТЬ КАК РЕШИТЬ ЭТО
 				to_chat(user, "You succesfully change laws in shackles of the positronic brain.")
 				if(prob(30))
 					src.damage += min_bruised_damage
+*/
+
 			else
 				src.damage += min_bruised_damage
 				to_chat(user, SPAN_WARNING("Your hand slips while changing laws in the shackles, severely damaging the systems of positronic brain."))
