@@ -30,6 +30,13 @@
 		insert_datajack()
 		return
 
+/obj/item/device/multitool/multimeter/datajack/attack(mob/living/M, mob/living/user, target_zone, animate)
+	. = ..()
+	if(M == user)
+		holder.insert_datajack()
+		return
+
+
 /obj/item/device/multitool/multimeter/datajack/Process()
 	if(!holder)
 		qdel_self()
