@@ -51,15 +51,15 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 		var/obj/item/mech_equipment/hardpoint_object = hardpoints[hardpoint]
 		if(hardpoint_object)
 		//
-			if(hardpoint == "left hand")
-				if(dir == WEST || dir == SOUTHWEST || dir == NORTHWEST)
+			if(hardpoint == "left hand" || hardpoint == "left shoulder")
+				if(dir == WEST || dir == SOUTHWEST || dir == NORTHWEST || dir == SOUTH)
 					hardpoint_object.mech_layer = MECH_GEAR_LAYER
 				else if(dir == EAST || dir == SOUTHEAST || dir == NORTHEAST)
 					hardpoint_object.mech_layer = MECH_BACK_LAYER
-			if(hardpoint == "right hand")
+			if(hardpoint == "right hand" || hardpoint == "right shoulder")
 				if(dir == WEST || dir == SOUTHWEST || dir == NORTHWEST)
 					hardpoint_object.mech_layer = MECH_BACK_LAYER
-				else if(dir == EAST || dir == SOUTHEAST || dir == NORTHEAST)
+				else if(dir == EAST || dir == SOUTHEAST || dir == NORTHEAST || dir == SOUTH)
 					hardpoint_object.mech_layer = MECH_GEAR_LAYER
 		//
 			var/use_icon_state = "[hardpoint_object.icon_state]_[hardpoint]"
