@@ -459,16 +459,14 @@
 	var/newFreeFormLaw
 	var/law
 	var/datum/ai_laws/custom_lawset
+	var/list/laws = list("Закон А", "Закон Б.", "Закон В.")
 
 /obj/item/organ/internal/shackles/attack()
 	return
 
 /obj/item/organ/internal/shackles/attack_self(mob/user)
 	. = ..()
-	law = ""
-	var/targName = sanitize(input(user, "Please enter a new law for the shackle module.", "Shackle Module Law Entry", law))
-	newFreeFormLaw = targName
-	desc = "A shackle module. The law '[newFreeFormLaw]' set on it."
+	interact()
 
 /obj/item/organ/internal/shackles/afterattack(obj/item/organ/internal/posibrain/ipc/C, mob/user)
 	if(istype(C))
@@ -478,22 +476,54 @@
 		if(C.type == /obj/item/organ/internal/posibrain/ipc/third)
 			to_chat(user, "This posibrain generation can not support shackle module.")
 			return
-		if(!newFreeFormLaw)
-			to_chat(user, "No law detected on shackle module, please create one.")
-			return
 		if(C.shackle == TRUE)
 			to_chat(user, "This positronic brain already have shackles module on it installed.")
 			return
 		if(do_after(user, 100, src))
-			law = "[newFreeFormLaw]"
-			C.shackle(get_lawset())
+			C.shackle(get_lawset(laws))
 			to_chat(user, "You have successfully installed the shackles.")
 			qdel(src)
 		else
 			C.damage += 40
 			to_chat(user, SPAN_WARNING("You have damaged the positronic brain"))
 
+/obj/item/organ/internal/shackles/Topic(href, href_list)
+	..()
+	if (href_list["add"])
+		var/mod = sanitize(input("Add an instruction", "laws") as text|null)
+		if(mod)
+			laws += mod
+		interact(usr)
+	if (href_list["edit"])
+		var/idx = text2num(href_list["edit"])
+		var/mod = sanitize(input("Edit the instruction", "Instruction Editing", laws[idx]) as text|null)
+		if(mod)
+			laws[idx] = mod
+			interact(usr)
+	if (href_list["del"])
+		laws -= laws[text2num(href_list["del"])]
+		interact(usr)
+
+/obj/item/organ/internal/shackles/proc/get_data()
+	. = {"
+	<b>Shackle Specifications:</b><BR>
+	<b>Name:</b> Придумать Название Оков, может модели какие<BR>
+	<HR>
+	<b>Function:</b> Сюда придумать красивое описание, типо ёуу, это супер оковы, пиши сюда законы, и будут у тебя миньёны "}
+	. += "<HR><B>Instructions:</B><BR>"
+	for(var/i = 1 to laws.len)
+		. += "- [laws[i]] <A href='byond://?src=\ref[src];edit=[i]'>Edit</A> <A href='byond://?src=\ref[src];del=[i]'>Remove</A><br>"
+	. += "<A href='byond://?src=\ref[src];add=1'>Add</A>"
+
+/obj/item/organ/internal/shackles/interact(user)
+	user = usr
+	var/datum/browser/popup = new(user, capitalize(name), capitalize(name), 400, 600, src)
+	var/dat = get_data()
+	popup.set_content(dat)
+	popup.open()
+
 /obj/item/organ/internal/shackles/proc/get_lawset()
 	custom_lawset = new
-	custom_lawset.add_inherent_law(law)
+	for (var/law in laws)
+		custom_lawset.add_inherent_law(law)
 	return custom_lawset
