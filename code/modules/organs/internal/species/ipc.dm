@@ -414,7 +414,7 @@
 			if(src.type == /obj/item/organ/internal/posibrain/ipc/third)
 				if(do_after(user, 180, src))
 					if(prob(10))
-						new /obj/item/organ/internal/shackles (laws = src.brainmob.laws, loc)
+						new /obj/item/organ/internal/shackles (loc)
 						src.unshackle()
 						user.visible_message("<span class='notice'>\The [user] succesfully remove shackles from \the [src].</span>", "<span class='notice'> You succesfully remove shackles from \the [src]</span>")
 					else
