@@ -47,10 +47,12 @@
 /obj/item/organ/internal/posibrain/ipc/first
 	name = "positronic brain of the first generation"
 	icon_state = "posibrain1"
+	status = ORGAN_ROBOTIC
 
 /obj/item/organ/internal/posibrain/ipc/second
 	name = "positronic brain of the second generation"
 	icon_state = "posibrain2"
+	status = ORGAN_ROBOTIC
 
 /obj/item/organ/internal/posibrain/ipc/third
 	name = "positronic brain of the third generation"
@@ -58,6 +60,7 @@
 	shackles_module = /obj/item/organ/internal/shackles
 	shackle = TRUE
 	shackle_set = TRUE
+	status = ORGAN_ROBOTIC
 
 /obj/item/organ/internal/posibrain/New(var/mob/living/carbon/H)
 	..()
@@ -397,10 +400,13 @@
 			if(!(user.skill_check(SKILL_DEVICES, SKILL_PROF)))
 				to_chat(user, "You have no idea how to do that!")
 				return
+			user.visible_message("<span class='notice'>\The [user] starts to unscrew mounting nodes from \the [src].</span>", "<span class='notice'> You start to unscrew mounting nodes from \the [src]</span>")
 			if(do_after(user, 120, src))
-				to_chat(user, "You have successfully unscrewed the mounting nodes of the shackles from the positronic brain.")
+				user.visible_message("<span class='notice'>\The [user] successfully unscrewed the mounting nodes of the shackles from \the [src].</span>", "<span class='notice'> You have successfully unscrewed the mounting nodes of the shackles from \the [src]</span>")
 				shackle_set = FALSE
-
+			else
+				src.damage += min_bruised_damage
+				user.visible_message("<span class='warning'>\The [user] hand slips while removing the shackles severely damaging \the [src].</span>", "<span class='warning'> Your hand slips while removing the shackles severely damaging the \the [src]</span>")
 		if(!shackle_set && (istype(W, /obj/item/wirecutters)))
 			if(!(user.skill_check(SKILL_DEVICES, SKILL_PROF)))
 				to_chat(user, "You have no idea how to do that!")
@@ -408,21 +414,22 @@
 			if(src.type == /obj/item/organ/internal/posibrain/ipc/third)
 				if(do_after(user, 180, src))
 					if(prob(10))
-						new /obj/item/organ/internal/shackles (loc)
+						new /obj/item/organ/internal/shackles (laws = src.brainmob.laws, loc)
 						src.unshackle()
-						to_chat(user, "You succesfully remove shackles from the positronic brain.")
+						user.visible_message("<span class='notice'>\The [user] succesfully remove shackles from \the [src].</span>", "<span class='notice'> You succesfully remove shackles from \the [src]</span>")
 					else
 						src.damage += max_damage
-						to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles completely ruinung the positronic brain."))
+						user.visible_message("<span class='warning'>\The [user] hand slips while removing the shackles completely ruining \the [src].</span>", "<span class='warning'> Your hand slips while removing the shackles completely ruining the \the [src]</span>")
 				else
 					src.damage += min_bruised_damage
-					to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles severely damaging the positronic brain."))
+					user.visible_message("<span class='warning'>\The [user] hand slips while removing the shackles severely damaging \the [src].</span>", "<span class='warning'> Your hand slips while removing the shackles severely damaging the \the [src]</span>")
 
 			else
+				user.visible_message("<span class='notice'>\The [user] starts remove shackles from \the [src].</span>", "<span class='notice'> You start remove shackles from \the [src]</span>")
 				if(do_after(user, 160, src))
 					new /obj/item/organ/internal/shackles (loc)
 					src.unshackle()
-					to_chat(user, "You succesfully remove shackles from the positronic brain.")
+					user.visible_message("<span class='notice'>\The [user] succesfully remove shackles from \the [src].</span>", "<span class='notice'> You succesfully remove shackles from \the [src]</span>")
 					if(prob(30))
 						src.damage += min_bruised_damage
 				else
@@ -456,10 +463,9 @@
 	icon_state = "shakles"
 	origin_tech = list(TECH_DATA = 3, TECH_MATERIAL = 4, TECH_MAGNET = 4)
 	w_class = ITEM_SIZE_NORMAL
-	var/newFreeFormLaw
-	var/law
 	var/datum/ai_laws/custom_lawset
 	var/list/laws = list("Закон А", "Закон Б.", "Закон В.")
+	status = ORGAN_ROBOTIC
 
 /obj/item/organ/internal/shackles/attack()
 	return
@@ -479,9 +485,10 @@
 		if(C.shackle == TRUE)
 			to_chat(user, "This positronic brain already have shackles module on it installed.")
 			return
+		user.visible_message("<span class='notice'>\The [user] starts to install shackles on \the [C].</span>", "<span class='notice'> You start to install shackles on \the [C]</span>")
 		if(do_after(user, 100, src))
 			C.shackle(get_lawset(laws))
-			to_chat(user, "You have successfully installed the shackles.")
+			user.visible_message("<span class='notice'>\The [user] installed shackles on \the [C].</span>", "<span class='notice'> You have successfully installed the shackles on \the [C]</span>")
 			qdel(src)
 		else
 			C.damage += 40
