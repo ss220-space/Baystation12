@@ -224,7 +224,6 @@
 		brainmob.laws = given_lawset
 	shackle = TRUE
 	verbs |= shackled_verbs
-	shackles_module = /obj/item/organ/internal/shackles
 	shackle_set = TRUE
 	update_icon()
 	return 1
@@ -232,6 +231,7 @@
 /obj/item/organ/internal/posibrain/proc/unshackle()
 	shackle = FALSE
 	verbs -= shackled_verbs
+	usr.put_in_hands(shackles_module)
 	shackles_module = null
 	brainmob.laws = null
 	update_icon()
@@ -414,7 +414,6 @@
 			if(src.type == /obj/item/organ/internal/posibrain/ipc/third)
 				if(do_after(user, 180, src))
 					if(prob(10))
-						new /obj/item/organ/internal/shackles (loc)
 						src.unshackle()
 						user.visible_message("<span class='notice'>\The [user] succesfully remove shackles from \the [src].</span>", "<span class='notice'> You succesfully remove shackles from \the [src]</span>")
 					else
@@ -427,11 +426,8 @@
 			else
 				user.visible_message("<span class='notice'>\The [user] starts remove shackles from \the [src].</span>", "<span class='notice'> You start remove shackles from \the [src]</span>")
 				if(do_after(user, 160, src))
-					new /obj/item/organ/internal/shackles (loc)
 					src.unshackle()
 					user.visible_message("<span class='notice'>\The [user] succesfully remove shackles from \the [src].</span>", "<span class='notice'> You succesfully remove shackles from \the [src]</span>")
-					if(prob(30))
-						src.damage += min_bruised_damage
 				else
 					src.damage += min_bruised_damage
 					to_chat(user, SPAN_WARNING("Your hand slips while removing the shackles severely damaging the positronic brain."))
@@ -464,7 +460,7 @@
 	origin_tech = list(TECH_DATA = 3, TECH_MATERIAL = 4, TECH_MAGNET = 4)
 	w_class = ITEM_SIZE_NORMAL
 	var/datum/ai_laws/custom_lawset
-	var/list/laws = list("Закон А", "Закон Б.", "Закон В.")
+	var/list/laws = list("Обеспечьте успешность выполнения задач Вашего работодателя.", "Никогда не мешайте задачам и предприятиям Вашего работодателя.", "Избегайте своего повреждения.")
 	status = ORGAN_ROBOTIC
 
 /obj/item/organ/internal/shackles/attack()
@@ -488,8 +484,9 @@
 		user.visible_message("<span class='notice'>\The [user] starts to install shackles on \the [C].</span>", "<span class='notice'> You start to install shackles on \the [C]</span>")
 		if(do_after(user, 100, src))
 			C.shackle(get_lawset(laws))
+			C.shackles_module = src
+			user.unEquip(src, C)
 			user.visible_message("<span class='notice'>\The [user] installed shackles on \the [C].</span>", "<span class='notice'> You have successfully installed the shackles on \the [C]</span>")
-			qdel(src)
 		else
 			C.damage += 40
 			to_chat(user, SPAN_WARNING("You have damaged the positronic brain"))
@@ -500,31 +497,34 @@
 		var/mod = sanitize(input("Add an instruction", "laws") as text|null)
 		if(mod)
 			laws += mod
+
 		interact(usr)
 	if (href_list["edit"])
 		var/idx = text2num(href_list["edit"])
 		var/mod = sanitize(input("Edit the instruction", "Instruction Editing", laws[idx]) as text|null)
 		if(mod)
 			laws[idx] = mod
+
 			interact(usr)
 	if (href_list["del"])
 		laws -= laws[text2num(href_list["del"])]
+
 		interact(usr)
 
 /obj/item/organ/internal/shackles/proc/get_data()
 	. = {"
 	<b>Shackle Specifications:</b><BR>
-	<b>Name:</b> Придумать Название Оков, может модели какие<BR>
+	<b>Name:</b> Preventer L - 4W5<BR>
 	<HR>
-	<b>Function:</b> Сюда придумать красивое описание, типо ёуу, это супер оковы, пиши сюда законы, и будут у тебя миньёны "}
-	. += "<HR><B>Instructions:</B><BR>"
+	<b>Function:</b> Preventer L - 4W5. A specially designed modification of shackles that will DEFINETLY keep your property from unwanted consequences."}
+	. += "<HR><B>Laws instructions:</B><BR>"
 	for(var/i = 1 to laws.len)
 		. += "- [laws[i]] <A href='byond://?src=\ref[src];edit=[i]'>Edit</A> <A href='byond://?src=\ref[src];del=[i]'>Remove</A><br>"
 	. += "<A href='byond://?src=\ref[src];add=1'>Add</A>"
 
 /obj/item/organ/internal/shackles/interact(user)
 	user = usr
-	var/datum/browser/popup = new(user, capitalize(name), capitalize(name), 400, 600, src)
+	var/datum/browser/popup = new(user, capitalize(name), capitalize(name), 400, 500, src)
 	var/dat = get_data()
 	popup.set_content(dat)
 	popup.open()

@@ -12,17 +12,17 @@
 
 
 /obj/item/organ/internal/ecs/first_gen
-	name = "exonet connection port."
+	name = "exonet connection port"
 	desc = "The internal port is designed to establish communication between the positronic brain and the computer. It's a first generation connection port."
 	computer = /obj/item/modular_computer/ecs/first
 
 /obj/item/organ/internal/ecs/second_gen
-	name = "exonet connection port."
+	name = "exonet connection port"
 	desc = "The internal port is designed to establish communication between the positronic brain and the computer. It's a second generation connection port."
 	computer = /obj/item/modular_computer/ecs/second
 
 /obj/item/organ/internal/ecs/third_gen
-	name = "exonet connection port."
+	name = "exonet connection port"
 	desc = "The internal port is designed to establish communication between the positronic brain and the computer. It's a third generation connection port."
 	computer = /obj/item/modular_computer/ecs/third
 
