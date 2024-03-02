@@ -16,17 +16,48 @@
 	hardware_flag = PROGRAM_LAPTOP
 	exonets_ipc_computer = TRUE
 
+/obj/item/modular_computer/ecs/first
+	name = "exonet connection system."
+	hardware_flag = PROGRAM_TABLET
+	desc = "A simple circuit with some ports and wires."
 
-/obj/item/modular_computer/ecs/install_default_hardware()
+/obj/item/modular_computer/ecs/second
+	name = "exonet connection system."
+	hardware_flag = PROGRAM_TABLET
+	desc = "A complex circuit with some ports and wires."
+
+/obj/item/modular_computer/ecs/third
+	name = "exonet connection system."
+	hardware_flag = PROGRAM_LAPTOP
+	desc = "An extremely complex circuit with some ports and wires."
+
+/obj/item/modular_computer/ecs/first/install_default_hardware()
+	..()
+	processor_unit = new/obj/item/stock_parts/computer/processor_unit(src)
+	hard_drive = new/obj/item/stock_parts/computer/hard_drive/small(src)
+	network_card = new/obj/item/stock_parts/computer/network_card(src)
+	battery_module = new/obj/item/stock_parts/computer/battery_module/converter(src)
+
+/obj/item/modular_computer/ecs/second/install_default_hardware()
+	..()
+	processor_unit = new/obj/item/stock_parts/computer/processor_unit(src)
+	hard_drive = new/obj/item/stock_parts/computer/hard_drive(src)
+	network_card = new/obj/item/stock_parts/computer/network_card/advanced(src)
+	battery_module = new/obj/item/stock_parts/computer/battery_module/converter(src)
+
+
+/obj/item/modular_computer/ecs/third/install_default_hardware()
 	..()
 	processor_unit = new/obj/item/stock_parts/computer/processor_unit(src)
 	hard_drive = new/obj/item/stock_parts/computer/hard_drive/advanced(src)
 	network_card = new/obj/item/stock_parts/computer/network_card/advanced(src)
 	battery_module = new/obj/item/stock_parts/computer/battery_module/converter(src)
 
+
 /obj/item/modular_computer/ecs/install_default_programs()
 	..()
 	hard_drive.store_file(new/datum/computer_file/program/email_client())
+	hard_drive.store_file(new/datum/computer_file/program/crew_manifest())
 	hard_drive.store_file(new/datum/computer_file/program/wordprocessor())
 
 

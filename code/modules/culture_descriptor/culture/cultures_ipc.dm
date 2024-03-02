@@ -1,4 +1,5 @@
 /decl/cultural_info/culture/ipc
+
 	language = LANGUAGE_EAL
 	secondary_langs = list(
 		LANGUAGE_HUMAN_EURO,

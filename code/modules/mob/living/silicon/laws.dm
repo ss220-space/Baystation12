@@ -11,6 +11,8 @@
 	laws_sanity_check()
 
 /mob/living/silicon/proc/laws_sanity_check()
+	if(istype(usr,/mob/living/silicon/sil_brainmob))
+		return
 	if (!src.laws)
 		laws = new GLOB.using_map.default_law_type
 

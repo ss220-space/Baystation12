@@ -50,7 +50,6 @@
 /mob/living/silicon/sil_brainmob/show_laws(mob/M)
 	if(M)
 		to_chat(M, "<b>Obey these laws [M]:</b>")
-		src.laws_sanity_check()
 		src.laws.show_laws(M)
 
 /mob/living/silicon/sil_brainmob/open_subsystem(var/subsystem_type, var/mob/given = src)

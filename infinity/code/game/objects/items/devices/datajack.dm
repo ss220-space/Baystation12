@@ -30,11 +30,18 @@
 		insert_datajack()
 		return
 
+/obj/item/device/multitool/multimeter/datajack/attack(mob/living/M, mob/living/user, target_zone, animate)
+	. = ..()
+	if(M == user)
+		holder.insert_datajack()
+		return
+
+
 /obj/item/device/multitool/multimeter/datajack/Process()
 	if(!holder)
 		qdel_self()
 		return PROCESS_KILL
-	if(!Adjacent(holder))
+	if(get_dist(src, holder) > 1)
 		holder.insert_datajack()
 		return PROCESS_KILL
 
@@ -82,7 +89,7 @@
 
 /datum/terminal_command/datajack/proper_input_entered(text, mob/user, var/datum/terminal/terminal)
 	var/datum/extension/interactive/ntos/C = terminal.computer
-	if(!(C.get_hardware_flag() & (PROGRAM_PDA | PROGRAM_TABLET)))
+	if(!(C.get_hardware_flag() & (PROGRAM_PDA | PROGRAM_TABLET | PROGRAM_LAPTOP)))
 		return SPAN_WARNING("This command cant be executed on this device.")
 
 	var/obj/item/modular_computer/comp = terminal.computer.get_physical_host()
