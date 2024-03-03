@@ -102,8 +102,11 @@
 	if(stat)
 		return
 
-	if(R.is_stump() || R.is_broken() || !R)
+	if(!R)
 		return
+	if(R.is_stump() || R.is_broken())
+		return
+
 	if(robohead.is_monitor)
 		var/list/all_fhairs = typesof(/datum/sprite_accessory/facial_hair/ipc) - /datum/sprite_accessory/facial_hair/ipc
 		var/list/fhairs = list()
@@ -165,8 +168,9 @@
 	var/datum/robolimb/robohead = all_robolimbs[R.model]
 	if(stat)
 		return
-
-	if(R.is_stump() || R.is_broken() || !R)
+	if(!R)
+		return
+	if(R.is_stump() || R.is_broken())
 		return
 	if(robohead.is_monitor)
 		f_style = "Off"
@@ -182,7 +186,9 @@
 	var/obj/item/organ/external/head/R = src.get_organ(BP_HEAD)
 	var/obj/item/organ/internal/ecs/enter = src.internal_organs_by_name[BP_EXONET]
 
-	if(R.is_stump() || R.is_broken() || !R)
+	if(!R)
+		return
+	if(R.is_stump() || R.is_broken())
 		return
 	if(!enter)
 		to_chat(usr, "<span class='warning'>You have no exonet connection port</span>")
@@ -199,7 +205,9 @@
 	var/obj/item/organ/internal/ecs/enter = src.internal_organs_by_name[BP_EXONET]
 	var/datum/robolimb/robohead = all_robolimbs[R.model]
 
-	if(R.is_stump() || R.is_broken() || !R)
+	if(!R)
+		return
+	if(R.is_stump() || R.is_broken())
 		return
 
 	if(!enter)

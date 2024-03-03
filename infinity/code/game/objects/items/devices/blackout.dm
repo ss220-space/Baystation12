@@ -63,7 +63,7 @@
 		shots--
 		Cooldown = world.time
 
-	//	power_failure(1, 2, GetConnectedZlevels(P.z))
+		power_failure(1, severity, GetConnectedZlevels(user.z))
 
 		var/datum/powernet/powernet = terminal_in.powernet
 		for(var/obj/machinery/power/terminal/terminal_out in powernet.nodes)
