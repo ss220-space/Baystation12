@@ -1056,3 +1056,61 @@
 	..()
 	M.add_chemical_effect(CE_TOXIN, 1)
 	M.immunity -= 0.5 //inverse effects when abused
+
+	// Unathi reagents
+/datum/reagent/paashe
+	name = "Paashe Meish Sunn"
+	description = "An effective natural painkiller, produced from Yeosa'Unathi innate venom. Has similar effect to Tramadol, but features no side effects whatsoever."
+	taste_description = "way too much sweetness"
+	reagent_state = LIQUID
+	color = "#aea0c9"
+	scannable = 1
+	metabolism = 0.05
+	ingest_met = 0.02
+	flags = IGNORE_MOB_SIZE
+	value = 3.1
+	var/pain_power = 80 //magnitide of painkilling effect
+	var/effective_dose = 0.5 //how many units it need to process to reach max power
+
+/datum/reagent/paashe/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/effectiveness = 1
+	if(M.chem_doses[type] < effective_dose) //some ease-in ease-out for the effect
+		effectiveness = M.chem_doses[type]/effective_dose
+	else if(volume < effective_dose)
+		effectiveness = volume/effective_dose
+	M.add_chemical_effect(CE_PAINKILLER, pain_power * effectiveness)
+
+/datum/reagent/arhishaap
+	name = "Arhishaap"
+	description = "An advanced Yeosa'Unathi anti-toxin, significantly more effective than synthetic alternatives."
+	taste_description = "way too much sweetness"
+	reagent_state = LIQUID
+	color = "#49bc4b"
+	scannable = 1
+	flags = IGNORE_MOB_SIZE
+	value = 2.1
+	var/remove_generic = 1
+	var/list/remove_toxins = list(
+		/datum/reagent/toxin/zombiepowder
+	)
+
+/datum/reagent/arhishaap/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	M.radiation = max(M.radiation - 30 * removed, 0)
+	if(alien == IS_DIONA)
+		return
+
+	if(remove_generic)
+		M.drowsyness = max(0, M.drowsyness - 10 * removed)
+		M.adjust_hallucination(-14 * removed)
+		M.add_up_to_chemical_effect(CE_ANTITOX, 1)
+
+	var/removing = (8 * removed)
+	var/datum/reagents/ingested = M.get_ingested_reagents()
+	for(var/datum/reagent/R in ingested.reagent_list)
+		if((remove_generic && istype(R, /datum/reagent/toxin)) || (R.type in remove_toxins))
+			ingested.remove_reagent(R.type, removing)
+			return
+	for(var/datum/reagent/R in M.reagents.reagent_list)
+		if((remove_generic && istype(R, /datum/reagent/toxin)) || (R.type in remove_toxins))
+			M.reagents.remove_reagent(R.type, removing)
+			return
