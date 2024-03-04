@@ -77,7 +77,7 @@
 	strength = 10
 
 /datum/reagent/toxin/yeosvenom
-	name = "Yeosa'Unathi Venom"
+	name = "Esh Hashaar Haashane"
 	description = "A non-lethal toxin produced by Yeosa'Unathi"
 	taste_description = "absolutely vile"
 	color = "#91d895"
