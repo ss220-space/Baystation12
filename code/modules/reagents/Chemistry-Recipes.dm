@@ -488,7 +488,7 @@
 /datum/chemical_reaction/arhishaap
 	name = "Arhishaap"
 	result = /datum/reagent/arhishaap
-	required_reagents = list(/datum/reagent/toxin/yeosvenom = 1, /datum/reagent/ethanol = 1, /datum/reagent/ammonia = 1, /datum/reagent/radium = 1)
+	required_reagents = list(/datum/reagent/toxin/yeosvenom = 1, /datum/reagent/diethylamine = 2, /datum/reagent/radium = 1)
 	result_amount = 4
 
 /datum/chemical_reaction/oxycodonealt
