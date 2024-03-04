@@ -1111,8 +1111,6 @@
 
 /datum/reagent/arhishaap/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.radiation = max(M.radiation - 30 * removed, 0)
-	if(alien == IS_DIONA)
-		return
 
 	if(remove_generic)
 		M.drowsyness = max(0, M.drowsyness - 10 * removed)
