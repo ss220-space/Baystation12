@@ -305,7 +305,16 @@
 	if(LAZYLEN(pilots) >= LAZYLEN(body.pilot_positions))
 		to_chat(user, SPAN_WARNING("\The [src] is occupied to capacity."))
 		return FALSE
-	return TRUE
+	var/local_dir = get_dir(src, user) // <- Узнаём направление от меха до пули
+	if(local_dir == turn(dir, 0) || local_dir == turn(dir, 45) || local_dir == turn(dir, -45) || local_dir == turn(dir, 90) || local_dir == turn(dir, -90))
+	// B B B
+	// G M G  ↓ (Mech dir, look on SOUTH)
+	// G G G
+	// M - mech, B - cant climb IN mech from this side, G - can climb in mech from this side
+		return TRUE
+	else
+		to_chat(user, SPAN_WARNING("You cant climb in [src ] from this side."))
+		return FALSE
 
 /mob/living/exosuit/proc/enter(var/mob/user)
 	if(!check_enter(user))
@@ -329,6 +338,14 @@
 	return 1
 
 /mob/living/exosuit/proc/check_passenger(var/mob/user) // Выбираем желаемое место, проверяем можно ли его занять, стартуем прок занятия
+	var/local_dir = get_dir(src, user)
+	if(local_dir != turn(dir, 90) && local_dir != turn(dir, -90) && local_dir != turn(dir, -135) && local_dir != turn(dir, 135) && local_dir != turn(dir, 180))
+	// G G G
+	// G M G  ↓ (Mech dir, look on SOUTH)
+	// B B B
+	// M - mech, B - cant climb ON mech from this side, G - can climb ON mech from this side
+		to_chat(user, SPAN_WARNING("You cant climb in passenger place of [src ] from this side."))
+		return FALSE
 	var/choose
 	var/choosed_place = input(usr, "Choose passenger place which you want to take.", name, choose) as null|anything in passenger_places
 	if(!user.Adjacent(src)) // <- Мех рядом?

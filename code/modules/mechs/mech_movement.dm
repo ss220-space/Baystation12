@@ -145,7 +145,7 @@
 		if(exosuit.passengers_ammount > 0)
 			exosuit.update_passengers()
 		for(var/hardpoint in exosuit.hardpoints)
-			if(hardpoint == "left hand" || hardpoint == "right hand")
+			if(hardpoint == "left hand" || hardpoint == "right hand" || hardpoint == "left shoulder" || hardpoint == "right shoulder")
 				exosuit.update_icon()
 		exosuit.SetMoveCooldown(exosuit.legs.turn_delay)
 //TURN

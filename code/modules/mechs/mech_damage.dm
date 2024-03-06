@@ -51,13 +51,23 @@
 	. = ..()
 
 /mob/living/exosuit/bullet_act(obj/item/projectile/P, def_zone, used_weapon)
+	//Проверяем, с какого направления прилетает атака!
+	var/local_dir = get_dir(src, get_turf(P)) // <- Узнаём направление от меха до пули
+	if(local_dir == turn(dir, -90) || local_dir == turn(dir, -135) || local_dir == turn(dir, 180) || local_dir == turn(dir, 90) || local_dir == turn(dir, 135))
+	// U U U
+	// U M U  ↓ (Mech dir, look on SOUTH)
+	// D D D
+	// M - mech, U - unload passengers if was hit from this side, D - defense passengers(Dont unload) if was hit from this side
+		if(passengers_ammount > 0)
+			forced_leave_passenger(null,MECH_DROP_ALL_PASSENGER,"attack")
+	if(local_dir == turn(dir,-135) || local_dir == turn(dir,135) || local_dir == turn(dir,180))
+		P.damage = P.damage * 1.3
 	switch(def_zone)
 		if(BP_HEAD , BP_CHEST, BP_MOUTH, BP_EYES)
 			if(LAZYLEN(pilots) && (!hatch_closed || !prob(body.pilot_coverage)))
 				var/mob/living/pilot = pick(pilots)
 				return pilot.bullet_act(P, def_zone, used_weapon)
-	if(passengers_ammount > 0) // <- Если в меха выстрелили и были пассажиры,пассажирку меха опустошит
-		forced_leave_passenger(null , MECH_DROP_ALL_PASSENGER , "attack")
+
 
 	..()
 
@@ -126,24 +136,23 @@
 
 	var/obj/item/mech_component/target = zoneToComponent(def_zone)
 	if(target.total_damage >= target.max_damage)
-		if(target == head)
+		if(target == head && !head.camera && !head.radio)
 			body.take_brute_damage(damage/3)
 			arms.take_brute_damage(damage/3)
 			legs.take_brute_damage(damage/3)
-		else if(target == body)
+		else if(target == body && !body.m_armour && !body.diagnostics )
 			head.take_brute_damage(damage/1.5)
 			legs.take_brute_damage(damage/1.5)
 			arms.take_brute_damage(damage/1.5)
-		else if(target == arms)
+		else if(target == arms && !arms.motivator)
 			body.take_brute_damage(damage/3)
 			head.take_brute_damage(damage/3)
 			legs.take_brute_damage(damage/3)
-		else if(target == legs)
+		else if(target == legs && !legs.motivator)
 			body.take_brute_damage(damage/2)
 			head.take_brute_damage(damage/2)
 			arms.take_brute_damage(damage/2)
 		updatehealth()
-		return
 
 	//Only 3 types of damage concern mechs and vehicles
 	switch(damagetype)
